@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>VISA</key>
+	<string>visa.png</string>
+	<key>MCRD</key>
+	<string>Mastercard.png</string>
+	<key>MTRO</key>
+	<string>Mastero.png</string>
+	<key>AMEX</key>
+	<string>AmericanXpress.png</string>
+	<key>RPAY</key>
+	<string>Rupay.png</string>
+	<key>DINERS</key>
+	<string>diners.png</string>
+	<key>JCB</key>
+	<string>jcb.png</string>
+	<key>DISCOVER</key>
+	<string>discover.png</string>
+</dict>
+</plist>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DP_BASE_URL</key>
+	<string>https://sandboxmars.citruspay.com/dynamic-pricing/dynamicpricing/performDynamicPricing</string>
+	<key>BASE_URL</key>
+	<string>https://sandboxadmin.citruspay.com</string>
+	<key>PGHEALTH_SANDBOX_BASEURL</key>
+	<string>https://sandbox.citruspay.com</string>
+	<key>NEW_PAYMENT_BASE_URL</key>
+	<string>https://citruspay.com</string>
+</dict>
+</plist>
