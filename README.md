@@ -1,8 +1,6 @@
-## CitrusPay
-
 # Getting Started                         {#mainpage}
 
-![CitrusPay logo](https://avatars0.githubusercontent.com/u/2108528?v=3&s=200 "CitrusPay")
+![CitrusPay logo](https://avatars0.githubusercontent.com/u/2108528?v=3&s=200 "CitrusPay") ## CitrusPay
 
 ## Introduction
 The CitrusPay iOS SDK enables collection of payments via various payment methods.
@@ -58,6 +56,7 @@ Note: Please DO NOT PROCEED if the above mentioned requirements have not been me
 + Or clone it 
 ~~~{.m}
 $ git clone https://github.com/citruspay/citruspay-ios-sdk.git
+~~~
 + In Xcode, go to your app's target settings. On the `Build Phases` tab, expand the `Link Binary With Libraries` section.
 + Include the following framework and bundle files you copied:
     - CitrusPay.framework
