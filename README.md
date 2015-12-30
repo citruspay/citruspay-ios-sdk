@@ -2,21 +2,21 @@
 
 # Getting Started                         {#mainpage}
 
-![CitrusPay logo](http://www.citruspay.com "CitrusPay")
+![CitrusPay logo](https://avatars0.githubusercontent.com/u/2108528?v=3&s=200 "CitrusPay")
 
 ## Introduction
 The CitrusPay iOS SDK enables collection of payments via various payment methods.
 
 It is meant for consumption by [CitrusPay](http://www.citruspay.com) partners who are developing their own iOS apps aimed at merchants and/or consumers.
 
-###Features
-Citrus iOS SDK broadly offers following features.
-* Prepaid Payments.
-* Direct credit/debit card (CC, DC) or netbanking payments (NB) .
-* Saving Credit/Debit cards into user's account for easier future payments by abiding The Payment Card Industry Data Security Standard (PCI DSS).
-* Loading Money into users Citrus prepaid account for Prepaid facility .
-* Withdraw the money back into User's bank account from the Prepaid account .
-* Creating Citrus account for the user .
+##Features
+CitrusPay iOS SDK broadly offers following features.
++ Prepaid Payments.
++ Direct credit/debit card (CC, DC) or netbanking payments (NB) .
++ Saving Credit/Debit cards into user's account for easier future payments by abiding The Payment Card Industry Data Security Standard (PCI DSS).
++ Loading Money into users Citrus prepaid account for Prepaid facility .
++ Withdraw the money back into User's bank account from the Prepaid account .
++ Creating Citrus account for the user .
 
 ####[ChangeLog](https://github.com/citruspay/open-ios/wiki/ChangeLog)
 
@@ -56,9 +56,8 @@ Note: Please DO NOT PROCEED if the above mentioned requirements have not been me
 + Download the latest zip file from our [releases page](https://github.com/citruspay/citruspay-ios-sdk/wiki)
 + Unzip the file and copy the contents anywhere inside your project directory
 + Or clone it 
-```bash
-$ git clone https://github.com/citruspay/open-ios.git
-```
+~~~{.m}
+$ git clone https://github.com/citruspay/citruspay-ios-sdk.git
 + In Xcode, go to your app's target settings. On the `Build Phases` tab, expand the `Link Binary With Libraries` section.
 + Include the following framework and bundle files you copied:
     - CitrusPay.framework
@@ -126,9 +125,9 @@ keyStore.vanity = @"testing";
 Only after you are done with initialization you can proceed with following guide 
 
 The SDK is logically divided into 3 modules/layers or interfacing classes
-* CTSAuthLayer - handles all of the user creation related tasks .
-* CTSProfileLayer - handles all of the user profile related tasks .
-* CTSPaymentLayer - handles all of the payment related tasks .
++ CTSAuthLayer - handles all of the user creation related tasks .
++ CTSProfileLayer - handles all of the user profile related tasks .
++ CTSPaymentLayer - handles all of the payment related tasks .
 
 To use any of the above layers your need to fetch their singlton instance from CitrusPaymentSDK's class methods,
 
@@ -142,40 +141,40 @@ Following are the specific tasks related to each of the layer
 #[Important Update for iOS 9](https://github.com/citruspay/open-ios/wiki/4.-Common-Errors#ios-9-ssl-errors--fix)
 
 #####Doing direct payments
-* [CC, DC, NB Direct Payments](https://github.com/citruspay/open-ios/wiki/3.--Integrating-CTSPaymentLayer#cc-dc-nb-direct-payments)
-* [Saved CC, DC Payments (A.K.A. Tokenized payments)](https://github.com/citruspay/open-ios/wiki/3.--Integrating-CTSPaymentLayer#saved-cc-dc-payments-aka-tokenized-payments)
++ [CC, DC, NB Direct Payments](https://github.com/citruspay/open-ios/wiki/3.--Integrating-CTSPaymentLayer#cc-dc-nb-direct-payments)
++ [Saved CC, DC Payments (A.K.A. Tokenized payments)](https://github.com/citruspay/open-ios/wiki/3.--Integrating-CTSPaymentLayer#saved-cc-dc-payments-aka-tokenized-payments)
 
 #####User Management
 
-* [Bind User](https://github.com/citruspay/open-ios/wiki/1.--Integrating-CTSAuthLayer#bind-user) (doesn't need password, enables user to save cards)
-*  [See if anyone is logged in](https://github.com/citruspay/open-ios/wiki/1.--Integrating-CTSAuthLayer#see-if-anyone-is-logged-in)
-* [Link User](https://github.com/citruspay/open-ios/wiki/1.--Integrating-CTSAuthLayer#get-users-prepaid-level-access-link-user) (required for all Citrus Cash related operations)
-* [Signin the user for Citrus Cash  access](https://github.com/citruspay/open-ios/wiki/1.--Integrating-CTSAuthLayer#sign-in-the-user-for-prepaid-level-access)
-* [Reset User Password](https://github.com/citruspay/open-ios/wiki/1.--Integrating-CTSAuthLayer#reset-user-password)
-* [Sign Out](https://github.com/citruspay/open-ios/wiki/1.--Integrating-CTSAuthLayer#sign-out)
++ [Bind User](https://github.com/citruspay/open-ios/wiki/1.--Integrating-CTSAuthLayer#bind-user) (doesn't need password, enables user to save cards)
++  [See if anyone is logged in](https://github.com/citruspay/open-ios/wiki/1.--Integrating-CTSAuthLayer#see-if-anyone-is-logged-in)
++ [Link User](https://github.com/citruspay/open-ios/wiki/1.--Integrating-CTSAuthLayer#get-users-prepaid-level-access-link-user) (required for all Citrus Cash related operations)
++ [Signin the user for Citrus Cash  access](https://github.com/citruspay/open-ios/wiki/1.--Integrating-CTSAuthLayer#sign-in-the-user-for-prepaid-level-access)
++ [Reset User Password](https://github.com/citruspay/open-ios/wiki/1.--Integrating-CTSAuthLayer#reset-user-password)
++ [Sign Out](https://github.com/citruspay/open-ios/wiki/1.--Integrating-CTSAuthLayer#sign-out)
 
 #####Card Management
-* [Save User Cards](https://github.com/citruspay/open-ios/wiki/2.--Integrating-CTSProfileLayer#save-user-cards)
-* [Get Saved Cards](https://github.com/citruspay/open-ios/wiki/2.--Integrating-CTSProfileLayer#get-saved-cards)
-* [Delete Saved Cards](https://github.com/citruspay/open-ios/wiki/2.--Integrating-CTSProfileLayer#delete-saved-cards)
++ [Save User Cards](https://github.com/citruspay/open-ios/wiki/2.--Integrating-CTSProfileLayer#save-user-cards)
++ [Get Saved Cards](https://github.com/citruspay/open-ios/wiki/2.--Integrating-CTSProfileLayer#get-saved-cards)
++ [Delete Saved Cards](https://github.com/citruspay/open-ios/wiki/2.--Integrating-CTSProfileLayer#delete-saved-cards)
 
 #####Using Citrus Cash a.k.a Prepaid Account
-* [Get User's Citrus Cash Balance](https://github.com/citruspay/open-ios/wiki/2.--Integrating-CTSProfileLayer#get-users-prepaid-balance)
-* [Loading Money into Users Citrus Cash Account](https://github.com/citruspay/open-ios/wiki/3.--Integrating-CTSPaymentLayer#loading-money-into-users-citrus-prepaid-account)
-* [Paying via Citrus Cash account](https://github.com/citruspay/open-ios/wiki/3.--Integrating-CTSPaymentLayer#paying-via-prepaid-accountcitrus-cash)
-* [Save Cashout Bank Account](https://github.com/citruspay/open-ios/wiki/2.--Integrating-CTSProfileLayer#save-cash-out-bank-account)
-* [Get Saved Cashout Bank Acoount](https://github.com/citruspay/open-ios/wiki/2.--Integrating-CTSProfileLayer#get-saved-cashout-bank-acoount)
-* [Initiate Cashout Proccess into users Bank Account from Citrus Cash  account](https://github.com/citruspay/open-ios/wiki/3.--Integrating-CTSPaymentLayer#initiate-cashout-process-into-users-account-from-citrus-prepaid-account)
-* [Send Citrus Cash to another Citrus User](https://github.com/citruspay/open-ios/wiki/3.--Integrating-CTSPaymentLayer#send-money-to-another-citrus-user)
++ [Get User's Citrus Cash Balance](https://github.com/citruspay/open-ios/wiki/2.--Integrating-CTSProfileLayer#get-users-prepaid-balance)
++ [Loading Money into Users Citrus Cash Account](https://github.com/citruspay/open-ios/wiki/3.--Integrating-CTSPaymentLayer#loading-money-into-users-citrus-prepaid-account)
++ [Paying via Citrus Cash account](https://github.com/citruspay/open-ios/wiki/3.--Integrating-CTSPaymentLayer#paying-via-prepaid-accountcitrus-cash)
++ [Save Cashout Bank Account](https://github.com/citruspay/open-ios/wiki/2.--Integrating-CTSProfileLayer#save-cash-out-bank-account)
++ [Get Saved Cashout Bank Acoount](https://github.com/citruspay/open-ios/wiki/2.--Integrating-CTSProfileLayer#get-saved-cashout-bank-acoount)
++ [Initiate Cashout Proccess into users Bank Account from Citrus Cash  account](https://github.com/citruspay/open-ios/wiki/3.--Integrating-CTSPaymentLayer#initiate-cashout-process-into-users-account-from-citrus-prepaid-account)
++ [Send Citrus Cash to another Citrus User](https://github.com/citruspay/open-ios/wiki/3.--Integrating-CTSPaymentLayer#send-money-to-another-citrus-user)
 
 #####Dynamic Pricing Offer Coupons and Surcharge
-* [How to use dynamic pricing ?](https://github.com/citruspay/open-ios/wiki/3.--Integrating-CTSPaymentLayer#dynamic-pricing-offer-coupons-surcharge)
++ [How to use dynamic pricing ?](https://github.com/citruspay/open-ios/wiki/3.--Integrating-CTSPaymentLayer#dynamic-pricing-offer-coupons-surcharge)
 
 #####Others
-* [Fetch Available Schemes and Banks for the Merchant](https://github.com/citruspay/open-ios/wiki/3.--Integrating-CTSPaymentLayer#fetch-available-schemes-and-banks-for-the-merchant)
++ [Fetch Available Schemes and Banks for the Merchant](https://github.com/citruspay/open-ios/wiki/3.--Integrating-CTSPaymentLayer#fetch-available-schemes-and-banks-for-the-merchant)
 
 =====
 ####[Common Integration Issues](https://github.com/citruspay/open-ios/wiki/4.-Common-Errors)
-* [Could Not Connect to Internet](https://github.com/citruspay/open-ios/wiki/4.-Common-Errors#could-not-connect-to-internet)
-* [postResponseiOS() error](https://github.com/citruspay/open-ios/wiki/4.-Common-Errors#postresponseios-error)
-* [iOS 9 SSL Errors](https://github.com/citruspay/open-ios/wiki/4.-Common-Errors#ios-9-ssl-errors--fix)
++ [Could Not Connect to Internet](https://github.com/citruspay/open-ios/wiki/4.-Common-Errors#could-not-connect-to-internet)
++ [postResponseiOS() error](https://github.com/citruspay/open-ios/wiki/4.-Common-Errors#postresponseios-error)
++ [iOS 9 SSL Errors](https://github.com/citruspay/open-ios/wiki/4.-Common-Errors#ios-9-ssl-errors--fix)
