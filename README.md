@@ -95,6 +95,7 @@ Note: make sure to open the project using `CitrusPay.xcworkspace` and not `Citru
 + Include CitrusPay.h
 ~~~{.m}
 #import <CitrusPay/CitrusPay.h>
+~~~
 
 ## Let's Start Programming now
 
