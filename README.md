@@ -23,8 +23,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 + Unzip the file and copy the contents anywhere inside your project directory
 + In Xcode, go to your app's target settings. On the `Build Phases` tab, expand the `Link Binary With Libraries` section.
 + Include the following frameworks and bundle files you copied:
-- CitrusPay.framework
-- CitrusPayResources.bundle
+    - CitrusPay.framework
+    - CitrusPayResources.bundle
 + Done!
 
 ## Documentation
@@ -59,11 +59,3 @@ Note: make sure to open the project using `CitrusPay.xcworkspace` and not `Citru
 + Include CitrusPay.h
 ~~~{.m}
 #import <CitrusPay/CitrusPay.h>
-
-## Author
-
-CitrusPay
-
-## License
-
-CitrusPay is available under the MIT license. See the LICENSE file for more info.
