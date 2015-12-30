@@ -27,10 +27,6 @@ CitrusPay iOS SDK broadly offers following features.
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
-
-## Installation
-
-###SDK Prerequisites
 + Xcode 6 or higher.
 
 ###Citrus PG Prerequisites
@@ -46,6 +42,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 + SignUp Secret
 
 Note: Please DO NOT PROCEED if the above mentioned requirements have not been met.
+
+## Installation
 
 #### Using [cocoapods](https://cocoapods.org/) (recommended)
 + Add `pod "CitrusPay"` to your podfile
