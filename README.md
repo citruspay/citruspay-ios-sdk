@@ -107,22 +107,26 @@ During the developement you would always want to use the Sandbox mode. once you 
 you need to use `[CitrusPaymentSDK initializeWithKeyStore: environment:]` to initialize the SDK
 
 Sandbox:
-
+~~~{.m}
 [CitrusPaymentSDK initializeWithKeyStore:keyStore environment:CTSEnvSandbox];
+~~~
 
 Production:
-
+~~~{.m}
 [CitrusPaymentSDK initializeWithKeyStore:keyStore environment:CTSEnvProduction];
+~~~
 
 ####How to configure KeyStore Object
 As you must have noticed the SDK initialization requires you to pass the Keystore object please see below how to configure it.     
 
+~~~{.m}
 CTSKeyStore *keyStore = [[CTSKeyStore alloc] init];
 keyStore.signinId = @"test-signin";
 keyStore.signinSecret = @"52f7e15efd4208cf5345dd554443fd99";
 keyStore.signUpId = @"test-signup";
 keyStore.signUpSecret = @"c78ec84e389814a05d3ae46546d16d2e";
 keyStore.vanity = @"testing";
+~~~
 
 Only after you are done with initialization you can proceed with following guide 
 
@@ -133,10 +137,12 @@ The SDK is logically divided into 3 modules/layers or interfacing classes
 
 To use any of the above layers your need to fetch their singlton instance from CitrusPaymentSDK's class methods,
 
+~~~{.m}
 // initialization in your .m file
 CTSPaymentLayer *paymentLayer = [CitrusPaymentSDK fetchSharedPaymentLayer];
 CTSAuthLayer *authLayer = [CTSAuthLayer fetchSharedAuthLayer];
 CTSProfileLayer *proifleLayer = [CTSProfileLayer fetchSharedProfileLayer];
+~~~
 
 Following are the specific tasks related to each of the layer 
 
