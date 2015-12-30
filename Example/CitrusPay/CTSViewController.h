@@ -7,7 +7,12 @@
 //
 
 @import UIKit;
+#import <CitrusPay/CitrusPay.h>
 
-@interface CTSViewController : UIViewController
+@interface CTSViewController : UIViewController {
+    CTSAuthLayer *authLayer;
+    CTSProfileLayer *proifleLayer;
+    CTSPaymentLayer *paymentLayer;
+}
 
 @end
