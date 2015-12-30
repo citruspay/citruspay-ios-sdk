@@ -1,6 +1,6 @@
 # Getting Started                         {#mainpage}
 
-![CitrusPay logo](https://avatars0.githubusercontent.com/u/2108528?v=3&s=200 "CitrusPay") 
+![CitrusPay logo](http://www.citruspay.com/images/logo.png "CitrusPay") 
 
 ## CitrusPay
 
