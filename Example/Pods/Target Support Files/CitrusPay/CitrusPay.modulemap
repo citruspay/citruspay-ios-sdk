@@ -1,0 +1,6 @@
+framework module CitrusPay {
+  umbrella header "CitrusPay-umbrella.h"
+
+  export *
+  module * { export * }
+}

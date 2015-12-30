@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "82A97729EC55B5EC9951B8B1634CBA9A8575F264",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "290751AF86C48E2D195ACF1A98B0DBFB8A947A9E" : 0,
+    "82A97729EC55B5EC9951B8B1634CBA9A8575F264" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BFA43DED-7D9B-4A7A-B82C-C1BE3E2B81C8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "290751AF86C48E2D195ACF1A98B0DBFB8A947A9E" : "",
+    "82A97729EC55B5EC9951B8B1634CBA9A8575F264" : "citruspay-ios-sdk\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CitrusPay",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/CitrusPay.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/citruspay\/citruspay-ios-sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "290751AF86C48E2D195ACF1A98B0DBFB8A947A9E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/citruspay\/citruspay-ios-sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "82A97729EC55B5EC9951B8B1634CBA9A8575F264"
+    }
+  ]
+}

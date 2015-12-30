@@ -1,0 +1,14 @@
+PODS:
+  - CitrusPay (0.1.0)
+
+DEPENDENCIES:
+  - CitrusPay (from `../`)
+
+EXTERNAL SOURCES:
+  CitrusPay:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CitrusPay: cb7c344f2caa5a5c60f4df94e629f9ea618dfb64
+
+COCOAPODS: 0.39.0

@@ -1,0 +1,25 @@
+{
+  "name": "CitrusPay",
+  "version": "0.1.0",
+  "summary": "A short description of CitrusPay.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/CitrusPay",
+  "license": "MIT",
+  "authors": {
+    "Mukesh Patil": "mukesh.patil@citruspay.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/CitrusPay.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "CitrusPay": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}
