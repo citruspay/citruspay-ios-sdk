@@ -99,7 +99,19 @@ Note: make sure to open the project using `CitrusPay.xcworkspace` and not `Citru
 #import <CitrusPay/CitrusPay.h>
 ~~~
 
-## Let's Start Programming now
+####How to configure KeyStore Object
+As you must have noticed the SDK initialization requires you to pass the Keystore object please see below how to configure it.     
+
+~~~{.m}
+CTSKeyStore *keyStore = [[CTSKeyStore alloc] init];
+keyStore.signinId = @"test-signin";
+keyStore.signinSecret = @"52f7e15efd4208cf5345dd554443fd99";
+keyStore.signUpId = @"test-signup";
+keyStore.signUpSecret = @"c78ec84e389814a05d3ae46546d16d2e";
+keyStore.vanity = @"testing";
+~~~
+
+####Setup working Enviroments
 
 SDK operates in two different modes Sandbox and Production mode. for both the enviroments Citrus PG Prerequisites key sets are different. keys from one enviroment won't work on other. so please make sure you are using correct set of keys.
 During the developement you would always want to use the Sandbox mode. once you are done with your App development you can switch to production mode . 
@@ -114,18 +126,6 @@ Sandbox:
 Production:
 ~~~{.m}
 [CitrusPaymentSDK initializeWithKeyStore:keyStore environment:CTSEnvProduction];
-~~~
-
-####How to configure KeyStore Object
-As you must have noticed the SDK initialization requires you to pass the Keystore object please see below how to configure it.     
-
-~~~{.m}
-CTSKeyStore *keyStore = [[CTSKeyStore alloc] init];
-keyStore.signinId = @"test-signin";
-keyStore.signinSecret = @"52f7e15efd4208cf5345dd554443fd99";
-keyStore.signUpId = @"test-signup";
-keyStore.signUpSecret = @"c78ec84e389814a05d3ae46546d16d2e";
-keyStore.vanity = @"testing";
 ~~~
 
 Only after you are done with initialization you can proceed with following guide 
