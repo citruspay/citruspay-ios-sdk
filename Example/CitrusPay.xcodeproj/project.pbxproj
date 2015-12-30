@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5BBF50859A71FF55CD2858D3 /* Pods_CitrusPay_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B5395E87BB0109AEA46E5B /* Pods_CitrusPay_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -21,8 +20,19 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		76E230661C33DF780029F254 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E230521C33DF780029F254 /* BaseViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76E230671C33DF780029F254 /* CardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E230541C33DF780029F254 /* CardsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76E230681C33DF780029F254 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E230561C33DF780029F254 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76E230691C33DF780029F254 /* ManageCradViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E230581C33DF780029F254 /* ManageCradViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76E2306A1C33DF780029F254 /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E2305A1C33DF780029F254 /* ResetPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76E2306B1C33DF780029F254 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E2305C1C33DF780029F254 /* SignInViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76E2306C1C33DF780029F254 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E2305E1C33DF780029F254 /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76E2306D1C33DF780029F254 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E230611C33DF780029F254 /* HMSegmentedControl.m */; settings = {ASSET_TAGS = (); }; };
+		76E2306E1C33DF780029F254 /* UICustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E230631C33DF780029F254 /* UICustomButton.m */; settings = {ASSET_TAGS = (); }; };
+		76E2306F1C33DF780029F254 /* UICustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E230651C33DF780029F254 /* UICustomTextField.m */; settings = {ASSET_TAGS = (); }; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		A0342087652932329B6DCAB2 /* Pods_CitrusPay_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11B8D0718D4197E690D1D90 /* Pods_CitrusPay_Tests.framework */; };
+		B09CF9FC4FB94C69F76A7A9A /* Pods_CitrusPay_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B5395E87BB0109AEA46E5B /* Pods_CitrusPay_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +70,26 @@
 		67ACF41A3BB732C384E85A08 /* Pods-CitrusPay_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitrusPay_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CitrusPay_Tests/Pods-CitrusPay_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6B463A6009B0498C9B6BDB89 /* CitrusPay.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CitrusPay.podspec; path = ../CitrusPay.podspec; sourceTree = "<group>"; };
 		76E22FDC1C33C98F0029F254 /* TestParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestParams.h; sourceTree = "<group>"; };
+		76E230511C33DF780029F254 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		76E230521C33DF780029F254 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		76E230531C33DF780029F254 /* CardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsViewController.h; sourceTree = "<group>"; };
+		76E230541C33DF780029F254 /* CardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsViewController.m; sourceTree = "<group>"; };
+		76E230551C33DF780029F254 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		76E230561C33DF780029F254 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		76E230571C33DF780029F254 /* ManageCradViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageCradViewController.h; sourceTree = "<group>"; };
+		76E230581C33DF780029F254 /* ManageCradViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageCradViewController.m; sourceTree = "<group>"; };
+		76E230591C33DF780029F254 /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
+		76E2305A1C33DF780029F254 /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
+		76E2305B1C33DF780029F254 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		76E2305C1C33DF780029F254 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		76E2305D1C33DF780029F254 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		76E2305E1C33DF780029F254 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		76E230601C33DF780029F254 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
+		76E230611C33DF780029F254 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
+		76E230621C33DF780029F254 /* UICustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomButton.h; sourceTree = "<group>"; };
+		76E230631C33DF780029F254 /* UICustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomButton.m; sourceTree = "<group>"; };
+		76E230641C33DF780029F254 /* UICustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomTextField.h; sourceTree = "<group>"; };
+		76E230651C33DF780029F254 /* UICustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomTextField.m; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8EF9F4B332BAF9355E5D87D5 /* Pods-CitrusPay_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitrusPay_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CitrusPay_Example/Pods-CitrusPay_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9CD39E07C2CC39B09DCCC04F /* Pods-CitrusPay_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitrusPay_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CitrusPay_Example/Pods-CitrusPay_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,7 +106,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				5BBF50859A71FF55CD2858D3 /* Pods_CitrusPay_Example.framework in Frameworks */,
+				B09CF9FC4FB94C69F76A7A9A /* Pods_CitrusPay_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +161,8 @@
 		6003F593195388D20070C39A /* Example for CitrusPay */ = {
 			isa = PBXGroup;
 			children = (
+				76E230501C33DF780029F254 /* Controllers */,
+				76E2305F1C33DF780029F254 /* CustomComponents */,
 				76E22FDC1C33C98F0029F254 /* TestParams.h */,
 				6003F59C195388D20070C39A /* CTSAppDelegate.h */,
 				6003F59D195388D20070C39A /* CTSAppDelegate.m */,
@@ -182,6 +214,40 @@
 				05B3AB9C94880AC2F133D3F8 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		76E230501C33DF780029F254 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				76E230511C33DF780029F254 /* BaseViewController.h */,
+				76E230521C33DF780029F254 /* BaseViewController.m */,
+				76E230531C33DF780029F254 /* CardsViewController.h */,
+				76E230541C33DF780029F254 /* CardsViewController.m */,
+				76E230551C33DF780029F254 /* HomeViewController.h */,
+				76E230561C33DF780029F254 /* HomeViewController.m */,
+				76E230571C33DF780029F254 /* ManageCradViewController.h */,
+				76E230581C33DF780029F254 /* ManageCradViewController.m */,
+				76E230591C33DF780029F254 /* ResetPasswordViewController.h */,
+				76E2305A1C33DF780029F254 /* ResetPasswordViewController.m */,
+				76E2305B1C33DF780029F254 /* SignInViewController.h */,
+				76E2305C1C33DF780029F254 /* SignInViewController.m */,
+				76E2305D1C33DF780029F254 /* SignUpViewController.h */,
+				76E2305E1C33DF780029F254 /* SignUpViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		76E2305F1C33DF780029F254 /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+				76E230601C33DF780029F254 /* HMSegmentedControl.h */,
+				76E230611C33DF780029F254 /* HMSegmentedControl.m */,
+				76E230621C33DF780029F254 /* UICustomButton.h */,
+				76E230631C33DF780029F254 /* UICustomButton.m */,
+				76E230641C33DF780029F254 /* UICustomTextField.h */,
+				76E230651C33DF780029F254 /* UICustomTextField.m */,
+			);
+			path = CustomComponents;
 			sourceTree = "<group>";
 		};
 		B1A58A13B2FB65AAB8515F5C /* Pods */ = {
@@ -392,9 +458,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76E2306E1C33DF780029F254 /* UICustomButton.m in Sources */,
 				6003F59E195388D20070C39A /* CTSAppDelegate.m in Sources */,
+				76E230661C33DF780029F254 /* BaseViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* CTSViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				76E230691C33DF780029F254 /* ManageCradViewController.m in Sources */,
+				76E2306A1C33DF780029F254 /* ResetPasswordViewController.m in Sources */,
+				76E2306C1C33DF780029F254 /* SignUpViewController.m in Sources */,
+				76E2306D1C33DF780029F254 /* HMSegmentedControl.m in Sources */,
+				76E230671C33DF780029F254 /* CardsViewController.m in Sources */,
+				76E2306B1C33DF780029F254 /* SignInViewController.m in Sources */,
+				76E230681C33DF780029F254 /* HomeViewController.m in Sources */,
+				76E2306F1C33DF780029F254 /* UICustomTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,7 +594,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CitrusPay/CitrusPay-Prefix.pch";
 				INFOPLIST_FILE = "CitrusPay/CitrusPay-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -536,7 +612,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CitrusPay/CitrusPay-Prefix.pch";
 				INFOPLIST_FILE = "CitrusPay/CitrusPay-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

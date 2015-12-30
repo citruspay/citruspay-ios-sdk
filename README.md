@@ -22,7 +22,7 @@ pod "CitrusPay"
 
 ## Author
 
-Mukesh Patil, mukesh.patil@citruspay.com
+CitrusPay
 
 ## License
 
