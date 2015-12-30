@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "CitrusPay"
-  s.version          = "0.1.3"
+  s.version          = "0.1.4"
   s.summary          = "CitrusPay iOS SDK."
 
 # This description is used to generate tags and improve search results.
@@ -19,11 +19,11 @@ Pod::Spec.new do |s|
   s.description      = "Enhanced CitrusPay iOS SDK for Superior Native Payments Experience."
 
   s.homepage         = "https://github.com/citruspay/citruspay-ios-sdk"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+# s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Mukesh Patil" => "mukesh.patil@citruspay.com" }
   s.source           = { :git => "https://github.com/citruspay/citruspay-ios-sdk.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+# s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
