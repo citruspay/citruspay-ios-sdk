@@ -1,6 +1,8 @@
 # Getting Started                         {#mainpage}
 
-![CitrusPay logo](https://avatars0.githubusercontent.com/u/2108528?v=3&s=200 "CitrusPay") ## CitrusPay
+![CitrusPay logo](https://avatars0.githubusercontent.com/u/2108528?v=3&s=200 "CitrusPay") 
+
+## CitrusPay
 
 ## Introduction
 The CitrusPay iOS SDK enables collection of payments via various payment methods.
