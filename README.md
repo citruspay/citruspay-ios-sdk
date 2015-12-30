@@ -50,7 +50,7 @@ Note: Please DO NOT PROCEED if the above mentioned requirements have not been me
 + Run `pod install`
 + Done!
 
-#### Using library binaries
+#### Using library binaries (manual)
 + Download the latest zip file from our [releases for manual usage page](https://github.com/citruspay/citruspay-ios-sdk/tree/master/release%20for%20manual%20usage)
 + Unzip the file and copy the contents anywhere inside your project directory
 + Or clone it 
