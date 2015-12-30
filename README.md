@@ -1,9 +1,11 @@
-# CitrusPay
+# Getting Started                         {#mainpage}
 
-[![CI Status](http://img.shields.io/travis/Mukesh Patil/CitrusPay.svg?style=flat)](https://travis-ci.org/Mukesh Patil/CitrusPay)
-[![Version](https://img.shields.io/cocoapods/v/CitrusPay.svg?style=flat)](http://cocoapods.org/pods/CitrusPay)
-[![License](https://img.shields.io/cocoapods/l/CitrusPay.svg?style=flat)](http://cocoapods.org/pods/CitrusPay)
-[![Platform](https://img.shields.io/cocoapods/p/CitrusPay.svg?style=flat)](http://cocoapods.org/pods/CitrusPay)
+![CitrusPay logo](http://www.citruspay.com "CitrusPay")
+
+## Introduction
+The CitrusPay iOS SDK enables collection of payments via various payment methods.
+
+It is meant for consumption by [CitrusPay](http://www.citruspay.com) partners who are developing their own iOS apps aimed at merchants and/or consumers.
 
 ## Usage
 
@@ -22,7 +24,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 + Download the latest zip file from our [releases page](https://github.com/citruspay/citruspay-ios-sdk/wiki)
 + Unzip the file and copy the contents anywhere inside your project directory
 + In Xcode, go to your app's target settings. On the `Build Phases` tab, expand the `Link Binary With Libraries` section.
-+ Include the following frameworks and bundle files you copied:
++ Include the following framework and bundle files you copied:
     - CitrusPay.framework
     - CitrusPayResources.bundle
 + Done!
