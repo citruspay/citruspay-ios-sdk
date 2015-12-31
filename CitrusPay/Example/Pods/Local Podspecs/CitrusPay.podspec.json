@@ -1,6 +1,6 @@
 {
   "name": "CitrusPay",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "summary": "CitrusPay iOS SDK.",
   "description": "Enhanced CitrusPay iOS SDK for Superior Native Payments Experience.",
   "homepage": "https://github.com/citruspay/citruspay-ios-sdk",
@@ -10,18 +10,14 @@
   },
   "source": {
     "git": "https://github.com/citruspay/citruspay-ios-sdk.git",
-    "tag": "0.1.6"
+    "tag": "0.1.7"
   },
   "platforms": {
     "ios": "7.0"
   },
   "requires_arc": true,
   "ios": {
-    "preserve_paths": "**",
-    "frameworks": [
-      "Foundation",
-      "UIKit"
-    ]
+    "preserve_paths": "**"
   },
   "public_header_files": "Pod/Classes/CitrusPay.framework/**/*.h",
   "vendored_frameworks": "Pod/Classes/CitrusPay.framework",
