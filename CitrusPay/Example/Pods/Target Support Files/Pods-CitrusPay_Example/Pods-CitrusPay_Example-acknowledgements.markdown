@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## CitrusPay
 
-Copyright (c) 2015 Mukesh Patil <mukesh.patil@citruspay.com>
+Copyright © 2015 CitrusPay. All rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

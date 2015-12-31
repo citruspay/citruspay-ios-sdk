@@ -1,5 +1,5 @@
 PODS:
-  - CitrusPay (0.1.7)
+  - CitrusPay (0.1.9)
 
 DEPENDENCIES:
   - CitrusPay (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  CitrusPay: c8262e5a8ec8b04ef23171c9f0e121d5f288652d
+  CitrusPay: 6f5d9dde2a2ddf4568f0feed2f61d814f93dc99b
 
 COCOAPODS: 0.39.0
