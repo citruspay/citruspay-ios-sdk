@@ -51,7 +51,7 @@ Note: Please DO NOT PROCEED if the above mentioned requirements have not been me
 + Done!
 
 #### Using library binaries (manual)
-+ Download the latest zip file from our [releases for manual usage page](https://github.com/citruspay/citruspay-ios-sdk/tree/master/release%20for%20manual%20usage)
++ Download the latest zip file from our [releases for manual usage page](https://github.com/citruspay/citruspay-ios-sdk/releases/download/0.2.2/releases-for-manual-usage-V0.2.2.zip) or complete [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest)
 + Unzip the file and copy the contents anywhere inside your project directory
 + Or clone it 
 ~~~{.m}
@@ -66,7 +66,7 @@ $ git clone https://github.com/citruspay/citruspay-ios-sdk.git
 ## Documentation
 HTML documentation is hosted on our [CitrusPay Developer Guide](http://developers.citruspay.com/ios/iosReg.html).
 
-Pdf documentation is available on the [releases page](https://github.com/citruspay/citruspay-ios-sdk/tree/master/documentation) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/blob/master/documentation/citruspay-ios-sdk-guide.pdf).
+Pdf documentation is available on the [releases page](https://github.com/citruspay/citruspay-ios-sdk/blob/master/documentation/citruspay-ios-sdk-guide.pdf) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/0.2.2/citruspay-ios-sdk-guide.pdf.zip).
 
 ## SDK Organization
 
@@ -85,7 +85,7 @@ When you are ready, look at the samples below to learn how to interact with the 
 
 ## Samples
 
-See the [Example app](https://github.com/citruspay/citruspay-ios-sdk/tree/master/Example) for a working implementation of all API methods.
+See the [Example app](https://github.com/citruspay/citruspay-ios-sdk/tree/master/CitrusPay/Example) for a working implementation of all API methods.
 
 Note: make sure to open the project using `CitrusPay.xcworkspace` and not `CitrusPay.xcodeproj`.
 
