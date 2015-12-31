@@ -109,11 +109,7 @@
             ((UIImageView *) [cell.contentView viewWithTag:1005]).image = [CTSUtility fetchBankLogoImageByBankIssuerCode:[tempDict valueForKey:@"code"]];
         }
         else {
-
-//            ((UIImageView *) [cell.contentView viewWithTag:1005]).image = [UIImage imageNamed:@"CitrusPayResources.bundle/visa.tiff"];
-
-            NSLog(@"%@", [CTSUtility fetchSchemeImageBySchemeType:[tempDict valueForKey:@"scheme"]]);
-                   
+            
             ((UIImageView *) [cell.contentView viewWithTag:1005]).image = [CTSUtility fetchSchemeImageBySchemeType:[tempDict valueForKey:@"scheme"]];
         }
     });
