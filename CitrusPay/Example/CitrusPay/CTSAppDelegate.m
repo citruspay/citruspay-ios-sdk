@@ -13,6 +13,25 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowOffset = CGSizeMake(0.0, 0.0);
+    shadow.shadowColor = [UIColor lightGrayColor];
+    
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil]
+     setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor whiteColor],
+       NSShadowAttributeName:shadow,
+       NSFontAttributeName:[UIFont boldSystemFontOfSize:13.0]
+       }
+     forState:UIControlStateNormal];
+    
+    // setup for Nevigation Bar
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:245/255.0 green:133/255.0 blue:42/255.0 alpha:1]];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0], NSForegroundColorAttributeName,shadow, NSShadowAttributeName,[UIFont fontWithName:@"HelveticaNeue-Bold" size:17.0], NSFontAttributeName, nil]];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
     return YES;
 }
 

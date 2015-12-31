@@ -1,6 +1,6 @@
 {
   "name": "CitrusPay",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "summary": "CitrusPay iOS SDK.",
   "description": "Enhanced CitrusPay iOS SDK for Superior Native Payments Experience.",
   "homepage": "https://github.com/citruspay/citruspay-ios-sdk",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/citruspay/citruspay-ios-sdk.git",
-    "tag": "0.1.5"
+    "tag": "0.1.6"
   },
   "platforms": {
     "ios": "7.0"
