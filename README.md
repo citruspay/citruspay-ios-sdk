@@ -142,6 +142,19 @@ CTSAuthLayer *authLayer = [CTSAuthLayer fetchSharedAuthLayer];
 CTSProfileLayer *proifleLayer = [CTSProfileLayer fetchSharedProfileLayer];
 ~~~
 
+### Get the Card's Schemes & Bank logo images
+
++ Get the Card's Schemes images
+~~~{.m}
+UIImage* image = [CTSUtility fetchSchemeImageBySchemeType:@"scheme"];
+~~~
+
++ Get the Bank logo images
+~~~{.m}
+UIImage* image = [CTSUtility fetchBankLogoImageByBankIssuerCode:@"code"];
+~~~
+
+
 Following are the specific tasks related to each of the layer 
 
 #[Important Update for iOS 9](https://github.com/citruspay/open-ios/wiki/4.-Common-Errors#ios-9-ssl-errors--fix)
