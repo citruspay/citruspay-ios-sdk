@@ -142,17 +142,18 @@ CTSAuthLayer *authLayer = [CTSAuthLayer fetchSharedAuthLayer];
 CTSProfileLayer *proifleLayer = [CTSProfileLayer fetchSharedProfileLayer];
 ~~~
 
-### Get the Card's Schemes & Bank logo images
+### Get the Card's Schemes & Bank Logo Images
 
-+ Get the Card's Schemes images
++ Get the Card's Schemes Images
 ~~~{.m}
 UIImage* image = [CTSUtility fetchSchemeImageBySchemeType:@"scheme"];
 ~~~
 
-+ Get the Bank logo images
++ Get the Bank Logo Images
 ~~~{.m}
 UIImage* image = [CTSUtility fetchBankLogoImageByBankIssuerCode:@"code"];
 ~~~
+
 
 
 Following are the specific tasks related to each of the layer 
