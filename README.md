@@ -158,10 +158,10 @@ UIImage* image = [CTSUtility fetchBankLogoImageByBankIssuerCode:@"code"];
 
 Following are the specific tasks related to each of the layer 
 
-#[Important Update for iOS 9](https://github.com/citruspay/open-ios/wiki/4.-Common-Errors#ios-9-ssl-errors--fix)
+#[Important Update for iOS 9](https://github.com/citruspay/citruspay-ios-sdk/wiki/4.-Common-Errors#ios-9-ssl-errors--fix)
 
 #####Doing direct payments
-+ [CC, DC, NB Direct Payments](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLaye#cc-dc-nb-direct-payments)
++ [CC, DC, NB Direct Payments](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#cc-dc-nb-direct-payments)
 + [Saved CC, DC Payments (A.K.A. Tokenized payments)](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#saved-cc-dc-payments-aka-tokenized-payments)
 
 #####User Management
