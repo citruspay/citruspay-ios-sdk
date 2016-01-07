@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "JSONModel.h"
+
 @interface CTSAmount : JSONModel
 @property(strong) NSString* currency, *value;
 - (instancetype)initWithValue:(NSString *)valueArg;
-
-
 @end

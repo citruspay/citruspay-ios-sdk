@@ -7,19 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CTSContactUpdate.h"
-#import "CTSProfileContactRes.h"
-#import "CTSProfilePaymentRes.h"
-#import "CTSPaymentDetailUpdate.h"
-#import "CTSRestCoreResponse.h"
+
 #import "CTSRestPluginBase.h"
-#import "CTSProfileLayerConstants.h"
-#import "CTSCashoutBankAccountResp.h"
-#import "CTSCashoutBankAccount.h"
 #import "CTSNewContactProfile.h"
-#import "CTSUpdateMobileNumberRes.h"
-#import "CTSDPResponse.h"
-#import "CTSDPMerchantQueryReq.h"
+#import "CTSProfilePaymentRes.h"
+#import "CTSContactUpdate.h"
+#import "CTSUserAddress.h"
+
+@class CTSAmount, CTSProfileContactRes, CTSCashoutBankAccountResp, CTSUpdateMobileNumberRes, CTSDPResponse, CTSPaymentDetailUpdate, CTSCashoutBankAccount, CTSDPMerchantQueryReq;
 
 @class CTSProfileLayer;
 @protocol CTSProfileProtocol

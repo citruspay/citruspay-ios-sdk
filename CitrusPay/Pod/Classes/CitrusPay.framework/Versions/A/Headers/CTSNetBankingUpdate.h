@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CTSProfileLayerConstants.h"
 #import "CTSObject.h"
 
 @interface CTSNetBankingUpdate : CTSObject
@@ -17,5 +16,4 @@
 @property(strong ) NSString* code; //CID code
 @property(strong ) NSString* token;
 @property(strong ) NSString* issuerCode;
-
 @end

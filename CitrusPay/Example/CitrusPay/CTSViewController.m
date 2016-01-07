@@ -7,6 +7,7 @@
 //
 
 #import "CTSViewController.h"
+#import "MerchantConstants.h"
 
 @interface CTSViewController ()
 

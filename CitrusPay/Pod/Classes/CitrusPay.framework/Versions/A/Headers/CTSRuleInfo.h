@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+
 typedef enum{
     DPRequestTypeValidate,
     DPRequestTypeCalculate,
     DPRequestTypeSearchAndApply,
 }DPRequestType;
+
 @interface CTSRuleInfo : NSObject
 @property(strong)NSString *ruleName,*alteredAmount,*originalAmount;
 @property(assign)DPRequestType operationType;

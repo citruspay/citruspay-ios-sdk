@@ -10,18 +10,14 @@
 #import <UIKit/UIKit.h>
 
 #import "CTSRestPluginBase.h"
-#import "CTSCitrusLinkRes.h"
-#import "CTSLinkUserRes.h"
+
+@class CTSLinkUserRes, CTSLinkRes, CTSCitrusLinkRes, CTSTokenValidityRes, CTSEotpVerSigninResp, CTSUserDetails, CTSResponse;
 
 typedef enum PasswordType {
     PasswordTypeOtp,
     PasswordTypePassword
 } PasswordType;
 
-@class CTSLinkRes, CTSTokenValidityRes, CTSEotpVerSigninResp, CTSUserDetails;
-
-#define CONSUMER_PORTAL_PRODUCTION_BASEURL @"https://consumer.citruspay.com/CitrusConsumerPortal/AppLanding/appLandingPage"
-#define CONSUMER_PORTAL_STAGING_BASEURL @"https://stgconsumer.citruspay.com/CitrusConsumerPortal/AppLanding/appLandingPage"
 
 @class CTSAuthLayer;
 @protocol CTSAuthenticationProtocol
@@ -128,7 +124,10 @@ typedef enum PasswordType {
     BOOL isInLink;
 
   BOOL wasSignupCalled;
+    BOOL ENABLELOGS;
 }
+- (void)enabledDebuggingMessages:(BOOL)val;
+
 - (instancetype)initWithKeyStore:(CTSKeyStore *)keystoreArg;
 typedef void (^ASSigninCallBack)(NSString* userName,
                                  NSString* token,

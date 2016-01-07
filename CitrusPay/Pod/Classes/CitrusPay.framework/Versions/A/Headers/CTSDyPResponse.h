@@ -7,7 +7,8 @@
 //
 
 #import "JSONModel.h"
-#import "CTSAmount.h"
+
+@class CTSAmount;
 
 @interface CTSDyPResponse : JSONModel
 @property(assign)int resultCode;

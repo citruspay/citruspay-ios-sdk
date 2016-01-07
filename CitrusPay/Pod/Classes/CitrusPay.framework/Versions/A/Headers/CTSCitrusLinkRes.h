@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CTSResponse.h"
+
+@class CTSResponse;
 
 typedef enum {
     CitrusSiginTypeMOtp,
@@ -16,6 +17,7 @@ typedef enum {
     CitrusSiginTypeMOtpOrPassword,
     CitrusSiginTypeEOtpOrPassword
 } CitrusSiginType;
+
 @interface CTSCitrusLinkRes : NSObject
 @property(strong)NSString *userMessage;
 @property(assign)CitrusSiginType siginType;

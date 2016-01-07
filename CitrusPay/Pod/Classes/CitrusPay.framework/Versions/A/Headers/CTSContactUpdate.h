@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CTSProfileLayerConstants.h"
-#import "CTSProfileContactRes.h"
 #import "JSONModel.h"
+
+@class CTSProfileContactRes;
 
 @interface CTSContactUpdate : JSONModel
 @property(  strong) NSString* firstName, *lastName;

@@ -47,7 +47,6 @@
       [CitrusPaymentSDK initializeWithKeyStore:keyStore environment:CTSEnvSandbox];
 
     
-    
     authLayer = [CTSAuthLayer fetchSharedAuthLayer];
     proifleLayer = [CTSProfileLayer fetchSharedProfileLayer];
     paymentLayer = [CTSPaymentLayer fetchSharedPaymentLayer];

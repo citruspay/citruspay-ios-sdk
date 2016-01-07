@@ -9,11 +9,7 @@
 #ifndef RestFulltester_RestLayerConstants_h
 #define RestFulltester_RestLayerConstants_h
 
-//#define CITRUS_BASE_URL @"https://stgadmin.citruspay.com"
-//#define CITRUS_BASE_URL @"https://sandboxadmin.citruspay.com"
 #define CITRUS_BASE_URL BaseUrl
-
-
 
 typedef enum HTTPMethod { GET, POST, PUT, DELETE } HTTPMethod;
 

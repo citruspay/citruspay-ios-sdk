@@ -7,15 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CTSElectronicCardUpdate.h"
-#import "CTSNetBankingUpdate.h"
-#import "CTSTokenizedPayment.h"
 #import "JSONModel.h"
-#import "CTSUtility.h"
-#import "CTSPaymentMode.h"
-#import "CTSPaymentToken.h"
-#import "CTSPaymentLayerConstants.h"
 
+#import "CTSError.h"
+#import "CTSUtility.h"
+
+@class CTSNetBankingUpdate, CTSElectronicCardUpdate, CTSTokenizedPayment, CTSPaymentToken;
 
 typedef enum {
     MemberCard,
@@ -28,9 +25,6 @@ typedef enum {
 @protocol CTSPaymentOption;
 
 @interface CTSPaymentOption : JSONModel
-//@property( strong) NSString* type, *cardName, *ownerName, *number,
-//    *bankName, *expiryDate, *scheme;
-
 @property( strong) NSString<Optional>* type;
 @property( strong) NSString<Optional>* name;
 @property( strong) NSString<Optional>* owner;

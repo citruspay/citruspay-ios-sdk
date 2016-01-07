@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+
 #import "RestLayerConstants.h"
+
 @interface CTSRestCoreRequest : NSObject
 @property(strong) NSString* requestJson, *urlPath;
 @property(strong) NSMutableDictionary* parameters, *headers;
@@ -15,7 +17,6 @@
 @property(assign) HTTPMethod httpMethod;
 @property(assign) long index;
 @property(assign) BOOL isAlternatePath;
-
 
 - (instancetype)initWithPath:(NSString*)path
                    requestId:(int)reqId

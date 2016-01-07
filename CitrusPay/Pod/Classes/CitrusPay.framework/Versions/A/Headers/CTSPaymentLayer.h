@@ -7,35 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CTSPaymentLayerConstants.h"
-#import "CTSPaymentDetailUpdate.h"
-#import "CTSAuthLayerConstants.h"
-#import "CTSUtility.h"
-#import "CTSPaymentRes.h"
-#import "CTSPaymentDetailUpdate.h"
-#import "CTSContactUpdate.h"
-#import "CTSPaymentUpdate.h"
-#import "CTSPaymentRequest.h"
-#import "CTSPaymentTransactionRes.h"
-#import "CTSPgSettings.h"
-#import "CTSAuthLayer.h"
+#import <UIKit/UIKit.h>
+
 #import "CTSRestPluginBase.h"
-#import "CTSUserAddress.h"
-#import "CTSBill.h"
-#import "CitrusCashRes.h"
-#import "CTSPrepaidBill.h"
-#import "CTSCashoutBankAccount.h"
-#import "CTSCashoutBankAccountResp.h"
-#import "CTSCashoutToBankRes.h"
-#import "CTSPaymentWebViewController.h"
-#import "CTSPGHealthRes.h"
-#import "CTSDyPResponse.h"
-#import "CTSTransferMoneyResponse.h"
-#import "CTSDyPValidateRuleReq.h"
-#import "CTSCardBinResponse.h"
 #import "CTSRuleInfo.h"
+#import "CTSAuthLayer.h"
+#import "CitrusCashRes.h"
+#import "CTSPaymentDetailUpdate.h"
 #import "CTSUser.h"
-#import "CTSPrepaidPayResp.h"
+#import "CTSDyPResponse.h"
+#import "CTSBill.h"
+#import "CTSPgSettings.h"
+#import "CTSTransferMoneyResponse.h"
+#import "CTSAmount.h"
+
+@class CTSPaymentTransactionRes, CTSPrepaidBill, CTSCitrusCashRes, CTSCashoutToBankRes, CTSPaymentWebViewController, CTSPGHealthRes, CTSCitrusCashRes, CTSCitrusCashRes, CTSCardBinResponse, CTSCashoutBankAccount, CTSDyPValidateRuleReq, CTSPrepaidPayResp, CTSContactUpdate, CTSUserAddress;
 
 typedef enum {
     PaymentAsGuestReqId,
@@ -71,8 +57,9 @@ typedef enum{
     CitrusPaymentTypeCitrusCash,
 }CitrusPaymentType;
 
+extern NSString * const LoadMoneyResponeKey;
+
 #define LogThread LogTrace(@"THREAD  %@", [NSThread currentThread]);
-#define LoadMoneyResponeKey @"loadMoneyResponseKey"
 
 @class CTSAuthLayer;
 @class CTSAuthenticationProtocol;
@@ -157,7 +144,7 @@ didCashoutToBank:(CTSCashoutToBankRes *)cashoutToBankRes
 
 @end
 
-@interface CTSPaymentLayer : CTSRestPluginBase<CTSAuthenticationProtocol,UIWebViewDelegate> {
+@interface CTSPaymentLayer : CTSRestPluginBase<CTSAuthenticationProtocol, UIWebViewDelegate> {
     BOOL finished;
     NSString *cCashReturnUrl;
     PaymentRequestType prepaidRequestType;

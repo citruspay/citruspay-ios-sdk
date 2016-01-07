@@ -7,10 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CTSPaymentTransactionRes.h"
-#import "CTSResponse.h"
-#import "CTSDyPResponse.h"
 
+@class CTSPaymentTransactionRes, CTSDyPResponse, CTSResponse;
 
 typedef enum {
     NoError = 7000,
@@ -62,19 +60,13 @@ typedef enum {
     CompletionHandlerNotFound,
     UnknownPasswordType,
     NoNewPrepaidPrelivilage
-
-
 } CTSErrorCode;
 
 
-
-
-
-
-#define CITRUS_ERROR_DOMAIN @"com.citrus.errorDomain"
-#define CITRUS_ERROR_DOMAIN_DP @"com.citrus.errorDomainDp"
-#define CITRUS_ERROR_DESCRIPTION_KEY @"CTSServerErrorDescription"
-#define INTERNET_DOWN_STATUS_CODE 0
+extern NSString * const CITRUS_ERROR_DOMAIN;
+extern NSString * const CITRUS_ERROR_DOMAIN_DP;
+extern NSString * const CITRUS_ERROR_DESCRIPTION_KEY;
+extern NSInteger * const INTERNET_DOWN_STATUS_CODE;
 
 @interface CTSError : NSObject
 // Follwoing methods are for internal use only

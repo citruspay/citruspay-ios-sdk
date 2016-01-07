@@ -7,14 +7,11 @@
 //
 
 #import "JSONModel.h"
+
 #import "CTSNewResponseDataProfile.h"
 
 @interface CTSNewContactProfile : JSONModel
 @property(strong)NSString<Optional>* responseCode;
 @property(strong)NSString<Optional>* responseMessage;
 @property(strong)CTSNewResponseDataProfile <Optional>* responseData;
-
-
-
-
 @end

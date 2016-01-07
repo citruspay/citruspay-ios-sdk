@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CitrusPay/CitrusPay.h>
+#import "MerchantConstants.h"
 
 @interface BaseViewController : UIViewController{
 

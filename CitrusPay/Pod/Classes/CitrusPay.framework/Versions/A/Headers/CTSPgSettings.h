@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "JSONModel.h"
+
 @interface CTSPgSettings : JSONModel
 @property(  strong) NSMutableArray* creditCard;
 @property(  strong) NSMutableArray* debitCard;

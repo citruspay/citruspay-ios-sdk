@@ -7,7 +7,6 @@
 //
 
 #import "ManageCradViewController.h"
-#import <CitrusPay/CitrusPay.h>
 
 @interface ManageCradViewController (){
 
@@ -104,12 +103,12 @@
     [string insertString:@"/" atIndex:2];
     ((UILabel *) [cell.contentView viewWithTag:1004]).text = string;
     
+    
     dispatch_async(dispatch_get_main_queue(), ^{
-        if ([[tempDict valueForKey:@"bank"] isEqualToString:@"netbanking"]) {
-            ((UIImageView *) [cell.contentView viewWithTag:1005]).image = [CTSUtility fetchBankLogoImageByBankIssuerCode:[tempDict valueForKey:@"code"]];
+        if ([[tempDict valueForKey:@"type"] isEqualToString:@"netbanking"]) {
+            ((UIImageView *) [cell.contentView viewWithTag:1005]).image = [CTSUtility fetchBankLogoImageByBankName:[tempDict valueForKey:@"bank"]];
         }
         else {
-            
             ((UIImageView *) [cell.contentView viewWithTag:1005]).image = [CTSUtility fetchSchemeImageBySchemeType:[tempDict valueForKey:@"scheme"]];
         }
     });

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CTSProfileLayerConstants.h"
+
 #import "CTSObject.h"
 
 @interface CTSElectronicCardUpdate : CTSObject

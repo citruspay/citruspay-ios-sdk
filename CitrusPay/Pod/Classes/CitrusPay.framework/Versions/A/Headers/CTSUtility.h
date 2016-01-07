@@ -7,28 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CTSOauthTokenRes.h"
-#import "CTSAuthLayerConstants.h"
-#import "UserLogging.h"
-#import "CTSBill.h"
-#import "CTSContactUpdate.h"
-#import "CTSUserAddress.h"
-#import "CTSKeyStore.h"
-#import "CTSProfileContactRes.h"
-#import "CTSDyPPaymentInfo.h"
 #import <UIKit/UIKit.h>
-#import "CTSPaymentOption.h"
-#import "CTSDataCache.h"
-#import "CTSRuleInfo.h"
-#import "CTSRestCoreResponse.h"
-//#import "CTSPaymentLayer.h"
+
 #import "CTSAuthLayer.h"
 
-#define CTS_SIGNIN_USER_EMAIL @"CTS_SIGNIN_USER_EMAIL"
+@class CTSBill, CTSContactUpdate, CTSUserAddress, CTSProfileContactRes, CTSKeyStore, CTSRuleInfo, CTSRestCoreResponse, CTSAuthLayer;
+
+extern NSString * const CTS_SIGNIN_USER_EMAIL;
 
 @interface CTSUtility : NSObject
 typedef void (^ASBillCallback)(CTSBill* bill,NSError* error);
-
 
 + (NSString*)readFromDisk:(NSString*)key;
 + (void)saveToDisk:(id)data as:(NSString*)key;
@@ -101,6 +89,7 @@ typedef void (^ASBillCallback)(CTSBill* bill,NSError* error);
 + (NSMutableArray *)fetchMappedCardSchemeForSaveCards:(NSArray*)cardsSchemeArray;
 + (UIImage *)fetchSchemeImageBySchemeType:(NSString *)scheme;
 + (UIImage *)fetchBankLogoImageByBankIssuerCode:(NSString *)bankIssuerCode;
++ (UIImage *)fetchBankLogoImageByBankName:(NSString *)bankName;
 +(void)requestDPBillForRule:(CTSRuleInfo *)ruleInfo billURL:(NSString *)billUrl callback:(ASBillCallback)callback;
 +(void)requestBillAmount:(NSString *)amount billURL:(NSString *)billUrl callback:(ASBillCallback)callback;
 +(BOOL)isNonNumeric:(NSString *)string;
@@ -109,4 +98,5 @@ typedef void (^ASBillCallback)(CTSBill* bill,NSError* error);
 +(CTSKeyStore *)keyStore;
 + (CTSRestCoreResponse*)addJsonErrorToResponse:(CTSRestCoreResponse*)response;
 +(BOOL)isErrorJson:(NSString *)string;
++ (void)logProperties:(id)object;
 @end

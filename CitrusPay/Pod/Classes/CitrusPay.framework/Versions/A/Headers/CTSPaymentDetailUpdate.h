@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JSONModel.h"
+
+#import "CTSPaymentOption.h"
 #import "CTSElectronicCardUpdate.h"
 #import "CTSNetBankingUpdate.h"
-#import "CTSPaymentOption.h"
-#import "JSONModel.h"
 
 @interface CTSPaymentDetailUpdate : JSONModel
 @property( strong) NSString* type;
@@ -42,8 +43,6 @@
  *
  *  @return always returns true
  */
-
-
 
 - (BOOL)addNetBanking:(CTSNetBankingUpdate*)netBankDetail;
 

@@ -107,7 +107,6 @@
  *GCC_PREPROCESSOR_DEFINITIONS
  * in your build configuration.
  */
-#import "MerchantConstants.h"
 
 #import "Version.h"
 

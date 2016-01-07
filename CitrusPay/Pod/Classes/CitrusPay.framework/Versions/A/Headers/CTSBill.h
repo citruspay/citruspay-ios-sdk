@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "JSONModel.h"
-#import "CTSAmount.h"
+
+@class CTSAmount;
+
 @interface CTSBill : JSONModel
 @property(strong)NSString *merchantTxnId;
 @property(strong)CTSAmount *amount;

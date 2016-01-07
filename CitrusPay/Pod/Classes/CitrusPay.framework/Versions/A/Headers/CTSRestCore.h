@@ -12,9 +12,10 @@
 
 @class CTSRestCoreResponse;
 
-#define PGHEALTH_PRODUCTION_BASEURL @"https://citruspay.com"
-#define PGHEALTH_SANDBOX_BASEURL @"https://sandbox.citruspay.com"
-#define PRODUCTION_BASEURL @"https://admin.citruspay.com"
+extern NSString * const PGHEALTH_PRODUCTION_BASEURL;
+extern NSString * const PGHEALTH_SANDBOX_BASEURL;
+
+extern NSString * const PRODUCTION_BASEURL;
 
 @class CTSRestCore;
 @protocol CTSRestCoreDelegate
@@ -31,7 +32,6 @@
 
 
 typedef void (^ASCTSRestResponse)(CTSRestCoreResponse* response);
-
 
 - (instancetype)initWithBaseUrl:(NSString*)url;
 - (void)requestAsyncServer:(CTSRestCoreRequest*)restRequest;

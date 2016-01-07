@@ -8,6 +8,7 @@
 
 #import "CardsViewController.h"
 #import "HMSegmentedControl.h"
+#import <CitrusPay/CitrusPay.h>
 
 @interface CardsViewController (){
 
@@ -393,13 +394,16 @@
             
             //Fetching save NetBanking Option
             NSArray  *netBankingArray = paymentInfo.getSavedNBPaymentOption;
+            NSLog(@"netBankingArray %@", netBankingArray);
             
             //Fetching save Debit cards Option
             NSArray  *debitCardArray = paymentInfo.getSavedDCPaymentOption;
-            
+            NSLog(@"debitCardArray %@", debitCardArray);
+
             //Fetching save Credit cards Option
             NSArray  *creditCardArray = paymentInfo.getSavedCCPaymentOption;
-            
+            NSLog(@"creditCardArray %@", creditCardArray);
+
             NSMutableString *toastString = [[NSMutableString alloc] init];
             if([paymentInfo.paymentOptions count])
             {
@@ -450,9 +454,9 @@
         }
         else {
        //Vikas
-//    [paymentLayer requestChargeTokenizedPayment:tokenizedCardInfo withContact:contactInfo withAddress:addressInfo bill:bill customParams:customParams returnViewController:self withCompletionHandler:^(CTSCitrusCashRes *citrusCashResponse, NSError *error) {
+             [paymentLayer requestChargeTokenizedPayment:tokenizedCardInfo withContact:contactInfo withAddress:addressInfo bill:bill customParams:customParams returnViewController:self withCompletionHandler:^(CTSCitrusCashRes *citrusCashResponse, NSError *error) {
     
-             [paymentLayer requestDirectChargePayment:tokenizedCardInfo withContact:contactInfo withAddress:addressInfo bill:bill returnViewController:self withCompletionHandler:^(CTSCitrusCashRes *citrusCashResponse, NSError *error) {
+//             [paymentLayer requestDirectChargePayment:tokenizedCardInfo withContact:contactInfo withAddress:addressInfo bill:bill returnViewController:self withCompletionHandler:^(CTSCitrusCashRes *citrusCashResponse, NSError *error) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.indicatorView stopAnimating];
                     self.indicatorView.hidden = TRUE;
@@ -808,8 +812,12 @@
         ((UILabel *) [cell.contentView viewWithTag:1004]).text = string;
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            ((UIImageView *) [cell.contentView viewWithTag:1005]).image = [CTSUtility fetchSchemeImageBySchemeType:[tempDict valueForKey:@"scheme"]];
-            
+            if ([[tempDict valueForKey:@"type"] isEqualToString:@"netbanking"]) {
+                ((UIImageView *) [cell.contentView viewWithTag:1005]).image = [CTSUtility fetchBankLogoImageByBankName:[tempDict valueForKey:@"bank"]];
+            }
+            else {
+                ((UIImageView *) [cell.contentView viewWithTag:1005]).image = [CTSUtility fetchSchemeImageBySchemeType:[tempDict valueForKey:@"scheme"]];
+            }
         });
     }
     return cell;

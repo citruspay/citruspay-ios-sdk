@@ -9,6 +9,7 @@
 #import "SignUpViewController.h"
 #import "ResetPasswordViewController.h"
 #import "SignInViewController.h"
+#import <CitrusPay/CitrusPay.h>
 
 @interface SignUpViewController (){
 
@@ -26,7 +27,8 @@
     self.indicatorView.hidden = TRUE;
     self.signupButton.layer.cornerRadius = 4;
     
-    
+//    [authLayer enabledDebuggingMessages:YES];
+
     if (authLayer.requestSignInOauthToken.length != 0) {
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:self];

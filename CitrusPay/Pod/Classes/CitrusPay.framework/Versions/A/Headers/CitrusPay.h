@@ -8,22 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
+#import "Version.h"
+
+// Layers
 #import "CTSAuthLayer.h"
 #import "CTSProfileLayer.h"
 #import "CTSPaymentLayer.h"
 
-#import "Version.h"
+// Models
 #import "UIUtility.h"
+#import "CTSCitrusLinkRes.h"
+#import "CTSKeyStore.h"
+#import "CTSDataCache.h"
+
 typedef enum{
     CTSEnvSandbox,
     CTSEnvProduction
 } CTSEnvironment;
 
-
 @interface CitrusPaymentSDK : NSObject
-//urls
-//key store
-
 +(void)initializeWithKeyStore:(CTSKeyStore *)keyStore environment:(CTSEnvironment)env;
 +(void)initializeWithKeyStore:(CTSKeyStore *)keyStore environmentPath:(NSString *)envPlist;
 +(NSString *)sdkVersion;

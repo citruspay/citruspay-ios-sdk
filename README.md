@@ -149,9 +149,14 @@ CTSProfileLayer *proifleLayer = [CTSProfileLayer fetchSharedProfileLayer];
 UIImage* image = [CTSUtility fetchSchemeImageBySchemeType:@"scheme"];
 ~~~
 
-+ Get the Bank Logo Images
++ Get the Bank Logo Images by Issure Code
 ~~~{.m}
 UIImage* image = [CTSUtility fetchBankLogoImageByBankIssuerCode:@"code"];
+~~~
+
++ Get the Bank Logo Images by Bank Name
+~~~{.m}
+UIImage* image = [CTSUtility fetchBankLogoImageByBankName:@"bank"];
 ~~~
 
 
