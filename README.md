@@ -18,9 +18,9 @@ CitrusPay iOS SDK broadly offers following features.
 + Withdraw the money back into User's bank account from the Prepaid account .
 + Creating Citrus account for the user .
 
-####[ChangeLog](https://github.com/citruspay/open-ios/wiki/ChangeLog)
+####[ChangeLog](https://github.com/citruspay/citruspay-ios-sdk/wiki/ChangeLog)
 
-####[Migration from 3.0.x to 3.1.x](https://github.com/citruspay/open-ios/wiki/5-Migration-From-V-3.0.x-to-V-3.1.x)
+####[Migration from 3.0.x to 3.1.x](https://github.com/citruspay/citruspay-ios-sdk/wiki/5-Migration-From-V-3.0.x-to-V-3.1.x)
 
 ## Usage
 
@@ -51,7 +51,7 @@ Note: Please DO NOT PROCEED if the above mentioned requirements have not been me
 + Done!
 
 #### Using library binaries (manual)
-+ Download the latest zip file from our [releases for manual usage page](https://github.com/citruspay/citruspay-ios-sdk/releases/download/0.2.2/releases-for-manual-usage-V0.2.2.zip) or complete [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest)
++ Download the latest zip file from our [releases for manual usage page](https://github.com/citruspay/citruspay-ios-sdk/releases/download/2.0.0/releases-for-manual-usage-v2.0.0.zip) or complete [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest)
 + Unzip the file and copy the contents anywhere inside your project directory
 + Or clone it 
 ~~~{.m}
@@ -66,7 +66,7 @@ $ git clone https://github.com/citruspay/citruspay-ios-sdk.git
 ## Documentation
 HTML documentation is hosted on our [CitrusPay Developer Guide](http://developers.citruspay.com/ios/iosReg.html).
 
-Pdf documentation is available on the [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/0.2.2/citruspay-ios-sdk-guide.pdf.zip).
+Pdf documentation is available on the [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/2.0.0/citruspay-ios-sdk-guide-v2.0.0.pdf.zip).
 
 ## SDK Organization
 
