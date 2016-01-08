@@ -142,9 +142,9 @@ CTSAuthLayer *authLayer = [CTSAuthLayer fetchSharedAuthLayer];
 CTSProfileLayer *proifleLayer = [CTSProfileLayer fetchSharedProfileLayer];
 ~~~
 
-### Enable DEBUG Logs (By Default it's Disable DEBUG Logs)
+### Enable DEBUG Logs ( By Default it's Disable Logs )
 
-+ If you want to debug the SDK by Printing Console logs
++ Print Console logs
 ~~~{.m}
 [CitrusPaymentSDK enableDEBUGLogs];
 ~~~
