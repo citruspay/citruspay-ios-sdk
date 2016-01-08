@@ -142,6 +142,13 @@ CTSAuthLayer *authLayer = [CTSAuthLayer fetchSharedAuthLayer];
 CTSProfileLayer *proifleLayer = [CTSProfileLayer fetchSharedProfileLayer];
 ~~~
 
+### Enable DEBUG Logs (By Default it's Disable DEBUG Logs)
+
++ If you want to debug the SDK by Printing Console logs
+~~~{.m}
+[CitrusPaymentSDK enableDEBUGLogs];
+~~~
+
 ### Get the Card's Schemes & Bank Logo Images
 
 + Get the Card's Schemes Images

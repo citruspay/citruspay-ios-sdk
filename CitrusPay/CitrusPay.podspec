@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "CitrusPay"
-  s.version          = "0.2.2"
+  s.version          = "0.2.4"
   s.summary          = "CitrusPay iOS SDK."
 
 # This description is used to generate tags and improve search results.
@@ -28,22 +28,10 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
-#  s.source_files = 'Pod/Classes/**/*'
-#  s.resource_bundles = {
-#    'CitrusPay' => ['Pod/Assets/*.png']
-#  }
-
   s.ios.preserve_paths   = '**'
   s.public_header_files = 'Pod/Classes/CitrusPay.framework/**/*.h'
   s.vendored_frameworks  = 'Pod/Classes/CitrusPay.framework'
 
   s.resource = "Pod/Classes/CitrusPayResources.bundle"
-
-#  s.ios.frameworks = 'Foundation', 'UIKit'
-
-#  s.resource_bundles = {
-#   'mytestpod' => ['Pod/Assets/*.*']
-#  }
-
 
 end

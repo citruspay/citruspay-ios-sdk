@@ -33,4 +33,5 @@ typedef enum{
 +(CTSAuthLayer *)fetchSharedAuthLayer;
 +(CTSProfileLayer *)fetchSharedProfileLayer;
 +(CTSPaymentLayer *)fetchSharedPaymentLayer;
++ (void)enableDEBUGLogs;
 @end
