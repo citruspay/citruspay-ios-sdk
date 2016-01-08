@@ -60,7 +60,7 @@ $ git clone https://github.com/citruspay/citruspay-ios-sdk.git
 + In Xcode, go to your app's target settings. On the `Build Phases` tab, expand the `Link Binary With Libraries` section.
 + Include the following framework and bundle files you copied:
     - CitrusPay.framework
-    - CitrusPayResources.bundle
+    - CitrusPay.bundle
 + Done!
 
 ## Documentation
