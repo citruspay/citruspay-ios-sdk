@@ -1,1 +1,1 @@
-../../../../../../../releases-for-manual-usage-v2.0.0/CitrusPay.framework/Versions/A/Headers/CTSProfilePaymentRes.h
+../../../../../../../releases-for-manual-usage/CitrusPay.framework/Versions/A/Headers/CTSProfilePaymentRes.h
