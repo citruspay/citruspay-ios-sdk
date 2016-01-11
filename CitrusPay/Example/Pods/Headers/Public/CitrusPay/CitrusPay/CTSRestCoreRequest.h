@@ -1,1 +1,1 @@
-../../../../../../Pod/Classes/CitrusPay.framework/Versions/A/Headers/CTSRestCoreRequest.h
+../../../../../../../releases-for-manual-usage-v2.0.0/CitrusPay.framework/Versions/A/Headers/CTSRestCoreRequest.h

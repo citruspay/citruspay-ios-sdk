@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06763526A0FB11F8A390D1C72BFB58A2 /* CitrusPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CitrusPay.framework; path = "releases-for-manual-usage-v2.0.0/CitrusPay.framework"; sourceTree = "<group>"; };
 		0C95E62FC2A62780ED90A1A2F888E950 /* Pods-CitrusPay_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CitrusPay_Example-umbrella.h"; sourceTree = "<group>"; };
 		0FB798D0480A904FCF736F830EBB7AD5 /* Pods-CitrusPay_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CitrusPay_Tests-umbrella.h"; sourceTree = "<group>"; };
 		186ADE827D444C5A65749C0048508F2A /* Pods-CitrusPay_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CitrusPay_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -26,9 +27,9 @@
 		3AC4303E403170FAEAD2944BE00317B1 /* Pods-CitrusPay_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CitrusPay_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4D13E64CD4493BD3D1796A098F9F2887 /* Pods-CitrusPay_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CitrusPay_Example.release.xcconfig"; sourceTree = "<group>"; };
+		4F72147237BC625239D69B233425D790 /* CitrusPay.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = CitrusPay.bundle; sourceTree = "<group>"; };
 		52898B04366490D0E3349B72BE8A1EF7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59EC3D900E25F58551BC964ED03E199B /* Pods-CitrusPay_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CitrusPay_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		6F55B6DD4FC1F13FE208FCA72F5454CF /* CitrusPay.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = CitrusPay.bundle; sourceTree = "<group>"; };
 		786BFE1801F360E6E5C335597062E99E /* Pods-CitrusPay_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CitrusPay_Example-resources.sh"; sourceTree = "<group>"; };
 		98282F2CC48451062BB2C62E1119214B /* Pods-CitrusPay_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CitrusPay_Example.modulemap"; sourceTree = "<group>"; };
 		987D9B7973C5B00A8BADA45C221E5911 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,7 +39,6 @@
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C25A9969CC1AC88929AA8B0FCFDF570B /* Pods_CitrusPay_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CitrusPay_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C91B811CB594067DD20FBD9B7233E229 /* Pods-CitrusPay_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CitrusPay_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D2CDC955E6A701D6F2C3054E5E161042 /* CitrusPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CitrusPay.framework; path = Pod/Classes/CitrusPay.framework; sourceTree = "<group>"; };
 		D4995DAD6A194A024486DF85FA2C9EB9 /* Pods-CitrusPay_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CitrusPay_Tests.modulemap"; sourceTree = "<group>"; };
 		D5FAC66E48D0ECD41EBDEE453ABC9CC8 /* Pods_CitrusPay_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CitrusPay_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F759BDFEC581E26DFF235AC5CE869045 /* Pods-CitrusPay_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CitrusPay_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -73,12 +73,12 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		19615C49C978F8108B57EC5068718526 /* Pod */ = {
+		1A2F5DCF63CC3BF9CF02B1F30703E3D5 /* releases-for-manual-usage-v2.0.0 */ = {
 			isa = PBXGroup;
 			children = (
-				D023D04FF979DE9ED33B4FFF9AB1DDA5 /* Classes */,
+				4F72147237BC625239D69B233425D790 /* CitrusPay.bundle */,
 			);
-			path = Pod;
+			path = "releases-for-manual-usage-v2.0.0";
 			sourceTree = "<group>";
 		};
 		1E41EA2D52392DE2A5DA2A88BF31D9E8 /* Products */ = {
@@ -90,10 +90,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		41D6E00A764A19612ED74043A79EF15B /* Frameworks */ = {
+		2FFD6DDCD402C58F4666F513B5E42E84 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D2CDC955E6A701D6F2C3054E5E161042 /* CitrusPay.framework */,
+				1A2F5DCF63CC3BF9CF02B1F30703E3D5 /* releases-for-manual-usage-v2.0.0 */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		4126FF9ACCFECB512C05D45AEE017520 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06763526A0FB11F8A390D1C72BFB58A2 /* CitrusPay.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -116,31 +124,23 @@
 			path = "Target Support Files/Pods-CitrusPay_Example";
 			sourceTree = "<group>";
 		};
+		723C870E9AABBE1B64C324B3E58B3F2F /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7A6CDA0A0C2896CCE3E1A738C7BDDA0 /* CitrusPay */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				8B1C063852D6851A161A52D060394621 /* Development Pods */,
+				723C870E9AABBE1B64C324B3E58B3F2F /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				1E41EA2D52392DE2A5DA2A88BF31D9E8 /* Products */,
 				06B242783F3EB4D41F7B5E3912BE082F /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		83DDC532C061377EF9664F3B8E66F4B9 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				19615C49C978F8108B57EC5068718526 /* Pod */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		8B1C063852D6851A161A52D060394621 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E3097E690F9B11E55D03D1DC54A669B2 /* CitrusPay */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -159,24 +159,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		D023D04FF979DE9ED33B4FFF9AB1DDA5 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				6F55B6DD4FC1F13FE208FCA72F5454CF /* CitrusPay.bundle */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		E3097E690F9B11E55D03D1DC54A669B2 /* CitrusPay */ = {
-			isa = PBXGroup;
-			children = (
-				41D6E00A764A19612ED74043A79EF15B /* Frameworks */,
-				83DDC532C061377EF9664F3B8E66F4B9 /* Resources */,
-			);
-			name = CitrusPay;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		EDD49773F6A5CF9705446A0493AEC0DC /* Pods-CitrusPay_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +175,16 @@
 			);
 			name = "Pods-CitrusPay_Tests";
 			path = "Target Support Files/Pods-CitrusPay_Tests";
+			sourceTree = "<group>";
+		};
+		F7A6CDA0A0C2896CCE3E1A738C7BDDA0 /* CitrusPay */ = {
+			isa = PBXGroup;
+			children = (
+				4126FF9ACCFECB512C05D45AEE017520 /* Frameworks */,
+				2FFD6DDCD402C58F4666F513B5E42E84 /* Resources */,
+			);
+			name = CitrusPay;
+			path = ../../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
