@@ -50,6 +50,7 @@ Note: Please DO NOT PROCEED if the above mentioned requirements have not been me
 You can learn more about CocoaPods at the website: http://cocoapods.org/
 + Add `pod "CitrusPay"` to your podfile
 + Run `pod install`
++ You should now be able to add `#import <CitrusPay/CitrusPay.h>` to any of your target's source files and begin using CitrusPay SDK!
 + Done!
 
 #### Using Submodule
@@ -87,6 +88,7 @@ $ open citruspay-ios-sdk
 + In Xcode, go to your app's target settings. On the `Build Phases` tab, expand the `Copy Bundle Resources` section.
 + Include the following bundle:
     - `CitrusPay.bundle`
++ You should now be able to add `#import <CitrusPay/CitrusPay.h>` to any of your target's source files and begin using CitrusPay SDK!
 + Done!
 
 ## Documentation
