@@ -94,7 +94,7 @@ $ open citruspay-ios-sdk
 ## Documentation
 HTML documentation is hosted on our [CitrusPay Developer Guide](http://developers.citruspay.com/ios/iosReg.html).
 
-Pdf documentation is available on the [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/2.0.0/citruspay-ios-sdk-guide-v2.0.0.pdf).
+Pdf documentation is available on the [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/2.1.4/citruspay-ios-sdk-guide.pdf).
 
 ## SDK Organization
 
