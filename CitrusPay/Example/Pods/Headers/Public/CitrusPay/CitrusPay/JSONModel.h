@@ -1,1 +1,1 @@
-../../../../../../../releases-for-manual-usage/CitrusPay.framework/Versions/A/Headers/JSONModel.h
+../../../../../../../CitrusPay-Framework/CitrusPay.framework/Versions/A/Headers/JSONModel.h

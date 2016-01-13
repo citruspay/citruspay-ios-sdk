@@ -1,1 +1,1 @@
-../../../../../../../releases-for-manual-usage/CitrusPay.framework/Versions/A/Headers/CTSElectronicCardUpdate.h
+../../../../../../../CitrusPay-Framework/CitrusPay.framework/Versions/A/Headers/CTSElectronicCardUpdate.h

@@ -65,10 +65,10 @@ $ open citruspay-ios-sdk
 + Drag CitrusPay-Framework folder into your existing Xcode project
 + Navigate to your project's settings, then select the target you wish to add CitrusPay-Framework to
 + Navigate to `Build Phases` and expand the `Link Binary With Libraries` section
-+ Click the + and CitrusPay.framework appropriate to your target's platform
++ Click the + and `CitrusPay.framework` appropriate to your target's platform
 + Navigate to Build Phases and expand the `Copy Bundle Resources` section
-+ Click the + and CitrusPay.bundle appropriate to your target's platform
-+ You should now be able to add `#import <CitrusPay/CitrusPay.h>` to any of your target's source files and begin using CitrusPay-SDK!
++ Click the + and `CitrusPay.bundle` appropriate to your target's platform
++ You should now be able to add `#import <CitrusPay/CitrusPay.h>` to any of your target's source files and begin using CitrusPay SDK!
 + Done!
 
 
@@ -83,10 +83,10 @@ $ open citruspay-ios-sdk
 + Drag CitrusPay-Framework folder into your existing Xcode project
 + In Xcode, go to your app's target settings. On the `Build Phases` tab, expand the `Link Binary With Libraries` section.
 + Include the following framework:
-    - CitrusPay.framework
+    - `CitrusPay.framework`
 + In Xcode, go to your app's target settings. On the `Build Phases` tab, expand the `Copy Bundle Resources` section.
 + Include the following bundle:
-    - CitrusPay.bundle
+    - `CitrusPay.bundle`
 + Done!
 
 ## Documentation

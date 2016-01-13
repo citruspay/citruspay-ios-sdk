@@ -58,10 +58,10 @@ install_resource()
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "../../../releases-for-manual-usage/CitrusPay.bundle"
+  install_resource "../../../CitrusPay-Framework/CitrusPay.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "../../../releases-for-manual-usage/CitrusPay.bundle"
+  install_resource "../../../CitrusPay-Framework/CitrusPay.bundle"
 fi
 
 mkdir -p "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
