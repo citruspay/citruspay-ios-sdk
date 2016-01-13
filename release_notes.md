@@ -1,10 +1,13 @@
 CitrusPay iOS SDK Kit release notes
 ==============================================
 
-0.2.6
+2.1.4
 -----
 
 * Current Version
+- Updated Wiki doc
+
+* 0.2.6
 - Updated SDK
 - removed additional restrictions from signin
 - Added BankImagesListWithBankName.plist
