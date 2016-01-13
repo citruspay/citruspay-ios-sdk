@@ -46,6 +46,8 @@ Note: Please DO NOT PROCEED if the above mentioned requirements have not been me
 ## Installation
 
 #### Using [cocoapods](https://cocoapods.org/) (recommended)
++ The recommended installation mechanism for CitrusPay is via CocoaPods. CocoaPods is an Objective-C library dependency manager that streamlines the process of installing, configuring, and updating third-party libraries.
+You can learn more about CocoaPods at the website: http://cocoapods.org/
 + Add `pod "CitrusPay"` to your podfile
 + Run `pod install`
 + Done!
@@ -61,16 +63,16 @@ $ git submodule update --init --recursive
 $ open citruspay-ios-sdk
 ~~~
 + Drag CitrusPay-Framework folder into your existing Xcode project
-+ Navigate to your project's settings, then select the target you wish to add `CitrusPay-Framework` to
++ Navigate to your project's settings, then select the target you wish to add CitrusPay-Framework to
 + Navigate to `Build Phases` and expand the `Link Binary With Libraries` section
 + Click the + and CitrusPay.framework appropriate to your target's platform
 + Navigate to Build Phases and expand the `Copy Bundle Resources` section
 + Click the + and CitrusPay.bundle appropriate to your target's platform
-+ You should now be able to add #import <CitrusPay/CitrusPay.h> to any of your target's source files and begin using CitrusPay-Framework!
++ You should now be able to add `#import <CitrusPay/CitrusPay.h>` to any of your target's source files and begin using CitrusPay-SDK!
 + Done!
 
 
-#### Using library binaries (manual way)
+#### Using Library Binaries (manual way)
 + Download the latest zip file from our [CitrusPay-Framework page](https://github.com/citruspay/citruspay-ios-sdk/releases/download/2.0.0/releases-for-manual-usage-v2.0.0.zip) or complete [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest)
 + Unzip the file
 + Or clone it 
