@@ -165,9 +165,9 @@ To use any of the above layers your need to fetch their singlton instance from C
 
 ~~~{.m}
 // initialization in your .m file
-CTSPaymentLayer *paymentLayer = [CitrusPaymentSDK fetchSharedPaymentLayer];
-CTSAuthLayer *authLayer = [CTSAuthLayer fetchSharedAuthLayer];
-CTSProfileLayer *proifleLayer = [CTSProfileLayer fetchSharedProfileLayer];
+CTSAuthLayer * authLayer = [CTSAuthLayer fetchSharedAuthLayer];
+CTSProfileLayer * proifleLayer = [CTSProfileLayer fetchSharedProfileLayer];
+CTSPaymentLayer * paymentLayer = [CTSPaymentLayer fetchSharedPaymentLayer];
 ~~~
 
 ### Enable DEBUG Logs ( By Default it's Disable Logs )
