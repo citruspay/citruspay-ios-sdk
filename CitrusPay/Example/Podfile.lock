@@ -1,8 +1,13 @@
 PODS:
   - CitrusPay (2.1.4)
+  - Crashlytics (3.6.0):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.3)
 
 DEPENDENCIES:
   - CitrusPay (from `../../`)
+  - Crashlytics
+  - Fabric
 
 EXTERNAL SOURCES:
   CitrusPay:
@@ -10,5 +15,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CitrusPay: ba951a23133b812a1e2f2b86bdb8b183ce19a3da
+  Crashlytics: e4e8d02914f2608fbc7bf42b1a7af838b0db67a2
+  Fabric: cbe0ca6c9531bba17910052f6f105fcbc5fa7f67
 
 COCOAPODS: 0.39.0

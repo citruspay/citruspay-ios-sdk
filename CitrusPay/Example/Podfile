@@ -3,6 +3,8 @@ use_frameworks!
 
 target 'CitrusPay_Example', :exclusive => true do
   pod “CitrusPay”, :path => “../../“
+  pod 'Fabric'
+  pod 'Crashlytics'
 end
 
 target 'CitrusPay_Tests', :exclusive => true do

@@ -276,6 +276,7 @@
 				6003F588195388D20070C39A /* Resources */,
 				B88A27427C1F3AC821B781DE /* Embed Pods Frameworks */,
 				134D107A75EE3F61841B8D78 /* Copy Pods Resources */,
+				767A18D51C4F957E009A1256 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -317,6 +318,9 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Mukesh Patil";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = BF75J23QJ2;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -409,6 +413,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CitrusPay_Tests/Pods-CitrusPay_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		767A18D51C4F957E009A1256 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" b6ab5fdc5f6c0f2dbd67f3846b8adcd60f9f9d50 b8f4f391edb73c6a38f1be0f1893af90da443a865402c9199325ac98eaa8e970";
 		};
 		7F266755B2883E4C72FB91BD /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -595,12 +612,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CitrusPay/CitrusPay-Prefix.pch";
 				INFOPLIST_FILE = "CitrusPay/CitrusPay-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.sdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -613,12 +631,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CitrusPay/CitrusPay-Prefix.pch";
 				INFOPLIST_FILE = "CitrusPay/CitrusPay-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.sdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

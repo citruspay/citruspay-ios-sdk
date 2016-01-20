@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C073BB2FC315075B9DE90C24FE2C52B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
 		0C95E62FC2A62780ED90A1A2F888E950 /* Pods-CitrusPay_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CitrusPay_Example-umbrella.h"; sourceTree = "<group>"; };
 		0FB798D0480A904FCF736F830EBB7AD5 /* Pods-CitrusPay_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CitrusPay_Tests-umbrella.h"; sourceTree = "<group>"; };
 		186ADE827D444C5A65749C0048508F2A /* Pods-CitrusPay_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CitrusPay_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -41,6 +42,7 @@
 		C91B811CB594067DD20FBD9B7233E229 /* Pods-CitrusPay_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CitrusPay_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D4995DAD6A194A024486DF85FA2C9EB9 /* Pods-CitrusPay_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CitrusPay_Tests.modulemap"; sourceTree = "<group>"; };
 		D5FAC66E48D0ECD41EBDEE453ABC9CC8 /* Pods_CitrusPay_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CitrusPay_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1B6F2CE97837747A137B7F9EC710EF8 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
 		F759BDFEC581E26DFF235AC5CE869045 /* Pods-CitrusPay_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CitrusPay_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +75,14 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		0FBADD4C4C312933525779355B4A728B /* Crashlytics */ = {
+			isa = PBXGroup;
+			children = (
+				5AF2ED3E1B1DF375ACFB148B356F91A5 /* Frameworks */,
+			);
+			path = Crashlytics;
+			sourceTree = "<group>";
+		};
 		1E41EA2D52392DE2A5DA2A88BF31D9E8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +90,31 @@
 				C25A9969CC1AC88929AA8B0FCFDF570B /* Pods_CitrusPay_Tests.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		23F124B36981587A4F2E341B8AEC8517 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1B6F2CE97837747A137B7F9EC710EF8 /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C01CE7C97A1F4AA2AA6283DCBF4679A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0FBADD4C4C312933525779355B4A728B /* Crashlytics */,
+				BD8B321ABCC17A2AA08C4077E26ECA81 /* Fabric */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5AF2ED3E1B1DF375ACFB148B356F91A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C073BB2FC315075B9DE90C24FE2C52B /* Crashlytics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5C8EB1DF441150A5A6A09B41575DBB00 /* Pods-CitrusPay_Example */ = {
@@ -130,6 +165,7 @@
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				723C870E9AABBE1B64C324B3E58B3F2F /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				4C01CE7C97A1F4AA2AA6283DCBF4679A /* Pods */,
 				1E41EA2D52392DE2A5DA2A88BF31D9E8 /* Products */,
 				06B242783F3EB4D41F7B5E3912BE082F /* Targets Support Files */,
 			);
@@ -141,6 +177,14 @@
 				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD8B321ABCC17A2AA08C4077E26ECA81 /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				23F124B36981587A4F2E341B8AEC8517 /* Frameworks */,
+			);
+			path = Fabric;
 			sourceTree = "<group>";
 		};
 		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
