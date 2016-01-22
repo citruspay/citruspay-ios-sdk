@@ -74,7 +74,7 @@ $ open citruspay-ios-sdk
 
 
 #### Using Library Binaries (manual way)
-+ Download the latest zip file from our [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/2.1.3/CitrusPay-Framework.zip)
++ Download the latest zip file from our [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/2.1.6/CitrusPay-Framework.zip)
 + Unzip the file
 + Or clone it 
 ~~~{.m}
@@ -94,7 +94,7 @@ $ open citruspay-ios-sdk
 ## Documentation
 HTML documentation is hosted on our [CitrusPay Developer Guide](http://developers.citruspay.com/ios/iosReg.html).
 
-Pdf documentation is available on the [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/2.1.4/citruspay-ios-sdk-guide.pdf).
+Pdf documentation is available on the [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/2.1.6/citruspay-ios-sdk-guide.pdf).
 
 ## SDK Organization
 
