@@ -59,7 +59,9 @@ typedef enum {
     CitrusLinkResponseNotFound,
     CompletionHandlerNotFound,
     UnknownPasswordType,
-    NoNewPrepaidPrelivilage
+    NoNewPrepaidPrelivilage,
+    PasswordTypeNotAllowed,
+    NoRefreshToken
 } CTSErrorCode;
 
 

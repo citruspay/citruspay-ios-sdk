@@ -10,6 +10,8 @@
 #ifndef CTS_iOS_Sdk_MerchantConstants_h
 #define CTS_iOS_Sdk_MerchantConstants_h
 
+#warning "set your own oauth keys and url to see testing results"
+
 ////// URLs
 #define VanityUrl @"nativeSDK"
 #define SignInId @"test-signin"
