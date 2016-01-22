@@ -327,4 +327,5 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
 
 -(void)requestCitrusLinkSignInWithPassoword:(NSString *)password passwordType:(PasswordType)type completionHandler:(ASCitrusSigninCallBack)callback;
 
+-(void)requestRefreshOauthTokenCallback:(ASErrorCallback )callback;
 @end
