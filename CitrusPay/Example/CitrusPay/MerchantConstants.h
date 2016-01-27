@@ -10,16 +10,21 @@
 #ifndef CTS_iOS_Sdk_MerchantConstants_h
 #define CTS_iOS_Sdk_MerchantConstants_h
 
-////// URLs
+#warning "set your own oauth keys and urls to see testing results"
+
+/*
+ set oauth keys
+ */
 #define VanityUrl @"nativeSDK"
 #define SignInId @"test-signin"
 #define SignInSecretKey @"52f7e15efd4208cf5345dd554443fd99"
 #define SubscriptionId @"test-signup"
 #define SubscriptionSecretKey @"c78ec84e389814a05d3ae46546d16d2e"
 
-//// URLs
+/*
+ set bill & return url
+ */
 #define LoadWalletReturnUrl @"https://salty-plateau-1529.herokuapp.com/redirectURL.sandbox.php"
 #define BillUrl @"https://salty-plateau-1529.herokuapp.com/billGenerator.sandbox.php"
-
 
 #endif
