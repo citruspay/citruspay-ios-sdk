@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "CitrusPay"
-  s.version          = "2.1.6"
+  s.version          = "2.1.7"
   s.summary          = "CitrusPay iOS SDK."
 
 # This description is used to generate tags and improve search results.
@@ -34,4 +34,5 @@ Pod::Spec.new do |s|
 
   s.resource = "CitrusPay-Framework/CitrusPay.bundle"
 
+  s.dependency 'JSONModel'
 end

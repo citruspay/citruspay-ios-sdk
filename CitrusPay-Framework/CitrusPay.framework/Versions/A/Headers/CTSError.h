@@ -60,8 +60,9 @@ typedef enum {
     CompletionHandlerNotFound,
     UnknownPasswordType,
     NoNewPrepaidPrelivilage,
+    NoRefreshToken,
     PasswordTypeNotAllowed,
-    NoRefreshToken
+    LoadMoneyFailed
 } CTSErrorCode;
 
 

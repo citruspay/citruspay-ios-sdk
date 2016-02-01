@@ -21,5 +21,10 @@
   },
   "public_header_files": "CitrusPay-Framework/CitrusPay.framework/**/*.h",
   "vendored_frameworks": "CitrusPay-Framework/CitrusPay.framework",
-  "resources": "CitrusPay-Framework/CitrusPay.bundle"
+  "resources": "CitrusPay-Framework/CitrusPay.bundle",
+  "dependencies": {
+    "JSONModel": [
+
+    ]
+  }
 }

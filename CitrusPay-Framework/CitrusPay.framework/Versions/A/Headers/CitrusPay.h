@@ -20,6 +20,7 @@
 #import "CTSCitrusLinkRes.h"
 #import "CTSKeyStore.h"
 #import "CTSDataCache.h"
+#import "UserLogging.h"
 
 typedef enum{
     CTSEnvSandbox,
