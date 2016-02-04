@@ -27,6 +27,7 @@
     
     self.signinButton.layer.cornerRadius = 4;
     self.indicatorView.hidden = TRUE;
+    
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resignKeyboard:)];
     [self.view addGestureRecognizer:tapRecognizer];
     
@@ -105,38 +106,6 @@
 }
 
 #pragma mark - Action Methods
-
-/*   // Old method for sign-in
- 
--(IBAction)signin:(id)sender{
-    
-    [self.view endEditing:YES];
-    self.indicatorView.hidden = FALSE;
-    [self.indicatorView startAnimating];
-    
-    [authLayer requestSigninWithUsername:self.userNameTextField.text password:self.passwordTextField.text completionHandler:^(NSString *userName, NSString *token, NSError *error) {
-        LogTrace(@"userName %@",userName);
-        LogTrace(@"error %@",error);
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.indicatorView stopAnimating];
-            self.indicatorView.hidden = TRUE;
-        });
-        if (error) {
-            [UIUtility toastMessageOnScreen:[error localizedDescription]];
-        }
-        else{
-//            [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"%@ is now logged in",userName]];
-            currentUser = userName;
-             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:self];
-             }];
-            
-        }
-        
-    }];
-}
- 
- */
 
 
 //New Implementation

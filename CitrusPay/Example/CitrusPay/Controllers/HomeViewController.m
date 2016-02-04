@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "CardsViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "MerchantConstants.h"
 
 
 @interface HomeViewController (){

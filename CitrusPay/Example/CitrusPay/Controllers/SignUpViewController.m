@@ -9,7 +9,6 @@
 #import "SignUpViewController.h"
 #import "ResetPasswordViewController.h"
 #import "SignInViewController.h"
-#import <CitrusPay/CitrusPay.h>
 
 @interface SignUpViewController (){
 
@@ -27,8 +26,27 @@
     self.indicatorView.hidden = TRUE;
     self.signupButton.layer.cornerRadius = 4;
     
-//    [authLayer enabledDebuggingMessages:YES];
-
+    switch (self.loginType) {
+        case 0:{
+            self.userNameTextField.hidden = FALSE;
+            self.mobileTextField.hidden = FALSE;
+        }
+            break;
+        case 1:{
+            self.userNameTextField.hidden = TRUE;
+            self.mobileTextField.hidden = FALSE;
+        }
+            break;
+        case 2:{
+            self.userNameTextField.hidden = FALSE;
+            self.mobileTextField.hidden = FALSE;
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
     if (authLayer.requestSignInOauthToken.length != 0) {
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:self];
@@ -48,42 +66,6 @@
 
 #pragma mark - Action Methods
 
-
-/* // Old Link User method
--(IBAction)linkUser:(id)sender{
-    
-    [self.view endEditing:YES];
-    self.indicatorView.hidden = FALSE;
-    [self.indicatorView startAnimating];
-    
-    [authLayer requestLinkUser:self.userNameTextField.text mobile:self.mobileTextField.text completionHandler:^(CTSLinkUserRes *linkUserRes, NSError *error) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.indicatorView stopAnimating];
-            self.indicatorView.hidden = TRUE;
-        });
-        if (error) {
-            [UIUtility toastMessageOnScreen:[error localizedDescription]];
-        }
-        else{
-//            [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"User is now Linked, %@",linkUserRes.message]];
-            if (linkUserRes.isPasswordAlreadySet) {
-                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                    [self performSegueWithIdentifier:@"SignInScreenIdentifier" sender:self];;
-                }];
-            }
-            else{
-            
-                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                    [self performSegueWithIdentifier:@"ResetPasswordScreenIdentifier" sender:self];;
-                }];
-            
-            }
-            
-        }
-    }];
-}
- 
- */
 
 
 // New Link User method - which is OTP based
@@ -136,22 +118,7 @@
     
 }
 
-/*
 
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
-    if ([segue.identifier isEqualToString:@"ResetPasswordScreenIdentifier"]) {
-        ResetPasswordViewController *viewController = (ResetPasswordViewController *)segue.destinationViewController;
-        viewController.userName = self.userNameTextField.text;
-    }
-    else if ([segue.identifier isEqualToString:@"SignInScreenIdentifier"]){
-        
-        SignInViewController *viewController = (SignInViewController *)segue.destinationViewController;
-        viewController.userName = self.userNameTextField.text;
-    }
-    
-}
- */
 
 #pragma mark - Dealloc Methods
 - (void) dealloc{

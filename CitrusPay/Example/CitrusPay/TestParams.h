@@ -17,12 +17,6 @@
 #define TEST_MOBILE @"9700000000"
 
 
-//#define TEST_EMAIL @"ups1234@mailinator.com"
-//#define TEST_PASSWORD @"tester@123"
-//#define TEST_MOBILE @"8888360000"
-
-
-
 #define TEST_FIRST_NAME @"test"
 #define TEST_LAST_NAME @"user"
 

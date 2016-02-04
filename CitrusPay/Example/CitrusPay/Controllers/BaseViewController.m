@@ -8,6 +8,7 @@
 
 #import "BaseViewController.h"
 #import "TestParams.h"
+#import "MerchantConstants.h"
 
 
 @interface BaseViewController ()
@@ -44,14 +45,16 @@
     keyStore.vanity = VanityUrl;
     
 
-//      [CitrusPaymentSDK initializeWithKeyStore:keyStore environment:CTSEnvProduction];
+#warning "set your require environment to see testing results"
       [CitrusPaymentSDK initializeWithKeyStore:keyStore environment:CTSEnvSandbox];
+//      [CitrusPaymentSDK initializeWithKeyStore:keyStore environment:CTSEnvProduction];
 
+    [CitrusPaymentSDK enableDEBUGLogs];
+    
     authLayer = [CTSAuthLayer fetchSharedAuthLayer];
     proifleLayer = [CTSProfileLayer fetchSharedProfileLayer];
     paymentLayer = [CTSPaymentLayer fetchSharedPaymentLayer];
     
-    [CitrusPaymentSDK enableDEBUGLogs];
 
     contactInfo = [[CTSContactUpdate alloc] init];
     contactInfo.firstName = TEST_FIRST_NAME;

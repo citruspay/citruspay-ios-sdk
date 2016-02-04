@@ -15,6 +15,6 @@
 @property (nonatomic , weak) IBOutlet UITextField *userNameTextField;
 @property (nonatomic , weak) IBOutlet UITextField *mobileTextField;
 @property (nonatomic , weak) IBOutlet UIActivityIndicatorView *indicatorView;
-
+@property int loginType;
 
 @end

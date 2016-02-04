@@ -8,7 +8,6 @@
 
 #import "CardsViewController.h"
 #import "HMSegmentedControl.h"
-#import <CitrusPay/CitrusPay.h>
 
 @interface CardsViewController (){
 
@@ -328,7 +327,7 @@
                 [UIUtility toastMessageOnScreen:error.localizedDescription];
             }
             else {
-                [paymentLayer requestChargePayment:cardInfo withContact:contactInfo withAddress:addressInfo bill:bill customParams:nil returnViewController:self withCompletionHandler:^(CTSCitrusCashRes *citrusCashResponse, NSError *error) {
+                [paymentLayer requestDirectChargePayment:cardInfo withContact:contactInfo withAddress:addressInfo bill:bill returnViewController:self withCompletionHandler:^(CTSCitrusCashRes *citrusCashResponse, NSError *error) {
                 
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [self.indicatorView stopAnimating];
@@ -567,14 +566,24 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
 
     if (textField==self.netBankCodeTextField) {
-        [self.pickerView setHidden:FALSE];
-        currentTextField=textField;
-        array = [netBankingDict allKeys];
-        [self.pickerView reloadAllComponents];
-        [self.pickerView selectRow:0 inComponent:0 animated:YES];
-        [self pickerView:self.pickerView didSelectRow:0 inComponent:0];
-        [self.pickerView removeFromSuperview];
-        [self.netBankCodeTextField becomeFirstResponder];
+        
+        if (netBankingDict.count==0) {
+            [self.pickerView setHidden:TRUE];
+            [self.netBankCodeTextField resignFirstResponder];
+            [self.pickerView removeFromSuperview];
+            
+            [UIUtility toastMessageOnScreen:@"Please Contact to Citruspay care to enable your Net banking."];
+        }
+        else{
+            [self.pickerView setHidden:FALSE];
+            currentTextField=textField;
+            array = [netBankingDict allKeys];
+            [self.pickerView reloadAllComponents];
+            [self.pickerView selectRow:0 inComponent:0 animated:YES];
+            [self pickerView:self.pickerView didSelectRow:0 inComponent:0];
+            [self.pickerView removeFromSuperview];
+            [self.netBankCodeTextField becomeFirstResponder];
+        }
     }
 }
 
