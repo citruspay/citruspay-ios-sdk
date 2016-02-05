@@ -46,8 +46,8 @@
     
 
 #warning "set your require environment to see testing results"
-      [CitrusPaymentSDK initializeWithKeyStore:keyStore environment:CTSEnvSandbox];
-//      [CitrusPaymentSDK initializeWithKeyStore:keyStore environment:CTSEnvProduction];
+//      [CitrusPaymentSDK initializeWithKeyStore:keyStore environment:CTSEnvSandbox];
+      [CitrusPaymentSDK initializeWithKeyStore:keyStore environment:CTSEnvProduction];
 
     [CitrusPaymentSDK enableDEBUGLogs];
     

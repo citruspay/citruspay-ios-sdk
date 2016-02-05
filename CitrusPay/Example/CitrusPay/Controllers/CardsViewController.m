@@ -191,9 +191,12 @@
     [self setCardInfo];
     switchView = (UISwitch *)sender;
     
-    NSArray* subStrings = [self.expiryDateTextField.text componentsSeparatedByString:@"/"];
-    int year = [[subStrings objectAtIndex:1] intValue]+2000;
-    NSString *resultantDate = [NSString stringWithFormat:@"%d/%d",[[subStrings objectAtIndex:0] intValue],year];
+    NSString *resultantDate;
+    if (self.expiryDateTextField.text.length!=0) {
+        NSArray* subStrings = [self.expiryDateTextField.text componentsSeparatedByString:@"/"];
+        int year = [[subStrings objectAtIndex:1] intValue]+2000;
+        resultantDate = [NSString stringWithFormat:@"%d/%d",[[subStrings objectAtIndex:0] intValue],year];
+    }
     
     // Configure your request here.
     if (self.cardNumberTextField.text.length==0 || self.expiryDateTextField.text.length==0 || self.cvvTextField.text.length==0 || self.ownerNameTextField.text.length==0) {
