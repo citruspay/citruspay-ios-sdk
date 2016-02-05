@@ -324,7 +324,7 @@
 				ORGANIZATIONNAME = "Mukesh Patil";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = BF75J23QJ2;
+						DevelopmentTeam = 5WNBWFS78L;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -626,6 +626,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.sdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "82942638-4b25-43fe-94f6-de8f319204f0";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -645,6 +646,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.sdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "82942638-4b25-43fe-94f6-de8f319204f0";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

@@ -69,6 +69,10 @@ $ open citruspay-ios-sdk
 + Click the + and `CitrusPay.framework` appropriate to your target's platform
 + Navigate to Build Phases and expand the `Copy Bundle Resources` section
 + Click the + and `CitrusPay.bundle` appropriate to your target's platform
++ Add depedency 
+    1. Download the JSONModel repository as a [zip file](https://github.com/icanzilb/JSONModel/archive/master.zip) or clone it
+    2. Copy the JSONModel sub-folder into your Xcode project
+    3. Link your app to SystemConfiguration.framework
 + You should now be able to add `#import <CitrusPay/CitrusPay.h>` to any of your target's source files and begin using CitrusPay SDK!
 + Done!
 
@@ -88,6 +92,10 @@ $ open citruspay-ios-sdk
 + In Xcode, go to your app's target settings. On the `Build Phases` tab, expand the `Copy Bundle Resources` section.
 + Include the following bundle:
     - `CitrusPay.bundle`
++ Add depedency 
+    1. Download the JSONModel repository as a [zip file](https://github.com/icanzilb/JSONModel/archive/master.zip) or clone it
+    2. Copy the JSONModel sub-folder into your Xcode project
+    3. Link your app to SystemConfiguration.framework
 + You should now be able to add `#import <CitrusPay/CitrusPay.h>` to any of your target's source files and begin using CitrusPay SDK!
 + Done!
 
