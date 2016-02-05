@@ -15,17 +15,16 @@
 /*
  set oauth keys
  */
-#define VanityUrl @"nativeSDK"
 #define SignInId @"test-signin"
 #define SignInSecretKey @"52f7e15efd4208cf5345dd554443fd99"
 #define SubscriptionId @"test-signup"
 #define SubscriptionSecretKey @"c78ec84e389814a05d3ae46546d16d2e"
 
 /*
- set bill & return url
+ set Vanity/bill/return url
  */
+#define VanityUrl @"nativeSDK"
 #define LoadWalletReturnUrl @"https://salty-plateau-1529.herokuapp.com/redirectURL.sandbox.php"
 #define BillUrl @"https://salty-plateau-1529.herokuapp.com/billGenerator.sandbox.php"
-
 
 #endif
