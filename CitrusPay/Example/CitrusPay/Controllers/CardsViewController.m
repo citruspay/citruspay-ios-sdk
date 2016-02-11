@@ -198,16 +198,24 @@
         resultantDate = [NSString stringWithFormat:@"%d/%d",[[subStrings objectAtIndex:0] intValue],year];
     }
     
+    if (self.cardNumberTextField.text.length>0) {
+        NSString *scheme = [CTSUtility fetchCardSchemeForCardNumber:self.cardNumberTextField.text];
+        if ([scheme isEqualToString:@"MTRO"] && self.cvvTextField.text.length==0 && self.expiryDateTextField.text.length==0) {
+            self.expiryDateTextField.text = @"11/2019";
+            self.cvvTextField.text = @"123";
+        }
+    }
     // Configure your request here.
-    if (self.cardNumberTextField.text.length==0 || self.expiryDateTextField.text.length==0 || self.cvvTextField.text.length==0 || self.ownerNameTextField.text.length==0) {
-        [UIUtility toastMessageOnScreen:@"Couldn't save this card.\n All fields are mandatory."];
-        [switchView setOn:NO animated:YES];
-    }
-    else if (![CTSUtility validateExpiryDate:resultantDate]){
-        [UIUtility toastMessageOnScreen:@"Expiry date is not valid."];
-        [switchView setOn:NO animated:YES];
-    }
-    else{
+//    if (self.cardNumberTextField.text.length==0 || self.expiryDateTextField.text.length==0 || self.cvvTextField.text.length==0 || self.ownerNameTextField.text.length==0) {
+//        [UIUtility toastMessageOnScreen:@"Couldn't save this card.\n All fields are mandatory."];
+//        [switchView setOn:NO animated:YES];
+//    }
+//    else if (![CTSUtility validateExpiryDate:resultantDate]){
+//        [UIUtility toastMessageOnScreen:@"Expiry date is not valid."];
+//        [switchView setOn:NO animated:YES];
+//    }
+//    else{
+    
         [proifleLayer updatePaymentInformation:cardInfo withCompletionHandler:^(NSError *error) {
             self.loadButton.userInteractionEnabled = TRUE;
             if(error == nil){
@@ -221,7 +229,7 @@
                 //                [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@" couldn't save card\n error: %@",error]];
             }
         }];
-    }
+//    }
     
 }
 
@@ -252,6 +260,7 @@
         else{
             BOOL isSchemeAvailable = FALSE;
             for(NSString *string in debitArray){
+                NSLog(@"card scheme %@",[CTSUtility fetchCardSchemeForCardNumber:cardNumber]);
                 if ([string caseInsensitiveCompare:[CTSUtility fetchCardSchemeForCardNumber:cardNumber]] == NSOrderedSame) {
                     isSchemeAvailable=TRUE;
                     break;
@@ -267,15 +276,17 @@
                 return;
             }
             NSArray* subStrings = [self.expiryDateTextField.text componentsSeparatedByString:@"/"];
-            int year = [[subStrings objectAtIndex:1] intValue]+2000;
-            NSString *resultantDate = [NSString stringWithFormat:@"%d/%d",[[subStrings objectAtIndex:0] intValue],year];
-            if (![CTSUtility validateExpiryDate:resultantDate]){
-                [UIUtility toastMessageOnScreen:@"Expiry date is not valid."];
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.indicatorView stopAnimating];
-                    self.indicatorView.hidden = TRUE;
-                });
-                return;
+            if ([self.expiryDateTextField.text length] != 0) {
+                int year = [[subStrings objectAtIndex:1] intValue]+2000;
+                NSString *resultantDate = [NSString stringWithFormat:@"%d/%d",[[subStrings objectAtIndex:0] intValue],year];
+                if (![CTSUtility validateExpiryDate:resultantDate]){
+                    [UIUtility toastMessageOnScreen:@"Expiry date is not valid."];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.indicatorView stopAnimating];
+                        self.indicatorView.hidden = TRUE;
+                    });
+                    return;
+                }
             }
         }
     }
@@ -303,15 +314,17 @@
                 return;
             }
             NSArray* subStrings = [self.expiryDateTextField.text componentsSeparatedByString:@"/"];
-            int year = [[subStrings objectAtIndex:1] intValue]+2000;
-            NSString *resultantDate = [NSString stringWithFormat:@"%d/%d",[[subStrings objectAtIndex:0] intValue],year];
-            if (![CTSUtility validateExpiryDate:resultantDate]){
-                [UIUtility toastMessageOnScreen:@"Expiry date is not valid."];
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.indicatorView stopAnimating];
-                    self.indicatorView.hidden = TRUE;
-                });
-                return;
+            if ([self.expiryDateTextField.text length] != 0) {
+                int year = [[subStrings objectAtIndex:1] intValue]+2000;
+                NSString *resultantDate = [NSString stringWithFormat:@"%d/%d",[[subStrings objectAtIndex:0] intValue],year];
+                if (![CTSUtility validateExpiryDate:resultantDate]){
+                    [UIUtility toastMessageOnScreen:@"Expiry date is not valid."];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.indicatorView stopAnimating];
+                        self.indicatorView.hidden = TRUE;
+                    });
+                    return;
+                }
             }
         }
     }
@@ -843,18 +856,24 @@
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
         
         selectedRow = indexPath.row;
+        NSDictionary *tempDict = [saveCardsArray objectAtIndex:indexPath.row];
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            UIAlertView *cvvAlert = [[UIAlertView alloc] initWithTitle:@"" message:@"Please enter cvv." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok" , nil];
-            cvvAlert.tag = 100;
-            cvvAlert.alertViewStyle = UIAlertViewStyleSecureTextInput;
-            UITextField * cvvTextField = [cvvAlert textFieldAtIndex:0];
-            cvvTextField.keyboardType = UIKeyboardTypeNumberPad;
-            cvvTextField.placeholder = @"cvv";
-            
-            [cvvAlert show];
-        });
+        if ([[tempDict valueForKey:@"type"] isEqualToString:@"netbanking"]) {
+         [self loadOrPayMoney:nil];
+        }
+        else{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                UIAlertView *cvvAlert = [[UIAlertView alloc] initWithTitle:@"" message:@"Please enter cvv." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok" , nil];
+                cvvAlert.tag = 100;
+                cvvAlert.alertViewStyle = UIAlertViewStyleSecureTextInput;
+                UITextField * cvvTextField = [cvvAlert textFieldAtIndex:0];
+                cvvTextField.keyboardType = UIKeyboardTypeNumberPad;
+                cvvTextField.placeholder = @"cvv";
+                
+                [cvvAlert show];
+            });
+        }
     }
 }
 
@@ -1001,13 +1020,22 @@
         
     }
     else if (segControl.selectedSegmentIndex==3){
-       
-        CTSElectronicCardUpdate *instrument = [[CTSElectronicCardUpdate alloc] initCreditCard];
-        instrument.cvv= cvvText;
+        
         NSDictionary *dict =[saveCardsArray objectAtIndex:selectedRow];
-        NSString *token =[dict valueForKey:@"token"];
-        instrument.token=token;
-        [tempCardInfo addCard:instrument];
+        
+        if ([[dict valueForKey:@"type"] isEqualToString:@"netbanking"]) {
+            CTSNetBankingUpdate* netBank = [[CTSNetBankingUpdate alloc] init];
+            NSString *token =[dict valueForKey:@"token"];
+            netBank.token=token;
+            [tempCardInfo addNetBanking:netBank];
+        }
+        else{
+            CTSElectronicCardUpdate *instrument = [[CTSElectronicCardUpdate alloc] initCreditCard];
+            instrument.cvv= cvvText;
+            NSString *token =[dict valueForKey:@"token"];
+            instrument.token=token;
+            [tempCardInfo addCard:instrument];
+        }
         
     }
     

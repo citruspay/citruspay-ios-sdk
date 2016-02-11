@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface InitialViewController : UIViewController
+@interface InitialViewController : BaseViewController
 
 @property (nonatomic , weak) IBOutlet UIButton *signupOptionOneButton;
 @property (nonatomic , weak) IBOutlet UIButton *signupOptionTwoButton;

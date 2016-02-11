@@ -26,6 +26,13 @@
      self.signupOptionOneButton.layer.cornerRadius = 4;
      self.signupOptionTwoButton.layer.cornerRadius = 4;
      self.signupOptionThreeButton.layer.cornerRadius = 4;
+    
+    if (authLayer.requestSignInOauthToken.length != 0) {
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:nil];
+            return;
+        }];
+    }
     // Do any additional setup after loading the view.
 }
 
@@ -55,14 +62,16 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-     SignUpViewController *signUpViewController = (SignUpViewController *)[segue destinationViewController];
+    if ([segue.identifier isEqualToString:@"InitialViewIdentifier"]) {
+        SignUpViewController *signUpViewController = (SignUpViewController *)[segue destinationViewController];
+        
+        // loginType = 0 -> by using Email Id & Mobile
+        // loginType = 1 -> by using Mobile only
+        // loginType = 2 -> by using either Email Id or Mobile
+        
+        signUpViewController.loginType = selectionType;
+    }
     
-    // loginType = 0 -> by using Email Id & Mobile
-    // loginType = 1 -> by using Mobile only
-    // loginType = 2 -> by using either Email Id or Mobile
-    
-    signUpViewController.loginType = selectionType;
-    // Pass the selected object to the new view controller.
 }
 
 

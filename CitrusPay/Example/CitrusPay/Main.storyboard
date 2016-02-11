@@ -845,7 +845,6 @@
                         <outlet property="signupButton" destination="f4a-Gl-kz9" id="uCH-a3-74o"/>
                         <outlet property="userNameTextField" destination="g82-9A-rKR" id="Z4G-ck-J6w"/>
                         <segue destination="B32-2r-IDD" kind="push" identifier="SignInScreenIdentifier" id="pcX-Kv-hAz"/>
-                        <segue destination="Zgu-Pe-ahK" kind="push" identifier="HomeScreenIdentifier" id="pHU-mQ-f9m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gE-eb-aWo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1141,6 +1140,7 @@
                         <outlet property="signupOptionThreeButton" destination="hDE-Qa-UmP" id="EVJ-Lp-uTn"/>
                         <outlet property="signupOptionTwoButton" destination="3B5-P9-Qn2" id="hpf-aF-4S6"/>
                         <segue destination="571-om-B4q" kind="push" identifier="InitialViewIdentifier" id="ung-ph-lfR"/>
+                        <segue destination="Zgu-Pe-ahK" kind="push" identifier="HomeScreenIdentifier" id="Elx-bP-Tuu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MOT-nT-oIL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1154,6 +1154,6 @@
         <image name="Wallet" width="62" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pHU-mQ-f9m"/>
+        <segue reference="Elx-bP-Tuu"/>
     </inferredMetricsTieBreakers>
 </document>

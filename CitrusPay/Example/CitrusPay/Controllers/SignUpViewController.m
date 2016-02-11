@@ -47,12 +47,7 @@
             break;
     }
     
-    if (authLayer.requestSignInOauthToken.length != 0) {
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:self];
-            return;
-        }];
-    }
+    
     
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resignKeyboard:)];
     [self.view addGestureRecognizer:tapRecognizer];

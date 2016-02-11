@@ -16,7 +16,6 @@
 #define TEST_PASSWORD @"tester@123"
 #define TEST_MOBILE @"9700000000"
 
-
 #define TEST_FIRST_NAME @"test"
 #define TEST_LAST_NAME @"user"
 
@@ -27,30 +26,14 @@
 #define TEST_STREET2 @"Pink City"
 #define TEST_ZIP @"401209"
 
-#define TEST_DEBIT_CARD_NUMBER @"30569309025904"
-#define TEST_DEBIT_SCHEME @"visa"
-#define TEST_DEBIT_CVV @"018"
-#define TEST_OWNER_NAME @"Pappu Yadav"
-#define TEST_DEBIT_CARD_EXPIRY @"12/2015"
-#define TEST_DEBIT_OWNER_NAME @"Yaddy"
-#define TEST_DEBIT_CARD_BANK_NAME @"KOTAK"
-#define TEST_DEBIT_CARD_TOKEN @""
-//
-//#define TEST_CREDIT_CARD_NUMBER @"4111111111111111"
-//#define TEST_CREDIT_CARD_EXPIRY_DATE @"12/99"
-//#define TEST_CREDIT_CARD_SCHEME @"visa"
-//#define TEST_CREDIT_CARD_OWNER_NAME @"Yadnesh Wankhede"
-//#define TEST_CREDIT_CARD_BANK_NAME @"ICICI (credit card)"
-//#define TEST_CREDIT_CARD_CVV @"018"
-
-
-
 #define TEST_CREDIT_CARD_NUMBER @"4111111111111111"
 #define TEST_CREDIT_CARD_EXPIRY_DATE @"12/99"
 #define TEST_CREDIT_CARD_SCHEME @"visa"
 #define TEST_CREDIT_CARD_OWNER_NAME @"Yadnesh Wankhede"
 #define TEST_CREDIT_CARD_BANK_NAME @"ICICI (credit card)"
 #define TEST_CREDIT_CARD_CVV @"018"
+
+
 
 #define TEST_NETBAK_CODE @"CID001"
 #define TEST_NETBAK_NAME @"ICICI Bank"

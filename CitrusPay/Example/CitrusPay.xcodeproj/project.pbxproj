@@ -621,6 +621,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CitrusPay/CitrusPay-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+				);
 				INFOPLIST_FILE = "CitrusPay/CitrusPay-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
@@ -644,7 +648,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
-					"PRODUCTION_MODE=1",
 				);
 				INFOPLIST_FILE = "CitrusPay/CitrusPay-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
