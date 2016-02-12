@@ -1,5 +1,5 @@
 PODS:
-  - CitrusPay (3.2.0):
+  - CitrusPay (3.3.1):
     - JSONModel
   - Crashlytics (3.6.0):
     - Fabric (~> 1.6.3)
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
     :path: ../../
 
 SPEC CHECKSUMS:
-  CitrusPay: d1fbee8935d2437923c156a41a2d336fff5f45c8
+  CitrusPay: 7b15006f866509cda677535fb9ecb68993806bbf
   Crashlytics: e4e8d02914f2608fbc7bf42b1a7af838b0db67a2
   Fabric: cbe0ca6c9531bba17910052f6f105fcbc5fa7f67
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
