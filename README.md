@@ -20,7 +20,7 @@ CitrusPay iOS SDK broadly offers following features.
 
 ####[ChangeLog](https://github.com/citruspay/citruspay-ios-sdk/wiki/ChangeLog)
 
-####[Migration from 3.0.x to 3.1.x](https://github.com/citruspay/citruspay-ios-sdk/wiki/5-Migration-From-V-3.0.x-to-V-3.1.x)
+####[Migration from 3.0.x to 3.1.x or higher](https://github.com/citruspay/citruspay-ios-sdk/wiki/5-Migration-From-V-3.0.x-to-V-3.1.x)
 
 ## Usage
 
@@ -239,7 +239,7 @@ Following are the specific tasks related to each of the layer
 + [How to use dynamic pricing ?](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#dynamic-pricing-offer-coupons-surcharge)
 
 #####Others
-+ [Fetch Available Schemes and Banks for the Merchant](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#fetch-available-schemes-and-banks-for-the-merchant)
++ [Fetch Available Schemes and Banks for the Merchant and for Load Money in Citrus Cash](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#fetch-available-schemes-and-banks-for-the-merchant-and-for-load-money)
 
 =====
 ####[Common Integration Issues](https://github.com/citruspay/open-ios/wiki/4.-Common-Errors)
