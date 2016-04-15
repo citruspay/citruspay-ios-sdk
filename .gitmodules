@@ -1,0 +1,3 @@
+[submodule "Dependency/JSONModel"]
+	path = Dependency/JSONModel
+	url = https://github.com/icanzilb/JSONModel.git
