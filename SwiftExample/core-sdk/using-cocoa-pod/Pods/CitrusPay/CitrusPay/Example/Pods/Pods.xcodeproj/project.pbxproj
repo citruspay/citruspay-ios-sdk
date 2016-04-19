@@ -1,0 +1,820 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04EBA32C12A08373C89FE754FAE0C43F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		0A146FF03A7FE4CC5639CF6CD928C6F6 /* NSArray+JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EE996C4F6C36646B8C31B8B87AFB5A /* NSArray+JSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27471A010C073A00476B271ED722C11A /* NSArray+JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FB2937D47676C4878CAD8421F21DF2 /* NSArray+JSONModel.m */; };
+		3F0842D4CDB3CDD700470D457E1B623B /* Pods-CitrusPay_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C95E62FC2A62780ED90A1A2F888E950 /* Pods-CitrusPay_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4103C3D7D5E48A462E1C09849C9CF3EF /* JSONModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CE3F2106D565F549FD4137F7329246 /* JSONModel-dummy.m */; };
+		42FA6CF7BE0A1136F15D90A7F69CDC18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		511A81B5E765B159671168AB8647DBAC /* JSONModelError.h in Headers */ = {isa = PBXBuildFile; fileRef = CB49172C6E20A5804061AFBAF90E39C9 /* JSONModelError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5973E0786EE22A70D533865AA0566C9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		5ED077CCC3549023C9B498FE1C32BD33 /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D5305CF36861D27119A58EB54151AA50 /* JSONAPI.m */; };
+		5F6C967916CFAA5D846608140EA96562 /* JSONModelArray.h in Headers */ = {isa = PBXBuildFile; fileRef = A71B9DB34B5A90C190BFF0D34791B53B /* JSONModelArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6646DBB2618E9A5262C645A81399F0F7 /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 6499FED11057C8396DD5C5E717109809 /* JSONModelError.m */; };
+		750B8023FD84B6D68367103887641725 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72DA865AEDA0081CA97E73791575E0FF /* JSONValueTransformer.m */; };
+		7E573E6E83A8AAD79508B224B9B86C58 /* Pods-CitrusPay_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B983F88C3923222526CA46C10EFDC /* Pods-CitrusPay_Example-dummy.m */; };
+		7F610BE21596EA4D163BB0AAB948561F /* JSONModel+networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C30E98679288E7F8F87EEA4ED6A3186 /* JSONModel+networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84FE278A8594B615448610715387CD5E /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = C435442251C0C7A094B975632A599170 /* JSONModelArray.m */; };
+		8B62FE4C5B8F8769F0DE823B92DAFB1B /* JSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = B94B83E62E5FC2ED482A6FC806A4D4F1 /* JSONValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9339819EA7649D298BFEFD11EA40E37D /* JSONModel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D13923D63F1799908D77F2EBB4292058 /* JSONModel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B5BCFFE9B8A78649344FFF61C094695 /* JSONAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E412B1A5E35C09741CCBB6387F5896F /* JSONAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F370457508E73D0866941EE0DDA5CFB /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 728E549FDAA19D6A16E942CB87DA0B6F /* JSONModel.m */; };
+		B514F5B20C77E3BB07398ED7B77B5468 /* JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = B99BD21401CB57465DD41EDC149B6ECC /* JSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCE55E3E1D1A04B2600FDFF0B0823924 /* Pods-CitrusPay_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCA43F228DE44AFEE8B084F86F22F50 /* Pods-CitrusPay_Tests-dummy.m */; };
+		C3437AE08F8583093CCDB9762D7BC6DD /* JSONHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = C59B5FF19B1790C4B895CE33C18AABE6 /* JSONHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4C59D99FA815243331711D98916260E /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = A717EE5B393886737221FE1B196A4338 /* JSONModelClassProperty.m */; };
+		C936C8FB08C1E8C12461E8007D6311FD /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = F419194B213927F62E2EB778810EE6C1 /* JSONModel+networking.m */; };
+		CA2873B2412BD6F0362F96130B0D12FC /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D1304BE7E53D9D5632390BF3617EC0 /* JSONKeyMapper.m */; };
+		D4901D771BC43EAA1E9767289E59A8FD /* JSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 19725DA74DF023D7DC685A9F838F54A5 /* JSONKeyMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E58091B017C20DF75B0527A5AE5D01E9 /* Pods-CitrusPay_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FB798D0480A904FCF736F830EBB7AD5 /* Pods-CitrusPay_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA806409325D2BB94CF1D3372B594097 /* JSONModelLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A65C1E2815815FB4CE3E59401A41D35 /* JSONModelLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD685BAE2583AFD31AF68A7EE49CD5AF /* JSONModelClassProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = B665DC105592FC45C169DFEFC034E50E /* JSONModelClassProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF1FC413F8CAE5783A62BAF29C870D23 /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDFDF767CA80447EA032255D636E036 /* JSONHTTPClient.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		600F73109FD2D1C7A0E5FF09214F98CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BF8569A1D17D47E1A86EB020383E8D1;
+			remoteInfo = JSONModel;
+		};
+		FC310A4BBC105C3A804512576F1A880C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BF8569A1D17D47E1A86EB020383E8D1;
+			remoteInfo = JSONModel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04E82649D97080EDFFA8D62F227D9121 /* JSONModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONModel-prefix.pch"; sourceTree = "<group>"; };
+		05E0AD11032C6FEB972CBDEBF5C95C59 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C95E62FC2A62780ED90A1A2F888E950 /* Pods-CitrusPay_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CitrusPay_Example-umbrella.h"; sourceTree = "<group>"; };
+		0FB798D0480A904FCF736F830EBB7AD5 /* Pods-CitrusPay_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CitrusPay_Tests-umbrella.h"; sourceTree = "<group>"; };
+		186ADE827D444C5A65749C0048508F2A /* Pods-CitrusPay_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CitrusPay_Tests-resources.sh"; sourceTree = "<group>"; };
+		19725DA74DF023D7DC685A9F838F54A5 /* JSONKeyMapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONKeyMapper.h; path = JSONModel/JSONModelTransformations/JSONKeyMapper.h; sourceTree = "<group>"; };
+		1A65C1E2815815FB4CE3E59401A41D35 /* JSONModelLib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelLib.h; path = JSONModel/JSONModelLib.h; sourceTree = "<group>"; };
+		1C30E98679288E7F8F87EEA4ED6A3186 /* JSONModel+networking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "JSONModel+networking.h"; path = "JSONModel/JSONModelNetworking/JSONModel+networking.h"; sourceTree = "<group>"; };
+		23F80E93867E7BA7D65114E8F2CD2F4D /* Pods-CitrusPay_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CitrusPay_Example-frameworks.sh"; sourceTree = "<group>"; };
+		24B78D53B739ADB23420C9CDE799C324 /* Pods-CitrusPay_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CitrusPay_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2E67C1B6EEF5A320EFBA3585402775AA /* Pods_CitrusPay_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CitrusPay_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31C7750E2F0B97D45935060D00118244 /* CitrusPay.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = CitrusPay.bundle; sourceTree = "<group>"; };
+		390C603AA101253D9B5277DE17745C1C /* Pods-CitrusPay_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CitrusPay_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		3A7B983F88C3923222526CA46C10EFDC /* Pods-CitrusPay_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CitrusPay_Example-dummy.m"; sourceTree = "<group>"; };
+		3AC4303E403170FAEAD2944BE00317B1 /* Pods-CitrusPay_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CitrusPay_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4D13E64CD4493BD3D1796A098F9F2887 /* Pods-CitrusPay_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CitrusPay_Example.release.xcconfig"; sourceTree = "<group>"; };
+		4F394FE0714C841474F9F676096A044C /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		52898B04366490D0E3349B72BE8A1EF7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59EC3D900E25F58551BC964ED03E199B /* Pods-CitrusPay_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CitrusPay_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		643BCA275C0F91DCC30F4F91811EE7B7 /* JSONModel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JSONModel.modulemap; sourceTree = "<group>"; };
+		6499FED11057C8396DD5C5E717109809 /* JSONModelError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelError.m; path = JSONModel/JSONModel/JSONModelError.m; sourceTree = "<group>"; };
+		6AFA96C2335E023940F50A72A18994EC /* JSONModel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JSONModel.xcconfig; sourceTree = "<group>"; };
+		728E549FDAA19D6A16E942CB87DA0B6F /* JSONModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModel.m; path = JSONModel/JSONModel/JSONModel.m; sourceTree = "<group>"; };
+		72DA865AEDA0081CA97E73791575E0FF /* JSONValueTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONValueTransformer.m; path = JSONModel/JSONModelTransformations/JSONValueTransformer.m; sourceTree = "<group>"; };
+		786BFE1801F360E6E5C335597062E99E /* Pods-CitrusPay_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CitrusPay_Example-resources.sh"; sourceTree = "<group>"; };
+		7E412B1A5E35C09741CCBB6387F5896F /* JSONAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONAPI.h; path = JSONModel/JSONModelNetworking/JSONAPI.h; sourceTree = "<group>"; };
+		98282F2CC48451062BB2C62E1119214B /* Pods-CitrusPay_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CitrusPay_Example.modulemap"; sourceTree = "<group>"; };
+		987D9B7973C5B00A8BADA45C221E5911 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4D1304BE7E53D9D5632390BF3617EC0 /* JSONKeyMapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONKeyMapper.m; path = JSONModel/JSONModelTransformations/JSONKeyMapper.m; sourceTree = "<group>"; };
+		A717EE5B393886737221FE1B196A4338 /* JSONModelClassProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelClassProperty.m; path = JSONModel/JSONModel/JSONModelClassProperty.m; sourceTree = "<group>"; };
+		A71B9DB34B5A90C190BFF0D34791B53B /* JSONModelArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelArray.h; path = JSONModel/JSONModel/JSONModelArray.h; sourceTree = "<group>"; };
+		A7EAD982954356DE4F73DFC0194817CE /* CitrusPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CitrusPay.framework; path = "CitrusPay-Framework/CitrusPay.framework"; sourceTree = "<group>"; };
+		ABA552BC466798001C46A700832F642E /* Pods-CitrusPay_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CitrusPay_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		ADC90666AA41784F12F8C4B08CAD2891 /* JSONModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE50C1ECA59039B9450BEFB132FCCE89 /* Pods-CitrusPay_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CitrusPay_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		AFCA43F228DE44AFEE8B084F86F22F50 /* Pods-CitrusPay_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CitrusPay_Tests-dummy.m"; sourceTree = "<group>"; };
+		B4FB2937D47676C4878CAD8421F21DF2 /* NSArray+JSONModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+JSONModel.m"; path = "JSONModel/JSONModelCategories/NSArray+JSONModel.m"; sourceTree = "<group>"; };
+		B5C2BFBBD5AC4697D4030E82372F8D54 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
+		B5CE3F2106D565F549FD4137F7329246 /* JSONModel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JSONModel-dummy.m"; sourceTree = "<group>"; };
+		B665DC105592FC45C169DFEFC034E50E /* JSONModelClassProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelClassProperty.h; path = JSONModel/JSONModel/JSONModelClassProperty.h; sourceTree = "<group>"; };
+		B94B83E62E5FC2ED482A6FC806A4D4F1 /* JSONValueTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONValueTransformer.h; path = JSONModel/JSONModelTransformations/JSONValueTransformer.h; sourceTree = "<group>"; };
+		B99BD21401CB57465DD41EDC149B6ECC /* JSONModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModel.h; path = JSONModel/JSONModel/JSONModel.h; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BF3AD810000937F83AAE4D113B8816DA /* Pods_CitrusPay_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CitrusPay_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C435442251C0C7A094B975632A599170 /* JSONModelArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelArray.m; path = JSONModel/JSONModel/JSONModelArray.m; sourceTree = "<group>"; };
+		C59B5FF19B1790C4B895CE33C18AABE6 /* JSONHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONHTTPClient.h; path = JSONModel/JSONModelNetworking/JSONHTTPClient.h; sourceTree = "<group>"; };
+		C91B811CB594067DD20FBD9B7233E229 /* Pods-CitrusPay_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CitrusPay_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		CB49172C6E20A5804061AFBAF90E39C9 /* JSONModelError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelError.h; path = JSONModel/JSONModel/JSONModelError.h; sourceTree = "<group>"; };
+		D13923D63F1799908D77F2EBB4292058 /* JSONModel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONModel-umbrella.h"; sourceTree = "<group>"; };
+		D4995DAD6A194A024486DF85FA2C9EB9 /* Pods-CitrusPay_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CitrusPay_Tests.modulemap"; sourceTree = "<group>"; };
+		D4EE996C4F6C36646B8C31B8B87AFB5A /* NSArray+JSONModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+JSONModel.h"; path = "JSONModel/JSONModelCategories/NSArray+JSONModel.h"; sourceTree = "<group>"; };
+		D5305CF36861D27119A58EB54151AA50 /* JSONAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONAPI.m; path = JSONModel/JSONModelNetworking/JSONAPI.m; sourceTree = "<group>"; };
+		DFDFDF767CA80447EA032255D636E036 /* JSONHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONHTTPClient.m; path = JSONModel/JSONModelNetworking/JSONHTTPClient.m; sourceTree = "<group>"; };
+		F419194B213927F62E2EB778810EE6C1 /* JSONModel+networking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "JSONModel+networking.m"; path = "JSONModel/JSONModelNetworking/JSONModel+networking.m"; sourceTree = "<group>"; };
+		F759BDFEC581E26DFF235AC5CE869045 /* Pods-CitrusPay_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CitrusPay_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34049E9BD6AB19671F71F4FFC8F4E77F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04EBA32C12A08373C89FE754FAE0C43F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50071ACFB43461B6AF7BF0D80DBCC891 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42FA6CF7BE0A1136F15D90A7F69CDC18 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8735AD89358E24276CEF5FEC21E1AD76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5973E0786EE22A70D533865AA0566C9F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06B242783F3EB4D41F7B5E3912BE082F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5C8EB1DF441150A5A6A09B41575DBB00 /* Pods-CitrusPay_Example */,
+				EDD49773F6A5CF9705446A0493AEC0DC /* Pods-CitrusPay_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		19340BD1005DD331FF4B3EE708881443 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				05E0AD11032C6FEB972CBDEBF5C95C59 /* Info.plist */,
+				643BCA275C0F91DCC30F4F91811EE7B7 /* JSONModel.modulemap */,
+				6AFA96C2335E023940F50A72A18994EC /* JSONModel.xcconfig */,
+				B5CE3F2106D565F549FD4137F7329246 /* JSONModel-dummy.m */,
+				04E82649D97080EDFFA8D62F227D9121 /* JSONModel-prefix.pch */,
+				D13923D63F1799908D77F2EBB4292058 /* JSONModel-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JSONModel";
+			sourceTree = "<group>";
+		};
+		21CE0FCA2B9C41BE35A2169FB2AD3EEB /* Crashlytics */ = {
+			isa = PBXGroup;
+			children = (
+				C16A5DC7E2070EA2A9115FD4A71930CE /* Frameworks */,
+			);
+			path = Crashlytics;
+			sourceTree = "<group>";
+		};
+		23C1DBAF8E6CCF8FE1BF44FD4C205FD8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADC90666AA41784F12F8C4B08CAD2891 /* JSONModel.framework */,
+				BF3AD810000937F83AAE4D113B8816DA /* Pods_CitrusPay_Example.framework */,
+				2E67C1B6EEF5A320EFBA3585402775AA /* Pods_CitrusPay_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		36B5CBDD5F76277B15A8AB8F97091663 /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				4A0FFE8ED4A5DB60908AFD1EA60234C7 /* Frameworks */,
+			);
+			path = Fabric;
+			sourceTree = "<group>";
+		};
+		4169B82BDF8BF22109276FCAE2540AC5 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				7E412B1A5E35C09741CCBB6387F5896F /* JSONAPI.h */,
+				D5305CF36861D27119A58EB54151AA50 /* JSONAPI.m */,
+				C59B5FF19B1790C4B895CE33C18AABE6 /* JSONHTTPClient.h */,
+				DFDFDF767CA80447EA032255D636E036 /* JSONHTTPClient.m */,
+				19725DA74DF023D7DC685A9F838F54A5 /* JSONKeyMapper.h */,
+				A4D1304BE7E53D9D5632390BF3617EC0 /* JSONKeyMapper.m */,
+				B99BD21401CB57465DD41EDC149B6ECC /* JSONModel.h */,
+				728E549FDAA19D6A16E942CB87DA0B6F /* JSONModel.m */,
+				1C30E98679288E7F8F87EEA4ED6A3186 /* JSONModel+networking.h */,
+				F419194B213927F62E2EB778810EE6C1 /* JSONModel+networking.m */,
+				A71B9DB34B5A90C190BFF0D34791B53B /* JSONModelArray.h */,
+				C435442251C0C7A094B975632A599170 /* JSONModelArray.m */,
+				B665DC105592FC45C169DFEFC034E50E /* JSONModelClassProperty.h */,
+				A717EE5B393886737221FE1B196A4338 /* JSONModelClassProperty.m */,
+				CB49172C6E20A5804061AFBAF90E39C9 /* JSONModelError.h */,
+				6499FED11057C8396DD5C5E717109809 /* JSONModelError.m */,
+				1A65C1E2815815FB4CE3E59401A41D35 /* JSONModelLib.h */,
+				B94B83E62E5FC2ED482A6FC806A4D4F1 /* JSONValueTransformer.h */,
+				72DA865AEDA0081CA97E73791575E0FF /* JSONValueTransformer.m */,
+				D4EE996C4F6C36646B8C31B8B87AFB5A /* NSArray+JSONModel.h */,
+				B4FB2937D47676C4878CAD8421F21DF2 /* NSArray+JSONModel.m */,
+				19340BD1005DD331FF4B3EE708881443 /* Support Files */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		4A0FFE8ED4A5DB60908AFD1EA60234C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F394FE0714C841474F9F676096A044C /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C8EB1DF441150A5A6A09B41575DBB00 /* Pods-CitrusPay_Example */ = {
+			isa = PBXGroup;
+			children = (
+				987D9B7973C5B00A8BADA45C221E5911 /* Info.plist */,
+				98282F2CC48451062BB2C62E1119214B /* Pods-CitrusPay_Example.modulemap */,
+				3AC4303E403170FAEAD2944BE00317B1 /* Pods-CitrusPay_Example-acknowledgements.markdown */,
+				390C603AA101253D9B5277DE17745C1C /* Pods-CitrusPay_Example-acknowledgements.plist */,
+				3A7B983F88C3923222526CA46C10EFDC /* Pods-CitrusPay_Example-dummy.m */,
+				23F80E93867E7BA7D65114E8F2CD2F4D /* Pods-CitrusPay_Example-frameworks.sh */,
+				786BFE1801F360E6E5C335597062E99E /* Pods-CitrusPay_Example-resources.sh */,
+				0C95E62FC2A62780ED90A1A2F888E950 /* Pods-CitrusPay_Example-umbrella.h */,
+				C91B811CB594067DD20FBD9B7233E229 /* Pods-CitrusPay_Example.debug.xcconfig */,
+				4D13E64CD4493BD3D1796A098F9F2887 /* Pods-CitrusPay_Example.release.xcconfig */,
+			);
+			name = "Pods-CitrusPay_Example";
+			path = "Target Support Files/Pods-CitrusPay_Example";
+			sourceTree = "<group>";
+		};
+		629296F7DDDBB6026161456E97CDE844 /* CitrusPay-Framework */ = {
+			isa = PBXGroup;
+			children = (
+				31C7750E2F0B97D45935060D00118244 /* CitrusPay.bundle */,
+			);
+			path = "CitrusPay-Framework";
+			sourceTree = "<group>";
+		};
+		71CF92D28938108BB35A97CA85DAB04C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				629296F7DDDBB6026161456E97CDE844 /* CitrusPay-Framework */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		723C870E9AABBE1B64C324B3E58B3F2F /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7A6CDA0A0C2896CCE3E1A738C7BDDA0 /* CitrusPay */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				723C870E9AABBE1B64C324B3E58B3F2F /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				D19CD4EEA4B5EC86C92F8AB7CC7889D7 /* Pods */,
+				23C1DBAF8E6CCF8FE1BF44FD4C205FD8 /* Products */,
+				06B242783F3EB4D41F7B5E3912BE082F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C16A5DC7E2070EA2A9115FD4A71930CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5C2BFBBD5AC4697D4030E82372F8D54 /* Crashlytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D19CD4EEA4B5EC86C92F8AB7CC7889D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21CE0FCA2B9C41BE35A2169FB2AD3EEB /* Crashlytics */,
+				36B5CBDD5F76277B15A8AB8F97091663 /* Fabric */,
+				4169B82BDF8BF22109276FCAE2540AC5 /* JSONModel */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EDD49773F6A5CF9705446A0493AEC0DC /* Pods-CitrusPay_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				52898B04366490D0E3349B72BE8A1EF7 /* Info.plist */,
+				D4995DAD6A194A024486DF85FA2C9EB9 /* Pods-CitrusPay_Tests.modulemap */,
+				F759BDFEC581E26DFF235AC5CE869045 /* Pods-CitrusPay_Tests-acknowledgements.markdown */,
+				ABA552BC466798001C46A700832F642E /* Pods-CitrusPay_Tests-acknowledgements.plist */,
+				AFCA43F228DE44AFEE8B084F86F22F50 /* Pods-CitrusPay_Tests-dummy.m */,
+				AE50C1ECA59039B9450BEFB132FCCE89 /* Pods-CitrusPay_Tests-frameworks.sh */,
+				186ADE827D444C5A65749C0048508F2A /* Pods-CitrusPay_Tests-resources.sh */,
+				0FB798D0480A904FCF736F830EBB7AD5 /* Pods-CitrusPay_Tests-umbrella.h */,
+				59EC3D900E25F58551BC964ED03E199B /* Pods-CitrusPay_Tests.debug.xcconfig */,
+				24B78D53B739ADB23420C9CDE799C324 /* Pods-CitrusPay_Tests.release.xcconfig */,
+			);
+			name = "Pods-CitrusPay_Tests";
+			path = "Target Support Files/Pods-CitrusPay_Tests";
+			sourceTree = "<group>";
+		};
+		F4542D8385B8B7C30080176FC7576782 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7EAD982954356DE4F73DFC0194817CE /* CitrusPay.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7A6CDA0A0C2896CCE3E1A738C7BDDA0 /* CitrusPay */ = {
+			isa = PBXGroup;
+			children = (
+				F4542D8385B8B7C30080176FC7576782 /* Frameworks */,
+				71CF92D28938108BB35A97CA85DAB04C /* Resources */,
+			);
+			name = CitrusPay;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5D16032B85DD0BBE8BF1ECCF4137A001 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B5BCFFE9B8A78649344FFF61C094695 /* JSONAPI.h in Headers */,
+				C3437AE08F8583093CCDB9762D7BC6DD /* JSONHTTPClient.h in Headers */,
+				D4901D771BC43EAA1E9767289E59A8FD /* JSONKeyMapper.h in Headers */,
+				7F610BE21596EA4D163BB0AAB948561F /* JSONModel+networking.h in Headers */,
+				9339819EA7649D298BFEFD11EA40E37D /* JSONModel-umbrella.h in Headers */,
+				B514F5B20C77E3BB07398ED7B77B5468 /* JSONModel.h in Headers */,
+				5F6C967916CFAA5D846608140EA96562 /* JSONModelArray.h in Headers */,
+				FD685BAE2583AFD31AF68A7EE49CD5AF /* JSONModelClassProperty.h in Headers */,
+				511A81B5E765B159671168AB8647DBAC /* JSONModelError.h in Headers */,
+				FA806409325D2BB94CF1D3372B594097 /* JSONModelLib.h in Headers */,
+				8B62FE4C5B8F8769F0DE823B92DAFB1B /* JSONValueTransformer.h in Headers */,
+				0A146FF03A7FE4CC5639CF6CD928C6F6 /* NSArray+JSONModel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A14B0994726C52AFAD3BC98710BEFE11 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F0842D4CDB3CDD700470D457E1B623B /* Pods-CitrusPay_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D88A526D706CCEE82ECB549E0AE9CCE4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E58091B017C20DF75B0527A5AE5D01E9 /* Pods-CitrusPay_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0944F6839636E72004154F492C26F123 /* Pods-CitrusPay_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CCC45D9EA6CEF86E2632EAAAC3D1A06 /* Build configuration list for PBXNativeTarget "Pods-CitrusPay_Tests" */;
+			buildPhases = (
+				725A32C2A47CFA20E239AD79384250A1 /* Sources */,
+				8735AD89358E24276CEF5FEC21E1AD76 /* Frameworks */,
+				D88A526D706CCEE82ECB549E0AE9CCE4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CC2F88E12F9CF2542418BF6DE7E9C8D /* PBXTargetDependency */,
+			);
+			name = "Pods-CitrusPay_Tests";
+			productName = "Pods-CitrusPay_Tests";
+			productReference = 2E67C1B6EEF5A320EFBA3585402775AA /* Pods_CitrusPay_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0BF8569A1D17D47E1A86EB020383E8D1 /* JSONModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 098B1241ACE7660480EBA7EB1845A08B /* Build configuration list for PBXNativeTarget "JSONModel" */;
+			buildPhases = (
+				5081DBF40E54E8AB12C52B3EBCBC6544 /* Sources */,
+				34049E9BD6AB19671F71F4FFC8F4E77F /* Frameworks */,
+				5D16032B85DD0BBE8BF1ECCF4137A001 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JSONModel;
+			productName = JSONModel;
+			productReference = ADC90666AA41784F12F8C4B08CAD2891 /* JSONModel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ACAC19414E8D1830CDF86794EE864563 /* Pods-CitrusPay_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EED0D20539580E7BB6F2056FBE35A2C6 /* Build configuration list for PBXNativeTarget "Pods-CitrusPay_Example" */;
+			buildPhases = (
+				5D6C7FC6379C973CBF80A8BE1A77A15C /* Sources */,
+				50071ACFB43461B6AF7BF0D80DBCC891 /* Frameworks */,
+				A14B0994726C52AFAD3BC98710BEFE11 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2AAAFF5ECFED808510B235AA678345F /* PBXTargetDependency */,
+			);
+			name = "Pods-CitrusPay_Example";
+			productName = "Pods-CitrusPay_Example";
+			productReference = BF3AD810000937F83AAE4D113B8816DA /* Pods_CitrusPay_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 23C1DBAF8E6CCF8FE1BF44FD4C205FD8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0BF8569A1D17D47E1A86EB020383E8D1 /* JSONModel */,
+				ACAC19414E8D1830CDF86794EE864563 /* Pods-CitrusPay_Example */,
+				0944F6839636E72004154F492C26F123 /* Pods-CitrusPay_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5081DBF40E54E8AB12C52B3EBCBC6544 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ED077CCC3549023C9B498FE1C32BD33 /* JSONAPI.m in Sources */,
+				FF1FC413F8CAE5783A62BAF29C870D23 /* JSONHTTPClient.m in Sources */,
+				CA2873B2412BD6F0362F96130B0D12FC /* JSONKeyMapper.m in Sources */,
+				C936C8FB08C1E8C12461E8007D6311FD /* JSONModel+networking.m in Sources */,
+				4103C3D7D5E48A462E1C09849C9CF3EF /* JSONModel-dummy.m in Sources */,
+				9F370457508E73D0866941EE0DDA5CFB /* JSONModel.m in Sources */,
+				84FE278A8594B615448610715387CD5E /* JSONModelArray.m in Sources */,
+				C4C59D99FA815243331711D98916260E /* JSONModelClassProperty.m in Sources */,
+				6646DBB2618E9A5262C645A81399F0F7 /* JSONModelError.m in Sources */,
+				750B8023FD84B6D68367103887641725 /* JSONValueTransformer.m in Sources */,
+				27471A010C073A00476B271ED722C11A /* NSArray+JSONModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D6C7FC6379C973CBF80A8BE1A77A15C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E573E6E83A8AAD79508B224B9B86C58 /* Pods-CitrusPay_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		725A32C2A47CFA20E239AD79384250A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCE55E3E1D1A04B2600FDFF0B0823924 /* Pods-CitrusPay_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5CC2F88E12F9CF2542418BF6DE7E9C8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JSONModel;
+			target = 0BF8569A1D17D47E1A86EB020383E8D1 /* JSONModel */;
+			targetProxy = 600F73109FD2D1C7A0E5FF09214F98CF /* PBXContainerItemProxy */;
+		};
+		E2AAAFF5ECFED808510B235AA678345F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JSONModel;
+			target = 0BF8569A1D17D47E1A86EB020383E8D1 /* JSONModel */;
+			targetProxy = FC310A4BBC105C3A804512576F1A880C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		052A17875CB827423D627183396CEB60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3178A959A445A8751D0C2EA2CB015665 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AFA96C2335E023940F50A72A18994EC /* JSONModel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JSONModel/JSONModel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JSONModel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JSONModel/JSONModel.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = JSONModel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3DABC4502FE0C4EF553B382F425A3E45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D13E64CD4493BD3D1796A098F9F2887 /* Pods-CitrusPay_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CitrusPay_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CitrusPay_Example/Pods-CitrusPay_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_CitrusPay_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		41FF6A4E678AC60071225513BEB3CAC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AFA96C2335E023940F50A72A18994EC /* JSONModel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JSONModel/JSONModel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JSONModel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JSONModel/JSONModel.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = JSONModel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		576D689F520E4163CFD4DAB7247EFC04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59EC3D900E25F58551BC964ED03E199B /* Pods-CitrusPay_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CitrusPay_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CitrusPay_Tests/Pods-CitrusPay_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_CitrusPay_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		937E596454CA3C8BA0755965B0C26865 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C91B811CB594067DD20FBD9B7233E229 /* Pods-CitrusPay_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CitrusPay_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CitrusPay_Example/Pods-CitrusPay_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_CitrusPay_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B37F0F91F85060E28F1DAAB522DC7EC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		ED07CDBBD8E6DF7F91F11D0651E8BD8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24B78D53B739ADB23420C9CDE799C324 /* Pods-CitrusPay_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CitrusPay_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CitrusPay_Tests/Pods-CitrusPay_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_CitrusPay_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		098B1241ACE7660480EBA7EB1845A08B /* Build configuration list for PBXNativeTarget "JSONModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3178A959A445A8751D0C2EA2CB015665 /* Debug */,
+				41FF6A4E678AC60071225513BEB3CAC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B37F0F91F85060E28F1DAAB522DC7EC1 /* Debug */,
+				052A17875CB827423D627183396CEB60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CCC45D9EA6CEF86E2632EAAAC3D1A06 /* Build configuration list for PBXNativeTarget "Pods-CitrusPay_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				576D689F520E4163CFD4DAB7247EFC04 /* Debug */,
+				ED07CDBBD8E6DF7F91F11D0651E8BD8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EED0D20539580E7BB6F2056FBE35A2C6 /* Build configuration list for PBXNativeTarget "Pods-CitrusPay_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				937E596454CA3C8BA0755965B0C26865 /* Debug */,
+				3DABC4502FE0C4EF553B382F425A3E45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

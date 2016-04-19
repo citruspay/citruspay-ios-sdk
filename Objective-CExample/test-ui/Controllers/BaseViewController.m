@@ -18,15 +18,9 @@
 @implementation BaseViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     [self initializeLayers];
     // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - initializers
@@ -35,8 +29,6 @@
 -(void)initializeLayers{
     
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    
-    
     CTSKeyStore *keyStore = [[CTSKeyStore alloc] init];
     keyStore.signinId = SignInId;
     keyStore.signinSecret = SignInSecretKey;

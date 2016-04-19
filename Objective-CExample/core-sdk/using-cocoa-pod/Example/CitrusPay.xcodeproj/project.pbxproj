@@ -20,19 +20,20 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		76B2DB131CC134CD0046B963 /* CitrusPay.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 76B2DB111CC134CD0046B963 /* CitrusPay.podspec */; settings = {ASSET_TAGS = (); }; };
 		76B2DB141CC134CD0046B963 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 76B2DB121CC134CD0046B963 /* LICENSE */; settings = {ASSET_TAGS = (); }; };
-		76B2DB321CC135420046B963 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B2DB181CC135420046B963 /* BaseViewController.m */; settings = {ASSET_TAGS = (); }; };
-		76B2DB331CC135420046B963 /* CardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B2DB1A1CC135420046B963 /* CardsViewController.m */; settings = {ASSET_TAGS = (); }; };
-		76B2DB341CC135420046B963 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B2DB1C1CC135420046B963 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
-		76B2DB351CC135420046B963 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B2DB1E1CC135420046B963 /* InitialViewController.m */; settings = {ASSET_TAGS = (); }; };
-		76B2DB361CC135420046B963 /* ManageCradViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B2DB201CC135420046B963 /* ManageCradViewController.m */; settings = {ASSET_TAGS = (); }; };
-		76B2DB371CC135420046B963 /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B2DB221CC135420046B963 /* ResetPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
-		76B2DB381CC135420046B963 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B2DB241CC135420046B963 /* SignInViewController.m */; settings = {ASSET_TAGS = (); }; };
-		76B2DB391CC135420046B963 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B2DB261CC135420046B963 /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
-		76B2DB3A1CC135420046B963 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B2DB291CC135420046B963 /* HMSegmentedControl.m */; settings = {ASSET_TAGS = (); }; };
-		76B2DB3B1CC135420046B963 /* UICustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B2DB2B1CC135420046B963 /* UICustomButton.m */; settings = {ASSET_TAGS = (); }; };
-		76B2DB3C1CC135420046B963 /* UICustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B2DB2D1CC135420046B963 /* UICustomTextField.m */; settings = {ASSET_TAGS = (); }; };
-		76B2DB3D1CC135420046B963 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76B2DB2E1CC135420046B963 /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
-		76B2DB3E1CC135420046B963 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B2DB2F1CC135420046B963 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		76F777D61CC6388100C9E7B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F777B71CC6388100C9E7B8 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		76F777D71CC6388100C9E7B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F777B81CC6388100C9E7B8 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		76F777D81CC6388100C9E7B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F777BA1CC6388100C9E7B8 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		76F777D91CC6388100C9E7B8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F777BE1CC6388100C9E7B8 /* BaseViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76F777DA1CC6388100C9E7B8 /* CardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F777C01CC6388100C9E7B8 /* CardsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76F777DB1CC6388100C9E7B8 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F777C21CC6388100C9E7B8 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76F777DC1CC6388100C9E7B8 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F777C41CC6388100C9E7B8 /* InitialViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76F777DD1CC6388100C9E7B8 /* ManageCradViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F777C61CC6388100C9E7B8 /* ManageCradViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76F777DE1CC6388100C9E7B8 /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F777C81CC6388100C9E7B8 /* ResetPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76F777DF1CC6388100C9E7B8 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F777CA1CC6388100C9E7B8 /* SignInViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76F777E01CC6388100C9E7B8 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F777CC1CC6388100C9E7B8 /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76F777E11CC6388100C9E7B8 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F777CF1CC6388100C9E7B8 /* HMSegmentedControl.m */; settings = {ASSET_TAGS = (); }; };
+		76F777E21CC6388100C9E7B8 /* UICustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F777D11CC6388100C9E7B8 /* UICustomButton.m */; settings = {ASSET_TAGS = (); }; };
+		76F777E31CC6388100C9E7B8 /* UICustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F777D31CC6388100C9E7B8 /* UICustomTextField.m */; settings = {ASSET_TAGS = (); }; };
 		A0342087652932329B6DCAB2 /* Pods_CitrusPay_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11B8D0718D4197E690D1D90 /* Pods_CitrusPay_Tests.framework */; };
 		B09CF9FC4FB94C69F76A7A9A /* Pods_CitrusPay_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B5395E87BB0109AEA46E5B /* Pods_CitrusPay_Example.framework */; };
 /* End PBXBuildFile section */
@@ -67,32 +68,33 @@
 		67ACF41A3BB732C384E85A08 /* Pods-CitrusPay_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitrusPay_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CitrusPay_Tests/Pods-CitrusPay_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		76B2DB111CC134CD0046B963 /* CitrusPay.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CitrusPay.podspec; path = ../../../../CitrusPay.podspec; sourceTree = "<group>"; };
 		76B2DB121CC134CD0046B963 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../../../LICENSE; sourceTree = "<group>"; };
-		76B2DB171CC135420046B963 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		76B2DB181CC135420046B963 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		76B2DB191CC135420046B963 /* CardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsViewController.h; sourceTree = "<group>"; };
-		76B2DB1A1CC135420046B963 /* CardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsViewController.m; sourceTree = "<group>"; };
-		76B2DB1B1CC135420046B963 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		76B2DB1C1CC135420046B963 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		76B2DB1D1CC135420046B963 /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
-		76B2DB1E1CC135420046B963 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
-		76B2DB1F1CC135420046B963 /* ManageCradViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageCradViewController.h; sourceTree = "<group>"; };
-		76B2DB201CC135420046B963 /* ManageCradViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageCradViewController.m; sourceTree = "<group>"; };
-		76B2DB211CC135420046B963 /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
-		76B2DB221CC135420046B963 /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
-		76B2DB231CC135420046B963 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
-		76B2DB241CC135420046B963 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
-		76B2DB251CC135420046B963 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
-		76B2DB261CC135420046B963 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
-		76B2DB281CC135420046B963 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
-		76B2DB291CC135420046B963 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
-		76B2DB2A1CC135420046B963 /* UICustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomButton.h; sourceTree = "<group>"; };
-		76B2DB2B1CC135420046B963 /* UICustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomButton.m; sourceTree = "<group>"; };
-		76B2DB2C1CC135420046B963 /* UICustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomTextField.h; sourceTree = "<group>"; };
-		76B2DB2D1CC135420046B963 /* UICustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomTextField.m; sourceTree = "<group>"; };
-		76B2DB2E1CC135420046B963 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		76B2DB2F1CC135420046B963 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		76B2DB301CC135420046B963 /* MerchantConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantConstants.h; sourceTree = "<group>"; };
-		76B2DB311CC135420046B963 /* TestParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestParams.h; sourceTree = "<group>"; };
+		76F777B71CC6388100C9E7B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76F777B91CC6388100C9E7B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		76F777BB1CC6388100C9E7B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		76F777BD1CC6388100C9E7B8 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		76F777BE1CC6388100C9E7B8 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		76F777BF1CC6388100C9E7B8 /* CardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsViewController.h; sourceTree = "<group>"; };
+		76F777C01CC6388100C9E7B8 /* CardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsViewController.m; sourceTree = "<group>"; };
+		76F777C11CC6388100C9E7B8 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		76F777C21CC6388100C9E7B8 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		76F777C31CC6388100C9E7B8 /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
+		76F777C41CC6388100C9E7B8 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
+		76F777C51CC6388100C9E7B8 /* ManageCradViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageCradViewController.h; sourceTree = "<group>"; };
+		76F777C61CC6388100C9E7B8 /* ManageCradViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageCradViewController.m; sourceTree = "<group>"; };
+		76F777C71CC6388100C9E7B8 /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
+		76F777C81CC6388100C9E7B8 /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
+		76F777C91CC6388100C9E7B8 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		76F777CA1CC6388100C9E7B8 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		76F777CB1CC6388100C9E7B8 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		76F777CC1CC6388100C9E7B8 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		76F777CE1CC6388100C9E7B8 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
+		76F777CF1CC6388100C9E7B8 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
+		76F777D01CC6388100C9E7B8 /* UICustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomButton.h; sourceTree = "<group>"; };
+		76F777D11CC6388100C9E7B8 /* UICustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomButton.m; sourceTree = "<group>"; };
+		76F777D21CC6388100C9E7B8 /* UICustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomTextField.h; sourceTree = "<group>"; };
+		76F777D31CC6388100C9E7B8 /* UICustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomTextField.m; sourceTree = "<group>"; };
+		76F777D41CC6388100C9E7B8 /* MerchantConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantConstants.h; sourceTree = "<group>"; };
+		76F777D51CC6388100C9E7B8 /* TestParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestParams.h; sourceTree = "<group>"; };
 		8EF9F4B332BAF9355E5D87D5 /* Pods-CitrusPay_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitrusPay_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CitrusPay_Example/Pods-CitrusPay_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9CD39E07C2CC39B09DCCC04F /* Pods-CitrusPay_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitrusPay_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CitrusPay_Example/Pods-CitrusPay_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C11B8D0718D4197E690D1D90 /* Pods_CitrusPay_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CitrusPay_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,7 +165,7 @@
 		6003F593195388D20070C39A /* Example for CitrusPay */ = {
 			isa = PBXGroup;
 			children = (
-				76B2DB151CC135420046B963 /* test-ui */,
+				76F777B61CC6388100C9E7B8 /* test-ui */,
 				6003F59C195388D20070C39A /* CTSAppDelegate.h */,
 				6003F59D195388D20070C39A /* CTSAppDelegate.m */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -211,52 +213,53 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		76B2DB151CC135420046B963 /* test-ui */ = {
+		76F777B61CC6388100C9E7B8 /* test-ui */ = {
 			isa = PBXGroup;
 			children = (
-				76B2DB161CC135420046B963 /* Controllers */,
-				76B2DB271CC135420046B963 /* CustomComponents */,
-				76B2DB2E1CC135420046B963 /* Images.xcassets */,
-				76B2DB2F1CC135420046B963 /* Main.storyboard */,
-				76B2DB301CC135420046B963 /* MerchantConstants.h */,
-				76B2DB311CC135420046B963 /* TestParams.h */,
+				76F777B71CC6388100C9E7B8 /* Assets.xcassets */,
+				76F777B81CC6388100C9E7B8 /* LaunchScreen.storyboard */,
+				76F777BA1CC6388100C9E7B8 /* Main.storyboard */,
+				76F777BC1CC6388100C9E7B8 /* Controllers */,
+				76F777CD1CC6388100C9E7B8 /* CustomComponents */,
+				76F777D41CC6388100C9E7B8 /* MerchantConstants.h */,
+				76F777D51CC6388100C9E7B8 /* TestParams.h */,
 			);
 			name = "test-ui";
 			path = "../../../../test-ui";
 			sourceTree = "<group>";
 		};
-		76B2DB161CC135420046B963 /* Controllers */ = {
+		76F777BC1CC6388100C9E7B8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				76B2DB171CC135420046B963 /* BaseViewController.h */,
-				76B2DB181CC135420046B963 /* BaseViewController.m */,
-				76B2DB191CC135420046B963 /* CardsViewController.h */,
-				76B2DB1A1CC135420046B963 /* CardsViewController.m */,
-				76B2DB1B1CC135420046B963 /* HomeViewController.h */,
-				76B2DB1C1CC135420046B963 /* HomeViewController.m */,
-				76B2DB1D1CC135420046B963 /* InitialViewController.h */,
-				76B2DB1E1CC135420046B963 /* InitialViewController.m */,
-				76B2DB1F1CC135420046B963 /* ManageCradViewController.h */,
-				76B2DB201CC135420046B963 /* ManageCradViewController.m */,
-				76B2DB211CC135420046B963 /* ResetPasswordViewController.h */,
-				76B2DB221CC135420046B963 /* ResetPasswordViewController.m */,
-				76B2DB231CC135420046B963 /* SignInViewController.h */,
-				76B2DB241CC135420046B963 /* SignInViewController.m */,
-				76B2DB251CC135420046B963 /* SignUpViewController.h */,
-				76B2DB261CC135420046B963 /* SignUpViewController.m */,
+				76F777BD1CC6388100C9E7B8 /* BaseViewController.h */,
+				76F777BE1CC6388100C9E7B8 /* BaseViewController.m */,
+				76F777BF1CC6388100C9E7B8 /* CardsViewController.h */,
+				76F777C01CC6388100C9E7B8 /* CardsViewController.m */,
+				76F777C11CC6388100C9E7B8 /* HomeViewController.h */,
+				76F777C21CC6388100C9E7B8 /* HomeViewController.m */,
+				76F777C31CC6388100C9E7B8 /* InitialViewController.h */,
+				76F777C41CC6388100C9E7B8 /* InitialViewController.m */,
+				76F777C51CC6388100C9E7B8 /* ManageCradViewController.h */,
+				76F777C61CC6388100C9E7B8 /* ManageCradViewController.m */,
+				76F777C71CC6388100C9E7B8 /* ResetPasswordViewController.h */,
+				76F777C81CC6388100C9E7B8 /* ResetPasswordViewController.m */,
+				76F777C91CC6388100C9E7B8 /* SignInViewController.h */,
+				76F777CA1CC6388100C9E7B8 /* SignInViewController.m */,
+				76F777CB1CC6388100C9E7B8 /* SignUpViewController.h */,
+				76F777CC1CC6388100C9E7B8 /* SignUpViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		76B2DB271CC135420046B963 /* CustomComponents */ = {
+		76F777CD1CC6388100C9E7B8 /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
-				76B2DB281CC135420046B963 /* HMSegmentedControl.h */,
-				76B2DB291CC135420046B963 /* HMSegmentedControl.m */,
-				76B2DB2A1CC135420046B963 /* UICustomButton.h */,
-				76B2DB2B1CC135420046B963 /* UICustomButton.m */,
-				76B2DB2C1CC135420046B963 /* UICustomTextField.h */,
-				76B2DB2D1CC135420046B963 /* UICustomTextField.m */,
+				76F777CE1CC6388100C9E7B8 /* HMSegmentedControl.h */,
+				76F777CF1CC6388100C9E7B8 /* HMSegmentedControl.m */,
+				76F777D01CC6388100C9E7B8 /* UICustomButton.h */,
+				76F777D11CC6388100C9E7B8 /* UICustomButton.m */,
+				76F777D21CC6388100C9E7B8 /* UICustomTextField.h */,
+				76F777D31CC6388100C9E7B8 /* UICustomTextField.m */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -327,9 +330,6 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Mukesh Patil";
 				TargetAttributes = {
-					6003F589195388D20070C39A = {
-						DevelopmentTeam = 5WNBWFS78L;
-					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -360,9 +360,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				76B2DB131CC134CD0046B963 /* CitrusPay.podspec in Resources */,
-				76B2DB3E1CC135420046B963 /* Main.storyboard in Resources */,
-				76B2DB3D1CC135420046B963 /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				76F777D61CC6388100C9E7B8 /* Assets.xcassets in Resources */,
+				76F777D81CC6388100C9E7B8 /* Main.storyboard in Resources */,
+				76F777D71CC6388100C9E7B8 /* LaunchScreen.storyboard in Resources */,
 				76B2DB141CC134CD0046B963 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,19 +489,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76B2DB3B1CC135420046B963 /* UICustomButton.m in Sources */,
-				76B2DB331CC135420046B963 /* CardsViewController.m in Sources */,
+				76F777E21CC6388100C9E7B8 /* UICustomButton.m in Sources */,
+				76F777DA1CC6388100C9E7B8 /* CardsViewController.m in Sources */,
 				6003F59E195388D20070C39A /* CTSAppDelegate.m in Sources */,
-				76B2DB321CC135420046B963 /* BaseViewController.m in Sources */,
-				76B2DB351CC135420046B963 /* InitialViewController.m in Sources */,
-				76B2DB361CC135420046B963 /* ManageCradViewController.m in Sources */,
-				76B2DB371CC135420046B963 /* ResetPasswordViewController.m in Sources */,
-				76B2DB391CC135420046B963 /* SignUpViewController.m in Sources */,
-				76B2DB3A1CC135420046B963 /* HMSegmentedControl.m in Sources */,
-				76B2DB341CC135420046B963 /* HomeViewController.m in Sources */,
-				76B2DB381CC135420046B963 /* SignInViewController.m in Sources */,
+				76F777D91CC6388100C9E7B8 /* BaseViewController.m in Sources */,
+				76F777DC1CC6388100C9E7B8 /* InitialViewController.m in Sources */,
+				76F777DD1CC6388100C9E7B8 /* ManageCradViewController.m in Sources */,
+				76F777DE1CC6388100C9E7B8 /* ResetPasswordViewController.m in Sources */,
+				76F777E01CC6388100C9E7B8 /* SignUpViewController.m in Sources */,
+				76F777E11CC6388100C9E7B8 /* HMSegmentedControl.m in Sources */,
+				76F777DB1CC6388100C9E7B8 /* HomeViewController.m in Sources */,
+				76F777DF1CC6388100C9E7B8 /* SignInViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				76B2DB3C1CC135420046B963 /* UICustomTextField.m in Sources */,
+				76F777E31CC6388100C9E7B8 /* UICustomTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +538,22 @@
 				6003F5B9195388D20070C39A /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		76F777B81CC6388100C9E7B8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76F777B91CC6388100C9E7B8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		76F777BA1CC6388100C9E7B8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76F777BB1CC6388100C9E7B8 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -631,7 +648,7 @@
 				INFOPLIST_FILE = "CitrusPay/CitrusPay-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.sdk;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.citruspay.sdk-using-cocoa-pod";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "82942638-4b25-43fe-94f6-de8f319204f0";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -655,7 +672,7 @@
 				INFOPLIST_FILE = "CitrusPay/CitrusPay-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.sdk;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.citruspay.sdk-using-cocoa-pod";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "82942638-4b25-43fe-94f6-de8f319204f0";
 				TARGETED_DEVICE_FAMILY = 1;
