@@ -45,4 +45,5 @@ typedef enum {
 -(CTSErrorCode)validate;
 -(CTSPaymentType)fetchPaymentType;
 -(CTSPaymentToken*)fetchPaymentToken;
+-(BOOL)canDoOneTapPayment;
 @end

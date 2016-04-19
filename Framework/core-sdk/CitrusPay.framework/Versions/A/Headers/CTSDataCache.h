@@ -22,6 +22,11 @@ extern NSString * const CACHE_KEY_DP_PAYMENT_INFO;
 extern NSString * const CACHE_KEY_DP_USER_INFO;
 extern NSString * const CACHE_KEY_DP_BILL;
 extern NSString * const CACHE_KEY_CITRUS_LINK;
+extern NSString * const CACHE_KEY_ONE_TAP_PAYMENT;
+extern NSString * const CACHE_KEY_PUSH_VIEW_CONTROLLER;
+extern NSString * const CACHE_KEY_LOADER_OVERLAY;
+extern NSString * const CACHE_KEY_LOADER_COLOR;
+
 
 @interface CTSDataCache : NSObject
 @property(strong)NSMutableDictionary *cache;

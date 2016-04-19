@@ -20,8 +20,17 @@
 #import "CTSPgSettings.h"
 #import "CTSTransferMoneyResponse.h"
 #import "CTSAmount.h"
+#import "CTSCashoutBankAccount.h"
+#import "CTSCardBinResponse.h"
+#import "CTSCashoutToBankRes.h"
+#import "CTSPrepaidBill.h"
+#import "CTSPaymentTransactionRes.h"
+#import "CTSPGHealthRes.h"
+#import "CTSDyPValidateRuleReq.h"
+#import "CTSPrepaidPayResp.h"
 
-@class CTSPaymentTransactionRes, CTSPrepaidBill, CTSCitrusCashRes, CTSCashoutToBankRes, CTSPaymentWebViewController, CTSPGHealthRes, CTSCitrusCashRes, CTSCitrusCashRes, CTSCardBinResponse, CTSCashoutBankAccount, CTSDyPValidateRuleReq, CTSPrepaidPayResp, CTSContactUpdate, CTSUserAddress;
+
+@class   CTSPaymentWebViewController , CTSContactUpdate, CTSUserAddress;
 
 typedef enum {
     PaymentAsGuestReqId,
@@ -148,7 +157,7 @@ didCashoutToBank:(CTSCashoutToBankRes *)cashoutToBankRes
     BOOL finished;
     NSString *cCashReturnUrl;
     PaymentRequestType prepaidRequestType;
-    
+    CTSPaymentDetailUpdate *tempCVVStoreObject;
 }
 @property(strong)UIViewController *citrusCashBackViewController;
 @property(strong)UIWebView *citrusPayWebview;
@@ -379,6 +388,6 @@ typedef void (^ASPrepaidPayCallback)(CTSPrepaidPayResp* prepaidPay ,NSError* err
 
 -(void)requestPerformDynamicPricingRule:(CTSRuleInfo *)ruleInfo paymentInfo:(CTSPaymentDetailUpdate *)payment billUrl:(NSString *)billUrl user:(CTSUser *)user  extraParams:(NSDictionary *)extraParams completionHandler:(ASPerformDynamicPricingCallback)callback;
 
-
+- (void)requestLoadMoneyPgSettingsCompletionHandler:(ASGetMerchantPgSettingsCallBack)callback;
 
 @end

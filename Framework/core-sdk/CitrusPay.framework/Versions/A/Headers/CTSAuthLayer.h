@@ -137,7 +137,7 @@ typedef void (^ASSignupCallBack)(NSString* userName,
                                  NSString* token,
                                  NSError* error);
 
-typedef void (^ASChangePassword)(NSError* error);
+typedef void (^ASChangePassword)(NSString *response, NSError* error);
 
 typedef void (^ASSetPassword)(NSError* error);
 
@@ -287,7 +287,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
 - (NSString*)generateBigIntegerString:(NSString*)email ;
 
 
--(void)requestLinkUser:(NSString *)email mobile:(NSString *)mobile completionHandler:(ASLinkUserCallBack)callBack;
+-(void)requestLinkUser:(NSString *)email mobile:(NSString *)mobile completionHandler:(ASLinkUserCallBack)callBack DEPRECATED_MSG_ATTRIBUTE("Use 'requestCitrusLink:mobile:completion:'");
+;
 
 -(void)requestLinkTrustedUser:(CTSUserDetails *)user completionHandler:(ASLinkUserCallBack )callback;
 

@@ -99,4 +99,8 @@ typedef void (^ASBillCallback)(CTSBill* bill,NSError* error);
 + (CTSRestCoreResponse*)addJsonErrorToResponse:(CTSRestCoreResponse*)response;
 +(BOOL)isErrorJson:(NSString *)string;
 + (void)logProperties:(id)object;
++(NSString *)getLoginId;
++(void)storeLoginId:(NSString *)string;
++(void)removeLoginId;
++ (id)readDataFromDisk:(NSString*)key;
 @end

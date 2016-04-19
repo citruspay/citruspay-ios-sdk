@@ -35,4 +35,15 @@ typedef enum{
 +(CTSProfileLayer *)fetchSharedProfileLayer;
 +(CTSPaymentLayer *)fetchSharedPaymentLayer;
 + (void)enableDEBUGLogs;
++(void)disableOneTapPayment;
++(void)enableOneTapPayment;
++(BOOL)isOneTapPaymentEnabled;
++(void)enablePush;
++(void)disablePush;
++(BOOL)isPushEnabled;
++(void)disableLoader;
++(void)enableLoader;
++(BOOL)isLoaderEnabled;
++(void)setLoaderColor:(UIColor *)loaderColor;
++(UIColor *)getLoaderColor;
 @end
