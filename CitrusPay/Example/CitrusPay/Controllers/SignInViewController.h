@@ -21,7 +21,7 @@
 @property (nonatomic , weak) IBOutlet UILabel *messageLabel;
 @property (nonatomic , weak) IBOutlet UIView *passwordView;
 @property (nonatomic , weak) IBOutlet UILabel *orTextLabel;
-
+@property (nonatomic , weak) IBOutlet UIButton *setPasswordButton;
 @property (nonatomic , strong)  NSString *userName;
 @property (nonatomic , strong)  NSString *mobileNumber;
 @property (nonatomic , strong)  NSString *messageString;

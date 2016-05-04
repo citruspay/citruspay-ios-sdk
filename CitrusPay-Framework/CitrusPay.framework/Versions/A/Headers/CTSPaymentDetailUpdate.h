@@ -18,7 +18,6 @@
 @property( strong) NSString <Optional>*defaultOption;
 @property( strong) NSString<Optional>* password;
 @property( strong) NSMutableArray<CTSPaymentOption>* paymentOptions;
-
 -(instancetype)initCitrusPayWithEmail:(NSString *)email;
 
 +(CTSPaymentDetailUpdate *)citrusPay DEPRECATED_ATTRIBUTE;
@@ -52,6 +51,8 @@
 
 - (void)clearCVV;
 
+-(BOOL)isTokenizedCard;
+
 - (void)clearNetbankCode;
 
 -(CTSErrorCode)validateTokenized;
@@ -63,5 +64,6 @@
 -(void)amexCreditcardCorrectionIfNeeded;
 
 -(void)doCardCorrectionsIfNeeded;
+
 
 @end

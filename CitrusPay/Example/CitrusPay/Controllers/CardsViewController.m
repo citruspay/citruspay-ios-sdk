@@ -35,6 +35,7 @@
     [super viewDidLoad];
 
     [self initialSetting];
+    LogTrace(@"landingscreeen : %d",self.landingScreen);
     
 }
 
@@ -192,30 +193,42 @@
     switchView = (UISwitch *)sender;
     
     NSString *resultantDate;
+    
+    NSString *cardNumber = [self.cardNumberTextField.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    if (self.cardNumberTextField.text.length>0) {
+        NSString *scheme = [CTSUtility fetchCardSchemeForCardNumber:cardNumber];
+        if ([scheme isEqualToString:@"MTRO"] ){
+            if ((self.cvvTextField.text.length==0) && (self.expiryDateTextField.text.length==0)) {
+                self.expiryDateTextField.text = @"11/2019";
+                self.cvvTextField.text = @"123";
+            }
+        }
+    }
+    
     if (self.expiryDateTextField.text.length!=0) {
         NSArray* subStrings = [self.expiryDateTextField.text componentsSeparatedByString:@"/"];
         int year = [[subStrings objectAtIndex:1] intValue]+2000;
         resultantDate = [NSString stringWithFormat:@"%d/%d",[[subStrings objectAtIndex:0] intValue],year];
     }
-    
-    if (self.cardNumberTextField.text.length>0) {
-        NSString *scheme = [CTSUtility fetchCardSchemeForCardNumber:self.cardNumberTextField.text];
-        if ([scheme isEqualToString:@"MTRO"] && self.cvvTextField.text.length==0 && self.expiryDateTextField.text.length==0) {
-            self.expiryDateTextField.text = @"11/2019";
-            self.cvvTextField.text = @"123";
-        }
-    }
     // Configure your request here.
-//    if (self.cardNumberTextField.text.length==0 || self.expiryDateTextField.text.length==0 || self.cvvTextField.text.length==0 || self.ownerNameTextField.text.length==0) {
-//        [UIUtility toastMessageOnScreen:@"Couldn't save this card.\n All fields are mandatory."];
-//        [switchView setOn:NO animated:YES];
-//    }
-//    else if (![CTSUtility validateExpiryDate:resultantDate]){
-//        [UIUtility toastMessageOnScreen:@"Expiry date is not valid."];
-//        [switchView setOn:NO animated:YES];
-//    }
-//    else{
-    
+    if (self.cardNumberTextField.text.length==0 || self.expiryDateTextField.text.length==0 || self.cvvTextField.text.length==0 || self.ownerNameTextField.text.length==0) {
+        [UIUtility toastMessageOnScreen:@"Couldn't save this card.\n All fields are mandatory."];
+        [switchView setOn:NO animated:YES];
+    }
+    else if (![CTSUtility validateExpiryDate:resultantDate]){
+        [UIUtility toastMessageOnScreen:@"Expiry date is not valid."];
+        [switchView setOn:NO animated:YES];
+    }
+    else{
+        
+        NSString *scheme = [CTSUtility fetchCardSchemeForCardNumber:cardNumber];
+        if ([scheme isEqualToString:@"MTRO"] ){
+            self.cvvTextField.text = [self.cvvTextField.text stringByTrimmingCharactersInSet:
+                                       [NSCharacterSet whitespaceCharacterSet]];
+            self.expiryDateTextField.text = [self.expiryDateTextField.text stringByTrimmingCharactersInSet:
+                                      [NSCharacterSet whitespaceCharacterSet]];
+           
+        }
         [proifleLayer updatePaymentInformation:cardInfo withCompletionHandler:^(NSError *error) {
             self.loadButton.userInteractionEnabled = TRUE;
             if(error == nil){
@@ -229,7 +242,7 @@
                 //                [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@" couldn't save card\n error: %@",error]];
             }
         }];
-//    }
+    }
     
 }
 
@@ -266,17 +279,17 @@
                     break;
                 }
             }
-            if (!isSchemeAvailable) {
-                
-                [UIUtility toastMessageOnScreen:@"This card scheme is not valid for you.Please Contact to Citruspay care."];
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.indicatorView stopAnimating];
-                    self.indicatorView.hidden = TRUE;
-                });
-                return;
-            }
+//            if (!isSchemeAvailable) {
+//                
+//                [UIUtility toastMessageOnScreen:@"This card scheme is not valid for you.Please Contact to Citruspay care."];
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    [self.indicatorView stopAnimating];
+//                    self.indicatorView.hidden = TRUE;
+//                });
+//                return;
+//            }
             NSArray* subStrings = [self.expiryDateTextField.text componentsSeparatedByString:@"/"];
-            if ([self.expiryDateTextField.text length] != 0) {
+            if (self.expiryDateTextField.text.length!=0) {
                 int year = [[subStrings objectAtIndex:1] intValue]+2000;
                 NSString *resultantDate = [NSString stringWithFormat:@"%d/%d",[[subStrings objectAtIndex:0] intValue],year];
                 if (![CTSUtility validateExpiryDate:resultantDate]){
@@ -304,15 +317,16 @@
                     break;
                 }
             }
-            if (!isSchemeAvailable) {
-                
-                [UIUtility toastMessageOnScreen:@"This card scheme is not valid for you.Please Contact to Citruspay care."];
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.indicatorView stopAnimating];
-                    self.indicatorView.hidden = TRUE;
-                });
-                return;
-            }
+//            if (!isSchemeAvailable) {
+//                
+//                [UIUtility toastMessageOnScreen:@"This card scheme is not valid for you.Please Contact to Citruspay care."];
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    [self.indicatorView stopAnimating];
+//                    self.indicatorView.hidden = TRUE;
+//                });
+//                return;
+//            }
+
             NSArray* subStrings = [self.expiryDateTextField.text componentsSeparatedByString:@"/"];
             if ([self.expiryDateTextField.text length] != 0) {
                 int year = [[subStrings objectAtIndex:1] intValue]+2000;
@@ -343,25 +357,41 @@
                 [UIUtility toastMessageOnScreen:error.localizedDescription];
             }
             else {
-                [paymentLayer requestDirectChargePayment:cardInfo withContact:contactInfo withAddress:addressInfo bill:bill returnViewController:self withCompletionHandler:^(CTSCitrusCashRes *citrusCashResponse, NSError *error) {
+//                [paymentLayer requestDirectChargePayment:cardInfo withContact:contactInfo withAddress:addressInfo bill:bill returnViewController:self withCompletionHandler:^(CTSCitrusCashRes *citrusCashResponse, NSError *error){
+//                    
+//                    dispatch_async(dispatch_get_main_queue(), ^{
+//                        [self.indicatorView stopAnimating];
+//                        self.indicatorView.hidden = TRUE;
+//                    });
+//                    if(error){
+//                        [UIUtility toastMessageOnScreen:error.localizedDescription];
+//                    }
+//                    else {
+//                        [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"Payment Status %@",[citrusCashResponse.responseDict valueForKey:@"TxStatus"] ]];
+//                        [self resetUI];
+//                    }
+//                }];
+//                
+//                
                 
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [self.indicatorView stopAnimating];
-                        self.indicatorView.hidden = TRUE;
-                    });
-                    if(error){
-                        [UIUtility toastMessageOnScreen:error.localizedDescription];
-                    }
-                    else {
-                        [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"Payment Status %@",[citrusCashResponse.responseDict valueForKey:@"TxStatus"] ]];
-                        [self resetUI];
-                    }
-                }];
+         [paymentLayer requestChargePayment:cardInfo withContact:contactInfo withAddress:addressInfo bill:bill customParams:nil returnViewController:self withCompletionHandler:^(CTSCitrusCashRes *citrusCashResponse, NSError *error) {
+             dispatch_async(dispatch_get_main_queue(), ^{
+                 [self.indicatorView stopAnimating];
+                 self.indicatorView.hidden = TRUE;
+             });
+             if(error){
+                 [UIUtility toastMessageOnScreen:error.localizedDescription];
+             }
+             else {
+                 [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"Payment Status %@",[citrusCashResponse.responseDict valueForKey:@"TxStatus"] ]];
+                 [self resetUI];
+             }
+
+         }];
+                
+                
             }
-            
         }];
-        
-        
     }
     else if(self.landingScreen==0){
         
@@ -447,8 +477,11 @@
 // Tokenized card payment.
 -(IBAction)tokenizedPaymentWithToken:(NSString *)token withCVV:(NSString *)cvv andWithScheme:(NSString *)scheme{
     
-    self.indicatorView.hidden = FALSE;
-    [self.indicatorView startAnimating];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.indicatorView.hidden = FALSE;
+        [self.indicatorView startAnimating];
+    });
+    
     CTSPaymentDetailUpdate *tokenizedCardInfo = [[CTSPaymentDetailUpdate alloc] init];
     // Update card for tokenized payment.
     CTSElectronicCardUpdate *tokenizedCard = [[CTSElectronicCardUpdate alloc] initCreditCard];
@@ -458,6 +491,10 @@
 
     [tokenizedCardInfo addCard:tokenizedCard];
     
+    
+    LogTrace(@"self.landingscreens: %d",self.landingScreen);
+    
+    if(self.landingScreen == 1){
     [CTSUtility requestBillAmount:self.amount billURL:BillUrl callback: ^(CTSBill *bill , NSError *error){
         
         if(error){
@@ -468,10 +505,11 @@
             [UIUtility toastMessageOnScreen:error.localizedDescription];
         }
         else {
-       //Vikas
-             [paymentLayer requestChargeTokenizedPayment:tokenizedCardInfo withContact:contactInfo withAddress:addressInfo bill:bill customParams:customParams returnViewController:self withCompletionHandler:^(CTSCitrusCashRes *citrusCashResponse, NSError *error) {
-    
+
+            [paymentLayer requestChargePayment:tokenizedCardInfo withContact:contactInfo withAddress:addressInfo bill:bill customParams:nil returnViewController:self withCompletionHandler:^(CTSCitrusCashRes *citrusCashResponse, NSError *error) {
+                
 //             [paymentLayer requestDirectChargePayment:tokenizedCardInfo withContact:contactInfo withAddress:addressInfo bill:bill returnViewController:self withCompletionHandler:^(CTSCitrusCashRes *citrusCashResponse, NSError *error) {
+                
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.indicatorView stopAnimating];
                     self.indicatorView.hidden = TRUE;
@@ -485,6 +523,33 @@
             }];
         }
     }];
+    }
+    else if(self.landingScreen == 0){
+        
+        [paymentLayer requestLoadMoneyInCitrusPay:tokenizedCardInfo withContact:contactInfo withAddress:addressInfo amount:self.amount returnUrl:LoadWalletReturnUrl customParams:customParams  returnViewController:self withCompletionHandler:^(CTSCitrusCashRes *citrusCashResponse, NSError *error) {
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.indicatorView stopAnimating];
+                self.indicatorView.hidden = TRUE;
+            });
+            if(error){
+                [UIUtility toastMessageOnScreen:error.localizedDescription];
+            }
+            else {
+                
+                
+                [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"Load Money Status %@",[citrusCashResponse.responseDict valueForKey:LoadMoneyResponeKey]]];
+                [self resetUI];
+            }
+        }];
+
+    
+    
+    
+    
+    
+    
+    }
     
 }
 
@@ -593,7 +658,7 @@
         else{
             [self.pickerView setHidden:FALSE];
             currentTextField=textField;
-            array = [netBankingDict allKeys];
+            array = [[netBankingDict allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
             [self.pickerView reloadAllComponents];
             [self.pickerView selectRow:0 inComponent:0 animated:YES];
             [self pickerView:self.pickerView didSelectRow:0 inComponent:0];
@@ -756,7 +821,7 @@
         [tempView addSubview:pickerLabel];
     }
     
-    imageView.image = [CTSUtility fetchBankLogoImageByBankIssuerCode:[[netBankingDict allValues] objectAtIndex:row]];
+    imageView.image = [CTSUtility fetchBankLogoImageByBankIssuerCode:[netBankingDict valueForKey:[array objectAtIndex:row]]];
     [pickerLabel setText:[array objectAtIndex:row]];
     
     
@@ -854,26 +919,34 @@
 
     if (tableView == self.saveCardsTableView) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        NSDictionary *dict =[saveCardsArray objectAtIndex:indexPath.row];
+        CTSPaymentOption *paymentOption = [saveCardsArray objectAtIndex:indexPath.row];
         
-        selectedRow = indexPath.row;
-        NSDictionary *tempDict = [saveCardsArray objectAtIndex:indexPath.row];
+        if(![[dict valueForKey:@"type"] isEqualToString:@"netBanking"]){
         
-        if ([[tempDict valueForKey:@"type"] isEqualToString:@"netbanking"]) {
-         [self loadOrPayMoney:nil];
-        }
-        else{
-            dispatch_async(dispatch_get_main_queue(), ^{
+            NSString *token =[dict valueForKey:@"token"];
+            if ([paymentOption canDoOneTapPayment]) {
                 
-                UIAlertView *cvvAlert = [[UIAlertView alloc] initWithTitle:@"" message:@"Please enter cvv." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok" , nil];
-                cvvAlert.tag = 100;
-                cvvAlert.alertViewStyle = UIAlertViewStyleSecureTextInput;
-                UITextField * cvvTextField = [cvvAlert textFieldAtIndex:0];
-                cvvTextField.keyboardType = UIKeyboardTypeNumberPad;
-                cvvTextField.placeholder = @"cvv";
-                
-                [cvvAlert show];
-            });
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                    [self tokenizedPaymentWithToken:token withCVV:nil andWithScheme:[dict valueForKey:@"scheme"]];
+                });
+            }
+            else{
+                selectedRow = indexPath.row;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    UIAlertView *cvvAlert = [[UIAlertView alloc] initWithTitle:@"" message:@"Please enter cvv." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok" , nil];
+                    cvvAlert.tag = 100;
+                    cvvAlert.alertViewStyle = UIAlertViewStyleSecureTextInput;
+                    UITextField * cvvTextField = [cvvAlert textFieldAtIndex:0];
+                    cvvTextField.keyboardType = UIKeyboardTypeNumberPad;
+                    cvvTextField.placeholder = @"cvv";
+                    
+                    [cvvAlert show];
+                });
+            }
         }
+        
     }
 }
 
@@ -1060,7 +1133,7 @@
             NSDictionary *dict =[saveCardsArray objectAtIndex:selectedRow];
             NSString *token =[dict valueForKey:@"token"];
             
-            if(self.landingScreen==2){//Load money with saved card
+            if(self.landingScreen==0){//Load money with saved card
                 [self loadOrPayMoney:nil];
             }
             else{//payment with saved card

@@ -8,16 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
 #import "CTSRestPluginBase.h"
+#import "CTSAuthLayerConstants.h"
+#import "CTSEotpVerSigninResp.h"
+#import "CTSCitrusLinkRes.h"
+#import "CTSMasterLinkRes.h"
+@class CTSLinkUserRes, CTSLinkRes, CTSTokenValidityRes, CTSUserDetails, CTSResponse;
 
-@class CTSLinkUserRes, CTSLinkRes, CTSCitrusLinkRes, CTSTokenValidityRes, CTSEotpVerSigninResp, CTSUserDetails, CTSResponse;
 
-typedef enum PasswordType {
-    PasswordTypeOtp,
-    PasswordTypePassword
-} PasswordType;
 
+
+typedef enum{
+    CTSWalletScopeLimited,
+    CTSWalletScopeFull
+} CTSWalletScope;
 
 @class CTSAuthLayer;
 @protocol CTSAuthenticationProtocol
@@ -137,7 +141,7 @@ typedef void (^ASSignupCallBack)(NSString* userName,
                                  NSString* token,
                                  NSError* error);
 
-typedef void (^ASChangePassword)(NSError* error);
+typedef void (^ASChangePassword)(NSString *response, NSError* error);
 
 typedef void (^ASSetPassword)(NSError* error);
 
@@ -165,6 +169,8 @@ typedef void (^ASOtpRegenerationCallback)(CTSResponse* response, NSError* error)
 typedef void (^ASGenerateOtpCallBack)(CTSResponse*response, NSError* error);
 
 typedef void (^ASCitrusLinkCallback)(CTSCitrusLinkRes *linkResponse, NSError* error);
+
+typedef void (^ASMasterLinkCallback)(CTSMasterLinkRes *linkResponse, NSError* error);
 
 typedef void (^ASLinkCallback)(CTSLinkRes *linkRes, NSError* error);
 
@@ -248,7 +254,7 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
 - (void)requestBindUsername:(NSString*)email
                      mobile:(NSString *)mobile
                         completionHandler:
-(ASBindUserCallback)callback;
+(ASBindUserCallback)callback DEPRECATED_MSG_ATTRIBUTE("Use with CTSLimitedScope requestMasterLink:mobile:scope:completionHandler:");
 
 
 
@@ -287,7 +293,9 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
 - (NSString*)generateBigIntegerString:(NSString*)email ;
 
 
--(void)requestLinkUser:(NSString *)email mobile:(NSString *)mobile completionHandler:(ASLinkUserCallBack)callBack;
+-(void)requestLinkUser:(NSString *)email mobile:(NSString *)mobile completionHandler:(ASLinkUserCallBack)callBack DEPRECATED_MSG_ATTRIBUTE("Use 'requestCitrusLink:mobile:completion:'");
+
+
 
 -(void)requestLinkTrustedUser:(CTSUserDetails *)user completionHandler:(ASLinkUserCallBack )callback;
 
@@ -321,11 +329,25 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
 
 -(void)requestCitrusLink:(NSString *)email mobile:(NSString *)mobile completion:(ASCitrusLinkCallback)callback;
 
+
 -(void)requestEotpSignInUpdateEmail:(NSString *)email password:(NSString *)password passwordType:(PasswordType)type requestedMobile:(NSString *)mobile  callback:(ASUpdateMobileSigninCallback)callback;
 
 -(void)requestVerifyAndSigninUUID:(NSString *)uuid verificationCode:(NSString *)password callback:(ASCitrusSigninCallBack)callback;
 
--(void)requestCitrusLinkSignInWithPassoword:(NSString *)password passwordType:(PasswordType)type completionHandler:(ASCitrusSigninCallBack)callback;
+-(void)requestCitrusLinkSignInWithPassoword:(NSString *)password passwordType:(PasswordType)type completionHandler:(ASCitrusSigninCallBack)callback DEPRECATED_MSG_ATTRIBUTE("user requestMasterLinkSignInWithPassword:passwordType:completionHandler:");
+
 
 -(void)requestRefreshOauthTokenCallback:(ASErrorCallback )callback;
+
+
+-(void)requestMasterLink:(NSString *)email mobile:(NSString *)mobile scope:(CTSWalletScope)walletScope completionHandler:(ASMasterLinkCallback)callback;
+
+
+-(void)requestMasterLinkSignInWithPassword:(NSString *)password passwordType:(PasswordType)type completionHandler:(ASCitrusSigninCallBack)callback;
+
+-(void)requestResendOtp:(ASErrorCallback)callback;
+
+
+-(void)requestSetPassowordMobileAccount:(NSString *)password completionHandler:(ASSetPassword)callback;
+
 @end

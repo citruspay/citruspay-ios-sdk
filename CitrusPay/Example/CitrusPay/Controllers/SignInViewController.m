@@ -26,6 +26,7 @@
     
     
     self.signinButton.layer.cornerRadius = 4;
+    self.setPasswordButton.layer.cornerRadius = 4;
     self.indicatorView.hidden = TRUE;
     
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resignKeyboard:)];
@@ -57,36 +58,39 @@
     
     self.passwordView.hidden = FALSE;
     self.orTextLabel.hidden = FALSE;
-    
+    self.setPasswordButton.hidden = TRUE;
     switch (self.signinType) {
             
         case CitrusSiginTypeMOtpOrPassword:
         {
             self.otpTextField.placeholder = @"Mobile OTP";
+            
             // Show Mobile otp and password sign in screen
         }
             break;
         case CitrusSiginTypeMOtp:
         {
+            self.setPasswordButton.hidden = FALSE;
+            self.orTextLabel.hidden = TRUE;
             self.passwordView.hidden = TRUE;
             self.otpTextField.placeholder = @"Mobile OTP";
-            self.orTextLabel.hidden = TRUE;
+            
         }
             // Show Mobile otp sign in screen
             break;
-        case CitrusSiginTypeEOtpOrPassword:
-        {
-            self.otpTextField.placeholder = @"Email OTP";
-        }
-            // Show Email otp and password sign in screen
-            break;
-        case CitrusSiginTypeEOtp:
-        {
-            self.passwordView.hidden = TRUE;
-            self.orTextLabel.hidden = TRUE;
-            self.otpTextField.placeholder = @"Email OTP";
-            
-        }
+//        case CitrusSiginTypeEOtpOrPassword:
+//        {
+//            self.otpTextField.placeholder = @"Email OTP";
+//        }
+//            // Show Email otp and password sign in screen
+//            break;
+//        case CitrusSiginTypeEOtp:
+//        {
+//            self.passwordView.hidden = TRUE;
+//            self.orTextLabel.hidden = TRUE;
+//            self.otpTextField.placeholder = @"Email OTP";
+//            
+//        }
             // Show Email otp sign in screen
             break;
         default:
@@ -134,7 +138,9 @@
         self.indicatorView.hidden = TRUE;
     }
     else{
-        [authLayer requestCitrusLinkSignInWithPassoword:passwordString passwordType:passwordType completionHandler:^(NSError *error) {
+        
+        
+        [authLayer requestMasterLinkSignInWithPassword:passwordString passwordType:passwordType completionHandler:^(NSError *error) {
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.indicatorView stopAnimating];
@@ -157,24 +163,27 @@
 }
 
 
-
 -(IBAction)resendOTPAction:(UIButton *)sender{
+    
     [self.view endEditing:YES];
+    
     self.indicatorView.hidden = FALSE;
     [self.indicatorView startAnimating];
+    
     sender.userInteractionEnabled = FALSE;
     
-    [authLayer requestCitrusLink:self.userNameTextField.text mobile:self.mobileTextField.text completion:^(CTSCitrusLinkRes *linkResponse, NSError *error) {
+    [authLayer requestResendOtp:^(NSError *error) {
+        
         dispatch_async(dispatch_get_main_queue(), ^{
-            sender.userInteractionEnabled = TRUE;
             [self.indicatorView stopAnimating];
             self.indicatorView.hidden = TRUE;
+            sender.userInteractionEnabled = TRUE;
         });
         if (error) {
             [UIUtility toastMessageOnScreen:[error localizedDescription]];
         }
         else{
-             [UIUtility toastMessageOnScreen:linkResponse.userMessage];
+            [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"OTP sent"]];
         }
     }];
 
@@ -189,7 +198,7 @@
         alert.alertViewStyle = UIAlertViewStylePlainTextInput;
         UITextField * alertTextField = [alert textFieldAtIndex:0];
         alertTextField.keyboardType = UIKeyboardTypeEmailAddress;
-        alertTextField.placeholder = @"Email Address";
+        alertTextField.placeholder = @"Enter Email";
         [alert show];
     });
 }
@@ -199,13 +208,24 @@
      [self.view endEditing:YES];
 }
 
+-(IBAction)setPasswordForMobile:(id)sender{
+
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Set Password?" message:@"Please enter new password." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok" , nil];
+    alert.tag = 1002;
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    UITextField * alertTextField = [alert textFieldAtIndex:0];
+    alertTextField.keyboardType = UIKeyboardTypeEmailAddress;
+    alertTextField.placeholder = @"Enter Password";
+    [alert show];
+}
+
 
 #pragma mark - StoryBoard Delegate Methods
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     if ([segue.identifier isEqualToString:@"HomeScreenIdentifier"]) {
         HomeViewController *viewController = (HomeViewController *)segue.destinationViewController;
-        viewController.userName = currentUser;
+//        viewController.userName = currentUser;
     }
     
 }
@@ -219,15 +239,22 @@
         
         UITextField * alertTextField = [alertView textFieldAtIndex:0];
     
-            [authLayer requestResetPassword:alertTextField.text completionHandler:^(NSError *error) {
-                [self.view endEditing:YES];
-                if (error) {
-                    [UIUtility toastMessageOnScreen:[error localizedDescription]];
-                }
-                else{
-                    [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"Reset link sent to email address"]];
-                }
-            }];
+    }
+    else if (buttonIndex==1 && alertView.tag==1002) {
+        
+        UITextField * alertTextField = [alertView textFieldAtIndex:0];
+        
+        [authLayer requestSetPassowordMobileAccount:alertTextField.text completionHandler:^(NSError *error){
+            
+            [self.view endEditing:YES];
+            if (error) {
+                [UIUtility toastMessageOnScreen:[error localizedDescription]];
+            }
+            else{
+                [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"Password set succesfully"]];
+            }
+            
+        }];
     }
     
 }

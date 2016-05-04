@@ -13,9 +13,11 @@
 @property(  strong) NSString* type;
 @property(  strong) NSString<Optional>* defaultOption;
 @property(  strong) NSMutableArray<CTSPaymentOption>* paymentOptions;
-- (void )getDefaultOptionOnTheTop;
-- (NSArray *)getSavedNBPaymentOption;
-- (NSArray *)getSavedCCPaymentOption;
-- (NSArray *)getSavedDCPaymentOption;
+-(void )getDefaultOptionOnTheTop;
+-(NSArray *)getSavedNBPaymentOption;
+-(NSArray *)getSavedCCPaymentOption;
+-(NSArray *)getSavedDCPaymentOption;
 -(CTSPaymentOption *)getDefaultOption;
+-(CTSPaymentOption *)paymentOptionForToken:(NSString *)token;
+-(NSDictionary *)convertPaymentOptions;
 @end

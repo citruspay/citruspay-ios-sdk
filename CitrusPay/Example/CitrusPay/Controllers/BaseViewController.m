@@ -43,8 +43,6 @@
     keyStore.signUpId = SubscriptionId;
     keyStore.signUpSecret = SubscriptionSecretKey;
     keyStore.vanity = VanityUrl;
-    
-#warning "set your require environment to see testing results"
 #ifdef PRODUCTION_MODE
     [CitrusPaymentSDK initializeWithKeyStore:keyStore environment:CTSEnvProduction];
 #else
