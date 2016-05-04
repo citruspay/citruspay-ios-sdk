@@ -63,13 +63,13 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"InitialViewIdentifier"]) {
-        SignUpViewController *signUpViewController = (SignUpViewController *)[segue destinationViewController];
+//        SignUpViewController *signUpViewController = (SignUpViewController *)[segue destinationViewController];
         
         // loginType = 0 -> by using Email Id & Mobile
         // loginType = 1 -> by using Mobile only
         // loginType = 2 -> by using either Email Id or Mobile
         
-        signUpViewController.loginType = selectionType;
+        //signUpViewController.loginType = selectionType;
     }
     
 }

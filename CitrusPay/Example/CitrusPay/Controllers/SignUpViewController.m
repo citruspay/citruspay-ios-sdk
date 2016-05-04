@@ -9,11 +9,13 @@
 #import "SignUpViewController.h"
 #import "ResetPasswordViewController.h"
 #import "SignInViewController.h"
+#import <CitrusPay/CitrusPay.h>
 
 @interface SignUpViewController (){
 
     CitrusSiginType signInType;
     NSString *responseMessage;
+    CTSWalletScope scopeType;
 }
 
 @end
@@ -25,8 +27,9 @@
     
     self.indicatorView.hidden = TRUE;
     self.signupButton.layer.cornerRadius = 4;
+    self.limitedScopeSignupButton.layer.cornerRadius = 4;
     
-    switch (self.loginType) {
+/*    switch (self.loginType) {
         case 0:{
             self.userNameTextField.hidden = FALSE;
             self.mobileTextField.hidden = FALSE;
@@ -46,11 +49,18 @@
         default:
             break;
     }
-    
+*/
     
     
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resignKeyboard:)];
     [self.view addGestureRecognizer:tapRecognizer];
+    
+    if (authLayer.requestSignInOauthToken.length != 0) {
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:nil];
+            return;
+        }];
+    }
    
 }
 
@@ -65,13 +75,22 @@
 
 // New Link User method - which is OTP based
 
--(IBAction)linkUser{
+-(IBAction)linkUser:(UIButton *)button{
     
     [self.view endEditing:YES];
     self.indicatorView.hidden = FALSE;
     [self.indicatorView startAnimating];
     
-    [authLayer requestCitrusLink:self.userNameTextField.text mobile:self.mobileTextField.text completion:^(CTSCitrusLinkRes *linkResponse, NSError *error) {
+//    [authLayer requestCitrusLink:self.userNameTextField.text mobile:self.mobileTextField.text completion:^(CTSCitrusLinkRes *linkResponse, NSError *error) {
+//
+    if (button.tag==1001) {
+        scopeType = CTSWalletScopeLimited;
+    }
+    else {
+        scopeType = CTSWalletScopeFull;
+    }
+    
+    [authLayer requestMasterLink:self.userNameTextField.text  mobile:self.mobileTextField.text scope:scopeType completionHandler:^(CTSMasterLinkRes *linkResponse, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.indicatorView stopAnimating];
             self.indicatorView.hidden = TRUE;
@@ -80,20 +99,31 @@
             [UIUtility toastMessageOnScreen:[error localizedDescription]];
         }
         else{
-            // [UIUtility toastMessageOnScreen:linkResponse.userMessage];
-            signInType = linkResponse.siginType;
-            responseMessage = linkResponse.userMessage;
+            if (linkResponse.siginType == CitrusSiginTypeLimited) {
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:self];
+                }];
+            }
+            else{
+                // [UIUtility toastMessageOnScreen:linkResponse.userMessage];
+                signInType = linkResponse.siginType;
+                responseMessage = linkResponse.userMessage;
+                
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    [self performSegueWithIdentifier:@"SignInScreenIdentifier" sender:self];
+                }];
+            }
             
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                [self performSegueWithIdentifier:@"SignInScreenIdentifier" sender:self];
-            }];
         }
     }];
+    
+    
 }
 
 - (void)resignKeyboard:(UITapGestureRecognizer *)sender{
     
     [self.view endEditing:YES];
+   
 }
 
 #pragma mark - StoryView Delegate Methods

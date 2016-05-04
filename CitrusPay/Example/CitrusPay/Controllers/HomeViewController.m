@@ -10,6 +10,7 @@
 #import "CardsViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "MerchantConstants.h"
+#import "SettingViewController.h"
 
 
 @interface HomeViewController (){
@@ -19,6 +20,7 @@
     CGRect frame;
     NSArray *array;
     int selectedRule;
+    NSInteger selectedRow;
 }
 
 @end
@@ -299,7 +301,6 @@
     if (alertView.tag ==1005){
         if (buttonIndex==0) {
             if ([authLayer signOut]) {
-                sleep(.5);
                 [self.navigationController popToRootViewControllerAnimated:YES];
             }
         }
@@ -485,7 +486,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 7;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -515,6 +516,15 @@
     }
     else if (indexPath.row==6) {
         ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Manage Cards";
+    }
+    else if (indexPath.row==7) {
+        ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Update Profile";
+    }
+    else if (indexPath.row==8) {
+        ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Get Profile";
+    }
+    else if (indexPath.row==9) {
+        ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Change Password";
     }
     
     return cell;
@@ -566,6 +576,34 @@
     else if (indexPath.row==6) {
         [self performSegueWithIdentifier:@"ManageCardIdentifier" sender:nil];
     }
+    else if (indexPath.row==7) {
+        selectedRow = indexPath.row;
+        [self performSegueWithIdentifier:@"SettingViewIdentifier" sender:nil];
+    }
+    else if (indexPath.row==8) {
+        self.indicatorView.hidden = FALSE;
+        [self.indicatorView startAnimating];
+        
+        [proifleLayer requestProfileInformationWithCompletionHandler:^(CTSUserProfile *userProfile, NSError* error) {
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.indicatorView stopAnimating];
+                self.indicatorView.hidden = TRUE;
+            });
+            
+            if (error) {
+                [UIUtility toastMessageOnScreen:[error localizedDescription]];
+            }
+            else{
+                
+                [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"User Email: %@\nFirst Name: %@\nLast Name: %@\nMobile: %@",userProfile.email,userProfile.firstName,userProfile.lastName,userProfile.mobile]];
+            }
+        }];
+    }
+    else if (indexPath.row==9) {
+        selectedRow = indexPath.row;
+        [self performSegueWithIdentifier:@"SettingViewIdentifier" sender:nil];
+    }
     
 }
 
@@ -610,7 +648,17 @@
         }
         else
             viewController.amount = ((UITextField *)[alert textFieldAtIndex:0]).text; //Passing the amount to Card payment screen
+    }
+    else if ([segue.identifier isEqualToString:@"SettingViewIdentifier"]){
         
+        SettingViewController *viewController = (SettingViewController *)segue.destinationViewController;
+        if (selectedRow==7) {
+            viewController.title = @"Update Profile";
+        }
+        else if (selectedRow==9){
+            viewController.title = @"Change Password";
+//            viewController.userEmailId = self.userName;
+        }
     }
     
 }

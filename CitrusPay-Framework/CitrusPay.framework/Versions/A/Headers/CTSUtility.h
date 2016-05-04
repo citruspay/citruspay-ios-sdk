@@ -7,20 +7,41 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CTSAuthLayerConstants.h"
+#import "UserLogging.h"
+#import "CTSBill.h"
+#import "CTSContactUpdate.h"
+#import "CTSUserAddress.h"
+#import "CTSKeyStore.h"
+#import "CTSProfileContactRes.h"
+#import "CTSDyPPaymentInfo.h"
 #import <UIKit/UIKit.h>
+#import "CTSPaymentOption.h"
+#import "CTSDataCache.h"
+#import "CTSRuleInfo.h"
+#import "CTSRestCoreResponse.h"
+#import "CTSPgSettings.h"
+//#import "CTSPaymentLayer.h"
 
-#import "CTSAuthLayer.h"
+#define SCHEME_MTRO @"MTRO"
+#define SCHEME_VISA @"VISA"
+#define SCHEME_AMEX @"AMEX"
+#define SCHEME_RPAY @"RPAY"
+#define SCHEME_DINERS @"DINERS"
+#define SCHEME_MCRD @"MCRD"
+#define SCHEME_JCB @"JCB"
+#define SCHEME_DISCOVER @"DISCOVER"
 
-@class CTSBill, CTSContactUpdate, CTSUserAddress, CTSProfileContactRes, CTSKeyStore, CTSRuleInfo, CTSRestCoreResponse, CTSAuthLayer;
 
-extern NSString * const CTS_SIGNIN_USER_EMAIL;
+extern NSString *const CTS_SIGNIN_USER_EMAIL ;
 
 @interface CTSUtility : NSObject
 typedef void (^ASBillCallback)(CTSBill* bill,NSError* error);
 
+
 + (NSString*)readFromDisk:(NSString*)key;
 + (void)saveToDisk:(id)data as:(NSString*)key;
-
++ (id)readDataFromDisk:(NSString*)key;
 + (NSDictionary*)readSigninTokenAsHeader;
 + (NSDictionary*)readSignupTokenAsHeader;
 + (NSDictionary*)readOauthTokenAsHeader:(NSString*)oauthToken;
@@ -98,5 +119,12 @@ typedef void (^ASBillCallback)(CTSBill* bill,NSError* error);
 +(CTSKeyStore *)keyStore;
 + (CTSRestCoreResponse*)addJsonErrorToResponse:(CTSRestCoreResponse*)response;
 +(BOOL)isErrorJson:(NSString *)string;
-+ (void)logProperties:(id)object;
++(void)storeLoginId:(NSString *)string;
++(NSString *)getLoginId;
++(void)removeLoginId;
++(BOOL)isSchemeAllowed:(NSString *)userScheme forOptions:(NSArray *)merchantOptions;
++(BOOL)isBankAllowed:(NSString *)userBank forOptions:(NSArray *)merchantOptions;
++(CTSPgSettings *)getCachedPgSetting;
++(CTSPgSettings *)getCachedLoadMoneyPgSetting;
++ (void)logProperties:(id)object ;
 @end

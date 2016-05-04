@@ -14,8 +14,19 @@
 #import "CTSProfilePaymentRes.h"
 #import "CTSContactUpdate.h"
 #import "CTSUserAddress.h"
+#import "CTSUserProfile.h"
+#import "CTSSaveCardResponse.h"
+#import "CTSProfileUpdate.h"
+#import "CTSCashoutBankAccount.h"
+#import "CTSCashoutBankAccountResp.h"
+#import "CTSAmount.h"
+#import "CTSProfileContactRes.h"
+#import "CTSUpdateMobileNumberRes.h"
+#import "CTSDPResponse.h"
+#import "CTSPaymentDetailUpdate.h"
+#import "CTSDPMerchantQueryReq.h"
 
-@class CTSAmount, CTSProfileContactRes, CTSCashoutBankAccountResp, CTSUpdateMobileNumberRes, CTSDPResponse, CTSPaymentDetailUpdate, CTSCashoutBankAccount, CTSDPMerchantQueryReq;
+
 
 @class CTSProfileLayer;
 @protocol CTSProfileProtocol
@@ -119,6 +130,11 @@ typedef void (^ASDeleteCardCallback)(NSError* error);
 
 typedef void (^ASDPMerchantQueryCallback)(CTSDPResponse*reponse, NSError* error);
 
+typedef void (^ASGetProfileInfoCallBack)(CTSUserProfile *userProfile, NSError* error);
+
+typedef void (^ASUpdateProfileInfoCallBack)(NSError* error);
+
+typedef void (^ASSaveCardsCallback) (CTSSaveCardResponse *reponse, NSError *error);
 
 
 //-(instancetype)init __attribute__((unavailable("init not available Please use [CitrusPaymentSDK fetchSharedProfileLayer]")));
@@ -190,5 +206,10 @@ typedef void (^ASDPMerchantQueryCallback)(CTSDPResponse*reponse, NSError* error)
 
 -(void)requestDpMerchantQuery:(CTSDPMerchantQueryReq *)request completionHandler:(ASDPMerchantQueryCallback)callback;
 
+- (void)requestUpdateProfileInformation:(CTSProfileUpdate *)profileInfo
+                  withCompletionHandler:(ASUpdateProfileInfoCallBack)callback;
 
+- (void)requestProfileInformationWithCompletionHandler:(ASGetProfileInfoCallBack)callback;
+
+-(void)requestSaveCard:(CTSPaymentDetailUpdate*)paymentInfo completion:(ASSaveCardsCallback )callback;
 @end

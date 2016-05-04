@@ -62,14 +62,19 @@ typedef enum {
     NoNewPrepaidPrelivilage,
     NoRefreshToken,
     PasswordTypeNotAllowed,
-    LoadMoneyFailed
+    LoadMoneyFailed,
+    PaymentInstrumentNotAllowed,
+    AlreadyLimitedScope,
+    InvalidOperation,
+    EmailMobileBothInvalid,
+    NotMobileBasedAccount
 } CTSErrorCode;
 
 
 extern NSString * const CITRUS_ERROR_DOMAIN;
 extern NSString * const CITRUS_ERROR_DOMAIN_DP;
 extern NSString * const CITRUS_ERROR_DESCRIPTION_KEY;
-extern NSInteger * const INTERNET_DOWN_STATUS_CODE;
+extern int INTERNET_DOWN_STATUS_CODE;
 
 @interface CTSError : NSObject
 // Follwoing methods are for internal use only

@@ -20,8 +20,17 @@
 #import "CTSPgSettings.h"
 #import "CTSTransferMoneyResponse.h"
 #import "CTSAmount.h"
+#import "CTSCashoutBankAccount.h"
+#import "CTSCardBinResponse.h"
+#import "CTSCashoutToBankRes.h"
+#import "CTSPrepaidBill.h"
+#import "CTSPaymentTransactionRes.h"
+#import "CTSPGHealthRes.h"
+#import "CTSDyPValidateRuleReq.h"
+#import "CTSPrepaidPayResp.h"
 
-@class CTSPaymentTransactionRes, CTSPrepaidBill, CTSCitrusCashRes, CTSCashoutToBankRes, CTSPaymentWebViewController, CTSPGHealthRes, CTSCitrusCashRes, CTSCitrusCashRes, CTSCardBinResponse, CTSCashoutBankAccount, CTSDyPValidateRuleReq, CTSPrepaidPayResp, CTSContactUpdate, CTSUserAddress;
+
+@class   CTSPaymentWebViewController , CTSContactUpdate, CTSUserAddress;
 
 typedef enum {
     PaymentAsGuestReqId,
@@ -148,7 +157,7 @@ didCashoutToBank:(CTSCashoutToBankRes *)cashoutToBankRes
     BOOL finished;
     NSString *cCashReturnUrl;
     PaymentRequestType prepaidRequestType;
-    
+    CTSPaymentDetailUpdate *tempCVVStoreObject;
 }
 @property(strong)UIViewController *citrusCashBackViewController;
 @property(strong)UIWebView *citrusPayWebview;
@@ -261,7 +270,7 @@ typedef void (^ASPrepaidPayCallback)(CTSPrepaidPayResp* prepaidPay ,NSError* err
                           withAddress:(CTSUserAddress*)userAddress
                                  bill:(CTSBill *)bill
                          customParams:(NSDictionary *)custParams
-                withCompletionHandler:(ASMakeTokenizedPaymentCallBack)callback ;
+                withCompletionHandler:(ASMakeTokenizedPaymentCallBack)callback DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:customParams:returnViewController:withCompletionHandler:");
 
 
 - (void)requestChargePayment:(CTSPaymentDetailUpdate*)paymentInfo
@@ -270,7 +279,7 @@ typedef void (^ASPrepaidPayCallback)(CTSPrepaidPayResp* prepaidPay ,NSError* err
                              bill:(CTSBill *)bill
                 customParams:(NSDictionary *)custParams
             withCompletionHandler:(ASMakeGuestPaymentCallBack)callback
-;
+ DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:customParams:returnViewController:withCompletionHandler:");
 
 - (void)requestLoadMoneyInCitrusPay:(CTSPaymentDetailUpdate *)paymentInfo
                         withContact:(CTSContactUpdate*)contactInfo
@@ -278,19 +287,7 @@ typedef void (^ASPrepaidPayCallback)(CTSPrepaidPayResp* prepaidPay ,NSError* err
                              amount:( NSString *)amount
                           returnUrl:(NSString *)returnUrl
                        customParams:(NSDictionary *)custParams
-              withCompletionHandler:(ASLoadMoneyCallBack)callback ;
-////////////////////// END DEPRECATED
-
-
-
-//new prepaid pay api
-
-- (void)requestChargeCitrusWalletWithContact:(CTSContactUpdate*)contactInfo
-                               address:(CTSUserAddress*)userAddress
-                                      bill:(CTSBill *)bill
-                      returnViewController:(UIViewController *)controller
-                     withCompletionHandler:(ASCitruspayCallback)callback;
-
+              withCompletionHandler:(ASLoadMoneyCallBack)callback DEPRECATED_MSG_ATTRIBUTE("use requestLoadMoneyInCitrusPay:withContact:withAddress:amount:returnUrl:customParams:returnViewController:withCompletionHandler:");
 
 //old prepaid pay api
 - (void)requestChargeCitrusCashWithContact:(CTSContactUpdate*)contactInfo
@@ -307,7 +304,19 @@ typedef void (^ASPrepaidPayCallback)(CTSPrepaidPayResp* prepaidPay ,NSError* err
                                  bill:(CTSBill *)bill
                          customParams:(NSDictionary *)custParams
                  returnViewController:(UIViewController *)controller
-                withCompletionHandler:(ASCitruspayCallback)callback;
+                withCompletionHandler:(ASCitruspayCallback)callback DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:customParams:returnViewController:withCompletionHandler:");
+////////////////////// END DEPRECATED
+
+
+
+//new prepaid pay api
+
+- (void)requestChargeCitrusWalletWithContact:(CTSContactUpdate*)contactInfo
+                               address:(CTSUserAddress*)userAddress
+                                      bill:(CTSBill *)bill
+                      returnViewController:(UIViewController *)controller
+                     withCompletionHandler:(ASCitruspayCallback)callback;
+
 
 - (void)requestChargePayment:(CTSPaymentDetailUpdate*)paymentInfo
                  withContact:(CTSContactUpdate*)contactInfo
@@ -317,7 +326,7 @@ typedef void (^ASPrepaidPayCallback)(CTSPrepaidPayResp* prepaidPay ,NSError* err
         returnViewController:(UIViewController *)controller
        withCompletionHandler:(ASCitruspayCallback)callback;
 
-//Vikas New payment method
+
 - (void)requestDirectChargePayment:(CTSPaymentDetailUpdate*)paymentInfo
                     withContact:(CTSContactUpdate*)contactInfo
                     withAddress:(CTSUserAddress*)userAddress
@@ -379,6 +388,6 @@ typedef void (^ASPrepaidPayCallback)(CTSPrepaidPayResp* prepaidPay ,NSError* err
 
 -(void)requestPerformDynamicPricingRule:(CTSRuleInfo *)ruleInfo paymentInfo:(CTSPaymentDetailUpdate *)payment billUrl:(NSString *)billUrl user:(CTSUser *)user  extraParams:(NSDictionary *)extraParams completionHandler:(ASPerformDynamicPricingCallback)callback;
 
-
+- (void)requestLoadMoneyPgSettingsCompletionHandler:(ASGetMerchantPgSettingsCallBack)callback;
 
 @end
