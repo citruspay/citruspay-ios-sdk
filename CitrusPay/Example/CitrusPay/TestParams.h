@@ -12,7 +12,7 @@
 // TestParams.h should be populated according to your needs
 
 
-#define TEST_EMAIL @"yaddyboy100@mailinator.com"
+#define TEST_EMAIL @"mukeshcitrus122@mailinator.com"
 #define TEST_PASSWORD @"tester@123"
 #define TEST_MOBILE @"9700000000"
 
@@ -29,7 +29,7 @@
 #define TEST_CREDIT_CARD_NUMBER @"4111111111111111"
 #define TEST_CREDIT_CARD_EXPIRY_DATE @"12/99"
 #define TEST_CREDIT_CARD_SCHEME @"visa"
-#define TEST_CREDIT_CARD_OWNER_NAME @"Yadnesh Wankhede"
+#define TEST_CREDIT_CARD_OWNER_NAME @"Mukesh Patil"
 #define TEST_CREDIT_CARD_BANK_NAME @"ICICI (credit card)"
 #define TEST_CREDIT_CARD_CVV @"018"
 

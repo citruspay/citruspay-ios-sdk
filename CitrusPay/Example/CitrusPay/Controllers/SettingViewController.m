@@ -7,11 +7,6 @@
 //
 
 #import "SettingViewController.h"
-#import "UIUtility.h"
-
-@interface SettingViewController ()
-
-@end
 
 @implementation SettingViewController
 
