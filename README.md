@@ -214,10 +214,10 @@ Following are the specific tasks related to each of the layer
 
 #####User Management
 
-+ [Bind User](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#bind-user) (doesn't need password, enables user to save cards)
++ [Limited Scope User](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#limited-scope-user) (doesn't need password, enables user to save cards)
 +  [See if anyone is logged in](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#see-if-anyone-is-logged-in)
-+ [Link User](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#get-users-prepaid-level-access-link-user) (required for all Citrus Cash related operations)
-+ [Signin the user for Citrus Cash  access](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#sign-in-the-user-for-prepaid-level-access)
++ [Link User](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#citrus-wallet-user-creation) (required for all Citrus Cash related operations)
++ [Signin the user for Citrus Cash  access](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#get-full-scope--ctswalletscopefull-)
 + [Reset User Password](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#reset-user-password)
 + [Sign Out](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#sign-out)
 
