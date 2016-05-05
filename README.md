@@ -214,10 +214,8 @@ Following are the specific tasks related to each of the layer
 
 #####User Management
 
-+ [Limited Scope User](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#limited-scope-user) (doesn't need password, enables user to save cards)
++ [User Creation/Authentication Flow](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#citrus-wallet-user-creation)
 +  [See if anyone is logged in](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#see-if-anyone-is-logged-in)
-+ [Link User](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#citrus-wallet-user-creation) (required for all Citrus Cash related operations)
-+ [Signin the user for Citrus Cash  access](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#get-full-scope--ctswalletscopefull-)
 + [Reset User Password](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#reset-user-password)
 + [Sign Out](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#sign-out)
 
@@ -239,7 +237,7 @@ Following are the specific tasks related to each of the layer
 + [How to use dynamic pricing ?](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#dynamic-pricing-offer-coupons-surcharge)
 
 #####One Tap Payment
-+[What is One Tap Payment? ](https://github.com/citruspay/citruspay-ios-sdk/wiki/One-Tap-Payment)
++ [What is One Tap Payment? ](https://github.com/citruspay/citruspay-ios-sdk/wiki/One-Tap-Payment)
 
 #####Others
 + [Fetch Available Schemes and Banks for the Merchant and for Load Money in Citrus Cash](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#fetch-available-schemes-and-banks-for-the-merchant-and-for-load-money)
