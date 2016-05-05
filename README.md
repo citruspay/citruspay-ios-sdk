@@ -238,6 +238,9 @@ Following are the specific tasks related to each of the layer
 #####Dynamic Pricing Offer Coupons and Surcharge
 + [How to use dynamic pricing ?](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#dynamic-pricing-offer-coupons-surcharge)
 
+#####One Tap Payment
++[What is One Tap Payment? ](https://github.com/citruspay/citruspay-ios-sdk/wiki/One-Tap-Payment)
+
 #####Others
 + [Fetch Available Schemes and Banks for the Merchant and for Load Money in Citrus Cash](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#fetch-available-schemes-and-banks-for-the-merchant-and-for-load-money)
 
