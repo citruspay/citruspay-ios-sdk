@@ -11,7 +11,6 @@
 
 #import "CTSError.h"
 #import "CTSUtility.h"
-
 @class CTSNetBankingUpdate, CTSElectronicCardUpdate, CTSTokenizedPayment, CTSPaymentToken;
 
 typedef enum {
@@ -22,6 +21,11 @@ typedef enum {
     CitrusPay,
     UndefinedPayment
 } CTSPaymentType;
+
+typedef enum {
+    PGPayment,
+    LoadMoneyPayment
+} CTSPGType;
 @protocol CTSPaymentOption;
 
 @interface CTSPaymentOption : JSONModel
@@ -46,4 +50,6 @@ typedef enum {
 -(CTSPaymentType)fetchPaymentType;
 -(CTSPaymentToken*)fetchPaymentToken;
 -(BOOL)canDoOneTapPayment;
+-(BOOL)isPaymentInstrumentAllowedFor:(CTSPGType)pgPaymentType;
+
 @end

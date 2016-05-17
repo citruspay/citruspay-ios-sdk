@@ -27,6 +27,11 @@
 #import "CTSDPMerchantQueryReq.h"
 
 
+#import "CTSConsumerProfile.h"
+#import "CTSDPMerchantQueryReq.h"
+#import "CTSPaymentOptions.h"
+
+@class CTSAmount, CTSProfileContactRes, CTSCashoutBankAccountResp, CTSUpdateMobileNumberRes, CTSDPResponse, CTSPaymentDetailUpdate, CTSCashoutBankAccount;
 
 @class CTSProfileLayer;
 @protocol CTSProfileProtocol
@@ -107,8 +112,7 @@ didDeleteCardWithError:(NSError*)error;
 typedef void (^ASGetContactInfoCallBack)(CTSProfileContactRes* contactInfo,
                                          NSError* error);
 
-typedef void (^ASGetPaymentInfoCallBack)(CTSProfilePaymentRes* paymentInfo,
-                                         NSError* error);
+typedef void (^ASGetPaymentInfoCallBack)(CTSConsumerProfile *, NSError *);
 
 typedef void (^ASUpdatePaymentInfoCallBack)(NSError* error);
 
@@ -156,7 +160,7 @@ typedef void (^ASSaveCardsCallback) (CTSSaveCardResponse *reponse, NSError *erro
  *
  *  @param paymentInfo payment information
  */
-- (void)updatePaymentInformation:(CTSPaymentDetailUpdate*)paymentInfo
+- (void)updatePaymentInformation:(CTSPaymentOptions *)paymentOptions
            withCompletionHandler:(ASUpdatePaymentInfoCallBack)callback;
 
 /**
@@ -168,8 +172,7 @@ typedef void (^ASSaveCardsCallback) (CTSSaveCardResponse *reponse, NSError *erro
 /**
  *  request user's payment information
  */
-- (void)requestPaymentInformationWithCompletionHandler:
-        (ASGetPaymentInfoCallBack)callback;
+- (void)requestPaymentInformationWithCompletionHandler:(ASGetPaymentInfoCallBack)completion;
 
 
 -(void)requestGetBalance:(ASGetBalanceCallBack)calback;

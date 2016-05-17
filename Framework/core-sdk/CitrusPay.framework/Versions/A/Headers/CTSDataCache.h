@@ -26,6 +26,14 @@ extern NSString * const CACHE_KEY_ONE_TAP_PAYMENT;
 extern NSString * const CACHE_KEY_PUSH_VIEW_CONTROLLER;
 extern NSString * const CACHE_KEY_LOADER_OVERLAY;
 extern NSString * const CACHE_KEY_LOADER_COLOR;
+extern NSString * const CACHE_KEY_SAVED_PAYMENT_OPTIONS;
+extern NSString * const CACHE_KEY_PG_SETTINGS;
+extern NSString * const CACHE_KEY_MASTER_CITRUS_LINK;
+extern NSString * const CACHE_KEY_LOAD_PG_SETTINGS;
+
+
+extern NSString * const CACHE_KEY_BLAZECARD_PAYMENT;
+extern NSString * const CACHE_KEY_BLAZENET_PAYMENT;
 
 
 @interface CTSDataCache : NSObject

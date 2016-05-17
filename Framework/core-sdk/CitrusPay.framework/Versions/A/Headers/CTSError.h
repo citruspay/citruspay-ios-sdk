@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class CTSPaymentTransactionRes, CTSDyPResponse, CTSResponse;
+@class CTSPaymentTransactionRes, CTSDyPResponse, CTSResponse, CTSBlazeCardTransactionInternal;
 
 typedef enum {
     NoError = 7000,
@@ -62,14 +62,20 @@ typedef enum {
     NoNewPrepaidPrelivilage,
     NoRefreshToken,
     PasswordTypeNotAllowed,
-    LoadMoneyFailed
+    LoadMoneyFailed,
+    WrongPaymentAmount,
+    PaymentInstrumentNotAllowed,
+    AlreadyLimitedScope,
+    InvalidOperation,
+    EmailMobileBothInvalid,
+    NotMobileBasedAccount
 } CTSErrorCode;
 
 
 extern NSString * const CITRUS_ERROR_DOMAIN;
 extern NSString * const CITRUS_ERROR_DOMAIN_DP;
 extern NSString * const CITRUS_ERROR_DESCRIPTION_KEY;
-extern NSInteger * const INTERNET_DOWN_STATUS_CODE;
+extern int INTERNET_DOWN_STATUS_CODE;
 
 @interface CTSError : NSObject
 // Follwoing methods are for internal use only
@@ -83,4 +89,8 @@ extern NSInteger * const INTERNET_DOWN_STATUS_CODE;
 +(NSError *)convertToError:(CTSPaymentTransactionRes *)ctsPaymentTxRes;
 +(NSError *)convertToErrorDyIfNeeded:(CTSDyPResponse *)ctsPaymentTxRes;
 +(NSError *)convertCTSResToErrorIfNeeded:(CTSResponse *)response;
+
+
++ (NSError *)parseBlazeNetError:(NSString *)errorResponse;
++ (NSError *)parseBlazeCardError:(CTSBlazeCardTransactionInternal *)errorResponse;
 @end

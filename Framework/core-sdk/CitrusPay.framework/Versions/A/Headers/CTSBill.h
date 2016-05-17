@@ -6,10 +6,9 @@
 //  Copyright (c) 2014 Citrus. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "JSONModel.h"
 
-@class CTSAmount;
+#import "CTSAmount.h"
 
 @interface CTSBill : JSONModel
 @property(strong)NSString *merchantTxnId;
@@ -20,7 +19,5 @@
 @property(strong)NSString <Optional>*notifyUrl;
 @property(strong)NSString <Optional>*dpSignature;
 @property(strong)NSDictionary <Optional>*customParameters;
-
-
 
 @end

@@ -14,15 +14,16 @@
 
 /*
  set oauth keys
- */
-#define SignInId @"test-signin"
-#define SignInSecretKey @"52f7e15efd4208cf5345dd554443fd99"
-#define SubscriptionId @"test-signup"
-#define SubscriptionSecretKey @"c78ec84e389814a05d3ae46546d16d2e"
+*/
+
+#define SignInId @"9hh5re3r5q-signin"
+#define SignInSecretKey @"ffcfaaf6e6e78c2f654791d9d6cb7f09"
+#define SubscriptionId @"9hh5re3r5q-signup"
+#define SubscriptionSecretKey @"3be4d7bf59c109e76a3619a33c1da9a8"
 
 /*
  set Vanity/bill/return url
- */
+*/
 #define VanityUrl @"nativeSDK"
 #define LoadWalletReturnUrl @"https://salty-plateau-1529.herokuapp.com/redirectURL.sandbox.php"
 #define BillUrl @"https://salty-plateau-1529.herokuapp.com/billGenerator.sandbox.php"

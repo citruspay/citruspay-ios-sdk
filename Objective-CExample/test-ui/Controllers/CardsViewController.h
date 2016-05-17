@@ -31,7 +31,7 @@
 @property (nonatomic , weak) IBOutlet UIActivityIndicatorView *indicatorView;
 
 @property (nonatomic , strong) CTSRuleInfo *ruleInfo;
-@property (assign) DPRequestType dpType;
 
+@property (assign) BOOL isDirectPaymentEnable;
 
 @end

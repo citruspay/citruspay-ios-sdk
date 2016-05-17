@@ -8,10 +8,12 @@
 
 #import "InitialViewController.h"
 #import "SignUpViewController.h"
+#import "CardsViewController.h"
 
 @interface InitialViewController (){
     
-    int selectionType;
+    BOOL isDirectPaymentEnable;
+    UIAlertView *alert;
 
 }
 
@@ -27,12 +29,6 @@
      self.signupOptionTwoButton.layer.cornerRadius = 4;
      self.signupOptionThreeButton.layer.cornerRadius = 4;
     
-    if (authLayer.requestSignInOauthToken.length != 0) {
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:nil];
-            return;
-        }];
-    }
     // Do any additional setup after loading the view.
 }
 
@@ -43,36 +39,60 @@
 
 
 - (IBAction)selectLoginTypeAction:(UIButton *)sender{
-
+    
     if (sender.tag == 1000) {
-        selectionType = 0;
+        isDirectPaymentEnable = TRUE;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Please enter amount." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok" , nil];
+            alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+            UITextField * alertTextField = [alert textFieldAtIndex:0];
+            alertTextField.keyboardType = UIKeyboardTypeDecimalPad;
+            alertTextField.placeholder = @"Amount";
+            [alert show];
+        });
     }
-    else if (sender.tag == 1001) {
-        selectionType = 1;
+    else {
+        
+        if (authLayer.requestSignInOauthToken.length != 0) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:nil];
+            });
+        }
+        else{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self performSegueWithIdentifier:@"SignupViewIdentifier" sender:nil];
+            });
+        }
+        
     }
-    else if (sender.tag == 1002) {
-        selectionType = 2;
-    }
-
-    [self performSegueWithIdentifier:@"InitialViewIdentifier" sender:self];
-
 }
 
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"InitialViewIdentifier"]) {
-        SignUpViewController *signUpViewController = (SignUpViewController *)[segue destinationViewController];
+    
+    if ([segue.identifier isEqualToString:@"CardViewIdentifier"]) {
         
-        // loginType = 0 -> by using Email Id & Mobile
-        // loginType = 1 -> by using Mobile only
-        // loginType = 2 -> by using either Email Id or Mobile
-        
-        signUpViewController.loginType = selectionType;
+        CardsViewController *viewController = (CardsViewController *)[segue destinationViewController];
+        viewController.isDirectPaymentEnable = isDirectPaymentEnable;
+        viewController.amount = [alert textFieldAtIndex:0].text;
+        viewController.landingScreen = 1;
     }
     
 }
 
+#pragma mark - AlertView Delegate Methods
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    [self.view endEditing:YES];
+    
+    if (buttonIndex==1) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self performSegueWithIdentifier:@"CardViewIdentifier" sender:self];
+        });
+    }
+}
 
 @end

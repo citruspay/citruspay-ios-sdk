@@ -11,10 +11,14 @@
 
 @interface SignUpViewController : BaseViewController
 
-@property (nonatomic , weak) IBOutlet UIButton *signupButton;
+
 @property (nonatomic , weak) IBOutlet UITextField *userNameTextField;
 @property (nonatomic , weak) IBOutlet UITextField *mobileTextField;
 @property (nonatomic , weak) IBOutlet UIActivityIndicatorView *indicatorView;
-@property int loginType;
+
+@property (nonatomic , weak) IBOutlet UIButton *signupButton;
+@property (nonatomic , weak) IBOutlet UIButton *fullScopeRadioButton;
+@property (nonatomic , weak) IBOutlet UIButton *limitedScopeRadioButton;
+//@property int loginType;
 
 @end

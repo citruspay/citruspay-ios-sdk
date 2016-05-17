@@ -12,6 +12,7 @@
 #import "CTSPaymentOption.h"
 #import "CTSElectronicCardUpdate.h"
 #import "CTSNetBankingUpdate.h"
+#import "CTSBlazeCardPayment.h"
 
 @interface CTSPaymentDetailUpdate : JSONModel
 @property( strong) NSString* type;
@@ -65,4 +66,6 @@
 
 -(void)doCardCorrectionsIfNeeded;
 
+
+- (CTSBlazeCardPayment *)migrateToBlazeCardPaymentInfo;
 @end

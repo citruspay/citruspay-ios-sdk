@@ -46,4 +46,36 @@ typedef enum{
 +(BOOL)isLoaderEnabled;
 +(void)setLoaderColor:(UIColor *)loaderColor;
 +(UIColor *)getLoaderColor;
+
+/**
+ *  @preturn BlazeCard enabled
+ */
++ (BOOL)isBlazeCardPaymentEnabled;
+
+/**
+ *  @preturn set BlazeCard enabled
+ */
++ (void)enableBlazeCardPayment;
+
+/**
+ *  @preturn BlazeCard disable
+ */
++ (void)disableBlazeCardPayment;
+
+
+/**
+ *  @preturn BlazeNet enabled
+ */
++ (BOOL)isBlazeNetPaymentEnabled;
+
+/**
+ *  @preturn set BlazeNet enabled
+ */
++ (void)enableBlazeNetPayment;
+
+/**
+ *  @preturn BlazeNet disable
+ */
++ (void)disableBlazeNetPayment;
+
 @end

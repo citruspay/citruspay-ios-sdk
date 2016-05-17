@@ -15,7 +15,8 @@ typedef enum {
     CitrusSiginTypeEOtp,
     CitrusSiginTypePassword,
     CitrusSiginTypeMOtpOrPassword,
-    CitrusSiginTypeEOtpOrPassword
+    CitrusSiginTypeEOtpOrPassword,
+    CitrusSiginTypeLimited
 } CitrusSiginType;
 
 @interface CTSCitrusLinkRes : NSObject

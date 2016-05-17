@@ -10,6 +10,7 @@
 #import "CardsViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "MerchantConstants.h"
+#import "SettingViewController.h"
 
 
 @interface HomeViewController (){
@@ -19,6 +20,7 @@
     CGRect frame;
     NSArray *array;
     int selectedRule;
+    NSInteger selectedRow;
 }
 
 @end
@@ -128,32 +130,16 @@
             [self.indicatorView stopAnimating];
             self.indicatorView.hidden = TRUE;
         });
-        
         if (error) {
             [UIUtility toastMessageOnScreen:[error localizedDescription]];
         }
         else{
             dispatch_async(dispatch_get_main_queue(), ^{
-            self.amountLabel.text = [NSString stringWithFormat:@"%@ %@",amount.currency,amount.value];
+            self.amountLabel.text = [NSString stringWithFormat:@"%@ %.02f",amount.currency, [amount.value floatValue]];
             });
 //            [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"Balance is %@ %@",amount.value,amount.currency]];
         }
     }];
-}
-
-// make payment using Citrus cash account
--(IBAction)payUsingCitrusCash:(id)sender{
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        
-       UIAlertView *citrusPayAlert = [[UIAlertView alloc] initWithTitle:@"" message:@"Please enter amount." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok" , nil];
-        citrusPayAlert.tag = 1007;
-        citrusPayAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
-        UITextField * alertTextField = [citrusPayAlert textFieldAtIndex:0];
-        alertTextField.keyboardType = UIKeyboardTypeDecimalPad;
-        alertTextField.placeholder = @"Amount";
-        [citrusPayAlert show];
-    });
 }
 
 //Pay money from Cards
@@ -173,6 +159,7 @@
     
 
 }
+
 
 //Load money to Wallet
 -(IBAction)loadMoney:(id)sender{
@@ -250,10 +237,8 @@
 
 -(IBAction)applyCodeAction:(id)sender{
     self.transparentViewView.hidden = TRUE;
-    
     option = 2;
     dispatch_async(dispatch_get_main_queue(), ^{
-        
         [self performSegueWithIdentifier:@"CardViewIdentifier" sender:self];
     });
     
@@ -299,7 +284,6 @@
     if (alertView.tag ==1005){
         if (buttonIndex==0) {
             if ([authLayer signOut]) {
-                sleep(.5);
                 [self.navigationController popToRootViewControllerAnimated:YES];
             }
         }
@@ -307,90 +291,17 @@
     else if (alertView.tag==1006) {
         
         if (buttonIndex==1) {
-
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self performSegueWithIdentifier:@"CardViewIdentifier" sender:self];
             });
         }
     }
-    else if (alertView.tag==1007){
+    else if (alertView.tag==1009) {
         
         if (buttonIndex==1) {
-            
-            [self.indicatorView startAnimating];
-            self.indicatorView.hidden = FALSE;
-            
-            
-            [proifleLayer requestGetBalance:^(CTSAmount *amount, NSError *error) {
-                
-                if (error) {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [self.indicatorView stopAnimating];
-                        self.indicatorView.hidden = TRUE;
-                    });
-                    [UIUtility toastMessageOnScreen:[error localizedDescription]];
-                }
-                else{
-                    UITextField * alertTextField = [alertView textFieldAtIndex:0];
-                    if(alertTextField.text.length==0){
-                        dispatch_async(dispatch_get_main_queue(), ^{
-                            [self.indicatorView stopAnimating];
-                            self.indicatorView.hidden = TRUE;
-                        });
-                        [UIUtility toastMessageOnScreen:@"Amount should not be blank."];
-                        
-                    }
-                
-                    else if ([alertTextField.text isEqualToString:@"0"]) {
-                        dispatch_async(dispatch_get_main_queue(), ^{
-                            [self.indicatorView stopAnimating];
-                            self.indicatorView.hidden = TRUE;
-                        });
-                        [UIUtility toastMessageOnScreen:@"Amount should be greater than 0"];
-                    }
-                    else if([alertTextField.text doubleValue] > [amount.value doubleValue]){
-                        dispatch_async(dispatch_get_main_queue(), ^{
-                            [self.indicatorView stopAnimating];
-                            self.indicatorView.hidden = TRUE;
-                        });
-                        [UIUtility toastMessageOnScreen:@"The balance in your Citrus Cash account is insufficient. Please load money."];
-                    }
-                    else{
-                        
-                        [CTSUtility requestBillAmount:alertTextField.text billURL:BillUrl callback:^(CTSBill *bill , NSError *error){
-                        
-                            if (error) {
-                                dispatch_async(dispatch_get_main_queue(), ^{
-                                    [self.indicatorView stopAnimating];
-                                    self.indicatorView.hidden = TRUE;
-                                });
-                                [UIUtility toastMessageOnScreen:[error localizedDescription]];
-                            }
-                            else{
-                                [paymentLayer requestChargeCitrusWalletWithContact:contactInfo address:addressInfo bill:bill returnViewController:self withCompletionHandler:^(CTSCitrusCashRes *paymentInfo, NSError *error) {
-                                    
-                                    LogTrace(@"paymentInfo %@",paymentInfo);
-                                    LogTrace(@"error %@",error);
-                                    dispatch_async(dispatch_get_main_queue(), ^{
-                                        [self.indicatorView stopAnimating];
-                                        self.indicatorView.hidden = TRUE;
-                                        
-                                    });
-                                    if(error){
-                                        [UIUtility toastMessageOnScreen:[error localizedDescription]];
-                                    }
-                                    else{
-                                        LogTrace(@" isAnyoneSignedIn %d",[authLayer isLoggedIn]);
-                                        [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"TxnStatus: %@",[paymentInfo.responseDict valueForKey:@"TxStatus"]]];
-                                        [self getBalance:nil];
-                                    }
-                                }];
-                            }
-                        }];
-                    }
-                }
-            }];
-            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self performSegueWithIdentifier:@"WalletIdentifier" sender:nil];
+            });
         }
     }
     else if (alertView.tag==1008) {
@@ -484,8 +395,7 @@
 #pragma mark - TableView Delegate Methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    return 7;
+    return 9;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -502,19 +412,25 @@
         ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Load Money";
     }
     else if (indexPath.row==2) {
-        ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Pay Using Citrus Cash";
-    }
-    else if (indexPath.row==3) {
         ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Send Money";
     }
+    else if (indexPath.row==3) {
+        ((UILabel *) [cell.contentView viewWithTag:500]).text = @"SimpliPay";
+    }
     else if (indexPath.row==4) {
-        ((UILabel *) [cell.contentView viewWithTag:500]).text = @"PG Payment";
+        ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Pay using Dynamic Pricing (SimpliPay)";
     }
     else if (indexPath.row==5) {
-        ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Pay using Dynamic Pricing";
+        ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Manage Saved Accounts";
     }
     else if (indexPath.row==6) {
-        ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Manage Cards";
+        ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Update Profile";
+    }
+    else if (indexPath.row==7) {
+        ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Get Profile";
+    }
+    else if (indexPath.row==8) {
+        ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Change Password";
     }
     
     return cell;
@@ -551,22 +467,46 @@
         [self loadMoney:nil];
     }
     else if (indexPath.row==2) {
-        [self payUsingCitrusCash:nil];
-    }
-    else if (indexPath.row==3) {
         [self sendMoney:nil];
     }
-    else if (indexPath.row==4) {
+    else if (indexPath.row==3) {
         [self payMoney:nil];
     }
-    else if (indexPath.row==5) {
+    else if (indexPath.row==4) {
         self.transparentViewView.hidden = FALSE;
         [self performDynamicPricing:nil];
     }
-    else if (indexPath.row==6) {
+    else if (indexPath.row==5) {
         [self performSegueWithIdentifier:@"ManageCardIdentifier" sender:nil];
     }
-    
+    else if (indexPath.row==6) {
+        selectedRow = indexPath.row;
+        [self performSegueWithIdentifier:@"SettingViewIdentifier" sender:nil];
+    }
+    else if (indexPath.row==7) {
+        self.indicatorView.hidden = FALSE;
+        [self.indicatorView startAnimating];
+        
+        [proifleLayer requestProfileInformationWithCompletionHandler:^(CTSUserProfile *userProfile, NSError* error) {
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.indicatorView stopAnimating];
+                self.indicatorView.hidden = TRUE;
+            });
+            
+            if (error) {
+                [UIUtility toastMessageOnScreen:[error localizedDescription]];
+            }
+            else{
+                
+                [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"User Email: %@\nFirst Name: %@\nLast Name: %@\nMobile: %@",userProfile.email,userProfile.firstName,userProfile.lastName,userProfile.mobile]];
+            }
+        }];
+    }
+    else if (indexPath.row==8) {
+        selectedRow = indexPath.row;
+        [self performSegueWithIdentifier:@"SettingViewIdentifier" sender:nil];
+    }
 }
 
 #pragma mark - StoryBoard Delegate Methods
@@ -610,7 +550,17 @@
         }
         else
             viewController.amount = ((UITextField *)[alert textFieldAtIndex:0]).text; //Passing the amount to Card payment screen
+    }
+    else if ([segue.identifier isEqualToString:@"SettingViewIdentifier"]){
         
+        SettingViewController *viewController = (SettingViewController *)segue.destinationViewController;
+        if (selectedRow==6) {
+            viewController.title = @"Update Profile";
+        }
+        else if (selectedRow==8){
+            viewController.title = @"Change Password";
+//            viewController.userEmailId = self.userName;
+        }
     }
     
 }

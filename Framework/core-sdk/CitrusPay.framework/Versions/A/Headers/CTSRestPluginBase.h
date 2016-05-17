@@ -42,5 +42,6 @@ baseUrl:(NSString*)baseUrl;
 - (NSString *)fetchBaseUrl;
 //-(long)addDataToCacheAtAutoIndex:(id)object;
 -(CTSKeyStore *)keyStore;
+-(CTSKeyStore *)cachedKeyStore;
 
 @end

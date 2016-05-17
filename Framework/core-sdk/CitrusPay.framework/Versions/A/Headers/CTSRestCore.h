@@ -46,4 +46,8 @@ typedef void (^ASCTSRestResponse)(CTSRestCoreResponse* response);
 //Vikas
 + (NSMutableURLRequest*)requestByAddingParameters:(NSMutableURLRequest*)request
                               withSerializeString:(NSString*)string;
+
+- (void)requestAsyncServer:(CTSRestCoreRequest *)restRequest
+               withBaseUrl:(NSString *)baseURL
+                completion:(ASCTSRestResponse)callback;
 @end
