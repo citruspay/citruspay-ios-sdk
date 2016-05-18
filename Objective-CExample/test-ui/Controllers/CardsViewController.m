@@ -9,6 +9,7 @@
 #import "CardsViewController.h"
 #import "HMSegmentedControl.h"
 
+
 @interface CardsViewController () {
     NSArray *array;
     UITextField *currentTextField;
@@ -248,7 +249,7 @@
         segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"Debit Card", @"Credit Card", @"Net Banking"]];
     }
     else{
-    
+        
         segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"Saved Card", @"Debit Card", @"Credit Card", @"Net Banking"]];
     }
     segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth;
@@ -314,7 +315,7 @@
     
     if (self.isDirectPaymentEnable) {
         otherEnteredAmount = [self.amount floatValue];
-
+        
         if (_segControl.selectedSegmentIndex==0 ||
             _segControl.selectedSegmentIndex==1) {
             
@@ -399,7 +400,7 @@
             _selectedAmountForSavedAccounts = otherEnteredAmount;
             otherEnteredAmount = [self.amount floatValue];
         }
-
+        
     }
 }
 
@@ -789,7 +790,7 @@
                                                            issuerCode:code];
                 
             }
-
+            
         }
         else {
             if (_segControl.selectedSegmentIndex==1 ||
@@ -861,7 +862,7 @@
                     }
                 }
             }
-
+            
         }
     }
     
@@ -1427,8 +1428,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
                             mvcEnteredAmount = 0.00;
                         }
                         else {
-                            remainingAmount_tobePaid = remainingAmount_tobePaid + mvcEnteredAmount;
                             mvcEnteredAmount = 0.00;
+                            remainingAmount_tobePaid =  [self.amount floatValue] - prepiadEnteredAmount;
                         }
                         ((UILabel *) [[tableView cellForRowAtIndexPath:indexPath].contentView viewWithTag:1003]).text = @"Check row to pay using MVC payment options";
                     }
@@ -1462,13 +1463,13 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
                     if ([balanceDict[@"paymentMode"] isEqualToString:@"PREPAID_CARD"]) {
                         _useCash = YES;
                         if (_amountDistribution.enoughMVCAndCash) {
-                            prepiadEnteredAmount = [self.amount floatValue];
+                            prepiadEnteredAmount = _cashMaxBalance;
                             ((UILabel *) [[tableView cellForRowAtIndexPath:indexPath].contentView viewWithTag:1003]).text = @"Uncheck row to pay using other payment options";
                         }
                         else {
                             remainingAmount_tobePaid = [self.amount floatValue] - [balanceDict[@"maxBalance"] floatValue];
                             ((UILabel *) [[tableView cellForRowAtIndexPath:indexPath].contentView viewWithTag:1003]).text = [NSString stringWithFormat:@"Select an other option to pay balance Rs : %.02f", remainingAmount_tobePaid];
-                            prepiadEnteredAmount = [balanceDict[@"maxBalance"] floatValue];
+                            prepiadEnteredAmount = _cashMaxBalance;
                         }
                         
                     }

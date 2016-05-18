@@ -15,9 +15,10 @@ class HomeViewController: BaseClassViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.authLayer?.requestCitrusLink(TEST_EMAIL,
+        self.authLayer?.requestMasterLink(TEST_EMAIL,
             mobile: TEST_MOBILE,
-            completion: { (linkResponse, error) -> Void in
+            scope:CTSWalletScopeFull,
+            completionHandler: { (linkResponse, error) -> Void in
                 if(error != nil){
                     UIUtility.toastMessageOnScreen(error.localizedDescription)
                     print("Response JSON: \(error.localizedDescription)")
@@ -42,7 +43,7 @@ class HomeViewController: BaseClassViewController {
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil))
         alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
             // Now do whatever you want with inputTextField (remember to unwrap the optional)
-            self.authLayer?.requestCitrusLinkSignInWithPassoword(alert.textFields![0].text,
+            self.authLayer?.requestMasterLinkSignInWithPassword(alert.textFields![0].text,
                 passwordType: PasswordTypeOtp,
                 completionHandler: { (error) -> Void in
                 if (error != nil) {
@@ -66,6 +67,18 @@ class HomeViewController: BaseClassViewController {
     }
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // this is just sample code 
     class  func requestBillAmount (amount :NSString, customParams :NSArray, billURL :NSString, completion : (bill :CTSBill? ,error :NSError?)->Void){
         let session = NSURLSession.sharedSession();
         

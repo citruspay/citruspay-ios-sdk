@@ -51,4 +51,5 @@
 
 - (CTSErrorCode)validatePaymentInfo;
 
+- (BOOL)isTokenized;
 @end
