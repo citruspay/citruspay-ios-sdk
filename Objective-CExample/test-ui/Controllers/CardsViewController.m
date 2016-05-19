@@ -9,7 +9,6 @@
 #import "CardsViewController.h"
 #import "HMSegmentedControl.h"
 
-
 @interface CardsViewController () {
     NSArray *array;
     UITextField *currentTextField;
@@ -187,7 +186,12 @@
     _balancesArray =[[NSMutableArray alloc] init];
     _banksArray =[[NSMutableArray alloc] init];
     
-    [self requestPaymentModes];
+    if (self.landingScreen == 0) {
+        [self requestLoadMoneyPgSettings];
+    }
+    else {
+        [self requestPaymentModes];
+    }
     
     
     if (!self.isDirectPaymentEnable) {
@@ -527,14 +531,14 @@
 }
 
 
-- (void)requestPaymentModes {
-    [paymentLayer requestMerchantPgSettings:VanityUrl withCompletionHandler:^(CTSPgSettings *pgSettings, NSError *error) {
+-(void)requestLoadMoneyPgSettings {
+    
+    [paymentLayer requestLoadMoneyPgSettingsCompletionHandler:^(CTSPgSettings *pgSettings, NSError *error){
         if(error){
             //handle error
             LogTrace(@"[error localizedDescription] %@ ", [error localizedDescription]);
         }
         else {
-            //Vikas
             debitArray = [CTSUtility fetchMappedCardSchemeForSaveCards:[[NSSet setWithArray:pgSettings.debitCard] allObjects] ];
             creditArray = [CTSUtility fetchMappedCardSchemeForSaveCards:[[NSSet setWithArray:pgSettings.creditCard] allObjects] ];
             
@@ -561,7 +565,46 @@
                 
             }
             netBankingDict = tempDict;
+        }
+        
+    }];
+    
+    
+}
+
+- (void)requestPaymentModes {
+    [paymentLayer requestMerchantPgSettings:VanityUrl withCompletionHandler:^(CTSPgSettings *pgSettings, NSError *error) {
+        if(error){
+            //handle error
+            LogTrace(@"[error localizedDescription] %@ ", [error localizedDescription]);
+        }
+        else {
+            debitArray = [CTSUtility fetchMappedCardSchemeForSaveCards:[[NSSet setWithArray:pgSettings.debitCard] allObjects] ];
+            creditArray = [CTSUtility fetchMappedCardSchemeForSaveCards:[[NSSet setWithArray:pgSettings.creditCard] allObjects] ];
             
+            NSMutableDictionary *tempDict = [[NSMutableDictionary alloc]init];
+            
+            
+            LogTrace(@" pgSettings %@ ", pgSettings);
+            for (NSString* val in creditArray) {
+                LogTrace(@"CC %@ ", val);
+            }
+            
+            for (NSString* val in debitArray) {
+                LogTrace(@"DC %@ ", val);
+            }
+            
+            _banksArray = pgSettings.netBanking;
+            
+            for (NSDictionary* arr in pgSettings.netBanking) {
+                //setting the object for Issuer bank code in Dictionary
+                [tempDict setObject:[arr valueForKey:@"issuerCode"] forKey:[arr valueForKey:@"bankName"]];
+                
+                LogTrace(@"bankName %@ ", [arr valueForKey:@"bankName"]);
+                LogTrace(@"issuerCode %@ ", [arr valueForKey:@"issuerCode"]);
+                
+            }
+            netBankingDict = tempDict;
         }
     }];
 }
@@ -1336,7 +1379,7 @@ replacementString:(NSString *)string {
                 }
                 else {
                     ((UILabel *) [cell.contentView viewWithTag:1003]).text = @"Insufficient balance. Please tap on other payment option.";
-                    remainingAmount_tobePaid = [self.amount floatValue];
+                    remainingAmount_tobePaid = [self.amount floatValue] - (prepiadEnteredAmount + mvcEnteredAmount);
                 }
             }
         }
@@ -1550,15 +1593,53 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
                 else {
                     otherEnteredAmount = remainingAmount_tobePaid;
                     
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        UIAlertView *cvvAlert = [[UIAlertView alloc] initWithTitle:@"" message:@"Please enter cvv." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok" , nil];
-                        cvvAlert.tag = 100;
-                        cvvAlert.alertViewStyle = UIAlertViewStyleSecureTextInput;
-                        UITextField *textField = [cvvAlert textFieldAtIndex:0];
-                        textField.keyboardType = UIKeyboardTypeNumberPad;
-                        textField.placeholder = @"cvv";
-                        [cvvAlert show];
-                    });
+                    JSONModelError* jsonError;
+                    CTSConsumerProfileDetails* consumerProfileDetails = [[CTSConsumerProfileDetails alloc]
+                                                                         initWithDictionary:[_savedAccountsArray objectAtIndex:indexPath.row]
+                                                                         error:&jsonError];
+                    
+                    if ([accountsDict[@"paymentMode"] isEqualToString:@"DEBIT_CARD"]) {
+                        _paymentOptions = [CTSPaymentOptions DebitCardTokenized:consumerProfileDetails];
+                    }
+                    else if ([accountsDict[@"paymentMode"] isEqualToString:@"CREDIT_CARD"]) {
+                        _paymentOptions = [CTSPaymentOptions CreditCardTokenized:consumerProfileDetails];
+                    }
+                    
+                    if ([_paymentOptions canDoOneTapPayment]) {
+                        //do not prompt user for CVV
+                        _paymentOptions.cvv = nil;
+                        cvvText = nil;
+                        
+                        otherEnteredAmount = remainingAmount_tobePaid;
+                        
+                        if (oldIndexPath != selectedIndexPath &&
+                            oldDictionary != accountsDict) {
+                            oldIndexPath = selectedIndexPath;
+                            oldDictionary = accountsDict;
+                        }
+                        
+                        [accountsDict setObject:@"1" forKey:@"selected"];
+                        [_savedAccountsArray replaceObjectAtIndex:indexPath.row withObject:accountsDict];
+                        
+                        [self setPaymentInfoForSmartPay];
+                        [self paymentSummary];
+                        
+                    }
+                    else {
+                        //get cvv from user
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            UIAlertView *cvvAlert = [[UIAlertView alloc] initWithTitle:@""
+                                                                               message:@"Please enter cvv."
+                                                                              delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok" , nil];
+                            cvvAlert.tag = 100;
+                            cvvAlert.alertViewStyle = UIAlertViewStyleSecureTextInput;
+                            UITextField *textField = [cvvAlert textFieldAtIndex:0];
+                            textField.keyboardType = UIKeyboardTypeNumberPad;
+                            textField.placeholder = @"cvv";
+                            [cvvAlert show];
+                        });
+                    }
+                    
                 }
                 
             }
@@ -1587,12 +1668,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
             
             cvvText = alertTextField.text;
             
-            if (remainingAmount_tobePaid != 0.00) {
-                otherEnteredAmount = remainingAmount_tobePaid;
-            }
-            else {
-                otherEnteredAmount = [self.amount floatValue];
-            }
+            otherEnteredAmount = remainingAmount_tobePaid;
             
             if (oldIndexPath != selectedIndexPath &&
                 oldDictionary != accountsDict) {

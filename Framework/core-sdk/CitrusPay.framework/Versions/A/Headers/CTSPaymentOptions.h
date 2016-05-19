@@ -10,6 +10,7 @@
 
 #import "CTSError.h"
 #import "CTSConsumerProfileDetails.h"
+#import "CTSPaymentDetailUpdate.h"
 
 @interface CTSPaymentOptions : JSONModel
 @property (strong) NSString <Optional>
@@ -52,4 +53,8 @@
 - (CTSErrorCode)validatePaymentInfo;
 
 - (BOOL)isTokenized;
+
+- (CTSPaymentDetailUpdate *)toCTSPaymentDetailUpdate;
+
+- (BOOL)canDoOneTapPayment;
 @end
