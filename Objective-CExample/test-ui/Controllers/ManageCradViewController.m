@@ -208,8 +208,7 @@
 - (BOOL)tableView:(UITableView *)tableView
 canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return YES if you want the specified item to be editable.
-    if (indexPath.row == 0 ||
-        indexPath.row == 1) {
+    if (indexPath.section == 0) {
         return NO;
     }
     return YES;

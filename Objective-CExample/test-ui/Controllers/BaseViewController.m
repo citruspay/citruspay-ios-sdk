@@ -45,7 +45,7 @@
     keyStore.vanity = VanityUrl;
     
 #warning "set your required environment to see testing results"
-//#define PRODUCTION_MODE=1
+//#define PRODUCTION_MODE 1
 #ifdef PRODUCTION_MODE
     [CitrusPaymentSDK initializeWithKeyStore:keyStore environment:CTSEnvProduction];
 #else

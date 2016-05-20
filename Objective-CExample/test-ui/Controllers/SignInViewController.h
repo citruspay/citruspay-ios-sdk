@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Vikas Singh. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 
 @interface SignInViewController : BaseViewController

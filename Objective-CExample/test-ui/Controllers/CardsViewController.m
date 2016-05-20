@@ -192,7 +192,7 @@
     else {
         [self requestPaymentModes];
     }
-    
+
     
     if (!self.isDirectPaymentEnable) {
         if (self.landingScreen==1) {
@@ -253,7 +253,7 @@
         segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"Debit Card", @"Credit Card", @"Net Banking"]];
     }
     else{
-        
+    
         segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"Saved Card", @"Debit Card", @"Credit Card", @"Net Banking"]];
     }
     segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth;
@@ -319,7 +319,7 @@
     
     if (self.isDirectPaymentEnable) {
         otherEnteredAmount = [self.amount floatValue];
-        
+
         if (_segControl.selectedSegmentIndex==0 ||
             _segControl.selectedSegmentIndex==1) {
             
@@ -404,7 +404,7 @@
             _selectedAmountForSavedAccounts = otherEnteredAmount;
             otherEnteredAmount = [self.amount floatValue];
         }
-        
+
     }
 }
 
@@ -833,7 +833,7 @@
                                                            issuerCode:code];
                 
             }
-            
+
         }
         else {
             if (_segControl.selectedSegmentIndex==1 ||
@@ -905,7 +905,7 @@
                     }
                 }
             }
-            
+
         }
     }
     
@@ -1025,7 +1025,7 @@
                           paymentStatus = paymentReceipt.toDictionary[@"Reason"];
                       }
                       
-                      [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"Load Money Status %@",[paymentReceipt.toDictionary valueForKey:LoadMoneyResponeKey]]];
+                      [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"Payment Status: %@", paymentStatus]];
                       [self resetUI];
                       [self.navigationController popViewControllerAnimated:YES];
                   }
@@ -1597,19 +1597,19 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
                     CTSConsumerProfileDetails* consumerProfileDetails = [[CTSConsumerProfileDetails alloc]
                                                                          initWithDictionary:[_savedAccountsArray objectAtIndex:indexPath.row]
                                                                          error:&jsonError];
-                    
+
                     if ([accountsDict[@"paymentMode"] isEqualToString:@"DEBIT_CARD"]) {
                         _paymentOptions = [CTSPaymentOptions DebitCardTokenized:consumerProfileDetails];
-                    }
+                     }
                     else if ([accountsDict[@"paymentMode"] isEqualToString:@"CREDIT_CARD"]) {
                         _paymentOptions = [CTSPaymentOptions CreditCardTokenized:consumerProfileDetails];
                     }
-                    
+
                     if ([_paymentOptions canDoOneTapPayment]) {
                         //do not prompt user for CVV
                         _paymentOptions.cvv = nil;
                         cvvText = nil;
-                        
+
                         otherEnteredAmount = remainingAmount_tobePaid;
                         
                         if (oldIndexPath != selectedIndexPath &&
@@ -1623,7 +1623,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
                         
                         [self setPaymentInfoForSmartPay];
                         [self paymentSummary];
-                        
+
                     }
                     else {
                         //get cvv from user
@@ -1639,7 +1639,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
                             [cvvAlert show];
                         });
                     }
-                    
+
                 }
                 
             }

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "CitrusPay"
-  s.version          = "3.5.8"
+  s.version          = "3.5.6"
   s.summary          = "CitrusPay iOS SDK."
 
 # This description is used to generate tags and improve search results.

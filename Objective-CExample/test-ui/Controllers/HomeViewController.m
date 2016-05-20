@@ -590,7 +590,6 @@
     self.transparentViewView = nil;
     self.containerView = nil;
     self.dynamicPricingTextField = nil;
-    self.amountTextField = nil;
     self.couponCodeTextField = nil;
     self.alteredAmountTextField = nil;
     self.pickerView = nil;

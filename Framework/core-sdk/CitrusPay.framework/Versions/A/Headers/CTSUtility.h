@@ -35,7 +35,7 @@
 #define CTSLocalizedString(key, comment) \
 [CTSUtility NSLocalizedString:(key)]
 
-extern NSString * const CTS_SIGNIN_USER_EMAIL;
+extern NSString *const CTS_SIGNIN_USER_EMAIL ;
 
 @interface CTSUtility : NSObject
 typedef void (^ASBillCallback)(CTSBill* bill,NSError* error);

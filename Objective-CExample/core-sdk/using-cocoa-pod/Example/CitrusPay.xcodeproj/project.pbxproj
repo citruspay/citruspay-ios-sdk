@@ -335,6 +335,9 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Mukesh Patil";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = BF75J23QJ2;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -654,9 +657,9 @@
 				INFOPLIST_FILE = "CitrusPay/CitrusPay-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.citruspay.sdk-using-cocoa-pod";
+				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.citruscash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "82942638-4b25-43fe-94f6-de8f319204f0";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -678,9 +681,9 @@
 				INFOPLIST_FILE = "CitrusPay/CitrusPay-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.citruspay.sdk-using-cocoa-pod";
+				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.citruscash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "82942638-4b25-43fe-94f6-de8f319204f0";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

@@ -11,6 +11,7 @@
 #import <CitrusPay/CitrusPay.h>
 
 @interface BaseViewController : UIViewController{
+
     CTSAuthLayer *authLayer;
     CTSProfileLayer *proifleLayer;
     CTSPaymentLayer *paymentLayer;
