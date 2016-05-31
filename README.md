@@ -116,7 +116,7 @@ All other classes in the SDK are data models that are used to exchange data betw
 Detailed reference documentation is available on the reference page for each class.
 
 ## Next Steps
-Head over to the [documentation](https://github.com/citruspay/citruspay-ios-sdk) to see all the API methods available.
+Head over to the [Git Wiki Documentation](https://github.com/citruspay/citruspay-ios-sdk/wiki) to see all the API methods available.
 When you are ready, look at the samples below to learn how to interact with the SDK.
 
 ## Samples
