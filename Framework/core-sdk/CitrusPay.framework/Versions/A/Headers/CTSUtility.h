@@ -131,5 +131,6 @@ typedef void (^ASBillCallback)(CTSBill* bill,NSError* error);
 +(BOOL)isBankAllowed:(NSString *)userBank forOptions:(NSArray *)merchantOptions;
 +(CTSPgSettings *)getCachedPgSetting;
 +(CTSPgSettings *)getCachedLoadMoneyPgSetting;
-+ (void)logProperties:(id)object ;
++ (void)logProperties:(id)object;
++ (BOOL)validateDecimalAmountString:(NSString *)amount;
 @end

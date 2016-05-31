@@ -13,7 +13,7 @@
 #import "SettingViewController.h"
 
 
-@interface HomeViewController (){
+@interface HomeViewController () <UITextFieldDelegate>{
 
     int option;
     UIAlertView *alert;
@@ -21,6 +21,7 @@
     NSArray *array;
     int selectedRule;
     NSInteger selectedRow;
+    UITextField *currectTextField;
 }
 
 @end
@@ -93,14 +94,6 @@
     // note: myFirstResponderTableViewCell is an IBOutlet to a static cell in storyboard of type FirstResponderTableViewCell
     self.dynamicPricingTextField.inputView = self.pickerView;
     self.dynamicPricingTextField.inputAccessoryView = accessoryToolbar;
-    
-    
-//        CALayer *lowerBorder = [CALayer layer];
-//        lowerBorder.backgroundColor = [[UIColor darkGrayColor] CGColor];
-//        lowerBorder.frame = CGRectMake(0, CGRectGetHeight(self.containerView.frame)-1.0f, CGRectGetWidth(self.containerView.frame), 1.0f);
-//        [self.containerView.layer addSublayer:lowerBorder];
-    
-    
 }
 
 #pragma mark - Bar Button Methods
@@ -154,6 +147,8 @@
         UITextField * alertTextField = [alert textFieldAtIndex:0];
         alertTextField.keyboardType = UIKeyboardTypeDecimalPad;
         alertTextField.placeholder = @"Amount";
+        currectTextField = alertTextField;
+        currectTextField.delegate = self;
         [alert show];
     });
     
@@ -173,6 +168,8 @@
         UITextField * alertTextField = [alert textFieldAtIndex:0];
         alertTextField.keyboardType = UIKeyboardTypeDecimalPad;
         alertTextField.placeholder = @"Amount";
+        currectTextField = alertTextField;
+        currectTextField.delegate = self;
         [alert show];
     });
 
@@ -193,6 +190,8 @@
         alertTextField2.keyboardType = UIKeyboardTypeDecimalPad;
         [alertTextField2  setSecureTextEntry:FALSE];
         alertTextField2.placeholder = @"Amount";
+        currectTextField = alertTextField2;
+        currectTextField.delegate = self;
         [sendMoneyAlert show];
     });
     
@@ -290,10 +289,13 @@
     }
     else if (alertView.tag==1006) {
         
-        if (buttonIndex==1) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self performSegueWithIdentifier:@"CardViewIdentifier" sender:self];
-            });
+        UITextField * alertTextField = [alertView textFieldAtIndex:0];
+        if ([alertTextField.text length] != 0) {
+            if (buttonIndex==1) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self performSegueWithIdentifier:@"CardViewIdentifier" sender:self];
+                });
+            }
         }
     }
     else if (alertView.tag==1009) {
@@ -333,6 +335,22 @@
         }
     }
     
+}
+
+
+// Only allow one decimal point
+// Example assumes ARC - Implement proper memory management if not using.
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    NSArray  *arrayOfString = [newString componentsSeparatedByString:@"."];
+    
+    if ([arrayOfString count] >= 2 ) {
+        if ([[arrayOfString objectAtIndex:1] length] > 2) {
+            return NO;
+        }
+    }
+    return YES;
 }
 
 

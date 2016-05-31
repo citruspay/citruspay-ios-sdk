@@ -657,7 +657,7 @@
 				INFOPLIST_FILE = "CitrusPay/CitrusPay-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.citruscash;
+				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.cocoapod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -681,7 +681,7 @@
 				INFOPLIST_FILE = "CitrusPay/CitrusPay-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.citruscash;
+				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.cocoapod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

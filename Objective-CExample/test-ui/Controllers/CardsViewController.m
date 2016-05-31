@@ -25,40 +25,58 @@
     UISwitch *switchView;
     
     CTSPaymentOptions *_paymentOptions;
-    float mvcEnteredAmount;
-    float prepiadEnteredAmount;
-    float otherEnteredAmount;
+    NSDecimalNumber *mvcEnteredAmount;
+    NSDecimalNumber *prepiadEnteredAmount;
+    NSDecimalNumber *otherEnteredAmount;
+    NSDecimalNumber *remainingAmount_tobePaid;
+    NSDecimalNumber *totalEnteredAmount;
     
-    float _selectedAmountForSavedAccounts;
+    NSDecimalNumber *transactionAmount;
+    
     BOOL _useMVC;
     BOOL _useCash;
+    BOOL _useOther;
+    BOOL _useOtherWas;
+    
     CTSSimpliChargeDistribution *_amountDistribution;
     BOOL _allSet;
     NSString *selectedPaymentoption;
     NSIndexPath *oldIndexPath;
     NSIndexPath *selectedIndexPath;
     NSDictionary *oldDictionary;
-    float remainingAmount_tobePaid;
     BOOL _useSavedAccounts;
     
-    float _mvcMaxBalance;
-    float _cashMaxBalance;
-    float _totalSelectedAmount;
+    NSDecimalNumber *_mvcMaxBalance;
+    NSDecimalNumber *_cashMaxBalance;
+    NSDecimalNumber *_totalSelectedAmount;
+    
 }
 @end
 
 @implementation CardsViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSDecimal zero = [NSDecimalNumber zero].decimalValue;
+    mvcEnteredAmount = [NSDecimalNumber decimalNumberWithDecimal:zero];
+    prepiadEnteredAmount = [NSDecimalNumber decimalNumberWithDecimal:zero];
+    otherEnteredAmount = [NSDecimalNumber decimalNumberWithDecimal:zero];
+    remainingAmount_tobePaid = [NSDecimalNumber decimalNumberWithDecimal:zero];
+    
     _useMVC = NO;
     _useCash = NO;
+    _useOther = NO;
     _allSet = YES;
     oldDictionary = [[NSDictionary alloc] init];
     selectedRow = NSNotFound;
     selectedPaymentoption = [[NSString alloc] init];
     self.amount = [NSString stringWithFormat:@"%.02f", [self.amount floatValue]];
+    
+    NSDecimal myFloatDecimal = [[NSNumber numberWithFloat:[self.amount floatValue]] decimalValue];
+    transactionAmount = [NSDecimalNumber decimalNumberWithDecimal:myFloatDecimal];
     
     [self initialSetting];
     LogTrace(@"landingscreeen : %d",self.landingScreen);
@@ -76,35 +94,37 @@
     else if (self.landingScreen == 2){
         self.title = [NSString stringWithFormat:@"Payment for Amount : %@", self.ruleInfo.originalAmount];
         self.amount = self.ruleInfo.originalAmount;
+        NSDecimal myFloatDecimal = [[NSNumber numberWithFloat:[self.amount floatValue]] decimalValue];
+        transactionAmount = [NSDecimalNumber decimalNumberWithDecimal:myFloatDecimal];
     }
     else {
         self.title = [NSString stringWithFormat:@"Payment for Amount : %@", self.amount];
     }
-    
 }
+
 
 - (void)smartPay {
     
     CTSPaymentOptions *debitCardPayment = [CTSPaymentOptions DebitCardOption:@"4111111111111111"
                                                               cardExpiryDate:@"01/18"
                                                                          cvv:@"000"];
-    [paymentLayer simpliPay:@"10.00"
-                    billURL:BillUrl
-              paymentOption:debitCardPayment
-                     useMVC:YES
-                    useCash:YES
-            useDynamicPrice:NO
-                   ruleInfo:nil
-    andParentViewController:self
-          completionHandler:^(CTSPaymentReceipt *paymentReceipt,
-                              NSError *error) {
-              if (error) {
-                  NSLog(@"error %@", [error localizedDescription]);
-              }
-              else {
-                  NSLog(@"response %@", paymentReceipt.toDictionary);
-              }
-          }];
+    [paymentLayer requestSimpliPay:@"10.00"
+                           billURL:BillUrl
+                     paymentOption:debitCardPayment
+                            useMVC:YES
+                           useCash:YES
+                   useDynamicPrice:NO
+                          ruleInfo:nil
+           andParentViewController:self
+                 completionHandler:^(CTSPaymentReceipt *paymentReceipt,
+                                     NSError *error) {
+                     if (error) {
+                         NSLog(@"error %@", [error localizedDescription]);
+                     }
+                     else {
+                         NSLog(@"response %@", paymentReceipt.toDictionary);
+                     }
+                 }];
 }
 
 
@@ -113,19 +133,19 @@
     CTSPaymentOptions *debitCardPayment = [CTSPaymentOptions DebitCardOption:@"4111111111111111"
                                                               cardExpiryDate:@"01/18"
                                                                          cvv:@"000"];
-    [paymentLayer loadMoney:@"10.00"
-                  returnURL:LoadWalletReturnUrl
-              paymentOption:debitCardPayment
-    andParentViewController:self
-          completionHandler:^(CTSPaymentReceipt *paymentReceipt,
-                              NSError *error) {
-              if (error) {
-                  NSLog(@"error %@", [error localizedDescription]);
-              }
-              else {
-                  NSLog(@"response %@", paymentReceipt.toDictionary);
-              }
-          }];
+    [paymentLayer requestLoadMoney:@"10.00"
+                         returnURL:LoadWalletReturnUrl
+                     paymentOption:debitCardPayment
+           andParentViewController:self
+                 completionHandler:^(CTSPaymentReceipt *paymentReceipt,
+                                     NSError *error) {
+                     if (error) {
+                         NSLog(@"error %@", [error localizedDescription]);
+                     }
+                     else {
+                         NSLog(@"response %@", paymentReceipt.toDictionary);
+                     }
+                 }];
     
 }
 
@@ -146,24 +166,24 @@
                                                              cvv:@"000"];
                                      }
                                      
-                                     [paymentLayer simpliPay:amountDistribution.totalAmount
-                                                     billURL:BillUrl
-                                               paymentOption:debitCardPayment
-                                                      useMVC:amountDistribution.useMVC
-                                                     useCash:amountDistribution.useCash
-                                             useDynamicPrice:NO
-                                                    ruleInfo:nil
-                                     andParentViewController:self
-                                           completionHandler:^(CTSPaymentReceipt *paymentReceipt,
-                                                               NSError *error) {
-                                               if (error) {
-                                                   NSLog(@"error %@", [error localizedDescription]);
-                                               }
-                                               else {
-                                                   NSLog(@"response %@", paymentReceipt.toDictionary);
-                                               }
-                                               
-                                           }];
+                                     [paymentLayer requestSimpliPay:amountDistribution.totalAmount
+                                                            billURL:BillUrl
+                                                      paymentOption:debitCardPayment
+                                                             useMVC:amountDistribution.useMVC
+                                                            useCash:amountDistribution.useCash
+                                                    useDynamicPrice:NO
+                                                           ruleInfo:nil
+                                            andParentViewController:self
+                                                  completionHandler:^(CTSPaymentReceipt *paymentReceipt,
+                                                                      NSError *error) {
+                                                      if (error) {
+                                                          NSLog(@"error %@", [error localizedDescription]);
+                                                      }
+                                                      else {
+                                                          NSLog(@"response %@", paymentReceipt.toDictionary);
+                                                      }
+                                                      
+                                                  }];
                                  }
                              }];
     
@@ -192,7 +212,7 @@
     else {
         [self requestPaymentModes];
     }
-
+    
     
     if (!self.isDirectPaymentEnable) {
         if (self.landingScreen==1) {
@@ -230,20 +250,13 @@
         self.title = @"Load Money";
         NSString *string = [NSString stringWithFormat:@"Load Rs %@",self.amount];
         [self.loadButton setTitle:string forState:UIControlStateNormal];
-        
-        _useMVC = NO;
-        _useCash = NO;
-        otherEnteredAmount = [self.amount floatValue];
     }
     else if (self.landingScreen==2){
         self.title = @"Dynamic Pricing";
         NSString *string = [NSString stringWithFormat:@"Pay Rs %@",self.ruleInfo.originalAmount];
         [self.loadButton setTitle:string forState:UIControlStateNormal];
         
-        _useMVC = NO;
-        _useCash = NO;
         self.amount = string;
-        otherEnteredAmount = [self.amount floatValue];
     }
     
     // Segmented control with scrolling
@@ -253,7 +266,7 @@
         segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"Debit Card", @"Credit Card", @"Net Banking"]];
     }
     else{
-    
+        
         segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"Saved Card", @"Debit Card", @"Credit Card", @"Net Banking"]];
     }
     segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth;
@@ -318,8 +331,6 @@
     self.loadButton.userInteractionEnabled = TRUE;
     
     if (self.isDirectPaymentEnable) {
-        otherEnteredAmount = [self.amount floatValue];
-
         if (_segControl.selectedSegmentIndex==0 ||
             _segControl.selectedSegmentIndex==1) {
             
@@ -345,18 +356,6 @@
             self.loadButton.hidden = FALSE;
             
             _useSavedAccounts = YES;
-            
-            _useMVC = _amountDistribution.useMVC;
-            _useCash = _amountDistribution.useCash;
-            
-            if (self.landingScreen == 0 ||
-                self.landingScreen == 2) {
-                otherEnteredAmount = [self.amount floatValue];
-                remainingAmount_tobePaid = [self.amount floatValue];
-            }
-            else {
-                otherEnteredAmount = _selectedAmountForSavedAccounts;
-            }
         }
         else if (_segControl.selectedSegmentIndex==1 ||
                  _segControl.selectedSegmentIndex==2) {
@@ -365,14 +364,8 @@
             self.ccddtableView.hidden = FALSE;
             self.netBankCodeTextField.hidden = TRUE;
             
-            _useMVC = NO;
-            _useCash = NO;
-            
             _useSavedAccounts = NO;
             
-            _selectedAmountForSavedAccounts = otherEnteredAmount;
-            
-            otherEnteredAmount = [self.amount floatValue];
         }
         else if (_segControl.selectedSegmentIndex==3){
             
@@ -381,13 +374,7 @@
             self.netBankCodeTextField.hidden = FALSE;
             self.loadButton.userInteractionEnabled = FALSE;
             
-            _useMVC = NO;
-            _useCash = NO;
-            
             _useSavedAccounts = NO;
-            
-            _selectedAmountForSavedAccounts = otherEnteredAmount;
-            otherEnteredAmount = [self.amount floatValue];
         }
         else if (_segControl.selectedSegmentIndex==4){
             
@@ -396,15 +383,9 @@
             self.netBankCodeTextField.hidden = TRUE;
             self.loadButton.hidden = TRUE;
             
-            _useMVC = NO;
-            _useCash = NO;
-            
             _useSavedAccounts = NO;
-            
-            _selectedAmountForSavedAccounts = otherEnteredAmount;
-            otherEnteredAmount = [self.amount floatValue];
         }
-
+        
     }
 }
 
@@ -453,11 +434,13 @@
                 for (NSDictionary *dict in [consumerProfile.paymentOptionsList mutableCopy]) {
                     if ([[dict valueForKey:@"paymentMode"] isEqualToString:@"MVC"]) {
                         [_balancesArray addObject:dict];
-                        _mvcMaxBalance = [[dict valueForKey:@"maxBalance"] floatValue];
+                        NSDecimal myFloatDecimal = [[NSNumber numberWithFloat:[[dict valueForKey:@"maxBalance"] floatValue]] decimalValue];
+                        _mvcMaxBalance = [NSDecimalNumber decimalNumberWithDecimal:myFloatDecimal];
                     }
                     else if ([[dict valueForKey:@"paymentMode"] isEqualToString:@"PREPAID_CARD"]) {
                         [_balancesArray addObject:dict];
-                        _cashMaxBalance = [[dict valueForKey:@"maxBalance"] floatValue];
+                        NSDecimal myFloatDecimal = [[NSNumber numberWithFloat:[[dict valueForKey:@"maxBalance"] floatValue]] decimalValue];
+                        _cashMaxBalance = [NSDecimalNumber decimalNumberWithDecimal:myFloatDecimal];
                     }
                     else {
                         [_savedAccountsArray addObject:dict];
@@ -640,7 +623,7 @@
 - (void)loadOrPayDPMoney {
     if (self.landingScreen==1) {
         if (_allSet) {
-            [self smartPayment];
+            [self simpliPay];
         }
     }
     else if(self.landingScreen==0){
@@ -739,11 +722,34 @@
     
     _allSet = YES;
     
-    float totalAmount = [self.amount floatValue];
+    NSDecimal zero = [NSDecimalNumber zero].decimalValue;
+    totalEnteredAmount = [NSDecimalNumber decimalNumberWithDecimal:zero];
+    
+    mvcEnteredAmount = [NSDecimalNumber decimalNumberWithDecimal:zero];
+    prepiadEnteredAmount = [NSDecimalNumber decimalNumberWithDecimal:zero];
+    otherEnteredAmount = [NSDecimalNumber decimalNumberWithDecimal:zero];
+    
+    NSDecimalNumber *remiainingAmount;
+    remiainingAmount = [NSDecimalNumber decimalNumberWithDecimal:zero];
+    
     
     if (self.landingScreen == 0 ||
         self.landingScreen == 2) {
-        if (otherEnteredAmount != [self.amount floatValue]) {
+        if (_useSavedAccounts) {
+            if (_useOther) {
+                otherEnteredAmount = [otherEnteredAmount decimalNumberByAdding:transactionAmount];
+                totalEnteredAmount = [totalEnteredAmount decimalNumberByAdding:otherEnteredAmount];
+            }
+        }
+        else {
+            otherEnteredAmount = [otherEnteredAmount decimalNumberByAdding:transactionAmount];
+            totalEnteredAmount = [totalEnteredAmount decimalNumberByAdding:otherEnteredAmount];
+        }
+        
+        LogTrace(@"_useOther");
+        LogTrace(@"otherEnteredAmount %f", [otherEnteredAmount floatValue]);
+        
+        if ([totalEnteredAmount floatValue] != [transactionAmount floatValue]) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
                                                             message:@"Selected payment option is zero or more than transction amount.\nPlease try again"
                                                            delegate:self
@@ -753,12 +759,80 @@
             return;
         }
         else {
-            _totalSelectedAmount = otherEnteredAmount;
+            _totalSelectedAmount = totalEnteredAmount;
         }
     }
     else {
         if (_useSavedAccounts) {
-            if ((mvcEnteredAmount + prepiadEnteredAmount + otherEnteredAmount) > totalAmount) {
+            
+            if (_useMVC) {
+                if ([_mvcMaxBalance floatValue] < [transactionAmount floatValue]) {
+                    totalEnteredAmount = [totalEnteredAmount decimalNumberByAdding:_mvcMaxBalance];
+                    mvcEnteredAmount = _mvcMaxBalance;
+                }
+                else {
+                    totalEnteredAmount = [totalEnteredAmount decimalNumberByAdding:transactionAmount];
+                    mvcEnteredAmount = totalEnteredAmount;
+                }
+                remiainingAmount = [transactionAmount decimalNumberBySubtracting:mvcEnteredAmount];
+                
+                LogTrace(@"_useMVC");
+                LogTrace(@"mvcEnteredAmount %f", [mvcEnteredAmount floatValue]);
+            }
+            
+            if (_useCash) {
+                if ([remiainingAmount floatValue] == 0) {
+                    if ([_cashMaxBalance floatValue] < [transactionAmount floatValue]) {
+                        totalEnteredAmount = [totalEnteredAmount decimalNumberByAdding:_cashMaxBalance];
+                        prepiadEnteredAmount = _cashMaxBalance;
+                    }
+                    else {
+                        totalEnteredAmount = [totalEnteredAmount decimalNumberByAdding:transactionAmount];
+                        prepiadEnteredAmount = transactionAmount;
+                    }
+                }
+                else {
+                    if ([_cashMaxBalance floatValue] < [remiainingAmount floatValue]) {
+                        totalEnteredAmount = [totalEnteredAmount decimalNumberByAdding:_cashMaxBalance];
+                        prepiadEnteredAmount = _cashMaxBalance;
+                    }
+                    else {
+                        totalEnteredAmount = [totalEnteredAmount decimalNumberByAdding:remiainingAmount];
+                        prepiadEnteredAmount = remiainingAmount;
+                    }
+                }
+                
+                if ([remiainingAmount floatValue] != 0) {
+                    remiainingAmount = [transactionAmount decimalNumberBySubtracting:totalEnteredAmount];
+                }
+                else {
+                    remiainingAmount = [transactionAmount decimalNumberBySubtracting:prepiadEnteredAmount];
+                }
+                
+                LogTrace(@"_useCash");
+                LogTrace(@"prepiadEnteredAmount %f", [prepiadEnteredAmount floatValue]);
+            }
+            
+            if (_useOther) {
+                if ([remiainingAmount floatValue] != 0) {
+                    totalEnteredAmount = [totalEnteredAmount decimalNumberByAdding:remiainingAmount];
+                    otherEnteredAmount = remiainingAmount;
+                }
+                else if ([totalEnteredAmount floatValue] != 0 &&
+                         !_useMVC &&
+                         !_useCash) {
+                    otherEnteredAmount = [transactionAmount decimalNumberBySubtracting:totalEnteredAmount];
+                    totalEnteredAmount = [totalEnteredAmount decimalNumberByAdding:otherEnteredAmount];
+                }
+                else {
+                    otherEnteredAmount = [otherEnteredAmount decimalNumberByAdding:transactionAmount];
+                    totalEnteredAmount = [totalEnteredAmount decimalNumberByAdding:otherEnteredAmount];
+                }
+                LogTrace(@"_useOther");
+                LogTrace(@"otherEnteredAmount %f", [otherEnteredAmount floatValue]);
+            }
+            
+            if ([totalEnteredAmount floatValue] > [transactionAmount floatValue]) {
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
                                                                 message:@"Selected payment option is more than transaction amount.\nPlease try again"
                                                                delegate:self
@@ -768,7 +842,7 @@
                 _allSet = NO;
                 return;
             }
-            else if ((mvcEnteredAmount + prepiadEnteredAmount + otherEnteredAmount) < totalAmount){
+            else if ([totalEnteredAmount floatValue] < [transactionAmount floatValue]){
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
                                                                 message:@"Selected payment option is less than transaction amount.\nPlease try again"
                                                                delegate:self
@@ -779,19 +853,24 @@
                 return;
             }
             else {
-                _totalSelectedAmount = mvcEnteredAmount + prepiadEnteredAmount + otherEnteredAmount;
+                _totalSelectedAmount = totalEnteredAmount;
             }
         }
         else {
+            otherEnteredAmount = [otherEnteredAmount decimalNumberByAdding:transactionAmount];
             _totalSelectedAmount = otherEnteredAmount;
+            totalEnteredAmount = otherEnteredAmount;
+            LogTrace(@"_useOther");
+            LogTrace(@"otherEnteredAmount %f", [otherEnteredAmount floatValue]);
         }
     }
+    LogTrace(@"totalEnteredAmount %f", [totalEnteredAmount floatValue]);
     
     _paymentOptions = nil;
     
     if (!_useMVC ||
         !_useCash ||
-        otherEnteredAmount != 0.00) {
+        [otherEnteredAmount floatValue] != 0.00) {
         NSString *cardNumber = [self.cardNumberTextField.text stringByReplacingOccurrencesOfString:@" " withString:@""];
         if (self.isDirectPaymentEnable) {
             if (_segControl.selectedSegmentIndex==0 ||
@@ -833,7 +912,7 @@
                                                            issuerCode:code];
                 
             }
-
+            
         }
         else {
             if (_segControl.selectedSegmentIndex==1 ||
@@ -905,7 +984,7 @@
                     }
                 }
             }
-
+            
         }
     }
     
@@ -918,81 +997,92 @@
         NSString *message = [[NSString alloc] init];
         
         NSString *title;
-        title = [NSString stringWithFormat:@"Payment Summary\n\nTotal Amount : %.02f", _totalSelectedAmount];
+        title = [NSString stringWithFormat:@"Payment Summary\n\nTotal Amount : %@", _totalSelectedAmount];
         
         if (_useSavedAccounts) {
-            if (mvcEnteredAmount != 0.0) {
-                message = [message stringByAppendingString:[NSString stringWithFormat:@"\nMVC Amount : %.02f", mvcEnteredAmount]];
+            if ([mvcEnteredAmount floatValue] != 0.0) {
+                message = [message stringByAppendingString:[NSString stringWithFormat:@"\nMVC Amount : %@", mvcEnteredAmount]];
             }
             
-            if (prepiadEnteredAmount != 0.0) {
-                message = [message stringByAppendingString:[NSString stringWithFormat:@"\nPrepaid Amount : %.02f", prepiadEnteredAmount]];
+            if ([prepiadEnteredAmount floatValue] != 0.0) {
+                message = [message stringByAppendingString:[NSString stringWithFormat:@"\nPrepaid Amount : %@", prepiadEnteredAmount]];
             }
         }
         
-        if (otherEnteredAmount != 0.0) {
-            message = [message stringByAppendingString:[NSString stringWithFormat:@"\nCharge Payment option : %@\nAmount : %.02f", selectedPaymentoption, otherEnteredAmount]];
+        if ([otherEnteredAmount floatValue] != 0.0) {
+            message = [message stringByAppendingString:[NSString stringWithFormat:@"\nCharge Payment option : %@\nAmount : %@", selectedPaymentoption, otherEnteredAmount]];
         }
         
-        if (mvcEnteredAmount == 0.0 &&
-            prepiadEnteredAmount == 0.0 &&
-            otherEnteredAmount == 0.0) {
-            message = [message stringByAppendingString:[NSString stringWithFormat:@"\nCharge Payment option : %@\nAmount : %.02f", selectedPaymentoption, _totalSelectedAmount]];
+        if ([totalEnteredAmount floatValue] != 0.0) {
+            message = [message stringByAppendingString:[NSString stringWithFormat:@"\nTotal selected amount : %@", totalEnteredAmount]];
         }
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
-                                                            message:message
-                                                           delegate:self
-                                                  cancelButtonTitle:@"Not Now"
-                                                  otherButtonTitles:@"Pay", nil];
-            alert.tag = 2000;
-            [alert show];
-        });
+        
+        if ([mvcEnteredAmount floatValue] != 0 ||
+            [prepiadEnteredAmount floatValue] != 0 ||
+            [otherEnteredAmount floatValue] != 0) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+                                                                message:message
+                                                               delegate:self
+                                                      cancelButtonTitle:@"Not Now"
+                                                      otherButtonTitles:@"Pay Now", nil];
+                alert.tag = 2000;
+                [alert show];
+            });
+        }
+        
     }
 }
 
-- (void)smartPayment {
+- (void)simpliPay {
     
     self.indicatorView.hidden = FALSE;
     [self.indicatorView startAnimating];
     
-    [paymentLayer simpliPay:[NSString stringWithFormat:@"%.02f", _totalSelectedAmount]
-                    billURL:BillUrl
-              paymentOption:_paymentOptions
-                     useMVC:_useMVC
-                    useCash:_useCash
-            useDynamicPrice:NO
-                   ruleInfo:nil
-    andParentViewController:self
-          completionHandler:^(CTSPaymentReceipt *paymentReceipt,
-                              NSError *error) {
-              dispatch_async(dispatch_get_main_queue(), ^{
-                  [self.indicatorView stopAnimating];
-                  self.indicatorView.hidden = TRUE;
-              });
-              
-              
-              dispatch_async(dispatch_get_main_queue(), ^{
-                  if (error) {
-                      [UIUtility toastMessageOnScreen:[error localizedDescription]];
-                      NSLog(@"error %@", [error localizedDescription]);
-                      [self.navigationController popViewControllerAnimated:YES];
-                  }
-                  else {
-                      NSLog(@"response %@", paymentReceipt.toDictionary);
-                      
-                      NSString *paymentStatus = paymentReceipt.toDictionary[@"TxStatus"];
-                      if ([paymentStatus length] == 0) {
-                          paymentStatus = paymentReceipt.toDictionary[@"Reason"];
-                      }
-                      
-                      [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"Payment Status: %@", paymentStatus]];
-                      [self resetUI];
-                      [self.navigationController popViewControllerAnimated:YES];
-                  }
-              });
-          }];
+    if (_segControl.selectedSegmentIndex==1 ||
+        _segControl.selectedSegmentIndex==2 ||
+        _segControl.selectedSegmentIndex==3) {
+        _useMVC = NO;
+        _useCash = NO;
+    }
+
+    [paymentLayer requestSimpliPay:[NSString stringWithFormat:@"%.02f", [_totalSelectedAmount floatValue]]
+                           billURL:BillUrl
+                     paymentOption:_paymentOptions
+                            useMVC:_useMVC
+                           useCash:_useCash
+                   useDynamicPrice:NO
+                          ruleInfo:nil
+           andParentViewController:self
+                 completionHandler:^(CTSPaymentReceipt *paymentReceipt,
+                                     NSError *error) {
+                     dispatch_async(dispatch_get_main_queue(), ^{
+                         [self.indicatorView stopAnimating];
+                         self.indicatorView.hidden = TRUE;
+                     });
+                     
+                     
+                     dispatch_async(dispatch_get_main_queue(), ^{
+                         if (error) {
+                             [UIUtility toastMessageOnScreen:[error localizedDescription]];
+                             NSLog(@"error %@", [error localizedDescription]);
+                             [self.navigationController popViewControllerAnimated:YES];
+                         }
+                         else {
+                             NSLog(@"response %@", paymentReceipt.toDictionary);
+                             
+                             NSString *paymentStatus = paymentReceipt.toDictionary[@"TxStatus"];
+                             if ([paymentStatus length] == 0) {
+                                 paymentStatus = paymentReceipt.toDictionary[@"Reason"];
+                             }
+                             
+                             [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"Payment Status: %@", paymentStatus]];
+                             [self resetUI];
+                             [self.navigationController popViewControllerAnimated:YES];
+                         }
+                     });
+                 }];
 }
 
 - (void)loadMoneyInCitrusPay {
@@ -1000,37 +1090,31 @@
     self.indicatorView.hidden = FALSE;
     [self.indicatorView startAnimating];
     
-    [paymentLayer loadMoney:[NSString stringWithFormat:@"%.02f", _totalSelectedAmount]
-                  returnURL:LoadWalletReturnUrl
-              paymentOption:_paymentOptions
-    andParentViewController:self
-          completionHandler:^(CTSPaymentReceipt *paymentReceipt,
-                              NSError *error) {
-              dispatch_async(dispatch_get_main_queue(), ^{
-                  [self.indicatorView stopAnimating];
-                  self.indicatorView.hidden = TRUE;
-              });
-              
-              dispatch_async(dispatch_get_main_queue(), ^{
-                  if (error) {
-                      [UIUtility toastMessageOnScreen:[error localizedDescription]];
-                      NSLog(@"error %@", [error localizedDescription]);
-                      [self.navigationController popViewControllerAnimated:YES];
-                  }
-                  else {
-                      NSLog(@"response %@", paymentReceipt.toDictionary);
-                      
-                      NSString *paymentStatus = paymentReceipt.toDictionary[@"TxStatus"];
-                      if ([paymentStatus length] == 0) {
-                          paymentStatus = paymentReceipt.toDictionary[@"Reason"];
-                      }
-                      
-                      [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"Payment Status: %@", paymentStatus]];
-                      [self resetUI];
-                      [self.navigationController popViewControllerAnimated:YES];
-                  }
-              });
-          }];
+    [paymentLayer requestLoadMoney:[NSString stringWithFormat:@"%.02f", [_totalSelectedAmount floatValue]]
+                         returnURL:LoadWalletReturnUrl
+                     paymentOption:_paymentOptions
+           andParentViewController:self
+                 completionHandler:^(CTSPaymentReceipt *paymentReceipt,
+                                     NSError *error) {
+                     dispatch_async(dispatch_get_main_queue(), ^{
+                         [self.indicatorView stopAnimating];
+                         self.indicatorView.hidden = TRUE;
+                     });
+                     
+                     dispatch_async(dispatch_get_main_queue(), ^{
+                         if (error) {
+                             [UIUtility toastMessageOnScreen:[error localizedDescription]];
+                             NSLog(@"error %@", [error localizedDescription]);
+                             [self.navigationController popViewControllerAnimated:YES];
+                         }
+                         else {
+                             NSLog(@"response %@", paymentReceipt.toDictionary);
+                             [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"Load Money Status %@",[paymentReceipt.toDictionary valueForKey:LoadMoneyResponeKey]]];
+                             [self resetUI];
+                             [self.navigationController popViewControllerAnimated:YES];
+                         }
+                     });
+                 }];
 }
 
 
@@ -1040,41 +1124,41 @@
     self.indicatorView.hidden = FALSE;
     [self.indicatorView startAnimating];
     
-    [paymentLayer simpliPay:[NSString stringWithFormat:@"%.02f", _totalSelectedAmount]
-                    billURL:BillUrl
-              paymentOption:_paymentOptions
-                     useMVC:NO
-                    useCash:NO
-            useDynamicPrice:YES
-                   ruleInfo:self.ruleInfo
-    andParentViewController:self
-          completionHandler:^(CTSPaymentReceipt *paymentReceipt,
-                              NSError *error) {
-              dispatch_async(dispatch_get_main_queue(), ^{
-                  [self.indicatorView stopAnimating];
-                  self.indicatorView.hidden = TRUE;
-              });
-              
-              dispatch_async(dispatch_get_main_queue(), ^{
-                  if (error) {
-                      [UIUtility toastMessageOnScreen:[error localizedDescription]];
-                      NSLog(@"error %@", [error localizedDescription]);
-                      [self.navigationController popViewControllerAnimated:YES];
-                  }
-                  else {
-                      NSLog(@"response %@", paymentReceipt.toDictionary);
-                      
-                      NSString *paymentStatus = paymentReceipt.toDictionary[@"TxStatus"];
-                      if ([paymentStatus length] == 0) {
-                          paymentStatus = paymentReceipt.toDictionary[@"Reason"];
-                      }
-                      
-                      [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"Payment Status: %@", paymentStatus]];
-                      [self resetUI];
-                      [self.navigationController popViewControllerAnimated:YES];
-                  }
-              });
-          }];
+    [paymentLayer requestSimpliPay:[NSString stringWithFormat:@"%.02f", [_totalSelectedAmount floatValue]]
+                           billURL:BillUrl
+                     paymentOption:_paymentOptions
+                            useMVC:NO
+                           useCash:NO
+                   useDynamicPrice:YES
+                          ruleInfo:self.ruleInfo
+           andParentViewController:self
+                 completionHandler:^(CTSPaymentReceipt *paymentReceipt,
+                                     NSError *error) {
+                     dispatch_async(dispatch_get_main_queue(), ^{
+                         [self.indicatorView stopAnimating];
+                         self.indicatorView.hidden = TRUE;
+                     });
+                     
+                     dispatch_async(dispatch_get_main_queue(), ^{
+                         if (error) {
+                             [UIUtility toastMessageOnScreen:[error localizedDescription]];
+                             NSLog(@"error %@", [error localizedDescription]);
+                             [self.navigationController popViewControllerAnimated:YES];
+                         }
+                         else {
+                             NSLog(@"response %@", paymentReceipt.toDictionary);
+                             
+                             NSString *paymentStatus = paymentReceipt.toDictionary[@"TxStatus"];
+                             if ([paymentStatus length] == 0) {
+                                 paymentStatus = paymentReceipt.toDictionary[@"Reason"];
+                             }
+                             
+                             [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"Payment Status: %@", paymentStatus]];
+                             [self resetUI];
+                             [self.navigationController popViewControllerAnimated:YES];
+                         }
+                     });
+                 }];
     
 }
 
@@ -1326,24 +1410,10 @@ replacementString:(NSString *)string {
                 if ([balanceDict[@"maxBalance"] floatValue] != 0.00) {
                     if (_useMVC) {
                         cell.accessoryType = UITableViewCellAccessoryCheckmark;
-                        if (_amountDistribution.enoughMVCAndCash) {
-                            mvcEnteredAmount = [_amountDistribution.mvcAmount floatValue];
-                            remainingAmount_tobePaid = [self.amount floatValue] - mvcEnteredAmount;
-                            ((UILabel *) [cell.contentView viewWithTag:1003]).text = @"Uncheck row to pay using other payment options";
-                        }
-                        else {
-                            mvcEnteredAmount = [_amountDistribution.mvcAmount floatValue];
-                            remainingAmount_tobePaid = [self.amount floatValue] - mvcEnteredAmount;
-                            ((UILabel *) [cell.contentView viewWithTag:1003]).text = [NSString stringWithFormat:@"Select an other option to pay balance Rs : %.02f", remainingAmount_tobePaid];
-                        }
-                    }
-                    else {
-                        ((UILabel *) [cell.contentView viewWithTag:1003]).text = [NSString stringWithFormat:@"Select an option to pay balance Rs : %.02f", [self.amount floatValue]];
                     }
                 }
                 else {
                     ((UILabel *) [cell.contentView viewWithTag:1003]).text = @"Insufficient balance. Please tap on other payment option.";
-                    remainingAmount_tobePaid = [self.amount floatValue];
                 }
             }
             else if ([balanceDict[@"paymentMode"]  isEqualToString:@"PREPAID_CARD"]) {
@@ -1353,35 +1423,13 @@ replacementString:(NSString *)string {
                 if ([balanceDict[@"maxBalance"] floatValue] != 0.00) {
                     if (_useCash) {
                         cell.accessoryType = UITableViewCellAccessoryCheckmark;
-                        if (_amountDistribution.enoughMVCAndCash) {
-                            prepiadEnteredAmount = remainingAmount_tobePaid;
-                            remainingAmount_tobePaid = [self.amount floatValue] - (mvcEnteredAmount + prepiadEnteredAmount);
-                            ((UILabel *) [cell.contentView viewWithTag:1003]).text = @"Uncheck row to pay using other payment options";
-                        }
-                        else {
-                            if (_cashMaxBalance < remainingAmount_tobePaid) {
-                                prepiadEnteredAmount = _cashMaxBalance;
-                                if (remainingAmount_tobePaid != 0.00) {
-                                    remainingAmount_tobePaid =  remainingAmount_tobePaid - prepiadEnteredAmount;
-                                }
-                            }
-                            else {
-                                prepiadEnteredAmount = remainingAmount_tobePaid;
-                                remainingAmount_tobePaid =  remainingAmount_tobePaid - prepiadEnteredAmount;
-                            }
-                            ((UILabel *) [cell.contentView viewWithTag:1003]).text = [NSString stringWithFormat:@"Select an other option to pay balance Rs : %.02f", remainingAmount_tobePaid];
-                        }
-                        
-                    }
-                    else {
-                        ((UILabel *) [cell.contentView viewWithTag:1003]).text = [NSString stringWithFormat:@"Select an option to pay balance Rs : %.02f", [self.amount floatValue]];
                     }
                 }
                 else {
                     ((UILabel *) [cell.contentView viewWithTag:1003]).text = @"Insufficient balance. Please tap on other payment option.";
-                    remainingAmount_tobePaid = [self.amount floatValue] - (prepiadEnteredAmount + mvcEnteredAmount);
                 }
             }
+            
         }
         else if (indexPath.section == 1 ||
                  self.landingScreen == 0 ||
@@ -1457,30 +1505,21 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
             
             if ([balanceDict[@"maxBalance"] floatValue] != 0.00) {
                 if([tableView cellForRowAtIndexPath:indexPath].accessoryType == UITableViewCellAccessoryCheckmark) {
-                    [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
                     if ([balanceDict[@"paymentMode"] isEqualToString:@"MVC"]) {
                         _useMVC = NO;
-                        if (_cashMaxBalance > [self.amount floatValue]) {
-                            prepiadEnteredAmount = [self.amount floatValue];
+                        [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
+                        if ([_cashMaxBalance floatValue] < [transactionAmount floatValue]) {
                             _useCash = YES;
                             NSIndexPath * newIndexPath = [NSIndexPath  indexPathForRow:indexPath.row+1 inSection:indexPath.section];
                             [tableView cellForRowAtIndexPath:newIndexPath].accessoryType = UITableViewCellAccessoryCheckmark;
-                            if (remainingAmount_tobePaid != 0.00) {
-                                remainingAmount_tobePaid =  remainingAmount_tobePaid - prepiadEnteredAmount;
-                            }
-                            mvcEnteredAmount = 0.00;
-                        }
-                        else {
-                            mvcEnteredAmount = 0.00;
-                            remainingAmount_tobePaid =  [self.amount floatValue] - prepiadEnteredAmount;
                         }
                         ((UILabel *) [[tableView cellForRowAtIndexPath:indexPath].contentView viewWithTag:1003]).text = @"Check row to pay using MVC payment options";
                     }
+                    
                     if ([balanceDict[@"paymentMode"] isEqualToString:@"PREPAID_CARD"]) {
                         _useCash = NO;
-                        remainingAmount_tobePaid = remainingAmount_tobePaid + prepiadEnteredAmount;
-                        prepiadEnteredAmount = 0.00;
-                        ((UILabel *) [[tableView cellForRowAtIndexPath:indexPath].contentView viewWithTag:1003]).text = @"Check row to pay using PREPAID payment options";
+                        [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
+                        ((UILabel *) [[tableView cellForRowAtIndexPath:indexPath].contentView viewWithTag:1003]).text = @"Check row to pay using Prepaid payment options";
                     }
                     
                     if (![balanceDict[@"paymentMode"] isEqualToString:@"PREPAID_CARD"] &&
@@ -1489,32 +1528,16 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
                     }
                 }
                 else {
-                    [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
                     if ([balanceDict[@"paymentMode"] isEqualToString:@"MVC"]) {
                         _useMVC = YES;
-                        
-                        if (_amountDistribution.enoughMVCAndCash) {
-                            mvcEnteredAmount = [self.amount floatValue];
-                            ((UILabel *) [[tableView cellForRowAtIndexPath:indexPath].contentView viewWithTag:1003]).text = @"Uncheck row to pay using other payment options";
-                        }
-                        else {
-                            remainingAmount_tobePaid = [self.amount floatValue] - [balanceDict[@"maxBalance"] floatValue];
-                            ((UILabel *) [[tableView cellForRowAtIndexPath:indexPath].contentView viewWithTag:1003]).text = [NSString stringWithFormat:@"Select an other option to pay balance Rs : %.02f", remainingAmount_tobePaid];
-                            mvcEnteredAmount = [balanceDict[@"maxBalance"] floatValue];
-                        }
+                        [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
+                        ((UILabel *) [[tableView cellForRowAtIndexPath:indexPath].contentView viewWithTag:1003]).text = @"Uncheck row to pay using other payment options";
                     }
+                    
                     if ([balanceDict[@"paymentMode"] isEqualToString:@"PREPAID_CARD"]) {
                         _useCash = YES;
-                        if (_amountDistribution.enoughMVCAndCash) {
-                            prepiadEnteredAmount = _cashMaxBalance;
-                            ((UILabel *) [[tableView cellForRowAtIndexPath:indexPath].contentView viewWithTag:1003]).text = @"Uncheck row to pay using other payment options";
-                        }
-                        else {
-                            remainingAmount_tobePaid = [self.amount floatValue] - [balanceDict[@"maxBalance"] floatValue];
-                            ((UILabel *) [[tableView cellForRowAtIndexPath:indexPath].contentView viewWithTag:1003]).text = [NSString stringWithFormat:@"Select an other option to pay balance Rs : %.02f", remainingAmount_tobePaid];
-                            prepiadEnteredAmount = _cashMaxBalance;
-                        }
-                        
+                        [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
+                        ((UILabel *) [[tableView cellForRowAtIndexPath:indexPath].contentView viewWithTag:1003]).text = @"Uncheck row to pay using other payment options";
                     }
                     
                     if (![balanceDict[@"paymentMode"] isEqualToString:@"PREPAID_CARD"] &&
@@ -1536,9 +1559,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
                 });
             }
         }
-        else if (indexPath.section == 1 ||
-                 self.landingScreen == 0 ||
-                 self.landingScreen == 2) {
+        if (indexPath.section == 1 ||
+            self.landingScreen == 0 ||
+            self.landingScreen == 2) {
             
             NSMutableDictionary *accountsDict = [[NSMutableDictionary alloc] init];
             NSDictionary *oldDict = (NSDictionary *)[_savedAccountsArray objectAtIndex:indexPath.row];
@@ -1549,9 +1572,10 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
                 selectedRow = NSNotFound;
                 selectedIndexPath = nil;
                 
+                _useOther = NO;
+                
                 [accountsDict setObject:@"0" forKey:@"selected"];
                 [_savedAccountsArray replaceObjectAtIndex:indexPath.row withObject:accountsDict];
-                otherEnteredAmount = 0.00;
                 
                 if (oldIndexPath != indexPath &&
                     oldDictionary != accountsDict) {
@@ -1574,7 +1598,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
                 
                 
                 if ([accountsDict[@"paymentMode"] isEqualToString:@"NET_BANKING"]) {
-                    otherEnteredAmount = remainingAmount_tobePaid;
+                    _useOther = YES;
                     
                     if (oldIndexPath != indexPath &&
                         oldDictionary != accountsDict) {
@@ -1591,26 +1615,28 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
                     selectedPaymentoption = accountsDict[@"bank"];
                 }
                 else {
-                    otherEnteredAmount = remainingAmount_tobePaid;
                     
                     JSONModelError* jsonError;
                     CTSConsumerProfileDetails* consumerProfileDetails = [[CTSConsumerProfileDetails alloc]
                                                                          initWithDictionary:[_savedAccountsArray objectAtIndex:indexPath.row]
                                                                          error:&jsonError];
-
+                    
                     if ([accountsDict[@"paymentMode"] isEqualToString:@"DEBIT_CARD"]) {
                         _paymentOptions = [CTSPaymentOptions DebitCardTokenized:consumerProfileDetails];
-                     }
+                    }
                     else if ([accountsDict[@"paymentMode"] isEqualToString:@"CREDIT_CARD"]) {
                         _paymentOptions = [CTSPaymentOptions CreditCardTokenized:consumerProfileDetails];
                     }
-
+                    
                     if ([_paymentOptions canDoOneTapPayment]) {
                         //do not prompt user for CVV
+                        LogTrace(@"found Stored OneTap Paymentinfo, will do the OneTapPayment");
+                        
                         _paymentOptions.cvv = nil;
                         cvvText = nil;
-
-                        otherEnteredAmount = remainingAmount_tobePaid;
+                        
+                        _useOther = YES;
+                        
                         
                         if (oldIndexPath != selectedIndexPath &&
                             oldDictionary != accountsDict) {
@@ -1623,10 +1649,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
                         
                         [self setPaymentInfoForSmartPay];
                         [self paymentSummary];
-
+                        
                     }
                     else {
                         //get cvv from user
+                        LogTrace(@"no oneTapPaymentInfo found for the token");
                         dispatch_async(dispatch_get_main_queue(), ^{
                             UIAlertView *cvvAlert = [[UIAlertView alloc] initWithTitle:@""
                                                                                message:@"Please enter cvv."
@@ -1639,7 +1666,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
                             [cvvAlert show];
                         });
                     }
-
+                    
                 }
                 
             }
@@ -1668,7 +1695,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
             
             cvvText = alertTextField.text;
             
-            otherEnteredAmount = remainingAmount_tobePaid;
+            _useOther = YES;
             
             if (oldIndexPath != selectedIndexPath &&
                 oldDictionary != accountsDict) {
@@ -1687,7 +1714,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
             NSDictionary *oldDict = (NSDictionary *)[_savedAccountsArray objectAtIndex:oldIndexPath.row];
             [accountsDict addEntriesFromDictionary:oldDict];
             
-            otherEnteredAmount = 0.00;;
+            _useOther = NO;
             
             if (oldIndexPath != selectedIndexPath &&
                 oldDictionary != accountsDict) {

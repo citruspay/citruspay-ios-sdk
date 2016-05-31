@@ -39,31 +39,36 @@ class HomeViewController: BaseClassViewController {
     
     func showAndVerifyOtp() -> Void {
         
-        let alert = UIAlertController (title: "", message: "Please enter the OTP sent to your phone", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
-            // Now do whatever you want with inputTextField (remember to unwrap the optional)
-            self.authLayer?.requestMasterLinkSignInWithPassword(alert.textFields![0].text,
-                passwordType: PasswordTypeOtp,
-                completionHandler: { (error) -> Void in
-                if (error != nil) {
-                    // Handle Error
-                    UIUtility.toastMessageOnScreen("Verification Failed")
-                    print("Verification Failed")
-                }
-                else{
-                    // Handle Success
-                    UIUtility.toastMessageOnScreen("Success")
-                    print("success")
-                }
+        if #available(iOS 8.0, *) {
+            let alert = UIAlertController (title: "", message: "Please enter the OTP sent to your phone", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+                // Now do whatever you want with inputTextField (remember to unwrap the optional)
+                self.authLayer?.requestMasterLinkSignInWithPassword(alert.textFields![0].text,
+                    passwordType: PasswordTypeOtp,
+                    completionHandler: { (error) -> Void in
+                        if (error != nil) {
+                            // Handle Error
+                            UIUtility.toastMessageOnScreen("Verification Failed")
+                            print("Verification Failed")
+                        }
+                        else{
+                            // Handle Success
+                            UIUtility.toastMessageOnScreen("Success")
+                            print("success")
+                        }
+                })
+            }))
+            alert.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
+                textField.placeholder = "OTP"
+                textField.keyboardType=UIKeyboardType.NumberPad
             })
-        }))
-        alert.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
-            textField.placeholder = "OTP"
-            textField.keyboardType=UIKeyboardType.NumberPad
-        })
-        
-        self.presentViewController(alert, animated: true, completion: nil)
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     

@@ -82,8 +82,8 @@ extern NSString * const LoadMoneyResponeKey;
 @protocol CTSPaymentProtocol<NSObject>
 @optional
 - (void)payment:(CTSPaymentLayer*)layer
-    didMakeUserPayment:(CTSPaymentTransactionRes*)paymentInfo
-                 error:(NSError*)error;
+didMakeUserPayment:(CTSPaymentTransactionRes*)paymentInfo
+          error:(NSError*)error;
 
 /**
  *  Guest payment callback
@@ -94,8 +94,8 @@ extern NSString * const LoadMoneyResponeKey;
  */
 @optional
 - (void)payment:(CTSPaymentLayer*)layer
-    didMakePaymentUsingGuestFlow:(CTSPaymentTransactionRes*)paymentInfo
-                           error:(NSError*)error;
+didMakePaymentUsingGuestFlow:(CTSPaymentTransactionRes*)paymentInfo
+          error:(NSError*)error;
 
 //Vikas new payment api
 /**
@@ -119,8 +119,8 @@ didMakeNewPaymentUsingGuestFlow:(NSString*)responseString error:(NSError*)error;
  */
 @optional
 - (void)payment:(CTSPaymentLayer*)layer
-    didMakeTokenizedPayment:(CTSPaymentTransactionRes*)paymentInfo
-                      error:(NSError*)error;
+didMakeTokenizedPayment:(CTSPaymentTransactionRes*)paymentInfo
+          error:(NSError*)error;
 
 /**
  *  pg setting are recived for merchant
@@ -130,8 +130,8 @@ didMakeNewPaymentUsingGuestFlow:(NSString*)responseString error:(NSError*)error;
  */
 @optional
 - (void)payment:(CTSPaymentLayer*)layer
-    didPaymentCitrusCash:(CTSCitrusCashRes*)pgSettings
-                           error:(NSError*)error;
+didPaymentCitrusCash:(CTSCitrusCashRes*)pgSettings
+          error:(NSError*)error;
 
 @optional
 - (void)payment:(CTSPaymentLayer*)layer
@@ -147,7 +147,7 @@ didGetPrepaidBill:(CTSPrepaidBill*)bill
 
 @optional
 - (void)payment:(CTSPaymentLayer*)layer
-didLoadMoney:(CTSPaymentTransactionRes*)paymentInfo
+   didLoadMoney:(CTSPaymentTransactionRes*)paymentInfo
           error:(NSError*)error;
 
 
@@ -180,41 +180,41 @@ typedef void (^ASMakeUserPaymentCallBack)(CTSPaymentTransactionRes* paymentInfo,
                                           NSError* error);
 
 typedef void (^ASMakeTokenizedPaymentCallBack)(
-    CTSPaymentTransactionRes* paymentInfo,
-    NSError* error);
+                                               CTSPaymentTransactionRes* paymentInfo,
+                                               NSError* error);
 
 typedef void (^ASMakeGuestPaymentCallBack)(
-    CTSPaymentTransactionRes* paymentInfo,
-    NSError* error);
+                                           CTSPaymentTransactionRes* paymentInfo,
+                                           NSError* error);
 
 typedef void (^ASMakeNewPaymentCallBack)( NSString* responseString , NSError* error);
 
 typedef void (^ASMakeCitruspayCallBackInternal)(CTSPaymentTransactionRes* paymentInfo,
-                                           NSError* error);
+                                                NSError* error);
 
 typedef void (^ASCitruspayCallback)(CTSCitrusCashRes* citrusCashResponse,
-                                                NSError* error);
+                                    NSError* error);
 
 typedef void (^ASGetMerchantPgSettingsCallBack)(CTSPgSettings* pgSettings,
                                                 NSError* error);
 
 typedef void (^ASGetPrepaidBill)(CTSPrepaidBill* prepaidBill,
-                                                NSError* error);
-
-typedef void (^ASLoadMoneyCallBack)(CTSPaymentTransactionRes* paymentInfo,
-                                          NSError* error);
-
-typedef void (^ASCashoutToBankCallBack)(CTSCashoutToBankRes *cashoutRes,
-                                    NSError* error);
-
-typedef void (^ASGetPGHealth)(CTSPGHealthRes* pgHealthRes,
                                  NSError* error);
 
-typedef void (^ASPerformDynamicPricingCallback)(CTSDyPResponse* dyPResponse,
+typedef void (^ASLoadMoneyCallBack)(CTSPaymentTransactionRes* paymentInfo,
+                                    NSError* error);
+
+typedef void (^ASCashoutToBankCallBack)(CTSCashoutToBankRes *cashoutRes,
+                                        NSError* error);
+
+typedef void (^ASGetPGHealth)(CTSPGHealthRes* pgHealthRes,
                               NSError* error);
 
-typedef void (^ASDPValidateRuleCallback)(CTSDyPResponse* dyPResponse,
+typedef void (^ASPerformDynamicPricingCallback)(CTSDyPResponse* dyPResponse,
                                                 NSError* error);
+
+typedef void (^ASDPValidateRuleCallback)(CTSDyPResponse* dyPResponse,
+                                         NSError* error);
 
 typedef void (^ASMoneyTransferCallback)(CTSTransferMoneyResponse* transferMoneyRes ,NSError* error);
 
@@ -239,12 +239,12 @@ typedef void (^CTSPaymentDistributionCompletionHandler)(CTSSimpliChargeDistribut
                 withCompletionHandler:(ASMakeTokenizedPaymentCallBack)callback DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:customParams:returnViewController:withCompletionHandler:");
 
 - (void)requestChargePayment:(CTSPaymentDetailUpdate*)paymentInfo
-                      withContact:(CTSContactUpdate*)contactInfo
-                      withAddress:(CTSUserAddress*)userAddress
-                             bill:(CTSBill *)bill
+                 withContact:(CTSContactUpdate*)contactInfo
+                 withAddress:(CTSUserAddress*)userAddress
+                        bill:(CTSBill *)bill
                 customParams:(NSDictionary *)custParams
-            withCompletionHandler:(ASMakeGuestPaymentCallBack)callback
- DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:customParams:returnViewController:withCompletionHandler:");
+       withCompletionHandler:(ASMakeGuestPaymentCallBack)callback
+DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:customParams:returnViewController:withCompletionHandler:");
 
 - (void)requestLoadMoneyInCitrusPay:(CTSPaymentDetailUpdate *)paymentInfo
                         withContact:(CTSContactUpdate*)contactInfo
@@ -252,14 +252,14 @@ typedef void (^CTSPaymentDistributionCompletionHandler)(CTSSimpliChargeDistribut
                              amount:( NSString *)amount
                           returnUrl:(NSString *)returnUrl
                        customParams:(NSDictionary *)custParams
-              withCompletionHandler:(ASLoadMoneyCallBack)callback  __attribute__((deprecated("Please use loadMoney:returnURL:paymentOption:andParentViewController:completionHandler: instead")));
+              withCompletionHandler:(ASLoadMoneyCallBack)callback  __attribute__((deprecated("Please use requestLoadMoney:returnURL:paymentOption:andParentViewController:completionHandler: instead")));
 
 //new prepaid pay api
 - (void)requestChargeCitrusWalletWithContact:(CTSContactUpdate*)contactInfo
-                               address:(CTSUserAddress*)userAddress
-                                      bill:(CTSBill *)bill
-                      returnViewController:(UIViewController *)controller
-                     withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use simpliPay:billURL:paymentOption:useMVC:useCash:useDynamicPrice:ruleInfo:andParentViewController:completionHandler: instead")));
+                                     address:(CTSUserAddress*)userAddress
+                                        bill:(CTSBill *)bill
+                        returnViewController:(UIViewController *)controller
+                       withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestSimpliPay:billURL:paymentOption:useMVC:useCash:useDynamicPrice:ruleInfo:andParentViewController:completionHandler: instead")));
 
 
 //old prepaid pay api
@@ -281,13 +281,12 @@ typedef void (^CTSPaymentDistributionCompletionHandler)(CTSSimpliChargeDistribut
 
 // single hop
 - (void)requestDirectChargePayment:(CTSPaymentDetailUpdate*)paymentInfo
-                    withContact:(CTSContactUpdate*)contactInfo
-                    withAddress:(CTSUserAddress*)userAddress
-                           bill:(CTSBill *)bill
-           returnViewController:(UIViewController *)controller
-          withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use simpliPay:billURL:paymentOption:useMVC:useCash:useDynamicPrice:ruleInfo:andParentViewController:completionHandler: instead")));
+                       withContact:(CTSContactUpdate*)contactInfo
+                       withAddress:(CTSUserAddress*)userAddress
+                              bill:(CTSBill *)bill
+              returnViewController:(UIViewController *)controller
+             withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestSimpliPay:billURL:paymentOption:useMVC:useCash:useDynamicPrice:ruleInfo:andParentViewController:completionHandler: instead")));
 
-//END DEPRECATED
 
 //moto call
 - (void)requestChargePayment:(CTSPaymentDetailUpdate*)paymentInfo
@@ -296,7 +295,7 @@ typedef void (^CTSPaymentDistributionCompletionHandler)(CTSSimpliChargeDistribut
                         bill:(CTSBill *)bill
                 customParams:(NSDictionary *)custParams
         returnViewController:(UIViewController *)controller
-       withCompletionHandler:(ASCitruspayCallback)callback;
+       withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestSimpliPay:billURL:paymentOption:useMVC:useCash:useDynamicPrice:ruleInfo:andParentViewController:completionHandler: instead")));
 
 
 - (void)requestLoadMoneyInCitrusPay:(CTSPaymentDetailUpdate *)paymentInfo
@@ -306,14 +305,36 @@ typedef void (^CTSPaymentDistributionCompletionHandler)(CTSSimpliChargeDistribut
                           returnUrl:(NSString *)returnUrl
                        customParams:(NSDictionary *)custParams
                returnViewController:(UIViewController *)controller
-              withCompletionHandler:(ASCitruspayCallback)callback;
+              withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestLoadMoney:returnURL:paymentOption:andParentViewController:completionHandler: instead")));
+
 
 - (void)requestChargeDynamicPricingContact:(CTSContactUpdate*)contactInfo
-                 withAddress:(CTSUserAddress*)userAddress
-                customParams:(NSDictionary *)custParams
-        returnViewController:(UIViewController *)controller
-       withCompletionHandler:(ASCitruspayCallback)callback;
+                               withAddress:(CTSUserAddress*)userAddress
+                              customParams:(NSDictionary *)custParams
+                      returnViewController:(UIViewController *)controller
+                     withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestSimpliPay:billURL:paymentOption:useMVC:useCash:useDynamicPrice:ruleInfo:andParentViewController:completionHandler: instead")));
 
+-(void)requestPerformDynamicPricingRule:(CTSRuleInfo *)ruleInfo
+                            paymentInfo:(CTSPaymentDetailUpdate *)payment
+                                   bill:(CTSBill *)bill
+                                   user:(CTSUser *)user
+                                   type:(DPRequestType)requestType
+                            extraParams:(NSDictionary *)extraParams
+                      completionHandler:(ASPerformDynamicPricingCallback)callback __attribute__((deprecated("Please use requestSimpliPay:billURL:paymentOption:useMVC:useCash:useDynamicPrice:ruleInfo:andParentViewController:completionHandler: instead")));
+
+-(void)requestPerformDynamicPricingRule:(CTSRuleInfo *)ruleInfo
+                            paymentInfo:(CTSPaymentDetailUpdate *)payment
+                                billUrl:(NSString *)billUrl
+                                   user:(CTSUser *)user
+                            extraParams:(NSDictionary *)extraParams
+                      completionHandler:(ASPerformDynamicPricingCallback)callback __attribute__((deprecated("Please use requestSimpliPay:billURL:paymentOption:useMVC:useCash:useDynamicPrice:ruleInfo:andParentViewController:completionHandler: instead")));
+
+//END DEPRECATED
+
+
+- (void)requestDPQueryMerchant:(NSString *)merchantAccessKey
+                     signature:(NSString *)signature
+             completionHandler:(ASPerformDynamicPricingCallback)callback;
 
 /**
  *  request card pament options(visa,master,debit) and netbanking settngs for
@@ -346,37 +367,18 @@ typedef void (^CTSPaymentDistributionCompletionHandler)(CTSSimpliChargeDistribut
 -(void)requestCardDetails:(NSString *)firstSix
         completionHandler:(ASCardBinServiceCallback)callback;
 
--(void)requestDPQueryMerchant:(NSString *)merchantAccessKey
-                    signature:(NSString *)signature
-            completionHandler:(ASPerformDynamicPricingCallback)callback;
-
--(void)requestDPRuleCheck:(CTSDyPValidateRuleReq *)validateRule
-                     type:(DPRequestType)requestType
-        completionHandler:(ASPerformDynamicPricingCallback)callback;
-
 -(void)requestTransferMoneyTo:(NSString *)username
                        amount:(NSString *)amount
                       message:(NSString *)message
             completionHandler:(ASMoneyTransferCallback)callback;
 
--(void)requestPerformDynamicPricingRule:(CTSRuleInfo *)ruleInfo
-                            paymentInfo:(CTSPaymentDetailUpdate *)payment
-                                   bill:(CTSBill *)bill
-                                   user:(CTSUser *)user
-                                   type:(DPRequestType)requestType
-                            extraParams:(NSDictionary *)extraParams
-                      completionHandler:(ASPerformDynamicPricingCallback)callback;
-
--(void)requestPerformDynamicPricingRule:(CTSRuleInfo *)ruleInfo
-                            paymentInfo:(CTSPaymentDetailUpdate *)payment
-                                billUrl:(NSString *)billUrl
-                                   user:(CTSUser *)user
-                            extraParams:(NSDictionary *)extraParams
-                      completionHandler:(ASPerformDynamicPricingCallback)callback;
-
 - (void)requestLoadMoneyPgSettingsCompletionHandler:(ASGetMerchantPgSettingsCallBack)callback;
 
 
+/**
+ *  internal methods
+ ***************************************************************************************************************
+ */
 - (CTSPaymentRequest*)configureReqPayment:(CTSPaymentDetailUpdate*)paymentInfo
                                   contact:(CTSContactUpdate*)contact
                                   address:(CTSUserAddress*)address
@@ -391,8 +393,13 @@ typedef void (^CTSPaymentDistributionCompletionHandler)(CTSSimpliChargeDistribut
 
 -(HVDOverlay *)displayOverlay:(HVDOverlay *)overlay;
 
+-(void)cvvEncrypt:(CTSCitrusCashRes *)response error:(NSError *)error;
 /**
- *  simpliPay - for all payment single end point
+ ***************************************************************************************************************
+ */
+
+/**
+ *  requestSimpliPay - for all payment single end point
  *
  *  @param amount - set transaction amount
  *  @param billURL - set bill generator url
@@ -404,15 +411,15 @@ typedef void (^CTSPaymentDistributionCompletionHandler)(CTSSimpliChargeDistribut
  *  @param andParentViewController - set current controller self object
  *  @param completionHandler - return callback into paymentReceipt & error
  */
-- (void)simpliPay:(NSString *)amount
-          billURL:(NSString *)billURL
-    paymentOption:(CTSPaymentOptions <Optional> *)paymentOption
-           useMVC:(BOOL)useMVC
-          useCash:(BOOL)useCash
-  useDynamicPrice:(BOOL)useDynamicPrice
-         ruleInfo:(CTSRuleInfo <Optional> *)ruleInfo
-andParentViewController:(UIViewController *)controller
-completionHandler:(CTSSmartPayCompletionHandler)completion;
+- (void)requestSimpliPay:(NSString *)amount
+                 billURL:(NSString *)billURL
+           paymentOption:(CTSPaymentOptions <Optional> *)paymentOption
+                  useMVC:(BOOL)useMVC
+                 useCash:(BOOL)useCash
+         useDynamicPrice:(BOOL)useDynamicPrice
+                ruleInfo:(CTSRuleInfo <Optional> *)ruleInfo
+ andParentViewController:(UIViewController *)controller
+       completionHandler:(CTSSmartPayCompletionHandler)completion;
 
 
 /**
@@ -425,7 +432,7 @@ completionHandler:(CTSSmartPayCompletionHandler)completion;
                    completionHandler:(CTSPaymentDistributionCompletionHandler)completion;
 
 /**
- *  load money - into Citruspay account
+ *  requestLoadMoney - into Citruspay account
  *
  *  @param amount - set transaction amount
  *  @param returnURL - set return url
@@ -433,10 +440,10 @@ completionHandler:(CTSSmartPayCompletionHandler)completion;
  *  @param andParentViewController - set current controller self object
  *  @param completionHandler - return callback into paymentReceipt & error
  */
-- (void)loadMoney:(NSString *)amount
-        returnURL:(NSString *)returnURL
-    paymentOption:(CTSPaymentOptions *)paymentOption
-andParentViewController:(UIViewController *)controller
-completionHandler:(CTSSmartPayCompletionHandler)completion;
+- (void)requestLoadMoney:(NSString *)amount
+               returnURL:(NSString *)returnURL
+           paymentOption:(CTSPaymentOptions *)paymentOption
+ andParentViewController:(UIViewController *)controller
+       completionHandler:(CTSSmartPayCompletionHandler)completion;
 
 @end

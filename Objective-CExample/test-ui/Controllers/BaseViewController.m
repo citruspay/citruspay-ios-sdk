@@ -57,6 +57,27 @@
     authLayer = [CTSAuthLayer fetchSharedAuthLayer];
     proifleLayer = [CTSProfileLayer fetchSharedProfileLayer];
     paymentLayer = [CTSPaymentLayer fetchSharedPaymentLayer];
+
+//    contactInfo = [[CTSContactUpdate alloc] init];
+//    contactInfo.firstName = TEST_FIRST_NAME;
+//    contactInfo.lastName = TEST_LAST_NAME;
+//    contactInfo.email = TEST_EMAIL;
+//    contactInfo.mobile = TEST_MOBILE;
+//    
+//    addressInfo = [[CTSUserAddress alloc] init];
+//    addressInfo.city = TEST_CITY;
+//    addressInfo.country = TEST_COUNTRY;
+//    addressInfo.state = TEST_STATE;
+//    addressInfo.street1 = TEST_STREET1;
+//    addressInfo.street2 = TEST_STREET2;
+//    addressInfo.zip = TEST_ZIP;
+    
+    customParams = @{
+                     @"USERDATA2":@"MOB_RC|9988776655",
+                     @"USERDATA10":@"test",
+                     @"USERDATA4":@"MOB_RC|test@gmail.com",
+                     @"USERDATA3":@"MOB_RC|4111XXXXXXXX1111",
+                     };
 }
 
 @end
