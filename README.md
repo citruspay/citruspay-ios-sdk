@@ -78,7 +78,7 @@ $ open citruspay-ios-sdk
 
 
 #### Using Library Binaries (manual way)
-+ Download the latest zip file from our [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/3.5.0/CitrusPay-Framework.zip)
++ Download the latest zip file from our [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/3.6.0/Framework.zip)
 + Unzip the file
 + Or clone it 
 ~~~{.m}
@@ -121,7 +121,7 @@ When you are ready, look at the samples below to learn how to interact with the 
 
 ## Samples
 
-See the [Objective-C Example app](https://github.com/citruspay/citruspay-ios-sdk/tree/master/Objective-CExample) [Swift Example app](https://github.com/citruspay/citruspay-ios-sdk/tree/master/SwiftExample) for a working implementation of all API methods.
+See the [Objective-C Example app](https://github.com/citruspay/citruspay-ios-sdk/tree/master/Objective-CExample) and [Swift Example app](https://github.com/citruspay/citruspay-ios-sdk/tree/master/SwiftExample) for a working implementation of all API methods.
 
 Note: make sure to open the project using `CitrusPay.xcworkspace` and not `CitrusPay.xcodeproj` for Cocoa-Pod Example.
 
