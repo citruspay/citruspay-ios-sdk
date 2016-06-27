@@ -2,7 +2,7 @@
 
 ![CitrusPay logo](http://www.citruspay.com/images/logo.png "CitrusPay") 
 
-## CitrusPay
+## CitrusPay iOS SDK V 3.6.0
 
 ## Introduction
 The CitrusPay iOS SDK enables collection of payments via various payment methods.
