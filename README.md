@@ -2,7 +2,7 @@
 
 ![CitrusPay logo](http://www.citruspay.com/images/logo.png "CitrusPay") 
 
-## CitrusPay iOS SDK V 3.5.0
+## CitrusPay iOS SDK V 3.6.0
 
 ## Introduction
 The CitrusPay iOS SDK enables collection of payments via various payment methods.
@@ -63,8 +63,8 @@ $ git submodule add git://github.com/citruspay/citruspay-ios-sdk.git
 $ git submodule update --init --recursive
 $ open citruspay-ios-sdk
 ~~~
-+ Drag CitrusPay-Framework folder into your existing Xcode project
-+ Navigate to your project's settings, then select the target you wish to add CitrusPay-Framework to
++ Go to "Framework" folder & drag "core-sdk" folder into your existing Xcode project
++ Navigate to your project's settings, then select the target you wish to add "core-sdk" to
 + Navigate to `Build Phases` and expand the `Link Binary With Libraries` section
 + Click the + and `CitrusPay.framework` appropriate to your target's platform
 + Navigate to Build Phases and expand the `Copy Bundle Resources` section
@@ -85,7 +85,7 @@ $ open citruspay-ios-sdk
 $ git clone https://github.com/citruspay/citruspay-ios-sdk.git
 $ open citruspay-ios-sdk
 ~~~
-+ Drag CitrusPay-Framework folder into your existing Xcode project
++ Go to "Framework" folder & drag "core-sdk" folder into your existing Xcode project
 + In Xcode, go to your app's target settings. On the `Build Phases` tab, expand the `Link Binary With Libraries` section.
 + Include the following framework:
     - `CitrusPay.framework`
@@ -102,7 +102,7 @@ $ open citruspay-ios-sdk
 ## Documentation
 HTML documentation is hosted on our [CitrusPay Developer Guide](http://developers.citruspay.com/ios/iosReg.html).
 
-Pdf documentation is available on the [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/3.3.1/citruspay-ios-sdk-guide.pdf).
+Git Wiki documentation is available on the [Git Wiki Documentation](https://github.com/citruspay/citruspay-ios-sdk/wiki).
 
 ## SDK Organization
 
@@ -116,7 +116,7 @@ All other classes in the SDK are data models that are used to exchange data betw
 Detailed reference documentation is available on the reference page for each class.
 
 ## Next Steps
-Head over to the [documentation](https://github.com/citruspay/citruspay-ios-sdk) to see all the API methods available.
+Head over to the [Git Wiki Documentation](https://github.com/citruspay/citruspay-ios-sdk/wiki) to see all the API methods available.
 When you are ready, look at the samples below to learn how to interact with the SDK.
 
 ## Samples

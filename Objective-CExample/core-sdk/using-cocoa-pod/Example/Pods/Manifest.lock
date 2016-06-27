@@ -1,0 +1,17 @@
+PODS:
+  - CitrusPay (3.6.0):
+    - JSONModel
+  - JSONModel (1.2.0)
+
+DEPENDENCIES:
+  - CitrusPay (from `../../../../`)
+
+EXTERNAL SOURCES:
+  CitrusPay:
+    :path: ../../../../
+
+SPEC CHECKSUMS:
+  CitrusPay: be8356a2684625a170cc92885626ac0cbd26ca04
+  JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
+
+COCOAPODS: 0.39.0
