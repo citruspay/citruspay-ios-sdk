@@ -63,7 +63,7 @@ $ git submodule add git://github.com/citruspay/citruspay-ios-sdk.git
 $ git submodule update --init --recursive
 $ open citruspay-ios-sdk
 ~~~
-+ Go to "Framework" folder & drag "core-sdk" folder into your existing Xcode project
++ Navigate to "Framework" folder & drag "core-sdk" folder into your existing Xcode project
 + Navigate to your project's settings, then select the target you wish to add "core-sdk" to
 + Navigate to `Build Phases` and expand the `Link Binary With Libraries` section
 + Click the + and `CitrusPay.framework` appropriate to your target's platform
@@ -85,7 +85,7 @@ $ open citruspay-ios-sdk
 $ git clone https://github.com/citruspay/citruspay-ios-sdk.git
 $ open citruspay-ios-sdk
 ~~~
-+ Go to "Framework" folder & drag "core-sdk" folder into your existing Xcode project
++ Navigate to "Framework" folder & drag "core-sdk" folder into your existing Xcode project
 + In Xcode, go to your app's target settings. On the `Build Phases` tab, expand the `Link Binary With Libraries` section.
 + Include the following framework:
     - `CitrusPay.framework`
@@ -121,9 +121,9 @@ When you are ready, look at the samples below to learn how to interact with the 
 
 ## Samples
 
-See the [Example app](https://github.com/citruspay/citruspay-ios-sdk/tree/master/CitrusPay/Example) for a working implementation of all API methods.
+See the [Objective-C Example app](https://github.com/citruspay/citruspay-ios-sdk/tree/master/Objective-CExample) [Swift Example app](https://github.com/citruspay/citruspay-ios-sdk/tree/master/SwiftExample) for a working implementation of all API methods.
 
-Note: make sure to open the project using `CitrusPay.xcworkspace` and not `CitrusPay.xcodeproj`.
+Note: make sure to open the project using `CitrusPay.xcworkspace` and not `CitrusPay.xcodeproj` for Cocoa-Pod Example.
 
 ### Initializing the SDK
 
@@ -201,7 +201,6 @@ UIImage* image = [CTSUtility fetchBankLogoImageByBankIssuerCode:@"code"];
 ~~~{.m}
 UIImage* image = [CTSUtility fetchBankLogoImageByBankName:@"bank"];
 ~~~
-
 
 
 Following are the specific tasks related to each of the layer 

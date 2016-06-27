@@ -19,7 +19,6 @@
   "ios": {
     "preserve_paths": "**"
   },
-  "public_header_files": "Framework/core-sdk/CitrusPay.framework/**/*.h",
   "vendored_frameworks": "Framework/core-sdk/CitrusPay.framework",
   "resources": "Framework/core-sdk/CitrusPay.bundle",
   "dependencies": {
