@@ -60,15 +60,24 @@ typedef enum {
     CompletionHandlerNotFound,
     UnknownPasswordType,
     NoNewPrepaidPrelivilage,
+    WrongTypeSubscription,
     NoRefreshToken,
     PasswordTypeNotAllowed,
-    LoadMoneyFailed,
     WrongPaymentAmount,
     PaymentInstrumentNotAllowed,
     AlreadyLimitedScope,
     InvalidOperation,
     EmailMobileBothInvalid,
-    NotMobileBasedAccount
+    NotMobileBasedAccount,
+    LoadMoneyFailed,
+    SubscriptionIdInvalid,
+    InvalidAutoloadAmount,
+    InvalidThresholdAmount,
+    NotCreditCard,
+    NoCCLoadMoneyInfoFound,
+    InvalidThresholdAndAutoLoadAmt,
+    NoActiveSubscriptions
+
 } CTSErrorCode;
 
 

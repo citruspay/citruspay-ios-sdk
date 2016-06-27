@@ -30,6 +30,12 @@ extern NSString * const CACHE_KEY_SAVED_PAYMENT_OPTIONS;
 extern NSString * const CACHE_KEY_PG_SETTINGS;
 extern NSString * const CACHE_KEY_MASTER_CITRUS_LINK;
 extern NSString * const CACHE_KEY_LOAD_PG_SETTINGS;
+extern NSString * const CACHE_KEY_IS_AUTO_LOAD_TX;
+extern NSString * const CACHE_KEY_PREPAID_BILL;
+
+
+
+
 
 
 extern NSString * const CACHE_KEY_BLAZECARD_PAYMENT;

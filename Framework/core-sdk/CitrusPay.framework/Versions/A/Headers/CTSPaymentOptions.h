@@ -28,24 +28,24 @@
 * savedCardToken,
 * maxBalance;
 
-+ (CTSPaymentOptions *)CreditCardOption:(NSString *)cardNumber
++ (CTSPaymentOptions *)creditCardOption:(NSString *)cardNumber
                          cardExpiryDate:(NSString *)cardExpiryDate
                                     cvv:(NSString *)cvv;
 
-+ (CTSPaymentOptions *)DebitCardOption:(NSString *)cardNumber
++ (CTSPaymentOptions *)debitCardOption:(NSString *)cardNumber
                         cardExpiryDate:(NSString *)cardExpiryDate
                                    cvv:(NSString *)cvv;
 
-+ (CTSPaymentOptions *)NetBankingOption:(NSString *)bank
++ (CTSPaymentOptions *)netBankingOption:(NSString *)bank
                              issuerCode:(NSString *)issuerCode;
 
-+ (CTSPaymentOptions *)CreditCardTokenized:(CTSConsumerProfileDetails *)paymentDetails;
++ (CTSPaymentOptions *)creditCardTokenized:(CTSConsumerProfileDetails *)paymentDetails;
 
-+ (CTSPaymentOptions *)DebitCardTokenized:(CTSConsumerProfileDetails *)paymentDetails;
++ (CTSPaymentOptions *)debitCardTokenized:(CTSConsumerProfileDetails *)paymentDetails;
 
-+ (CTSPaymentOptions *)NetBankingTokenized:(CTSConsumerProfileDetails *)paymentDetails;
++ (CTSPaymentOptions *)netBankingTokenized:(CTSConsumerProfileDetails *)paymentDetails;
 
-+ (CTSPaymentOptions *)PrepaidOption;
++ (CTSPaymentOptions *)prepaidOption;
 + (CTSPaymentOptions *)MVCOption:(NSString *)campaignCode;
 
 - (void)setTransactionAmount:(NSString *)amount;

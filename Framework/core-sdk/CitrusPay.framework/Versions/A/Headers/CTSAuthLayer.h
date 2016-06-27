@@ -13,6 +13,7 @@
 #import "CTSEotpVerSigninResp.h"
 #import "CTSCitrusLinkRes.h"
 #import "CTSMasterLinkRes.h"
+
 @class CTSLinkUserRes, CTSLinkRes, CTSTokenValidityRes, CTSUserDetails, CTSResponse;
 
 
@@ -185,6 +186,8 @@ typedef void (^ASTokenValidityCallback)(CTSTokenValidityRes *res, NSError* error
 typedef void (^ASErrorCallback)( NSError* error);
 
 typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSError *error);
+
+
 
 
 

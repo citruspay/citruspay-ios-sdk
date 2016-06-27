@@ -7,9 +7,11 @@
 //
 
 #import "CardsViewController.h"
-#import "HMSegmentedControl.h"
 
-@interface CardsViewController () {
+#import "HMSegmentedControl.h"
+#import "AutoloadViewController.h"
+
+@interface CardsViewController () <UIPickerViewDataSource, UIPickerViewDelegate>{
     NSArray *array;
     UITextField *currentTextField;
     UISegmentedControl *_segControl;
@@ -50,6 +52,9 @@
     NSDecimalNumber *_cashMaxBalance;
     NSDecimalNumber *_totalSelectedAmount;
     
+    BOOL isAnySubscriptionActive;
+    UISwitch *autoloadSwitch;
+    UIView *pickerToolBarView;
 }
 @end
 
@@ -86,7 +91,9 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
     [switchView setOn:NO animated:YES];
+    [autoloadSwitch setOn:NO animated:YES];
     
     if (self.landingScreen == 0) {
         self.title = [NSString stringWithFormat:@"Load Money for Amount : %@", self.amount];
@@ -101,94 +108,6 @@
         self.title = [NSString stringWithFormat:@"Payment for Amount : %@", self.amount];
     }
 }
-
-
-- (void)smartPay {
-    
-    CTSPaymentOptions *debitCardPayment = [CTSPaymentOptions DebitCardOption:@"4111111111111111"
-                                                              cardExpiryDate:@"01/18"
-                                                                         cvv:@"000"];
-    [paymentLayer requestSimpliPay:@"10.00"
-                           billURL:BillUrl
-                     paymentOption:debitCardPayment
-                            useMVC:YES
-                           useCash:YES
-                   useDynamicPrice:NO
-                          ruleInfo:nil
-           andParentViewController:self
-                 completionHandler:^(CTSPaymentReceipt *paymentReceipt,
-                                     NSError *error) {
-                     if (error) {
-                         NSLog(@"error %@", [error localizedDescription]);
-                     }
-                     else {
-                         NSLog(@"response %@", paymentReceipt.toDictionary);
-                     }
-                 }];
-}
-
-
-
-- (void)loadmoney {
-    CTSPaymentOptions *debitCardPayment = [CTSPaymentOptions DebitCardOption:@"4111111111111111"
-                                                              cardExpiryDate:@"01/18"
-                                                                         cvv:@"000"];
-    [paymentLayer requestLoadMoney:@"10.00"
-                         returnURL:LoadWalletReturnUrl
-                     paymentOption:debitCardPayment
-           andParentViewController:self
-                 completionHandler:^(CTSPaymentReceipt *paymentReceipt,
-                                     NSError *error) {
-                     if (error) {
-                         NSLog(@"error %@", [error localizedDescription]);
-                     }
-                     else {
-                         NSLog(@"response %@", paymentReceipt.toDictionary);
-                     }
-                 }];
-    
-}
-
-- (void)CalculateSplitPay {
-    
-    [paymentLayer calculatePaymentDistribution:@"10.0"
-                             completionHandler:^(CTSSimpliChargeDistribution *amountDistribution,
-                                                 NSError *error) {
-                                 if (error) {
-                                     NSLog(@"error %@", [error localizedDescription]);
-                                 }
-                                 else {
-                                     CTSPaymentOptions *debitCardPayment = nil;
-                                     if (!amountDistribution.enoughMVCAndCash) {
-                                         debitCardPayment = [CTSPaymentOptions
-                                                             DebitCardOption:@"4111111111111111"
-                                                             cardExpiryDate:@"01/18"
-                                                             cvv:@"000"];
-                                     }
-                                     
-                                     [paymentLayer requestSimpliPay:amountDistribution.totalAmount
-                                                            billURL:BillUrl
-                                                      paymentOption:debitCardPayment
-                                                             useMVC:amountDistribution.useMVC
-                                                            useCash:amountDistribution.useCash
-                                                    useDynamicPrice:NO
-                                                           ruleInfo:nil
-                                            andParentViewController:self
-                                                  completionHandler:^(CTSPaymentReceipt *paymentReceipt,
-                                                                      NSError *error) {
-                                                      if (error) {
-                                                          NSLog(@"error %@", [error localizedDescription]);
-                                                      }
-                                                      else {
-                                                          NSLog(@"response %@", paymentReceipt.toDictionary);
-                                                      }
-                                                      
-                                                  }];
-                                 }
-                             }];
-    
-}
-
 
 #pragma mark - Initial Setting Methods
 
@@ -226,19 +145,39 @@
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resignKeyboard:)];
     [self.ccddtableView addGestureRecognizer:tapRecognizer];
     
-    [self.pickerView setHidden:TRUE];
+//    [self.pickerView setHidden:TRUE];
     
-    UIToolbar *accessoryToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
-    accessoryToolbar.barTintColor = [UIColor orangeColor];
-    // Configure toolbar .....
+//    UIToolbar *accessoryToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
+//    accessoryToolbar.barTintColor = [UIColor orangeColor];
+//    // Configure toolbar .....
+//    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(hidePickerView)];
+//    
+//    [accessoryToolbar setItems:[NSArray arrayWithObjects:doneButton, nil] animated:YES];
+    
+//    self.netBankCodeTextField.inputView = self.pickerView;
+//    self.netBankCodeTextField.inputAccessoryView = accessoryToolbar;
+    
+    
+    pickerToolBarView = [[UIView alloc]initWithFrame:CGRectMake(0,self.view.frame.size.height/1.5, self.view.frame.size.width,200)];
+    [pickerToolBarView setBackgroundColor:[UIColor whiteColor]];
+    
+    UIToolbar *toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0,0,pickerToolBarView.frame.size.width,42)];
+    toolBar.barStyle = UIBarStyleBlackOpaque;
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(hidePickerView)];
+    [toolBar setItems:[NSArray arrayWithObjects:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil], doneButton, nil]];
     
-    [accessoryToolbar setItems:[NSArray arrayWithObjects:doneButton, nil] animated:YES];
+    self.aPickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,toolBar.frame.size.height,toolBar.frame.size.width,200)];
+    [self.aPickerView setDataSource: self];
+    [self.aPickerView setDelegate: self];
+    self.aPickerView.showsSelectionIndicator = YES;
+    [self.aPickerView setBackgroundColor:[UIColor whiteColor]];
     
-    self.netBankCodeTextField.inputView = self.pickerView;
-    self.netBankCodeTextField.inputAccessoryView = accessoryToolbar;
-    
-    
+    [pickerToolBarView addSubview:toolBar];
+    [pickerToolBarView addSubview:self.aPickerView];
+    [self.view addSubview:pickerToolBarView];
+    [self.view bringSubviewToFront:pickerToolBarView];
+    [pickerToolBarView setHidden:YES];
+
     //Setting for Segment Control
     if (self.landingScreen==1) {
         
@@ -294,7 +233,7 @@
 
 - (void)calculatePaymentDistribution {
     
-    [paymentLayer calculatePaymentDistribution:self.amount
+    [paymentLayer requestCalculatePaymentDistribution:self.amount
                              completionHandler:^(CTSSimpliChargeDistribution *amountDistribution,
                                                  NSError *error) {
                                  
@@ -326,7 +265,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [self resetUI];
     });
-    [self.pickerView setHidden:TRUE];
+    [pickerToolBarView setHidden:TRUE];
     self.loadButton.hidden = FALSE;
     self.loadButton.userInteractionEnabled = TRUE;
     
@@ -363,6 +302,14 @@
             [self.saveCardsTableView setHidden:TRUE];
             self.ccddtableView.hidden = FALSE;
             self.netBankCodeTextField.hidden = TRUE;
+            
+            [self.ccddtableView reloadData];
+            if (_segControl.selectedSegmentIndex==2) {
+                [self getActiveSubs:nil];
+            }
+            
+            _useMVC = NO;
+            _useCash = NO;
             
             _useSavedAccounts = NO;
             
@@ -642,22 +589,22 @@
 - (void)validateCardSchemesBanks {
     
     [self.view endEditing:YES];
-    NSString *cardNumber = [self.cardNumberTextField.text stringByReplacingOccurrencesOfString:@" " withString:@""];
-    if (_segControl.selectedSegmentIndex==1) {
-        if (debitArray.count==0) {
-            [UIUtility toastMessageOnScreen:@"Please Contact to Citruspay care to enable your card scheme."];
-            _allSet = NO;
-            return;
-        }
-        else{
-            BOOL isSchemeAvailable = FALSE;
-            for(NSString *string in debitArray){
-                NSLog(@"card scheme %@",[CTSUtility fetchCardSchemeForCardNumber:cardNumber]);
-                if ([string caseInsensitiveCompare:[CTSUtility fetchCardSchemeForCardNumber:cardNumber]] == NSOrderedSame) {
-                    isSchemeAvailable=TRUE;
-                    break;
-                }
-            }
+//    NSString *cardNumber = [self.cardNumberTextField.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+//    if (_segControl.selectedSegmentIndex==1) {
+//        if (debitArray.count==0) {
+//            [UIUtility toastMessageOnScreen:@"Please Contact to Citruspay care to enable your card scheme."];
+//            _allSet = NO;
+//            return;
+//        }
+//        else{
+//            BOOL isSchemeAvailable = FALSE;
+//            for(NSString *string in debitArray){
+//                NSLog(@"card scheme %@",[CTSUtility fetchCardSchemeForCardNumber:cardNumber]);
+//                if ([string caseInsensitiveCompare:[CTSUtility fetchCardSchemeForCardNumber:cardNumber]] == NSOrderedSame) {
+//                    isSchemeAvailable=TRUE;
+//                    break;
+//                }
+//            }
             NSArray* subStrings = [self.expiryDateTextField.text componentsSeparatedByString:@"/"];
             if ([self.expiryDateTextField.text length] != 0) {
                 int year = [[subStrings objectAtIndex:1] intValue]+2000;
@@ -671,51 +618,51 @@
                     return;
                 }
             }
-        }
-    }
-    else if (_segControl.selectedSegmentIndex==1){
+//        }
+//    }
+//    else if (_segControl.selectedSegmentIndex==1){
+
+//        if (creditArray.count==0) {
+//            [UIUtility toastMessageOnScreen:@"Please Contact to Citruspay care to enable your card scheme."];
+//            _allSet = NO;
+//            return;
+//        }
+//        else{
         
-        if (creditArray.count==0) {
-            [UIUtility toastMessageOnScreen:@"Please Contact to Citruspay care to enable your card scheme."];
-            _allSet = NO;
-            return;
-        }
-        else{
+//            BOOL isSchemeAvailable = FALSE;
+//            for(NSString *string in creditArray){
+//                if ([string caseInsensitiveCompare:[CTSUtility fetchCardSchemeForCardNumber:cardNumber]] == NSOrderedSame) {
+//                    isSchemeAvailable = TRUE;
+//                    break;
+//                }
+//            }
+//            if (!isSchemeAvailable) {
+//                
+//                [UIUtility toastMessageOnScreen:@"This card scheme is not valid for you.Please Contact to Citruspay care."];
+//                _allSet = NO;
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    [self.indicatorView stopAnimating];
+//                    self.indicatorView.hidden = TRUE;
+//                });
+//                return;
+//            }
             
-            BOOL isSchemeAvailable = FALSE;
-            for(NSString *string in creditArray){
-                if ([string caseInsensitiveCompare:[CTSUtility fetchCardSchemeForCardNumber:cardNumber]] == NSOrderedSame) {
-                    isSchemeAvailable = TRUE;
-                    break;
-                }
-            }
-            if (!isSchemeAvailable) {
-                
-                [UIUtility toastMessageOnScreen:@"This card scheme is not valid for you.Please Contact to Citruspay care."];
-                _allSet = NO;
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.indicatorView stopAnimating];
-                    self.indicatorView.hidden = TRUE;
-                });
-                return;
-            }
-            
-            NSArray* subStrings = [self.expiryDateTextField.text componentsSeparatedByString:@"/"];
-            if ([self.expiryDateTextField.text length] != 0) {
-                int year = [[subStrings objectAtIndex:1] intValue]+2000;
-                NSString *resultantDate = [NSString stringWithFormat:@"%d/%d",[[subStrings objectAtIndex:0] intValue],year];
-                if (![CTSUtility validateExpiryDate:resultantDate]){
-                    [UIUtility toastMessageOnScreen:@"Expiry date is not valid."];
-                    _allSet = NO;
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [self.indicatorView stopAnimating];
-                        self.indicatorView.hidden = TRUE;
-                    });
-                    return;
-                }
-            }
-        }
-    }
+//            NSArray* subStrings = [self.expiryDateTextField.text componentsSeparatedByString:@"/"];
+//            if ([self.expiryDateTextField.text length] != 0) {
+//                int year = [[subStrings objectAtIndex:1] intValue]+2000;
+//                NSString *resultantDate = [NSString stringWithFormat:@"%d/%d",[[subStrings objectAtIndex:0] intValue],year];
+//                if (![CTSUtility validateExpiryDate:resultantDate]){
+//                    [UIUtility toastMessageOnScreen:@"Expiry date is not valid."];
+//                    _allSet = NO;
+//                    dispatch_async(dispatch_get_main_queue(), ^{
+//                        [self.indicatorView stopAnimating];
+//                        self.indicatorView.hidden = TRUE;
+//                    });
+//                    return;
+//                }
+//            }
+//        }
+//    }
 }
 
 - (void)setPaymentInfoForSmartPay {
@@ -887,14 +834,14 @@
             
             if (_segControl.selectedSegmentIndex==0) {
                 // Debit card
-                _paymentOptions = [CTSPaymentOptions DebitCardOption:cardNumber
+                _paymentOptions = [CTSPaymentOptions debitCardOption:cardNumber
                                                       cardExpiryDate:self.expiryDateTextField.text
                                                                  cvv:self.cvvTextField.text];
                 selectedPaymentoption = cardNumber;
             }
             else if (_segControl.selectedSegmentIndex==1) {
                 // Credit card
-                _paymentOptions = [CTSPaymentOptions CreditCardOption:cardNumber
+                _paymentOptions = [CTSPaymentOptions creditCardOption:cardNumber
                                                        cardExpiryDate:self.expiryDateTextField.text
                                                                   cvv:self.cvvTextField.text];
                 selectedPaymentoption = cardNumber;
@@ -908,7 +855,7 @@
                     }
                 }];
                 
-                _paymentOptions = [CTSPaymentOptions NetBankingOption:selectedPaymentoption
+                _paymentOptions = [CTSPaymentOptions netBankingOption:selectedPaymentoption
                                                            issuerCode:code];
                 
             }
@@ -929,14 +876,14 @@
             
             if (_segControl.selectedSegmentIndex==1) {
                 // Debit card
-                _paymentOptions = [CTSPaymentOptions DebitCardOption:cardNumber
+                _paymentOptions = [CTSPaymentOptions debitCardOption:cardNumber
                                                       cardExpiryDate:self.expiryDateTextField.text
                                                                  cvv:self.cvvTextField.text];
                 selectedPaymentoption = cardNumber;
             }
             else if (_segControl.selectedSegmentIndex==2) {
                 // Credit card
-                _paymentOptions = [CTSPaymentOptions CreditCardOption:cardNumber
+                _paymentOptions = [CTSPaymentOptions creditCardOption:cardNumber
                                                        cardExpiryDate:self.expiryDateTextField.text
                                                                   cvv:self.cvvTextField.text];
                 selectedPaymentoption = cardNumber;
@@ -950,7 +897,7 @@
                     }
                 }];
                 
-                _paymentOptions = [CTSPaymentOptions NetBankingOption:selectedPaymentoption
+                _paymentOptions = [CTSPaymentOptions netBankingOption:selectedPaymentoption
                                                            issuerCode:code];
                 
             }
@@ -973,14 +920,14 @@
                     
                     if ([consumerProfileDetails.paymentMode isEqualToString:@"DEBIT_CARD"]) {
                         [consumerProfileDetails setCvv:cvvText];
-                        _paymentOptions = [CTSPaymentOptions DebitCardTokenized:consumerProfileDetails];
+                        _paymentOptions = [CTSPaymentOptions debitCardTokenized:consumerProfileDetails];
                     }
                     else if ([consumerProfileDetails.paymentMode isEqualToString:@"CREDIT_CARD"]) {
                         [consumerProfileDetails setCvv:cvvText];
-                        _paymentOptions = [CTSPaymentOptions CreditCardTokenized:consumerProfileDetails];
+                        _paymentOptions = [CTSPaymentOptions creditCardTokenized:consumerProfileDetails];
                     }
                     else if ([consumerProfileDetails.paymentMode isEqualToString:@"NET_BANKING"]) {
-                        _paymentOptions = [CTSPaymentOptions NetBankingTokenized:consumerProfileDetails];
+                        _paymentOptions = [CTSPaymentOptions netBankingTokenized:consumerProfileDetails];
                     }
                 }
             }
@@ -1111,7 +1058,18 @@
                              NSLog(@"response %@", paymentReceipt.toDictionary);
                              [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"Load Money Status %@",[paymentReceipt.toDictionary valueForKey:LoadMoneyResponeKey]]];
                              [self resetUI];
-                             [self.navigationController popViewControllerAnimated:YES];
+                             
+                             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:[NSString stringWithFormat:@"Load Money Status %@",[paymentReceipt.toDictionary valueForKey:LoadMoneyResponeKey]] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                             
+                             if (_segControl.selectedSegmentIndex==2) {
+                                 alert.delegate = self;
+                                 alert.tag = 102;
+                             }
+                             [alert show];
+                             
+                             
+                             
+                             //[self.navigationController popViewControllerAnimated:YES];
                          }
                      });
                  }];
@@ -1169,35 +1127,81 @@
 - (void)hidePickerView{
     self.loadButton.userInteractionEnabled = TRUE;
     [currentTextField resignFirstResponder];
+    [pickerToolBarView setHidden:YES];
+}
+
+
+-(IBAction)getActiveSubs:(id)sender{
+    
+    self.indicatorView.hidden = FALSE;
+    [self.indicatorView startAnimating];
+    CTSPaymentLayer *paymentlayer = [CitrusPaymentSDK fetchSharedPaymentLayer];
+    [paymentlayer requestGetAutoLoadSubType:AutoLoadSubsctiptionTypeActive completion:^(CTSAutoLoadSubGetResp *autoloadSubscriptions, NSError *error) {
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.indicatorView stopAnimating];
+            self.indicatorView.hidden = TRUE;
+        });
+        if (error) {
+            [UIUtility toastMessageOnScreen:[error localizedDescription]];
+        }
+        else{
+            if (autoloadSubscriptions.subcriptions.count==0) {
+                autoloadSwitch.userInteractionEnabled = TRUE;
+                isAnySubscriptionActive = NO;
+            }
+            else{
+                autoloadSwitch.userInteractionEnabled = FALSE;
+                isAnySubscriptionActive = YES;
+            }
+        }
+    }];
+}
+
+- (void)loadMoneyWithAutoloadView:(UISwitch *)localSwitchView {
+    
+    if ([localSwitchView isOn]) {
+        [localSwitchView setOn:YES animated:YES];
+        
+        [self setPaymentInfoForSmartPay];
+        if (self.cardNumberTextField.text.length==0 || self.expiryDateTextField.text.length==0 || self.cvvTextField.text.length==0 || self.ownerNameTextField.text.length==0) {
+//            [UIUtility toastMessageOnScreen:@"Couldn't do Autoload.\n All fields are mandatory."];
+            [localSwitchView setOn:NO animated:YES];
+        }
+        else {
+            [self performSegueWithIdentifier:@"AutoloadViewIdentifier" sender:self];
+        }
+        
+    } else {
+        [localSwitchView setOn:NO animated:YES];
+        
+    }
+    
 }
 
 
 #pragma mark - TextView Delegate Methods
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
-    
+    [self.netBankCodeTextField resignFirstResponder];
+
     if (textField==self.netBankCodeTextField) {
         
         if (netBankingDict.count==0) {
-            [self.pickerView setHidden:TRUE];
-            [self.netBankCodeTextField resignFirstResponder];
-            [self.pickerView removeFromSuperview];
-            
+            [pickerToolBarView setHidden:TRUE];
+//            [self.netBankCodeTextField resignFirstResponder];
             [UIUtility toastMessageOnScreen:@"Please Contact to Citruspay care to enable your Net banking."];
         }
         else{
-            [self.pickerView setHidden:FALSE];
+            [pickerToolBarView setHidden:NO];
             currentTextField=textField;
             array = [netBankingDict allKeys];
-            [self.pickerView reloadAllComponents];
-            [self.pickerView selectRow:0 inComponent:0 animated:YES];
-            [self pickerView:self.pickerView didSelectRow:0 inComponent:0];
-            [self.pickerView removeFromSuperview];
-            [self.netBankCodeTextField becomeFirstResponder];
+            [self.aPickerView reloadAllComponents];
+            [self.aPickerView selectRow:0 inComponent:0 animated:YES];
+            [self pickerView:self.aPickerView didSelectRow:0 inComponent:0];
+//            [self.netBankCodeTextField becomeFirstResponder];
         }
     }
 }
-
-
 
 -(BOOL)textField:(UITextField *)textField
 shouldChangeCharactersInRange:(NSRange)range
@@ -1329,11 +1333,15 @@ replacementString:(NSString *)string {
         }
     }
     else {
-        if(section == 0) {
+        if (_segControl.selectedSegmentIndex==2 && self.landingScreen==0) {
+            return 5;
+        }
+        else if(section == 0) {
             return 4;
         }
     }
     return 0;
+    
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -1388,6 +1396,11 @@ replacementString:(NSString *)string {
             if (indexPath.row==3) {
                 UISwitch *localSwitchView = (UISwitch *)[cell.contentView viewWithTag:2005];
                 [localSwitchView addTarget:self action:@selector(updateSwitchAtIndexPath:)forControlEvents:UIControlEventValueChanged];
+            }
+            if (indexPath.row==4) {
+                
+                autoloadSwitch = (UISwitch *)[cell.contentView viewWithTag:2007];
+                [autoloadSwitch addTarget:self action:@selector(loadMoneyWithAutoloadView:)forControlEvents:UIControlEventValueChanged];
             }
         }
     }
@@ -1622,10 +1635,10 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
                                                                          error:&jsonError];
                     
                     if ([accountsDict[@"paymentMode"] isEqualToString:@"DEBIT_CARD"]) {
-                        _paymentOptions = [CTSPaymentOptions DebitCardTokenized:consumerProfileDetails];
+                        _paymentOptions = [CTSPaymentOptions debitCardTokenized:consumerProfileDetails];
                     }
                     else if ([accountsDict[@"paymentMode"] isEqualToString:@"CREDIT_CARD"]) {
-                        _paymentOptions = [CTSPaymentOptions CreditCardTokenized:consumerProfileDetails];
+                        _paymentOptions = [CTSPaymentOptions creditCardTokenized:consumerProfileDetails];
                     }
                     
                     if ([_paymentOptions canDoOneTapPayment]) {
@@ -1732,6 +1745,84 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
             [self loadOrPayDPMoney];
         }
     }
+    else if (alertView.tag == 102){
+        if (buttonIndex==0) {
+            if (!isAnySubscriptionActive) {
+                sleep(.3);
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                    [self subscribeCard];
+                });
+            }
+        }
+
+    }
+    else if (alertView.tag==103){
+        
+        if (buttonIndex==1) {
+            
+            [self suscribeAfterLoadWithThresholdAmount:[alertView textFieldAtIndex:0].text andWithLoadAmount:[alertView textFieldAtIndex:0].text];
+            
+        }
+    }
+    
+}
+
+-(IBAction)suscribeAfterLoadWithThresholdAmount:(NSString *)thresholdAmount andWithLoadAmount:(NSString *)loadAmount{
+    CTSPaymentLayer *paymentlayer = [CitrusPaymentSDK fetchSharedPaymentLayer];
+    CTSAutoLoad *autoload = [[CTSAutoLoad alloc]init];
+    
+    autoload.autoLoadAmt = loadAmount;
+    autoload.thresholdAmount = thresholdAmount;
+    
+    self.indicatorView.hidden = FALSE;
+    [self.indicatorView startAnimating];
+    
+    [paymentlayer requestSubscribeAutoAfterLoad:autoload withCompletionHandler:^(CTSAutoLoadSubResp *autoloadResponse, NSError *error) {
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.indicatorView stopAnimating];
+            self.indicatorView.hidden = TRUE;
+        });
+        
+        if(error){
+            [UIUtility toastMessageOnScreen:[error localizedDescription]];
+        }
+        else{
+            [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"autoloadSubscriptions %@",autoloadResponse]];
+        }
+    }];
+}
+
+- (void) subscribeCard{
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        UIAlertView *sendMoneyAlert = [[UIAlertView alloc] initWithTitle:@"" message:@"Do you want to subscribe this card?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok" , nil];
+        sendMoneyAlert.tag = 103;
+        sendMoneyAlert.alertViewStyle = UIAlertViewStyleLoginAndPasswordInput;
+        UITextField * alertTextField1 = [sendMoneyAlert textFieldAtIndex:0];
+        alertTextField1.keyboardType = UIKeyboardTypeDecimalPad;
+        alertTextField1.placeholder = @"Enter Threshold Amount.";
+        
+        UITextField * alertTextField2 = [sendMoneyAlert textFieldAtIndex:1];
+        alertTextField2.keyboardType = UIKeyboardTypeDecimalPad;
+        alertTextField2.placeholder = @"Enter Autoload Amount.";
+        [alertTextField2  setSecureTextEntry:FALSE];
+        
+        [sendMoneyAlert show];
+    });
+    
+}
+
+#pragma mark - StoryBoard Delegate Methods
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([segue.identifier isEqualToString:@"AutoloadViewIdentifier"]) {
+        AutoloadViewController *viewController = (AutoloadViewController *)segue.destinationViewController;
+        viewController.cardInfo = _paymentOptions;
+        
+    }
+    
 }
 
 
@@ -1784,7 +1875,6 @@ numberOfRowsInComponent:(NSInteger)component {
     imageView.image = [CTSUtility fetchBankLogoImageByBankIssuerCode:[[netBankingDict allValues] objectAtIndex:row]];
     [pickerLabel setText:[array objectAtIndex:row]];
     
-    
     return tempView;
 }
 
@@ -1809,10 +1899,97 @@ numberOfRowsInComponent:(NSInteger)component {
     self.cvvTextField = nil;
     self.netBankCodeTextField = nil;
     self.loadButton = nil;
-    self.pickerView = nil;
+    self.aPickerView = nil;
     self.indicatorView = nil;
     self.schemeTypeImageView = nil;
 }
 
 
+/*
+- (void)smartPay {
+    
+    CTSPaymentOptions *debitCardPayment = [CTSPaymentOptions debitCardOption:@"4111111111111111"
+                                                              cardExpiryDate:@"01/18"
+                                                                         cvv:@"000"];
+    [paymentLayer requestSimpliPay:@"10.00"
+                           billURL:BillUrl
+                     paymentOption:debitCardPayment
+                            useMVC:YES
+                           useCash:YES
+                   useDynamicPrice:NO
+                          ruleInfo:nil
+           andParentViewController:self
+                 completionHandler:^(CTSPaymentReceipt *paymentReceipt,
+                                     NSError *error) {
+                     if (error) {
+                         NSLog(@"error %@", [error localizedDescription]);
+                     }
+                     else {
+                         NSLog(@"response %@", paymentReceipt.toDictionary);
+                     }
+                 }];
+}
+
+
+
+- (void)loadmoney {
+    CTSPaymentOptions *debitCardPayment = [CTSPaymentOptions debitCardOption:@"4111111111111111"
+                                                              cardExpiryDate:@"01/18"
+                                                                         cvv:@"000"];
+    [paymentLayer requestLoadMoney:@"10.00"
+                         returnURL:LoadWalletReturnUrl
+                     paymentOption:debitCardPayment
+           andParentViewController:self
+                 completionHandler:^(CTSPaymentReceipt *paymentReceipt,
+                                     NSError *error) {
+                     if (error) {
+                         NSLog(@"error %@", [error localizedDescription]);
+                     }
+                     else {
+                         NSLog(@"response %@", paymentReceipt.toDictionary);
+                     }
+                 }];
+    
+}
+
+- (void)CalculateSplitPay {
+    
+    [paymentLayer calculatePaymentDistribution:@"10.0"
+                             completionHandler:^(CTSSimpliChargeDistribution *amountDistribution,
+                                                 NSError *error) {
+                                 if (error) {
+                                     NSLog(@"error %@", [error localizedDescription]);
+                                 }
+                                 else {
+                                     CTSPaymentOptions *debitCardPayment = nil;
+                                     if (!amountDistribution.enoughMVCAndCash) {
+                                         debitCardPayment = [CTSPaymentOptions
+                                                             debitCardOption:@"4111111111111111"
+                                                             cardExpiryDate:@"01/18"
+                                                             cvv:@"000"];
+                                     }
+                                     
+                                     [paymentLayer requestSimpliPay:amountDistribution.totalAmount
+                                                            billURL:BillUrl
+                                                      paymentOption:debitCardPayment
+                                                             useMVC:amountDistribution.useMVC
+                                                            useCash:amountDistribution.useCash
+                                                    useDynamicPrice:NO
+                                                           ruleInfo:nil
+                                            andParentViewController:self
+                                                  completionHandler:^(CTSPaymentReceipt *paymentReceipt,
+                                                                      NSError *error) {
+                                                      if (error) {
+                                                          NSLog(@"error %@", [error localizedDescription]);
+                                                      }
+                                                      else {
+                                                          NSLog(@"response %@", paymentReceipt.toDictionary);
+                                                      }
+                                                      
+                                                  }];
+                                 }
+                             }];
+    
+}
+*/
 @end

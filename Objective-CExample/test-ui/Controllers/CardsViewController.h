@@ -24,7 +24,7 @@
 
 @property (nonatomic , weak) IBOutlet UIButton *loadButton;
 
-@property (nonatomic , weak) IBOutlet UIPickerView *pickerView;
+@property (nonatomic , strong) UIPickerView *aPickerView;
 @property (nonatomic , weak) IBOutlet UITableView *ccddtableView;
 
 

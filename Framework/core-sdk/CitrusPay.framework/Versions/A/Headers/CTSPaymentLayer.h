@@ -34,6 +34,10 @@
 #import "CTSSimpliChargeDistribution.h"
 #import "CTSPaymentOptions.h"
 #import "CTSPaymentReceipt.h"
+#import "CTSAutoLoadSubGetResp.h"
+#import "CTSLoadAndPayRes.h"
+#import "CTSLoadMoney.h"
+#import "CTSAutoLoad.h"
 
 @class   CTSPaymentWebViewController , CTSContactUpdate, CTSUserAddress;
 
@@ -64,6 +68,12 @@ typedef enum {
     
 }PaymentRequestType;
 
+
+typedef enum{
+    AutoLoadSubsctiptionTypeActive,
+    AutoLoadSubsctiptionTypeInActive,
+    AutoLoadSubsctiptionTypeAll
+}AutoLoadSubsctiptionType;
 
 
 typedef enum{
@@ -218,7 +228,6 @@ typedef void (^ASDPValidateRuleCallback)(CTSDyPResponse* dyPResponse,
 
 typedef void (^ASMoneyTransferCallback)(CTSTransferMoneyResponse* transferMoneyRes ,NSError* error);
 
-
 typedef void (^ASCardBinServiceCallback)(CTSCardBinResponse* cardBinResponse ,NSError* error);
 
 typedef void (^ASPrepaidPayCallback)(CTSPrepaidPayResp* prepaidPay ,NSError* error);
@@ -229,6 +238,12 @@ typedef void (^CTSSmartPayCompletionHandler)(CTSPaymentReceipt *paymentReceipt,
 
 typedef void (^CTSPaymentDistributionCompletionHandler)(CTSSimpliChargeDistribution *amountDistribution,
                                                         NSError *error);
+typedef void (^ASGetAutoloadSubsCallback)(CTSAutoLoadSubGetResp* autoloadSubscriptions ,NSError* error);
+
+typedef void (^ASAutoLoadCallback)( CTSAutoLoadSubResp *autoloadResponse  ,NSError* error);
+
+typedef void (^ASLoadAndSubscribeCallback)(CTSLoadAndPayRes* loadAndSubscribe,
+                                           NSError* error);
 
 // DEPRECATED
 - (void)requestChargeTokenizedPayment:(CTSPaymentDetailUpdate*)paymentInfo
@@ -312,7 +327,7 @@ DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:
                                withAddress:(CTSUserAddress*)userAddress
                               customParams:(NSDictionary *)custParams
                       returnViewController:(UIViewController *)controller
-                     withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestSimpliPay:billURL:paymentOption:useMVC:useCash:useDynamicPrice:ruleInfo:andParentViewController:completionHandler: instead")));
+                     withCompletionHandler:(ASCitruspayCallback)callback;
 
 -(void)requestPerformDynamicPricingRule:(CTSRuleInfo *)ruleInfo
                             paymentInfo:(CTSPaymentDetailUpdate *)payment
@@ -398,6 +413,10 @@ DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:
  ***************************************************************************************************************
  */
 
+
+
+// Single Payment Interface - SimpliPay
+
 /**
  *  requestSimpliPay - for all payment single end point
  *
@@ -423,13 +442,13 @@ DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:
 
 
 /**
- *  calculate Payment Distribution - for split payment
+ *  request calculate Payment Distribution - for split payment
  *
  *  @param amount - set transaction amount
  *  @param completionHandler - return callback into amountDistribution viz mvcAmount, cashAmount, remainingAmount & totalAmount, BOOL useMVC, useCash & enoughMVCAndCash;
  */
-- (void)calculatePaymentDistribution:(NSString *)amount
-                   completionHandler:(CTSPaymentDistributionCompletionHandler)completion;
+- (void)requestCalculatePaymentDistribution:(NSString *)amount
+                          completionHandler:(CTSPaymentDistributionCompletionHandler)completion;
 
 /**
  *  requestLoadMoney - into Citruspay account
@@ -445,5 +464,32 @@ DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:
            paymentOption:(CTSPaymentOptions *)paymentOption
  andParentViewController:(UIViewController *)controller
        completionHandler:(CTSSmartPayCompletionHandler)completion;
+
+
+// AutoLoad
+
+-(void)requestUpdateAutoLoadSubId:(NSString *)subId autoLoadAmount:(NSString *)autoLoadAmt thresholdAmount:(NSString *)thresholdAmount completion:(ASAutoLoadCallback)callback;
+
+-(void)requestGetAutoLoadSubType:(AutoLoadSubsctiptionType)type completion:(ASGetAutoloadSubsCallback)callback;
+
+-(void)requestGetActiveAutoLoadSubscription:(ASAutoLoadCallback)callback;
+
+-(void)requestDeactivateAutoLoadSubId:(NSString*)subId completion:(ASAutoLoadCallback)callback;
+
+-(void)requestDeactivateAutoLoadSubscription:(ASAutoLoadCallback)callback;
+
+- (void)requestLoadAndSubscribe:(CTSLoadMoney*)loadMoney
+                       autoLoad:(CTSAutoLoad *)autoload
+              withCompletionHandler:(ASLoadAndSubscribeCallback)callback;
+
+- (void)requestSubscribeAutoAfterLoad:(CTSAutoLoad *)autoload
+          withCompletionHandler:(ASAutoLoadCallback)callback;
+
+- (void)requestLoadAndIncrementAutoloadSubId:(NSString *)subId
+                                   loadMoney:(CTSLoadMoney*)loadMoney
+                                    autoLoad:(CTSAutoLoad *)autoload
+                       withCompletionHandler:(ASLoadAndSubscribeCallback)callback;
+
+
 
 @end

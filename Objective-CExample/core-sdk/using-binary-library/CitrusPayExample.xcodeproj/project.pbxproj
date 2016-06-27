@@ -23,21 +23,24 @@
 		76B2DD451CC61F4C0046B963 /* CitrusPay.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 76B2DD421CC61F4C0046B963 /* CitrusPay.bundle */; settings = {ASSET_TAGS = (); }; };
 		76B2DD461CC61F4C0046B963 /* CitrusPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B2DD431CC61F4C0046B963 /* CitrusPay.framework */; settings = {ASSET_TAGS = (); }; };
 		76B2DD471CC61F4C0046B963 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 76B2DD441CC61F4C0046B963 /* LICENSE */; settings = {ASSET_TAGS = (); }; };
-		76CEB3F11CEB3251002D6D57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76CEB3D01CEB3251002D6D57 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		76CEB3F21CEB3251002D6D57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76CEB3D11CEB3251002D6D57 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		76CEB3F31CEB3251002D6D57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76CEB3D31CEB3251002D6D57 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		76CEB3F41CEB3251002D6D57 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CEB3D71CEB3251002D6D57 /* BaseViewController.m */; settings = {ASSET_TAGS = (); }; };
-		76CEB3F51CEB3251002D6D57 /* CardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CEB3D91CEB3251002D6D57 /* CardsViewController.m */; settings = {ASSET_TAGS = (); }; };
-		76CEB3F61CEB3251002D6D57 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CEB3DB1CEB3251002D6D57 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
-		76CEB3F71CEB3251002D6D57 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CEB3DD1CEB3251002D6D57 /* InitialViewController.m */; settings = {ASSET_TAGS = (); }; };
-		76CEB3F81CEB3251002D6D57 /* ManageCradViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CEB3DF1CEB3251002D6D57 /* ManageCradViewController.m */; settings = {ASSET_TAGS = (); }; };
-		76CEB3F91CEB3251002D6D57 /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CEB3E11CEB3251002D6D57 /* ResetPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
-		76CEB3FA1CEB3251002D6D57 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CEB3E31CEB3251002D6D57 /* SettingViewController.m */; settings = {ASSET_TAGS = (); }; };
-		76CEB3FB1CEB3251002D6D57 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CEB3E51CEB3251002D6D57 /* SignInViewController.m */; settings = {ASSET_TAGS = (); }; };
-		76CEB3FC1CEB3251002D6D57 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CEB3E71CEB3251002D6D57 /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
-		76CEB3FD1CEB3251002D6D57 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CEB3EA1CEB3251002D6D57 /* HMSegmentedControl.m */; settings = {ASSET_TAGS = (); }; };
-		76CEB3FE1CEB3251002D6D57 /* UICustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CEB3EC1CEB3251002D6D57 /* UICustomButton.m */; settings = {ASSET_TAGS = (); }; };
-		76CEB3FF1CEB3251002D6D57 /* UICustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CEB3EE1CEB3251002D6D57 /* UICustomTextField.m */; settings = {ASSET_TAGS = (); }; };
+		76E9C7A11D211C3E00F14999 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E9C77A1D211C3E00F14999 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		76E9C7A21D211C3E00F14999 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E9C77B1D211C3E00F14999 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		76E9C7A31D211C3E00F14999 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E9C77D1D211C3E00F14999 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		76E9C7A41D211C3E00F14999 /* AutoloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E9C7811D211C3E00F14999 /* AutoloadViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76E9C7A51D211C3E00F14999 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E9C7831D211C3E00F14999 /* BaseViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76E9C7A61D211C3E00F14999 /* CardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E9C7851D211C3E00F14999 /* CardsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76E9C7A71D211C3E00F14999 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E9C7871D211C3E00F14999 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76E9C7A81D211C3E00F14999 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E9C7891D211C3E00F14999 /* InitialViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76E9C7A91D211C3E00F14999 /* ManageAutoLoadSubcriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E9C78B1D211C3E00F14999 /* ManageAutoLoadSubcriptionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76E9C7AA1D211C3E00F14999 /* ManageCradViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E9C78D1D211C3E00F14999 /* ManageCradViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76E9C7AB1D211C3E00F14999 /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E9C78F1D211C3E00F14999 /* ResetPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76E9C7AC1D211C3E00F14999 /* SavedCCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E9C7911D211C3E00F14999 /* SavedCCViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76E9C7AD1D211C3E00F14999 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E9C7931D211C3E00F14999 /* SettingViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76E9C7AE1D211C3E00F14999 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E9C7951D211C3E00F14999 /* SignInViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76E9C7AF1D211C3E00F14999 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E9C7971D211C3E00F14999 /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76E9C7B01D211C3E00F14999 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E9C79A1D211C3E00F14999 /* HMSegmentedControl.m */; settings = {ASSET_TAGS = (); }; };
+		76E9C7B11D211C3E00F14999 /* UICustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E9C79C1D211C3E00F14999 /* UICustomButton.m */; settings = {ASSET_TAGS = (); }; };
+		76E9C7B21D211C3E00F14999 /* UICustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E9C79E1D211C3E00F14999 /* UICustomTextField.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,35 +93,41 @@
 		76B2DD421CC61F4C0046B963 /* CitrusPay.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CitrusPay.bundle; sourceTree = "<group>"; };
 		76B2DD431CC61F4C0046B963 /* CitrusPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusPay.framework; sourceTree = "<group>"; };
 		76B2DD441CC61F4C0046B963 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		76CEB3D01CEB3251002D6D57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		76CEB3D21CEB3251002D6D57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		76CEB3D41CEB3251002D6D57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		76CEB3D61CEB3251002D6D57 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		76CEB3D71CEB3251002D6D57 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		76CEB3D81CEB3251002D6D57 /* CardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsViewController.h; sourceTree = "<group>"; };
-		76CEB3D91CEB3251002D6D57 /* CardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsViewController.m; sourceTree = "<group>"; };
-		76CEB3DA1CEB3251002D6D57 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		76CEB3DB1CEB3251002D6D57 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		76CEB3DC1CEB3251002D6D57 /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
-		76CEB3DD1CEB3251002D6D57 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
-		76CEB3DE1CEB3251002D6D57 /* ManageCradViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageCradViewController.h; sourceTree = "<group>"; };
-		76CEB3DF1CEB3251002D6D57 /* ManageCradViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageCradViewController.m; sourceTree = "<group>"; };
-		76CEB3E01CEB3251002D6D57 /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
-		76CEB3E11CEB3251002D6D57 /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
-		76CEB3E21CEB3251002D6D57 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
-		76CEB3E31CEB3251002D6D57 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
-		76CEB3E41CEB3251002D6D57 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
-		76CEB3E51CEB3251002D6D57 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
-		76CEB3E61CEB3251002D6D57 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
-		76CEB3E71CEB3251002D6D57 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
-		76CEB3E91CEB3251002D6D57 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
-		76CEB3EA1CEB3251002D6D57 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
-		76CEB3EB1CEB3251002D6D57 /* UICustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomButton.h; sourceTree = "<group>"; };
-		76CEB3EC1CEB3251002D6D57 /* UICustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomButton.m; sourceTree = "<group>"; };
-		76CEB3ED1CEB3251002D6D57 /* UICustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomTextField.h; sourceTree = "<group>"; };
-		76CEB3EE1CEB3251002D6D57 /* UICustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomTextField.m; sourceTree = "<group>"; };
-		76CEB3EF1CEB3251002D6D57 /* MerchantConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantConstants.h; sourceTree = "<group>"; };
-		76CEB3F01CEB3251002D6D57 /* TestParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestParams.h; sourceTree = "<group>"; };
+		76E9C77A1D211C3E00F14999 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76E9C77C1D211C3E00F14999 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		76E9C77E1D211C3E00F14999 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		76E9C7801D211C3E00F14999 /* AutoloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoloadViewController.h; sourceTree = "<group>"; };
+		76E9C7811D211C3E00F14999 /* AutoloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoloadViewController.m; sourceTree = "<group>"; };
+		76E9C7821D211C3E00F14999 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		76E9C7831D211C3E00F14999 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		76E9C7841D211C3E00F14999 /* CardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsViewController.h; sourceTree = "<group>"; };
+		76E9C7851D211C3E00F14999 /* CardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsViewController.m; sourceTree = "<group>"; };
+		76E9C7861D211C3E00F14999 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		76E9C7871D211C3E00F14999 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		76E9C7881D211C3E00F14999 /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
+		76E9C7891D211C3E00F14999 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
+		76E9C78A1D211C3E00F14999 /* ManageAutoLoadSubcriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageAutoLoadSubcriptionViewController.h; sourceTree = "<group>"; };
+		76E9C78B1D211C3E00F14999 /* ManageAutoLoadSubcriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageAutoLoadSubcriptionViewController.m; sourceTree = "<group>"; };
+		76E9C78C1D211C3E00F14999 /* ManageCradViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageCradViewController.h; sourceTree = "<group>"; };
+		76E9C78D1D211C3E00F14999 /* ManageCradViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageCradViewController.m; sourceTree = "<group>"; };
+		76E9C78E1D211C3E00F14999 /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
+		76E9C78F1D211C3E00F14999 /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
+		76E9C7901D211C3E00F14999 /* SavedCCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedCCViewController.h; sourceTree = "<group>"; };
+		76E9C7911D211C3E00F14999 /* SavedCCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedCCViewController.m; sourceTree = "<group>"; };
+		76E9C7921D211C3E00F14999 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		76E9C7931D211C3E00F14999 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		76E9C7941D211C3E00F14999 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		76E9C7951D211C3E00F14999 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		76E9C7961D211C3E00F14999 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		76E9C7971D211C3E00F14999 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		76E9C7991D211C3E00F14999 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
+		76E9C79A1D211C3E00F14999 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
+		76E9C79B1D211C3E00F14999 /* UICustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomButton.h; sourceTree = "<group>"; };
+		76E9C79C1D211C3E00F14999 /* UICustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomButton.m; sourceTree = "<group>"; };
+		76E9C79D1D211C3E00F14999 /* UICustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomTextField.h; sourceTree = "<group>"; };
+		76E9C79E1D211C3E00F14999 /* UICustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomTextField.m; sourceTree = "<group>"; };
+		76E9C79F1D211C3E00F14999 /* MerchantConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantConstants.h; sourceTree = "<group>"; };
+		76E9C7A01D211C3E00F14999 /* TestParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestParams.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +181,7 @@
 		76531C601CB68E7A0065EADA /* CitrusPayExample */ = {
 			isa = PBXGroup;
 			children = (
-				76CEB3CF1CEB3251002D6D57 /* test-ui */,
+				76E9C7791D211C3E00F14999 /* test-ui */,
 				76531C641CB68E7A0065EADA /* AppDelegate.h */,
 				76531C651CB68E7A0065EADA /* AppDelegate.m */,
 				76531C721CB68E7A0065EADA /* Info.plist */,
@@ -268,55 +277,61 @@
 			path = "../../../Framework/core-sdk";
 			sourceTree = "<group>";
 		};
-		76CEB3CF1CEB3251002D6D57 /* test-ui */ = {
+		76E9C7791D211C3E00F14999 /* test-ui */ = {
 			isa = PBXGroup;
 			children = (
-				76CEB3D01CEB3251002D6D57 /* Assets.xcassets */,
-				76CEB3D11CEB3251002D6D57 /* LaunchScreen.storyboard */,
-				76CEB3D31CEB3251002D6D57 /* Main.storyboard */,
-				76CEB3D51CEB3251002D6D57 /* Controllers */,
-				76CEB3E81CEB3251002D6D57 /* CustomComponents */,
-				76CEB3EF1CEB3251002D6D57 /* MerchantConstants.h */,
-				76CEB3F01CEB3251002D6D57 /* TestParams.h */,
+				76E9C79F1D211C3E00F14999 /* MerchantConstants.h */,
+				76E9C7A01D211C3E00F14999 /* TestParams.h */,
+				76E9C77F1D211C3E00F14999 /* Controllers */,
+				76E9C7981D211C3E00F14999 /* CustomComponents */,
+				76E9C77A1D211C3E00F14999 /* Assets.xcassets */,
+				76E9C77B1D211C3E00F14999 /* LaunchScreen.storyboard */,
+				76E9C77D1D211C3E00F14999 /* Main.storyboard */,
 			);
 			name = "test-ui";
 			path = "../../../test-ui";
 			sourceTree = "<group>";
 		};
-		76CEB3D51CEB3251002D6D57 /* Controllers */ = {
+		76E9C77F1D211C3E00F14999 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				76CEB3D61CEB3251002D6D57 /* BaseViewController.h */,
-				76CEB3D71CEB3251002D6D57 /* BaseViewController.m */,
-				76CEB3D81CEB3251002D6D57 /* CardsViewController.h */,
-				76CEB3D91CEB3251002D6D57 /* CardsViewController.m */,
-				76CEB3DA1CEB3251002D6D57 /* HomeViewController.h */,
-				76CEB3DB1CEB3251002D6D57 /* HomeViewController.m */,
-				76CEB3DC1CEB3251002D6D57 /* InitialViewController.h */,
-				76CEB3DD1CEB3251002D6D57 /* InitialViewController.m */,
-				76CEB3DE1CEB3251002D6D57 /* ManageCradViewController.h */,
-				76CEB3DF1CEB3251002D6D57 /* ManageCradViewController.m */,
-				76CEB3E01CEB3251002D6D57 /* ResetPasswordViewController.h */,
-				76CEB3E11CEB3251002D6D57 /* ResetPasswordViewController.m */,
-				76CEB3E21CEB3251002D6D57 /* SettingViewController.h */,
-				76CEB3E31CEB3251002D6D57 /* SettingViewController.m */,
-				76CEB3E41CEB3251002D6D57 /* SignInViewController.h */,
-				76CEB3E51CEB3251002D6D57 /* SignInViewController.m */,
-				76CEB3E61CEB3251002D6D57 /* SignUpViewController.h */,
-				76CEB3E71CEB3251002D6D57 /* SignUpViewController.m */,
+				76E9C7801D211C3E00F14999 /* AutoloadViewController.h */,
+				76E9C7811D211C3E00F14999 /* AutoloadViewController.m */,
+				76E9C7821D211C3E00F14999 /* BaseViewController.h */,
+				76E9C7831D211C3E00F14999 /* BaseViewController.m */,
+				76E9C7841D211C3E00F14999 /* CardsViewController.h */,
+				76E9C7851D211C3E00F14999 /* CardsViewController.m */,
+				76E9C7861D211C3E00F14999 /* HomeViewController.h */,
+				76E9C7871D211C3E00F14999 /* HomeViewController.m */,
+				76E9C7881D211C3E00F14999 /* InitialViewController.h */,
+				76E9C7891D211C3E00F14999 /* InitialViewController.m */,
+				76E9C78A1D211C3E00F14999 /* ManageAutoLoadSubcriptionViewController.h */,
+				76E9C78B1D211C3E00F14999 /* ManageAutoLoadSubcriptionViewController.m */,
+				76E9C78C1D211C3E00F14999 /* ManageCradViewController.h */,
+				76E9C78D1D211C3E00F14999 /* ManageCradViewController.m */,
+				76E9C78E1D211C3E00F14999 /* ResetPasswordViewController.h */,
+				76E9C78F1D211C3E00F14999 /* ResetPasswordViewController.m */,
+				76E9C7901D211C3E00F14999 /* SavedCCViewController.h */,
+				76E9C7911D211C3E00F14999 /* SavedCCViewController.m */,
+				76E9C7921D211C3E00F14999 /* SettingViewController.h */,
+				76E9C7931D211C3E00F14999 /* SettingViewController.m */,
+				76E9C7941D211C3E00F14999 /* SignInViewController.h */,
+				76E9C7951D211C3E00F14999 /* SignInViewController.m */,
+				76E9C7961D211C3E00F14999 /* SignUpViewController.h */,
+				76E9C7971D211C3E00F14999 /* SignUpViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		76CEB3E81CEB3251002D6D57 /* CustomComponents */ = {
+		76E9C7981D211C3E00F14999 /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
-				76CEB3E91CEB3251002D6D57 /* HMSegmentedControl.h */,
-				76CEB3EA1CEB3251002D6D57 /* HMSegmentedControl.m */,
-				76CEB3EB1CEB3251002D6D57 /* UICustomButton.h */,
-				76CEB3EC1CEB3251002D6D57 /* UICustomButton.m */,
-				76CEB3ED1CEB3251002D6D57 /* UICustomTextField.h */,
-				76CEB3EE1CEB3251002D6D57 /* UICustomTextField.m */,
+				76E9C7991D211C3E00F14999 /* HMSegmentedControl.h */,
+				76E9C79A1D211C3E00F14999 /* HMSegmentedControl.m */,
+				76E9C79B1D211C3E00F14999 /* UICustomButton.h */,
+				76E9C79C1D211C3E00F14999 /* UICustomButton.m */,
+				76E9C79D1D211C3E00F14999 /* UICustomTextField.h */,
+				76E9C79E1D211C3E00F14999 /* UICustomTextField.m */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -426,9 +441,9 @@
 			files = (
 				76B2DD471CC61F4C0046B963 /* LICENSE in Resources */,
 				76B2DD381CC61F1D0046B963 /* Info.plist in Resources */,
-				76CEB3F11CEB3251002D6D57 /* Assets.xcassets in Resources */,
-				76CEB3F31CEB3251002D6D57 /* Main.storyboard in Resources */,
-				76CEB3F21CEB3251002D6D57 /* LaunchScreen.storyboard in Resources */,
+				76E9C7A11D211C3E00F14999 /* Assets.xcassets in Resources */,
+				76E9C7A31D211C3E00F14999 /* Main.storyboard in Resources */,
+				76E9C7A21D211C3E00F14999 /* LaunchScreen.storyboard in Resources */,
 				76B2DD451CC61F4C0046B963 /* CitrusPay.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,28 +469,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76E9C7B11D211C3E00F14999 /* UICustomButton.m in Sources */,
+				76E9C7AC1D211C3E00F14999 /* SavedCCViewController.m in Sources */,
+				76E9C7B21D211C3E00F14999 /* UICustomTextField.m in Sources */,
+				76E9C7A81D211C3E00F14999 /* InitialViewController.m in Sources */,
 				76B2DD3D1CC61F1D0046B963 /* JSONHTTPClient.m in Sources */,
+				76E9C7A51D211C3E00F14999 /* BaseViewController.m in Sources */,
 				76B2DD3B1CC61F1D0046B963 /* JSONModelError.m in Sources */,
-				76CEB3FA1CEB3251002D6D57 /* SettingViewController.m in Sources */,
-				76CEB3F41CEB3251002D6D57 /* BaseViewController.m in Sources */,
-				76CEB3FF1CEB3251002D6D57 /* UICustomTextField.m in Sources */,
-				76CEB3FC1CEB3251002D6D57 /* SignUpViewController.m in Sources */,
 				76B2DD3E1CC61F1D0046B963 /* JSONModel+networking.m in Sources */,
-				76CEB3F51CEB3251002D6D57 /* CardsViewController.m in Sources */,
-				76CEB3F71CEB3251002D6D57 /* InitialViewController.m in Sources */,
+				76E9C7A41D211C3E00F14999 /* AutoloadViewController.m in Sources */,
+				76E9C7AE1D211C3E00F14999 /* SignInViewController.m in Sources */,
+				76E9C7A71D211C3E00F14999 /* HomeViewController.m in Sources */,
+				76E9C7AB1D211C3E00F14999 /* ResetPasswordViewController.m in Sources */,
+				76E9C7A91D211C3E00F14999 /* ManageAutoLoadSubcriptionViewController.m in Sources */,
 				76B2DD3A1CC61F1D0046B963 /* JSONModelClassProperty.m in Sources */,
-				76CEB3FE1CEB3251002D6D57 /* UICustomButton.m in Sources */,
-				76CEB3FD1CEB3251002D6D57 /* HMSegmentedControl.m in Sources */,
 				76B2DD3C1CC61F1D0046B963 /* JSONAPI.m in Sources */,
 				76B2DD401CC61F1D0046B963 /* JSONValueTransformer.m in Sources */,
+				76E9C7AA1D211C3E00F14999 /* ManageCradViewController.m in Sources */,
 				76B2DD391CC61F1D0046B963 /* JSONModel.m in Sources */,
+				76E9C7A61D211C3E00F14999 /* CardsViewController.m in Sources */,
 				76531C661CB68E7A0065EADA /* AppDelegate.m in Sources */,
+				76E9C7B01D211C3E00F14999 /* HMSegmentedControl.m in Sources */,
 				76B2DD3F1CC61F1D0046B963 /* JSONKeyMapper.m in Sources */,
 				76531C631CB68E7A0065EADA /* main.m in Sources */,
-				76CEB3F91CEB3251002D6D57 /* ResetPasswordViewController.m in Sources */,
-				76CEB3F61CEB3251002D6D57 /* HomeViewController.m in Sources */,
-				76CEB3FB1CEB3251002D6D57 /* SignInViewController.m in Sources */,
-				76CEB3F81CEB3251002D6D57 /* ManageCradViewController.m in Sources */,
+				76E9C7AF1D211C3E00F14999 /* SignUpViewController.m in Sources */,
+				76E9C7AD1D211C3E00F14999 /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,18 +529,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		76CEB3D11CEB3251002D6D57 /* LaunchScreen.storyboard */ = {
+		76E9C77B1D211C3E00F14999 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				76CEB3D21CEB3251002D6D57 /* Base */,
+				76E9C77C1D211C3E00F14999 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		76CEB3D31CEB3251002D6D57 /* Main.storyboard */ = {
+		76E9C77D1D211C3E00F14999 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				76CEB3D41CEB3251002D6D57 /* Base */,
+				76E9C77E1D211C3E00F14999 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

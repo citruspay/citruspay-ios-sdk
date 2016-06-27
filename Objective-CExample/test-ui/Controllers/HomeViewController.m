@@ -413,7 +413,7 @@
 #pragma mark - TableView Delegate Methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 9;
+    return 11;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -424,7 +424,8 @@
 //    cell.layer.cornerRadius = 3;
 //    [[UITableViewCell appearance] setTintColor:[UIColor orangeColor]];
     if (indexPath.row==0) {
-        ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Get Balance";
+        ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Refresh Balance";
+        cell.accessoryType = UITableViewCellAccessoryNone;
     }
     else if (indexPath.row==1) {
         ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Load Money";
@@ -449,6 +450,12 @@
     }
     else if (indexPath.row==8) {
         ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Change Password";
+    }
+    else if (indexPath.row==9) {
+        ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Subscribe Autoload with Saved CC";
+    }
+    else if (indexPath.row==10) {
+        ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Manage Autoload";
     }
     
     return cell;
@@ -524,6 +531,12 @@
     else if (indexPath.row==8) {
         selectedRow = indexPath.row;
         [self performSegueWithIdentifier:@"SettingViewIdentifier" sender:nil];
+    }
+    else if (indexPath.row==9) {
+        [self performSegueWithIdentifier:@"SubscribeWithCardIdentifier" sender:nil];
+    }
+    else if (indexPath.row==10) {
+        [self performSegueWithIdentifier:@"ManageAutoloadIdentifier" sender:nil];
     }
 }
 

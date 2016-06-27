@@ -13,7 +13,7 @@
 #warning "set your own oauth keys and urls to see testing results"
 
 /*
- set oauth keys
+ set your oauth keys
 */
 
 #define SignInId @"9hh5re3r5q-signin"
@@ -22,7 +22,7 @@
 #define SubscriptionSecretKey @"3be4d7bf59c109e76a3619a33c1da9a8"
 
 /*
- set Vanity/bill/return url
+ set your Vanity / Bill / Return URL
 */
 #define VanityUrl @"nativeSDK"
 #define LoadWalletReturnUrl @"https://salty-plateau-1529.herokuapp.com/redirectURL.sandbox.php"

@@ -107,7 +107,6 @@ typedef void (^ASBillCallback)(CTSBill* bill,NSError* error);
 //+(NSString *)toDpTypeString:(DPRequestType)type;
 + (CTSBill*)getDPBillFromServer:(CTSRuleInfo *)ruleInfo txn:(NSString *)txnID billUrl:(NSString*)billUrl;
 +(NSString *)convertToDecimalAmountString:(NSString *)amount;
-//Vikas
 +(NSString*)getHTMLWithString:(NSString *)string;
 + (NSMutableArray *)fetchMappedCardSchemeForSaveCards:(NSArray*)cardsSchemeArray;
 + (UIImage *)fetchSchemeImageBySchemeType:(NSString *)scheme;
@@ -119,7 +118,7 @@ typedef void (^ASBillCallback)(CTSBill* bill,NSError* error);
 +(NSDictionary *)errorResponseTransactionFailed;
 +(NSString *)fetchBankCodeForName:(NSString *)nameOfBank;
 +(CTSKeyStore *)keyStore;
-+ (CTSRestCoreResponse*)addJsonErrorToResponse:(CTSRestCoreResponse*)response;
++(CTSRestCoreResponse*)addJsonErrorToResponse:(CTSRestCoreResponse*)response;
 +(BOOL)isErrorJson:(NSString *)string;
 +(void)storeLoginId:(NSString *)string;
 +(NSString *)getLoginId;
