@@ -64,7 +64,7 @@ $ git submodule update --init --recursive
 $ open citruspay-ios-sdk
 ~~~
 + Go to "Framework" folder & drag "core-sdk" folder into your existing Xcode project
-+ Navigate to your project's settings, then select the target you wish to add core-sdk to
++ Navigate to your project's settings, then select the target you wish to add "core-sdk" to
 + Navigate to `Build Phases` and expand the `Link Binary With Libraries` section
 + Click the + and `CitrusPay.framework` appropriate to your target's platform
 + Navigate to Build Phases and expand the `Copy Bundle Resources` section
