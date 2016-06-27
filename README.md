@@ -63,8 +63,8 @@ $ git submodule add git://github.com/citruspay/citruspay-ios-sdk.git
 $ git submodule update --init --recursive
 $ open citruspay-ios-sdk
 ~~~
-+ Drag CitrusPay-Framework folder into your existing Xcode project
-+ Navigate to your project's settings, then select the target you wish to add CitrusPay-Framework to
++ Go to "Framework" folder & drag "core-sdk" folder into your existing Xcode project
++ Navigate to your project's settings, then select the target you wish to add core-sdk to
 + Navigate to `Build Phases` and expand the `Link Binary With Libraries` section
 + Click the + and `CitrusPay.framework` appropriate to your target's platform
 + Navigate to Build Phases and expand the `Copy Bundle Resources` section
@@ -85,7 +85,7 @@ $ open citruspay-ios-sdk
 $ git clone https://github.com/citruspay/citruspay-ios-sdk.git
 $ open citruspay-ios-sdk
 ~~~
-+ Drag CitrusPay-Framework folder into your existing Xcode project
++ Go to "Framework" folder & drag "core-sdk" folder into your existing Xcode project
 + In Xcode, go to your app's target settings. On the `Build Phases` tab, expand the `Link Binary With Libraries` section.
 + Include the following framework:
     - `CitrusPay.framework`
