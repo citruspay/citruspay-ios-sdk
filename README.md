@@ -1,13 +1,15 @@
-# Getting Started  
-
-![CitrusPay logo](http://www.citruspay.com/images/logo.png "CitrusPay") 
-
-## CitrusPay iOS SDK V 3.6.0
+## Citrus Payments iOS SDK V 3.6.0 (27th June 2016 Onwards)
+![CitrusPay logo](http://www.citruspay.com/images/logo.png "CitrusPay")
 
 ## Introduction
-The CitrusPay iOS SDK enables collection of payments via various payment methods.
+This SDK enables collection of payments via various payment methods.
 
-It is meant for consumption by [CitrusPay](http://www.citruspay.com) partners who are developing their own iOS apps aimed at merchants and/or consumers.
+It is meant for consumption by [CitrusPay](http://www.citruspay.com) merchants who are developing their own mobile apps for their consumers.
+
+## Documentation
++ Official documents are hosted on our [CitrusPay Developer Guide](http://developers.citruspay.com/ios/iosReg.html).
++ Git Wiki documentation is available on the [Git Wiki Documentation](https://github.com/citruspay/citruspay-ios-sdk/wiki).
++ Additional SDK related document links are at the bottom of this ReadMe File.
 
 ##Features
 CitrusPay iOS SDK broadly offers following features.
@@ -18,18 +20,11 @@ CitrusPay iOS SDK broadly offers following features.
 + Withdraw the money back into User's bank account from the Prepaid account .
 + Creating Citrus account for the user .
 
-####[ChangeLog](https://github.com/citruspay/citruspay-ios-sdk/wiki/ChangeLog)
+## Version History & Release Notes
+[ChangeLog](https://github.com/citruspay/citruspay-ios-sdk/wiki/ChangeLog)
+[Migration from 3.0.x to 3.1.x or higher](https://github.com/citruspay/citruspay-ios-sdk/wiki/5-Migration-From-V-3.0.x-to-V-3.1.x)
 
-####[Migration from 3.0.x to 3.1.x or higher](https://github.com/citruspay/citruspay-ios-sdk/wiki/5-Migration-From-V-3.0.x-to-V-3.1.x)
-
-## Usage
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-+ Xcode 6 or higher.
-
-###Citrus PG Prerequisites
+## Citrus PG Prerequisites
 + You need to enroll with Citrus as a merchant.
 + You need to host Bill generator on your server
 + You need to host Return Url Page on your server. (After the transaction is complete, Citrus posts a response to this URL.)
@@ -43,9 +38,30 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 Note: Please DO NOT PROCEED if the above mentioned requirements have not been met.
 
-## Installation
+# SDK Integration
+## Dependencies
++ [JSONModel](https://github.com/jsonmodel/jsonmodel)
 
-#### Using [cocoapods](https://cocoapods.org/) (recommended)
+## Requirements
++ Xcode 6 or higher.
++ iOS 7.0 or higher.
+
+## Using Example App
++ Downloading zip is not recommended. Its recommended to do a git clone.
+
+### Using git Clone
++ This SDK requires submodules to be cloned for example app to work so add --recursive in git clone command
+Command: git clone --recursive https://github.com/citruspay/citruspay-ios-sdk.git citruspay-sdk
++ If you are using SourceTree, submodules are imported automatically
+
+### Using GUI Client
++ Most of the GUI clients like SourceTree automatically imports submodules.
+
+### Installing Pods
+To run the example project, run `pod install` from the Example directory first.
+
+## For your own App
+### Using [cocoapods](https://cocoapods.org/) (recommended)
 + The recommended installation mechanism for CitrusPay is via CocoaPods. CocoaPods is an Objective-C library dependency manager that streamlines the process of installing, configuring, and updating third-party libraries.
 You can learn more about CocoaPods at the website: http://cocoapods.org/
 + Add `pod "CitrusPay"` to your podfile
@@ -53,7 +69,7 @@ You can learn more about CocoaPods at the website: http://cocoapods.org/
 + You should now be able to add `#import <CitrusPay/CitrusPay.h>` to any of your target's source files and begin using CitrusPay SDK!
 + Done!
 
-#### Using Submodule
+### Using Submodule
 + If you do not wish to use CocoaPods then the secondary recommendation is to use a submodule. This allows you to easily track updates using standard Git commands. The first step to installation is to add the submodule to your project:
 ~~~{.m}
 $ cd /path/to/MyApplication
@@ -69,7 +85,7 @@ $ open citruspay-ios-sdk
 + Click the + and `CitrusPay.framework` appropriate to your target's platform
 + Navigate to Build Phases and expand the `Copy Bundle Resources` section
 + Click the + and `CitrusPay.bundle` appropriate to your target's platform
-+ Add depedency 
++ Add depedency
     1. Download the JSONModel repository as a [zip file](https://github.com/icanzilb/JSONModel/archive/master.zip) or clone it
     2. Copy the JSONModel sub-folder into your Xcode project
     3. Link your app to SystemConfiguration.framework
@@ -77,10 +93,10 @@ $ open citruspay-ios-sdk
 + Done!
 
 
-#### Using Library Binaries (manual way)
+### Using Library Binaries (manual way)
 + Download the latest zip file from our [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/3.6.0/Framework.zip)
 + Unzip the file
-+ Or clone it 
++ Or clone it
 ~~~{.m}
 $ git clone https://github.com/citruspay/citruspay-ios-sdk.git
 $ open citruspay-ios-sdk
@@ -92,17 +108,12 @@ $ open citruspay-ios-sdk
 + In Xcode, go to your app's target settings. On the `Build Phases` tab, expand the `Copy Bundle Resources` section.
 + Include the following bundle:
     - `CitrusPay.bundle`
-+ Add depedency 
++ Add depedency
     1. Download the JSONModel repository as a [zip file](https://github.com/icanzilb/JSONModel/archive/master.zip) or clone it
     2. Copy the JSONModel sub-folder into your Xcode project
     3. Link your app to SystemConfiguration.framework
 + You should now be able to add `#import <CitrusPay/CitrusPay.h>` to any of your target's source files and begin using CitrusPay SDK!
 + Done!
-
-## Documentation
-HTML documentation is hosted on our [CitrusPay Developer Guide](http://developers.citruspay.com/ios/iosReg.html).
-
-Git Wiki documentation is available on the [Git Wiki Documentation](https://github.com/citruspay/citruspay-ios-sdk/wiki).
 
 ## SDK Organization
 
@@ -112,7 +123,7 @@ It exposes all the methods you can call to accept payments via the supported pay
 Detailed reference documentation is available on the reference page for the `CitrusPay` class.
 
 ### Data Models
-All other classes in the SDK are data models that are used to exchange data between your app and the SDK. 
+All other classes in the SDK are data models that are used to exchange data between your app and the SDK.
 Detailed reference documentation is available on the reference page for each class.
 
 ## Next Steps
@@ -148,7 +159,7 @@ keyStore.vanity = @"testing";
 ####Setup working Enviroments
 
 SDK operates in two different modes Sandbox and Production mode. for both the enviroments Citrus PG Prerequisites key sets are different. keys from one enviroment won't work on other. so please make sure you are using correct set of keys.
-During the developement you would always want to use the Sandbox mode. once you are done with your App development you can switch to production mode . 
+During the developement you would always want to use the Sandbox mode. once you are done with your App development you can switch to production mode .
 
 you need to use `[CitrusPaymentSDK initializeWithKeyStore: environment:]` to initialize the SDK
 
@@ -162,7 +173,7 @@ Production:
 [CitrusPaymentSDK initializeWithKeyStore:keyStore environment:CTSEnvProduction];
 ~~~
 
-Only after you are done with initialization you can proceed with following guide 
+Only after you are done with initialization you can proceed with following guide
 
 The SDK is logically divided into 3 modules/layers or interfacing classes
 + CTSAuthLayer - handles all of the user creation related tasks .
@@ -203,7 +214,7 @@ UIImage* image = [CTSUtility fetchBankLogoImageByBankName:@"bank"];
 ~~~
 
 
-Following are the specific tasks related to each of the layer 
+Following are the specific tasks related to each of the layer
 
 #[Important Update for iOS 9](https://github.com/citruspay/citruspay-ios-sdk/wiki/4.-Common-Errors#ios-9-ssl-errors--fix)
 
