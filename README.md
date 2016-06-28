@@ -238,6 +238,9 @@ Following are the specific tasks related to each of the layer
 #####One Tap Payment
 + [What is One Tap Payment? ](https://github.com/citruspay/citruspay-ios-sdk/wiki/One-Tap-Payment)
 
+##### SimpliPay
++ [What is SimpliPay? ](https://github.com/citruspay/citruspay-ios-sdk/wiki/SimpliPay)
+
 #####Others
 + [Fetch Available Schemes and Banks for the Merchant and for Load Money in Citrus Cash](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#fetch-available-schemes-and-banks-for-the-merchant-and-for-load-money)
 
