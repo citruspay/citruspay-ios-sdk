@@ -82,7 +82,7 @@ $ open citruspay-ios-sdk
 + Unzip the file
 + Or clone it 
 ~~~{.m}
-$ git clone https://github.com/citruspay/citruspay-ios-sdk.git
+$ git clone --recursive https://github.com/citruspay/citruspay-ios-sdk.git
 $ open citruspay-ios-sdk
 ~~~
 + Navigate to "Framework" folder & drag "core-sdk" folder into your existing Xcode project
