@@ -1,10 +1,13 @@
 CitrusPay iOS SDK Kit release notes
 ==============================================
 
-3.6.0
+3.6.1
 -----
 
 * Current Version
+- BITCODE issue resolved
+
+* 3.5.6
 iOS SDK upgraded new Features with Lighter, Faster & Stronger
 
 - SimpliPay
