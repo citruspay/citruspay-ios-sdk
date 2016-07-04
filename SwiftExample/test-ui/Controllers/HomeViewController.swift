@@ -39,7 +39,6 @@ class HomeViewController: BaseClassViewController {
     
     func showAndVerifyOtp() -> Void {
         
-        if #available(iOS 8.0, *) {
             let alert = UIAlertController (title: "", message: "Please enter the OTP sent to your phone", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil))
             alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
@@ -66,9 +65,6 @@ class HomeViewController: BaseClassViewController {
             
             self.presentViewController(alert, animated: true, completion: nil)
 
-        } else {
-            // Fallback on earlier versions
-        }
     }
     
     
