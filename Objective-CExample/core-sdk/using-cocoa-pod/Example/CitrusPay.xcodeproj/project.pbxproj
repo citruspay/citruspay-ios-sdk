@@ -350,9 +350,6 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Mukesh Patil";
 				TargetAttributes = {
-					6003F589195388D20070C39A = {
-						DevelopmentTeam = BF75J23QJ2;
-					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -673,7 +670,7 @@
 					"COCOAPODS=1",
 				);
 				INFOPLIST_FILE = "CitrusPay/CitrusPay-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.cocoapod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -697,7 +694,7 @@
 					"COCOAPODS=1",
 				);
 				INFOPLIST_FILE = "CitrusPay/CitrusPay-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.cocoapod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
