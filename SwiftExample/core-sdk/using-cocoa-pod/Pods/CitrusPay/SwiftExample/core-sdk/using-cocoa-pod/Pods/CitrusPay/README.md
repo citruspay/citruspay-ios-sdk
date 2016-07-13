@@ -78,11 +78,11 @@ $ open citruspay-ios-sdk
 
 
 #### Using Library Binaries (manual way)
-+ Download the latest zip file from our [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/3.5.0/CitrusPay-Framework.zip)
++ Download the latest zip file from our [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/3.6.0/Framework.zip)
 + Unzip the file
 + Or clone it 
 ~~~{.m}
-$ git clone https://github.com/citruspay/citruspay-ios-sdk.git
+$ git clone --recursive https://github.com/citruspay/citruspay-ios-sdk.git
 $ open citruspay-ios-sdk
 ~~~
 + Navigate to "Framework" folder & drag "core-sdk" folder into your existing Xcode project
@@ -121,7 +121,7 @@ When you are ready, look at the samples below to learn how to interact with the 
 
 ## Samples
 
-See the [Objective-C Example app](https://github.com/citruspay/citruspay-ios-sdk/tree/master/Objective-CExample) [Swift Example app](https://github.com/citruspay/citruspay-ios-sdk/tree/master/SwiftExample) for a working implementation of all API methods.
+See the [Objective-C Example app](https://github.com/citruspay/citruspay-ios-sdk/tree/master/Objective-CExample) and [Swift Example app](https://github.com/citruspay/citruspay-ios-sdk/tree/master/SwiftExample) for a working implementation of all API methods.
 
 Note: make sure to open the project using `CitrusPay.xcworkspace` and not `CitrusPay.xcodeproj` for Cocoa-Pod Example.
 
@@ -237,6 +237,9 @@ Following are the specific tasks related to each of the layer
 
 #####One Tap Payment
 + [What is One Tap Payment? ](https://github.com/citruspay/citruspay-ios-sdk/wiki/One-Tap-Payment)
+
+##### SimpliPay
++ [What is SimpliPay? ](https://github.com/citruspay/citruspay-ios-sdk/wiki/SimpliPay)
 
 #####Others
 + [Fetch Available Schemes and Banks for the Merchant and for Load Money in Citrus Cash](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#fetch-available-schemes-and-banks-for-the-merchant-and-for-load-money)

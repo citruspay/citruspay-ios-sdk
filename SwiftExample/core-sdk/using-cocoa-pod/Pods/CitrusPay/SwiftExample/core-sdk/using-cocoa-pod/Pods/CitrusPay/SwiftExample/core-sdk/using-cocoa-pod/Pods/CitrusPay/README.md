@@ -1,8 +1,8 @@
-# Getting Started                         {#mainpage}
+# Getting Started  
 
 ![CitrusPay logo](http://www.citruspay.com/images/logo.png "CitrusPay") 
 
-## CitrusPay
+## CitrusPay iOS SDK V 3.6.0
 
 ## Introduction
 The CitrusPay iOS SDK enables collection of payments via various payment methods.
@@ -63,8 +63,8 @@ $ git submodule add git://github.com/citruspay/citruspay-ios-sdk.git
 $ git submodule update --init --recursive
 $ open citruspay-ios-sdk
 ~~~
-+ Drag CitrusPay-Framework folder into your existing Xcode project
-+ Navigate to your project's settings, then select the target you wish to add CitrusPay-Framework to
++ Navigate to "Framework" folder & drag "core-sdk" folder into your existing Xcode project
++ Navigate to your project's settings, then select the target you wish to add "core-sdk" to
 + Navigate to `Build Phases` and expand the `Link Binary With Libraries` section
 + Click the + and `CitrusPay.framework` appropriate to your target's platform
 + Navigate to Build Phases and expand the `Copy Bundle Resources` section
@@ -78,14 +78,14 @@ $ open citruspay-ios-sdk
 
 
 #### Using Library Binaries (manual way)
-+ Download the latest zip file from our [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/3.0.0/CitrusPay-Framework.zip)
++ Download the latest zip file from our [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/3.5.0/CitrusPay-Framework.zip)
 + Unzip the file
 + Or clone it 
 ~~~{.m}
 $ git clone https://github.com/citruspay/citruspay-ios-sdk.git
 $ open citruspay-ios-sdk
 ~~~
-+ Drag CitrusPay-Framework folder into your existing Xcode project
++ Navigate to "Framework" folder & drag "core-sdk" folder into your existing Xcode project
 + In Xcode, go to your app's target settings. On the `Build Phases` tab, expand the `Link Binary With Libraries` section.
 + Include the following framework:
     - `CitrusPay.framework`
@@ -102,7 +102,7 @@ $ open citruspay-ios-sdk
 ## Documentation
 HTML documentation is hosted on our [CitrusPay Developer Guide](http://developers.citruspay.com/ios/iosReg.html).
 
-Pdf documentation is available on the [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/3.0.0/citruspay-ios-sdk-guide.pdf).
+Git Wiki documentation is available on the [Git Wiki Documentation](https://github.com/citruspay/citruspay-ios-sdk/wiki).
 
 ## SDK Organization
 
@@ -116,14 +116,14 @@ All other classes in the SDK are data models that are used to exchange data betw
 Detailed reference documentation is available on the reference page for each class.
 
 ## Next Steps
-Head over to the [documentation](https://github.com/citruspay/citruspay-ios-sdk) to see all the API methods available.
+Head over to the [Git Wiki Documentation](https://github.com/citruspay/citruspay-ios-sdk/wiki) to see all the API methods available.
 When you are ready, look at the samples below to learn how to interact with the SDK.
 
 ## Samples
 
-See the [Example app](https://github.com/citruspay/citruspay-ios-sdk/tree/master/CitrusPay/Example) for a working implementation of all API methods.
+See the [Objective-C Example app](https://github.com/citruspay/citruspay-ios-sdk/tree/master/Objective-CExample) [Swift Example app](https://github.com/citruspay/citruspay-ios-sdk/tree/master/SwiftExample) for a working implementation of all API methods.
 
-Note: make sure to open the project using `CitrusPay.xcworkspace` and not `CitrusPay.xcodeproj`.
+Note: make sure to open the project using `CitrusPay.xcworkspace` and not `CitrusPay.xcodeproj` for Cocoa-Pod Example.
 
 ### Initializing the SDK
 
@@ -203,7 +203,6 @@ UIImage* image = [CTSUtility fetchBankLogoImageByBankName:@"bank"];
 ~~~
 
 
-
 Following are the specific tasks related to each of the layer 
 
 #[Important Update for iOS 9](https://github.com/citruspay/citruspay-ios-sdk/wiki/4.-Common-Errors#ios-9-ssl-errors--fix)
@@ -214,10 +213,8 @@ Following are the specific tasks related to each of the layer
 
 #####User Management
 
-+ [Bind User](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#bind-user) (doesn't need password, enables user to save cards)
++ [User Creation/Authentication Flow](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#citrus-wallet-user-creation)
 +  [See if anyone is logged in](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#see-if-anyone-is-logged-in)
-+ [Link User](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#get-users-prepaid-level-access-link-user) (required for all Citrus Cash related operations)
-+ [Signin the user for Citrus Cash  access](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#sign-in-the-user-for-prepaid-level-access)
 + [Reset User Password](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#reset-user-password)
 + [Sign Out](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#sign-out)
 
@@ -237,6 +234,9 @@ Following are the specific tasks related to each of the layer
 
 #####Dynamic Pricing Offer Coupons and Surcharge
 + [How to use dynamic pricing ?](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#dynamic-pricing-offer-coupons-surcharge)
+
+#####One Tap Payment
++ [What is One Tap Payment? ](https://github.com/citruspay/citruspay-ios-sdk/wiki/One-Tap-Payment)
 
 #####Others
 + [Fetch Available Schemes and Banks for the Merchant and for Load Money in Citrus Cash](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#fetch-available-schemes-and-banks-for-the-merchant-and-for-load-money)

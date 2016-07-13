@@ -5,7 +5,7 @@ CitrusPay iOS SDK Kit release notes
 -----
 
 * Current Version
-iOS SDK upgrading new Features with Lighter, Faster & Stronger
+iOS SDK upgraded new Features with Lighter, Faster & Stronger
 
 - SimpliPay
 Single simple interface to pay

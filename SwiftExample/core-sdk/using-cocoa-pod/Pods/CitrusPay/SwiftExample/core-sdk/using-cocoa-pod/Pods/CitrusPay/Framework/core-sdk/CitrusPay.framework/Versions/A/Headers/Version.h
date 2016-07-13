@@ -8,5 +8,5 @@
 
 #ifndef CTS_iOS_Sdk_Version_h
 #define CTS_iOS_Sdk_Version_h
-#define SDK_VERSION @"3.6.0"
+#define SDK_VERSION @"3.6.1"
 #endif
