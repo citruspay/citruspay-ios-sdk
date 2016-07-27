@@ -434,10 +434,10 @@
         ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Send Money";
     }
     else if (indexPath.row==3) {
-        ((UILabel *) [cell.contentView viewWithTag:500]).text = @"SimpliPay";
+        ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Accepted Payments";
     }
     else if (indexPath.row==4) {
-        ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Pay using Dynamic Pricing (SimpliPay)";
+        ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Pay using Dynamic Pricing";
     }
     else if (indexPath.row==5) {
         ((UILabel *) [cell.contentView viewWithTag:500]).text = @"Manage Saved Accounts";

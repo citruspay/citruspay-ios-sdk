@@ -1,10 +1,16 @@
 CitrusPay iOS SDK Kit release notes
 ==============================================
 
-3.6.0
+3.6.2
 -----
 
 * Current Version
+- Custom Parameters support for Wallet PG Transactions.
+
+* 3.6.1
+- BITCODE issue resolved
+
+* 3.6.0
 iOS SDK upgraded new Features with Lighter, Faster & Stronger
 
 - SimpliPay

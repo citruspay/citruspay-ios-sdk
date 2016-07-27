@@ -1,15 +1,15 @@
 PODS:
-  - CitrusPay (3.6.2):
+  - CitrusPay (3.6.3):
     - JSONModel
-  - JSONModel (1.2.0)
+  - JSONModel (1.3.0)
 
 DEPENDENCIES:
-  - CitrusPay (~> 3.6.2)
+  - CitrusPay (~> 3.6.3)
 
 SPEC CHECKSUMS:
-  CitrusPay: a4e40862b6caaae8bcb41d9c7a4bd8176cd0da2f
-  JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
+  CitrusPay: 9e560a95f63da765e094f00fba32c93e294c9081
+  JSONModel: 81c06ecf99190a25fa6aafceea5faffa7880868a
 
-PODFILE CHECKSUM: a80d3bd0433761140b645aabcac818c0445b6a93
+PODFILE CHECKSUM: 1ff7e77ee51f51b5c7edad78b2a01d6afd52646d
 
 COCOAPODS: 1.0.1

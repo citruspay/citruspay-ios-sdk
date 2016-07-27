@@ -21,6 +21,7 @@
 #import "CTSKeyStore.h"
 #import "CTSDataCache.h"
 #import "UserLogging.h"
+#import "CTSOauthManager.h"
 
 typedef enum{
     CTSEnvSandbox,

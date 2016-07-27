@@ -1,1 +1,8 @@
-pod "CitrusPay"
+
+target 'CitrusPayExample' do
+  pod 'CitrusPay’, '~> 3.6.0’
+end
+
+target 'CitrusPayExampleTests' do
+  pod 'CitrusPay’, '~> 3.6.0’
+end

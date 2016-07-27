@@ -403,6 +403,7 @@
 				TargetAttributes = {
 					76531C5D1CB68E7A0065EADA = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = BF75J23QJ2;
 					};
 					76531C761CB68E7A0065EADA = {
 						CreatedOnToolsVersion = 7.0;
@@ -632,6 +633,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../../**";
 				INFOPLIST_FILE = CitrusPayExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -647,6 +649,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../../**";
 				INFOPLIST_FILE = CitrusPayExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
