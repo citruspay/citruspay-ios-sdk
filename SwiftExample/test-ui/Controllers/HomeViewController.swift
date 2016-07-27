@@ -55,6 +55,7 @@ class HomeViewController: BaseClassViewController {
                             // Handle Success
                             UIUtility.toastMessageOnScreen("Success")
                             print("success")
+                            CTSOauthManager.readPasswordSigninOuthData();
                         }
                 })
             }))
