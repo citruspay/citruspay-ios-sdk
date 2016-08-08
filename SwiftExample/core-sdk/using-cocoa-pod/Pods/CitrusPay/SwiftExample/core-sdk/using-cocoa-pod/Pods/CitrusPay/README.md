@@ -2,7 +2,7 @@
 
 ![CitrusPay logo](http://www.citruspay.com/images/logo.png "CitrusPay") 
 
-## CitrusPay iOS SDK V 3.6.2
+## CitrusPay iOS SDK V 3.6.3
 
 ## Introduction
 The CitrusPay iOS SDK enables collection of payments via various payment methods.
@@ -78,7 +78,7 @@ $ open citruspay-ios-sdk
 
 
 #### Using Library Binaries (manual way)
-+ Download the latest zip file from our [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/3.6.1/Framework.zip)
++ Download the latest zip file from our [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/3.6.2/Framework.zip)
 + Unzip the file
 + Or clone it 
 ~~~{.m}

@@ -7,10 +7,12 @@
 //
 
 #import "AutoloadViewController.h"
-
 #import "MerchantConstants.h"
 #import "HomeViewController.h"
 
+@interface AutoloadViewController ()
+
+@end
 
 @implementation AutoloadViewController
 
