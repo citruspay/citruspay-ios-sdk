@@ -19,7 +19,7 @@
 #define TEST_FIRST_NAME @"Mukesh"
 #define TEST_LAST_NAME @"Patil"
 
-#define TEST_CITY @"Mumbai"
+#define TEST_CITY @"Pune"
 #define TEST_COUNTRY @"India"
 #define TEST_STATE @"Maharashtra"
 #define TEST_STREET1 @"Golden Road"
