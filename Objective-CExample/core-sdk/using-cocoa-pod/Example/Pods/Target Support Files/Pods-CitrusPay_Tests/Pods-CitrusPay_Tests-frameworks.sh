@@ -84,8 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/JSONModel-iOS7.1/JSONModel.framework"
+  install_framework "${PODS_ROOT}/../../../../../Framework/core-sdk/CitrusPay.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/JSONModel/JSONModel.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/JSONModel-iOS7.1/JSONModel.framework"
+  install_framework "${PODS_ROOT}/../../../../../Framework/core-sdk/CitrusPay.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/JSONModel/JSONModel.framework"
 fi

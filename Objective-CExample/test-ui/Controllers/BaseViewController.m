@@ -53,6 +53,10 @@
 
     [CitrusPaymentSDK enableDEBUGLogs];
     
+    [CitrusPaymentSDK enableLoader];
+    
+    [CitrusPaymentSDK setLoaderColor:[UIColor orangeColor]];
+
     authLayer = [CTSAuthLayer fetchSharedAuthLayer];
     proifleLayer = [CTSProfileLayer fetchSharedProfileLayer];
     paymentLayer = [CTSPaymentLayer fetchSharedPaymentLayer];
