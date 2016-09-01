@@ -7,17 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
-#import "MerchantConstants.h"
 #import <CitrusPay/CitrusPay.h>
+#import "MerchantConstants.h"
 
 @interface BaseViewController : UIViewController{
 
     CTSAuthLayer *authLayer;
     CTSProfileLayer *proifleLayer;
     CTSPaymentLayer *paymentLayer;
-//    CTSContactUpdate* contactInfo;
-//    CTSUserAddress* addressInfo;
+    CTSContactUpdate* contactInfo;
+    CTSUserAddress* addressInfo;
     NSDictionary *customParams;
 }
 

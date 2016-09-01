@@ -12,14 +12,14 @@
 		763CCB4E1CBD29BC00A8AADB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763CCB4D1CBD29BC00A8AADB /* AppDelegate.swift */; };
 		763CCB631CBD29BC00A8AADB /* CitrusPayExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763CCB621CBD29BC00A8AADB /* CitrusPayExampleTests.swift */; };
 		763CCB6E1CBD29BC00A8AADB /* CitrusPayExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763CCB6D1CBD29BC00A8AADB /* CitrusPayExampleUITests.swift */; };
-		763CCB7E1CBD30D600A8AADB /* Objective-CBridgingHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 763CCB7D1CBD30D600A8AADB /* Objective-CBridgingHeader.m */; settings = {ASSET_TAGS = (); }; };
-		76F777FB1CC6496F00C9E7B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F777F01CC6496F00C9E7B8 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		76F777FC1CC6496F00C9E7B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F777F11CC6496F00C9E7B8 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		76F777FD1CC6496F00C9E7B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F777F31CC6496F00C9E7B8 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		76F777FE1CC6496F00C9E7B8 /* BaseClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F777F61CC6496F00C9E7B8 /* BaseClassViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		76F777FF1CC6496F00C9E7B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F777F71CC6496F00C9E7B8 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		76F778001CC6496F00C9E7B8 /* MerchantConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F777F91CC6496F00C9E7B8 /* MerchantConstants.swift */; settings = {ASSET_TAGS = (); }; };
-		76F778011CC6496F00C9E7B8 /* TestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F777FA1CC6496F00C9E7B8 /* TestParams.swift */; settings = {ASSET_TAGS = (); }; };
+		763CCB7E1CBD30D600A8AADB /* Objective-CBridgingHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 763CCB7D1CBD30D600A8AADB /* Objective-CBridgingHeader.m */; };
+		76F777FB1CC6496F00C9E7B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F777F01CC6496F00C9E7B8 /* Assets.xcassets */; };
+		76F777FC1CC6496F00C9E7B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F777F11CC6496F00C9E7B8 /* LaunchScreen.storyboard */; };
+		76F777FD1CC6496F00C9E7B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F777F31CC6496F00C9E7B8 /* Main.storyboard */; };
+		76F777FE1CC6496F00C9E7B8 /* BaseClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F777F61CC6496F00C9E7B8 /* BaseClassViewController.swift */; };
+		76F777FF1CC6496F00C9E7B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F777F71CC6496F00C9E7B8 /* HomeViewController.swift */; };
+		76F778001CC6496F00C9E7B8 /* MerchantConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F777F91CC6496F00C9E7B8 /* MerchantConstants.swift */; };
+		76F778011CC6496F00C9E7B8 /* TestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F777FA1CC6496F00C9E7B8 /* TestParams.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */

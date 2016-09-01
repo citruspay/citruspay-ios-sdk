@@ -2,7 +2,7 @@
 
 ![CitrusPay logo](http://www.citruspay.com/images/logo.png "CitrusPay") 
 
-## CitrusPay iOS SDK V 3.7.0
+## CitrusPay iOS SDK V 4.0.0
 
 ## Introduction
 The CitrusPay iOS SDK enables collection of payments via various payment methods.
@@ -50,7 +50,8 @@ Note: Please DO NOT PROCEED if the above mentioned requirements have not been me
 You can learn more about CocoaPods at the website: http://cocoapods.org/
 + Add `pod "CitrusPay"` to your podfile
 + Run `pod install`
-+ You should now be able to add `#import <CitrusPay/CitrusPay.h>` to any of your target's source files and begin using CitrusPay SDK!
++ You should now be able to add SDK to any of your target's source files and begin using CitrusPay SDK!
++ Using Swift `import CitrusPay` Or Objective-C `#import <CitrusPay/CitrusPay.h>`
 + Done!
 
 #### Using Submodule
@@ -64,16 +65,23 @@ $ git submodule update --init --recursive
 $ open citruspay-ios-sdk
 ~~~
 + Navigate to "Framework" folder & drag "core-sdk" folder into your existing Xcode project
-+ Navigate to your project's settings, then select the target you wish to add "core-sdk" to
-+ Navigate to `Build Phases` and expand the `Link Binary With Libraries` section
++ Select the target you wish to add "core-sdk" to
++ Navigate to `Build Phases` tab and expand the `Link Binary With Libraries` section
 + Click the + and `CitrusPay.framework` appropriate to your target's platform
-+ Navigate to Build Phases and expand the `Copy Bundle Resources` section
-+ Click the + and `CitrusPay.bundle` appropriate to your target's platform
-+ Add depedency 
-    1. Download the JSONModel repository as a [zip file](https://github.com/icanzilb/JSONModel/archive/master.zip) or clone it
-    2. Copy the JSONModel sub-folder into your Xcode project
-    3. Link your app to SystemConfiguration.framework
-+ You should now be able to add `#import <CitrusPay/CitrusPay.h>` to any of your target's source files and begin using CitrusPay SDK!
++ Then navigate to `General` tab and expand the `Embedded Binaries` section
++ Click the + and `CitrusPay.framework` appropriate to your target's platform
++ Add dependency 
+1. Download the JSONModel repository as a [zip file](https://github.com/icanzilb/JSONModel/archive/master.zip) or clone it
+2. Copy the JSONModel folder into your Xcode project finder
+3. Drag the `JSONModel.xcodeproj` from sub-folder into your Xcode project (i.e using direct project dependency)
+4. Select the target you wish to add "JSONModel" to
++ Navigate to `Build Phases` tab and expand the `Link Binary With Libraries` section
++ Click the + and `JSONModel.framework` appropriate to your target's platform
++ Then navigate to `General` tab and expand the `Embedded Binaries` section
++ Click the + and `JSONModel.framework` appropriate to your target's platform
+5. Link your app to SystemConfiguration.framework
++ You should now be able to add SDK to any of your target's source files and begin using CitrusPay SDK!
++ Using Swift `import CitrusPay` Or Objective-C `#import <CitrusPay/CitrusPay.h>`
 + Done!
 
 
@@ -88,15 +96,22 @@ $ open citruspay-ios-sdk
 + Navigate to "Framework" folder & drag "core-sdk" folder into your existing Xcode project
 + In Xcode, go to your app's target settings. On the `Build Phases` tab, expand the `Link Binary With Libraries` section.
 + Include the following framework:
-    - `CitrusPay.framework`
-+ In Xcode, go to your app's target settings. On the `Build Phases` tab, expand the `Copy Bundle Resources` section.
-+ Include the following bundle:
-    - `CitrusPay.bundle`
-+ Add depedency 
-    1. Download the JSONModel repository as a [zip file](https://github.com/icanzilb/JSONModel/archive/master.zip) or clone it
-    2. Copy the JSONModel sub-folder into your Xcode project
-    3. Link your app to SystemConfiguration.framework
-+ You should now be able to add `#import <CitrusPay/CitrusPay.h>` to any of your target's source files and begin using CitrusPay SDK!
+- `CitrusPay.framework`
++ In Xcode, go to your app's target settings. On the `General` tab, expand the `Embedded Binaries` section.
++ Include the following framework:
+- `CitrusPay.framework`
++ Add dependency 
+1. Download the JSONModel repository as a [zip file](https://github.com/icanzilb/JSONModel/archive/master.zip) or clone it
+2. Copy the JSONModel folder into your Xcode project finder
+3. Drag the `JSONModel.xcodeproj` from sub-folder into your Xcode project (i.e using direct project dependency)
+4. Select the target you wish to add "JSONModel" to
++ Navigate to `Build Phases` tab and expand the `Link Binary With Libraries` section
++ Click the + and `JSONModel.framework` appropriate to your target's platform
++ Then navigate to `General` tab and expand the `Embedded Binaries` section
++ Click the + and `JSONModel.framework` appropriate to your target's platform
+5. Link your app to SystemConfiguration.framework
++ You should now be able to add SDK to any of your target's source files and begin using CitrusPay SDK!
++ Using Swift `import CitrusPay` Or Objective-C `#import <CitrusPay/CitrusPay.h>`
 + Done!
 
 ## Documentation
@@ -128,6 +143,14 @@ Note: make sure to open the project using `CitrusPay.xcworkspace` and not `Citru
 ### Initializing the SDK
 
 + Complete the installation steps (above).
+
+Swift
++ Include CitrusPay
+~~~{.m}
+import CitrusPay
+~~~
+
+Objective-C
 + Include CitrusPay.h
 ~~~{.m}
 #import <CitrusPay/CitrusPay.h>
@@ -189,17 +212,17 @@ CTSPaymentLayer * paymentLayer = [CTSPaymentLayer fetchSharedPaymentLayer];
 
 + Get the Card's Schemes Images
 ~~~{.m}
-UIImage* image = [CTSUtility fetchSchemeImageBySchemeType:@"scheme"];
+UIImage* image = [CTSUtility fetchSchemeImageBySchemeType:@"scheme" forParentView:self.view];
 ~~~
 
 + Get the Bank Logo Images by Issure Code
 ~~~{.m}
-UIImage* image = [CTSUtility fetchBankLogoImageByBankIssuerCode:@"code"];
+UIImage* image = [CTSUtility fetchBankLogoImageByBankIssuerCode:@"code" forParentView:self.view];
 ~~~
 
 + Get the Bank Logo Images by Bank Name
 ~~~{.m}
-UIImage* image = [CTSUtility fetchBankLogoImageByBankName:@"bank"];
+UIImage* image = [CTSUtility fetchBankLogoImageByBankName:@"bank" forParentView:self.view];
 ~~~
 
 
@@ -208,8 +231,8 @@ Following are the specific tasks related to each of the layer
 #[Important Update for iOS 9](https://github.com/citruspay/citruspay-ios-sdk/wiki/4.-Common-Errors#ios-9-ssl-errors--fix)
 
 #####Doing direct payments
-+ [CC, DC, NB Direct Payments](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#cc-dc-nb-direct-payments)
-+ [Saved CC, DC Payments (A.K.A. Tokenized payments)](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#saved-cc-dc-payments-aka-tokenized-payments)
++ [CC, DC, NB Direct Payments](https://github.com/citruspay/citruspay-ios-sdk/wiki/Standard-Payment)
++ [Saved CC, DC Payments (A.K.A. Tokenized payments)](https://github.com/citruspay/citruspay-ios-sdk/wiki/Saved-Card-Payments#payment-using-saved-payment-instruments-aka-tokenized-payments)
 
 #####User Management
 
@@ -219,27 +242,25 @@ Following are the specific tasks related to each of the layer
 + [Sign Out](https://github.com/citruspay/citruspay-ios-sdk/wiki/1.--Integrating-CTSAuthLayer#sign-out)
 
 #####Card Management
-+ [Save User Cards](https://github.com/citruspay/citruspay-ios-sdk/wiki/2.--Integrating-CTSProfileLayer#save-user-cards)
-+ [Get Saved Cards](https://github.com/citruspay/citruspay-ios-sdk/wiki/2.--Integrating-CTSProfileLayer#get-saved-cards)
++ [Save User Cards](https://github.com/citruspay/citruspay-ios-sdk/wiki/Saved-Card-Payments#update--store-users-payment-information)
++ [Get Saved Cards](https://github.com/citruspay/citruspay-ios-sdk/wiki/Saved-Card-Payments#get-wallet--request-payment-information)
 + [Delete Saved Cards](https://github.com/citruspay/citruspay-ios-sdk/wiki/2.--Integrating-CTSProfileLayer#delete-saved-cards)
 
 #####Using Citrus Cash a.k.a Prepaid Account
 + [Get User's Citrus Cash Balance](https://github.com/citruspay/citruspay-ios-sdk/wiki/2.--Integrating-CTSProfileLayer#get-users-prepaid-balance)
-+ [Loading Money into Users Citrus Cash Account](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#loading-money-into-users-citrus-prepaid-account)
-+ [Paying via Citrus Cash account](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#paying-via-prepaid-accountcitrus-cash)
++ [Loading Money into Users Citrus Cash Account](https://github.com/citruspay/citruspay-ios-sdk/wiki/Wallet-Payments#load-money-into-users-citrus-prepaid-account)
++ [Paying via Citrus Cash account](https://github.com/citruspay/citruspay-ios-sdk/wiki/Wallet-Payments#payment-using-prepaid-citrus-cash-if-the-prepaid-balance-is-sufficient)
 + [Save Cashout Bank Account](https://github.com/citruspay/citruspay-ios-sdk/wiki/2.--Integrating-CTSProfileLayer#save-cash-out-bank-account)
 + [Get Saved Cashout Bank Acoount](https://github.com/citruspay/citruspay-ios-sdk/wiki/2.--Integrating-CTSProfileLayer#get-saved-cashout-bank-acoount)
 + [Initiate Cashout Proccess into users Bank Account from Citrus Cash  account](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#initiate-cashout-process-into-users-account-from-citrus-prepaid-account)
 + [Send Citrus Cash to another Citrus User](https://github.com/citruspay/open-ios/wiki/3.--Integrating-CTSPaymentLayer#send-money-to-another-citrus-user)
 
 #####Dynamic Pricing Offer Coupons and Surcharge
-+ [How to use dynamic pricing ?](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#dynamic-pricing-offer-coupons-surcharge)
++ [How to use dynamic pricing ?](https://github.com/citruspay/citruspay-ios-sdk/wiki/Dynamic-Pricing-and-Surcharge)
 
 #####One Tap Payment
 + [What is One Tap Payment? ](https://github.com/citruspay/citruspay-ios-sdk/wiki/One-Tap-Payment)
 
-##### SimpliPay
-+ [What is SimpliPay? ](https://github.com/citruspay/citruspay-ios-sdk/wiki/SimpliPay)
 
 #####Others
 + [Fetch Available Schemes and Banks for the Merchant and for Load Money in Citrus Cash](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#fetch-available-schemes-and-banks-for-the-merchant-and-for-load-money)
@@ -249,3 +270,5 @@ Following are the specific tasks related to each of the layer
 + [Could Not Connect to Internet](https://github.com/citruspay/citruspay-ios-sdk/wiki/4.-Common-Errors#could-not-connect-to-internet)
 + [postResponseiOS() error](https://github.com/citruspay/citruspay-ios-sdk/wiki/4.-Common-Errors#postresponseios-error)
 + [iOS 9 SSL Errors](https://github.com/citruspay/citruspay-ios-sdk/wiki/4.-Common-Errors#ios-9-ssl-errors--fix)
+
+#[Important Instructions for the Releasing to Apple](https://github.com/citruspay/open-ios/wiki/Releasing-to-Apple)

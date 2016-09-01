@@ -1390,7 +1390,7 @@ replacementString:(NSString *)string {
     if (textField.tag == 2000) {
         __block NSString *text = [textField text];
         if ([textField.text isEqualToString:@""] || ( [string isEqualToString:@""] && textField.text.length==1)) {
-            self.schemeTypeImageView.image = [CTSUtility getSchmeTypeImage:string];
+            self.schemeTypeImageView.image = [CTSUtility getSchmeTypeImage:string forParentView:self.view];
         }
         
         NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789\b"];
@@ -1402,7 +1402,7 @@ replacementString:(NSString *)string {
         text = [text stringByReplacingCharactersInRange:range withString:string];
         text = [text stringByReplacingOccurrencesOfString:@" " withString:@""];
         if (text.length>1) {
-            self.schemeTypeImageView.image = [CTSUtility getSchmeTypeImage:text];
+            self.schemeTypeImageView.image = [CTSUtility getSchmeTypeImage:text forParentView:self.view];
         }
         NSString *newString = @"";
         while (text.length > 0) {
@@ -1668,10 +1668,10 @@ replacementString:(NSString *)string {
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 if ([accountsDict[@"paymentMode"] isEqualToString:@"NET_BANKING"]) {
-                    ((UIImageView *) [cell.contentView viewWithTag:1005]).image = [CTSUtility fetchBankLogoImageByBankName:(![accountsDict[@"bank"]  isEqual: [NSNull null]]) ? accountsDict[@"bank"] : @""];
+                    ((UIImageView *) [cell.contentView viewWithTag:1005]).image = [CTSUtility fetchBankLogoImageByBankName:(![accountsDict[@"bank"]  isEqual: [NSNull null]]) ? accountsDict[@"bank"] : @"" forParentView:self.view];
                 }
                 else {
-                    ((UIImageView *) [cell.contentView viewWithTag:1005]).image = [CTSUtility fetchSchemeImageBySchemeType:(![accountsDict[@"cardScheme"]  isEqual: [NSNull null]]) ? accountsDict[@"cardScheme"] : @""];
+                    ((UIImageView *) [cell.contentView viewWithTag:1005]).image = [CTSUtility fetchSchemeImageBySchemeType:(![accountsDict[@"cardScheme"]  isEqual: [NSNull null]]) ? accountsDict[@"cardScheme"] : @"" forParentView:self.view];
                 }
             });
             
@@ -2052,7 +2052,7 @@ numberOfRowsInComponent:(NSInteger)component {
         [tempView addSubview:pickerLabel];
     }
     
-    imageView.image = [CTSUtility fetchBankLogoImageByBankIssuerCode:[[netBankingDict allValues] objectAtIndex:row]];
+    imageView.image = [CTSUtility fetchBankLogoImageByBankIssuerCode:[[netBankingDict allValues] objectAtIndex:row] forParentView:self.view];
     [pickerLabel setText:[array objectAtIndex:row]];
     
     return tempView;

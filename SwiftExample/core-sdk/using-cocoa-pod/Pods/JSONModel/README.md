@@ -1,6 +1,6 @@
 ## Magical Data Modeling Framework for JSON
 
-### Version 1.3.0
+### Version 1.4.0
 
 ---
 If you like JSONModel and use it, could you please:
@@ -263,31 +263,14 @@ Note: the angle brackets after <code>NSArray</code> contain a protocol. This is 
 
 +(JSONKeyMapper*)keyMapper
 {
-  return [[JSONKeyMapper alloc] initWithDictionary:@{
-  <b>  @"order_id": @"id",
-    @"order_details.name": @"productName",
-    @"order_details.price.usd": @"price"</b>
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{
+  <b>  @"id": @"order_id",
+    @"productName": @"order_details.name",
+    @"price": @"order_details.price.usd"</b>
   }];
 }
 
 @end
-</pre>
-</td>
-</tr>
-</table>
-
-#### Global key mapping (applies to all models in your app)
-<table>
-<tr>
-<td valign="top">
-<pre>
-<b>[JSONModel setGlobalKeyMapper:[</b>
-    [JSONKeyMapper alloc] initWithDictionary:@{
-      @"item_id":@"ID",
-      @"item.name": @"itemName"
-   }]
-<b>];</b>
-
 </pre>
 </td>
 </tr>
@@ -398,23 +381,6 @@ Note: the angle brackets after <code>NSArray</code> contain a protocol. This is 
 </tr>
 </table>
 
-#### Using the built-in thin HTTP client
-
-```objective-c
-
-//add extra headers
-[[JSONHTTPClient requestHeaders] setValue:@"MySecret" forKey:@"AuthorizationToken"];
-
-//make post, get requests
-[JSONHTTPClient postJSONFromURLWithString:@"http://mydomain.com/api"
-                                   params:@{@"postParam1":@"value1"}
-                               completion:^(id json, JSONModelError *err) {
-
-                                   //check err, process json ...
-
-                               }];
-```
-
 #### Export model to NSDictionary or to JSON text
 
 ```objective-c
@@ -518,7 +484,7 @@ Misc
 
 Author: [Marin Todorov](http://www.touch-code-magazine.com)
 
-Contributors: Christian Hoffmann, Mark Joslin, Julien Vignali, Symvaro GmbH, BB9z.
+Contributors: James Billingham, Christian Hoffmann, Mark Joslin, Julien Vignali, Symvaro GmbH, BB9z.
 Also everyone who did successful [pull requests](https://github.com/jsonmodel/jsonmodel/graphs/contributors).
 
 Change log : [https://github.com/jsonmodel/jsonmodel/blob/master/CHANGELOG.md](https://github.com/jsonmodel/jsonmodel/blob/master/CHANGELOG.md)

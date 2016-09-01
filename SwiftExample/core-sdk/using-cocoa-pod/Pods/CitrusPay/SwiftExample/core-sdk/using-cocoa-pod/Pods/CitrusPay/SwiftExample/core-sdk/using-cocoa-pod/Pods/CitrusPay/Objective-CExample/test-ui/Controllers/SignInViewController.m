@@ -150,6 +150,9 @@
                 [UIUtility toastMessageOnScreen:[error localizedDescription]];
             }
             else{
+                
+                [CTSOauthManager readPasswordSigninOuthData];
+
                 //            [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"%@ is now logged in",userName]];
     //            currentUser = userName;
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
