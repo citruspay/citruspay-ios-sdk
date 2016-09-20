@@ -37,8 +37,8 @@
 /// CTSProfileLayer.
 @class CTSProfileLayer;
 
-/*!
- *  @brief CTSProfileProtocol.
+/**
+ *   CTSProfileProtocol.
  */
 @protocol CTSProfileProtocol
 /**
@@ -79,77 +79,169 @@
 - (void)profile:(CTSProfileLayer*)profile
     didUpdatePaymentInfoError:(NSError*)error;
 
+/**
+ *   didGetBalance.
+ *
+ *  @param layer The layer CTSProfileLayer.
+ *  @param amount The amount CTSAmount.
+ *  @param error The error NSError.
+ */
 @optional
 - (void)profile:(CTSProfileLayer*)profile
   didGetBalance:(CTSAmount *)amount
                error:(NSError*)error;
 
+/**
+ *   didAddCashoutAccount.
+ *
+ *  @param layer The layer CTSProfileLayer.
+ *  @param error The error NSError.
+ */
 @optional
 - (void)profile:(CTSProfileLayer*)profile
   didAddCashoutAccount:(NSError*)error;
 
 
+/**
+ *   didReceiveCashoutAccount.
+ *
+ *  @param layer The layer CTSProfileLayer.
+ *  @param cashoutAccount The cashoutAccount CTSCashoutBankAccountResp.
+ *  @param error The error NSError.
+ */
 @optional
 - (void)profile:(CTSProfileLayer*)profile
 didReceiveCashoutAccount:(CTSCashoutBankAccountResp *)cashoutAccount
           error:(NSError*)error;
 
-
+/**
+ *   didGetNewProfile.
+ *
+ *  @param layer The layer CTSProfileLayer.
+ *  @param profile The profile CTSNewContactProfile.
+ *  @param error The error NSError.
+ */
 @optional
 - (void)profile:(CTSProfileLayer*)profile
 didGetNewProfile:(CTSNewContactProfile *)profile
           error:(NSError*)error;
 
-
+/**
+ *   didDeleteCardWithError.
+ *
+ *  @param layer The layer CTSProfileLayer.
+ *  @param error The error NSError.
+ */
 @optional
 - (void)profile:(CTSProfileLayer*)profile
 didDeleteCardWithError:(NSError*)error;
 @end
 
 
+/**
+ *   The CTSProfileLayer class' ASGetContactInfoCallBack CallBack.
+ *
+ *  @return The Newly created contactInfo, error object.
+ */
 typedef void (^ASGetContactInfoCallBack)(CTSProfileContactRes* contactInfo, NSError* error);
-
+/**
+ *   The CTSProfileLayer class' ASGetPaymentInfoCallBack CallBack.
+ *
+ *  @return The Newly created CTSConsumerProfile, error object.
+ */
 typedef void (^ASGetPaymentInfoCallBack)(CTSConsumerProfile *, NSError *);
-
+/**
+ *   The CTSProfileLayer class' ASUpdatePaymentInfoCallBack CallBack.
+ *
+ *  @return The Newly created error object.
+ */
 typedef void (^ASUpdatePaymentInfoCallBack)(NSError* error);
-
+/**
+ *   The CTSProfileLayer class' ASUpdateContactInfoCallBack CallBack.
+ *
+ *  @return The Newly created error object.
+ */
 typedef void (^ASUpdateContactInfoCallBack)(NSError* error);
-
+/**
+ *   The CTSProfileLayer class' ASGetBalanceCallBack CallBack.
+ *
+ *  @return The Newly created amount, error object.
+ */
 typedef void (^ASGetBalanceCallBack)(CTSAmount *amount, NSError* error);
-
+/**
+ *   The CTSProfileLayer class' ASActivatePrepaidCallBack CallBack.
+ *
+ *  @return The Newly created isActivated, error object.
+ */
 typedef void (^ASActivatePrepaidCallBack)(BOOL isActivated, NSError* error);
-
-typedef void (^ASUpdateCashoutBankAccountCallback)( NSError* error);
-
+/**
+ *   The CTSProfileLayer class' ASUpdateCashoutBankAccountCallback CallBack.
+ *
+ *  @return The Newly created error object.
+ */
+typedef void (^ASUpdateCashoutBankAccountCallback)(NSError* error);
+/**
+ *   The CTSProfileLayer class' ASGetCashoutBankAccountCallback CallBack.
+ *
+ *  @return The Newly created bankAccount, error object.
+ */
 typedef void (^ASGetCashoutBankAccountCallback)(CTSCashoutBankAccountResp *bankAccount, NSError* error);
-
+/**
+ *   The CTSProfileLayer class' ASNewContactProfileCallback CallBack.
+ *
+ *  @return The Newly created profile, error object.
+ */
 typedef void (^ASNewContactProfileCallback)(CTSNewContactProfile* profile, NSError*error);
-
+/**
+ *   The CTSProfileLayer class' ASUpdateMobileNumberCallback CallBack.
+ *
+ *  @return The Newly created updateMobileNumber, error object.
+ */
 typedef void (^ASUpdateMobileNumberCallback)(CTSUpdateMobileNumberRes *updateMobileNumber, NSError* error);
-
+/**
+ *   The CTSProfileLayer class' ASDeleteCardCallback CallBack.
+ *
+ *  @return The Newly created error object.
+ */
 typedef void (^ASDeleteCardCallback)(NSError* error);
-
-typedef void (^ASDPMerchantQueryCallback)(CTSDPResponse*reponse, NSError* error);
-
+/**
+ *   The CTSProfileLayer class' ASDPMerchantQueryCallback CallBack.
+ *
+ *  @return The Newly created reponse, error object.
+ */
+typedef void (^ASDPMerchantQueryCallback)(CTSDPResponse *reponse, NSError* error);
+/**
+ *   The CTSProfileLayer class' ASGetProfileInfoCallBack CallBack.
+ *
+ *  @return The Newly created userProfile, error object.
+ */
 typedef void (^ASGetProfileInfoCallBack)(CTSUserProfile *userProfile, NSError* error);
-
+/**
+ *   The CTSProfileLayer class' ASUpdateProfileInfoCallBack CallBack.
+ *
+ *  @return The Newly created error object.
+ */
 typedef void (^ASUpdateProfileInfoCallBack)(NSError* error);
-
+/**
+ *   The CTSProfileLayer class' ASSaveCardsCallback CallBack.
+ *
+ *  @return The Newly created reponse, error object.
+ */
 typedef void (^ASSaveCardsCallback) (CTSSaveCardResponse *reponse, NSError *error);
 
 
-/*!
- *  @brief CTSProfileLayer.
+/**
+ *   CTSProfileLayer.
  */
 @interface CTSProfileLayer : CTSRestPluginBase
 
-/*!
- *  @brief The CTSProfileLayer class' delegate object.
+/**
+ *   The CTSProfileLayer class' delegate object.
  */
 @property (weak) id <CTSProfileProtocol> delegate;
 
-/*!
- *  @brief initWithKeyStore.
+/**
+ *   initWithKeyStore.
  *
  *  @param keystoreArg The signinId String, signUpId String, signinSecret String, signUpSecret String and vanity String.
  *
@@ -159,15 +251,15 @@ typedef void (^ASSaveCardsCallback) (CTSSaveCardResponse *reponse, NSError *erro
 
 //-(instancetype)init __attribute__((unavailable("init not available Please use [CitrusPaymentSDK fetchSharedProfileLayer]")));
 
-/*!
- *  @brief Fetch Shared ProfileLayer.
+/**
+ *   Fetch Shared ProfileLayer.
  *
  *  @return The ProfileLayer object.
  */
 +(CTSProfileLayer*)fetchSharedProfileLayer;
 
-/*!
- *  @brief update contact related information
+/**
+ *   update contact related information
  *
  *  @param contactInfo The contactInfo CTSContactUpdate.
  *  @param callback    The callback ASUpdateContactInfoCallBack.
@@ -175,8 +267,8 @@ typedef void (^ASSaveCardsCallback) (CTSSaveCardResponse *reponse, NSError *erro
 - (void)updateContactInformation:(CTSContactUpdate*)contactInfo
            withCompletionHandler:(ASUpdateContactInfoCallBack)callback;
 
-/*!
- *  @brief update payment related information
+/**
+ *   update payment related information
  *
  *  @param paymentOptions The paymentOptions CTSPaymentOptions.
  *  @param callback       The callback ASUpdatePaymentInfoCallBack.
@@ -184,46 +276,46 @@ typedef void (^ASSaveCardsCallback) (CTSSaveCardResponse *reponse, NSError *erro
 - (void)updatePaymentInformation:(CTSPaymentOptions *)paymentOptions
            withCompletionHandler:(ASUpdatePaymentInfoCallBack)callback;
 
-/*!
- *  @brief to request contact related information
+/**
+ *   to request contact related information
  *
  *  @param callback The callback ASGetContactInfoCallBack.
  */
 - (void)requestContactInformationWithCompletionHandler:
         (ASGetContactInfoCallBack)callback;
 
-/*!
- *  @brief request user's payment information
+/**
+ *   request user's payment information
  *
  *  @param completion The completion ASGetPaymentInfoCallBack.
  */
 - (void)requestPaymentInformationWithCompletionHandler:(ASGetPaymentInfoCallBack)completion;
 
-/*!
- *  @brief requestGetBalance.
+/**
+ *   requestGetBalance.
  *
  *  @param calback The calback ASGetBalanceCallBack.
  */
 -(void)requestGetBalance:(ASGetBalanceCallBack)calback;
 
-/*!
- *  @brief requestActivateAndGetBalance.
+/**
+ *   requestActivateAndGetBalance.
  *
  *  @param calback The calback ASGetBalanceCallBack.
  */
 -(void)requestActivateAndGetBalance:(ASGetBalanceCallBack)calback;
 
 
-/*!
- *  @brief requestActivatePrepaidAccount.
+/**
+ *   requestActivatePrepaidAccount.
  *
  *  @param callback The callback ASActivatePrepaidCallBack.
  */
 -(void)requestActivatePrepaidAccount:(ASActivatePrepaidCallBack)callback;
 
 
-/*!
- *  @brief requestUpdateCashoutBankAccount.
+/**
+ *   requestUpdateCashoutBankAccount.
  *
  *  @param bankAccount The bankAccount CTSCashoutBankAccount.
  *  @param callback    The callback ASUpdateCashoutBankAccountCallback.
@@ -231,15 +323,15 @@ typedef void (^ASSaveCardsCallback) (CTSSaveCardResponse *reponse, NSError *erro
 - (void)requestUpdateCashoutBankAccount:(CTSCashoutBankAccount*)bankAccount
            withCompletionHandler:(ASUpdateCashoutBankAccountCallback)callback;
 
-/*!
- *  @brief requestCashoutBankAccountCompletionHandler.
+/**
+ *   requestCashoutBankAccountCompletionHandler.
  *
  *  @param callback The callback ASGetCashoutBankAccountCallback.
  */
 -(void)requestCashoutBankAccountCompletionHandler:(ASGetCashoutBankAccountCallback)callback;
 
-/*!
- *  @brief requestMemberInfoMobile.
+/**
+ *   requestMemberInfoMobile.
  *
  *  @param mobile   The mobile NSString.
  *  @param email    The email NSString.
@@ -249,8 +341,8 @@ typedef void (^ASSaveCardsCallback) (CTSSaveCardResponse *reponse, NSError *erro
                          email:(NSString *)email
          withCompletionHandler:(ASNewContactProfileCallback)callback;
 
-/*!
- *  @brief update mobile number - Use this method For update new mobile number.
+/**
+ *   update mobile number - Use this method For update new mobile number.
  *
  *  @param mobileNumber The mobileNumber NSString.
  *  @param callback     The callback ASUpdateMobileNumberCallback.
@@ -259,8 +351,8 @@ typedef void (^ASSaveCardsCallback) (CTSSaveCardResponse *reponse, NSError *erro
       WithCompletionHandler:(ASUpdateMobileNumberCallback)callback;
 
 
-/*!
- *  @brief delete Saved Card - Use this method For delete saved cards.
+/**
+ *   delete Saved Card - Use this method For delete saved cards.
  *
  *  @param lastFourDigits Last four digits of the saved card.
  *  @param scheme         correct scheme of the card.
@@ -270,8 +362,8 @@ typedef void (^ASSaveCardsCallback) (CTSSaveCardResponse *reponse, NSError *erro
                   scheme:(NSString *)scheme
    withCompletionHandler:(ASDeleteCardCallback)callback;
 
-/*!
- *  @brief requestDeleteCardWithToken.
+/**
+ *   requestDeleteCardWithToken.
  *
  *  @param token    The token NSString.
  *  @param callback The callback ASDeleteCardCallback.
@@ -279,8 +371,8 @@ typedef void (^ASSaveCardsCallback) (CTSSaveCardResponse *reponse, NSError *erro
 -(void)requestDeleteCardWithToken:(NSString *)token
             withCompletionHandler:(ASDeleteCardCallback)callback;
 
-/*!
- *  @brief requestDpMerchantQuery.
+/**
+ *   requestDpMerchantQuery.
  *
  *  @param request  The request CTSDPMerchantQueryReq.
  *  @param callback The callback ASDPMerchantQueryCallback.
@@ -288,8 +380,8 @@ typedef void (^ASSaveCardsCallback) (CTSSaveCardResponse *reponse, NSError *erro
 -(void)requestDpMerchantQuery:(CTSDPMerchantQueryReq *)request
             completionHandler:(ASDPMerchantQueryCallback)callback;
 
-/*!
- *  @brief requestUpdateProfileInformation.
+/**
+ *   requestUpdateProfileInformation.
  *
  *  @param profileInfo The profileInfo CTSProfileUpdate.
  *  @param callback    The callback ASUpdateProfileInfoCallBack.
@@ -297,15 +389,15 @@ typedef void (^ASSaveCardsCallback) (CTSSaveCardResponse *reponse, NSError *erro
 - (void)requestUpdateProfileInformation:(CTSProfileUpdate *)profileInfo
                   withCompletionHandler:(ASUpdateProfileInfoCallBack)callback;
 
-/*!
- *  @brief requestProfileInformationWithCompletionHandler.
+/**
+ *   requestProfileInformationWithCompletionHandler.
  *
  *  @param callback The callback ASGetProfileInfoCallBack.
  */
 - (void)requestProfileInformationWithCompletionHandler:(ASGetProfileInfoCallBack)callback;
 
-/*!
- *  @brief requestSaveCard.
+/**
+ *   requestSaveCard.
  *
  *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
  *  @param callback    The callback ASSaveCardsCallback.

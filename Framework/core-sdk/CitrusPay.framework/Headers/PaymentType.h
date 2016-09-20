@@ -14,61 +14,64 @@
 #import "CTSContactUpdate.h"
 #import "CTSUserAddress.h"
 
+/**
+ *   PaymentType Class.
+ */
 @interface PaymentType : NSObject
-/*!
- *  @brief The PaymentType class' amount object.
+/**
+ *   The PaymentType class' amount object.
  */
 @property (strong) NSString * amount;
-/*!
- *  @brief The PaymentType class' URLOrCTSBill object.
+/**
+ *   The PaymentType class' URLOrCTSBill object.
  */
 @property (strong) id URLOrCTSBill;
-/*!
- *  @brief The PaymentType class' paymentOption object.
+/**
+ *   The PaymentType class' paymentOption object.
  */
 @property (strong) CTSPaymentOptions <Optional> * paymentOption;
-/*!
- *  @brief The PaymentType class' useMVC object.
+/**
+ *   The PaymentType class' useMVC object.
  */
 @property (assign) BOOL useMVC;
-/*!
- *  @brief The PaymentType class' useCash object.
+/**
+ *   The PaymentType class' useCash object.
  */
 @property (assign) BOOL useCash;
-/*!
- *  @brief The PaymentType class' useDynamicPrice object.
+/**
+ *   The PaymentType class' useDynamicPrice object.
  */
 @property (assign) BOOL useDynamicPrice;
-/*!
-*  @brief The PaymentType class' ruleInfo object.
+/**
+*   The PaymentType class' ruleInfo object.
 */
 @property (strong) CTSRuleInfo <Optional> * ruleInfo;
-/*!
- *  @brief The PaymentType class' contactInfo object.
+/**
+ *   The PaymentType class' contactInfo object.
  */
 @property (strong) CTSContactUpdate <Optional> * contactInfo;
-/*!
- *  @brief The PaymentType class' addressInfo object.
+/**
+ *   The PaymentType class' addressInfo object.
  */
 @property (strong) CTSUserAddress <Optional> * addressInfo;
-/*!
- *  @brief The PaymentType class' extraParams object.
+/**
+ *   The PaymentType class' extraParams object.
  */
 @property (strong) NSDictionary <Optional> * extraParams;
 
 //load money
-/*!
- *  @brief The PaymentType class' returnURL object.
+/**
+ *   The PaymentType class' returnURL object.
  */
 @property (strong) NSString <Optional> * returnURL;
-/*!
- *  @brief The PaymentType class' customParams object.
+/**
+ *   The PaymentType class' customParams object.
  */
 @property (strong) NSDictionary <Optional> * customParams;
 
 
-/*!
- *  @brief MVCPayment - Through Single Payment Interface.
+/**
+ *   MVCPayment - Through Single Payment Interface.
  *
  *  @param amount      The Transaction Amount.
  *  @param billUrl     The Bill Generator URL.
@@ -82,8 +85,8 @@
                     contact:(CTSContactUpdate <Optional> *)userContact
                     address:(CTSUserAddress <Optional> *)userAddress;
 
-/*!
- *  @brief The MVCPayment - Through Single Payment Interface.
+/**
+ *   The MVCPayment - Through Single Payment Interface.
  *
  *  @param amount      The Transaction Amount.
  *  @param billObject  The CTSBill Object.
@@ -97,8 +100,8 @@
                     contact:(CTSContactUpdate <Optional> *)userContact
                     address:(CTSUserAddress <Optional> *)userAddress;
 
-/*!
- *  @brief The CitrusCashPayment - Through Single Payment Interface.
+/**
+ *   The CitrusCashPayment - Through Single Payment Interface.
  *
  *  @param amount      The Transaction Amount.
  *  @param billUrl     The Bill Generator URL.
@@ -112,8 +115,8 @@
                            contact:(CTSContactUpdate <Optional> *)userContact
                            address:(CTSUserAddress <Optional> *)userAddress;
 
-/*!
- *  @brief The CitrusCashPayment - Through Single Payment Interface
+/**
+ *   The CitrusCashPayment - Through Single Payment Interface
  *
  *  @param amount      The Transaction Amount.
  *  @param billObject  The CTSBill Object.
@@ -127,8 +130,8 @@
                            contact:(CTSContactUpdate <Optional> *)userContact
                            address:(CTSUserAddress <Optional> *)userAddress;
 
-/*!
- *  @brief The PGPayment - Through Single Payment Interface.
+/**
+ *   The PGPayment - Through Single Payment Interface.
  *
  *  @param amount      The Transaction Amount.
  *  @param billUrl     The Bill Generator URL.
@@ -144,8 +147,8 @@
                    contact:(CTSContactUpdate <Optional> *)userContact
                    address:(CTSUserAddress <Optional> *)userAddress;
 
-/*!
- *  @brief The PGPayment - Through Single Payment Interface.
+/**
+ *   The PGPayment - Through Single Payment Interface.
  *
  *  @param amount      The Transaction Amount.
  *  @param billObject  The CTSBill Object.
@@ -161,8 +164,8 @@
                    contact:(CTSContactUpdate <Optional> *)userContact
                    address:(CTSUserAddress <Optional> *)userAddress;
 
-/*!
- *  @brief The PerformDynamicPricing - Through Single Payment Interface.
+/**
+ *   The PerformDynamicPricing - Through Single Payment Interface.
  *
  *  @param amount      The Transaction Amount.
  *  @param billUrl     The Bill Generator URL.
@@ -182,8 +185,8 @@
                                contact:(CTSContactUpdate <Optional> *)userContact
                                address:(CTSUserAddress <Optional> *)userAddress;
 
-/*!
- *  @brief The PerformDynamicPricing - Through Single Payment Interface.
+/**
+ *   The PerformDynamicPricing - Through Single Payment Interface.
  *
  *  @param amount      The Transaction Amount.
  *  @param billObject  The CTSBill Object.
@@ -203,8 +206,8 @@
                                contact:(CTSContactUpdate <Optional> *)userContact
                                address:(CTSUserAddress <Optional> *)userAddress;
 
-/*!
- *  @brief The SplitPayment - Through Single Payment Interface.
+/**
+ *   The SplitPayment - Through Single Payment Interface.
  *
  *  @param amount      The Transaction Amount.
  *  @param billUrl     The Bill Generator URL.
@@ -224,8 +227,8 @@
                       contact:(CTSContactUpdate <Optional> *)userContact
                       address:(CTSUserAddress <Optional> *)userAddress;
 
-/*!
- *  @brief The SplitPayment - Through Single Payment Interface.
+/**
+ *   The SplitPayment - Through Single Payment Interface.
  *
  *  @param amount      The Transaction Amount.
  *  @param billObject  The CTSBill Object.
@@ -245,8 +248,8 @@
                       contact:(CTSContactUpdate <Optional> *)userContact
                       address:(CTSUserAddress <Optional> *)userAddress;
 
-/*!
- *  @brief The Load Money - (Single Payment Interface) into Citruspay account.
+/**
+ *   The Load Money - (Single Payment Interface) into Citruspay account.
  *
  *  @param amount      The Transaction Amount.
  *  @param returnUrl     The Return URL.

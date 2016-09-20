@@ -9,7 +9,10 @@
 #import <JSONModel/JSONModel.h>
 
 @interface CTSPgSettings : JSONModel
-@property(  strong) NSMutableArray* creditCard;
-@property(  strong) NSMutableArray* debitCard;
-@property(  strong) NSMutableArray* netBanking;
+@property (strong) NSMutableArray* creditCard;
+@property (strong) NSMutableArray* debitCard;
+@property (strong) NSMutableArray* netBanking;
+@property (assign) BOOL prepaid;
+@property (assign) BOOL lazyPayEnabled;
+@property (assign) BOOL mcpEnabled;
 @end
