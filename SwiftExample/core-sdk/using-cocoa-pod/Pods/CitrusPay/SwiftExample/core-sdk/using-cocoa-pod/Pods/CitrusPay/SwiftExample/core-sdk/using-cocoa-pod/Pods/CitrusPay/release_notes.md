@@ -1,10 +1,13 @@
 CitrusPay iOS SDK Kit release notes
 ==============================================
 
-3.6.3
+3.7.0
 -----
 
 * Current Version
+- SimpliPay Signature changes for the support of Bill Object, userContact and userAddress.
+
+* 3.6.3
 - Provided access to the Oauth Manager interface for the use of Oauth data at the merchant end.
 
 * 3.6.2

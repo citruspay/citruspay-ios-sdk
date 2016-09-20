@@ -17,31 +17,36 @@
 /// Class Models.
 @class CTSLinkUserRes, CTSLinkRes, CTSTokenValidityRes, CTSUserDetails, CTSResponse;
 
-/*!
- *  @brief CTSWalletScope Enum.
+/**
+ *   CTSWalletScope Enum.
  */
 typedef enum{
+    /**
+     *   CTSWalletScopeLimited Constant.
+     */
     CTSWalletScopeLimited,
+    /**
+     *   CTSWalletScopeFull Constant.
+     */
     CTSWalletScopeFull
 } CTSWalletScope;
 
 /// Class Models.
 @class CTSAuthLayer;
 
-/*!
- *  @brief CTSAuthentication Protocol.
+/**
+ *   CTSAuthentication Protocol.
  */
 @protocol CTSAuthenticationProtocol
 
 /**
- *  reports sign in respose
- *
- *  @param isSuccessful  status
- *  @param userName     username that was used for signin
- *  @param token : oauth token if signin followed by signup is successful is
- *successful,nil otherwise.
- *  @param error        error,nil in case of success.
- */
+*   reports sign in respose.
+*
+*  @param layer The layer CTSAuthLayer.
+*  @param userName The userName String.
+*  @param token The token String.
+*  @param error The error NSError.
+*/
 @optional
 - (void)auth:(CTSAuthLayer*)layer
 didSigninUsername:(NSString*)userName
@@ -49,11 +54,12 @@ didSigninUsername:(NSString*)userName
        error:(NSError*)error;
 
 /**
- *  reports sign up reply
+ *   didSignupUsername.
  *
- *  @param isSuccessful
- *  @param token : oauth token if signin is successful,nil otherwise
- *  @param error
+ *  @param layer The layer CTSAuthLayer.
+ *  @param userName The userName String.
+ *  @param token The token String.
+ *  @param error The error NSError.
  */
 @optional
 - (void)auth:(CTSAuthLayer*)layer
@@ -62,21 +68,21 @@ didSignupUsername:(NSString*)userName
        error:(NSError*)error;
 
 /**
- *  reports change password reply
+ *   didChangePasswordError.
  *
- *  @param layer
- *  @param error
+ *  @param layer The layer CTSAuthLayer.
+ *  @param error The error NSError.
  */
 @optional
 - (void)auth:(CTSAuthLayer*)layer
 didChangePasswordError:(NSError*)error;
 
 /**
- *  reports is user Citrus member
+ *   didCheckIsUserCitrusMember.
  *
- *  @param layer
- *  @param isMember Bool that reports membership status
- *  @param error
+ *  @param layer The layer CTSAuthLayer.
+ *  @param isMember The isMember BOOL.
+ *  @param error The error NSError.
  */
 @optional
 - (void)auth:(CTSAuthLayer*)layer
@@ -84,144 +90,362 @@ didCheckIsUserCitrusMember:(BOOL)isMember
        error:(NSError*)error;
 
 /**
- *  reports password reset
+ *   didRequestForResetPassword.
  *
- *  @param layer
- *  @param error
+ *  @param layer The layer CTSAuthLayer.
+ *  @param error The error NSError.
  */
 @optional
 - (void)auth:(CTSAuthLayer*)layer
 didRequestForResetPassword:(NSError*)error;
 
 
+/**
+ *   didBindUser.
+ *
+ *  @param layer The layer CTSAuthLayer.
+ *  @param userName The userName String.
+ *  @param error The error NSError.
+ */
 @optional
 - (void)auth:(CTSAuthLayer*)layer
  didBindUser:(NSString*)userName
        error:(NSError *)error;
 
 
+/**
+ *   didCitrusSigninInerror.
+ *
+ *  @param layer The layer CTSAuthLayer.
+ *  @param error The error NSError.
+ */
 @optional
 - (void)auth:(CTSAuthLayer*)layer
 didCitrusSigninInerror:(NSError *)error;
 
+/**
+ *   didLinkUser.
+ *
+ *  @param layer The layer CTSAuthLayer.
+ *  @param linkUserRes The linkUserRes CTSLinkUserRes.
+ *  @param error The error NSError.
+ */
 @optional
 - (void)auth:(CTSAuthLayer*)layer
  didLinkUser:(CTSLinkUserRes *)linkUserRes
        error:(NSError *)error;
 
 
+/**
+ *   didSetPasswordError.
+ *
+ *  @param layer The layer CTSAuthLayer.
+ *  @param error The error NSError.
+ */
 @optional
 - (void)auth:(CTSAuthLayer*)layer
 didSetPasswordError:(NSError*)error;
 
+/**
+ *   didSignup.
+ *
+ *  @param layer The layer CTSAuthLayer.
+ *  @param error The error NSError.
+ */
 @optional
 - (void)auth:(CTSAuthLayer*)layer
    didSignup:(NSError*)error;
 
-/*!
- *  @brief <#Description#>
+/**
+ *   didVerifyOTP.
+ *
+ *  @param layer The layer CTSAuthLayer.
+ *  @param isVerified The isVerified BOOL.
+ *  @param error The error NSError.
  */
 @optional
 -(void)auth:(CTSAuthLayer *)layer
 didVerifyOTP:(BOOL)isVerified
       error:(NSError *)error;
 
+/**
+ *   didGenerateVerificationCode.
+ *
+ *  @param layer The layer CTSAuthLayer.
+ *  @param response The response String.
+ *  @param error The error NSError.
+ */
 @optional
 -(void)auth:(CTSAuthLayer *)layer
 didGenerateVerificationCode:(CTSResponse *)response
       error:(NSError *)error;
 
+/**
+ *   didGenerateOTPWithError.
+ *
+ *  @param layer The layer CTSAuthLayer.
+ *  @param error The error NSError.
+ */
 @optional
 -(void)auth:(CTSAuthLayer *)layer
 didGenerateOTPWithError:(NSError *)error;
 
+/**
+ *   didLink.
+ *
+ *  @param layer The layer CTSAuthLayer.
+ *  @param linkRes The linkRes String.
+ *  @param error The error NSError.
+ */
 @optional
 -(void)auth:(CTSAuthLayer *)layer
     didLink:(CTSLinkRes *)linkRes
       error:(NSError *)error;
 
+/**
+ *   didSignInWithOtpError.
+ *
+ *  @param layer The layer CTSAuthLayer.
+ *  @param error The error NSError.
+ */
 @optional
 -(void)auth:(CTSAuthLayer *)layer
 didSignInWithOtpError:(NSError *)error;
 @end
 
+/**
+ *   The CTSAuthLayer class' ASSigninCallBack CallBack.
+ *
+ *  @return The Newly created userName, token, error object.
+ */
 typedef void (^ASSigninCallBack)(NSString* userName,
                                  NSString* token,
                                  NSError* error);
 
+/**
+ *   The CTSAuthLayer class' ASSignupCallBack CallBack.
+ *
+ *  @return The Newly created userName, token, error object.
+ */
 typedef void (^ASSignupCallBack)(NSString* userName,
                                  NSString* token,
                                  NSError* error);
 
+/**
+ *   The CTSAuthLayer class' ASChangePassword CallBack.
+ *
+ *  @return The Newly created response, error object.
+ */
 typedef void (^ASChangePassword)(NSString *response, NSError* error);
 
+/**
+ *   The CTSAuthLayer class' ASSetPassword CallBack.
+ *
+ *  @return The Newly created error object.
+ */
 typedef void (^ASSetPassword)(NSError* error);
 
 
+/**
+ *   The CTSAuthLayer class' ASIsUserCitrusMemberCallback CallBack.
+ *
+ *  @return The Newly created isUserCitrusMember, error object.
+ */
 typedef void (^ASIsUserCitrusMemberCallback)(BOOL isUserCitrusMember,
                                              NSError* error);
 
+/**
+ *   The CTSAuthLayer class' ASResetPasswordCallback CallBack.
+ *
+ *  @return The Newly created error object.
+ */
 typedef void (^ASResetPasswordCallback)(NSError* error);
 
+/**
+ *   The CTSAuthLayer class' ASBindUserCallback CallBack.
+ *
+ *  @return The Newly created userName, error object.
+ */
 typedef void (^ASBindUserCallback)(NSString *userName,
                                    NSError* error);
 
+/**
+ *   The CTSAuthLayer class' ASCitrusSigninCallBack CallBack.
+ *
+ *  @return The Newly created error object.
+ */
 typedef void (^ASCitrusSigninCallBack)(NSError* error);
 
+/**
+ *   The CTSAuthLayer class' ASLinkUserCallBack CallBack.
+ *
+ *  @return The Newly created linkUserRes, error object.
+ */
 typedef void (^ASLinkUserCallBack)(CTSLinkUserRes *linkUserRes, NSError* error);
 
+/**
+ *   The CTSAuthLayer class' ASAsyncSignUpOauthTokenCallBack CallBack.
+ *
+ *  @return The Newly created error object.
+ */
 typedef void (^ASAsyncSignUpOauthTokenCallBack)(NSError* error);
 
+/**
+ *   The CTSAuthLayer class' ASSignupNewCallBack CallBack.
+ *
+ *  @return The Newly created error object.
+ */
 typedef void (^ASSignupNewCallBack)(NSError* error);
 
+/**
+ *   The CTSAuthLayer class' ASOtpVerificationCallback CallBack.
+ *
+ *  @return The Newly created isVerified, error object.
+ */
 typedef void (^ASOtpVerificationCallback)(BOOL isVerified,NSError* error);
 
+/**
+ *   The CTSAuthLayer class' ASOtpRegenerationCallback CallBack.
+ *
+ *  @return The Newly created response, error object.
+ */
 typedef void (^ASOtpRegenerationCallback)(CTSResponse* response, NSError* error);
 
+/**
+ *   The CTSAuthLayer class' ASGenerateOtpCallBack CallBack.
+ *
+ *  @return The Newly created response, error object.
+ */
 typedef void (^ASGenerateOtpCallBack)(CTSResponse*response, NSError* error);
 
+/**
+ *   The CTSAuthLayer class' ASCitrusLinkCallback CallBack.
+ *
+ *  @return The Newly created linkResponse, error object.
+ */
 typedef void (^ASCitrusLinkCallback)(CTSCitrusLinkRes *linkResponse, NSError* error);
 
+/**
+ *   The CTSAuthLayer class' ASMasterLinkCallback CallBack.
+ *
+ *  @return The Newly created linkResponse, error object.
+ */
 typedef void (^ASMasterLinkCallback)(CTSMasterLinkRes *linkResponse, NSError* error);
 
+/**
+ *   The CTSAuthLayer class' ASLinkCallback CallBack.
+ *
+ *  @return The Newly created linkRes, error object.
+ */
 typedef void (^ASLinkCallback)(CTSLinkRes *linkRes, NSError* error);
 
+/**
+ *   The CTSAuthLayer class' ASBindSignIn CallBack.
+ *
+ *  @return The Newly created error object.
+ */
 typedef void (^ASBindSignIn)(NSError* error);
 
+/**
+ *   The CTSAuthLayer class' ASOtpSigninCallBack CallBack.
+ *
+ *  @return The Newly created error object.
+ */
 typedef void (^ASOtpSigninCallBack)(NSError* error);
 
+/**
+ *   The CTSAuthLayer class' ASConsumerPortalCallBack CallBack.
+ *
+ *  @return The Newly created error object.
+ */
 typedef void (^ASConsumerPortalCallBack)(NSError* error);
 
+/**
+ *   The CTSAuthLayer class' ASTokenValidityCallback CallBack.
+ *
+ *  @return The Newly created res, error object.
+ */
 typedef void (^ASTokenValidityCallback)(CTSTokenValidityRes *res, NSError* error);
 
+/**
+ *   The CTSAuthLayer class' ASErrorCallback CallBack.
+ *
+ *  @return The Newly created error object.
+ */
 typedef void (^ASErrorCallback)( NSError* error);
 
-typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSError *error);
+/**
+ *   The CTSAuthLayer class' ASUpdateMobileSigninCallback CallBack.
+ *
+ *  @return The Newly created response, error object.
+ */
+typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response, NSError *error);
 
 
+/**
+ *   CTSAuthLayer Class.
+ */
 @interface CTSAuthLayer : CTSRestPluginBase {
+    /**
+     *   The CTSAuthLayer class' seedState object.
+     */
     int seedState;
-    NSString* userNameSignIn, *passwordSignin, *userNameSignup, *passwordSignUp, *mobileSignUp;
-    NSString  *userNameBind,*mobileBind;
+    /**
+     *   The CTSAuthLayer class' userNameSignIn object.
+     */
+    NSString  *userNameSignIn;
+    /**
+     *   The CTSAuthLayer class' passwordSignin object.
+     */
+    NSString  *passwordSignin;
+    /**
+     *   The CTSAuthLayer class' userNameSignup object.
+     */
+    NSString  *userNameSignup;
+    /**
+     *   The CTSAuthLayer class' passwordSignUp object.
+     */
+    NSString  *passwordSignUp;
+    /**
+     *   The CTSAuthLayer class' mobileSignUp object.
+     */
+    NSString  *mobileSignUp;
+    /**
+     *   The CTSAuthLayer class' userNameBind object.
+     */
+    NSString  *userNameBind;
+    /**
+     *   The CTSAuthLayer class' mobileBind object.
+     */
+    NSString  *mobileBind;
+    /**
+     *   The CTSAuthLayer class' isInLink object.
+     */
     BOOL isInLink;
+    /**
+     *   The CTSAuthLayer class' wasSignupCalled object.
+     */
     BOOL wasSignupCalled;
+    /**
+     *   The CTSAuthLayer class' ENABLELOGS object.
+     */
     BOOL ENABLELOGS;
 }
 
-/*!
- *  @brief The CTSAuthLayer class' delegate object.
+/**
+ *   The CTSAuthLayer class' delegate object.
  */
 @property(nonatomic, weak) id<CTSAuthenticationProtocol> delegate;
 
-/*!
- *  @brief enabledDebuggingMessages.
+/**
+ *   enabledDebuggingMessages.
  *
  *  @param val The BOOL Value.
  */
 - (void)enabledDebuggingMessages:(BOOL)val;
 
-/*!
- *  @brief initWithKeyStore.
+/**
+ *   initWithKeyStore.
  *
  *  @param keystoreArg The signinId String, signUpId String, signinSecret String, signUpSecret String and vanity String.
  *
@@ -229,23 +453,23 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
  */
 - (instancetype)initWithKeyStore:(CTSKeyStore *)keystoreArg;
 
-/*!
- *  @brief init.
+/**
+ *   init.
  *
  *  @return The Newly created object.
  */
 -(instancetype)init __attribute__((unavailable("init not available, Please use [CitrusPaymentSDK fetchSharedAuthLayer]")));
 
 
-/*!
- *  @brief Fetch Shared AuthLayer.
+/**
+ *   Fetch Shared AuthLayer.
  *
  *  @return The AuthLayer object.
  */
 +(CTSAuthLayer*)fetchSharedAuthLayer;
 
-/*!
- *  @brief Creates request for the specified method, Username String and Password String.
+/**
+ *   Creates request for the specified method, Username String and Password String.
  *
  *  @param userName The Username String.
  *  @param password The Password String.
@@ -255,8 +479,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
                          password:(NSString*)password
                 completionHandler:(ASSigninCallBack)callBack;
 
-/*!
- *  @brief Creates request for the specified method, Email String, Mobile String and Password String.
+/**
+ *   Creates request for the specified method, Email String, Mobile String and Password String.
  *
  *  @param email    The Email String.
  *  @param mobile   The Mobile String.
@@ -268,8 +492,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
                       password:(NSString*)password
              completionHandler:(ASSignupCallBack)callBack DEPRECATED_ATTRIBUTE;
 
-/*!
- *  @brief Creates request for the userNameArg String, in case of forget password, after
+/**
+ *   Creates request for the userNameArg String, in case of forget password, after
  recieving this server will send email to this user to initiate the password reset.
  *
  *  @param userNameArg The userNameArg String.
@@ -278,8 +502,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
 - (void)requestResetPassword:(NSString*)userNameArg
            completionHandler:(ASResetPasswordCallback)callBack;
 
-/*!
- *  @brief requestChangePasswordUserName.
+/**
+ *   requestChangePasswordUserName.
  *
  *  @param userName    The userName String.
  *  @param oldPassword The oldPassword String.
@@ -291,8 +515,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
                           newPassword:(NSString*)newPassword
                     completionHandler:(ASChangePassword)callback;
 
-/*!
- *  @brief Check if username is registered for any member.
+/**
+ *   Check if username is registered for any member.
  *
  *  @param email    The email String.
  *  @param callback    The Created Request.
@@ -300,8 +524,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
 - (void)requestIsUserCitrusMemberUsername:(NSString*)email
                         completionHandler:(ASIsUserCitrusMemberCallback)callback;
 
-/*!
- *  @brief requestBindUsername.
+/**
+ *   requestBindUsername.
  *
  *  @param email    The email String.
  *  @param mobile   The mobile String.
@@ -312,8 +536,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
           completionHandler:(ASBindUserCallback)callback DEPRECATED_MSG_ATTRIBUTE("Use with CTSLimitedScope requestMasterLink:mobile:scope:completionHandler:");
 
 
-/*!
- *  @brief requestMobileBindUsername.
+/**
+ *   requestMobileBindUsername.
  *
  *  @param email    The email String.
  *  @param mobile   The mobile String.
@@ -323,8 +547,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
                            mobile:(NSString *)mobile
                 completionHandler:(ASBindUserCallback)callback;
 
-/*!
- *  @brief requestSetPassword.
+/**
+ *   requestSetPassword.
  *
  *  @param password The password String.
  *  @param userName The userName String.
@@ -334,8 +558,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
                  userName:(NSString *)userName
         completionHandler:(ASSetPassword)callback;
 
-/*!
- *  @brief requestCitrusPaySignin.
+/**
+ *   requestCitrusPaySignin.
  *
  *  @param userName The userName String.
  *  @param password The password String.
@@ -346,8 +570,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
             completionHandler:(ASCitrusSigninCallBack)callBack;
 
 
-/*!
- *  @brief requestBindSignin.
+/**
+ *   requestBindSignin.
  *
  *  @param userName The userName String.
  *  @param callback The Created Request.
@@ -355,52 +579,52 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
 -(void)requestBindSignin:(NSString *)userName
        completionHandler:(ASBindSignIn)callback;
 
-/*!
- *  @brief signOut.
+/**
+ *   signOut.
  *
  *  @return The BOOL Value.
  */
 - (BOOL)signOut;
 
 
-/*!
- *  @brief isAnyoneSignedIn.
+/**
+ *   isAnyoneSignedIn.
  *
  *  @return The BOOL Value.
  */
 -(BOOL)isAnyoneSignedIn DEPRECATED_MSG_ATTRIBUTE("Use 'isLoggedIn'");
 
-/*!
- *  @brief isUserBound.
+/**
+ *   isUserBound.
  *
  *  @return The BOOL Value.
  */
 -(BOOL)isUserBound;
 
 
-/*!
- *  @brief isLoggedIn.
+/**
+ *   isLoggedIn.
  *
  *  @return The BOOL Value.
  */
 -(BOOL)isLoggedIn;
 
-/*!
- *  @brief canLoadCitrusCash.
+/**
+ *   canLoadCitrusCash.
  *
  *  @return The BOOL Value.
  */
 -(BOOL)canLoadCitrusCash;
 
-/*!
- *  @brief isMerchantLoggedIn.
+/**
+ *   isMerchantLoggedIn.
  *
  *  @return The BOOL Value.
  */
 - (BOOL)isMerchantLoggedIn;
 
-/*!
- *  @brief generateBigIntegerString.
+/**
+ *   generateBigIntegerString.
  *
  *  @param email The userName String.
  *
@@ -408,8 +632,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
  */
 - (NSString*)generateBigIntegerString:(NSString*)email ;
 
-/*!
- *  @brief requestLinkUser.
+/**
+ *   requestLinkUser.
  *
  *  @param email    The userName String.
  *  @param mobile   The userName String.
@@ -420,8 +644,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
      completionHandler:(ASLinkUserCallBack)callBack DEPRECATED_MSG_ATTRIBUTE("Use 'requestCitrusLink:mobile:completion:'");
 
 
-/*!
- *  @brief requestLinkTrustedUser.
+/**
+ *   requestLinkTrustedUser.
  *
  *  @param user     The userName String.
  *  @param callback The Created Request.
@@ -429,24 +653,24 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
 -(void)requestLinkTrustedUser:(CTSUserDetails *)user
             completionHandler:(ASLinkUserCallBack )callback;
 
-/*!
- *  @brief requestSignInOauthToken.
+/**
+ *   requestSignInOauthToken.
  *
  *  @return The NSString Value.
  */
 -(NSString *)requestSignInOauthToken;
 
 
-/*!
- *  @brief requestSignUpOauthTokenCompletionHandler.
+/**
+ *   requestSignUpOauthTokenCompletionHandler.
  *
  *  @param callback The Created Request.
  */
 - (void)requestSignUpOauthTokenCompletionHandler:(ASAsyncSignUpOauthTokenCallBack)callback;
 
 
-/*!
- *  @brief requestSignupUser.
+/**
+ *   requestSignupUser.
  *
  *  @param user                The user String.
  *  @param pasword             The pasword String.
@@ -460,8 +684,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
            emailVerified:(BOOL)isMarkEmailVerified
        completionHandler:(ASSignupNewCallBack)callback;
 
-/*!
- *  @brief requestMobileVerificationWithCode.
+/**
+ *   requestMobileVerificationWithCode.
  *
  *  @param otp      The otp String.
  *  @param callback The Created Request.
@@ -469,8 +693,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
 -(void)requestMobileVerificationWithCode:(NSString *)otp
                        completionHandler:(ASOtpVerificationCallback)callback;
 
-/*!
- *  @brief requestVerificationCodeRegenerate.
+/**
+ *   requestVerificationCodeRegenerate.
  *
  *  @param mobile   The mobile String.
  *  @param callback The Created Request.
@@ -478,8 +702,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
 -(void)requestVerificationCodeRegenerate:(NSString *)mobile
                        completionHandler:(ASOtpRegenerationCallback)callback;
 
-/*!
- *  @brief requestGenerateOTPFor.
+/**
+ *   requestGenerateOTPFor.
  *
  *  @param entity   The entity String.
  *  @param callback The Created Request.
@@ -487,8 +711,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
 -(void)requestGenerateOTPFor:(NSString *)entity
            completionHandler:(ASGenerateOtpCallBack)callback;
 
-/*!
- *  @brief requestSigninWithUsername.
+/**
+ *   requestSigninWithUsername.
  *
  *  @param userNameArg The userNameArg String.
  *  @param otp         The otp String.
@@ -498,8 +722,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
                              otp:(NSString*)otp
                completionHandler:(ASOtpSigninCallBack)callBack;
 
-/*!
-*  @brief requestLink.
+/**
+*   requestLink.
 *
 *  @param user     The user String.
 *  @param callback The Created Request.
@@ -507,8 +731,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
 -(void)requestLink:(CTSUserDetails *)user
  completionHandler:(ASLinkCallback )callback;
 
-/*!
- *  @brief accessConsumerPortalWithParentViewController.
+/**
+ *   accessConsumerPortalWithParentViewController.
  *
  *  @param controller The controller UIViewController.
  *  @param callback   The Created Request.
@@ -516,8 +740,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
 - (void)accessConsumerPortalWithParentViewController:(UIViewController *)controller
                                withCompletionHandler:(ASConsumerPortalCallBack)callback;
 
-/*!
- *  @brief requestLink.
+/**
+ *   requestLink.
  *
  *  @param user       The user String.
  *  @param isForceVer The isForceVer BOOL.
@@ -527,8 +751,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
  forceVerification:(BOOL)isForceVer
  completionHandler:(ASLinkCallback )callback;
 
-/*!
-*  @brief requestPrepaidSignIn.
+/**
+*   requestPrepaidSignIn.
 *
 *  @param username  The userName String.
 *  @param passoword The passoword String.
@@ -540,22 +764,22 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
                passwordType:(PasswordType)type
            compltionHandler:(ASCitrusSigninCallBack)callBack;
 
-/*!
- *  @brief requestTokenValidityWithCompletionHandler.
+/**
+ *   requestTokenValidityWithCompletionHandler.
  *
  *  @param callback The Created Request.
  */
 -(void)requestTokenValidityWithCompletionHandler:(ASTokenValidityCallback)callback;
 
-/*!
- *  @brief requestUpdatePrepaidTokenCompletionHandler.
+/**
+ *   requestUpdatePrepaidTokenCompletionHandler.
  *
  *  @param callback The Created Request.
  */
 -(void)requestUpdatePrepaidTokenCompletionHandler:(ASErrorCallback)callback;
 
-/*!
- *  @brief requestCitrusLink.
+/**
+ *   requestCitrusLink.
  *
  *  @param email    The email String.
  *  @param mobile   The mobile String.
@@ -565,8 +789,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
                   mobile:(NSString *)mobile
               completion:(ASCitrusLinkCallback)callback;
 
-/*!
-*  @brief requestEotpSignInUpdateEmail.
+/**
+*   requestEotpSignInUpdateEmail.
 *
 *  @param email    The email String.
 *  @param password The password String.
@@ -580,8 +804,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
                     requestedMobile:(NSString *)mobile
                            callback:(ASUpdateMobileSigninCallback)callback;
 
-/*!
- *  @brief requestVerifyAndSigninUUID.
+/**
+ *   requestVerifyAndSigninUUID.
  *
  *  @param uuid     The uuid String.
  *  @param password The password String.
@@ -591,8 +815,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
                  verificationCode:(NSString *)password
                          callback:(ASCitrusSigninCallBack)callback;
 
-/*!
- *  @brief requestCitrusLinkSignInWithPassoword.
+/**
+ *   requestCitrusLinkSignInWithPassoword.
  *
  *  @param password The password String.
  *  @param type     The type PasswordType.
@@ -602,15 +826,15 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
                                passwordType:(PasswordType)type
                           completionHandler:(ASCitrusSigninCallBack)callback DEPRECATED_MSG_ATTRIBUTE("user requestMasterLinkSignInWithPassword:passwordType:completionHandler:");
 
-/*!
- *  @brief requestRefreshOauthTokenCallback.
+/**
+ *   requestRefreshOauthTokenCallback.
  *
  *  @param callback The Created Request.
  */
 -(void)requestRefreshOauthTokenCallback:(ASErrorCallback )callback;
 
-/*!
-*  @brief requestMasterLink.
+/**
+*   requestMasterLink.
 *
 *  @param email       The email String.
 *  @param mobile      The mobile String.
@@ -622,8 +846,8 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
                    scope:(CTSWalletScope)walletScope
        completionHandler:(ASMasterLinkCallback)callback;
 
-/*!
- *  @brief requestMasterLinkSignInWithPassword.
+/**
+ *   requestMasterLinkSignInWithPassword.
  *
  *  @param password The password String.
  *  @param type     The type Enum.
@@ -633,15 +857,15 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
                               passwordType:(PasswordType)type
                          completionHandler:(ASCitrusSigninCallBack)callback;
 
-/*!
- *  @brief requestResendOtp.
+/**
+ *   requestResendOtp.
  *
  *  @param callback The Created Request.
  */
 -(void)requestResendOtp:(ASErrorCallback)callback;
 
-/*!
- *  @brief requestSetPassowordMobileAccount.
+/**
+ *   requestSetPassowordMobileAccount.
  *
  *  @param password The password String.
  *  @param callback The Created Request.

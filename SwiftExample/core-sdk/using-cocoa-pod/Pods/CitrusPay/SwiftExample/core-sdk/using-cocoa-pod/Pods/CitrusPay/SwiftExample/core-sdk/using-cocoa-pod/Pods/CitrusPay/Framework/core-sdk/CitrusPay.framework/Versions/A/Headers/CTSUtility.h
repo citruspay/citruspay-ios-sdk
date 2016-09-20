@@ -132,4 +132,5 @@ typedef void (^ASBillCallback)(CTSBill* bill,NSError* error);
 +(CTSPgSettings *)getCachedLoadMoneyPgSetting;
 + (void)logProperties:(id)object;
 + (BOOL)validateDecimalAmountString:(NSString *)amount;
++ (NSString *)correctCommonAmountFormat:(NSString *)amount;
 @end

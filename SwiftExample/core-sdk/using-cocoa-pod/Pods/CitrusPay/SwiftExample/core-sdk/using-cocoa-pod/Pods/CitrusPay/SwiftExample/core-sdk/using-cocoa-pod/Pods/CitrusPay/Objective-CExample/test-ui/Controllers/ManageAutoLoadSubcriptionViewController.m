@@ -7,7 +7,6 @@
 //
 
 #import "ManageAutoLoadSubcriptionViewController.h"
-
 #import "MerchantConstants.h"
 
 @interface ManageAutoLoadSubcriptionViewController (){

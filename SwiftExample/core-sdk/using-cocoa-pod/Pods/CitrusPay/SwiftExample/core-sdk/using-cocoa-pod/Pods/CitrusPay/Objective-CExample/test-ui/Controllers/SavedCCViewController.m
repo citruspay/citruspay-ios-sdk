@@ -155,7 +155,7 @@
     
     dispatch_async(dispatch_get_main_queue(), ^{
         
-        ((UIImageView *) [cell.contentView viewWithTag:1005]).image = [CTSUtility fetchSchemeImageBySchemeType:[tempDict valueForKey:@"cardScheme"]];
+        ((UIImageView *) [cell.contentView viewWithTag:1005]).image = [CTSUtility fetchSchemeImageBySchemeType:[tempDict valueForKey:@"cardScheme"] forParentView:self.view];
         
     });
     
