@@ -12,27 +12,65 @@
 #import "CTSConsumerProfileDetails.h"
 #import "CTSPaymentDetailUpdate.h"
 
-@interface CTSPaymentOptions : JSONModel
-/*!
- *  @brief The CTSPaymentOptions class' paymentMode, name, cardNumber, cardExpiryDate, cardScheme, amount, currency, cvv, bank, issuerCode, campaignCode, savedCardToken, maxBalance object.
+/**
+ *   CTSPaymentOptions Class.
  */
-@property (strong) NSString <Optional>
-* paymentMode,
-* name,
-* cardNumber,
-* cardExpiryDate,
-* cardScheme,
-* amount,
-* currency,
-* cvv,
-* bank,
-* issuerCode,
-* campaignCode,
-* savedCardToken,
-* maxBalance;
+@interface CTSPaymentOptions : JSONModel
+/**
+ *   The CTSPaymentOptions class' paymentMode object.
+ */
+@property (strong) NSString <Optional> * paymentMode;
+/**
+ *   The CTSPaymentOptions class' name object.
+ */
+@property (strong) NSString <Optional> * name;
+/**
+ *   The CTSPaymentOptions class' cardNumber object.
+ */
+@property (strong) NSString <Optional> * cardNumber;
+/**
+ *   The CTSPaymentOptions class' cardExpiryDate object.
+ */
+@property (strong) NSString <Optional> * cardExpiryDate;
+/**
+ *   The CTSPaymentOptions class' cardScheme object.
+ */
+@property (strong) NSString <Optional> * cardScheme;
+/**
+ *   The CTSPaymentOptions class' amount object.
+ */
+@property (strong) NSString <Optional> * amount;
+/**
+ *   The CTSPaymentOptions class' currency object.
+ */
+@property (strong) NSString <Optional> * currency;
+/**
+ *   The CTSPaymentOptions class' cvv object.
+ */
+@property (strong) NSString <Optional> * cvv;
+/**
+ *   The CTSPaymentOptions class' bank object.
+ */
+@property (strong) NSString <Optional> * bank;
+/**
+ *   The CTSPaymentOptions class' issuerCode object.
+ */
+@property (strong) NSString <Optional> * issuerCode;
+/**
+ *   The CTSPaymentOptions class' campaignCode object.
+ */
+@property (strong) NSString <Optional> * campaignCode;
+/**
+ *   The CTSPaymentOptions class' savedCardToken object.
+ */
+@property (strong) NSString <Optional> * savedCardToken;
+/**
+ *   The CTSPaymentOptions class' maxBalance object.
+ */
+@property (strong) NSString <Optional> * maxBalance;
 
-/*!
- *  @brief creditCardOption.
+/**
+ *   creditCardOption.
  *
  *  @param cardNumber     The CardNumber NSString.
  *  @param cardExpiryDate The CardExpiryDate NSString.
@@ -44,8 +82,8 @@
                          cardExpiryDate:(NSString *)cardExpiryDate
                                     cvv:(NSString *)cvv;
 
-/*!
- *  @brief debitCardOption.
+/**
+ *   debitCardOption.
  *
  *  @param cardNumber     The CardNumber NSString.
  *  @param cardExpiryDate The CardExpiryDate NSString.
@@ -57,8 +95,8 @@
                         cardExpiryDate:(NSString *)cardExpiryDate
                                    cvv:(NSString *)cvv;
 
-/*!
- *  @brief netBankingOption.
+/**
+ *   netBankingOption.
  *
  *  @param bank       The Bank NSString.
  *  @param issuerCode The IssuerCode NSString.
@@ -68,8 +106,8 @@
 + (CTSPaymentOptions *)netBankingOption:(NSString *)bank
                              issuerCode:(NSString *)issuerCode;
 
-/*!
- *  @brief creditCardTokenized.
+/**
+ *   creditCardTokenized.
  *
  *  @param paymentDetails The PaymentDetails CTSConsumerProfileDetails.
  *
@@ -77,8 +115,8 @@
  */
 + (CTSPaymentOptions *)creditCardTokenized:(CTSConsumerProfileDetails *)paymentDetails;
 
-/*!
- *  @brief debitCardTokenized.
+/**
+ *   debitCardTokenized.
  *
  *  @param paymentDetails The PaymentDetails CTSConsumerProfileDetails.
  *
@@ -86,8 +124,8 @@
  */
 + (CTSPaymentOptions *)debitCardTokenized:(CTSConsumerProfileDetails *)paymentDetails;
 
-/*!
- *  @brief netBankingTokenized.
+/**
+ *   netBankingTokenized.
  *
  *  @param paymentDetails The PaymentDetails CTSConsumerProfileDetails.
  *
@@ -95,14 +133,14 @@
  */
 + (CTSPaymentOptions *)netBankingTokenized:(CTSConsumerProfileDetails *)paymentDetails;
 
-/*!
- *  @brief prepaidOption.
+/**
+ *   prepaidOption.
  *
  *  @return The CTSPaymentOptions Object.
  */
 + (CTSPaymentOptions *)prepaidOption;
-/*!
- *  @brief MVCOption
+/**
+ *   MVCOption
  *
  *  @param campaignCode MVCOption.
  *
@@ -110,36 +148,36 @@
  */
 + (CTSPaymentOptions *)MVCOption:(NSString *)campaignCode;
 
-/*!
- *  @brief setTransactionAmount.
+/**
+ *   setTransactionAmount.
  *
  *  @param amount The Amount NSString.
  */
 - (void)setTransactionAmount:(NSString *)amount;
 
-/*!
- *  @brief validatePaymentInfo.
+/**
+ *   validatePaymentInfo.
  *
  *  @return The CTSErrorCode Object.
  */
 - (CTSErrorCode)validatePaymentInfo;
 
-/*!
- *  @brief isTokenized.
+/**
+ *   isTokenized.
  *
  *  @return The BOOL Object.
  */
 - (BOOL)isTokenized;
 
-/*!
- *  @brief toCTSPaymentDetailUpdate.
+/**
+ *   toCTSPaymentDetailUpdate.
  *
  *  @return The CTSPaymentDetailUpdate Object.
  */
 - (CTSPaymentDetailUpdate *)toCTSPaymentDetailUpdate;
 
-/*!
- *  @brief canDoOneTapPayment.
+/**
+ *   canDoOneTapPayment.
  *
  *  @return The BOOL Object.
  */

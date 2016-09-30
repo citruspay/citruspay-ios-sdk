@@ -77,7 +77,7 @@ typedef enum {
     NoCCLoadMoneyInfoFound,
     InvalidThresholdAndAutoLoadAmt,
     NoActiveSubscriptions,
-    SimpliPayCantProcess,
+    WalletPaymentCantProcess,
     LoadMoneyCantProcess,
     BillUrlOrObjectInvalid,
     OrchestrationLayerFailed

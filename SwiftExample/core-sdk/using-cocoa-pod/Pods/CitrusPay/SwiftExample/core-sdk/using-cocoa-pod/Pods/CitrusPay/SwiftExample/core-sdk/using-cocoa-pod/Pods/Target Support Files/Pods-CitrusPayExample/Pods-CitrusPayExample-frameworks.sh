@@ -82,3 +82,12 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${PODS_ROOT}/CitrusPay/Framework/core-sdk/CitrusPay.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/JSONModel/JSONModel.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${PODS_ROOT}/CitrusPay/Framework/core-sdk/CitrusPay.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/JSONModel/JSONModel.framework"
+fi

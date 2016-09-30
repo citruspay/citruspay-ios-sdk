@@ -7,9 +7,9 @@ use_frameworks!
 platform :ios, '9.0'
 
 target 'CitrusPayExample' do
-  pod 'CitrusPay’, '~> 4.0.1’
+  pod 'CitrusPay’, '~> 4.0.2’
 end
 
 target 'CitrusPayExampleTests' do
-  pod 'CitrusPay’, '~> 4.0.1’
+  pod 'CitrusPay’, '~> 4.0.2’
 end

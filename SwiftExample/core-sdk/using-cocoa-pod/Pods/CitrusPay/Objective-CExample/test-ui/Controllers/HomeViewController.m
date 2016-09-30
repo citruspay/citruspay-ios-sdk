@@ -564,16 +564,16 @@
             ruleInfo.alteredAmount = self.alteredAmountTextField.text;
             ruleInfo.originalAmount = self.amountTextField.text;
             if (selectedRule==0) {
-                ruleInfo.operationType = DPRequestTypeSearchAndApply;
+                ruleInfo.requestType = DPRequestTypeSearchAndApply;
                 ruleInfo.alteredAmount = nil;
                 ruleInfo.ruleName = nil;
             }
             else if (selectedRule==1) {
-                    ruleInfo.operationType = DPRequestTypeCalculate;
+                    ruleInfo.requestType = DPRequestTypeCalculate;
                 ruleInfo.alteredAmount = nil;
             }
             else if (selectedRule==2) {
-                ruleInfo.operationType = DPRequestTypeValidate;
+                ruleInfo.requestType = DPRequestTypeValidate;
             }
             
             viewController.ruleInfo = ruleInfo;

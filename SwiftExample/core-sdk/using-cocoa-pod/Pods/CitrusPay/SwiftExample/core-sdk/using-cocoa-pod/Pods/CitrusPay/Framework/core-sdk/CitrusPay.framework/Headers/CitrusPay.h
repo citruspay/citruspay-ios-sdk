@@ -24,17 +24,27 @@
 #import "CTSOauthManager.h"
 #import "HVDOverlay.h"
 
-/*!
- *  @brief CTSEnvironment constant.
+/**
+ *   CTSEnvironment Constant.
  */
 typedef enum{
+    /**
+     *   CTSEnvSandbox Constant.
+     */
     CTSEnvSandbox,
+    /**
+     *   CTSEnvProduction Constant.
+     */
     CTSEnvProduction
 } CTSEnvironment;
 
+
+/**
+ *   CitrusPaymentSDK Singleton Class.
+ */
 @interface CitrusPaymentSDK : NSObject
-/*!
- *  @brief Initialize SDK With KeyStore.
+/**
+ *   Initialize SDK With KeyStore.
  *
  *  @param keyStore The signinId String, signUpId String, signinSecret String, signUpSecret String and vanity String.
  *  @param env The CTSEnvSandbox or CTSEnvProduction.
@@ -42,8 +52,8 @@ typedef enum{
 +(void)initializeWithKeyStore:(CTSKeyStore *)keyStore
                   environment:(CTSEnvironment)env;
 
-/*!
- *  @brief Initialize SDK With KeyStore.
+/**
+ *   Initialize SDK With KeyStore.
  *
  *  @param keyStore The signinId String, signUpId String, signinSecret String, signUpSecret String and vanity String.
  *  @param envPlist The CTSEnvSandbox or CTSEnvProduction.
@@ -51,154 +61,154 @@ typedef enum{
 +(void)initializeWithKeyStore:(CTSKeyStore *)keyStore
               environmentPath:(NSString *)envPlist;
 
-/*!
- *  @brief Get the SDK version.
+/**
+ *   Get the SDK version.
  *
  *  @return The SDK version string.
  */
 +(NSString *)sdkVersion;
 
 
-/*!
- *  @brief Fetch Shared AuthLayer.
+/**
+ *   Fetch Shared AuthLayer.
  *
  *  @return The AuthLayer object.
  */
 +(CTSAuthLayer *)fetchSharedAuthLayer;
 
 
-/*!
- *  @brief Fetch Shared ProfileLayer.
+/**
+ *   Fetch Shared ProfileLayer.
  *
  *  @return The ProfileLayer object.
  */
 +(CTSProfileLayer *)fetchSharedProfileLayer;
 
 
-/*!
- *  @brief Fetch Shared PaymentLayer.
+/**
+ *   Fetch Shared PaymentLayer.
  *
  *  @return The PaymentLayer object.
  */
 +(CTSPaymentLayer *)fetchSharedPaymentLayer;
 
 
-/*!
- *  @brief Enable DEBUGLogs.
+/**
+ *   Enable DEBUGLogs.
  */
 + (void)enableDEBUGLogs;
 
 
-/*!
- *  @brief Disable OneTapPayment.
+/**
+ *   Disable OneTapPayment.
  */
 +(void)disableOneTapPayment;
 
 
-/*!
- *  @brief Enable OneTapPayment.
+/**
+ *   Enable OneTapPayment.
  */
 +(void)enableOneTapPayment;
 
 
-/*!
- *  @brief Check OneTap Payment Enabled.
+/**
+ *   Check OneTap Payment Enabled.
  *
  *  @return The BOOL Value.
  */
 +(BOOL)isOneTapPaymentEnabled;
 
-/*!
- *  @brief Enable Push ViewController.
+/**
+ *   Enable Push ViewController.
  */
 +(void)enablePush;
 
 
-/*!
- *  @brief Disable Push ViewController.
+/**
+ *   Disable Push ViewController.
  */
 +(void)disablePush;
 
 
-/*!
- *  @brief Check is Push Enabled.
+/**
+ *   Check is Push Enabled.
  *
  *  @return The BOOL Value.
  */
 +(BOOL)isPushEnabled;
 
 
-/*!
- *  @brief Disable Loader.
+/**
+ *   Disable Loader.
  */
 +(void)disableLoader;
 
 
-/*!
- *  @brief Enable Loader.
+/**
+ *   Enable Loader.
  */
 +(void)enableLoader;
 
 
-/*!
- *  @brief Check is Loader Enabled.
+/**
+ *   Check is Loader Enabled.
  *
  *  @return The BOOL Value.
  */
 +(BOOL)isLoaderEnabled;
 
 
-/*!
- *  @brief Set Loader Color.
+/**
+ *   Set Loader Color.
  *
  *  @param loaderColor Passed Loader color.
  */
 +(void)setLoaderColor:(UIColor *)loaderColor;
 
 
-/*!
- *  @brief Get Loader Color.
+/**
+ *   Get Loader Color.
  *
  *  @return Show the color passed in.
  */
 +(UIColor *)getLoaderColor;
 
 
-/*!
- *  @brief Check is Blaze Card Payment Enabled.
+/**
+ *   Check is Blaze Card Payment Enabled.
  *
  *  @return The BOOL Value.
  */
 + (BOOL)isBlazeCardPaymentEnabled;
 
 
-/*!
- *  @brief Enable Blaze Card Payment.
+/**
+ *   Enable Blaze Card Payment.
  */
 + (void)enableBlazeCardPayment;
 
 
-/*!
- *  @brief Disable Blaze Card Payment.
+/**
+ *   Disable Blaze Card Payment.
  */
 + (void)disableBlazeCardPayment;
 
 
-/*!
- *  @brief Check is Blaze Net Payment Enabled.
+/**
+ *   Check is Blaze Net Payment Enabled.
  *
  *  @return The BOOL Value.
  */
 + (BOOL)isBlazeNetPaymentEnabled;
 
 
-/*!
- *  @brief Enable Blaze Net Payment.
+/**
+ *   Enable Blaze Net Payment.
  */
 + (void)enableBlazeNetPayment;
 
-/*!
- *  @brief Disable Blaze Net Payment.
+/**
+ *   Disable Blaze Net Payment.
  */
 + (void)disableBlazeNetPayment;
 

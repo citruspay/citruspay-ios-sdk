@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CitrusPay
 
 class BaseClassViewController: UIViewController {
     
@@ -43,6 +44,10 @@ class BaseClassViewController: UIViewController {
         
         
         CitrusPaymentSDK.enableDEBUGLogs()
+        
+        CitrusPaymentSDK.enableLoader()
+        
+        CitrusPaymentSDK.setLoaderColor(UIColor .orangeColor())
         
         self.authLayer = CTSAuthLayer.fetchSharedAuthLayer()
         self.profileLayer = CTSProfileLayer.fetchSharedProfileLayer()

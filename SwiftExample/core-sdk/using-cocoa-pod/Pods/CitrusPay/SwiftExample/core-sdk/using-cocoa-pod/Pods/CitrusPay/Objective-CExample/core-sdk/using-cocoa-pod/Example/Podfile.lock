@@ -1,5 +1,5 @@
 PODS:
-  - CitrusPay (4.0.0):
+  - CitrusPay (4.0.1):
     - JSONModel
   - JSONModel (1.2.0)
 
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: ../../../../
 
 SPEC CHECKSUMS:
-  CitrusPay: 19089e5a44ef2c6f8fd94ab9790b8025d28215c5
+  CitrusPay: 06c8c00bd59277fbc16eea2dced4c5b55b7781e6
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
 
 PODFILE CHECKSUM: c69b636c29d925eae2736c3e4ff124ed055a5649

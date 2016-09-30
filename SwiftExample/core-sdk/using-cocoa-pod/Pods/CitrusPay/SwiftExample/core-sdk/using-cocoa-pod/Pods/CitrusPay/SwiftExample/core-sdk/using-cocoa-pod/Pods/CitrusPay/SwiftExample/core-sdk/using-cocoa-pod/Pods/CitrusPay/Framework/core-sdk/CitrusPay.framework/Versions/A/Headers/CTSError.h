@@ -78,7 +78,9 @@ typedef enum {
     InvalidThresholdAndAutoLoadAmt,
     NoActiveSubscriptions,
     SimpliPayCantProcess,
-    LoadMoneyCantProcess
+    LoadMoneyCantProcess,
+    BillUrlOrObjectInvalid,
+    OrchestrationLayerFailed
 } CTSErrorCode;
 
 

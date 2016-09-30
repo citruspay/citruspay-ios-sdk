@@ -12,70 +12,84 @@
 
 @class CTSUserDetails;
 
-@interface CTSConsumerProfile : JSONModel
-/*!
- *  @brief The CTSConsumerProfile class' merchantAccessKey, username, amount, currency, statusMsg object.
+/**
+ *   CTSConsumerProfile Class.
  */
-@property (strong) NSString <Optional>
-* merchantAccessKey,
-* username,
-* amount,
-* currency,
-* statusMsg;
-/*!
- *  @brief The CTSConsumerProfile class' userDetails object.
+@interface CTSConsumerProfile : JSONModel
+/**
+ *   The CTSConsumerProfile class' merchantAccessKey object.
+ */
+@property (strong) NSString <Optional> * merchantAccessKey;
+/**
+ *   The CTSConsumerProfile class' username object.
+ */
+@property (strong) NSString <Optional> * username;
+/**
+ *   The CTSConsumerProfile class' amount object.
+ */
+@property (strong) NSString <Optional> * amount;
+/**
+ *   The CTSConsumerProfile class' currency object.
+ */
+@property (strong) NSString <Optional> * currency;
+/**
+ *   The CTSConsumerProfile class' statusMsg object.
+ */
+@property (strong) NSString <Optional> * statusMsg;
+/**
+ *   The CTSConsumerProfile class' userDetails object.
  */
 @property (strong) CTSUserDetails * userDetails;
-/*!
- *  @brief The CTSConsumerProfile class' paymentOptionsList object.
+/**
+ *   The CTSConsumerProfile class' paymentOptionsList object.
  */
 @property( strong) NSMutableArray<CTSConsumerProfileDetails *>* paymentOptionsList;
 
-/*!
- *  @brief getSavedNBPaymentOptions.
+/**
+ *   getSavedNBPaymentOptions.
  *
  *  @return The NSArray Object.
  */
 - (NSArray *)getSavedNBPaymentOptions;
-/*!
- *  @brief getSavedCCPaymentOptions.
+/**
+ *   getSavedCCPaymentOptions.
  *
  *  @return The NSArray Object.
  */
 - (NSArray *)getSavedCCPaymentOptions;
-/*!
- *  @brief getSavedDCPaymentOptions
+/**
+ *   getSavedDCPaymentOptions
  *
  *  @return The NSArray Object..
  */
 - (NSArray *)getSavedDCPaymentOptions;
 
-/*!
- *  @brief getMVCAmount.
+/**
+ *   getMVCAmount.
  *
  *  @return The NSString Object.
  */
 - (NSString *)getMVCAmount;
-/*!
- *  @brief getMVCMaxBalance.
+/**
+ *   getMVCMaxBalance.
  *
  *  @return The NSString Object.
  */
 - (NSString *)getMVCMaxBalance;
-/*!
- *  @brief getCampaignCode.
+/**
+ *   getCampaignCode.
  *
  *  @return The NSString Object.
  */
 - (NSString *)getCampaignCode;
-/*!
- *  @brief getCashAmount.
+/**
+ *   getCashAmount.
  *
  *  @return The NSString Object.
  */
 - (NSString *)getCashAmount;
-/*!
- *  @brief getCashMaxBalance.
+/**
+ *   getCashMaxBalance.
  *
  *  @return The NSString Object.
  */

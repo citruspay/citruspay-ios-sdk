@@ -76,8 +76,9 @@ typedef enum {
     NotCreditCard,
     NoCCLoadMoneyInfoFound,
     InvalidThresholdAndAutoLoadAmt,
-    NoActiveSubscriptions
-
+    NoActiveSubscriptions,
+    SimpliPayCantProcess,
+    LoadMoneyCantProcess
 } CTSErrorCode;
 
 

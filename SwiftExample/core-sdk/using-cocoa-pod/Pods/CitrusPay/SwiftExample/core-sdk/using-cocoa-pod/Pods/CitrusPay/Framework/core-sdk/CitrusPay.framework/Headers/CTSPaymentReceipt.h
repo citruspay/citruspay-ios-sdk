@@ -8,9 +8,12 @@
 
 #import <JSONModel/JSONModel.h>
 
+/**
+ *   CTSPaymentReceipt Class.
+ */
 @interface CTSPaymentReceipt : JSONModel
-/*!
- *  @brief The CTSPaymentReceipt class' toDictionary object.
+/**
+ *   The CTSPaymentReceipt class' toDictionary object.
  */
 @property (strong) NSMutableDictionary *toDictionary;
 @end

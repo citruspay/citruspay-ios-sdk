@@ -16,7 +16,7 @@ typedef enum{
 
 @interface CTSRuleInfo : NSObject
 @property(strong)NSString *ruleName,*alteredAmount,*originalAmount;
-@property(assign)DPRequestType operationType;
+@property(assign)DPRequestType requestType;
 -(NSString *)toDpTypeString;
 -(void)amountCorrections;
 @end

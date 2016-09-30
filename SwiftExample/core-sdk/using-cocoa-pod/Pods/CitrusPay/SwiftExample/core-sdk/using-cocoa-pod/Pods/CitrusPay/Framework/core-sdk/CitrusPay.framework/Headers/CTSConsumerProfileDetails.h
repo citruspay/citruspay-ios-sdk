@@ -8,36 +8,80 @@
 
 #import <JSONModel/JSONModel.h>
 
+/**
+ *   CTSConsumerProfileDetails Class.
+ */
 @interface CTSConsumerProfileDetails : JSONModel
-/*!
- *  @brief The CTSConsumerProfileDetails class' paymentMode, name, savedCardToken, cardNumber, cardExpiryDate, bank, cardScheme, issuerCode, amount, currency, maxBalance, campaignCode, cvv, fingerPrint object.
+/**
+ *   The CTSConsumerProfileDetails class' paymentMode object.
  */
-@property (strong) NSString <Optional>
-* paymentMode,
-* name,
-* savedCardToken,
-* cardNumber,
-* cardExpiryDate,
-* bank,
-* cardScheme,
-* issuerCode,
-* amount,
-* currency,
-* maxBalance,
-* campaignCode,
-* cvv,
-* fingerPrint;
-
-/*!
- *  @brief The CTSConsumerProfileDetails class' selected, shown, defaultPaymentMode object.
+@property (strong) NSString <Optional> * paymentMode;
+/**
+ *   The CTSConsumerProfileDetails class' name object.
  */
-@property (assign) BOOL
-selected,
-shown,
-defaultPaymentMode;
-
-/*!
- *  @brief canDoOneTapPayment.
+@property (strong) NSString <Optional> * name;
+/**
+ *   The CTSConsumerProfileDetails class' savedCardToken object.
+ */
+@property (strong) NSString <Optional> * savedCardToken;
+/**
+ *   The CTSConsumerProfileDetails class' cardNumber object.
+ */
+@property (strong) NSString <Optional> * cardNumber;
+/**
+ *   The CTSConsumerProfileDetails class' cardExpiryDate object.
+ */
+@property (strong) NSString <Optional> * cardExpiryDate;
+/**
+ *   The CTSConsumerProfileDetails class' bank object.
+ */
+@property (strong) NSString <Optional> * bank;
+/**
+ *   The CTSConsumerProfileDetails class' cardScheme object.
+ */
+@property (strong) NSString <Optional> * cardScheme;
+/**
+ *   The CTSConsumerProfileDetails class' issuerCode object.
+ */
+@property (strong) NSString <Optional> * issuerCode;
+/**
+ *   The CTSConsumerProfileDetails class' amount object.
+ */
+@property (strong) NSString <Optional> * amount;
+/**
+ *   The CTSConsumerProfileDetails class' currency object.
+ */
+@property (strong) NSString <Optional> * currency;
+/**
+ *   The CTSConsumerProfileDetails class' maxBalance object.
+ */
+@property (strong) NSString <Optional> * maxBalance;
+/**
+ *   The CTSConsumerProfileDetails class' campaignCode object.
+ */
+@property (strong) NSString <Optional> * campaignCode;
+/**
+ *   The CTSConsumerProfileDetails class' cvv object.
+ */
+@property (strong) NSString <Optional> * cvv;
+/**
+ *   The CTSConsumerProfileDetails class' fingerPrint object.
+ */
+@property (strong) NSString <Optional> * fingerPrint;
+/**
+ *   The CTSConsumerProfileDetails class' selected object.
+ */
+@property (assign) BOOL selected;
+/**
+ *   The CTSConsumerProfileDetails class' shown object.
+ */
+@property (assign) BOOL shown;
+/**
+ *   The CTSConsumerProfileDetails class' defaultPaymentMode object.
+ */
+@property (assign) BOOL defaultPaymentMode;
+/**
+ *   canDoOneTapPayment.
  *
  *  @return The BOOL Object.
  */

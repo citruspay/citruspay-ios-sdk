@@ -1,10 +1,13 @@
 CitrusPay iOS SDK Kit release notes
 ==============================================
 
-3.6.2
+3.6.3
 -----
 
 * Current Version
+- Provided access to the Oauth Manager interface for the use of Oauth data at the merchant end.
+
+* 3.6.2
 - Custom Parameters support for Wallet PG Transactions.
 
 * 3.6.1

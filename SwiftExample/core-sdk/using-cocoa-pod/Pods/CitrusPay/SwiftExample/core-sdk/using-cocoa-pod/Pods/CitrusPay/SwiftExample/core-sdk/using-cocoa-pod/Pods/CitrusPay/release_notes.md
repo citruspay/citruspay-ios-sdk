@@ -1,10 +1,14 @@
 CitrusPay iOS SDK Kit release notes
 ==============================================
 
-3.7.0
+4.0.0
 -----
 
 * Current Version
+- Embedded/Dynamic Framework support.
+- Added Support for New RuPay Card Range.
+
+* 3.7.0
 - SimpliPay Signature changes for the support of Bill Object, userContact and userAddress.
 
 * 3.6.3

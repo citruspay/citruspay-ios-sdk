@@ -304,7 +304,9 @@
             
             [self.ccddtableView reloadData];
             if (_segControl.selectedSegmentIndex==2) {
-                [self getActiveSubs:nil];
+                if ([authLayer isLoggedIn]) {
+                    [self getActiveSubs:nil];
+                }
             }
             
             _useMVC = NO;
@@ -1578,7 +1580,6 @@ replacementString:(NSString *)string {
                 [localSwitchView addTarget:self action:@selector(updateSwitchAtIndexPath:)forControlEvents:UIControlEventValueChanged];
             }
             if (indexPath.row==4) {
-                
                 autoloadSwitch = (UISwitch *)[cell.contentView viewWithTag:2007];
                 [autoloadSwitch addTarget:self action:@selector(loadMoneyWithAutoloadView:)forControlEvents:UIControlEventValueChanged];
             }
@@ -2041,13 +2042,14 @@ numberOfRowsInComponent:(NSInteger)component {
     {
         tempView =[[UIView alloc]init];
         imageView = [[UIImageView alloc] init];
-        imageView.frame = CGRectMake(10, 0, 30, 30);
-        pickerLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, -5, 255, 40)];
+        imageView.frame = CGRectMake(10, 5, 40, 40);
+        pickerLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, -5, self.view.bounds.size.width, 50)];
         pickerLabel.textColor = [UIColor darkGrayColor];
         pickerLabel.font = [UIFont fontWithName:@"Verdana-Semibold" size:15];
         pickerLabel.textAlignment = NSTextAlignmentLeft;
         pickerLabel.backgroundColor = [UIColor clearColor];
         
+
         [tempView addSubview:imageView];
         [tempView addSubview:pickerLabel];
     }
@@ -2058,6 +2060,10 @@ numberOfRowsInComponent:(NSInteger)component {
     return tempView;
 }
 
+- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component __TVOS_PROHIBITED;
+{
+    return 50;
+}
 #pragma mark - Reset UI Methods
 
 - (void) resetUI {

@@ -1060,14 +1060,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="z9d-BT-ydc">
                                 <rect key="frame" x="80" y="86" width="441" height="92"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="92" id="uRg-Me-3E3"/>
+                                    <constraint firstAttribute="height" constant="92" id="eBd-bZ-Exr"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ui6-GP-zkC">
                                 <rect key="frame" x="30" y="191" width="540" height="35"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="0.81999999999999995" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="A1F-Ih-tor"/>
+                                    <constraint firstAttribute="height" constant="35" id="obf-Gh-SKH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                                 <state key="normal" title="Direct Payment">
@@ -1081,7 +1081,7 @@
                                 <rect key="frame" x="30" y="248" width="540" height="35"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="0.81999999999999995" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="QaC-WG-kcz"/>
+                                    <constraint firstAttribute="height" constant="35" id="8Qg-CC-wZf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                                 <state key="normal" title="Citrus Wallet">
@@ -1095,17 +1095,17 @@
                                 <rect key="frame" x="30" y="303" width="540" height="35"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="0.81999999999999995" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="GcQ-u8-xSa"/>
+                                    <constraint firstAttribute="height" constant="35" id="tkd-PL-ZUS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                                 <state key="normal" title="Login with either Mobile or Email Id">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CitrusPay SDK Demo : v4.0.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gz1-Ix-4oj">
-                                <rect key="frame" x="185" y="559" width="231" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CitrusPay SDK v4.0.2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gz1-Ix-4oj">
+                                <rect key="frame" x="212" y="559" width="177" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="231" id="V0s-E1-JxD"/>
+                                    <constraint firstAttribute="width" constant="177" id="Fm7-jE-RdG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1114,20 +1114,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ui6-GP-zkC" firstAttribute="trailing" secondItem="gW6-nU-0Az" secondAttribute="trailing" id="3ki-qV-LAz"/>
-                            <constraint firstItem="gW6-nU-0Az" firstAttribute="trailing" secondItem="h7y-m7-pud" secondAttribute="trailing" id="4cG-hz-je2"/>
-                            <constraint firstItem="Ui6-GP-zkC" firstAttribute="top" secondItem="z9d-BT-ydc" secondAttribute="bottom" constant="13" id="9nr-XJ-BTb"/>
-                            <constraint firstItem="z9d-BT-ydc" firstAttribute="centerX" secondItem="g61-cj-nuf" secondAttribute="centerX" id="ND6-i0-cmt"/>
-                            <constraint firstAttribute="bottom" secondItem="Gz1-Ix-4oj" secondAttribute="bottom" constant="20" symbolic="YES" id="O2D-D4-15x"/>
-                            <constraint firstItem="Ui6-GP-zkC" firstAttribute="leading" secondItem="g61-cj-nuf" secondAttribute="leadingMargin" constant="10" id="SQU-cn-1F7"/>
-                            <constraint firstItem="h7y-m7-pud" firstAttribute="centerX" secondItem="Gz1-Ix-4oj" secondAttribute="centerX" id="UG9-l9-ea7"/>
-                            <constraint firstItem="gW6-nU-0Az" firstAttribute="top" secondItem="Ui6-GP-zkC" secondAttribute="bottom" constant="22" id="VzA-Km-OvG"/>
-                            <constraint firstItem="Ui6-GP-zkC" firstAttribute="leading" secondItem="gW6-nU-0Az" secondAttribute="leading" id="XaR-fc-AgV"/>
-                            <constraint firstItem="h7y-m7-pud" firstAttribute="top" secondItem="gW6-nU-0Az" secondAttribute="bottom" constant="20" id="YbY-11-ijl"/>
-                            <constraint firstItem="z9d-BT-ydc" firstAttribute="leading" secondItem="g61-cj-nuf" secondAttribute="leadingMargin" constant="60" id="c8x-37-i6z"/>
-                            <constraint firstItem="z9d-BT-ydc" firstAttribute="top" secondItem="3hm-0R-z35" secondAttribute="bottom" constant="22" id="ryH-Re-de7"/>
-                            <constraint firstItem="z9d-BT-ydc" firstAttribute="centerX" secondItem="Ui6-GP-zkC" secondAttribute="centerX" id="vKu-QY-Dkl"/>
-                            <constraint firstItem="gW6-nU-0Az" firstAttribute="leading" secondItem="h7y-m7-pud" secondAttribute="leading" id="xN6-Ac-Ffo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gW6-nU-0Az" secondAttribute="trailing" constant="10" id="4qw-52-9Ul"/>
+                            <constraint firstItem="z9d-BT-ydc" firstAttribute="leading" secondItem="g61-cj-nuf" secondAttribute="leadingMargin" constant="60" id="61f-l6-86I"/>
+                            <constraint firstItem="gW6-nU-0Az" firstAttribute="leading" secondItem="g61-cj-nuf" secondAttribute="leadingMargin" constant="10" id="HaE-b9-qnx"/>
+                            <constraint firstItem="Ui6-GP-zkC" firstAttribute="top" secondItem="z9d-BT-ydc" secondAttribute="bottom" constant="13" id="O9v-T5-nbZ"/>
+                            <constraint firstItem="h7y-m7-pud" firstAttribute="leading" secondItem="g61-cj-nuf" secondAttribute="leadingMargin" constant="10" id="PRV-D7-uM3"/>
+                            <constraint firstItem="gW6-nU-0Az" firstAttribute="top" secondItem="Ui6-GP-zkC" secondAttribute="bottom" constant="22" id="Sav-Lf-WhR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z9d-BT-ydc" secondAttribute="trailing" constant="59" id="TfB-dv-oCt"/>
+                            <constraint firstItem="h7y-m7-pud" firstAttribute="top" secondItem="gW6-nU-0Az" secondAttribute="bottom" constant="20" id="WBX-uW-WF9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h7y-m7-pud" secondAttribute="trailing" constant="10" id="X8I-dL-4NU"/>
+                            <constraint firstItem="Ui6-GP-zkC" firstAttribute="leading" secondItem="g61-cj-nuf" secondAttribute="leadingMargin" constant="10" id="XIG-9e-PXa"/>
+                            <constraint firstItem="Gz1-Ix-4oj" firstAttribute="centerX" secondItem="h7y-m7-pud" secondAttribute="centerX" id="XTc-Vv-nfg"/>
+                            <constraint firstAttribute="bottom" secondItem="Gz1-Ix-4oj" secondAttribute="bottom" constant="20" symbolic="YES" id="Xdc-0a-lLE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ui6-GP-zkC" secondAttribute="trailing" constant="10" id="Zis-fA-5mn"/>
+                            <constraint firstItem="z9d-BT-ydc" firstAttribute="top" secondItem="3hm-0R-z35" secondAttribute="bottom" constant="22" id="eOS-2Z-HHO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Payment Options" id="YW2-8c-XTQ"/>
@@ -1892,8 +1892,8 @@
         <image name="Wallet" width="62" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Hir-IU-K0S"/>
         <segue reference="bcu-GA-SzB"/>
+        <segue reference="Hir-IU-K0S"/>
         <segue reference="mlv-Ju-YZT"/>
     </inferredMetricsTieBreakers>
 </document>

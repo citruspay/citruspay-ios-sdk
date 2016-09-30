@@ -39,6 +39,8 @@
 #import "CTSLoadMoney.h"
 #import "CTSAutoLoad.h"
 
+#import "PaymentType.h"
+
 @class   CTSPaymentWebViewController , CTSContactUpdate, CTSUserAddress;
 
 typedef enum {
@@ -344,6 +346,13 @@ DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:
                             extraParams:(NSDictionary *)extraParams
                       completionHandler:(ASPerformDynamicPricingCallback)callback __attribute__((deprecated("Please use requestSimpliPay:billURL:paymentOption:useMVC:useCash:useDynamicPrice:ruleInfo:andParentViewController:completionHandler: instead")));
 
+- (void)requestPerformDynamicPricingRule:(CTSRuleInfo *)ruleInfo
+                             paymentInfo:(CTSPaymentDetailUpdate *)payment
+                                    bill:(CTSBill *)bill
+                                    user:(CTSUser *)user
+                             extraParams:(NSDictionary *)extraParams
+                       completionHandler:(ASPerformDynamicPricingCallback)callback DEPRECATED_ATTRIBUTE;
+
 //END DEPRECATED
 
 
@@ -418,52 +427,25 @@ DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:
 // Single Payment Interface - SimpliPay
 
 /**
- *  requestSimpliPay - for all payment single end point
+ *  requestSimpliPay - Single Payment Interface
  *
- *  @param amount - set transaction amount
- *  @param billURL - set bill generator url
- *  @param paymentOption -  set payment details
- *  @param useMVC - set bool value YES or NO
- *  @param useCash - set bool value YES or NO
- *  @param useDynamicPrice - set bool value YES or NO
- *  @param ruleInfo - set ruleInfo for dynamic pricing
+ *  @param paymentType - set paymentType (MVCPayment/citrusCashPayment/PGPayment/performDynamicPricing/splitPayment/loadMoney)
  *  @param andParentViewController - set current controller self object
  *  @param completionHandler - return callback into paymentReceipt & error
  */
-- (void)requestSimpliPay:(NSString *)amount
-                 billURL:(NSString *)billURL
-           paymentOption:(CTSPaymentOptions <Optional> *)paymentOption
-                  useMVC:(BOOL)useMVC
-                 useCash:(BOOL)useCash
-         useDynamicPrice:(BOOL)useDynamicPrice
-                ruleInfo:(CTSRuleInfo <Optional> *)ruleInfo
+- (void)requestSimpliPay:(PaymentType *)paymentType
  andParentViewController:(UIViewController *)controller
        completionHandler:(CTSSmartPayCompletionHandler)completion;
-
 
 /**
  *  request calculate Payment Distribution - for split payment
  *
  *  @param amount - set transaction amount
- *  @param completionHandler - return callback into amountDistribution viz mvcAmount, cashAmount, remainingAmount & totalAmount, BOOL useMVC, useCash & enoughMVCAndCash;
+ *  @param completionHandler - return callback into amountDistribution viz mvcAmount, 
+    cashAmount, remainingAmount & totalAmount, BOOL useMVC, useCash & enoughMVCAndCash;
  */
 - (void)requestCalculatePaymentDistribution:(NSString *)amount
                           completionHandler:(CTSPaymentDistributionCompletionHandler)completion;
-
-/**
- *  requestLoadMoney - into Citruspay account
- *
- *  @param amount - set transaction amount
- *  @param returnURL - set return url
- *  @param paymentOption -  set payment details
- *  @param andParentViewController - set current controller self object
- *  @param completionHandler - return callback into paymentReceipt & error
- */
-- (void)requestLoadMoney:(NSString *)amount
-               returnURL:(NSString *)returnURL
-           paymentOption:(CTSPaymentOptions *)paymentOption
- andParentViewController:(UIViewController *)controller
-       completionHandler:(CTSSmartPayCompletionHandler)completion;
 
 
 // AutoLoad

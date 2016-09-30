@@ -2,7 +2,7 @@
 
 ![CitrusPay logo](http://www.citruspay.com/images/logo.png "CitrusPay") 
 
-## CitrusPay iOS SDK V 4.0.0
+## CitrusPay iOS SDK V 4.0.1
 
 ## Introduction
 The CitrusPay iOS SDK enables collection of payments via various payment methods.
@@ -71,22 +71,22 @@ $ open citruspay-ios-sdk
 + Then navigate to `General` tab and expand the `Embedded Binaries` section
 + Click the + and `CitrusPay.framework` appropriate to your target's platform
 + Add dependency 
-1. Download the JSONModel repository as a [zip file](https://github.com/icanzilb/JSONModel/archive/master.zip) or clone it
-2. Copy the JSONModel folder into your Xcode project finder
-3. Drag the `JSONModel.xcodeproj` from sub-folder into your Xcode project (i.e using direct project dependency)
-4. Select the target you wish to add "JSONModel" to
-+ Navigate to `Build Phases` tab and expand the `Link Binary With Libraries` section
-+ Click the + and `JSONModel.framework` appropriate to your target's platform
-+ Then navigate to `General` tab and expand the `Embedded Binaries` section
-+ Click the + and `JSONModel.framework` appropriate to your target's platform
-5. Link your app to SystemConfiguration.framework
+    1. Download the JSONModel repository as a [zip file](https://github.com/icanzilb/JSONModel/archive/master.zip) or clone it
+    2. Copy the JSONModel folder into your Xcode project finder
+    3. Drag the `JSONModel.xcodeproj` from sub-folder into your Xcode project (i.e using direct project dependency)
+    4. Select the target you wish to add "JSONModel" to
+    5. Navigate to `Build Phases` tab and expand the `Link Binary With Libraries` section
+    6. Click the + and `JSONModel.framework` appropriate to your target's platform
+    7. Then navigate to `General` tab and expand the `Embedded Binaries` section
+    8. Click the + and `JSONModel.framework` appropriate to your target's platform
+    9. Link your app to SystemConfiguration.framework
 + You should now be able to add SDK to any of your target's source files and begin using CitrusPay SDK!
 + Using Swift `import CitrusPay` Or Objective-C `#import <CitrusPay/CitrusPay.h>`
 + Done!
 
 
 #### Using Library Binaries (manual way)
-+ Download the latest zip file from our [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/3.7.0/Framework.zip)
++ Download the latest zip file from our [releases page](https://github.com/citruspay/citruspay-ios-sdk/releases/latest) or as a direct [download](https://github.com/citruspay/citruspay-ios-sdk/releases/download/4.0.0/Framework.zip)
 + Unzip the file
 + Or clone it 
 ~~~{.m}
@@ -101,15 +101,15 @@ $ open citruspay-ios-sdk
 + Include the following framework:
 - `CitrusPay.framework`
 + Add dependency 
-1. Download the JSONModel repository as a [zip file](https://github.com/icanzilb/JSONModel/archive/master.zip) or clone it
-2. Copy the JSONModel folder into your Xcode project finder
-3. Drag the `JSONModel.xcodeproj` from sub-folder into your Xcode project (i.e using direct project dependency)
-4. Select the target you wish to add "JSONModel" to
-+ Navigate to `Build Phases` tab and expand the `Link Binary With Libraries` section
-+ Click the + and `JSONModel.framework` appropriate to your target's platform
-+ Then navigate to `General` tab and expand the `Embedded Binaries` section
-+ Click the + and `JSONModel.framework` appropriate to your target's platform
-5. Link your app to SystemConfiguration.framework
+    1. Download the JSONModel repository as a [zip file](https://github.com/icanzilb/JSONModel/archive/master.zip) or clone it
+    2. Copy the JSONModel folder into your Xcode project finder
+    3. Drag the `JSONModel.xcodeproj` from sub-folder into your Xcode project (i.e using direct project dependency)
+    4. Select the target you wish to add "JSONModel" to
+    5. Navigate to `Build Phases` tab and expand the `Link Binary With Libraries` section
+    6. Click the + and `JSONModel.framework` appropriate to your target's platform
+    7. Then navigate to `General` tab and expand the `Embedded Binaries` section
+    8. Click the + and `JSONModel.framework` appropriate to your target's platform
+    9. Link your app to SystemConfiguration.framework
 + You should now be able to add SDK to any of your target's source files and begin using CitrusPay SDK!
 + Using Swift `import CitrusPay` Or Objective-C `#import <CitrusPay/CitrusPay.h>`
 + Done!
@@ -271,4 +271,4 @@ Following are the specific tasks related to each of the layer
 + [postResponseiOS() error](https://github.com/citruspay/citruspay-ios-sdk/wiki/4.-Common-Errors#postresponseios-error)
 + [iOS 9 SSL Errors](https://github.com/citruspay/citruspay-ios-sdk/wiki/4.-Common-Errors#ios-9-ssl-errors--fix)
 
-#[Important Instructions for the Releasing to Apple](https://github.com/citruspay/open-ios/wiki/Releasing-to-Apple)
+#[Important Instructions for the Releasing to Apple](https://github.com/citruspay/citruspay-ios-sdk/wiki/Releasing-to-Apple)

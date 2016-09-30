@@ -1,10 +1,13 @@
 CitrusPay iOS SDK Kit Release Notes:
 ==============================================
 
-4.0.1
+4.0.2
 -----
 
 #### Current Version
++ Fixed variable name conflict with Apple's private APIs to avoid app store rejection.
+
+#### 4.0.1
 + Added Support for New RuPay & Master Card Range.
 + Framework Binary Size Optimized
 + Axis Bank Debit Card Issue Fix (Critical)
