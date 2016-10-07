@@ -57,8 +57,8 @@ typedef void (^ASBillCallback)(CTSBill* bill,NSError* error);
 + (NSString*)fetchCardSchemeForCardNumber:(NSString *)cardNumber;
 + (NSDictionary*)getResponseIfTransactionIsFinished:(NSData*)postData;
 + (NSDictionary*)getResponseIfTransactionIsComplete:(UIWebView *)webview ;
-+ (UIImage*)getSchmeTypeImage:(NSString*)cardNumber
-                forParentView:(UIView *)view;
+//+ (UIImage*)getSchmeTypeImage:(NSString*)cardNumber
+//                forParentView:(UIView *)view;
 + (BOOL)appendHyphenForCardnumber:(UITextField*)textField replacementString:(NSString*)string shouldChangeCharactersInRange:(NSRange)range;
 + (BOOL)appendHyphenForMobilenumber:(UITextField*)textField replacementString:(NSString*)string shouldChangeCharactersInRange:(NSRange)range;
 + (BOOL)enterNumericOnly:(NSString*)string;
@@ -110,12 +110,12 @@ typedef void (^ASBillCallback)(CTSBill* bill,NSError* error);
 +(NSString *)convertToDecimalAmountString:(NSString *)amount;
 +(NSString*)getHTMLWithString:(NSString *)string;
 + (NSMutableArray *)fetchMappedCardSchemeForSaveCards:(NSArray*)cardsSchemeArray;
-+ (UIImage *)fetchSchemeImageBySchemeType:(NSString *)scheme
-                            forParentView:(UIView *)view;
-+ (UIImage *)fetchBankLogoImageByBankIssuerCode:(NSString *)bankIssuerCode
-                                  forParentView:(UIView *)view;
-+ (UIImage *)fetchBankLogoImageByBankName:(NSString *)bankName
-                            forParentView:(UIView *)view;
+//+ (UIImage *)fetchSchemeImageBySchemeType:(NSString *)scheme
+//                            forParentView:(UIView *)view;
+//+ (UIImage *)fetchBankLogoImageByBankIssuerCode:(NSString *)bankIssuerCode
+ //                                 forParentView:(UIView *)view;
+//+ (UIImage *)fetchBankLogoImageByBankName:(NSString *)bankName
+//                            forParentView:(UIView *)view;
 +(void)requestDPBillForRule:(CTSRuleInfo *)ruleInfo billURL:(NSString *)billUrl callback:(ASBillCallback)callback;
 +(void)requestBillAmount:(NSString *)amount billURL:(NSString *)billUrl callback:(ASBillCallback)callback;
 +(BOOL)isNonNumeric:(NSString *)string;

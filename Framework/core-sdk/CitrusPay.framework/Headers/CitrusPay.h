@@ -24,6 +24,8 @@
 #import "CTSOauthManager.h"
 #import "HVDOverlay.h"
 
+#import <CitrusGraphics/CitrusGraphics-Swift.h>
+
 /**
  *   CTSEnvironment Constant.
  */
