@@ -127,111 +127,21 @@ SWIFT_CLASS("_TtC14CitrusGraphics14CitrusGraphics")
   A task represents the retrieving process.
 */
 + (void)clearCache;
-/**
-  Prefetch an image with a resource.
-
-  returns:
-  A task represents the retrieving process.
-*/
 + (void)imagePrefetcherForCard;
-/**
-  Prefetch an image with a resource.
-
-  returns:
-  A task represents the retrieving process.
-*/
 + (void)imagePrefetcherForBank;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 @interface UIImageView (SWIFT_EXTENSION(CitrusGraphics))
-/**
-  Set system activity.
-
-  returns:
-  A task represents the retrieving process.
-*/
 - (void)setSystemActivity;
-/**
-  Load an image with a resource.
-  \param resource Resource object contains information such as \code
-  cardscheme
-  \endcode.
-
-
-  returns:
-  A task represents the retrieving process.
-*/
 - (void)loadCitrusCardWithCardScheme:(NSString * _Nonnull)cardScheme;
-/**
-  Load an image with a large resource.
-  \param resource Resource object contains information such as \code
-  cardscheme
-  \endcode.
-
-
-  returns:
-  A task represents the retrieving process.
-*/
 - (void)loadCitrusLargeCardWithCardScheme:(NSString * _Nonnull)cardScheme;
-/**
-  Load an image with a resource.
-  \param resource Resource object contains information such as \code
-  bankCID
-  \endcode.
-
-
-  returns:
-  A task represents the retrieving process.
-*/
 - (void)loadCitrusBankWithBankCID:(NSString * _Nonnull)bankCID;
-/**
-  Load an image with a large resource.
-  \param resource Resource object contains information such as \code
-  bankCID
-  \endcode.
-
-
-  returns:
-  A task represents the retrieving process.
-*/
 - (void)loadCitrusLargeBankWithBankCID:(NSString * _Nonnull)bankCID;
-/**
-  Load an image with a resource.
-  \param resource Resource object contains information such as \code
-  _IFSCCode
-  \endcode.
-
-
-  returns:
-  A task represents the retrieving process.
-*/
 - (void)loadCitrusBankWithIFSCCode:(NSString * _Nonnull)IFSCCode;
-/**
-  Load an image with a large resource.
-  \param resource Resource object contains information such as \code
-  _IFSCCode
-  \endcode.
-
-
-  returns:
-  A task represents the retrieving process.
-*/
 - (void)loadCitrusLargeBankWithIFSCCode:(NSString * _Nonnull)IFSCCode;
-/**
-  Prefetch an image with a Citrus Branding resource.
-
-  returns:
-  A task represents the retrieving process.
-*/
 - (void)loadCitrusBrandingWithBrandingID:(NSString * _Nonnull)brandingID;
-/**
-  Prefetch an image with a Citrus LazyPay resource.
-
-  returns:
-  A task represents the retrieving process.
-*/
 - (void)loadCitrusLazyPayWithAssetID:(NSString * _Nonnull)assetID;
 @end
 
