@@ -597,7 +597,7 @@ DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:
                              amount:(NSString *)amount
                           returnUrl:(NSString *)returnUrl
                        customParams:(NSDictionary *)custParams
-              withCompletionHandler:(ASLoadMoneyCallBack)callback  __attribute__((deprecated("Please use requestLoadMoney:returnURL:paymentOption:andParentViewController:completionHandler: instead")));
+              withCompletionHandler:(ASLoadMoneyCallBack)callback __attribute__((deprecated("Please use requestSimpliPay:andParentViewController:completionHandler: instead")));
 
 //new prepaid pay api
 
@@ -614,7 +614,7 @@ DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:
                                      address:(CTSUserAddress*)userAddress
                                         bill:(CTSBill *)bill
                         returnViewController:(UIViewController *)controller
-                       withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestSimpliPay:billURL:paymentOption:useMVC:useCash:useDynamicPrice:ruleInfo:andParentViewController:completionHandler: instead")));
+                       withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestSimpliPay:andParentViewController:completionHandler: instead")));
 
 
 //old prepaid pay api
@@ -672,7 +672,7 @@ DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:
                        withAddress:(CTSUserAddress*)userAddress
                               bill:(CTSBill *)bill
               returnViewController:(UIViewController *)controller
-             withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestSimpliPay:billURL:paymentOption:useMVC:useCash:useDynamicPrice:ruleInfo:andParentViewController:completionHandler: instead")));
+             withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestSimpliPay:andParentViewController:completionHandler: instead")));
 
 
 //moto call
@@ -693,7 +693,7 @@ DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:
                         bill:(CTSBill *)bill
                 customParams:(NSDictionary *)custParams
         returnViewController:(UIViewController *)controller
-       withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestSimpliPay:billURL:paymentOption:useMVC:useCash:useDynamicPrice:ruleInfo:andParentViewController:completionHandler: instead")));
+       withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestSimpliPay:andParentViewController:completionHandler: instead")));
 
 
 /**
@@ -715,7 +715,7 @@ DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:
                           returnUrl:(NSString *)returnUrl
                        customParams:(NSDictionary *)custParams
                returnViewController:(UIViewController *)controller
-              withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestLoadMoney:returnURL:paymentOption:andParentViewController:completionHandler: instead")));
+              withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestSimpliPay:andParentViewController:completionHandler: instead")));
 
 
 /**
@@ -750,7 +750,7 @@ DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:
                                    user:(CTSUser *)user
                                    type:(DPRequestType)requestType
                             extraParams:(NSDictionary *)extraParams
-                      completionHandler:(ASPerformDynamicPricingCallback)callback __attribute__((deprecated("Please use requestSimpliPay:billURL:paymentOption:useMVC:useCash:useDynamicPrice:ruleInfo:andParentViewController:completionHandler: instead")));
+                      completionHandler:(ASPerformDynamicPricingCallback)callback __attribute__((deprecated("Please use requestSimpliPay:andParentViewController:completionHandler: instead")));
 
 
 /**
@@ -768,7 +768,7 @@ DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:
                                 billUrl:(NSString *)billUrl
                                    user:(CTSUser *)user
                             extraParams:(NSDictionary *)extraParams
-                      completionHandler:(ASPerformDynamicPricingCallback)callback __attribute__((deprecated("Please use requestSimpliPay:billURL:paymentOption:useMVC:useCash:useDynamicPrice:ruleInfo:andParentViewController:completionHandler: instead")));
+                      completionHandler:(ASPerformDynamicPricingCallback)callback __attribute__((deprecated("Please use requestSimpliPay:andParentViewController:completionHandler: instead")));
 
 /**
  *   requestPerformDynamicPricingRule.

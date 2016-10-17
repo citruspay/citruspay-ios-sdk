@@ -273,7 +273,16 @@ typedef void (^ASSaveCardsCallback) (CTSSaveCardResponse *reponse, NSError *erro
  *  @param paymentOptions The paymentOptions CTSPaymentOptions.
  *  @param callback       The callback ASUpdatePaymentInfoCallBack.
  */
-- (void)updatePaymentInformation:(CTSPaymentOptions *)paymentOptions
+- (void)updatePaymentInfo:(CTSPaymentOptions *)paymentOption
+    withCompletionHandler:(ASUpdatePaymentInfoCallBack)callback;
+
+/**
+ *   update payment related information
+ *
+ *  @param paymentOptions The paymentOptions CTSPaymentDetailUpdate.
+ *  @param callback       The callback ASUpdatePaymentInfoCallBack.
+ */
+- (void)updatePaymentInformation:(CTSPaymentDetailUpdate *)paymentInfo
            withCompletionHandler:(ASUpdatePaymentInfoCallBack)callback;
 
 /**

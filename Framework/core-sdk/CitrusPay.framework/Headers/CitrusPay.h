@@ -27,24 +27,67 @@
 #import <CitrusGraphics/CitrusGraphics-Swift.h>
 
 /**
- *   CTSEnvironment Constant.
+ *   CTSEnvironment Constants.
  */
 typedef enum{
     /**
-     *   CTSEnvSandbox Constant.
+     *   The CTSEnvSandbox Constant.
      */
     CTSEnvSandbox,
     /**
-     *   CTSEnvProduction Constant.
+     *   The CTSEnvProduction Constant.
      */
     CTSEnvProduction
 } CTSEnvironment;
 
 
+
+/**
+ *   CTSLogLevel NS_ENUM.
+ */
+typedef NS_ENUM(NSUInteger, CTSLogLevel) {
+    /**
+     *   The CTSLogLevelVerbose ENUM.
+     */
+    CTSLogLevelVerbose = 0,
+    /**
+     *   The CTSLogLevelDebug ENUM.
+     */
+    CTSLogLevelDebug = 1,
+    /**
+     *   The CTSLogLevelInfo ENUM.
+     */
+    CTSLogLevelInfo = 2,
+    /**
+     *   The CTSLogLevelNone ENUM.
+     */
+    CTSLogLevelNone = 3,
+};
+
 /**
  *   CitrusPaymentSDK Singleton Class.
  */
 @interface CitrusPaymentSDK : NSObject
+
+/**
+ *   Initialize SDK With KeyStore i.e The signinId String, signUpId String, signinSecret String, signUpSecret String and vanity String.
+ *
+ *  @param signInID The signinId String.
+ *  @param signInSecret The signInSecret String.
+ *  @param signUpID The signUpID String.
+ *  @param signUpSecret The signUpSecret String.
+ *  @param vanityUrl The vanityUrl String.
+ *  @param environment The CTSEnvSandbox or CTSEnvProduction.
+ *  @param logLevel The logLevel CTSLogLevel.
+ */
++(void)initWithSignInID:(NSString *)signInID
+           signInSecret:(NSString *)signInSecret
+               signUpID:(NSString *)signUpID
+           signUpSecret:(NSString *)signUpSecret
+              vanityUrl:(NSString *)vanityUrl
+            environment:(CTSEnvironment)environment
+               logLevel:(CTSLogLevel)logLevel;
+
 /**
  *   Initialize SDK With KeyStore.
  *
@@ -52,7 +95,7 @@ typedef enum{
  *  @param env The CTSEnvSandbox or CTSEnvProduction.
  */
 +(void)initializeWithKeyStore:(CTSKeyStore *)keyStore
-                  environment:(CTSEnvironment)env;
+                  environment:(CTSEnvironment)env __attribute__((deprecated("Please use initWithSignInID:signInSecret:signUpID:signUpSecret:vanityUrl:environment:logLevel: instead")));
 
 /**
  *   Initialize SDK With KeyStore.
@@ -61,7 +104,7 @@ typedef enum{
  *  @param envPlist The CTSEnvSandbox or CTSEnvProduction.
  */
 +(void)initializeWithKeyStore:(CTSKeyStore *)keyStore
-              environmentPath:(NSString *)envPlist;
+              environmentPath:(NSString *)envPlist  __attribute__((deprecated("Please use initWithSignInID:signInSecret:signUpID:signUpSecret:vanityUrl:environment:logLevel: instead")));
 
 /**
  *   Get the SDK version.
@@ -98,7 +141,7 @@ typedef enum{
 /**
  *   Enable DEBUGLogs.
  */
-+ (void)enableDEBUGLogs;
++ (void)enableDEBUGLogs __attribute__((deprecated("Please use initWithSignInID:signInSecret:signUpID:signUpSecret:vanityUrl:environment:logLevel: instead")));
 
 
 /**
