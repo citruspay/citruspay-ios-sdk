@@ -253,7 +253,7 @@ Following are the specific tasks related to each of the layer
 + [Save Cashout Bank Account](https://github.com/citruspay/citruspay-ios-sdk/wiki/2.--Integrating-CTSProfileLayer#save-cash-out-bank-account)
 + [Get Saved Cashout Bank Acoount](https://github.com/citruspay/citruspay-ios-sdk/wiki/2.--Integrating-CTSProfileLayer#get-saved-cashout-bank-acoount)
 + [Initiate Cashout Proccess into users Bank Account from Citrus Cash  account](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#initiate-cashout-process-into-users-account-from-citrus-prepaid-account)
-+ [Send Citrus Cash to another Citrus User](https://github.com/citruspay/open-ios/wiki/3.--Integrating-CTSPaymentLayer#send-money-to-another-citrus-user)
++ [Send Citrus Cash to another Citrus User](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.--Integrating-CTSPaymentLayer#send-money-to-another-citrus-user)
 
 #####Dynamic Pricing Offer Coupons and Surcharge
 + [How to use dynamic pricing ?](https://github.com/citruspay/citruspay-ios-sdk/wiki/Dynamic-Pricing-and-Surcharge)
