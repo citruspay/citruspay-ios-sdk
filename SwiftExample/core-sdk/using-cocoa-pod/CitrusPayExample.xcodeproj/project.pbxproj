@@ -11,13 +11,13 @@
 		763CCB631CBD29BC00A8AADB /* CitrusPayExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763CCB621CBD29BC00A8AADB /* CitrusPayExampleTests.swift */; };
 		763CCB6E1CBD29BC00A8AADB /* CitrusPayExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763CCB6D1CBD29BC00A8AADB /* CitrusPayExampleUITests.swift */; };
 		763CCB7E1CBD30D600A8AADB /* Objective-CBridgingHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 763CCB7D1CBD30D600A8AADB /* Objective-CBridgingHeader.m */; };
-		76F777FB1CC6496F00C9E7B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F777F01CC6496F00C9E7B8 /* Assets.xcassets */; };
-		76F777FC1CC6496F00C9E7B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F777F11CC6496F00C9E7B8 /* LaunchScreen.storyboard */; };
-		76F777FD1CC6496F00C9E7B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F777F31CC6496F00C9E7B8 /* Main.storyboard */; };
-		76F777FE1CC6496F00C9E7B8 /* BaseClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F777F61CC6496F00C9E7B8 /* BaseClassViewController.swift */; };
-		76F777FF1CC6496F00C9E7B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F777F71CC6496F00C9E7B8 /* HomeViewController.swift */; };
-		76F778001CC6496F00C9E7B8 /* MerchantConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F777F91CC6496F00C9E7B8 /* MerchantConstants.swift */; };
-		76F778011CC6496F00C9E7B8 /* TestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F777FA1CC6496F00C9E7B8 /* TestParams.swift */; };
+		767FB9441DDC5B3C00DE349D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 767FB93A1DDC5B3C00DE349D /* Assets.xcassets */; };
+		767FB9451DDC5B3C00DE349D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767FB93B1DDC5B3C00DE349D /* LaunchScreen.storyboard */; };
+		767FB9461DDC5B3C00DE349D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767FB93D1DDC5B3C00DE349D /* Main.storyboard */; };
+		767FB9471DDC5B3C00DE349D /* BaseClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FB9401DDC5B3C00DE349D /* BaseClassViewController.swift */; };
+		767FB9481DDC5B3C00DE349D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FB9411DDC5B3C00DE349D /* HomeViewController.swift */; };
+		767FB9491DDC5B3C00DE349D /* MerchantConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FB9421DDC5B3C00DE349D /* MerchantConstants.swift */; };
+		767FB94A1DDC5B3C00DE349D /* TestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FB9431DDC5B3C00DE349D /* TestParams.swift */; };
 		7F86DAA076721436DEE96978 /* Pods_CitrusPayExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0AE968CC915738576762CA /* Pods_CitrusPayExampleTests.framework */; };
 		991C270E345383E0D8C43FBA /* Pods_CitrusPayExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0623BEC60F54FFE792042AC7 /* Pods_CitrusPayExample.framework */; };
 /* End PBXBuildFile section */
@@ -55,13 +55,13 @@
 		763CCB6F1CBD29BC00A8AADB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		763CCB7C1CBD30D500A8AADB /* CitrusPayExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CitrusPayExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		763CCB7D1CBD30D600A8AADB /* Objective-CBridgingHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Objective-CBridgingHeader.m"; sourceTree = "<group>"; };
-		76F777F01CC6496F00C9E7B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		76F777F21CC6496F00C9E7B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		76F777F41CC6496F00C9E7B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		76F777F61CC6496F00C9E7B8 /* BaseClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseClassViewController.swift; sourceTree = "<group>"; };
-		76F777F71CC6496F00C9E7B8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		76F777F91CC6496F00C9E7B8 /* MerchantConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MerchantConstants.swift; sourceTree = "<group>"; };
-		76F777FA1CC6496F00C9E7B8 /* TestParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestParams.swift; sourceTree = "<group>"; };
+		767FB93A1DDC5B3C00DE349D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		767FB93C1DDC5B3C00DE349D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		767FB93E1DDC5B3C00DE349D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		767FB9401DDC5B3C00DE349D /* BaseClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseClassViewController.swift; sourceTree = "<group>"; };
+		767FB9411DDC5B3C00DE349D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		767FB9421DDC5B3C00DE349D /* MerchantConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MerchantConstants.swift; sourceTree = "<group>"; };
+		767FB9431DDC5B3C00DE349D /* TestParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestParams.swift; sourceTree = "<group>"; };
 		8B0AE968CC915738576762CA /* Pods_CitrusPayExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CitrusPayExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F273BF6CCBAFB50832EA0732 /* Pods-CitrusPayExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitrusPayExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CitrusPayExample/Pods-CitrusPayExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,7 +118,7 @@
 		763CCB4C1CBD29BC00A8AADB /* CitrusPayExample */ = {
 			isa = PBXGroup;
 			children = (
-				76F777EF1CC6496F00C9E7B8 /* test-ui */,
+				767FB9391DDC5B3C00DE349D /* test-ui-example */,
 				763CCB4D1CBD29BC00A8AADB /* AppDelegate.swift */,
 				763CCB591CBD29BC00A8AADB /* Info.plist */,
 				763CCB7D1CBD30D600A8AADB /* Objective-CBridgingHeader.m */,
@@ -145,35 +145,27 @@
 			path = CitrusPayExampleUITests;
 			sourceTree = "<group>";
 		};
-		76F777EF1CC6496F00C9E7B8 /* test-ui */ = {
+		767FB9391DDC5B3C00DE349D /* test-ui-example */ = {
 			isa = PBXGroup;
 			children = (
-				76F777F01CC6496F00C9E7B8 /* Assets.xcassets */,
-				76F777F11CC6496F00C9E7B8 /* LaunchScreen.storyboard */,
-				76F777F31CC6496F00C9E7B8 /* Main.storyboard */,
-				76F777F51CC6496F00C9E7B8 /* Controllers */,
-				76F777F81CC6496F00C9E7B8 /* CustomUI */,
-				76F777F91CC6496F00C9E7B8 /* MerchantConstants.swift */,
-				76F777FA1CC6496F00C9E7B8 /* TestParams.swift */,
+				767FB93A1DDC5B3C00DE349D /* Assets.xcassets */,
+				767FB93B1DDC5B3C00DE349D /* LaunchScreen.storyboard */,
+				767FB93D1DDC5B3C00DE349D /* Main.storyboard */,
+				767FB93F1DDC5B3C00DE349D /* Controllers */,
+				767FB9421DDC5B3C00DE349D /* MerchantConstants.swift */,
+				767FB9431DDC5B3C00DE349D /* TestParams.swift */,
 			);
-			name = "test-ui";
-			path = "../../../test-ui";
+			name = "test-ui-example";
+			path = "../../test-ui-example";
 			sourceTree = "<group>";
 		};
-		76F777F51CC6496F00C9E7B8 /* Controllers */ = {
+		767FB93F1DDC5B3C00DE349D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				76F777F61CC6496F00C9E7B8 /* BaseClassViewController.swift */,
-				76F777F71CC6496F00C9E7B8 /* HomeViewController.swift */,
+				767FB9401DDC5B3C00DE349D /* BaseClassViewController.swift */,
+				767FB9411DDC5B3C00DE349D /* HomeViewController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		76F777F81CC6496F00C9E7B8 /* CustomUI */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CustomUI;
 			sourceTree = "<group>";
 		};
 		A8E8406E757F4F63DA20766E /* Pods */ = {
@@ -265,18 +257,22 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = CitrusPay;
 				TargetAttributes = {
 					763CCB491CBD29BC00A8AADB = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 					};
 					763CCB5D1CBD29BC00A8AADB = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 						TestTargetID = 763CCB491CBD29BC00A8AADB;
 					};
 					763CCB681CBD29BC00A8AADB = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 						TestTargetID = 763CCB491CBD29BC00A8AADB;
 					};
 				};
@@ -306,9 +302,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76F777FD1CC6496F00C9E7B8 /* Main.storyboard in Resources */,
-				76F777FB1CC6496F00C9E7B8 /* Assets.xcassets in Resources */,
-				76F777FC1CC6496F00C9E7B8 /* LaunchScreen.storyboard in Resources */,
+				767FB9461DDC5B3C00DE349D /* Main.storyboard in Resources */,
+				767FB9441DDC5B3C00DE349D /* Assets.xcassets in Resources */,
+				767FB9451DDC5B3C00DE349D /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,10 +424,10 @@
 			files = (
 				763CCB7E1CBD30D600A8AADB /* Objective-CBridgingHeader.m in Sources */,
 				763CCB4E1CBD29BC00A8AADB /* AppDelegate.swift in Sources */,
-				76F777FE1CC6496F00C9E7B8 /* BaseClassViewController.swift in Sources */,
-				76F778011CC6496F00C9E7B8 /* TestParams.swift in Sources */,
-				76F778001CC6496F00C9E7B8 /* MerchantConstants.swift in Sources */,
-				76F777FF1CC6496F00C9E7B8 /* HomeViewController.swift in Sources */,
+				767FB9471DDC5B3C00DE349D /* BaseClassViewController.swift in Sources */,
+				767FB94A1DDC5B3C00DE349D /* TestParams.swift in Sources */,
+				767FB9491DDC5B3C00DE349D /* MerchantConstants.swift in Sources */,
+				767FB9481DDC5B3C00DE349D /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,18 +463,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		76F777F11CC6496F00C9E7B8 /* LaunchScreen.storyboard */ = {
+		767FB93B1DDC5B3C00DE349D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				76F777F21CC6496F00C9E7B8 /* Base */,
+				767FB93C1DDC5B3C00DE349D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		76F777F31CC6496F00C9E7B8 /* Main.storyboard */ = {
+		767FB93D1DDC5B3C00DE349D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				76F777F41CC6496F00C9E7B8 /* Base */,
+				767FB93E1DDC5B3C00DE349D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -499,8 +495,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -543,8 +541,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -563,6 +563,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -573,6 +574,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CitrusPayExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -580,6 +582,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CitrusPayExample/CitrusPayExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -589,12 +592,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CitrusPayExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.citruspay.sdk.using-swift-cocoa-pod";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CitrusPayExample/CitrusPayExample-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -607,6 +612,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.sdk.CitrusPayExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CitrusPayExample.app/CitrusPayExample";
 			};
 			name = Debug;
@@ -620,6 +626,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.sdk.CitrusPayExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CitrusPayExample.app/CitrusPayExample";
 			};
 			name = Release;
@@ -631,6 +638,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.sdk.CitrusPayExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = CitrusPayExample;
 				USES_XCTRUNNER = YES;
 			};
@@ -643,6 +651,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.sdk.CitrusPayExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = CitrusPayExample;
 				USES_XCTRUNNER = YES;
 			};

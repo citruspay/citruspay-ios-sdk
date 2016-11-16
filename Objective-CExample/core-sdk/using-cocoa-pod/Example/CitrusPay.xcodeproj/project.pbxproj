@@ -18,26 +18,26 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		767FB9141DDC5A9800DE349D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 767FB8ED1DDC5A9800DE349D /* Assets.xcassets */; };
+		767FB9151DDC5A9800DE349D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767FB8EE1DDC5A9800DE349D /* LaunchScreen.storyboard */; };
+		767FB9161DDC5A9800DE349D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767FB8F01DDC5A9800DE349D /* Main.storyboard */; };
+		767FB9171DDC5A9800DE349D /* AutoloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8F41DDC5A9800DE349D /* AutoloadViewController.m */; };
+		767FB9181DDC5A9800DE349D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8F61DDC5A9800DE349D /* BaseViewController.m */; };
+		767FB9191DDC5A9800DE349D /* CardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8F81DDC5A9800DE349D /* CardsViewController.m */; };
+		767FB91A1DDC5A9800DE349D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8FA1DDC5A9800DE349D /* HomeViewController.m */; };
+		767FB91B1DDC5A9800DE349D /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8FC1DDC5A9800DE349D /* InitialViewController.m */; };
+		767FB91C1DDC5A9800DE349D /* ManageAutoLoadSubcriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8FE1DDC5A9800DE349D /* ManageAutoLoadSubcriptionViewController.m */; };
+		767FB91D1DDC5A9800DE349D /* ManageCradViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB9001DDC5A9800DE349D /* ManageCradViewController.m */; };
+		767FB91E1DDC5A9800DE349D /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB9021DDC5A9800DE349D /* ResetPasswordViewController.m */; };
+		767FB91F1DDC5A9800DE349D /* SavedCCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB9041DDC5A9800DE349D /* SavedCCViewController.m */; };
+		767FB9201DDC5A9800DE349D /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB9061DDC5A9800DE349D /* SettingViewController.m */; };
+		767FB9211DDC5A9800DE349D /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB9081DDC5A9800DE349D /* SignInViewController.m */; };
+		767FB9221DDC5A9800DE349D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB90A1DDC5A9800DE349D /* SignUpViewController.m */; };
+		767FB9231DDC5A9800DE349D /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB90D1DDC5A9800DE349D /* HMSegmentedControl.m */; };
+		767FB9241DDC5A9800DE349D /* UICustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB90F1DDC5A9800DE349D /* UICustomButton.m */; };
+		767FB9251DDC5A9800DE349D /* UICustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB9111DDC5A9800DE349D /* UICustomTextField.m */; };
 		76B2DB131CC134CD0046B963 /* CitrusPay.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 76B2DB111CC134CD0046B963 /* CitrusPay.podspec */; };
 		76B2DB141CC134CD0046B963 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 76B2DB121CC134CD0046B963 /* LICENSE */; };
-		76E38D171D213A7000B05179 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E38CF01D213A7000B05179 /* Assets.xcassets */; };
-		76E38D181D213A7000B05179 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E38CF11D213A7000B05179 /* LaunchScreen.storyboard */; };
-		76E38D191D213A7000B05179 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E38CF31D213A7000B05179 /* Main.storyboard */; };
-		76E38D1A1D213A7000B05179 /* AutoloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E38CF71D213A7000B05179 /* AutoloadViewController.m */; };
-		76E38D1B1D213A7000B05179 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E38CF91D213A7000B05179 /* BaseViewController.m */; };
-		76E38D1C1D213A7000B05179 /* CardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E38CFB1D213A7000B05179 /* CardsViewController.m */; };
-		76E38D1D1D213A7000B05179 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E38CFD1D213A7000B05179 /* HomeViewController.m */; };
-		76E38D1E1D213A7000B05179 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E38CFF1D213A7000B05179 /* InitialViewController.m */; };
-		76E38D1F1D213A7000B05179 /* ManageAutoLoadSubcriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E38D011D213A7000B05179 /* ManageAutoLoadSubcriptionViewController.m */; };
-		76E38D201D213A7000B05179 /* ManageCradViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E38D031D213A7000B05179 /* ManageCradViewController.m */; };
-		76E38D211D213A7000B05179 /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E38D051D213A7000B05179 /* ResetPasswordViewController.m */; };
-		76E38D221D213A7000B05179 /* SavedCCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E38D071D213A7000B05179 /* SavedCCViewController.m */; };
-		76E38D231D213A7000B05179 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E38D091D213A7000B05179 /* SettingViewController.m */; };
-		76E38D241D213A7000B05179 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E38D0B1D213A7000B05179 /* SignInViewController.m */; };
-		76E38D251D213A7000B05179 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E38D0D1D213A7000B05179 /* SignUpViewController.m */; };
-		76E38D261D213A7000B05179 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E38D101D213A7000B05179 /* HMSegmentedControl.m */; };
-		76E38D271D213A7000B05179 /* UICustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E38D121D213A7000B05179 /* UICustomButton.m */; };
-		76E38D281D213A7000B05179 /* UICustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E38D141D213A7000B05179 /* UICustomTextField.m */; };
 		93120A23DC480C1F79428F5F /* Pods_CitrusPay_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80EE5EF7ADC4A792B559F298 /* Pods_CitrusPay_Example.framework */; };
 		D46A3FF459E28DD6942EF5A8 /* Pods_CitrusPay_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A08470846FF84971852574 /* Pods_CitrusPay_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -73,43 +73,43 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		767FB8ED1DDC5A9800DE349D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		767FB8EF1DDC5A9800DE349D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		767FB8F11DDC5A9800DE349D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		767FB8F31DDC5A9800DE349D /* AutoloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoloadViewController.h; sourceTree = "<group>"; };
+		767FB8F41DDC5A9800DE349D /* AutoloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoloadViewController.m; sourceTree = "<group>"; };
+		767FB8F51DDC5A9800DE349D /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		767FB8F61DDC5A9800DE349D /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		767FB8F71DDC5A9800DE349D /* CardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsViewController.h; sourceTree = "<group>"; };
+		767FB8F81DDC5A9800DE349D /* CardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsViewController.m; sourceTree = "<group>"; };
+		767FB8F91DDC5A9800DE349D /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		767FB8FA1DDC5A9800DE349D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		767FB8FB1DDC5A9800DE349D /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
+		767FB8FC1DDC5A9800DE349D /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
+		767FB8FD1DDC5A9800DE349D /* ManageAutoLoadSubcriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageAutoLoadSubcriptionViewController.h; sourceTree = "<group>"; };
+		767FB8FE1DDC5A9800DE349D /* ManageAutoLoadSubcriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageAutoLoadSubcriptionViewController.m; sourceTree = "<group>"; };
+		767FB8FF1DDC5A9800DE349D /* ManageCradViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageCradViewController.h; sourceTree = "<group>"; };
+		767FB9001DDC5A9800DE349D /* ManageCradViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageCradViewController.m; sourceTree = "<group>"; };
+		767FB9011DDC5A9800DE349D /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
+		767FB9021DDC5A9800DE349D /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
+		767FB9031DDC5A9800DE349D /* SavedCCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedCCViewController.h; sourceTree = "<group>"; };
+		767FB9041DDC5A9800DE349D /* SavedCCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedCCViewController.m; sourceTree = "<group>"; };
+		767FB9051DDC5A9800DE349D /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		767FB9061DDC5A9800DE349D /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		767FB9071DDC5A9800DE349D /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		767FB9081DDC5A9800DE349D /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		767FB9091DDC5A9800DE349D /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		767FB90A1DDC5A9800DE349D /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		767FB90C1DDC5A9800DE349D /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
+		767FB90D1DDC5A9800DE349D /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
+		767FB90E1DDC5A9800DE349D /* UICustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomButton.h; sourceTree = "<group>"; };
+		767FB90F1DDC5A9800DE349D /* UICustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomButton.m; sourceTree = "<group>"; };
+		767FB9101DDC5A9800DE349D /* UICustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomTextField.h; sourceTree = "<group>"; };
+		767FB9111DDC5A9800DE349D /* UICustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomTextField.m; sourceTree = "<group>"; };
+		767FB9121DDC5A9800DE349D /* MerchantConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantConstants.h; sourceTree = "<group>"; };
+		767FB9131DDC5A9800DE349D /* TestParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestParams.h; sourceTree = "<group>"; };
 		76B2DB111CC134CD0046B963 /* CitrusPay.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CitrusPay.podspec; path = ../../../../CitrusPay.podspec; sourceTree = "<group>"; };
 		76B2DB121CC134CD0046B963 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../../../LICENSE; sourceTree = "<group>"; };
-		76E38CF01D213A7000B05179 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		76E38CF21D213A7000B05179 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		76E38CF41D213A7000B05179 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		76E38CF61D213A7000B05179 /* AutoloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoloadViewController.h; sourceTree = "<group>"; };
-		76E38CF71D213A7000B05179 /* AutoloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoloadViewController.m; sourceTree = "<group>"; };
-		76E38CF81D213A7000B05179 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		76E38CF91D213A7000B05179 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		76E38CFA1D213A7000B05179 /* CardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsViewController.h; sourceTree = "<group>"; };
-		76E38CFB1D213A7000B05179 /* CardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsViewController.m; sourceTree = "<group>"; };
-		76E38CFC1D213A7000B05179 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		76E38CFD1D213A7000B05179 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		76E38CFE1D213A7000B05179 /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
-		76E38CFF1D213A7000B05179 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
-		76E38D001D213A7000B05179 /* ManageAutoLoadSubcriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageAutoLoadSubcriptionViewController.h; sourceTree = "<group>"; };
-		76E38D011D213A7000B05179 /* ManageAutoLoadSubcriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageAutoLoadSubcriptionViewController.m; sourceTree = "<group>"; };
-		76E38D021D213A7000B05179 /* ManageCradViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageCradViewController.h; sourceTree = "<group>"; };
-		76E38D031D213A7000B05179 /* ManageCradViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageCradViewController.m; sourceTree = "<group>"; };
-		76E38D041D213A7000B05179 /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
-		76E38D051D213A7000B05179 /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
-		76E38D061D213A7000B05179 /* SavedCCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedCCViewController.h; sourceTree = "<group>"; };
-		76E38D071D213A7000B05179 /* SavedCCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedCCViewController.m; sourceTree = "<group>"; };
-		76E38D081D213A7000B05179 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
-		76E38D091D213A7000B05179 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
-		76E38D0A1D213A7000B05179 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
-		76E38D0B1D213A7000B05179 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
-		76E38D0C1D213A7000B05179 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
-		76E38D0D1D213A7000B05179 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
-		76E38D0F1D213A7000B05179 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
-		76E38D101D213A7000B05179 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
-		76E38D111D213A7000B05179 /* UICustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomButton.h; sourceTree = "<group>"; };
-		76E38D121D213A7000B05179 /* UICustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomButton.m; sourceTree = "<group>"; };
-		76E38D131D213A7000B05179 /* UICustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomTextField.h; sourceTree = "<group>"; };
-		76E38D141D213A7000B05179 /* UICustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomTextField.m; sourceTree = "<group>"; };
-		76E38D151D213A7000B05179 /* MerchantConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantConstants.h; sourceTree = "<group>"; };
-		76E38D161D213A7000B05179 /* TestParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestParams.h; sourceTree = "<group>"; };
 		80EE5EF7ADC4A792B559F298 /* Pods_CitrusPay_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CitrusPay_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1AB5F5753A81B0A2295790 /* Pods-CitrusPay_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitrusPay_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CitrusPay_Tests/Pods-CitrusPay_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,7 +177,7 @@
 		6003F593195388D20070C39A /* Example for CitrusPay */ = {
 			isa = PBXGroup;
 			children = (
-				76E38CEF1D213A7000B05179 /* test-ui */,
+				767FB8EC1DDC5A9800DE349D /* test-ui-example */,
 				6003F59C195388D20070C39A /* CTSAppDelegate.h */,
 				6003F59D195388D20070C39A /* CTSAppDelegate.m */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -225,61 +225,61 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		76E38CEF1D213A7000B05179 /* test-ui */ = {
+		767FB8EC1DDC5A9800DE349D /* test-ui-example */ = {
 			isa = PBXGroup;
 			children = (
-				76E38D151D213A7000B05179 /* MerchantConstants.h */,
-				76E38D161D213A7000B05179 /* TestParams.h */,
-				76E38CF51D213A7000B05179 /* Controllers */,
-				76E38D0E1D213A7000B05179 /* CustomComponents */,
-				76E38CF01D213A7000B05179 /* Assets.xcassets */,
-				76E38CF11D213A7000B05179 /* LaunchScreen.storyboard */,
-				76E38CF31D213A7000B05179 /* Main.storyboard */,
+				767FB8ED1DDC5A9800DE349D /* Assets.xcassets */,
+				767FB8EE1DDC5A9800DE349D /* LaunchScreen.storyboard */,
+				767FB8F01DDC5A9800DE349D /* Main.storyboard */,
+				767FB8F21DDC5A9800DE349D /* Controllers */,
+				767FB90B1DDC5A9800DE349D /* CustomComponents */,
+				767FB9121DDC5A9800DE349D /* MerchantConstants.h */,
+				767FB9131DDC5A9800DE349D /* TestParams.h */,
 			);
-			name = "test-ui";
-			path = "../../../../test-ui";
+			name = "test-ui-example";
+			path = "../../../test-ui-example";
 			sourceTree = "<group>";
 		};
-		76E38CF51D213A7000B05179 /* Controllers */ = {
+		767FB8F21DDC5A9800DE349D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				76E38CF61D213A7000B05179 /* AutoloadViewController.h */,
-				76E38CF71D213A7000B05179 /* AutoloadViewController.m */,
-				76E38CF81D213A7000B05179 /* BaseViewController.h */,
-				76E38CF91D213A7000B05179 /* BaseViewController.m */,
-				76E38CFA1D213A7000B05179 /* CardsViewController.h */,
-				76E38CFB1D213A7000B05179 /* CardsViewController.m */,
-				76E38CFC1D213A7000B05179 /* HomeViewController.h */,
-				76E38CFD1D213A7000B05179 /* HomeViewController.m */,
-				76E38CFE1D213A7000B05179 /* InitialViewController.h */,
-				76E38CFF1D213A7000B05179 /* InitialViewController.m */,
-				76E38D001D213A7000B05179 /* ManageAutoLoadSubcriptionViewController.h */,
-				76E38D011D213A7000B05179 /* ManageAutoLoadSubcriptionViewController.m */,
-				76E38D021D213A7000B05179 /* ManageCradViewController.h */,
-				76E38D031D213A7000B05179 /* ManageCradViewController.m */,
-				76E38D041D213A7000B05179 /* ResetPasswordViewController.h */,
-				76E38D051D213A7000B05179 /* ResetPasswordViewController.m */,
-				76E38D061D213A7000B05179 /* SavedCCViewController.h */,
-				76E38D071D213A7000B05179 /* SavedCCViewController.m */,
-				76E38D081D213A7000B05179 /* SettingViewController.h */,
-				76E38D091D213A7000B05179 /* SettingViewController.m */,
-				76E38D0A1D213A7000B05179 /* SignInViewController.h */,
-				76E38D0B1D213A7000B05179 /* SignInViewController.m */,
-				76E38D0C1D213A7000B05179 /* SignUpViewController.h */,
-				76E38D0D1D213A7000B05179 /* SignUpViewController.m */,
+				767FB8F31DDC5A9800DE349D /* AutoloadViewController.h */,
+				767FB8F41DDC5A9800DE349D /* AutoloadViewController.m */,
+				767FB8F51DDC5A9800DE349D /* BaseViewController.h */,
+				767FB8F61DDC5A9800DE349D /* BaseViewController.m */,
+				767FB8F71DDC5A9800DE349D /* CardsViewController.h */,
+				767FB8F81DDC5A9800DE349D /* CardsViewController.m */,
+				767FB8F91DDC5A9800DE349D /* HomeViewController.h */,
+				767FB8FA1DDC5A9800DE349D /* HomeViewController.m */,
+				767FB8FB1DDC5A9800DE349D /* InitialViewController.h */,
+				767FB8FC1DDC5A9800DE349D /* InitialViewController.m */,
+				767FB8FD1DDC5A9800DE349D /* ManageAutoLoadSubcriptionViewController.h */,
+				767FB8FE1DDC5A9800DE349D /* ManageAutoLoadSubcriptionViewController.m */,
+				767FB8FF1DDC5A9800DE349D /* ManageCradViewController.h */,
+				767FB9001DDC5A9800DE349D /* ManageCradViewController.m */,
+				767FB9011DDC5A9800DE349D /* ResetPasswordViewController.h */,
+				767FB9021DDC5A9800DE349D /* ResetPasswordViewController.m */,
+				767FB9031DDC5A9800DE349D /* SavedCCViewController.h */,
+				767FB9041DDC5A9800DE349D /* SavedCCViewController.m */,
+				767FB9051DDC5A9800DE349D /* SettingViewController.h */,
+				767FB9061DDC5A9800DE349D /* SettingViewController.m */,
+				767FB9071DDC5A9800DE349D /* SignInViewController.h */,
+				767FB9081DDC5A9800DE349D /* SignInViewController.m */,
+				767FB9091DDC5A9800DE349D /* SignUpViewController.h */,
+				767FB90A1DDC5A9800DE349D /* SignUpViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		76E38D0E1D213A7000B05179 /* CustomComponents */ = {
+		767FB90B1DDC5A9800DE349D /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
-				76E38D0F1D213A7000B05179 /* HMSegmentedControl.h */,
-				76E38D101D213A7000B05179 /* HMSegmentedControl.m */,
-				76E38D111D213A7000B05179 /* UICustomButton.h */,
-				76E38D121D213A7000B05179 /* UICustomButton.m */,
-				76E38D131D213A7000B05179 /* UICustomTextField.h */,
-				76E38D141D213A7000B05179 /* UICustomTextField.m */,
+				767FB90C1DDC5A9800DE349D /* HMSegmentedControl.h */,
+				767FB90D1DDC5A9800DE349D /* HMSegmentedControl.m */,
+				767FB90E1DDC5A9800DE349D /* UICustomButton.h */,
+				767FB90F1DDC5A9800DE349D /* UICustomButton.m */,
+				767FB9101DDC5A9800DE349D /* UICustomTextField.h */,
+				767FB9111DDC5A9800DE349D /* UICustomTextField.m */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -347,9 +347,12 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CTS;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Mukesh Patil";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						ProvisioningStyle = Manual;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -381,9 +384,9 @@
 			files = (
 				76B2DB131CC134CD0046B963 /* CitrusPay.podspec in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
-				76E38D171D213A7000B05179 /* Assets.xcassets in Resources */,
-				76E38D191D213A7000B05179 /* Main.storyboard in Resources */,
-				76E38D181D213A7000B05179 /* LaunchScreen.storyboard in Resources */,
+				767FB9141DDC5A9800DE349D /* Assets.xcassets in Resources */,
+				767FB9161DDC5A9800DE349D /* Main.storyboard in Resources */,
+				767FB9151DDC5A9800DE349D /* LaunchScreen.storyboard in Resources */,
 				76B2DB141CC134CD0046B963 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,23 +512,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76E38D271D213A7000B05179 /* UICustomButton.m in Sources */,
+				767FB9241DDC5A9800DE349D /* UICustomButton.m in Sources */,
 				6003F59E195388D20070C39A /* CTSAppDelegate.m in Sources */,
-				76E38D211D213A7000B05179 /* ResetPasswordViewController.m in Sources */,
-				76E38D1B1D213A7000B05179 /* BaseViewController.m in Sources */,
-				76E38D1A1D213A7000B05179 /* AutoloadViewController.m in Sources */,
-				76E38D241D213A7000B05179 /* SignInViewController.m in Sources */,
+				767FB91E1DDC5A9800DE349D /* ResetPasswordViewController.m in Sources */,
+				767FB9181DDC5A9800DE349D /* BaseViewController.m in Sources */,
+				767FB9171DDC5A9800DE349D /* AutoloadViewController.m in Sources */,
+				767FB9211DDC5A9800DE349D /* SignInViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				76E38D221D213A7000B05179 /* SavedCCViewController.m in Sources */,
-				76E38D1C1D213A7000B05179 /* CardsViewController.m in Sources */,
-				76E38D1E1D213A7000B05179 /* InitialViewController.m in Sources */,
-				76E38D281D213A7000B05179 /* UICustomTextField.m in Sources */,
-				76E38D261D213A7000B05179 /* HMSegmentedControl.m in Sources */,
-				76E38D1D1D213A7000B05179 /* HomeViewController.m in Sources */,
-				76E38D1F1D213A7000B05179 /* ManageAutoLoadSubcriptionViewController.m in Sources */,
-				76E38D201D213A7000B05179 /* ManageCradViewController.m in Sources */,
-				76E38D251D213A7000B05179 /* SignUpViewController.m in Sources */,
-				76E38D231D213A7000B05179 /* SettingViewController.m in Sources */,
+				767FB91F1DDC5A9800DE349D /* SavedCCViewController.m in Sources */,
+				767FB9191DDC5A9800DE349D /* CardsViewController.m in Sources */,
+				767FB91B1DDC5A9800DE349D /* InitialViewController.m in Sources */,
+				767FB9251DDC5A9800DE349D /* UICustomTextField.m in Sources */,
+				767FB9231DDC5A9800DE349D /* HMSegmentedControl.m in Sources */,
+				767FB91A1DDC5A9800DE349D /* HomeViewController.m in Sources */,
+				767FB91C1DDC5A9800DE349D /* ManageAutoLoadSubcriptionViewController.m in Sources */,
+				767FB91D1DDC5A9800DE349D /* ManageCradViewController.m in Sources */,
+				767FB9221DDC5A9800DE349D /* SignUpViewController.m in Sources */,
+				767FB9201DDC5A9800DE349D /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,18 +567,18 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		76E38CF11D213A7000B05179 /* LaunchScreen.storyboard */ = {
+		767FB8EE1DDC5A9800DE349D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				76E38CF21D213A7000B05179 /* Base */,
+				767FB8EF1DDC5A9800DE349D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		76E38CF31D213A7000B05179 /* Main.storyboard */ = {
+		767FB8F01DDC5A9800DE349D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				76E38CF41D213A7000B05179 /* Base */,
+				767FB8F11DDC5A9800DE349D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -596,14 +599,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -616,7 +624,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -636,20 +644,25 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -663,6 +676,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CitrusPay/CitrusPay-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -687,6 +701,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CitrusPay/CitrusPay-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (

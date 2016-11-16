@@ -11,8 +11,8 @@
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "368193EB-505C-47FA-8C37-992AA827186D",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "69477F3283BCA765B2921E78BA499AB7EB018F60" : "..",
-    "2454A7C0A4BC2A09472718EB55354F320600B245" : "publicrepo19\/Dependency\/JSONModel\/",
-    "82A97729EC55B5EC9951B8B1634CBA9A8575F264" : "publicrepo19\/"
+    "2454A7C0A4BC2A09472718EB55354F320600B245" : "graphics-release09\/Dependency\/JSONModel\/",
+    "82A97729EC55B5EC9951B8B1634CBA9A8575F264" : "graphics-release09\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "CitrusPayExample",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
