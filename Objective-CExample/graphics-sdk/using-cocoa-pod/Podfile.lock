@@ -1,19 +1,15 @@
 PODS:
   - CitrusGraphics (0.0.1):
     - Kingfisher
-  - Kingfisher (3.2.1)
+  - Kingfisher (3.2.2)
 
 DEPENDENCIES:
-  - CitrusGraphics (from `../../../`)
-
-EXTERNAL SOURCES:
-  CitrusGraphics:
-    :path: ../../../
+  - CitrusGraphics (~> 0.0.1)
 
 SPEC CHECKSUMS:
   CitrusGraphics: 1cf542a2a31422d451fb1e6431ca7c68c6d8a70a
-  Kingfisher: 64ef28c6d3d6f344e3ae2d7f5c9da80439505d99
+  Kingfisher: 821466474ad7ffc375a4aecadfa05068cfed67b3
 
-PODFILE CHECKSUM: 21069ab106654152560980c3be487017aa8f1c47
+PODFILE CHECKSUM: 0b4726f239be109c977a9be5f21b8cabb2af8030
 
 COCOAPODS: 1.0.1

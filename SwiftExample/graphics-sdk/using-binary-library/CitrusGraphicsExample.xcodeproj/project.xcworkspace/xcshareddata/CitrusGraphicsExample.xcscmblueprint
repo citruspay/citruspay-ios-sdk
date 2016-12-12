@@ -10,9 +10,9 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E43D5E72-FC9B-4C3A-8C2F-AF9C3613AE38",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "17FB51EC7B87DC25DD21E28FDFD877B479CFFAC1" : "graphics-release09\/Dependency\/Kingfisher\/",
-    "2454A7C0A4BC2A09472718EB55354F320600B245" : "graphics-release09\/Dependency\/JSONModel\/",
-    "82A97729EC55B5EC9951B8B1634CBA9A8575F264" : "graphics-release09\/"
+    "17FB51EC7B87DC25DD21E28FDFD877B479CFFAC1" : "public.4.1.0.release.12\/Dependency\/Kingfisher\/",
+    "2454A7C0A4BC2A09472718EB55354F320600B245" : "public.4.1.0.release.12\/Dependency\/JSONModel\/",
+    "82A97729EC55B5EC9951B8B1634CBA9A8575F264" : "public.4.1.0.release.12\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "CitrusGraphicsExample",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,

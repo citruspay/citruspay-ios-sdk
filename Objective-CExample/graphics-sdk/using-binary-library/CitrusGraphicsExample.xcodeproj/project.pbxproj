@@ -318,8 +318,7 @@
 				TargetAttributes = {
 					766EF6951DD1C1E400F99409 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = BF75J23QJ2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					766EF6AE1DD1C1E400F99409 = {
 						CreatedOnToolsVersion = 8.0;
@@ -610,7 +609,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = BF75J23QJ2;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../../**";
 				INFOPLIST_FILE = CitrusGraphicsExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -626,7 +625,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = BF75J23QJ2;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../../**";
 				INFOPLIST_FILE = CitrusGraphicsExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
