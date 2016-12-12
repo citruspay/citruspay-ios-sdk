@@ -1,15 +1,15 @@
 PODS:
-  - CitrusGraphics (0.0.1):
+  - CitrusGraphics (1.0):
     - Kingfisher
   - Kingfisher (3.2.2)
 
 DEPENDENCIES:
-  - CitrusGraphics (~> 0.0.1)
+  - CitrusGraphics (~> 1.0)
 
 SPEC CHECKSUMS:
-  CitrusGraphics: 1cf542a2a31422d451fb1e6431ca7c68c6d8a70a
+  CitrusGraphics: 0606343206099a4f4e892fa189884d4b4d49ffe0
   Kingfisher: 821466474ad7ffc375a4aecadfa05068cfed67b3
 
-PODFILE CHECKSUM: 0b4726f239be109c977a9be5f21b8cabb2af8030
+PODFILE CHECKSUM: e94777397f0c8fd97e77003a0e3e69a744447040
 
 COCOAPODS: 1.0.1

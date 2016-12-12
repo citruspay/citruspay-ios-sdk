@@ -140,7 +140,7 @@
     else{
         
         
-        [authLayer requestMasterLinkSignInWithPassword:passwordString passwordType:passwordType completionHandler:^(NSError *error) {
+        [[CTSAuthLayer fetchSharedAuthLayer] requestMasterLinkSignInWithPassword:passwordString passwordType:passwordType completionHandler:^(NSError *error) {
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.indicatorView stopAnimating];
@@ -161,8 +161,8 @@
                 
             }
         }];
-    }
 
+}
 }
 
 
@@ -175,7 +175,7 @@
     
     sender.userInteractionEnabled = FALSE;
     
-    [authLayer requestResendOtp:^(NSError *error) {
+    [[CTSAuthLayer fetchSharedAuthLayer] requestResendOtp:^(NSError *error) {
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.indicatorView stopAnimating];
@@ -239,15 +239,47 @@
         [self.view endEditing:YES];
         });
     if (buttonIndex==1 && alertView.tag==1001) {
-        
- //       UITextField * alertTextField = [alertView textFieldAtIndex:0];
-    
+        self.indicatorView.hidden = FALSE;
+        [self.indicatorView startAnimating];
+
+        UITextField * alertTextField = [alertView textFieldAtIndex:0];
+
+        [[CTSAuthLayer fetchSharedAuthLayer] requestResetPassword:alertTextField.text completionHandler:^(NSError *error) {
+            LogTrace(@"error %d",error);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.indicatorView stopAnimating];
+                self.indicatorView.hidden = TRUE;
+            });
+
+            NSString *message;
+            if(error){
+                message = [error localizedDescription];
+            }
+            else {
+                message = @"Password Reset Link Sent to Your Email Id";
+            }
+            UIAlertController *alertController = [UIAlertController
+                                                  alertControllerWithTitle:nil
+                                                  message:message
+                                                  preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *okAction = [UIAlertAction
+                                       actionWithTitle:NSLocalizedString(@"Ok", @"Ok action")
+                                       style:UIAlertActionStyleCancel
+                                       handler:^(UIAlertAction *action)
+                                       {
+                                       }];
+            [alertController addAction:okAction];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self presentViewController:alertController animated:YES completion:nil];
+            });
+        }];
+
     }
     else if (buttonIndex==1 && alertView.tag==1002) {
         
         UITextField * alertTextField = [alertView textFieldAtIndex:0];
         
-        [authLayer requestSetPassowordMobileAccount:alertTextField.text completionHandler:^(NSError *error){
+        [[CTSAuthLayer fetchSharedAuthLayer] requestSetPassowordMobileAccount:alertTextField.text completionHandler:^(NSError *error){
             
             [self.view endEditing:YES];
             if (error) {

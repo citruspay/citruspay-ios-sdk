@@ -116,7 +116,7 @@
     self.indicatorView.hidden = FALSE;
     [self.indicatorView startAnimating];
     
-    [proifleLayer requestGetBalance:^(CTSAmount *amount, NSError *error) {
+    [[CTSProfileLayer fetchSharedProfileLayer] requestGetBalance:^(CTSAmount *amount, NSError *error) {
         LogTrace(@" value %@ ",amount.value);
         LogTrace(@" currency %@ ",amount.currency);
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -249,8 +249,9 @@
     
 }
 
+/*
 #pragma mark - Class Level Methods
-+ (CTSBill*)getBillFromServer:(NSString *)amount{
++ (CTSBill*)getBillFromServer:(NSString *)amount {
     // Configure your request here.
 
      NSString *billURL = [NSString stringWithFormat:@"%@?amount=%@",BillUrl,amount];
@@ -274,6 +275,7 @@
     LogTrace(@"signature %@ ", sampleBill);
     return sampleBill;
 }
+*/
 
 #pragma mark - AlertView Delegate Methods
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
@@ -282,7 +284,7 @@
     
     if (alertView.tag ==1005){
         if (buttonIndex==0) {
-            if ([authLayer signOut]) {
+            if ([[CTSAuthLayer fetchSharedAuthLayer] signOut]) {
                 [self.navigationController popToRootViewControllerAnimated:YES];
             }
         }
@@ -313,7 +315,7 @@
             [self.indicatorView startAnimating];
             self.indicatorView.hidden = FALSE;
             
-            [paymentLayer requestTransferMoneyTo:[alertView textFieldAtIndex:0].text amount:[alertView textFieldAtIndex:1].text message:@"Here is Some Money for you" completionHandler:^(CTSTransferMoneyResponse*transferMoneyRes,  NSError *error) {
+            [[CTSPaymentLayer fetchSharedPaymentLayer] requestTransferMoneyTo:[alertView textFieldAtIndex:0].text amount:[alertView textFieldAtIndex:1].text message:@"Here is Some Money for you" completionHandler:^(CTSTransferMoneyResponse*transferMoneyRes,  NSError *error) {
                 LogTrace(@" transferMoneyRes %@ ",transferMoneyRes);
                 
                 LogTrace(@" error %@ ",[error localizedDescription]);
@@ -468,7 +470,7 @@
         self.indicatorView.hidden = FALSE;
         [self.indicatorView startAnimating];
         
-        [proifleLayer requestGetBalance:^(CTSAmount *amount, NSError *error) {
+        [[CTSProfileLayer fetchSharedProfileLayer] requestGetBalance:^(CTSAmount *amount, NSError *error) {
             LogTrace(@" value %@ ",amount.value);
             LogTrace(@" currency %@ ",amount.currency);
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -512,7 +514,7 @@
         self.indicatorView.hidden = FALSE;
         [self.indicatorView startAnimating];
         
-        [proifleLayer requestProfileInformationWithCompletionHandler:^(CTSUserProfile *userProfile, NSError* error) {
+        [[CTSProfileLayer fetchSharedProfileLayer] requestProfileInformationWithCompletionHandler:^(CTSUserProfile *userProfile, NSError* error) {
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.indicatorView stopAnimating];

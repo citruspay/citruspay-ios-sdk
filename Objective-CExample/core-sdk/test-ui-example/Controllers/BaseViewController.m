@@ -1,3 +1,4 @@
+
 //
 //  BaseViewController.m
 //  CubeDemo
@@ -10,78 +11,99 @@
 #import "TestParams.h"
 #import "MerchantConstants.h"
 
-
-@interface BaseViewController ()
-
+@interface BaseViewController () {
+    NSString *billingUrl;
+}
 @end
 
 @implementation BaseViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
-    [self initializeLayers];
-    // Do any additional setup after loading the view.
+    
+    [self setTestData];
+    _billUrl = [[NSString alloc] init];
+    _returnUrl = [[NSString alloc] init];
+    
+    NSUserDefaults *defautls = [NSUserDefaults standardUserDefaults];
+    NSString *server = [defautls valueForKey:@"EnvironmentTo"];
+    if (server == nil) {
+        [defautls setValue:@"0" forKey:@"EnvironmentTo"];
+    }
+    
+    if ([server integerValue] == 0) {
+        self.billUrl = BillUrl_Sandbox;
+        self.returnUrl = ReturnUrl_Sandbox;
+    }
+    else if ([server integerValue] == 1){
+        self.billUrl = BillUrl_Production;
+        self.returnUrl = ReturnUrl_Production;
+    }
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - initializers
 
 // Initialize the SDK layer viz CTSAuthLayer/CTSProfileLayer/CTSPaymentLayer
--(void)initializeLayers{
-    
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    
-    
-    CTSKeyStore *keyStore = [[CTSKeyStore alloc] init];
-    keyStore.signinId = SignInId;
-    keyStore.signinSecret = SignInSecretKey;
-    keyStore.signUpId = SubscriptionId;
-    keyStore.signUpSecret = SubscriptionSecretKey;
-    keyStore.vanity = VanityUrl;
-    
+- (void)changeEnvironment:(NSUInteger)newIndex {
+        NSUserDefaults *defautls = [NSUserDefaults standardUserDefaults];
+
 #warning "set your required environment to see testing results"
-#ifdef PRODUCTION_MODE
-    [CitrusPaymentSDK initializeWithKeyStore:keyStore environment:CTSEnvProduction];
-#else
-    [CitrusPaymentSDK initializeWithKeyStore:keyStore environment:CTSEnvSandbox];
-#endif
+        NSLog(@"segmentedControl did select index %lu (via block handler)", (unsigned long)newIndex);
+        if (newIndex == 0) {
+            NSLog(@"setupWorkingEnvironmentTo CTSEnvSandbox");
+            // initialize the SDK by setting it up with ClientIds
+            [CitrusPaymentSDK initWithSignInID:SignInId_Sandbox
+                                  signInSecret:SignInSecretKey_Sandbox
+                                      signUpID:SubscriptionId_Sandbox
+                                  signUpSecret:SubscriptionSecretKey_Sandbox
+                                     vanityUrl:VanityUrl_Sandbox
+                                   environment:CTSEnvSandbox];
+            self.billUrl = BillUrl_Sandbox;
+            self.returnUrl = ReturnUrl_Sandbox;
+            
+            [CitrusPaymentSDK setLogLevel:CTSLogLevelVerbose];
+            [defautls setValue:@"0" forKey:@"EnvironmentTo"];
+        }
+        else {
+            NSLog(@"setupWorkingEnvironmentTo CTSEnvProduction");
+            // initialize the SDK by setting it up with ClientIds
+            [CitrusPaymentSDK initWithSignInID:SignInId_Production
+                                  signInSecret:SignInSecretKey_Production
+                                      signUpID:SubscriptionId_Production
+                                  signUpSecret:SubscriptionSecretKey_Production
+                                     vanityUrl:VanityUrl_Production
+                                   environment:CTSEnvProduction];
+            self.billUrl = BillUrl_Production;
+            self.returnUrl = ReturnUrl_Production;
+            
+            [CitrusPaymentSDK setLogLevel:CTSLogLevelNone];
 
-    [CitrusPaymentSDK enableDEBUGLogs];
-    
-    [CitrusPaymentSDK enableLoader];
+            [defautls setValue:@"1" forKey:@"EnvironmentTo"];
+        }
+        [CitrusPaymentSDK enableLoader];
+        [CitrusPaymentSDK setLoaderColor:[UIColor orangeColor]];
+}
 
-    [CitrusPaymentSDK setLoaderColor:[UIColor orangeColor]];
 
+- (void)setTestData {
+    _contactInfo = [[CTSContactUpdate alloc] init];
+    _contactInfo.firstName = TEST_FIRST_NAME;
+    _contactInfo.lastName = TEST_LAST_NAME;
+    _contactInfo.email = TEST_EMAIL;
+    _contactInfo.mobile = TEST_MOBILE;
     
-    authLayer = [CTSAuthLayer fetchSharedAuthLayer];
-    proifleLayer = [CTSProfileLayer fetchSharedProfileLayer];
-    paymentLayer = [CTSPaymentLayer fetchSharedPaymentLayer];
-
-    contactInfo = [[CTSContactUpdate alloc] init];
-    contactInfo.firstName = TEST_FIRST_NAME;
-    contactInfo.lastName = TEST_LAST_NAME;
-    contactInfo.email = TEST_EMAIL;
-    contactInfo.mobile = TEST_MOBILE;
+    _addressInfo = [[CTSUserAddress alloc] init];
+    _addressInfo.city = TEST_CITY;
+    _addressInfo.country = TEST_COUNTRY;
+    _addressInfo.state = TEST_STATE;
+    _addressInfo.street1 = TEST_STREET1;
+    _addressInfo.street2 = TEST_STREET2;
+    _addressInfo.zip = TEST_ZIP;
     
-    addressInfo = [[CTSUserAddress alloc] init];
-    addressInfo.city = TEST_CITY;
-    addressInfo.country = TEST_COUNTRY;
-    addressInfo.state = TEST_STATE;
-    addressInfo.street1 = TEST_STREET1;
-    addressInfo.street2 = TEST_STREET2;
-    addressInfo.zip = TEST_ZIP;
-    
-    customParams = @{
-                     @"USERDATA2":@"MOB_RC|9988776655",
-                     @"USERDATA10":@"test",
-                     @"USERDATA4":@"MOB_RC|test@gmail.com",
-                     @"USERDATA3":@"MOB_RC|4111XXXXXXXX1111",
-                     };
+    _customParams = @{
+                      @"USERDATA2":@"MOB_RC|9988776655",
+                      @"USERDATA10":@"test",
+                      @"USERDATA4":@"MOB_RC|test@gmail.com",
+                      @"USERDATA3":@"MOB_RC|4111XXXXXXXX1111",
+                      };
 }
 
 @end

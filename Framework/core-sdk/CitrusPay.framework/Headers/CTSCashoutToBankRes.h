@@ -9,6 +9,10 @@
 #import <JSONModel/JSONModel.h>
 #import "CTSAmount.h"
 
+
+/**
+ Cashout bank informations
+ */
 @interface CTSCashoutToBankRes : JSONModel
 @property(strong) NSString<Optional>* id;
 @property(strong) NSString<Optional>* cutsomer;

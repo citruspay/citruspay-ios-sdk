@@ -18,7 +18,7 @@
     UITextField *textField2;
     UITextField *textField3;
     UITextField *textField4;
-    
+    BOOL isDeactivateSub;
 }
 
 @end
@@ -31,6 +31,8 @@
     autoSubArrayArray = [[NSMutableArray alloc]init];
     [self getSubs];
     // Do any additional setup after loading the view.
+    
+    isDeactivateSub = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,14 +55,18 @@
             
         });
         if (error) {
-            [UIUtility toastMessageOnScreen:[error localizedDescription]];
+            if (isDeactivateSub == NO) {
+                [UIUtility toastMessageOnScreen:[error localizedDescription]];
+            }
         }
         else{
             autoSubArrayArray = [NSMutableArray arrayWithObject:autoloadResponse];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.autoLoadSubcriptionTableView reloadData];
                 if (autoSubArrayArray.count==0) {
-                    [UIUtility toastMessageOnScreen:@"No card is subscribed"];
+                    if (isDeactivateSub == NO) {
+                        [UIUtility toastMessageOnScreen:@"No card is subscribed"];
+                    }
                 }
                 
             });
@@ -235,12 +241,13 @@
 -(void)markSubscriptionInactive:(NSString *)subscriptionId{
     self.indicatorView.hidden = FALSE;
     [self.indicatorView startAnimating];
-    [paymentLayer requestDeactivateAutoLoadSubId:subscriptionId completion:^(CTSAutoLoadSubResp *autoloadResponse, NSError *error) {
+    [[CTSPaymentLayer fetchSharedPaymentLayer] requestDeactivateAutoLoadSubId:subscriptionId completion:^(CTSAutoLoadSubResp *autoloadResponse, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.indicatorView stopAnimating];
             self.indicatorView.hidden = TRUE;
             
         });
+        isDeactivateSub = YES;
         if(error == nil){
             [self getSubs];
             [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"subscription %@\n updated to : %@",autoloadResponse.subscriptionId,autoloadResponse.status]];
@@ -266,7 +273,7 @@
         self.indicatorView.hidden = FALSE;
         [self.indicatorView startAnimating];
         
-        [paymentLayer requestUpdateAutoLoadSubId:[tempDict valueForKey:@"subscriptionId"] autoLoadAmount:amount thresholdAmount:thresholdAmount completion:^(CTSAutoLoadSubResp *autoloadResponse, NSError *error) {
+        [[CTSPaymentLayer fetchSharedPaymentLayer] requestUpdateAutoLoadSubId:[tempDict valueForKey:@"subscriptionId"] autoLoadAmount:amount thresholdAmount:thresholdAmount completion:^(CTSAutoLoadSubResp *autoloadResponse, NSError *error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.indicatorView stopAnimating];
                 self.indicatorView.hidden = TRUE;
@@ -324,7 +331,7 @@
         loadMoney.contactInfo = nil;
         loadMoney.userAddress = nil;
         loadMoney.amount = @"1";
-        loadMoney.returnUrl = LoadWalletReturnUrl;
+        loadMoney.returnUrl = self.returnUrl;
         loadMoney.custParams = nil;
         loadMoney.controller = self;
         
@@ -332,7 +339,7 @@
         autoload.autoLoadAmt = amount;
         autoload.thresholdAmount = thresholdAmount;
         
-        [paymentLayer requestLoadAndIncrementAutoloadSubId:[tempDict valueForKey:@"subscriptionId"] loadMoney:loadMoney autoLoad:autoload withCompletionHandler:^(CTSLoadAndPayRes *loadAndSubscribe, NSError *error) {
+        [[CTSPaymentLayer fetchSharedPaymentLayer] requestLoadAndIncrementAutoloadSubId:[tempDict valueForKey:@"subscriptionId"] loadMoney:loadMoney autoLoad:autoload withCompletionHandler:^(CTSLoadAndPayRes *loadAndSubscribe, NSError *error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.indicatorView stopAnimating];
                 self.indicatorView.hidden = TRUE;

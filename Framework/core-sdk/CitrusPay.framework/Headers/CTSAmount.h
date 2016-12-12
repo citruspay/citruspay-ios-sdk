@@ -8,6 +8,10 @@
 
 #import <JSONModel/JSONModel.h>
 
+
+/**
+ Amount Data class to pass the payment amount
+ */
 @interface CTSAmount : JSONModel
 @property(strong) NSString* currency, *value;
 - (instancetype)initWithValue:(NSString *)valueArg;

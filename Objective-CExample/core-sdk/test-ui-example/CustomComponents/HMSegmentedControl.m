@@ -288,7 +288,7 @@
             CGSize size = [self measureTitleAtIndex:idx];
             stringWidth = size.width;
             stringHeight = size.height;
-            CGRect rectDiv, fullRect;
+            CGRect rectDiv = CGRectZero, fullRect;
             
             // Text inside the CATextLayer will appear blurry unless the rect values are rounded
             BOOL locationUp = (self.selectionIndicatorLocation == HMSegmentedControlSelectionIndicatorLocationUp);

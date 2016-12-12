@@ -47,7 +47,7 @@
     loadMoney.contactInfo = nil;
     loadMoney.userAddress = nil;
     loadMoney.amount = @"1";
-    loadMoney.returnUrl = LoadWalletReturnUrl;
+    loadMoney.returnUrl = self.returnUrl;
     loadMoney.custParams = nil;
     loadMoney.controller = self;
     
@@ -55,7 +55,7 @@
     autoload.autoLoadAmt = self.topupTextField.text;
     autoload.thresholdAmount = self.thresholTextField.text;
     
-    [paymentLayer requestLoadAndSubscribe:loadMoney autoLoad:autoload withCompletionHandler:^(CTSLoadAndPayRes *loadAndSubscribe, NSError *error) {
+    [[CTSPaymentLayer fetchSharedPaymentLayer] requestLoadAndSubscribe:loadMoney autoLoad:autoload withCompletionHandler:^(CTSLoadAndPayRes *loadAndSubscribe, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.indicatorView stopAnimating];
             self.indicatorView.hidden = TRUE;
@@ -84,7 +84,6 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     [self.view endEditing:YES];
     if (alertView.tag ==10001){
-        NSLog(@"Array -> %@",self.navigationController.viewControllers );
         HomeViewController *controller = (HomeViewController *)[self.navigationController.viewControllers objectAtIndex:(self.navigationController.viewControllers.count-3)];
         [self.navigationController popToViewController:controller animated:YES];
     }

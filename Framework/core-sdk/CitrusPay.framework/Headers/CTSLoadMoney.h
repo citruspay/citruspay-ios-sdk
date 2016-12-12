@@ -13,6 +13,9 @@
 #import "CTSPaymentOptions.h"
 
 
+/**
+ Load Money Data
+ */
 @interface CTSLoadMoney : NSObject
 @property(strong,atomic)CTSPaymentOptions *paymentInfo;
 @property(strong,atomic)CTSContactUpdate *contactInfo;

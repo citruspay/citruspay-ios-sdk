@@ -14,9 +14,28 @@ typedef enum{
     DPRequestTypeSearchAndApply,
 }DPRequestType;
 
+
+
+/**
+ DP Rule info
+ */
 @interface CTSRuleInfo : NSObject
 @property(strong)NSString *ruleName,*alteredAmount,*originalAmount;
 @property(assign)DPRequestType requestType;
+
+
+
+/**
+ Convinience method
+
+ */
 -(NSString *)toDpTypeString;
+
+
+
+
+/**
+ Convinience method
+ */
 -(void)amountCorrections;
 @end

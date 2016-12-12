@@ -39,7 +39,7 @@
     self.indicatorView.hidden = FALSE;
     [self.indicatorView startAnimating];
     
-    [authLayer requestSetPassword:self.resetTextField.text userName:self.userNameTextField.text completionHandler:^(NSError *error) {
+    [[CTSAuthLayer fetchSharedAuthLayer] requestSetPassword:self.resetTextField.text userName:self.userNameTextField.text completionHandler:^(NSError *error) {
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.indicatorView stopAnimating];

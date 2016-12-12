@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
+#import <CitrusPay/CitrusPay.h>
 
-
-@interface SignUpViewController : BaseViewController
+@interface SignUpViewController : BaseViewController<CitrusLoginDelegate>
 
 
 @property (nonatomic , weak) IBOutlet UITextField *userNameTextField;

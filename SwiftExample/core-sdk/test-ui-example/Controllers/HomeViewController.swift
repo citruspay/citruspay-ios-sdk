@@ -20,7 +20,7 @@ class HomeViewController: BaseClassViewController {
             scope:CTSWalletScopeFull,
             completionHandler: { (linkResponse, error) -> Void in
                 if(error != nil){
-                    UIUtility.toastMessage(onScreen: error?.localizedDescription)
+                    UIUtility.toastMessage(onScreen:error?.localizedDescription)
                     print("Response JSON: \(error?.localizedDescription)")
                 }else{
                     UIUtility.toastMessage(onScreen: linkResponse?.userMessage)
@@ -81,14 +81,15 @@ class HomeViewController: BaseClassViewController {
     
     
     // this is just sample code 
-    class  func requestBillAmount (_ amount :NSString, customParams :NSArray, billURL :NSString, completion : @escaping (_ bill :CTSBill? ,_ error :NSError?)->Void){
+    class  func requestBillAmount (amount :NSString, customParams :NSArray, billURL :NSString, completion : @escaping (_ bill :CTSBill? ,_ error :NSError?)->Void){
         let session = URLSession.shared;
         
-        let url = URL(string: "\(billURL)?amount\(amount)&\(customParams)")
+        let url = NSURL(string: "\(billURL)?amount\(amount)&\(customParams)")
         
-        let loadTask = session.dataTask(with: url!, completionHandler: { (data :Data?, response :URLResponse?, error :NSError?) -> Void in
+        let loadTask = session.dataTask(with: url as! URL) { data, response, error in
+       // let loadTask = session.dataTaskWithURL(url! as URL) { (data :NSData?, response :URLResponse?, error :NSError?) -> Void in
             if let errorResponse = error {
-                completion(nil, errorResponse)
+                completion(nil, errorResponse as NSError?)
             }else if let httpResponse = response as? HTTPURLResponse{
                 if httpResponse.statusCode != 200 {
                     let errorResponse = NSError(domain: "Domain", code: httpResponse.statusCode, userInfo: [NSLocalizedDescriptionKey :"Http status code has unexpected value"])
@@ -105,7 +106,7 @@ class HomeViewController: BaseClassViewController {
                     }
                 }
             }
-        } as! (Data?, URLResponse?, Error?) -> Void) 
+        }
         loadTask.resume()
     }
     

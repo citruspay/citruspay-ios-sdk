@@ -1,789 +1,3209 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		0A146FF03A7FE4CC5639CF6CD928C6F6 /* NSArray+JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 45718A11AD1345E46FCD308083A62BEE /* NSArray+JSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0DBD5B65BA6311D6DE341C77B80EE34C /* Pods-CitrusPay_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B983F88C3923222526CA46C10EFDC /* Pods-CitrusPay_Example-dummy.m */; };
-		102D1BDC2037402BC2438539816A5293 /* Pods-CitrusPay_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCA43F228DE44AFEE8B084F86F22F50 /* Pods-CitrusPay_Tests-dummy.m */; };
-		20291BD0330FB585E98FB2621CACA1C6 /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2380B796B93098CA75A5DAA71F41EBF6 /* JSONHTTPClient.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		21E7E1D8E474769062CBE7D9B8DFA7F3 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B60952384A191F9A334531F57BA10DA /* JSONKeyMapper.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		393F0868F925BBA09A9AE5D1CBC369E8 /* NSArray+JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2AE89084170CB7327F256936B318B9 /* NSArray+JSONModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		395EB44A5AB3820233D1ECF102E6272B /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = DC94BE788266C1E2ADCC3BBE8EA2FB01 /* JSONAPI.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3FFCB1F22172D7E94454AB3297F3116F /* Pods-CitrusPay_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FB798D0480A904FCF736F830EBB7AD5 /* Pods-CitrusPay_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		473EF6CBFCBA1E8C184A7D565097CDD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		511A81B5E765B159671168AB8647DBAC /* JSONModelError.h in Headers */ = {isa = PBXBuildFile; fileRef = A5B42C9E3E4673170B042036D387875F /* JSONModelError.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5A98E9AF22C24B5FCCBE716302FFB80C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		5F6C967916CFAA5D846608140EA96562 /* JSONModelArray.h in Headers */ = {isa = PBXBuildFile; fileRef = CB60513006C7BE928098FCD82689975E /* JSONModelArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		603B6140748473695398AD79D623D3D9 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9046E492303466C5BED61CAF1F911034 /* JSONModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		6EDED8F1A3157D9A28E8CCF3F56A3305 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF1043D97ABD077A0C6D6C3707B32FB /* JSONValueTransformer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7002521527078251F25E6DEDF13724BA /* JSONModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E925E22C4D531F2E821695FEF705B4 /* JSONModel-dummy.m */; };
-		7F610BE21596EA4D163BB0AAB948561F /* JSONModel+networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8B798E59BB4B8E7BF4A996A1DB7E11 /* JSONModel+networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B62FE4C5B8F8769F0DE823B92DAFB1B /* JSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1965371783C001291AA78F07454389D6 /* JSONValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9339819EA7649D298BFEFD11EA40E37D /* JSONModel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A92E24995D5EC0985AC2F9DF224120B2 /* JSONModel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B5BCFFE9B8A78649344FFF61C094695 /* JSONAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F7DC90A677A7A628C38E9B8D6A61A08 /* JSONAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9BF534E256014018966AEE6B1724D2C8 /* Pods-CitrusPay_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C95E62FC2A62780ED90A1A2F888E950 /* Pods-CitrusPay_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A1BFA0EC0CA68EFFB03EC84DD0A856A9 /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BE216D2BC70A4CCEAD78DBFD8E384F /* JSONModelArray.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B514F5B20C77E3BB07398ED7B77B5468 /* JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 920BDCD309F6873E3C2F8A4DBC939FEB /* JSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C3437AE08F8583093CCDB9762D7BC6DD /* JSONHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 27C21EDA2B03C3A0E5A846D4B2F64302 /* JSONHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CBBA853632E39F452608523C15992A9D /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = D3328F68720CB5AAB5151586F5203790 /* JSONModelError.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D4901D771BC43EAA1E9767289E59A8FD /* JSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2638BD0C9B1AC774CC25A5A83A5A9CA5 /* JSONKeyMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD5B47A106E6D6E005320A91D7E41E38 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = C75557B93CEAA0234E267DD1E85144DD /* JSONModel+networking.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F34C5C1958E6326342F84FEAA7613B8A /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = F97F6CFDE40E715423CF0DD13C2502C5 /* JSONModelClassProperty.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F8A7C18BBB9B8984C1A20C836C7FCCFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		FA806409325D2BB94CF1D3372B594097 /* JSONModelLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 0059B5189F2993FB94A098DF966FC4A3 /* JSONModelLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD685BAE2583AFD31AF68A7EE49CD5AF /* JSONModelClassProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 562A24480077B00057C5911BB6116650 /* JSONModelClassProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		7CD12BC56733F1C894E482CBC99F041E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0BF8569A1D17D47E1A86EB020383E8D1;
-			remoteInfo = JSONModel;
-		};
-		84194EB1C6E4B5E5C6A2553FD323EF94 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0BF8569A1D17D47E1A86EB020383E8D1;
-			remoteInfo = JSONModel;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		0059B5189F2993FB94A098DF966FC4A3 /* JSONModelLib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelLib.h; path = JSONModel/JSONModelLib.h; sourceTree = "<group>"; };
-		0C95E62FC2A62780ED90A1A2F888E950 /* Pods-CitrusPay_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CitrusPay_Example-umbrella.h"; sourceTree = "<group>"; };
-		0FB798D0480A904FCF736F830EBB7AD5 /* Pods-CitrusPay_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CitrusPay_Tests-umbrella.h"; sourceTree = "<group>"; };
-		13B83EC7F607F44C4827B81A10A4DDA3 /* CitrusPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CitrusPay.framework; path = "Framework/core-sdk/CitrusPay.framework"; sourceTree = "<group>"; };
-		186ADE827D444C5A65749C0048508F2A /* Pods-CitrusPay_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CitrusPay_Tests-resources.sh"; sourceTree = "<group>"; };
-		1965371783C001291AA78F07454389D6 /* JSONValueTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONValueTransformer.h; path = JSONModel/JSONModelTransformations/JSONValueTransformer.h; sourceTree = "<group>"; };
-		1B101D2ED94240CE4003613973182D4F /* Pods_CitrusPay_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CitrusPay_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C8B798E59BB4B8E7BF4A996A1DB7E11 /* JSONModel+networking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "JSONModel+networking.h"; path = "JSONModel/JSONModelNetworking/JSONModel+networking.h"; sourceTree = "<group>"; };
-		20BEDCAF08E9F8D679439C9025C78F2E /* JSONModel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JSONModel.modulemap; sourceTree = "<group>"; };
-		2380B796B93098CA75A5DAA71F41EBF6 /* JSONHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONHTTPClient.m; path = JSONModel/JSONModelNetworking/JSONHTTPClient.m; sourceTree = "<group>"; };
-		23F80E93867E7BA7D65114E8F2CD2F4D /* Pods-CitrusPay_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CitrusPay_Example-frameworks.sh"; sourceTree = "<group>"; };
-		24B78D53B739ADB23420C9CDE799C324 /* Pods-CitrusPay_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CitrusPay_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		2638BD0C9B1AC774CC25A5A83A5A9CA5 /* JSONKeyMapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONKeyMapper.h; path = JSONModel/JSONModelTransformations/JSONKeyMapper.h; sourceTree = "<group>"; };
-		27C21EDA2B03C3A0E5A846D4B2F64302 /* JSONHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONHTTPClient.h; path = JSONModel/JSONModelNetworking/JSONHTTPClient.h; sourceTree = "<group>"; };
-		2B60952384A191F9A334531F57BA10DA /* JSONKeyMapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONKeyMapper.m; path = JSONModel/JSONModelTransformations/JSONKeyMapper.m; sourceTree = "<group>"; };
-		2D2AE89084170CB7327F256936B318B9 /* NSArray+JSONModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+JSONModel.m"; path = "JSONModel/JSONModelCategories/NSArray+JSONModel.m"; sourceTree = "<group>"; };
-		390C603AA101253D9B5277DE17745C1C /* Pods-CitrusPay_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CitrusPay_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		3A7B983F88C3923222526CA46C10EFDC /* Pods-CitrusPay_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CitrusPay_Example-dummy.m"; sourceTree = "<group>"; };
-		3AC4303E403170FAEAD2944BE00317B1 /* Pods-CitrusPay_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CitrusPay_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		45718A11AD1345E46FCD308083A62BEE /* NSArray+JSONModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+JSONModel.h"; path = "JSONModel/JSONModelCategories/NSArray+JSONModel.h"; sourceTree = "<group>"; };
-		4D13E64CD4493BD3D1796A098F9F2887 /* Pods-CitrusPay_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CitrusPay_Example.release.xcconfig"; sourceTree = "<group>"; };
-		52898B04366490D0E3349B72BE8A1EF7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		54BE216D2BC70A4CCEAD78DBFD8E384F /* JSONModelArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelArray.m; path = JSONModel/JSONModel/JSONModelArray.m; sourceTree = "<group>"; };
-		562A24480077B00057C5911BB6116650 /* JSONModelClassProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelClassProperty.h; path = JSONModel/JSONModel/JSONModelClassProperty.h; sourceTree = "<group>"; };
-		59EC3D900E25F58551BC964ED03E199B /* Pods-CitrusPay_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CitrusPay_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		6F7DC90A677A7A628C38E9B8D6A61A08 /* JSONAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONAPI.h; path = JSONModel/JSONModelNetworking/JSONAPI.h; sourceTree = "<group>"; };
-		76896612912D74208466152BC020D9D5 /* Pods_CitrusPay_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CitrusPay_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		786BFE1801F360E6E5C335597062E99E /* Pods-CitrusPay_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CitrusPay_Example-resources.sh"; sourceTree = "<group>"; };
-		81C7647E057EA144C8C316F0CC6DA0ED /* JSONModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONModel-prefix.pch"; sourceTree = "<group>"; };
-		9046E492303466C5BED61CAF1F911034 /* JSONModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModel.m; path = JSONModel/JSONModel/JSONModel.m; sourceTree = "<group>"; };
-		920BDCD309F6873E3C2F8A4DBC939FEB /* JSONModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModel.h; path = JSONModel/JSONModel/JSONModel.h; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		98282F2CC48451062BB2C62E1119214B /* Pods-CitrusPay_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CitrusPay_Example.modulemap"; sourceTree = "<group>"; };
-		987D9B7973C5B00A8BADA45C221E5911 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A2E925E22C4D531F2E821695FEF705B4 /* JSONModel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JSONModel-dummy.m"; sourceTree = "<group>"; };
-		A5B42C9E3E4673170B042036D387875F /* JSONModelError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelError.h; path = JSONModel/JSONModel/JSONModelError.h; sourceTree = "<group>"; };
-		A92E24995D5EC0985AC2F9DF224120B2 /* JSONModel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONModel-umbrella.h"; sourceTree = "<group>"; };
-		ABA552BC466798001C46A700832F642E /* Pods-CitrusPay_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CitrusPay_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		AE50C1ECA59039B9450BEFB132FCCE89 /* Pods-CitrusPay_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CitrusPay_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		AFCA43F228DE44AFEE8B084F86F22F50 /* Pods-CitrusPay_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CitrusPay_Tests-dummy.m"; sourceTree = "<group>"; };
-		C75557B93CEAA0234E267DD1E85144DD /* JSONModel+networking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "JSONModel+networking.m"; path = "JSONModel/JSONModelNetworking/JSONModel+networking.m"; sourceTree = "<group>"; };
-		C91B811CB594067DD20FBD9B7233E229 /* Pods-CitrusPay_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CitrusPay_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		CAB083D51582664D56CFDCDF245266EB /* JSONModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSONModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB60513006C7BE928098FCD82689975E /* JSONModelArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelArray.h; path = JSONModel/JSONModel/JSONModelArray.h; sourceTree = "<group>"; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CFF1043D97ABD077A0C6D6C3707B32FB /* JSONValueTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONValueTransformer.m; path = JSONModel/JSONModelTransformations/JSONValueTransformer.m; sourceTree = "<group>"; };
-		D3328F68720CB5AAB5151586F5203790 /* JSONModelError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelError.m; path = JSONModel/JSONModel/JSONModelError.m; sourceTree = "<group>"; };
-		D4995DAD6A194A024486DF85FA2C9EB9 /* Pods-CitrusPay_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CitrusPay_Tests.modulemap"; sourceTree = "<group>"; };
-		D7C7650B839FC239A4999F58E1D9E145 /* JSONModel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JSONModel.xcconfig; sourceTree = "<group>"; };
-		DC94BE788266C1E2ADCC3BBE8EA2FB01 /* JSONAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONAPI.m; path = JSONModel/JSONModelNetworking/JSONAPI.m; sourceTree = "<group>"; };
-		E239AF0EB31A14081254F681122F0F8E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F759BDFEC581E26DFF235AC5CE869045 /* Pods-CitrusPay_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CitrusPay_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F97F6CFDE40E715423CF0DD13C2502C5 /* JSONModelClassProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelClassProperty.m; path = JSONModel/JSONModel/JSONModelClassProperty.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		34049E9BD6AB19671F71F4FFC8F4E77F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5A98E9AF22C24B5FCCBE716302FFB80C /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B042EA87EC6E21F756A8D05F1BB455D2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				473EF6CBFCBA1E8C184A7D565097CDD8 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B4529B1292C0BA3222C661F76BB72D8C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8A7C18BBB9B8984C1A20C836C7FCCFE /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		06B242783F3EB4D41F7B5E3912BE082F /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				5C8EB1DF441150A5A6A09B41575DBB00 /* Pods-CitrusPay_Example */,
-				EDD49773F6A5CF9705446A0493AEC0DC /* Pods-CitrusPay_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		0B48E5A22D6D691D41E889D30FD5C091 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E239AF0EB31A14081254F681122F0F8E /* Info.plist */,
-				20BEDCAF08E9F8D679439C9025C78F2E /* JSONModel.modulemap */,
-				D7C7650B839FC239A4999F58E1D9E145 /* JSONModel.xcconfig */,
-				A2E925E22C4D531F2E821695FEF705B4 /* JSONModel-dummy.m */,
-				81C7647E057EA144C8C316F0CC6DA0ED /* JSONModel-prefix.pch */,
-				A92E24995D5EC0985AC2F9DF224120B2 /* JSONModel-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/JSONModel";
-			sourceTree = "<group>";
-		};
-		120F05AB865688F00CE6B91B8355032A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CAB083D51582664D56CFDCDF245266EB /* JSONModel.framework */,
-				76896612912D74208466152BC020D9D5 /* Pods_CitrusPay_Example.framework */,
-				1B101D2ED94240CE4003613973182D4F /* Pods_CitrusPay_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		1BE97C42890FA2F1F94FD245F3BE5560 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D0B06D636AEBD04514BADBD74404F706 /* CitrusPay */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		1F2CD374A622184204A9F78FD17FC0C9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				13B83EC7F607F44C4827B81A10A4DDA3 /* CitrusPay.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		25FF5A70086BBE33AC608A9170585B60 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CBE342F8F1FD65A58C18B32DBE95CFF3 /* JSONModel */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		5C8EB1DF441150A5A6A09B41575DBB00 /* Pods-CitrusPay_Example */ = {
-			isa = PBXGroup;
-			children = (
-				987D9B7973C5B00A8BADA45C221E5911 /* Info.plist */,
-				98282F2CC48451062BB2C62E1119214B /* Pods-CitrusPay_Example.modulemap */,
-				3AC4303E403170FAEAD2944BE00317B1 /* Pods-CitrusPay_Example-acknowledgements.markdown */,
-				390C603AA101253D9B5277DE17745C1C /* Pods-CitrusPay_Example-acknowledgements.plist */,
-				3A7B983F88C3923222526CA46C10EFDC /* Pods-CitrusPay_Example-dummy.m */,
-				23F80E93867E7BA7D65114E8F2CD2F4D /* Pods-CitrusPay_Example-frameworks.sh */,
-				786BFE1801F360E6E5C335597062E99E /* Pods-CitrusPay_Example-resources.sh */,
-				0C95E62FC2A62780ED90A1A2F888E950 /* Pods-CitrusPay_Example-umbrella.h */,
-				C91B811CB594067DD20FBD9B7233E229 /* Pods-CitrusPay_Example.debug.xcconfig */,
-				4D13E64CD4493BD3D1796A098F9F2887 /* Pods-CitrusPay_Example.release.xcconfig */,
-			);
-			name = "Pods-CitrusPay_Example";
-			path = "Target Support Files/Pods-CitrusPay_Example";
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				1BE97C42890FA2F1F94FD245F3BE5560 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				25FF5A70086BBE33AC608A9170585B60 /* Pods */,
-				120F05AB865688F00CE6B91B8355032A /* Products */,
-				06B242783F3EB4D41F7B5E3912BE082F /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CBE342F8F1FD65A58C18B32DBE95CFF3 /* JSONModel */ = {
-			isa = PBXGroup;
-			children = (
-				6F7DC90A677A7A628C38E9B8D6A61A08 /* JSONAPI.h */,
-				DC94BE788266C1E2ADCC3BBE8EA2FB01 /* JSONAPI.m */,
-				27C21EDA2B03C3A0E5A846D4B2F64302 /* JSONHTTPClient.h */,
-				2380B796B93098CA75A5DAA71F41EBF6 /* JSONHTTPClient.m */,
-				2638BD0C9B1AC774CC25A5A83A5A9CA5 /* JSONKeyMapper.h */,
-				2B60952384A191F9A334531F57BA10DA /* JSONKeyMapper.m */,
-				920BDCD309F6873E3C2F8A4DBC939FEB /* JSONModel.h */,
-				9046E492303466C5BED61CAF1F911034 /* JSONModel.m */,
-				1C8B798E59BB4B8E7BF4A996A1DB7E11 /* JSONModel+networking.h */,
-				C75557B93CEAA0234E267DD1E85144DD /* JSONModel+networking.m */,
-				CB60513006C7BE928098FCD82689975E /* JSONModelArray.h */,
-				54BE216D2BC70A4CCEAD78DBFD8E384F /* JSONModelArray.m */,
-				562A24480077B00057C5911BB6116650 /* JSONModelClassProperty.h */,
-				F97F6CFDE40E715423CF0DD13C2502C5 /* JSONModelClassProperty.m */,
-				A5B42C9E3E4673170B042036D387875F /* JSONModelError.h */,
-				D3328F68720CB5AAB5151586F5203790 /* JSONModelError.m */,
-				0059B5189F2993FB94A098DF966FC4A3 /* JSONModelLib.h */,
-				1965371783C001291AA78F07454389D6 /* JSONValueTransformer.h */,
-				CFF1043D97ABD077A0C6D6C3707B32FB /* JSONValueTransformer.m */,
-				45718A11AD1345E46FCD308083A62BEE /* NSArray+JSONModel.h */,
-				2D2AE89084170CB7327F256936B318B9 /* NSArray+JSONModel.m */,
-				0B48E5A22D6D691D41E889D30FD5C091 /* Support Files */,
-			);
-			path = JSONModel;
-			sourceTree = "<group>";
-		};
-		D0B06D636AEBD04514BADBD74404F706 /* CitrusPay */ = {
-			isa = PBXGroup;
-			children = (
-				1F2CD374A622184204A9F78FD17FC0C9 /* Frameworks */,
-			);
-			name = CitrusPay;
-			path = ../../../../..;
-			sourceTree = "<group>";
-		};
-		EDD49773F6A5CF9705446A0493AEC0DC /* Pods-CitrusPay_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				52898B04366490D0E3349B72BE8A1EF7 /* Info.plist */,
-				D4995DAD6A194A024486DF85FA2C9EB9 /* Pods-CitrusPay_Tests.modulemap */,
-				F759BDFEC581E26DFF235AC5CE869045 /* Pods-CitrusPay_Tests-acknowledgements.markdown */,
-				ABA552BC466798001C46A700832F642E /* Pods-CitrusPay_Tests-acknowledgements.plist */,
-				AFCA43F228DE44AFEE8B084F86F22F50 /* Pods-CitrusPay_Tests-dummy.m */,
-				AE50C1ECA59039B9450BEFB132FCCE89 /* Pods-CitrusPay_Tests-frameworks.sh */,
-				186ADE827D444C5A65749C0048508F2A /* Pods-CitrusPay_Tests-resources.sh */,
-				0FB798D0480A904FCF736F830EBB7AD5 /* Pods-CitrusPay_Tests-umbrella.h */,
-				59EC3D900E25F58551BC964ED03E199B /* Pods-CitrusPay_Tests.debug.xcconfig */,
-				24B78D53B739ADB23420C9CDE799C324 /* Pods-CitrusPay_Tests.release.xcconfig */,
-			);
-			name = "Pods-CitrusPay_Tests";
-			path = "Target Support Files/Pods-CitrusPay_Tests";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		5D16032B85DD0BBE8BF1ECCF4137A001 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9B5BCFFE9B8A78649344FFF61C094695 /* JSONAPI.h in Headers */,
-				C3437AE08F8583093CCDB9762D7BC6DD /* JSONHTTPClient.h in Headers */,
-				D4901D771BC43EAA1E9767289E59A8FD /* JSONKeyMapper.h in Headers */,
-				7F610BE21596EA4D163BB0AAB948561F /* JSONModel+networking.h in Headers */,
-				9339819EA7649D298BFEFD11EA40E37D /* JSONModel-umbrella.h in Headers */,
-				B514F5B20C77E3BB07398ED7B77B5468 /* JSONModel.h in Headers */,
-				5F6C967916CFAA5D846608140EA96562 /* JSONModelArray.h in Headers */,
-				FD685BAE2583AFD31AF68A7EE49CD5AF /* JSONModelClassProperty.h in Headers */,
-				511A81B5E765B159671168AB8647DBAC /* JSONModelError.h in Headers */,
-				FA806409325D2BB94CF1D3372B594097 /* JSONModelLib.h in Headers */,
-				8B62FE4C5B8F8769F0DE823B92DAFB1B /* JSONValueTransformer.h in Headers */,
-				0A146FF03A7FE4CC5639CF6CD928C6F6 /* NSArray+JSONModel.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6261CF3A7C0409247FDFA5DDED09AA9E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9BF534E256014018966AEE6B1724D2C8 /* Pods-CitrusPay_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6AAF77E4D1809413EDD7330987CA8F12 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3FFCB1F22172D7E94454AB3297F3116F /* Pods-CitrusPay_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		001BD6F04274A002AD4A4F30E4E54525 /* Pods-CitrusPay_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8CA4B78C5AC565197885D50762315D5A /* Build configuration list for PBXNativeTarget "Pods-CitrusPay_Example" */;
-			buildPhases = (
-				ABBDD0D2CEFE63DFB56F0F06D90FD13F /* Sources */,
-				B4529B1292C0BA3222C661F76BB72D8C /* Frameworks */,
-				6261CF3A7C0409247FDFA5DDED09AA9E /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				546E109E63B97F3EE86B35E34BEC4B10 /* PBXTargetDependency */,
-			);
-			name = "Pods-CitrusPay_Example";
-			productName = "Pods-CitrusPay_Example";
-			productReference = 76896612912D74208466152BC020D9D5 /* Pods_CitrusPay_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		0BF8569A1D17D47E1A86EB020383E8D1 /* JSONModel */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 098B1241ACE7660480EBA7EB1845A08B /* Build configuration list for PBXNativeTarget "JSONModel" */;
-			buildPhases = (
-				353830DCF5018FD87D7324157C9AC631 /* Sources */,
-				34049E9BD6AB19671F71F4FFC8F4E77F /* Frameworks */,
-				5D16032B85DD0BBE8BF1ECCF4137A001 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = JSONModel;
-			productName = JSONModel;
-			productReference = CAB083D51582664D56CFDCDF245266EB /* JSONModel.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		A9A277BC7FAC15212E1A7F9D96F1CFAA /* Pods-CitrusPay_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 710A740A8CD14A36B9DE9A06A3C27225 /* Build configuration list for PBXNativeTarget "Pods-CitrusPay_Tests" */;
-			buildPhases = (
-				F046BA7DA54AC08D41D806AA2CE0643B /* Sources */,
-				B042EA87EC6E21F756A8D05F1BB455D2 /* Frameworks */,
-				6AAF77E4D1809413EDD7330987CA8F12 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BD932CB5B4FA98052D502AD746739FA8 /* PBXTargetDependency */,
-			);
-			name = "Pods-CitrusPay_Tests";
-			productName = "Pods-CitrusPay_Tests";
-			productReference = 1B101D2ED94240CE4003613973182D4F /* Pods_CitrusPay_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
-			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 120F05AB865688F00CE6B91B8355032A /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				0BF8569A1D17D47E1A86EB020383E8D1 /* JSONModel */,
-				001BD6F04274A002AD4A4F30E4E54525 /* Pods-CitrusPay_Example */,
-				A9A277BC7FAC15212E1A7F9D96F1CFAA /* Pods-CitrusPay_Tests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXSourcesBuildPhase section */
-		353830DCF5018FD87D7324157C9AC631 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				395EB44A5AB3820233D1ECF102E6272B /* JSONAPI.m in Sources */,
-				20291BD0330FB585E98FB2621CACA1C6 /* JSONHTTPClient.m in Sources */,
-				21E7E1D8E474769062CBE7D9B8DFA7F3 /* JSONKeyMapper.m in Sources */,
-				DD5B47A106E6D6E005320A91D7E41E38 /* JSONModel+networking.m in Sources */,
-				7002521527078251F25E6DEDF13724BA /* JSONModel-dummy.m in Sources */,
-				603B6140748473695398AD79D623D3D9 /* JSONModel.m in Sources */,
-				A1BFA0EC0CA68EFFB03EC84DD0A856A9 /* JSONModelArray.m in Sources */,
-				F34C5C1958E6326342F84FEAA7613B8A /* JSONModelClassProperty.m in Sources */,
-				CBBA853632E39F452608523C15992A9D /* JSONModelError.m in Sources */,
-				6EDED8F1A3157D9A28E8CCF3F56A3305 /* JSONValueTransformer.m in Sources */,
-				393F0868F925BBA09A9AE5D1CBC369E8 /* NSArray+JSONModel.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ABBDD0D2CEFE63DFB56F0F06D90FD13F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0DBD5B65BA6311D6DE341C77B80EE34C /* Pods-CitrusPay_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F046BA7DA54AC08D41D806AA2CE0643B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				102D1BDC2037402BC2438539816A5293 /* Pods-CitrusPay_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		546E109E63B97F3EE86B35E34BEC4B10 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = JSONModel;
-			target = 0BF8569A1D17D47E1A86EB020383E8D1 /* JSONModel */;
-			targetProxy = 84194EB1C6E4B5E5C6A2553FD323EF94 /* PBXContainerItemProxy */;
-		};
-		BD932CB5B4FA98052D502AD746739FA8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = JSONModel;
-			target = 0BF8569A1D17D47E1A86EB020383E8D1 /* JSONModel */;
-			targetProxy = 7CD12BC56733F1C894E482CBC99F041E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		0141E69CE7A379CB9F86E4906BDE349D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7C7650B839FC239A4999F58E1D9E145 /* JSONModel.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/JSONModel/JSONModel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JSONModel/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JSONModel/JSONModel.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = JSONModel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		034014829C1E4434983CF3A690C12017 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				ONLY_ACTIVE_ARCH = YES;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		0E1D48FA12C3352D6B0000F4358D4E88 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C91B811CB594067DD20FBD9B7233E229 /* Pods-CitrusPay_Example.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-CitrusPay_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CitrusPay_Example/Pods-CitrusPay_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_CitrusPay_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4CD16C6D6A1587A5CE6D914C25CDDA84 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24B78D53B739ADB23420C9CDE799C324 /* Pods-CitrusPay_Tests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-CitrusPay_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CitrusPay_Tests/Pods-CitrusPay_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_CitrusPay_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B2D2CA7D1ADF86DC292AB8DC1D74086D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D13E64CD4493BD3D1796A098F9F2887 /* Pods-CitrusPay_Example.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-CitrusPay_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CitrusPay_Example/Pods-CitrusPay_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_CitrusPay_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C769B23C1343D414AC36CF409E5284BE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59EC3D900E25F58551BC964ED03E199B /* Pods-CitrusPay_Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-CitrusPay_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CitrusPay_Tests/Pods-CitrusPay_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_CitrusPay_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C7E474A03CAE21F1CB6046E7344C59BD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		E12D1FC2F572B27E77201A33AD37AFFE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7C7650B839FC239A4999F58E1D9E145 /* JSONModel.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/JSONModel/JSONModel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JSONModel/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JSONModel/JSONModel.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = JSONModel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		098B1241ACE7660480EBA7EB1845A08B /* Build configuration list for PBXNativeTarget "JSONModel" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0141E69CE7A379CB9F86E4906BDE349D /* Debug */,
-				E12D1FC2F572B27E77201A33AD37AFFE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				034014829C1E4434983CF3A690C12017 /* Debug */,
-				C7E474A03CAE21F1CB6046E7344C59BD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		710A740A8CD14A36B9DE9A06A3C27225 /* Build configuration list for PBXNativeTarget "Pods-CitrusPay_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C769B23C1343D414AC36CF409E5284BE /* Debug */,
-				4CD16C6D6A1587A5CE6D914C25CDDA84 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8CA4B78C5AC565197885D50762315D5A /* Build configuration list for PBXNativeTarget "Pods-CitrusPay_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0E1D48FA12C3352D6B0000F4358D4E88 /* Debug */,
-				B2D2CA7D1ADF86DC292AB8DC1D74086D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0165FC67E6AA86A9CCF271866EB686B2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Kingfisher-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>019C933C505323BB7614E70FBC34F319</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ImageCache.swift</string>
+			<key>path</key>
+			<string>Sources/ImageCache.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>02042754CF83017C50B1279FD47D800C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>JSONKeyMapper.h</string>
+			<key>path</key>
+			<string>JSONModel/JSONModelTransformations/JSONKeyMapper.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>034014829C1E4434983CF3A690C12017</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>POD_CONFIGURATION_DEBUG=1</string>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>SYMROOT</key>
+				<string>${SRCROOT}/../build</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>0388C78FB6B9B1A866AE6A1F543F1C29</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>049858D9D05DE8CA426EB58C89C12A70</key>
+		<dict>
+			<key>fileRef</key>
+			<string>956DEC56AE21DEA979D2F3F23B24BBB1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>06B242783F3EB4D41F7B5E3912BE082F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5C8EB1DF441150A5A6A09B41575DBB00</string>
+				<string>EDD49773F6A5CF9705446A0493AEC0DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Targets Support Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>07E5F6C5B9CBC9295FE6D7AF4585BFB6</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>42501805785133E5E594AFA86F1F54E6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>0956430991227608EF86C94C3AB303E3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>446D1626901999C2A41F647F9503E9B8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>09AE72FB5C94DBAF733F7CA734B3E7CE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>JSONModel.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0A0E5DF7E1E5B4DB4C022F9009B25792</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>AnimatedImageView.swift</string>
+			<key>path</key>
+			<string>Sources/AnimatedImageView.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0C95E62FC2A62780ED90A1A2F888E950</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-CitrusPay_Example-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FB798D0480A904FCF736F830EBB7AD5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-CitrusPay_Tests-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FC82AF575B6BDB11427BBC5BFC36323</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ThreadHelper.swift</string>
+			<key>path</key>
+			<string>Sources/ThreadHelper.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11DE5113850DDE1FEC6254F813F83B6A</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>4644F265653A3359D16AFB244F3ABA18</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Kingfisher/Kingfisher-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Kingfisher/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Kingfisher/Kingfisher.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>Kingfisher</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>12292CF8428219681B06547BA11CF061</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>AF21780C841830BE5AD3F34076925612</string>
+			<key>remoteInfo</key>
+			<string>JSONModel</string>
+		</dict>
+		<key>13B83EC7F607F44C4827B81A10A4DDA3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CitrusPay.framework</string>
+			<key>path</key>
+			<string>Framework/core-sdk/CitrusPay.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>17DC9E4778FFA0045691F7874EE1C970</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A18A7474BCB9AD950BB145472150FE53</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>186ADE827D444C5A65749C0048508F2A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-CitrusPay_Tests-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1A2DF02B542A17161162CA48FE208D3C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>473A9085410554074ED17F48C4BB8308</string>
+				<string>8DBA83DA7327FE5D6C8D4AEA11B88256</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>1A384B8BC4F9026BF99A84FA6C4E74D5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>UIButton+Kingfisher.swift</string>
+			<key>path</key>
+			<string>Sources/UIButton+Kingfisher.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B5B612DDDF380A315E5E6D5F08E481C</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>676976DA9493BCA8344A25E0C5F7CD22</string>
+			<key>buildPhases</key>
+			<array>
+				<string>1F1314C64ED08B3FC18C3B0954173A63</string>
+				<string>D55B75CF2FD223E0AEA8298C2FF6278B</string>
+				<string>3C0A7F0E8D484E44386DF6B863C1240D</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>9314F1B0442B5AF6E0F373BD367B7966</string>
+				<string>4465B31D49249EEC09057F299B2DBF71</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-CitrusPay_Tests</string>
+			<key>productName</key>
+			<string>Pods-CitrusPay_Tests</string>
+			<key>productReference</key>
+			<string>2C5B746824485B15DCDBB5429A44224F</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>1B6CDFB3860FB64A7855330A7C1E8EE5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Kingfisher-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1BE97C42890FA2F1F94FD245F3BE5560</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D0B06D636AEBD04514BADBD74404F706</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Development Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1DE93A359FA21F91DFBE81309E851A4A</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>363F048EAA6933FA24F8FFB2537AE0B0</string>
+			<key>buildPhases</key>
+			<array>
+				<string>80A55D79301B7A0A545E86E59CBC5AD1</string>
+				<string>1A2DF02B542A17161162CA48FE208D3C</string>
+				<string>C07D2A8B30A1C35A24C6B9D689290840</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Kingfisher</string>
+			<key>productName</key>
+			<string>Kingfisher</string>
+			<key>productReference</key>
+			<string>E5BE6EC0F921667A41B7A6DBF0D630BA</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>1F1314C64ED08B3FC18C3B0954173A63</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E147E42DEA71AA66C8E19955BACD265A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>1F2CD374A622184204A9F78FD17FC0C9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>13B83EC7F607F44C4827B81A10A4DDA3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1F5EB2D4B6EA6503E13F7EC7F79BB15F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>JSONModelLib.h</string>
+			<key>path</key>
+			<string>JSONModel/JSONModelLib.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>232CC40B6BDED99579A8A76AF55C1F9B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CFNetwork.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CFNetwork.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>23F80E93867E7BA7D65114E8F2CD2F4D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-CitrusPay_Example-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>241B075BF2B3E1FD390BF0A1F53A4F3C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Kingfisher.h</string>
+			<key>path</key>
+			<string>Sources/Kingfisher.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>24B78D53B739ADB23420C9CDE799C324</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-CitrusPay_Tests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2987EA313803670EA59DCC0BAE09A1D4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Filter.swift</string>
+			<key>path</key>
+			<string>Sources/Filter.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>29B613B34FC3541D3592F0F9B46EA76A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>56E161F5D79CAC396807F181808B05BD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>2C5B746824485B15DCDBB5429A44224F</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods_CitrusPay_Tests.framework</string>
+			<key>path</key>
+			<string>Pods-CitrusPay_Tests.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>034014829C1E4434983CF3A690C12017</string>
+				<string>C7E474A03CAE21F1CB6046E7344C59BD</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>3234DD06F193A555E7E649F219708FC0</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>24B78D53B739ADB23420C9CDE799C324</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-CitrusPay_Tests/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-CitrusPay_Tests/Pods-CitrusPay_Tests.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_CitrusPay_Tests</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>363F048EAA6933FA24F8FFB2537AE0B0</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>11DE5113850DDE1FEC6254F813F83B6A</string>
+				<string>3F53272B4E5E6820890ECD544235BF82</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>37FB09F090989434B674E97A78B449F0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E74535467450EF13A990D488F9801BDA</string>
+				<string>DA9DF46234FDDC633598CD8A1FCFF7D9</string>
+				<string>51C0C16D4EE3008BBF09C4FB869707A6</string>
+				<string>EFC7B4A41F0721AD4E4279CDC437F54D</string>
+				<string>02042754CF83017C50B1279FD47D800C</string>
+				<string>A8CDCC83A8FE4C2C8E377A8774F293AB</string>
+				<string>A5C3DA2EBA3F315EE24A2681AE6D6CF6</string>
+				<string>C8319A9D31CA898258F0166D9E1F535E</string>
+				<string>446D1626901999C2A41F647F9503E9B8</string>
+				<string>64F7166E4BD73870C7D23560F417D492</string>
+				<string>48E361B83A240A75FC183FCE235BFD12</string>
+				<string>82DB0B7F42447002598514D656257B23</string>
+				<string>8CAC7BAFBA6C602140E075AD4C0CDBB0</string>
+				<string>B77916B5136117838210ED8AC0E4121B</string>
+				<string>1F5EB2D4B6EA6503E13F7EC7F79BB15F</string>
+				<string>6079548D9C2AAD1DE96FB5B772685A9D</string>
+				<string>7F22027E2551E8CF319F9ECF537CC3FC</string>
+				<string>DECE2760A5B7FE89B9C9650F87BB7656</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>JSONModel</string>
+			<key>path</key>
+			<string>JSONModel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>390C603AA101253D9B5277DE17745C1C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-CitrusPay_Example-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3A7B983F88C3923222526CA46C10EFDC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-CitrusPay_Example-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3AC4303E403170FAEAD2944BE00317B1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-CitrusPay_Example-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3C0A7F0E8D484E44386DF6B863C1240D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D7EECA421F1F7D3DB188F484D206DF23</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>3C642461BFD037BDFF84DD61EF37D873</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4C9E06287831CE05D81002CA4BF57D4A</string>
+				<string>E5BE6EC0F921667A41B7A6DBF0D630BA</string>
+				<string>8EB3EF7AF63CE579E9CDC631AC244EE1</string>
+				<string>2C5B746824485B15DCDBB5429A44224F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3C88B5F2FC837662043CC4D6B1FBF7B7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EB06DD65C7295FE49E86C890381B7DF8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3E3C4928648380A0EE77361F26EAA347</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ImageView+Kingfisher.swift</string>
+			<key>path</key>
+			<string>Sources/ImageView+Kingfisher.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3F380903DB180ADB51257848978DFD9B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EFC7B4A41F0721AD4E4279CDC437F54D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>3F53272B4E5E6820890ECD544235BF82</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>4644F265653A3359D16AFB244F3ABA18</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Kingfisher/Kingfisher-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Kingfisher/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Kingfisher/Kingfisher.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_NAME</key>
+				<string>Kingfisher</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>4070952ABB8BBF8D336921BC505551C0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>Kingfisher</string>
+			<key>target</key>
+			<string>1DE93A359FA21F91DFBE81309E851A4A</string>
+			<key>targetProxy</key>
+			<string>D56EC4BD58D67BEC3D795C369FA4A957</string>
+		</dict>
+		<key>40B1F0B83147376D8E081AD11A04199A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6848E6D11B1DA5C59A40BD578A863266</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>41421F77119106A453BFDBB4C280414B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7F22027E2551E8CF319F9ECF537CC3FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>42501805785133E5E594AFA86F1F54E6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0C95E62FC2A62780ED90A1A2F888E950</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>42AD183F0B7DC5A32D03E91F225954F3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>232CC40B6BDED99579A8A76AF55C1F9B</string>
+				<string>BC4DC3D8EFEFCB57DD743BA66A83A5F6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>42EB934CEC5218EC0B3C89BB769F1742</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BC4DC3D8EFEFCB57DD743BA66A83A5F6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>433CD3331B6C3787F473C941B61FC68F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>42AD183F0B7DC5A32D03E91F225954F3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>44099DE61C3B44545FE77B523DE7A058</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7BFBAB1661B8DB39FD9A69DE522891A1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>4465B31D49249EEC09057F299B2DBF71</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>Kingfisher</string>
+			<key>target</key>
+			<string>1DE93A359FA21F91DFBE81309E851A4A</string>
+			<key>targetProxy</key>
+			<string>FB9D1C14F252608B2450AACC56CD530F</string>
+		</dict>
+		<key>446D1626901999C2A41F647F9503E9B8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>JSONModel+networking.h</string>
+			<key>path</key>
+			<string>JSONModel/JSONModelNetworking/JSONModel+networking.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4644F265653A3359D16AFB244F3ABA18</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Kingfisher.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>473A9085410554074ED17F48C4BB8308</key>
+		<dict>
+			<key>fileRef</key>
+			<string>232CC40B6BDED99579A8A76AF55C1F9B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>48E361B83A240A75FC183FCE235BFD12</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>JSONModelClassProperty.h</string>
+			<key>path</key>
+			<string>JSONModel/JSONModel/JSONModelClassProperty.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4B8ADB267798B95F3A45BD8BF59F582E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DA9DF46234FDDC633598CD8A1FCFF7D9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>4C9E06287831CE05D81002CA4BF57D4A</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>JSONModel.framework</string>
+			<key>path</key>
+			<string>JSONModel.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>4D13E64CD4493BD3D1796A098F9F2887</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-CitrusPay_Example.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4F484780A2D2FEB2ACE51E9795DAD554</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CF67E09E6323331E26777AB700F0950A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>51C0C16D4EE3008BBF09C4FB869707A6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>JSONHTTPClient.h</string>
+			<key>path</key>
+			<string>JSONModel/JSONModelNetworking/JSONHTTPClient.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>52898B04366490D0E3349B72BE8A1EF7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>549A406744CB04F0AC43F1F617EA2282</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BC4DC3D8EFEFCB57DD743BA66A83A5F6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>56E161F5D79CAC396807F181808B05BD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ImageDownloader.swift</string>
+			<key>path</key>
+			<string>Sources/ImageDownloader.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>58456DBB2DF94860D1B17F581F215C0F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2987EA313803670EA59DCC0BAE09A1D4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>59EC3D900E25F58551BC964ED03E199B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-CitrusPay_Tests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5A9029F5B819AB7DDD80DF2ECD39B5FC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>KingfisherManager.swift</string>
+			<key>path</key>
+			<string>Sources/KingfisherManager.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5C8EB1DF441150A5A6A09B41575DBB00</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>987D9B7973C5B00A8BADA45C221E5911</string>
+				<string>98282F2CC48451062BB2C62E1119214B</string>
+				<string>3AC4303E403170FAEAD2944BE00317B1</string>
+				<string>390C603AA101253D9B5277DE17745C1C</string>
+				<string>3A7B983F88C3923222526CA46C10EFDC</string>
+				<string>23F80E93867E7BA7D65114E8F2CD2F4D</string>
+				<string>786BFE1801F360E6E5C335597062E99E</string>
+				<string>0C95E62FC2A62780ED90A1A2F888E950</string>
+				<string>C91B811CB594067DD20FBD9B7233E229</string>
+				<string>4D13E64CD4493BD3D1796A098F9F2887</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-CitrusPay_Example</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-CitrusPay_Example</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5EB92E7D051335EC3251AA30175D75F1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>48E361B83A240A75FC183FCE235BFD12</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>5F37ECDCB7D0344B5639D7510B53AEC2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Image.swift</string>
+			<key>path</key>
+			<string>Sources/Image.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6079548D9C2AAD1DE96FB5B772685A9D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>JSONValueTransformer.h</string>
+			<key>path</key>
+			<string>JSONModel/JSONModelTransformations/JSONValueTransformer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>608B13EC74F4761F896A65AB0056F809</key>
+		<dict>
+			<key>fileRef</key>
+			<string>82DB0B7F42447002598514D656257B23</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>614956C2B49D6917D655841D649DE87B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>JSONModel</string>
+			<key>target</key>
+			<string>AF21780C841830BE5AD3F34076925612</string>
+			<key>targetProxy</key>
+			<string>12292CF8428219681B06547BA11CF061</string>
+		</dict>
+		<key>6176CFCB6E145A40F9D6E9EB06B085E8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>RequestModifier.swift</string>
+			<key>path</key>
+			<string>Sources/RequestModifier.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>637183417614F3CB491BBCCAEDDE4978</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A5C3DA2EBA3F315EE24A2681AE6D6CF6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>64F7166E4BD73870C7D23560F417D492</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>JSONModel+networking.m</string>
+			<key>path</key>
+			<string>JSONModel/JSONModelNetworking/JSONModel+networking.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>66DF93D76BDE8BE1F4D21620D1000118</key>
+		<dict>
+			<key>fileRef</key>
+			<string>64F7166E4BD73870C7D23560F417D492</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>673E79FE0D8914CFCAC3A5D8DC816B2B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7BD1479AD71F58D1D2F867DCF2E13685</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>676976DA9493BCA8344A25E0C5F7CD22</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>D58E6FA00AD315F454371B9E0C70F8F6</string>
+				<string>3234DD06F193A555E7E649F219708FC0</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>6848E6D11B1DA5C59A40BD578A863266</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ImageTransition.swift</string>
+			<key>path</key>
+			<string>Sources/ImageTransition.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6A60DAA228804C4353CE90C340FB7F44</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E74535467450EF13A990D488F9801BDA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>6B61B68992E598D23F04A510752D0419</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Kingfisher.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6E7A432FC32D585D9FC4684A2C8B9E2B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3A7B983F88C3923222526CA46C10EFDC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>75C9F0ECC9C44F06D157939460DE1F1D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>764B06ED7E8C7DD21CDAE1E6AD64F972</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>CacheSerializer.swift</string>
+			<key>path</key>
+			<string>Sources/CacheSerializer.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>786BFE1801F360E6E5C335597062E99E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-CitrusPay_Example-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7B8A151B7A2D25CDFEA8638E651CC110</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5A9029F5B819AB7DDD80DF2ECD39B5FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>7BD1479AD71F58D1D2F867DCF2E13685</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Indicator.swift</string>
+			<key>path</key>
+			<string>Sources/Indicator.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7BFBAB1661B8DB39FD9A69DE522891A1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>KingfisherOptionsInfo.swift</string>
+			<key>path</key>
+			<string>Sources/KingfisherOptionsInfo.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7CE0B59BD95DD5DC7E35188CD80BAB78</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BC4DC3D8EFEFCB57DD743BA66A83A5F6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7D565BAE344F83781B1387BD4D49BBAC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FF0A2195F1A423A7BBB355C97D307668</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>7DB346D0F39D3F0E887471402A8071AB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>93A4A3777CF96A4AAC1D13BA6DCCEA73</string>
+				<string>1BE97C42890FA2F1F94FD245F3BE5560</string>
+				<string>433CD3331B6C3787F473C941B61FC68F</string>
+				<string>BC14BBC2281700E6351A972C0CF4ADCF</string>
+				<string>3C642461BFD037BDFF84DD61EF37D873</string>
+				<string>06B242783F3EB4D41F7B5E3912BE082F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7E2F7B2BD75F79D60287A2C5AD6B2AE4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>764B06ED7E8C7DD21CDAE1E6AD64F972</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>7F22027E2551E8CF319F9ECF537CC3FC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>JSONValueTransformer.m</string>
+			<key>path</key>
+			<string>JSONModel/JSONModelTransformations/JSONValueTransformer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>80A55D79301B7A0A545E86E59CBC5AD1</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>88071127B0485A4AA9199E099BF1521D</string>
+				<string>AD029E613CD30D77F49E1F225D5A6560</string>
+				<string>7E2F7B2BD75F79D60287A2C5AD6B2AE4</string>
+				<string>58456DBB2DF94860D1B17F581F215C0F</string>
+				<string>ABC073FA748C7A15805FE22D532F86EE</string>
+				<string>FE66E490A313992B9907A76B796204E5</string>
+				<string>29B613B34FC3541D3592F0F9B46EA76A</string>
+				<string>17DC9E4778FFA0045691F7874EE1C970</string>
+				<string>9B24B9ED0DE3B626410FCD19FF1A0555</string>
+				<string>40B1F0B83147376D8E081AD11A04199A</string>
+				<string>BC2F2B3FE479832D3FA6ED9772F7D4F1</string>
+				<string>673E79FE0D8914CFCAC3A5D8DC816B2B</string>
+				<string>3C88B5F2FC837662043CC4D6B1FBF7B7</string>
+				<string>7D565BAE344F83781B1387BD4D49BBAC</string>
+				<string>7B8A151B7A2D25CDFEA8638E651CC110</string>
+				<string>44099DE61C3B44545FE77B523DE7A058</string>
+				<string>8C4E74539A53328A435A1169CAD1FF0E</string>
+				<string>D15F109E5DF859C88EB2EA3776A49F94</string>
+				<string>049858D9D05DE8CA426EB58C89C12A70</string>
+				<string>954CABA4AFFF5DF3653E6B518D64383B</string>
+				<string>EB95E6975870645FA86DDAA71CD56B28</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>8136A2972B0D33E5CEFAE5F403A84CA7</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>D0F33BD43DE0DA51638032ABFC252283</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/JSONModel/JSONModel-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/JSONModel/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/JSONModel/JSONModel.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_NAME</key>
+				<string>JSONModel</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>82DB0B7F42447002598514D656257B23</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>JSONModelClassProperty.m</string>
+			<key>path</key>
+			<string>JSONModel/JSONModel/JSONModelClassProperty.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>87306B4B3EDE2146AF7D1875436E9C16</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ImageProcessor.swift</string>
+			<key>path</key>
+			<string>Sources/ImageProcessor.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>88071127B0485A4AA9199E099BF1521D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0A0E5DF7E1E5B4DB4C022F9009B25792</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>8AB7A9D62C95B7DA55A229754F25A9B7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>4B8ADB267798B95F3A45BD8BF59F582E</string>
+				<string>3F380903DB180ADB51257848978DFD9B</string>
+				<string>A5A96A111F16C0C0EAB83B5AF2AF0D1E</string>
+				<string>66DF93D76BDE8BE1F4D21620D1000118</string>
+				<string>DC1B09A0207E63CC63C30873B9CF49F0</string>
+				<string>D63E37DF107588F3921A7F78F07AE8D3</string>
+				<string>608B13EC74F4761F896A65AB0056F809</string>
+				<string>E6051FE18E3062F3D86DB8862EFAA7EA</string>
+				<string>41421F77119106A453BFDBB4C280414B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>8C4E74539A53328A435A1169CAD1FF0E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6176CFCB6E145A40F9D6E9EB06B085E8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>8CAC7BAFBA6C602140E075AD4C0CDBB0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>JSONModelError.h</string>
+			<key>path</key>
+			<string>JSONModel/JSONModel/JSONModelError.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DBA83DA7327FE5D6C8D4AEA11B88256</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BC4DC3D8EFEFCB57DD743BA66A83A5F6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8EAF59A50EAEE2CFACDFDCD71AA2B18B</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>AFFB3289083D898E37309884EC94AB03</string>
+				<string>92867ECBC632E19C10E3174C72FE2E88</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>8EB3EF7AF63CE579E9CDC631AC244EE1</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods_CitrusPay_Example.framework</string>
+			<key>path</key>
+			<string>Pods-CitrusPay_Example.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>8F434965584418E382761CDEC37FA775</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6079548D9C2AAD1DE96FB5B772685A9D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>8F5B9534308EEFCE0FD7CF27D492FBDA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Box.swift</string>
+			<key>path</key>
+			<string>Sources/Box.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90A1B55CAA9AD61ABD636E6E4CB78B75</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0A0E5DF7E1E5B4DB4C022F9009B25792</string>
+				<string>8F5B9534308EEFCE0FD7CF27D492FBDA</string>
+				<string>764B06ED7E8C7DD21CDAE1E6AD64F972</string>
+				<string>2987EA313803670EA59DCC0BAE09A1D4</string>
+				<string>5F37ECDCB7D0344B5639D7510B53AEC2</string>
+				<string>019C933C505323BB7614E70FBC34F319</string>
+				<string>56E161F5D79CAC396807F181808B05BD</string>
+				<string>A18A7474BCB9AD950BB145472150FE53</string>
+				<string>87306B4B3EDE2146AF7D1875436E9C16</string>
+				<string>6848E6D11B1DA5C59A40BD578A863266</string>
+				<string>3E3C4928648380A0EE77361F26EAA347</string>
+				<string>7BD1479AD71F58D1D2F867DCF2E13685</string>
+				<string>241B075BF2B3E1FD390BF0A1F53A4F3C</string>
+				<string>FF0A2195F1A423A7BBB355C97D307668</string>
+				<string>5A9029F5B819AB7DDD80DF2ECD39B5FC</string>
+				<string>7BFBAB1661B8DB39FD9A69DE522891A1</string>
+				<string>6176CFCB6E145A40F9D6E9EB06B085E8</string>
+				<string>9667BA1BAF9DD46E671DFA80C3523BE1</string>
+				<string>956DEC56AE21DEA979D2F3F23B24BBB1</string>
+				<string>0FC82AF575B6BDB11427BBC5BFC36323</string>
+				<string>1A384B8BC4F9026BF99A84FA6C4E74D5</string>
+				<string>C16BFBAFB4BF514CC71D7D075E08DDA6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Kingfisher</string>
+			<key>path</key>
+			<string>Kingfisher</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>92867ECBC632E19C10E3174C72FE2E88</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>4D13E64CD4493BD3D1796A098F9F2887</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-CitrusPay_Example/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-CitrusPay_Example/Pods-CitrusPay_Example.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_CitrusPay_Example</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>9314F1B0442B5AF6E0F373BD367B7966</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>JSONModel</string>
+			<key>target</key>
+			<string>AF21780C841830BE5AD3F34076925612</string>
+			<key>targetProxy</key>
+			<string>B8D835084CC28E93360EE5C7555A19E0</string>
+		</dict>
+		<key>93A4A3777CF96A4AAC1D13BA6DCCEA73</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>text.script.ruby</string>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>Podfile</string>
+			<key>path</key>
+			<string>../Podfile</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.ruby</string>
+		</dict>
+		<key>954CABA4AFFF5DF3653E6B518D64383B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FC82AF575B6BDB11427BBC5BFC36323</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>956DEC56AE21DEA979D2F3F23B24BBB1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>String+MD5.swift</string>
+			<key>path</key>
+			<string>Sources/String+MD5.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9667BA1BAF9DD46E671DFA80C3523BE1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Resource.swift</string>
+			<key>path</key>
+			<string>Sources/Resource.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>98282F2CC48451062BB2C62E1119214B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods-CitrusPay_Example.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>987D9B7973C5B00A8BADA45C221E5911</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9B24B9ED0DE3B626410FCD19FF1A0555</key>
+		<dict>
+			<key>fileRef</key>
+			<string>87306B4B3EDE2146AF7D1875436E9C16</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>9BF4E9B035E6723ACCE68BC194994649</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CitrusGraphics.framework</string>
+			<key>path</key>
+			<string>Framework/graphics-sdk/CitrusGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9FBD390C5CC3A1A4384C033729F70A05</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>42EB934CEC5218EC0B3C89BB769F1742</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A18A7474BCB9AD950BB145472150FE53</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ImagePrefetcher.swift</string>
+			<key>path</key>
+			<string>Sources/ImagePrefetcher.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A5A96A111F16C0C0EAB83B5AF2AF0D1E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A8CDCC83A8FE4C2C8E377A8774F293AB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>A5C3DA2EBA3F315EE24A2681AE6D6CF6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>JSONModel.h</string>
+			<key>path</key>
+			<string>JSONModel/JSONModel/JSONModel.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A8CDCC83A8FE4C2C8E377A8774F293AB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>JSONKeyMapper.m</string>
+			<key>path</key>
+			<string>JSONModel/JSONModelTransformations/JSONKeyMapper.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ABA552BC466798001C46A700832F642E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-CitrusPay_Tests-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ABC073FA748C7A15805FE22D532F86EE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5F37ECDCB7D0344B5639D7510B53AEC2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>AD029E613CD30D77F49E1F225D5A6560</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8F5B9534308EEFCE0FD7CF27D492FBDA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>AE50C1ECA59039B9450BEFB132FCCE89</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-CitrusPay_Tests-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF21780C841830BE5AD3F34076925612</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>EA4FF01377840F6F85F8671B6E0F48AE</string>
+			<key>buildPhases</key>
+			<array>
+				<string>8AB7A9D62C95B7DA55A229754F25A9B7</string>
+				<string>9FBD390C5CC3A1A4384C033729F70A05</string>
+				<string>C00683FD4CF09551BDE6CC46D0934FEA</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>JSONModel</string>
+			<key>productName</key>
+			<string>JSONModel</string>
+			<key>productReference</key>
+			<string>4C9E06287831CE05D81002CA4BF57D4A</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>AFCA43F228DE44AFEE8B084F86F22F50</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-CitrusPay_Tests-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AFFB3289083D898E37309884EC94AB03</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>C91B811CB594067DD20FBD9B7233E229</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-CitrusPay_Example/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-CitrusPay_Example/Pods-CitrusPay_Example.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_CitrusPay_Example</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>B3880FF21BAAEAF47D2F93D6D1EB0FE8</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>8EAF59A50EAEE2CFACDFDCD71AA2B18B</string>
+			<key>buildPhases</key>
+			<array>
+				<string>F77A42037DC70F46A69CF76A941D3B29</string>
+				<string>B5802F907237797AD4F5156AE969B4A3</string>
+				<string>07E5F6C5B9CBC9295FE6D7AF4585BFB6</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>614956C2B49D6917D655841D649DE87B</string>
+				<string>4070952ABB8BBF8D336921BC505551C0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-CitrusPay_Example</string>
+			<key>productName</key>
+			<string>Pods-CitrusPay_Example</string>
+			<key>productReference</key>
+			<string>8EB3EF7AF63CE579E9CDC631AC244EE1</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>B5802F907237797AD4F5156AE969B4A3</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>7CE0B59BD95DD5DC7E35188CD80BAB78</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B77916B5136117838210ED8AC0E4121B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>JSONModelError.m</string>
+			<key>path</key>
+			<string>JSONModel/JSONModel/JSONModelError.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B8D835084CC28E93360EE5C7555A19E0</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>AF21780C841830BE5AD3F34076925612</string>
+			<key>remoteInfo</key>
+			<string>JSONModel</string>
+		</dict>
+		<key>BC14BBC2281700E6351A972C0CF4ADCF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D55CF325196BD3D6AC018F20728348FF</string>
+				<string>37FB09F090989434B674E97A78B449F0</string>
+				<string>90A1B55CAA9AD61ABD636E6E4CB78B75</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BC2F2B3FE479832D3FA6ED9772F7D4F1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3E3C4928648380A0EE77361F26EAA347</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>BC4DC3D8EFEFCB57DD743BA66A83A5F6</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>C00683FD4CF09551BDE6CC46D0934FEA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6A60DAA228804C4353CE90C340FB7F44</string>
+				<string>CA9CD39BE80E0E7FDD51FA69C60270C0</string>
+				<string>DEB0581461CF7CD8638C0DD13B223DDD</string>
+				<string>0956430991227608EF86C94C3AB303E3</string>
+				<string>4F484780A2D2FEB2ACE51E9795DAD554</string>
+				<string>637183417614F3CB491BBCCAEDDE4978</string>
+				<string>5EB92E7D051335EC3251AA30175D75F1</string>
+				<string>E77197A1DFF66DD13F9C71E06DE29F28</string>
+				<string>EC149E10A991ED3B522644AD9EEABF95</string>
+				<string>8F434965584418E382761CDEC37FA775</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C07D2A8B30A1C35A24C6B9D689290840</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>EE2F34B0BA1B34C7A826B60ED1F34F46</string>
+				<string>D96A6C6E1676F9832AA3BE49E22AAEBA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C16BFBAFB4BF514CC71D7D075E08DDA6</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>75C9F0ECC9C44F06D157939460DE1F1D</string>
+				<string>6B61B68992E598D23F04A510752D0419</string>
+				<string>4644F265653A3359D16AFB244F3ABA18</string>
+				<string>EB06DD65C7295FE49E86C890381B7DF8</string>
+				<string>0165FC67E6AA86A9CCF271866EB686B2</string>
+				<string>1B6CDFB3860FB64A7855330A7C1E8EE5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/Kingfisher</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C7E474A03CAE21F1CB6046E7344C59BD</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>POD_CONFIGURATION_RELEASE=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>SYMROOT</key>
+				<string>${SRCROOT}/../build</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>C8319A9D31CA898258F0166D9E1F535E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>JSONModel.m</string>
+			<key>path</key>
+			<string>JSONModel/JSONModel/JSONModel.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C91B811CB594067DD20FBD9B7233E229</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-CitrusPay_Example.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CA9CD39BE80E0E7FDD51FA69C60270C0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>51C0C16D4EE3008BBF09C4FB869707A6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>CF67E09E6323331E26777AB700F0950A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>JSONModel-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D0B06D636AEBD04514BADBD74404F706</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1F2CD374A622184204A9F78FD17FC0C9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>CitrusPay</string>
+			<key>path</key>
+			<string>../../../../..</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D0F33BD43DE0DA51638032ABFC252283</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>JSONModel.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D15F109E5DF859C88EB2EA3776A49F94</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9667BA1BAF9DD46E671DFA80C3523BE1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>D41D8CD98F00B204E9800998ECF8427E</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0730</string>
+				<key>LastUpgradeCheck</key>
+				<string>0700</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>7DB346D0F39D3F0E887471402A8071AB</string>
+			<key>productRefGroup</key>
+			<string>3C642461BFD037BDFF84DD61EF37D873</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>AF21780C841830BE5AD3F34076925612</string>
+				<string>1DE93A359FA21F91DFBE81309E851A4A</string>
+				<string>B3880FF21BAAEAF47D2F93D6D1EB0FE8</string>
+				<string>1B5B612DDDF380A315E5E6D5F08E481C</string>
+			</array>
+		</dict>
+		<key>D4995DAD6A194A024486DF85FA2C9EB9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods-CitrusPay_Tests.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D55B75CF2FD223E0AEA8298C2FF6278B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>549A406744CB04F0AC43F1F617EA2282</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D55CF325196BD3D6AC018F20728348FF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E5FCB052A909AC323B9BAF2B3910E4DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>CitrusGraphics</string>
+			<key>path</key>
+			<string>CitrusGraphics</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D56EC4BD58D67BEC3D795C369FA4A957</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>1DE93A359FA21F91DFBE81309E851A4A</string>
+			<key>remoteInfo</key>
+			<string>Kingfisher</string>
+		</dict>
+		<key>D58E6FA00AD315F454371B9E0C70F8F6</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>59EC3D900E25F58551BC964ED03E199B</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-CitrusPay_Tests/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-CitrusPay_Tests/Pods-CitrusPay_Tests.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_CitrusPay_Tests</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>D63E37DF107588F3921A7F78F07AE8D3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C8319A9D31CA898258F0166D9E1F535E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>D7EECA421F1F7D3DB188F484D206DF23</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FB798D0480A904FCF736F830EBB7AD5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>D96A6C6E1676F9832AA3BE49E22AAEBA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>241B075BF2B3E1FD390BF0A1F53A4F3C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>DA8ADEBAE71284E12F89F27D5BC56923</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>JSONModel-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DA9DF46234FDDC633598CD8A1FCFF7D9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>JSONAPI.m</string>
+			<key>path</key>
+			<string>JSONModel/JSONModelNetworking/JSONAPI.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DC1B09A0207E63CC63C30873B9CF49F0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DA8ADEBAE71284E12F89F27D5BC56923</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DEB0581461CF7CD8638C0DD13B223DDD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>02042754CF83017C50B1279FD47D800C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>DECE2760A5B7FE89B9C9650F87BB7656</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0388C78FB6B9B1A866AE6A1F543F1C29</string>
+				<string>09AE72FB5C94DBAF733F7CA734B3E7CE</string>
+				<string>D0F33BD43DE0DA51638032ABFC252283</string>
+				<string>DA8ADEBAE71284E12F89F27D5BC56923</string>
+				<string>F7488AE8AD394F5CCE9EDD8C3963D11F</string>
+				<string>CF67E09E6323331E26777AB700F0950A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/JSONModel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E147E42DEA71AA66C8E19955BACD265A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AFCA43F228DE44AFEE8B084F86F22F50</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E5BE6EC0F921667A41B7A6DBF0D630BA</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Kingfisher.framework</string>
+			<key>path</key>
+			<string>Kingfisher.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>E5FCB052A909AC323B9BAF2B3910E4DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9BF4E9B035E6723ACCE68BC194994649</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E6051FE18E3062F3D86DB8862EFAA7EA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B77916B5136117838210ED8AC0E4121B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>E74535467450EF13A990D488F9801BDA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>JSONAPI.h</string>
+			<key>path</key>
+			<string>JSONModel/JSONModelNetworking/JSONAPI.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E77197A1DFF66DD13F9C71E06DE29F28</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8CAC7BAFBA6C602140E075AD4C0CDBB0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>E7AF7602D0FB051E619B1CC6C0D10D90</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>D0F33BD43DE0DA51638032ABFC252283</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/JSONModel/JSONModel-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/JSONModel/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/JSONModel/JSONModel.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>JSONModel</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>EA4FF01377840F6F85F8671B6E0F48AE</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>E7AF7602D0FB051E619B1CC6C0D10D90</string>
+				<string>8136A2972B0D33E5CEFAE5F403A84CA7</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>EB06DD65C7295FE49E86C890381B7DF8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Kingfisher-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EB95E6975870645FA86DDAA71CD56B28</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1A384B8BC4F9026BF99A84FA6C4E74D5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>EC149E10A991ED3B522644AD9EEABF95</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1F5EB2D4B6EA6503E13F7EC7F79BB15F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>EDD49773F6A5CF9705446A0493AEC0DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>52898B04366490D0E3349B72BE8A1EF7</string>
+				<string>D4995DAD6A194A024486DF85FA2C9EB9</string>
+				<string>F759BDFEC581E26DFF235AC5CE869045</string>
+				<string>ABA552BC466798001C46A700832F642E</string>
+				<string>AFCA43F228DE44AFEE8B084F86F22F50</string>
+				<string>AE50C1ECA59039B9450BEFB132FCCE89</string>
+				<string>186ADE827D444C5A65749C0048508F2A</string>
+				<string>0FB798D0480A904FCF736F830EBB7AD5</string>
+				<string>59EC3D900E25F58551BC964ED03E199B</string>
+				<string>24B78D53B739ADB23420C9CDE799C324</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-CitrusPay_Tests</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-CitrusPay_Tests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EE2F34B0BA1B34C7A826B60ED1F34F46</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1B6CDFB3860FB64A7855330A7C1E8EE5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>EFC7B4A41F0721AD4E4279CDC437F54D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>JSONHTTPClient.m</string>
+			<key>path</key>
+			<string>JSONModel/JSONModelNetworking/JSONHTTPClient.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F7488AE8AD394F5CCE9EDD8C3963D11F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>JSONModel-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F759BDFEC581E26DFF235AC5CE869045</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-CitrusPay_Tests-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F77A42037DC70F46A69CF76A941D3B29</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6E7A432FC32D585D9FC4684A2C8B9E2B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>FB9D1C14F252608B2450AACC56CD530F</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>1DE93A359FA21F91DFBE81309E851A4A</string>
+			<key>remoteInfo</key>
+			<string>Kingfisher</string>
+		</dict>
+		<key>FE66E490A313992B9907A76B796204E5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>019C933C505323BB7614E70FBC34F319</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>FF0A2195F1A423A7BBB355C97D307668</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Kingfisher.swift</string>
+			<key>path</key>
+			<string>Sources/Kingfisher.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>D41D8CD98F00B204E9800998ECF8427E</string>
+</dict>
+</plist>

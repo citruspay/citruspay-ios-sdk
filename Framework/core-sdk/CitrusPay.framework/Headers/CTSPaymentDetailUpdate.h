@@ -45,26 +45,91 @@
 
 - (BOOL)addNetBanking:(CTSNetBankingUpdate*)netBankDetail;
 
+
+
+
+/**
+ Convinience method to help forming nb code
+ */
 -(void)addFakeNBCode;
 
+
+
+/**
+ validate the object
+
+ @return Error code
+ */
 -(CTSErrorCode)validate;
 
+
+
+/**
+ delete cvv field
+ */
 - (void)clearCVV;
 
+
+
+/**
+ to check if its tokenized
+
+ @return return YES if its tokenized payment
+ */
 -(BOOL)isTokenizedCard;
 
+
+
+/**
+ delete netbanking code from the object
+ */
 - (void)clearNetbankCode;
 
+
+
+/**
+ validate if the object is for tokenized payment
+
+ @return return error code
+ */
 -(CTSErrorCode)validateTokenized;
 
+
+
+/**
+ to check if payent is tokenized
+
+ @return return YES if payent object is for tokenized payment
+ */
 -(BOOL)isTokenized;
 
+
+
+/**
+ add dummy cvv and expiry for Maetro card
+ */
 -(void)dummyCVVAndExpiryIfMaestro;
 
+
+
+/**
+ only CC are alowed in amex
+ */
 -(void)amexCreditcardCorrectionIfNeeded;
 
+
+
+
+/**
+ correct card details for Amex and Maestro cards
+ */
 -(void)doCardCorrectionsIfNeeded;
 
 
+/**
+ Method to convert data to Blaze cards payment
+
+ @return BlazeCardPayment objct
+ */
 - (CTSBlazeCardPayment *)migrateToBlazeCardPaymentInfo;
 @end

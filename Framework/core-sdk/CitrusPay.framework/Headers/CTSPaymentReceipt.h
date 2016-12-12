@@ -16,4 +16,9 @@
  *   The CTSPaymentReceipt class' toDictionary object.
  */
 @property (strong) NSMutableDictionary *toDictionary;
+-(BOOL)isSuccess;
+-(NSString *)transactionStatus;
+-(NSString *)transactionId;
+-(NSString *)transactionMessage;
+-(NSString *)transactionRefNumber;
 @end

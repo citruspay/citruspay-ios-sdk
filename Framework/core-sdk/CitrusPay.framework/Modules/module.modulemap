@@ -4,3 +4,7 @@ framework module CitrusPay {
   export *
   module * { export * }
 }
+
+module CitrusPay.Swift {
+    header "CitrusPay-Swift.h"
+}

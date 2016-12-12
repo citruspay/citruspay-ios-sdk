@@ -61,7 +61,7 @@
             [self.indicatorView startAnimating];
             self.indicatorView.hidden = FALSE;
 
-            [proifleLayer requestUpdateProfileInformation:profile withCompletionHandler:^(NSError *error){
+            [[CTSProfileLayer fetchSharedProfileLayer] requestUpdateProfileInformation:profile withCompletionHandler:^(NSError *error){
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.indicatorView stopAnimating];
@@ -91,7 +91,7 @@
             [self.indicatorView startAnimating];
             self.indicatorView.hidden = FALSE;
 
-            [authLayer requestChangePasswordUserName:self.mobileTextField.text oldPassword:self.firstNameTextField.text newPassword:self.lastNameTextField.text completionHandler:^(NSString *responseString, NSError *error) {
+            [[CTSAuthLayer fetchSharedAuthLayer] requestChangePasswordUserName:self.mobileTextField.text oldPassword:self.firstNameTextField.text newPassword:self.lastNameTextField.text completionHandler:^(NSString *responseString, NSError *error) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.indicatorView stopAnimating];
                     self.indicatorView.hidden = TRUE;

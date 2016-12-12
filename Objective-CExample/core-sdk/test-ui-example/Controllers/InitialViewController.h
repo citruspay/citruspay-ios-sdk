@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseViewController.h"
 
-@interface InitialViewController : BaseViewController
-
+@interface InitialViewController : UIViewController
 @property (nonatomic , weak) IBOutlet UIButton *signupOptionOneButton;
 @property (nonatomic , weak) IBOutlet UIButton *signupOptionTwoButton;
 @property (nonatomic , weak) IBOutlet UIButton *signupOptionThreeButton;
-
+@property (nonatomic , weak) IBOutlet UILabel *versionLabel;
 @end

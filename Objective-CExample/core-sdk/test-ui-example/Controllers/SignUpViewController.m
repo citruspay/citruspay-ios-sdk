@@ -63,7 +63,7 @@
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resignKeyboard:)];
     [self.view addGestureRecognizer:tapRecognizer];
     
-    if (authLayer.requestSignInOauthToken.length != 0) {
+    if ([CTSAuthLayer fetchSharedAuthLayer].requestSignInOauthToken.length != 0) {
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:nil];
             return;
@@ -124,8 +124,42 @@
         [self.view endEditing:YES];
         self.indicatorView.hidden = FALSE;
         [self.indicatorView startAnimating];
-    
-    [authLayer requestMasterLink:self.userNameTextField.text  mobile:self.mobileTextField.text scope:scopeType completionHandler:^(CTSMasterLinkRes *linkResponse, NSError *error) {
+
+    [[CTSAuthLayer fetchSharedAuthLayer] requestMasterLink:self.userNameTextField.text  mobile:self.mobileTextField.text scope:scopeType completionHandler:^(CTSMasterLinkRes *linkResponse, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.indicatorView stopAnimating];
+           self.indicatorView.hidden = TRUE;
+       });
+        if (error) {
+            [UIUtility toastMessageOnScreen:[error localizedDescription]];
+       }
+       else{
+           
+           [UIUtility toastMessageOnScreen:linkResponse.userMessage];
+
+          if (linkResponse.siginType == CitrusSiginTypeLimited) {
+              dispatch_async(dispatch_get_main_queue(), ^{
+                    [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:self];
+                });
+            }
+            else{
+                
+               signInType = linkResponse.siginType;
+                responseMessage = linkResponse.userMessage;
+               
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self performSegueWithIdentifier:@"SignInScreenIdentifier" sender:self];
+                });
+            }
+           
+        }
+    }];
+   
+ /*
+    CTSUser *user = [[CTSUser alloc] init];
+    user.email = self.userNameTextField.text;
+    user.mobile = self.mobileTextField.text;
+    [[CTSAuthLayer fetchSharedAuthLayer] requestMasterLink:self.userNameTextField.text  mobile:self.mobileTextField.text scope:scopeType completionHandler:^(CTSMasterLinkRes *linkResponse, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.indicatorView stopAnimating];
             self.indicatorView.hidden = TRUE;
@@ -133,35 +167,33 @@
         if (error) {
             [UIUtility toastMessageOnScreen:[error localizedDescription]];
         }
-        else{
+        else {
             
-            [UIUtility toastMessageOnScreen:linkResponse.userMessage];
-
-            if (linkResponse.siginType == CitrusSiginTypeLimited) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:self];
-                });
-            }
-            else{
-                
-                signInType = linkResponse.siginType;
-                responseMessage = linkResponse.userMessage;
-                
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self performSegueWithIdentifier:@"SignInScreenIdentifier" sender:self];
-                });
-            }
-            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [UIUtility toastMessageOnScreen:linkResponse.userMessage];
+                [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:self];
+            });
         }
     }];
-    
-    
+  */
+  
 }
 
+-(void)didCompleteUserFind:(CTSMasterLinkRes *)linkResponse error:(NSError *)error{
+    LogTrace(@"complted the link proccess");
+
+
+}
+
+
+
+
+
+
+
+
 - (void)resignKeyboard:(UITapGestureRecognizer *)sender{
-    
     [self.view endEditing:YES];
-   
 }
 
 #pragma mark - StoryView Delegate Methods

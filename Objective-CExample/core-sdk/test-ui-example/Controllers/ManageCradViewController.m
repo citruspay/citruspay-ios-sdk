@@ -32,7 +32,7 @@
     self.indicatorView.hidden = FALSE;
     [self.indicatorView startAnimating];
     
-    [proifleLayer requestPaymentInformationWithCompletionHandler:^(CTSConsumerProfile * consumerProfile,
+    [[CTSProfileLayer fetchSharedProfileLayer] requestPaymentInformationWithCompletionHandler:^(CTSConsumerProfile * consumerProfile,
                                                                    NSError * error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.indicatorView stopAnimating];
@@ -46,17 +46,12 @@
         else {
             // Your code to handle success.
             
-            // get saved NetBanking payment options
-            NSArray  *netBankingArray = [consumerProfile getSavedNBPaymentOptions];
-            NSLog(@"netBankingArray %@", netBankingArray);
-            
-            // get saved Debit cards payment options
-            NSArray  *debitCardArray = [consumerProfile getSavedDCPaymentOptions];
-            NSLog(@"debitCardArray %@", debitCardArray);
-            
-            // get saved Credit cards payment options
-            NSArray  *creditCardArray = [consumerProfile getSavedCCPaymentOptions];
-            NSLog(@"creditCardArray %@", creditCardArray);
+//            // get saved NetBanking payment options
+//            NSArray  *netBankingArray = [consumerProfile getSavedNBPaymentOptions];
+//            // get saved Debit cards payment options
+//            NSArray  *debitCardArray = [consumerProfile getSavedDCPaymentOptions];
+//            // get saved Credit cards payment options
+//            NSArray  *creditCardArray = [consumerProfile getSavedCCPaymentOptions];
             
             
             NSMutableString *toastString = [[NSMutableString alloc] init];
@@ -73,9 +68,6 @@
                         [_savedAccountsArray addObject:dict];
                     }
                 }
-                NSLog(@"saveCardsArray %@", _savedAccountsArray);
-                NSLog(@"_balancesArray %@", _balancesArray);
-                
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.saveCardsTableView reloadData];
                 });
@@ -187,13 +179,16 @@
                 }
             }
             
-            dispatch_async(dispatch_get_main_queue(), ^{
+            dispatch_async(dispatch_get_main_queue(), ^{                
                 if ([accountsDict[@"paymentMode"] isEqualToString:@"NET_BANKING"]) {
-                    ((UIImageView *) [cell.contentView viewWithTag:1005]).image = [CTSUtility fetchBankLogoImageByBankName:(![accountsDict[@"bank"]  isEqual: [NSNull null]]) ? accountsDict[@"bank"] : @"" forParentView:self.view];
+                    [((UIImageView *) [cell.contentView viewWithTag:1005]) setSystemActivity];
+                    [((UIImageView *) [cell.contentView viewWithTag:1005]) loadCitrusBankWithBankCID:(![accountsDict[@"issuerCode"]  isEqual: [NSNull null]]) ? accountsDict[@"issuerCode"] : @""];
                 }
                 else {
-                    ((UIImageView *) [cell.contentView viewWithTag:1005]).image = [CTSUtility fetchSchemeImageBySchemeType:(![accountsDict[@"cardScheme"]  isEqual: [NSNull null]]) ? accountsDict[@"cardScheme"] : @"" forParentView:self.view];
+                    [((UIImageView *) [cell.contentView viewWithTag:1005]) setSystemActivity];
+                    [((UIImageView *) [cell.contentView viewWithTag:1005]) loadCitrusCardWithCardScheme:(![accountsDict[@"cardScheme"]  isEqual: [NSNull null]]) ? accountsDict[@"cardScheme"] : @""];
                 }
+
             });
             
         }
@@ -223,7 +218,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         //delete saved card
         NSDictionary  *dict = [_savedAccountsArray objectAtIndex:indexPath.row];
-        [proifleLayer requestDeleteCardWithToken:[dict valueForKey:@"savedCardToken"]
+        [[CTSProfileLayer fetchSharedProfileLayer] requestDeleteCardWithToken:[dict valueForKey:@"savedCardToken"]
                            withCompletionHandler:^(NSError *error) {
                                
                                if (error == nil) {

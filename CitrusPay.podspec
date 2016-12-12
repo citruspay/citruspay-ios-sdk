@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = "CitrusPay"
-s.version          = "4.0.2"
+s.version          = "4.1.0"
 s.summary          = "CitrusPay iOS SDK."
 
 s.description      = "Enhanced CitrusPay iOS SDK for Superior Native Payments Experience."
@@ -28,6 +28,7 @@ s.vendored_frameworks  = 'Framework/core-sdk/CitrusPay.framework'
 #s.resource = "Framework/core-sdk/CitrusPay.bundle"
 
 s.dependency 'JSONModel'
+s.dependency 'CitrusGraphics'
 
 #s.framework    = 'SystemConfiguration'
 end

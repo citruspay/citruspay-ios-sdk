@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "CTSObject.h"
 
+
+
+/**
+ netbanking payment request data
+ */
 @interface CTSNetBankingUpdate : CTSObject
 @property(strong, readonly) NSString* type;
 @property(strong ) NSString* name; //user defined name
