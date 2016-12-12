@@ -12,6 +12,11 @@
 
 // MLC: model layer constants
 
+typedef enum{
+    CTSWalletScopeLimited,
+    CTSWalletScopeFull
+} CTSWalletScope;
+
 /**
  PasswordUseType enum
  */
@@ -27,6 +32,8 @@ typedef enum SignOutResponseState {
   SIGNOUT_SUCCESFUL,
   SIGNOUT_WAS_NOT_SIGNED_IN
 } SignOutResponseState;
+//
+
 
 
 /**

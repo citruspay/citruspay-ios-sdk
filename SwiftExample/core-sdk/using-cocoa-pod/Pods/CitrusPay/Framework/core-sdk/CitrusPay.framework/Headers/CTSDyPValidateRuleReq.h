@@ -10,6 +10,11 @@
 #import "CTSAmount.h"
 #import "CTSDyPPaymentInfo.h"
 
+
+
+/**
+ Dynamic pricing Rule validate data
+ */
 @interface CTSDyPValidateRuleReq : JSONModel
 @property(nonatomic,strong)NSString<Optional>* ruleName,*signature,*merchantTransactionId,*merchantAccessKey,*phone,*userType;
 @property(nonatomic,strong)NSString<Optional> *email;

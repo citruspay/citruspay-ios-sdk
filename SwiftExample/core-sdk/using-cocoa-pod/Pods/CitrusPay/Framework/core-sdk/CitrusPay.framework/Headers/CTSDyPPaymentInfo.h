@@ -14,6 +14,11 @@
 #define OPTION_SAVED_MODE @"CITRUS_WALLET"
 
 
+
+/**
+ Dynamic pricing payment info
+ Class is used to select the dynamic pricng payment type
+ */
 @interface CTSDyPPaymentInfo : JSONModel
 @property(nonatomic,strong)NSString<Optional>* cardNo,*cardType,*issuerId,*paymentMode,*paymentToken;
 

@@ -12,6 +12,10 @@
 #import "CTSUserAddress.h"
 #import "CTSContactUpdate.h"
 
+
+/**
+ Data Class for Userdetails
+ */
 @interface CTSUserDetails : JSONModel
 @property(strong) NSString<Optional>* email;
 @property(strong) NSString<Optional>* firstName;
@@ -19,6 +23,16 @@
 @property(strong) NSString<Optional>* mobileNo;
 @property(strong) CTSUserAddress<Optional>* address;
 
+
+
+/**
+ Initilizer
+
+ @param contact ContactObject
+ @param address Adress Object
+
+ @return
+ */
 - (instancetype)initWith:(CTSContactUpdate*)contact
                  address:(CTSUserAddress*)address;
 

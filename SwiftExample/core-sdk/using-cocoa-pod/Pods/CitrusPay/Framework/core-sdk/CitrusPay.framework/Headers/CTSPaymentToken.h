@@ -10,6 +10,10 @@
 
 @class CTSPaymentMode;
 
+
+/**
+ Internal dta structure for the payment request
+ */
 @interface CTSPaymentToken : JSONModel
 @property(strong) CTSPaymentMode<Optional>* paymentMode;
 @property(strong) NSString<Optional>* type;

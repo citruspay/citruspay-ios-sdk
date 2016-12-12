@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+
+
+/**
+ Autoload amount data class
+ */
 @interface CTSAutoLoad : NSObject
 @property (atomic,strong)NSString *autoLoadAmt;
 @property (atomic,strong)NSString *thresholdAmount;

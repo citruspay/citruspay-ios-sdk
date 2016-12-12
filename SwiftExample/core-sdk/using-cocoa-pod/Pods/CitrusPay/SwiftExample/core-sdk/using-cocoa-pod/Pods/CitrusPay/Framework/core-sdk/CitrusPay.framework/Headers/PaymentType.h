@@ -143,7 +143,7 @@
  */
 + (PaymentType *)PGPayment:(NSString *)amount
                    billUrl:(NSString *)billUrl
-             paymentOption:(CTSPaymentOptions <Optional> *)paymentOption
+             paymentOption:(CTSPaymentOptions *)paymentOption
                    contact:(CTSContactUpdate <Optional> *)userContact
                    address:(CTSUserAddress <Optional> *)userAddress;
 
@@ -160,7 +160,7 @@
  */
 + (PaymentType *)PGPayment:(NSString *)amount
                 billObject:(CTSBill *)billObject
-             paymentOption:(CTSPaymentOptions <Optional> *)paymentOption
+             paymentOption:(CTSPaymentOptions *)paymentOption
                    contact:(CTSContactUpdate <Optional> *)userContact
                    address:(CTSUserAddress <Optional> *)userAddress;
 
@@ -179,8 +179,8 @@
  */
 + (PaymentType *)performDynamicPricing:(NSString *)amount
                                billUrl:(NSString *)billUrl
-                         paymentOption:(CTSPaymentOptions <Optional> *)paymentOption
-                              ruleInfo:(CTSRuleInfo <Optional> *)ruleInfo
+                         paymentOption:(CTSPaymentOptions *)paymentOption
+                              ruleInfo:(CTSRuleInfo *)ruleInfo
                            extraParams:(NSDictionary <Optional> *)extraParams
                                contact:(CTSContactUpdate <Optional> *)userContact
                                address:(CTSUserAddress <Optional> *)userAddress;
@@ -200,8 +200,8 @@
  */
 + (PaymentType *)performDynamicPricing:(NSString *)amount
                             billObject:(CTSBill *)billObject
-                         paymentOption:(CTSPaymentOptions <Optional> *)paymentOption
-                              ruleInfo:(CTSRuleInfo <Optional> *)ruleInfo
+                         paymentOption:(CTSPaymentOptions *)paymentOption
+                              ruleInfo:(CTSRuleInfo *)ruleInfo
                            extraParams:(NSDictionary <Optional> *)extraParams
                                contact:(CTSContactUpdate <Optional> *)userContact
                                address:(CTSUserAddress <Optional> *)userAddress;
@@ -262,7 +262,7 @@
  */
 + (PaymentType *)loadMoney:(NSString *)amount
                  returnUrl:(NSString *)returnUrl
-             paymentOption:(CTSPaymentOptions <Optional> *)paymentOption
+             paymentOption:(CTSPaymentOptions *)paymentOption
               customParams:(NSDictionary <Optional> *)customParams
                    contact:(CTSContactUpdate <Optional> *)userContact
                    address:(CTSUserAddress <Optional> *)userAddress;

@@ -29,10 +29,10 @@ CitrusPay iOS SDK broadly offers following features.
 + Dynamic Assets available to module for their assets requirements
 + SDK have both default & low resolution image for it which will be replaced by high resolution image once asset is downloaded and cached based on device specification
 
-####The full SDK [ChangeLog](https://github.com/citruspay/citruspay-ios-sdk/wiki/ChangeLog) is also available
+####The full SDK [ChangeLog](https://github.com/citruspay/citruspay-ios-sdk/wiki/5.-ChangeLog) is also available
 
 ####Migration from 3.0.x to 3.1.x or higher
-To migrate your integration from Citrus 3.0.x to 3.1.x or higher, please go through the [migration instructions](https://github.com/citruspay/citruspay-ios-sdk/wiki/5-Migration-From-V-3.0.x-to-V-3.1.x)
+To migrate your integration from Citrus 3.0.x to 3.1.x or higher, please go through the [migration instructions](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.-Migration-From-V-3.0.x-to-V-3.1.x)
 
 ## Example Project
 
@@ -166,7 +166,7 @@ to the files in which you want to use this framework.
 Once you prepared, continue to have a look at the Documentation to see how to use CitrusPay.
 
 ## Documentation
-HTML documentation is hosted on our [CitrusPay Developer Guide](http://developers.citruspay.com/ios/iosReg.html).
+HTML documentation is hosted on our [CitrusPay Developer Guide](https://developers.citruspay.com/doc/integrations).
 
 Git Wiki documentation is available on the [Git Wiki Documentation](https://github.com/citruspay/citruspay-ios-sdk/wiki).
 

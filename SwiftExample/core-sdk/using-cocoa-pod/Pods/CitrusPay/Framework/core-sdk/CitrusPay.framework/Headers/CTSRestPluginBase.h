@@ -35,6 +35,7 @@
 baseUrl:(NSString*)baseUrl;
 - (void)addCallback:(id)callBack forRequestId:(int)reqId;
 - (id)retrieveAndRemoveCallbackForReqId:(int)reqId;
+- (id)retrieveCallbackForReqId:(int)reqId;
 -(void)setKeyStore:(CTSKeyStore *)keyStoreArg;
 - (void)cacheData:(id)object key:(NSString *)key;
 - (id)fetchCachedDataForKey:(NSString *)key;

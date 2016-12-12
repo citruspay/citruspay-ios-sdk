@@ -11,6 +11,10 @@
 #import "CTSUserDetails.h"
 #import <JSONModel/JSONModel.h>
 
+
+/**
+ CTSPaymentRequest Payment request data
+ */
 @interface CTSPaymentRequest : JSONModel
 @property(strong) CTSAmount* amount;
 @property(strong) NSString<Optional>* merchantAccessKey;

@@ -10,7 +10,6 @@
 
 #import "Version.h"
 
-
 /**
  * Set this switch to  enable or disable logging capabilities.
  * This can be set either here or via the compiler build setting
@@ -106,27 +105,27 @@ LOG_FORMAT_NO_LOCATION(fmt, lvl, ##__VA_ARGS__)
 //#endif
 
 // Info logging - for general, non-performance affecting information messages
-#if defined(LOGGING_LEVEL_INFO) && LOGGING_LEVEL_INFO
-#define LogInfo(fmt, ...) LOG_FORMAT(fmt, @"CitrusPay info", ##__VA_ARGS__)
-#else
-#define LogInfo(...)
-#endif
+//#if defined(LOGGING_LEVEL_INFO) && LOGGING_LEVEL_INFO
+//#define LogInfo(fmt, ...) LOG_FORMAT(fmt, @"CitrusPay info", ##__VA_ARGS__)
+//#else
+//#define LogInfo(...)
+//#endif
 
 // Error logging - only when there is an error to be logged
-#if defined(LOGGING_LEVEL_ERROR) && LOGGING_LEVEL_ERROR
-#define LogError(fmt, ...) LOG_FORMAT(fmt, @"CitrusPay ***ERROR***", ##__VA_ARGS__)
-#else
-#define LogError(...)
-#endif
+//#if defined(LOGGING_LEVEL_ERROR) && LOGGING_LEVEL_ERROR
+//#define LogError(fmt, ...) LOG_FORMAT(fmt, @"CitrusPay ***ERROR***", ##__VA_ARGS__)
+//#else
+//#define LogError(...)
+//#endif
 
 // Debug logging - use only temporarily for highlighting and tracking down
 // problems
-#if defined(LOGGING_LEVEL_DEBUG) && LOGGING_LEVEL_DEBUG
-#define LogDebug(fmt, ...) LOG_FORMAT(fmt, @"CitrusPay DEBUG", ##__VA_ARGS__)
-#else
-#define LogDebug(...)
-
-#endif
+//#if defined(LOGGING_LEVEL_DEBUG) && LOGGING_LEVEL_DEBUG
+//#define LogDebug(fmt, ...) LOG_FORMAT(fmt, @"CitrusPay DEBUG", ##__VA_ARGS__)
+//#else
+//#define LogDebug(...)
+//
+//#endif
 
 #define ENTRY_LOG LogTrace(@"%s ENTRY CitrusPay", __PRETTY_FUNCTION__);
 #define EXIT_LOG LogTrace(@"%s EXIT CitrusPay", __PRETTY_FUNCTION__);
@@ -134,4 +133,15 @@ LOG_FORMAT_NO_LOCATION(fmt, lvl, ##__VA_ARGS__)
 
 @interface UserLogging : NSObject
 void LogTrace(NSString *format,...);
+
+void LogVerbose(NSString *format,...);
+void LogDebug(NSString *format,...);
+void LogInfo(NSString *format,...);
+void LogWarning(NSString *format,...);
+void LogError(NSString *format,...);
+void LogSevere(NSString *format,...);
+
+void LogInfo_LazyPay(NSString *format,...);
+void LogError_LazyPay(NSString *format,...);
+void LogProperties_LazyPay(id object);
 @end

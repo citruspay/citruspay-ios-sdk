@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#import "CTSCardBinJSON.h"
+
 #import "CTSRestPluginBase.h"
 #import "CTSRuleInfo.h"
 #import "CTSAuthLayer.h"
@@ -30,7 +32,6 @@
 #import "CTSPrepaidPayResp.h"
 #import "CTSPaymentRequest.h"
 #import "HVDOverlay.h"
-
 #import "CTSSimpliChargeDistribution.h"
 #import "CTSPaymentOptions.h"
 #import "CTSPaymentReceipt.h"
@@ -38,7 +39,6 @@
 #import "CTSLoadAndPayRes.h"
 #import "CTSLoadMoney.h"
 #import "CTSAutoLoad.h"
-
 #import "PaymentType.h"
 
 /// Class Models.
@@ -297,6 +297,54 @@ didCashoutToBank:(CTSCashoutToBankRes *)cashoutToBankRes
 @end
 
 
+// CallBack Handlers
+/**
+ *   The CTSPaymentLayer class' CTSSimpliPayCompletionHandler CallBack.
+ *
+ *  @return The Newly created paymentReceipt, error object.
+ */
+typedef void (^CTSCardBinServiceCompletionHandler)(CTSCardBinJSON *cardBinJSON, NSError *error);
+
+/**
+ *   The CTSPaymentLayer class' CTSSimpliPayCompletionHandler CallBack.
+ *
+ *  @return The Newly created paymentReceipt, error object.
+ */
+typedef void (^CTSSimpliPayCompletionHandler)(CTSPaymentReceipt *paymentReceipt,
+NSError *error);
+
+/**
+ *   The CTSPaymentLayer class' CTSPaymentDistributionCompletionHandler CallBack.
+ *
+ *  @return The Newly created amountDistribution, error object.
+ */
+typedef void (^CTSPaymentDistributionCompletionHandler)(CTSSimpliChargeDistribution *amountDistribution,
+NSError *error);
+
+/**
+ *   The CTSPaymentLayer class' ASGetAutoloadSubsCallback CallBack.
+ *
+ *  @return The Newly created autoloadSubscriptions, error object.
+ */
+typedef void (^ASGetAutoloadSubsCallback)(CTSAutoLoadSubGetResp* autoloadSubscriptions,
+NSError* error);
+
+/**
+ *   The CTSPaymentLayer class' ASAutoLoadCallback CallBack.
+ *
+ *  @return The Newly created autoloadResponse, error object.
+ */
+typedef void (^ASAutoLoadCallback)( CTSAutoLoadSubResp *autoloadResponse,
+NSError* error);
+
+/**
+ *   The CTSPaymentLayer class' ASLoadAndSubscribeCallback CallBack.
+ *
+ *  @return The Newly created loadAndSubscribe, error object.
+ */
+typedef void (^ASLoadAndSubscribeCallback)(CTSLoadAndPayRes* loadAndSubscribe,
+NSError* error);
+
 /**
  *   The CTSPaymentLayer class' ASMakeUserPaymentCallBack CallBack.
  *
@@ -423,49 +471,6 @@ typedef void (^ASCardBinServiceCallback)(CTSCardBinResponse* cardBinResponse
  */
 typedef void (^ASPrepaidPayCallback)(CTSPrepaidPayResp* prepaidPay,
                                      NSError* error);
-
-// CallBack Handlers
-
-/**
- *   The CTSPaymentLayer class' CTSSimpliPayCompletionHandler CallBack.
- *
- *  @return The Newly created paymentReceipt, error object.
- */
-typedef void (^CTSSimpliPayCompletionHandler)(CTSPaymentReceipt *paymentReceipt,
-                                             NSError *error);
-
-/**
- *   The CTSPaymentLayer class' CTSPaymentDistributionCompletionHandler CallBack.
- *
- *  @return The Newly created amountDistribution, error object.
- */
-typedef void (^CTSPaymentDistributionCompletionHandler)(CTSSimpliChargeDistribution *amountDistribution,
-                                                        NSError *error);
-
-/**
- *   The CTSPaymentLayer class' ASGetAutoloadSubsCallback CallBack.
- *
- *  @return The Newly created autoloadSubscriptions, error object.
- */
-typedef void (^ASGetAutoloadSubsCallback)(CTSAutoLoadSubGetResp* autoloadSubscriptions,
-                                          NSError* error);
-
-/**
- *   The CTSPaymentLayer class' ASAutoLoadCallback CallBack.
- *
- *  @return The Newly created autoloadResponse, error object.
- */
-typedef void (^ASAutoLoadCallback)( CTSAutoLoadSubResp *autoloadResponse,
-                                   NSError* error);
-
-/**
- *   The CTSPaymentLayer class' ASLoadAndSubscribeCallback CallBack.
- *
- *  @return The Newly created loadAndSubscribe, error object.
- */
-typedef void (^ASLoadAndSubscribeCallback)(CTSLoadAndPayRes* loadAndSubscribe,
-                                           NSError* error);
-
 /**
  *   CTSPaymentLayer.
  */
@@ -538,364 +543,28 @@ typedef void (^ASLoadAndSubscribeCallback)(CTSLoadAndPayRes* loadAndSubscribe,
  */
 - (instancetype)initWithKeyStore:(CTSKeyStore *)keystoreArg;
 
-
 /**
  ***************************************************************************************************************
- DEPRECATED Start
+ BIN SERVICE API'S
  ***************************************************************************************************************
  */
-
 /**
- *   requestChargeTokenizedPayment.
+ *  requestCardBINService -
  *
- *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
- *  @param contactInfo The contactInfo CTSContactUpdate.
- *  @param userAddress The userAddress CTSUserAddress.
- *  @param bill        The bill CTSBill.
- *  @param custParams  The custParams NSDictionary.
- *  @param callback    The callback ASMakeTokenizedPaymentCallBack.
+ *  @param firstSixCardNumber - The firstSixCardNumber String
+ *  @param completionHandler - return callback into cardBinJSON & error
  */
-- (void)requestChargeTokenizedPayment:(CTSPaymentDetailUpdate*)paymentInfo
-                          withContact:(CTSContactUpdate*)contactInfo
-                          withAddress:(CTSUserAddress*)userAddress
-                                 bill:(CTSBill *)bill
-                         customParams:(NSDictionary *)custParams
-                withCompletionHandler:(ASMakeTokenizedPaymentCallBack)callback DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:customParams:returnViewController:withCompletionHandler:");
+- (void)requestCardBINService:(NSString *)firstSixCardNumber
+            completionHandler:(CTSCardBinServiceCompletionHandler)completion;
 
 /**
- *   requestChargePayment.
+ *  requestAuthCardBINService -
  *
- *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
- *  @param contactInfo The contactInfo CTSContactUpdate.
- *  @param userAddress The userAddress CTSUserAddress.
- *  @param bill        The bill CTSBill.
- *  @param custParams  The custParams NSDictionary.
- *  @param callback    The callback ASMakeGuestPaymentCallBack.
+ *  @param firstSixCardNumber - The firstSixCardNumber String
+ *  @param completionHandler - return callback into cardBinJSON & error
  */
-- (void)requestChargePayment:(CTSPaymentDetailUpdate*)paymentInfo
-                 withContact:(CTSContactUpdate*)contactInfo
-                 withAddress:(CTSUserAddress*)userAddress
-                        bill:(CTSBill *)bill
-                customParams:(NSDictionary *)custParams
-       withCompletionHandler:(ASMakeGuestPaymentCallBack)callback
-DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:customParams:returnViewController:withCompletionHandler:");
-
-/**
- *   requestLoadMoneyInCitrusPay.
- *
- *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
- *  @param contactInfo The contactInfo CTSContactUpdate.
- *  @param userAddress The userAddress CTSUserAddress.
- *  @param amount      The amount NSString.
- *  @param returnUrl   The returnUrl NSString.
- *  @param custParams  The custParams NSDictionary.
- *  @param callback    The callback ASLoadMoneyCallBack.
- */
-- (void)requestLoadMoneyInCitrusPay:(CTSPaymentDetailUpdate *)paymentInfo
-                        withContact:(CTSContactUpdate*)contactInfo
-                        withAddress:(CTSUserAddress*)userAddress
-                             amount:(NSString *)amount
-                          returnUrl:(NSString *)returnUrl
-                       customParams:(NSDictionary *)custParams
-              withCompletionHandler:(ASLoadMoneyCallBack)callback  __attribute__((deprecated("Please use requestLoadMoney:returnURL:paymentOption:andParentViewController:completionHandler: instead")));
-
-//new prepaid pay api
-
-/**
- *   requestChargeCitrusWalletWithContact.
- *
- *  @param contactInfo The contactInfo CTSContactUpdate.
- *  @param userAddress The userAddress CTSUserAddress.
- *  @param bill        The bill CTSBill.
- *  @param controller  The controller UIViewController.
- *  @param callback    The callback ASCitruspayCallback.
- */
-- (void)requestChargeCitrusWalletWithContact:(CTSContactUpdate*)contactInfo
-                                     address:(CTSUserAddress*)userAddress
-                                        bill:(CTSBill *)bill
-                        returnViewController:(UIViewController *)controller
-                       withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestSimpliPay:billURL:paymentOption:useMVC:useCash:useDynamicPrice:ruleInfo:andParentViewController:completionHandler: instead")));
-
-
-//old prepaid pay api
-
-/**
- *   requestChargeCitrusCashWithContact.
- *
- *  @param contactInfo The contactInfo CTSContactUpdate.
- *  @param userAddress The userAddress CTSUserAddress.
- *  @param bill        The bill CTSBill.
- *  @param custParams  The custParams NSDictionary.
- *  @param controller  The controller UIViewController.
- *  @param callback    The callback ASCitruspayCallback.
- */
-- (void)requestChargeCitrusCashWithContact:(CTSContactUpdate*)contactInfo
-                               withAddress:(CTSUserAddress*)userAddress
-                                      bill:(CTSBill *)bill
-                              customParams:(NSDictionary *)custParams
-                      returnViewController:(UIViewController *)controller
-                     withCompletionHandler:(ASCitruspayCallback)callback DEPRECATED_MSG_ATTRIBUTE("Use requestChargeCitrusWalletWithContact:address:bill:customParams:returnViewController:withCompletionHandler: ");
-
-/**
- *   requestChargeTokenizedPayment.
- *
- *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
- *  @param contactInfo The contactInfo CTSContactUpdate.
- *  @param userAddress The userAddress CTSUserAddress.
- *  @param bill        The bill CTSBill.
- *  @param custParams  The custParams NSDictionary.
- *  @param controller  The controller UIViewController.
- *  @param callback    The callback ASCitruspayCallback.
- */
-- (void)requestChargeTokenizedPayment:(CTSPaymentDetailUpdate*)paymentInfo
-                          withContact:(CTSContactUpdate*)contactInfo
-                          withAddress:(CTSUserAddress*)userAddress
-                                 bill:(CTSBill *)bill
-                         customParams:(NSDictionary *)custParams
-                 returnViewController:(UIViewController *)controller
-                withCompletionHandler:(ASCitruspayCallback)callback DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:customParams:returnViewController:withCompletionHandler:");
-
-
-// single hop
-/**
- *   requestDirectChargePayment.
- *
- *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
- *  @param contactInfo The contactInfo CTSContactUpdate.
- *  @param userAddress The userAddress CTSUserAddress.
- *  @param bill        The bill CTSBill.
- *  @param controller  The controller UIViewController.
- *  @param callback    The Transaction Amount.
- */
-- (void)requestDirectChargePayment:(CTSPaymentDetailUpdate*)paymentInfo
-                       withContact:(CTSContactUpdate*)contactInfo
-                       withAddress:(CTSUserAddress*)userAddress
-                              bill:(CTSBill *)bill
-              returnViewController:(UIViewController *)controller
-             withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestSimpliPay:billURL:paymentOption:useMVC:useCash:useDynamicPrice:ruleInfo:andParentViewController:completionHandler: instead")));
-
-
-//moto call
-/**
- *   requestChargePayment.
- *
- *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
- *  @param contactInfo The contactInfo CTSContactUpdate.
- *  @param userAddress The userAddress CTSUserAddress.
- *  @param bill        The bill CTSBill.
- *  @param custParams  The Transaction Amount.
- *  @param controller  The controller UIViewController.
- *  @param callback    The Transaction Amount.
- */
-- (void)requestChargePayment:(CTSPaymentDetailUpdate*)paymentInfo
-                 withContact:(CTSContactUpdate*)contactInfo
-                 withAddress:(CTSUserAddress*)userAddress
-                        bill:(CTSBill *)bill
-                customParams:(NSDictionary *)custParams
-        returnViewController:(UIViewController *)controller
-       withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestSimpliPay:billURL:paymentOption:useMVC:useCash:useDynamicPrice:ruleInfo:andParentViewController:completionHandler: instead")));
-
-
-/**
- *   requestLoadMoneyInCitrusPay.
- *
- *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
- *  @param contactInfo The contactInfo CTSContactUpdate.
- *  @param userAddress The userAddress CTSUserAddress.
- *  @param amount      The amount NSString.
- *  @param returnUrl   The returnUrl NSString.
- *  @param custParams  The custParams NSDictionary.
- *  @param controller  The controller UIViewController.
- *  @param callback    The callback ASCitruspayCallback.
- */
-- (void)requestLoadMoneyInCitrusPay:(CTSPaymentDetailUpdate *)paymentInfo
-                        withContact:(CTSContactUpdate*)contactInfo
-                        withAddress:(CTSUserAddress*)userAddress
-                             amount:(NSString *)amount
-                          returnUrl:(NSString *)returnUrl
-                       customParams:(NSDictionary *)custParams
-               returnViewController:(UIViewController *)controller
-              withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestLoadMoney:returnURL:paymentOption:andParentViewController:completionHandler: instead")));
-
-
-/**
- *   requestChargeDynamicPricingContact.
- *
- *  @param contactInfo The contactInfo CTSContactUpdate.
- *  @param userAddress The userAddress CTSUserAddress.
- *  @param custParams  The custParams custParams.
- *  @param controller  The controller UIViewController.
- *  @param callback    The callback ASCitruspayCallback.
- */
-- (void)requestChargeDynamicPricingContact:(CTSContactUpdate*)contactInfo
-                               withAddress:(CTSUserAddress*)userAddress
-                              customParams:(NSDictionary *)custParams
-                      returnViewController:(UIViewController *)controller
-                     withCompletionHandler:(ASCitruspayCallback)callback;
-
-/**
- *   requestPerformDynamicPricingRule.
- *
- *  @param ruleInfo    The Transaction Amount.
- *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
- *  @param bill        The bill CTSBill.
- *  @param user        The user CTSUser.
- *  @param requestType The requestType DPRequestType.
- *  @param extraParams The extraParams NSDictionary.
- *  @param callback    The callback ASPerformDynamicPricingCallback.
- */
--(void)requestPerformDynamicPricingRule:(CTSRuleInfo *)ruleInfo
-                            paymentInfo:(CTSPaymentDetailUpdate *)payment
-                                   bill:(CTSBill *)bill
-                                   user:(CTSUser *)user
-                                   type:(DPRequestType)requestType
-                            extraParams:(NSDictionary *)extraParams
-                      completionHandler:(ASPerformDynamicPricingCallback)callback __attribute__((deprecated("Please use requestSimpliPay:billURL:paymentOption:useMVC:useCash:useDynamicPrice:ruleInfo:andParentViewController:completionHandler: instead")));
-
-
-/**
- *   requestPerformDynamicPricingRule.
- *
- *  @param ruleInfo    The Transaction Amount.
- *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
- *  @param billUrl     The billUrl NSString.
- *  @param user        The user CTSUser.
- *  @param extraParams The extraParams NSDictionary.
- *  @param callback    The callback ASPerformDynamicPricingCallback.
- */
--(void)requestPerformDynamicPricingRule:(CTSRuleInfo *)ruleInfo
-                            paymentInfo:(CTSPaymentDetailUpdate *)payment
-                                billUrl:(NSString *)billUrl
-                                   user:(CTSUser *)user
-                            extraParams:(NSDictionary *)extraParams
-                      completionHandler:(ASPerformDynamicPricingCallback)callback __attribute__((deprecated("Please use requestSimpliPay:billURL:paymentOption:useMVC:useCash:useDynamicPrice:ruleInfo:andParentViewController:completionHandler: instead")));
-
-/**
- *   requestPerformDynamicPricingRule.
- *
- *  @param ruleInfo    The Transaction Amount.
- *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
- *  @param bill        The bill CTSBill.
- *  @param user        The user CTSUser.
- *  @param extraParams The extraParams NSDictionary.
- *  @param callback    The callback ASPerformDynamicPricingCallback.
- */
-- (void)requestPerformDynamicPricingRule:(CTSRuleInfo *)ruleInfo
-                             paymentInfo:(CTSPaymentDetailUpdate *)payment
-                                    bill:(CTSBill *)bill
-                                    user:(CTSUser *)user
-                             extraParams:(NSDictionary *)extraParams
-                       completionHandler:(ASPerformDynamicPricingCallback)callback DEPRECATED_ATTRIBUTE;
-
-// for lazy pay only - moto call
-
-/**
- *   requestChargePayment.
- *
- *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
- *  @param contactInfo The contactInfo CTSContactUpdate.
- *  @param userAddress The userAddress CTSUserAddress.
- *  @param bill        The bill CTSBill.
- *  @param returnURL   The returnURL NSString.
- *  @param custParams  The custParams NSDictionary.
- *  @param controller  The controller UIViewController.
- *  @param callback    The callback ASCitruspayCallback.
- */
-- (void)requestChargePayment:(CTSPaymentDetailUpdate *)paymentInfo
-                 withContact:(CTSContactUpdate *)contactInfo
-                 withAddress:(CTSUserAddress *)userAddress
-                        bill:(CTSBill *)bill
-                setReturnURL:(NSString *)returnURL
-                customParams:(NSDictionary *)custParams
-        returnViewController:(UIViewController *)controller
-       withCompletionHandler:(ASCitruspayCallback)callback;
-/**
- ***************************************************************************************************************
- DEPRECATED END
- ***************************************************************************************************************
- */
-
-
-/**
- *   requestDPQueryMerchant.
- *
- *  @param merchantAccessKey The merchantAccessKey String.
- *  @param signature         The signature String.
- *  @param callback          The ASPerformDynamicPricingCallback callback.
- */
-- (void)requestDPQueryMerchant:(NSString *)merchantAccessKey
-                     signature:(NSString *)signature
-             completionHandler:(ASPerformDynamicPricingCallback)callback;
-
-/**
- *  request card pament options(visa,master,debit) and netbanking settngs for
- *the merchant
- *
- *  @param vanityUrl: pass in unique vanity url obtained from Citrus Payment
- *sol.
- */
-- (void)requestMerchantPgSettings:(NSString*)vanityUrl
-            withCompletionHandler:(ASGetMerchantPgSettingsCallBack)callback;
-
-/**
- *   requestGetPrepaidBillForAmount.
- *
- *  @param amount    The amount String.
- *  @param returnUrl The returnUrl String.
- *  @param callback  The ASGetPrepaidBill callback.
- */
--(void)requestGetPrepaidBillForAmount:(NSString *)amount
-                            returnUrl:(NSString *)returnUrl
-                withCompletionHandler:(ASGetPrepaidBill)callback;
-
-/**
- *   requestCashoutToBank.
- *
- *  @param bankAccount The bankAccount String.
- *  @param amount      The amount String.
- *  @param callback    The ASCashoutToBankCallBack callback.
- */
--(void)requestCashoutToBank:(CTSCashoutBankAccount *)bankAccount
-                     amount:(NSString *)amount
-          completionHandler:(ASCashoutToBankCallBack)callback;
-
-/**
-             get PG Health percentage.
- @param callback   Set success/failure callBack.
- @details          It will return JSON of PG health into bank code with percentage value.
- */
-
--(void)requestGetPGHealthWithCompletionHandler:(ASGetPGHealth)callback;
-
-/**
- *   requestCardDetails.
- *
- *  @param firstSix The firstSix Amount.
- *  @param callback The ASCardBinServiceCallback callback.
- */
--(void)requestCardDetails:(NSString *)firstSix
-        completionHandler:(ASCardBinServiceCallback)callback;
-
-/**
- *   requestTransferMoneyTo.
- *
- *  @param username The username String.
- *  @param amount   The amount String.
- *  @param message  The message String.
- *  @param callback The ASMoneyTransferCallback callback.
- */
--(void)requestTransferMoneyTo:(NSString *)username
-                       amount:(NSString *)amount
-                      message:(NSString *)message
-            completionHandler:(ASMoneyTransferCallback)callback;
-
-/**
- *   requestLoadMoneyPgSettingsCompletionHandler.
- *
- *  @param callback The ASGetMerchantPgSettingsCallBack callback.
- */
-- (void)requestLoadMoneyPgSettingsCompletionHandler:(ASGetMerchantPgSettingsCallBack)callback;
-
+- (void)requestAuthCardBINService:(NSString *)firstSixCardNumber
+                completionHandler:(CTSCardBinServiceCompletionHandler)completion;
 
 /**
  ***************************************************************************************************************
@@ -985,7 +654,7 @@ DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:
  */
 - (void)requestLoadAndSubscribe:(CTSLoadMoney*)loadMoney
                        autoLoad:(CTSAutoLoad *)autoload
-              withCompletionHandler:(ASLoadAndSubscribeCallback)callback;
+          withCompletionHandler:(ASLoadAndSubscribeCallback)callback;
 
 /**
  *   requestSubscribeAutoAfterLoad.
@@ -994,7 +663,7 @@ DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:
  *  @param callback The callback ASAutoLoadCallback.
  */
 - (void)requestSubscribeAutoAfterLoad:(CTSAutoLoad *)autoload
-          withCompletionHandler:(ASAutoLoadCallback)callback;
+                withCompletionHandler:(ASAutoLoadCallback)callback;
 
 /**
  *   requestLoadAndIncrementAutoloadSubId.
@@ -1010,6 +679,362 @@ DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:
                        withCompletionHandler:(ASLoadAndSubscribeCallback)callback;
 
 
+/**
+ *   requestDPQueryMerchant.
+ *
+ *  @param merchantAccessKey The merchantAccessKey String.
+ *  @param signature         The signature String.
+ *  @param callback          The ASPerformDynamicPricingCallback callback.
+ */
+- (void)requestDPQueryMerchant:(NSString *)merchantAccessKey
+                     signature:(NSString *)signature
+             completionHandler:(ASPerformDynamicPricingCallback)callback;
+
+/**
+ *  request card pament options(visa,master,debit) and netbanking settngs for
+ *the merchant
+ *
+ *  @param vanityUrl: pass in unique vanity url obtained from Citrus Payment
+ *sol.
+ */
+- (void)requestMerchantPgSettings:(NSString*)vanityUrl
+            withCompletionHandler:(ASGetMerchantPgSettingsCallBack)callback;
+
+/**
+ *   requestGetPrepaidBillForAmount.
+ *
+ *  @param amount    The amount String.
+ *  @param returnUrl The returnUrl String.
+ *  @param callback  The ASGetPrepaidBill callback.
+ */
+-(void)requestGetPrepaidBillForAmount:(NSString *)amount
+                            returnUrl:(NSString *)returnUrl
+                withCompletionHandler:(ASGetPrepaidBill)callback;
+
+/**
+ *   requestCashoutToBank.
+ *
+ *  @param bankAccount The bankAccount String.
+ *  @param amount      The amount String.
+ *  @param callback    The ASCashoutToBankCallBack callback.
+ */
+-(void)requestCashoutToBank:(CTSCashoutBankAccount *)bankAccount
+                     amount:(NSString *)amount
+          completionHandler:(ASCashoutToBankCallBack)callback;
+
+/**
+ get PG Health percentage.
+ @param callback   Set success/failure callBack.
+ @details          It will return JSON of PG health into bank code with percentage value.
+ */
+
+-(void)requestGetPGHealthWithCompletionHandler:(ASGetPGHealth)callback;
+
+/**
+ *   requestCardDetails.
+ *
+ *  @param firstSix The firstSix Amount.
+ *  @param callback The ASCardBinServiceCallback callback.
+ */
+-(void)requestCardDetails:(NSString *)firstSix
+        completionHandler:(ASCardBinServiceCallback)callback;
+
+/**
+ *   requestTransferMoneyTo.
+ *
+ *  @param username The username String.
+ *  @param amount   The amount String.
+ *  @param message  The message String.
+ *  @param callback The ASMoneyTransferCallback callback.
+ */
+-(void)requestTransferMoneyTo:(NSString *)username
+                       amount:(NSString *)amount
+                      message:(NSString *)message
+            completionHandler:(ASMoneyTransferCallback)callback;
+
+/**
+ *   requestLoadMoneyPgSettingsCompletionHandler.
+ *
+ *  @param callback The ASGetMerchantPgSettingsCallBack callback.
+ */
+- (void)requestLoadMoneyPgSettingsCompletionHandler:(ASGetMerchantPgSettingsCallBack)callback;
+
+
+/**
+ ***************************************************************************************************************
+ DEPRECATED Start
+ ***************************************************************************************************************
+ */
+
+/**
+ *   requestChargeTokenizedPayment.
+ *
+ *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
+ *  @param contactInfo The contactInfo CTSContactUpdate.
+ *  @param userAddress The userAddress CTSUserAddress.
+ *  @param bill        The bill CTSBill.
+ *  @param custParams  The custParams NSDictionary.
+ *  @param callback    The callback ASMakeTokenizedPaymentCallBack.
+ */
+- (void)requestChargeTokenizedPayment:(CTSPaymentDetailUpdate*)paymentInfo
+                          withContact:(CTSContactUpdate*)contactInfo
+                          withAddress:(CTSUserAddress*)userAddress
+                                 bill:(CTSBill *)bill
+                         customParams:(NSDictionary *)custParams
+                withCompletionHandler:(ASMakeTokenizedPaymentCallBack)callback DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:customParams:returnViewController:withCompletionHandler:");
+
+/**
+ *   requestChargePayment.
+ *
+ *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
+ *  @param contactInfo The contactInfo CTSContactUpdate.
+ *  @param userAddress The userAddress CTSUserAddress.
+ *  @param bill        The bill CTSBill.
+ *  @param custParams  The custParams NSDictionary.
+ *  @param callback    The callback ASMakeGuestPaymentCallBack.
+ */
+- (void)requestChargePayment:(CTSPaymentDetailUpdate*)paymentInfo
+                 withContact:(CTSContactUpdate*)contactInfo
+                 withAddress:(CTSUserAddress*)userAddress
+                        bill:(CTSBill *)bill
+                customParams:(NSDictionary *)custParams
+       withCompletionHandler:(ASMakeGuestPaymentCallBack)callback
+DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:customParams:returnViewController:withCompletionHandler:");
+
+/**
+ *   requestLoadMoneyInCitrusPay.
+ *
+ *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
+ *  @param contactInfo The contactInfo CTSContactUpdate.
+ *  @param userAddress The userAddress CTSUserAddress.
+ *  @param amount      The amount NSString.
+ *  @param returnUrl   The returnUrl NSString.
+ *  @param custParams  The custParams NSDictionary.
+ *  @param callback    The callback ASLoadMoneyCallBack.
+ */
+- (void)requestLoadMoneyInCitrusPay:(CTSPaymentDetailUpdate *)paymentInfo
+                        withContact:(CTSContactUpdate*)contactInfo
+                        withAddress:(CTSUserAddress*)userAddress
+                             amount:(NSString *)amount
+                          returnUrl:(NSString *)returnUrl
+                       customParams:(NSDictionary *)custParams
+              withCompletionHandler:(ASLoadMoneyCallBack)callback __attribute__((deprecated("Please use requestSimpliPay:andParentViewController:completionHandler: instead")));
+
+//new prepaid pay api
+
+/**
+ *   requestChargeCitrusWalletWithContact.
+ *
+ *  @param contactInfo The contactInfo CTSContactUpdate.
+ *  @param userAddress The userAddress CTSUserAddress.
+ *  @param bill        The bill CTSBill.
+ *  @param controller  The controller UIViewController.
+ *  @param callback    The callback ASCitruspayCallback.
+ */
+- (void)requestChargeCitrusWalletWithContact:(CTSContactUpdate*)contactInfo
+                                     address:(CTSUserAddress*)userAddress
+                                        bill:(CTSBill *)bill
+                        returnViewController:(UIViewController *)controller
+                       withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestSimpliPay:andParentViewController:completionHandler: instead")));
+
+
+//old prepaid pay api
+
+/**
+ *   requestChargeCitrusCashWithContact.
+ *
+ *  @param contactInfo The contactInfo CTSContactUpdate.
+ *  @param userAddress The userAddress CTSUserAddress.
+ *  @param bill        The bill CTSBill.
+ *  @param custParams  The custParams NSDictionary.
+ *  @param controller  The controller UIViewController.
+ *  @param callback    The callback ASCitruspayCallback.
+ */
+- (void)requestChargeCitrusCashWithContact:(CTSContactUpdate*)contactInfo
+                               withAddress:(CTSUserAddress*)userAddress
+                                      bill:(CTSBill *)bill
+                              customParams:(NSDictionary *)custParams
+                      returnViewController:(UIViewController *)controller
+                     withCompletionHandler:(ASCitruspayCallback)callback DEPRECATED_MSG_ATTRIBUTE("Use requestChargeCitrusWalletWithContact:address:bill:customParams:returnViewController:withCompletionHandler: ");
+
+/**
+ *   requestChargeTokenizedPayment.
+ *
+ *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
+ *  @param contactInfo The contactInfo CTSContactUpdate.
+ *  @param userAddress The userAddress CTSUserAddress.
+ *  @param bill        The bill CTSBill.
+ *  @param custParams  The custParams NSDictionary.
+ *  @param controller  The controller UIViewController.
+ *  @param callback    The callback ASCitruspayCallback.
+ */
+- (void)requestChargeTokenizedPayment:(CTSPaymentDetailUpdate*)paymentInfo
+                          withContact:(CTSContactUpdate*)contactInfo
+                          withAddress:(CTSUserAddress*)userAddress
+                                 bill:(CTSBill *)bill
+                         customParams:(NSDictionary *)custParams
+                 returnViewController:(UIViewController *)controller
+                withCompletionHandler:(ASCitruspayCallback)callback DEPRECATED_MSG_ATTRIBUTE("use requestChargePayment:withContact:withAddress:bill:customParams:returnViewController:withCompletionHandler:");
+
+
+// single hop
+/**
+ *   requestDirectChargePayment.
+ *
+ *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
+ *  @param contactInfo The contactInfo CTSContactUpdate.
+ *  @param userAddress The userAddress CTSUserAddress.
+ *  @param bill        The bill CTSBill.
+ *  @param controller  The controller UIViewController.
+ *  @param callback    The Transaction Amount.
+ */
+- (void)requestDirectChargePayment:(CTSPaymentDetailUpdate*)paymentInfo
+                       withContact:(CTSContactUpdate*)contactInfo
+                       withAddress:(CTSUserAddress*)userAddress
+                              bill:(CTSBill *)bill
+              returnViewController:(UIViewController *)controller
+             withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestSimpliPay:andParentViewController:completionHandler: instead")));
+
+
+//moto call
+/**
+ *   requestChargePayment.
+ *
+ *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
+ *  @param contactInfo The contactInfo CTSContactUpdate.
+ *  @param userAddress The userAddress CTSUserAddress.
+ *  @param bill        The bill CTSBill.
+ *  @param custParams  The Transaction Amount.
+ *  @param controller  The controller UIViewController.
+ *  @param callback    The Transaction Amount.
+ */
+- (void)requestChargePayment:(CTSPaymentDetailUpdate*)paymentInfo
+                 withContact:(CTSContactUpdate*)contactInfo
+                 withAddress:(CTSUserAddress*)userAddress
+                        bill:(CTSBill *)bill
+                customParams:(NSDictionary *)custParams
+        returnViewController:(UIViewController *)controller
+       withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestSimpliPay:andParentViewController:completionHandler: instead")));
+
+
+/**
+ *   requestLoadMoneyInCitrusPay.
+ *
+ *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
+ *  @param contactInfo The contactInfo CTSContactUpdate.
+ *  @param userAddress The userAddress CTSUserAddress.
+ *  @param amount      The amount NSString.
+ *  @param returnUrl   The returnUrl NSString.
+ *  @param custParams  The custParams NSDictionary.
+ *  @param controller  The controller UIViewController.
+ *  @param callback    The callback ASCitruspayCallback.
+ */
+- (void)requestLoadMoneyInCitrusPay:(CTSPaymentDetailUpdate *)paymentInfo
+                        withContact:(CTSContactUpdate*)contactInfo
+                        withAddress:(CTSUserAddress*)userAddress
+                             amount:(NSString *)amount
+                          returnUrl:(NSString *)returnUrl
+                       customParams:(NSDictionary *)custParams
+               returnViewController:(UIViewController *)controller
+              withCompletionHandler:(ASCitruspayCallback)callback __attribute__((deprecated("Please use requestSimpliPay:andParentViewController:completionHandler: instead")));
+
+
+/**
+ *   requestChargeDynamicPricingContact.
+ *
+ *  @param contactInfo The contactInfo CTSContactUpdate.
+ *  @param userAddress The userAddress CTSUserAddress.
+ *  @param custParams  The custParams custParams.
+ *  @param controller  The controller UIViewController.
+ *  @param callback    The callback ASCitruspayCallback.
+ */
+- (void)requestChargeDynamicPricingContact:(CTSContactUpdate*)contactInfo
+                               withAddress:(CTSUserAddress*)userAddress
+                              customParams:(NSDictionary *)custParams
+                      returnViewController:(UIViewController *)controller
+                     withCompletionHandler:(ASCitruspayCallback)callback;
+
+/**
+ *   requestPerformDynamicPricingRule.
+ *
+ *  @param ruleInfo    The Transaction Amount.
+ *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
+ *  @param bill        The bill CTSBill.
+ *  @param user        The user CTSUser.
+ *  @param requestType The requestType DPRequestType.
+ *  @param extraParams The extraParams NSDictionary.
+ *  @param callback    The callback ASPerformDynamicPricingCallback.
+ */
+-(void)requestPerformDynamicPricingRule:(CTSRuleInfo *)ruleInfo
+                            paymentInfo:(CTSPaymentDetailUpdate *)payment
+                                   bill:(CTSBill *)bill
+                                   user:(CTSUser *)user
+                                   type:(DPRequestType)requestType
+                            extraParams:(NSDictionary *)extraParams
+                      completionHandler:(ASPerformDynamicPricingCallback)callback __attribute__((deprecated("Please use requestSimpliPay:andParentViewController:completionHandler: instead")));
+
+
+/**
+ *   requestPerformDynamicPricingRule.
+ *
+ *  @param ruleInfo    The Transaction Amount.
+ *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
+ *  @param billUrl     The billUrl NSString.
+ *  @param user        The user CTSUser.
+ *  @param extraParams The extraParams NSDictionary.
+ *  @param callback    The callback ASPerformDynamicPricingCallback.
+ */
+-(void)requestPerformDynamicPricingRule:(CTSRuleInfo *)ruleInfo
+                            paymentInfo:(CTSPaymentDetailUpdate *)payment
+                                billUrl:(NSString *)billUrl
+                                   user:(CTSUser *)user
+                            extraParams:(NSDictionary *)extraParams
+                      completionHandler:(ASPerformDynamicPricingCallback)callback __attribute__((deprecated("Please use requestSimpliPay:andParentViewController:completionHandler: instead")));
+
+/**
+ *   requestPerformDynamicPricingRule.
+ *
+ *  @param ruleInfo    The Transaction Amount.
+ *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
+ *  @param bill        The bill CTSBill.
+ *  @param user        The user CTSUser.
+ *  @param extraParams The extraParams NSDictionary.
+ *  @param callback    The callback ASPerformDynamicPricingCallback.
+ */
+- (void)requestPerformDynamicPricingRule:(CTSRuleInfo *)ruleInfo
+                             paymentInfo:(CTSPaymentDetailUpdate *)payment
+                                    bill:(CTSBill *)bill
+                                    user:(CTSUser *)user
+                             extraParams:(NSDictionary *)extraParams
+                       completionHandler:(ASPerformDynamicPricingCallback)callback DEPRECATED_ATTRIBUTE;
+
+// for lazy pay only - moto call
+
+/**
+ *   requestChargePayment.
+ *
+ *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
+ *  @param contactInfo The contactInfo CTSContactUpdate.
+ *  @param userAddress The userAddress CTSUserAddress.
+ *  @param bill        The bill CTSBill.
+ *  @param returnURL   The returnURL NSString.
+ *  @param custParams  The custParams NSDictionary.
+ *  @param controller  The controller UIViewController.
+ *  @param callback    The callback ASCitruspayCallback.
+ */
+- (void)requestChargePayment:(CTSPaymentDetailUpdate *)paymentInfo
+                 withContact:(CTSContactUpdate *)contactInfo
+                 withAddress:(CTSUserAddress *)userAddress
+                        bill:(CTSBill *)bill
+                setReturnURL:(NSString *)returnURL
+                customParams:(NSDictionary *)custParams
+        returnViewController:(UIViewController *)controller
+       withCompletionHandler:(ASCitruspayCallback)callback;
+/**
+ ***************************************************************************************************************
+ DEPRECATED END
+ ***************************************************************************************************************
+ */
 
 
 /**

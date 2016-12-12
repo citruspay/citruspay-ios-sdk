@@ -8,18 +8,36 @@
 
 #import <JSONModel/JSONModel.h>
 
-
+/**
+ *   The CTSSimpliChargeDistribution class.
+ */
 @interface CTSSimpliChargeDistribution : JSONModel
-/*!
- *  @brief The CTSBlazeNetError class' mvcAmount, cashAmount, remainingAmount, totalAmount object.
+/**
+ *   The CTSSimpliChargeDistribution class' mvcAmount object.
  */
-@property (strong) NSString <Optional>
-* mvcAmount,
-* cashAmount,
-* remainingAmount,
-* totalAmount;
-/*!
- *  @brief The CTSBlazeNetError class' useMVC, useCash, enoughMVCAndCash object.
+@property (strong) NSString <Optional> * mvcAmount;
+/**
+ *   The CTSSimpliChargeDistribution class' cashAmount object.
  */
-@property (assign) BOOL useMVC, useCash, enoughMVCAndCash;
+@property (strong) NSString <Optional> * cashAmount;
+/**
+ *   The CTSSimpliChargeDistribution class' remainingAmount object.
+ */
+@property (strong) NSString <Optional> * remainingAmount;
+/**
+ *   The CTSSimpliChargeDistribution class' totalAmount object.
+ */
+@property (strong) NSString <Optional> * totalAmount;
+/**
+ *   The CTSSimpliChargeDistribution class' useMVC object.
+ */
+@property (assign) BOOL useMVC;
+/**
+ *   The CTSSimpliChargeDistribution class' useCash object.
+ */
+@property (assign) BOOL useCash;
+/**
+ *   The CTSSimpliChargeDistribution class' enoughMVCAndCash object.
+ */
+@property (assign) BOOL enoughMVCAndCash;
 @end

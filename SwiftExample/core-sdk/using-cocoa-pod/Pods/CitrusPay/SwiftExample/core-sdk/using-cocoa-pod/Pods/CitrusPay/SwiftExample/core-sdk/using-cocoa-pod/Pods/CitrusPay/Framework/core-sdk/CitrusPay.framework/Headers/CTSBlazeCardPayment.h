@@ -10,49 +10,77 @@
 
 #import "CTSError.h"
 
-@interface CTSBlazeCardPayment : JSONModel
-/*!
- *  @brief The CTSBlazeCardPayment class' cardType, cardScheme, cardNo, cvv, expiry, savedCardToken, name object.
+/**
+ *   CTSBlazeCardPayment Class.
  */
-@property (strong) NSString <Optional> * cardType, * cardScheme, * cardNo, * cvv, * expiry, * savedCardToken, * name;
+@interface CTSBlazeCardPayment : JSONModel
+/**
+ *   The CTSBlazeCardPayment class' cardType object.
+ */
+@property (strong) NSString <Optional> * cardType;
+/**
+ *   The CTSBlazeCardPayment class' cardScheme object.
+ */
+@property (strong) NSString <Optional> * cardScheme;
+/**
+ *   The CTSBlazeCardPayment class' cardNo object.
+ */
+@property (strong) NSString <Optional> * cardNo;
+/**
+ *   The CTSBlazeCardPayment class' cvv object.
+ */
+@property (strong) NSString <Optional> * cvv;
+/**
+ *   The CTSBlazeCardPayment class' expiry object.
+ */
+@property (strong) NSString <Optional> * expiry;
+/**
+ *   The CTSBlazeCardPayment class' savedCardToken object.
+ */
+@property (strong) NSString <Optional> * savedCardToken;
+/**
+ *   The CTSBlazeCardPayment class' name object.
+ */
+@property (strong) NSString <Optional> * name;
 
-/*!
- *  @brief initWithCreditCard
+
+/**
+ *   initWithCreditCard
  *
  *  @return The CTSBlazeCardPayment Object.
  */
 - (instancetype)initWithCreditCard;
 
-/*!
- *  @brief initWithDebitCard
+/**
+ *   initWithDebitCard
  *
  *  @return The CTSBlazeCardPayment Object.
  */
 - (instancetype)initWithDebitCard;
 
-/*!
- *  @brief isTokenizedCard
+/**
+ *   isTokenizedCard
  *
  *  @return The BOOL Value.
  */
 - (BOOL)isTokenizedCard;
 
-/*!
- *  @brief validateTokenized
+/**
+ *   validateTokenized
  *
  *  @return The CTSErrorCode Object.
  */
 - (CTSErrorCode)validateTokenized;
 
-/*!
- *  @brief validatePaymentInfo
+/**
+ *   validatePaymentInfo
  *
  *  @return The CTSErrorCode Object.
  */
 - (CTSErrorCode)validatePaymentInfo;
 
-/*!
- *  @brief doCardCorrectionsIfNeeded
+/**
+ *   doCardCorrectionsIfNeeded
  */
 - (void)doCardCorrectionsIfNeeded;
 

@@ -8,6 +8,10 @@
 
 #import <JSONModel/JSONModel.h>
 
+
+/**
+ Bank data for cashout from the wallet
+ */
 @interface CTSCashoutBankAccount : JSONModel
 @property(strong) NSString<Optional>* owner;
 @property(strong) NSString<Optional>* branch;

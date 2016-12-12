@@ -8,6 +8,11 @@
 
 #import <JSONModel/JSONModel.h>
 
+
+
+/**
+ Data class for user's address
+ */
 @interface CTSUserAddress : JSONModel
 @property(strong) NSString<Optional>* city;
 @property(strong) NSString<Optional>* country;
