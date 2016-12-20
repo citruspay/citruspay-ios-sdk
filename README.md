@@ -31,9 +31,6 @@ CitrusPay iOS SDK broadly offers following features.
 
 ####The full SDK [ChangeLog](https://github.com/citruspay/citruspay-ios-sdk/wiki/5.-ChangeLog) is also available
 
-####Migration from 3.0.x to 3.1.x or higher
-To migrate your integration from Citrus 3.0.x to 3.1.x or higher, please go through the [migration instructions](https://github.com/citruspay/citruspay-ios-sdk/wiki/3.-Migration-From-V-3.0.x-to-V-3.1.x)
-
 ## Example Project
 
 An example project is available via CocoaPods to try out and familiarize yourself with the Citrus Payments SDK. This project comes bundled with the SDK.
