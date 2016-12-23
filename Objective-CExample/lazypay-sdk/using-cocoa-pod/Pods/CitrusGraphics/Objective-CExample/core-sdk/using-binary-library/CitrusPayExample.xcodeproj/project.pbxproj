@@ -1,0 +1,735 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		76531C631CB68E7A0065EADA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76531C621CB68E7A0065EADA /* main.m */; };
+		76531C661CB68E7A0065EADA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76531C651CB68E7A0065EADA /* AppDelegate.m */; };
+		76531C7C1CB68E7A0065EADA /* CitrusPayExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76531C7B1CB68E7A0065EADA /* CitrusPayExampleTests.m */; };
+		76531C871CB68E7A0065EADA /* CitrusPayExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76531C861CB68E7A0065EADA /* CitrusPayExampleUITests.m */; };
+		767FB8DA1DDC58B700DE349D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 767FB8B31DDC58B700DE349D /* Assets.xcassets */; };
+		767FB8DB1DDC58B700DE349D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767FB8B41DDC58B700DE349D /* LaunchScreen.storyboard */; };
+		767FB8DC1DDC58B700DE349D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767FB8B61DDC58B700DE349D /* Main.storyboard */; };
+		767FB8DD1DDC58B700DE349D /* AutoloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8BA1DDC58B700DE349D /* AutoloadViewController.m */; };
+		767FB8DE1DDC58B700DE349D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8BC1DDC58B700DE349D /* BaseViewController.m */; };
+		767FB8DF1DDC58B700DE349D /* CardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8BE1DDC58B700DE349D /* CardsViewController.m */; };
+		767FB8E01DDC58B700DE349D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8C01DDC58B700DE349D /* HomeViewController.m */; };
+		767FB8E11DDC58B700DE349D /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8C21DDC58B700DE349D /* InitialViewController.m */; };
+		767FB8E21DDC58B700DE349D /* ManageAutoLoadSubcriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8C41DDC58B700DE349D /* ManageAutoLoadSubcriptionViewController.m */; };
+		767FB8E31DDC58B700DE349D /* ManageCradViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8C61DDC58B700DE349D /* ManageCradViewController.m */; };
+		767FB8E41DDC58B700DE349D /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8C81DDC58B700DE349D /* ResetPasswordViewController.m */; };
+		767FB8E51DDC58B700DE349D /* SavedCCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8CA1DDC58B700DE349D /* SavedCCViewController.m */; };
+		767FB8E61DDC58B700DE349D /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8CC1DDC58B700DE349D /* SettingViewController.m */; };
+		767FB8E71DDC58B700DE349D /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8CE1DDC58B700DE349D /* SignInViewController.m */; };
+		767FB8E81DDC58B700DE349D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8D01DDC58B700DE349D /* SignUpViewController.m */; };
+		767FB8E91DDC58B700DE349D /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8D31DDC58B700DE349D /* HMSegmentedControl.m */; };
+		767FB8EA1DDC58B700DE349D /* UICustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8D51DDC58B700DE349D /* UICustomButton.m */; };
+		767FB8EB1DDC58B700DE349D /* UICustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8D71DDC58B700DE349D /* UICustomTextField.m */; };
+		767FB9701DDC6E3500DE349D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 767FB96E1DDC6E3500DE349D /* LICENSE */; };
+		767FB9711DDC6E6600DE349D /* CitrusPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767FB96D1DDC6E3500DE349D /* CitrusPay.framework */; };
+		767FB9721DDC6E6600DE349D /* CitrusPay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 767FB96D1DDC6E3500DE349D /* CitrusPay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		767FB9731DDC6E6600DE349D /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767FB96B1DDC6E2700DE349D /* JSONModel.framework */; };
+		767FB9741DDC6E6600DE349D /* JSONModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 767FB96B1DDC6E2700DE349D /* JSONModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		76531C781CB68E7A0065EADA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76531C561CB68E7A0065EADA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76531C5D1CB68E7A0065EADA;
+			remoteInfo = CitrusPayExample;
+		};
+		76531C831CB68E7A0065EADA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76531C561CB68E7A0065EADA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76531C5D1CB68E7A0065EADA;
+			remoteInfo = CitrusPayExample;
+		};
+		767FB96A1DDC6E2700DE349D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 767FB9661DDC6E2700DE349D /* JSONModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 92C9BC3D1B19A51100D79B06;
+			remoteInfo = JSONModel;
+		};
+		767FB9751DDC6E6600DE349D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 767FB9661DDC6E2700DE349D /* JSONModel.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 92C9BC3C1B19A51100D79B06;
+			remoteInfo = JSONModel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		76A6BD761D7457D700E5A85C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				767FB9741DDC6E6600DE349D /* JSONModel.framework in Embed Frameworks */,
+				767FB9721DDC6E6600DE349D /* CitrusPay.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		76531C5E1CB68E7A0065EADA /* CitrusPayExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitrusPayExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		76531C621CB68E7A0065EADA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		76531C641CB68E7A0065EADA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		76531C651CB68E7A0065EADA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		76531C721CB68E7A0065EADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76531C771CB68E7A0065EADA /* CitrusPayExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CitrusPayExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		76531C7B1CB68E7A0065EADA /* CitrusPayExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CitrusPayExampleTests.m; sourceTree = "<group>"; };
+		76531C7D1CB68E7A0065EADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76531C821CB68E7A0065EADA /* CitrusPayExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CitrusPayExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		76531C861CB68E7A0065EADA /* CitrusPayExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CitrusPayExampleUITests.m; sourceTree = "<group>"; };
+		76531C881CB68E7A0065EADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		767FB8B31DDC58B700DE349D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		767FB8B51DDC58B700DE349D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		767FB8B71DDC58B700DE349D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		767FB8B91DDC58B700DE349D /* AutoloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoloadViewController.h; sourceTree = "<group>"; };
+		767FB8BA1DDC58B700DE349D /* AutoloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoloadViewController.m; sourceTree = "<group>"; };
+		767FB8BB1DDC58B700DE349D /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		767FB8BC1DDC58B700DE349D /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		767FB8BD1DDC58B700DE349D /* CardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsViewController.h; sourceTree = "<group>"; };
+		767FB8BE1DDC58B700DE349D /* CardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsViewController.m; sourceTree = "<group>"; };
+		767FB8BF1DDC58B700DE349D /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		767FB8C01DDC58B700DE349D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		767FB8C11DDC58B700DE349D /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
+		767FB8C21DDC58B700DE349D /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
+		767FB8C31DDC58B700DE349D /* ManageAutoLoadSubcriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageAutoLoadSubcriptionViewController.h; sourceTree = "<group>"; };
+		767FB8C41DDC58B700DE349D /* ManageAutoLoadSubcriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageAutoLoadSubcriptionViewController.m; sourceTree = "<group>"; };
+		767FB8C51DDC58B700DE349D /* ManageCradViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageCradViewController.h; sourceTree = "<group>"; };
+		767FB8C61DDC58B700DE349D /* ManageCradViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageCradViewController.m; sourceTree = "<group>"; };
+		767FB8C71DDC58B700DE349D /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
+		767FB8C81DDC58B700DE349D /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
+		767FB8C91DDC58B700DE349D /* SavedCCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedCCViewController.h; sourceTree = "<group>"; };
+		767FB8CA1DDC58B700DE349D /* SavedCCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedCCViewController.m; sourceTree = "<group>"; };
+		767FB8CB1DDC58B700DE349D /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		767FB8CC1DDC58B700DE349D /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		767FB8CD1DDC58B700DE349D /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		767FB8CE1DDC58B700DE349D /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		767FB8CF1DDC58B700DE349D /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		767FB8D01DDC58B700DE349D /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		767FB8D21DDC58B700DE349D /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
+		767FB8D31DDC58B700DE349D /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
+		767FB8D41DDC58B700DE349D /* UICustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomButton.h; sourceTree = "<group>"; };
+		767FB8D51DDC58B700DE349D /* UICustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomButton.m; sourceTree = "<group>"; };
+		767FB8D61DDC58B700DE349D /* UICustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomTextField.h; sourceTree = "<group>"; };
+		767FB8D71DDC58B700DE349D /* UICustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomTextField.m; sourceTree = "<group>"; };
+		767FB8D81DDC58B700DE349D /* MerchantConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantConstants.h; sourceTree = "<group>"; };
+		767FB8D91DDC58B700DE349D /* TestParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestParams.h; sourceTree = "<group>"; };
+		767FB9661DDC6E2700DE349D /* JSONModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSONModel.xcodeproj; path = ../../../Dependency/JSONModel/JSONModel.xcodeproj; sourceTree = "<group>"; };
+		767FB96D1DDC6E3500DE349D /* CitrusPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusPay.framework; sourceTree = "<group>"; };
+		767FB96E1DDC6E3500DE349D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76531C5B1CB68E7A0065EADA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				767FB9731DDC6E6600DE349D /* JSONModel.framework in Frameworks */,
+				767FB9711DDC6E6600DE349D /* CitrusPay.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76531C741CB68E7A0065EADA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76531C7F1CB68E7A0065EADA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		76531C551CB68E7A0065EADA = {
+			isa = PBXGroup;
+			children = (
+				767FB96C1DDC6E3500DE349D /* core-sdk */,
+				767FB9661DDC6E2700DE349D /* JSONModel.xcodeproj */,
+				76531C601CB68E7A0065EADA /* CitrusPayExample */,
+				76531C7A1CB68E7A0065EADA /* CitrusPayExampleTests */,
+				76531C851CB68E7A0065EADA /* CitrusPayExampleUITests */,
+				76531C5F1CB68E7A0065EADA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		76531C5F1CB68E7A0065EADA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76531C5E1CB68E7A0065EADA /* CitrusPayExample.app */,
+				76531C771CB68E7A0065EADA /* CitrusPayExampleTests.xctest */,
+				76531C821CB68E7A0065EADA /* CitrusPayExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76531C601CB68E7A0065EADA /* CitrusPayExample */ = {
+			isa = PBXGroup;
+			children = (
+				767FB8B21DDC58B700DE349D /* test-ui-example */,
+				76531C641CB68E7A0065EADA /* AppDelegate.h */,
+				76531C651CB68E7A0065EADA /* AppDelegate.m */,
+				76531C721CB68E7A0065EADA /* Info.plist */,
+				76531C611CB68E7A0065EADA /* Supporting Files */,
+			);
+			path = CitrusPayExample;
+			sourceTree = "<group>";
+		};
+		76531C611CB68E7A0065EADA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				76531C621CB68E7A0065EADA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		76531C7A1CB68E7A0065EADA /* CitrusPayExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				76531C7B1CB68E7A0065EADA /* CitrusPayExampleTests.m */,
+				76531C7D1CB68E7A0065EADA /* Info.plist */,
+			);
+			path = CitrusPayExampleTests;
+			sourceTree = "<group>";
+		};
+		76531C851CB68E7A0065EADA /* CitrusPayExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				76531C861CB68E7A0065EADA /* CitrusPayExampleUITests.m */,
+				76531C881CB68E7A0065EADA /* Info.plist */,
+			);
+			path = CitrusPayExampleUITests;
+			sourceTree = "<group>";
+		};
+		767FB8B21DDC58B700DE349D /* test-ui-example */ = {
+			isa = PBXGroup;
+			children = (
+				767FB8B31DDC58B700DE349D /* Assets.xcassets */,
+				767FB8B41DDC58B700DE349D /* LaunchScreen.storyboard */,
+				767FB8B61DDC58B700DE349D /* Main.storyboard */,
+				767FB8B81DDC58B700DE349D /* Controllers */,
+				767FB8D11DDC58B700DE349D /* CustomComponents */,
+				767FB8D81DDC58B700DE349D /* MerchantConstants.h */,
+				767FB8D91DDC58B700DE349D /* TestParams.h */,
+			);
+			name = "test-ui-example";
+			path = "../../test-ui-example";
+			sourceTree = "<group>";
+		};
+		767FB8B81DDC58B700DE349D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				767FB8B91DDC58B700DE349D /* AutoloadViewController.h */,
+				767FB8BA1DDC58B700DE349D /* AutoloadViewController.m */,
+				767FB8BB1DDC58B700DE349D /* BaseViewController.h */,
+				767FB8BC1DDC58B700DE349D /* BaseViewController.m */,
+				767FB8BD1DDC58B700DE349D /* CardsViewController.h */,
+				767FB8BE1DDC58B700DE349D /* CardsViewController.m */,
+				767FB8BF1DDC58B700DE349D /* HomeViewController.h */,
+				767FB8C01DDC58B700DE349D /* HomeViewController.m */,
+				767FB8C11DDC58B700DE349D /* InitialViewController.h */,
+				767FB8C21DDC58B700DE349D /* InitialViewController.m */,
+				767FB8C31DDC58B700DE349D /* ManageAutoLoadSubcriptionViewController.h */,
+				767FB8C41DDC58B700DE349D /* ManageAutoLoadSubcriptionViewController.m */,
+				767FB8C51DDC58B700DE349D /* ManageCradViewController.h */,
+				767FB8C61DDC58B700DE349D /* ManageCradViewController.m */,
+				767FB8C71DDC58B700DE349D /* ResetPasswordViewController.h */,
+				767FB8C81DDC58B700DE349D /* ResetPasswordViewController.m */,
+				767FB8C91DDC58B700DE349D /* SavedCCViewController.h */,
+				767FB8CA1DDC58B700DE349D /* SavedCCViewController.m */,
+				767FB8CB1DDC58B700DE349D /* SettingViewController.h */,
+				767FB8CC1DDC58B700DE349D /* SettingViewController.m */,
+				767FB8CD1DDC58B700DE349D /* SignInViewController.h */,
+				767FB8CE1DDC58B700DE349D /* SignInViewController.m */,
+				767FB8CF1DDC58B700DE349D /* SignUpViewController.h */,
+				767FB8D01DDC58B700DE349D /* SignUpViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		767FB8D11DDC58B700DE349D /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+				767FB8D21DDC58B700DE349D /* HMSegmentedControl.h */,
+				767FB8D31DDC58B700DE349D /* HMSegmentedControl.m */,
+				767FB8D41DDC58B700DE349D /* UICustomButton.h */,
+				767FB8D51DDC58B700DE349D /* UICustomButton.m */,
+				767FB8D61DDC58B700DE349D /* UICustomTextField.h */,
+				767FB8D71DDC58B700DE349D /* UICustomTextField.m */,
+			);
+			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		767FB9671DDC6E2700DE349D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				767FB96B1DDC6E2700DE349D /* JSONModel.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		767FB96C1DDC6E3500DE349D /* core-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				767FB96D1DDC6E3500DE349D /* CitrusPay.framework */,
+				767FB96E1DDC6E3500DE349D /* LICENSE */,
+			);
+			name = "core-sdk";
+			path = "../../../Framework/core-sdk";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76531C5D1CB68E7A0065EADA /* CitrusPayExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76531C8B1CB68E7A0065EADA /* Build configuration list for PBXNativeTarget "CitrusPayExample" */;
+			buildPhases = (
+				76531C5A1CB68E7A0065EADA /* Sources */,
+				76531C5B1CB68E7A0065EADA /* Frameworks */,
+				76531C5C1CB68E7A0065EADA /* Resources */,
+				76A6BD761D7457D700E5A85C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				767FB9761DDC6E6600DE349D /* PBXTargetDependency */,
+			);
+			name = CitrusPayExample;
+			productName = CitrusPayExample;
+			productReference = 76531C5E1CB68E7A0065EADA /* CitrusPayExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		76531C761CB68E7A0065EADA /* CitrusPayExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76531C8E1CB68E7A0065EADA /* Build configuration list for PBXNativeTarget "CitrusPayExampleTests" */;
+			buildPhases = (
+				76531C731CB68E7A0065EADA /* Sources */,
+				76531C741CB68E7A0065EADA /* Frameworks */,
+				76531C751CB68E7A0065EADA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76531C791CB68E7A0065EADA /* PBXTargetDependency */,
+			);
+			name = CitrusPayExampleTests;
+			productName = CitrusPayExampleTests;
+			productReference = 76531C771CB68E7A0065EADA /* CitrusPayExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		76531C811CB68E7A0065EADA /* CitrusPayExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76531C911CB68E7A0065EADA /* Build configuration list for PBXNativeTarget "CitrusPayExampleUITests" */;
+			buildPhases = (
+				76531C7E1CB68E7A0065EADA /* Sources */,
+				76531C7F1CB68E7A0065EADA /* Frameworks */,
+				76531C801CB68E7A0065EADA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76531C841CB68E7A0065EADA /* PBXTargetDependency */,
+			);
+			name = CitrusPayExampleUITests;
+			productName = CitrusPayExampleUITests;
+			productReference = 76531C821CB68E7A0065EADA /* CitrusPayExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		76531C561CB68E7A0065EADA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = CitrusPay;
+				TargetAttributes = {
+					76531C5D1CB68E7A0065EADA = {
+						CreatedOnToolsVersion = 7.0;
+						ProvisioningStyle = Manual;
+					};
+					76531C761CB68E7A0065EADA = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 76531C5D1CB68E7A0065EADA;
+					};
+					76531C811CB68E7A0065EADA = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 76531C5D1CB68E7A0065EADA;
+					};
+				};
+			};
+			buildConfigurationList = 76531C591CB68E7A0065EADA /* Build configuration list for PBXProject "CitrusPayExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 76531C551CB68E7A0065EADA;
+			productRefGroup = 76531C5F1CB68E7A0065EADA /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 767FB9671DDC6E2700DE349D /* Products */;
+					ProjectRef = 767FB9661DDC6E2700DE349D /* JSONModel.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				76531C5D1CB68E7A0065EADA /* CitrusPayExample */,
+				76531C761CB68E7A0065EADA /* CitrusPayExampleTests */,
+				76531C811CB68E7A0065EADA /* CitrusPayExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		767FB96B1DDC6E2700DE349D /* JSONModel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSONModel.framework;
+			remoteRef = 767FB96A1DDC6E2700DE349D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		76531C5C1CB68E7A0065EADA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				767FB8DB1DDC58B700DE349D /* LaunchScreen.storyboard in Resources */,
+				767FB8DA1DDC58B700DE349D /* Assets.xcassets in Resources */,
+				767FB9701DDC6E3500DE349D /* LICENSE in Resources */,
+				767FB8DC1DDC58B700DE349D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76531C751CB68E7A0065EADA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76531C801CB68E7A0065EADA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76531C5A1CB68E7A0065EADA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				767FB8EA1DDC58B700DE349D /* UICustomButton.m in Sources */,
+				76531C661CB68E7A0065EADA /* AppDelegate.m in Sources */,
+				767FB8E41DDC58B700DE349D /* ResetPasswordViewController.m in Sources */,
+				767FB8DE1DDC58B700DE349D /* BaseViewController.m in Sources */,
+				767FB8DD1DDC58B700DE349D /* AutoloadViewController.m in Sources */,
+				767FB8E71DDC58B700DE349D /* SignInViewController.m in Sources */,
+				76531C631CB68E7A0065EADA /* main.m in Sources */,
+				767FB8E51DDC58B700DE349D /* SavedCCViewController.m in Sources */,
+				767FB8DF1DDC58B700DE349D /* CardsViewController.m in Sources */,
+				767FB8E11DDC58B700DE349D /* InitialViewController.m in Sources */,
+				767FB8EB1DDC58B700DE349D /* UICustomTextField.m in Sources */,
+				767FB8E91DDC58B700DE349D /* HMSegmentedControl.m in Sources */,
+				767FB8E01DDC58B700DE349D /* HomeViewController.m in Sources */,
+				767FB8E21DDC58B700DE349D /* ManageAutoLoadSubcriptionViewController.m in Sources */,
+				767FB8E31DDC58B700DE349D /* ManageCradViewController.m in Sources */,
+				767FB8E81DDC58B700DE349D /* SignUpViewController.m in Sources */,
+				767FB8E61DDC58B700DE349D /* SettingViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76531C731CB68E7A0065EADA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76531C7C1CB68E7A0065EADA /* CitrusPayExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76531C7E1CB68E7A0065EADA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76531C871CB68E7A0065EADA /* CitrusPayExampleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		76531C791CB68E7A0065EADA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76531C5D1CB68E7A0065EADA /* CitrusPayExample */;
+			targetProxy = 76531C781CB68E7A0065EADA /* PBXContainerItemProxy */;
+		};
+		76531C841CB68E7A0065EADA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76531C5D1CB68E7A0065EADA /* CitrusPayExample */;
+			targetProxy = 76531C831CB68E7A0065EADA /* PBXContainerItemProxy */;
+		};
+		767FB9761DDC6E6600DE349D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JSONModel;
+			targetProxy = 767FB9751DDC6E6600DE349D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		767FB8B41DDC58B700DE349D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				767FB8B51DDC58B700DE349D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		767FB8B61DDC58B700DE349D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				767FB8B71DDC58B700DE349D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		76531C891CB68E7A0065EADA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		76531C8A1CB68E7A0065EADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		76531C8C1CB68E7A0065EADA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../../Framework/core-sdk/**";
+				INFOPLIST_FILE = CitrusPayExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.citruspay.sdk-using-binary-library";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		76531C8D1CB68E7A0065EADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../../Framework/core-sdk/**";
+				INFOPLIST_FILE = CitrusPayExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.citruspay.sdk-using-binary-library";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		76531C8F1CB68E7A0065EADA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CitrusPayExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.sdk.CitrusPayExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CitrusPayExample.app/CitrusPayExample";
+			};
+			name = Debug;
+		};
+		76531C901CB68E7A0065EADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CitrusPayExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.sdk.CitrusPayExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CitrusPayExample.app/CitrusPayExample";
+			};
+			name = Release;
+		};
+		76531C921CB68E7A0065EADA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CitrusPayExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.sdk.CitrusPayExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CitrusPayExample;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		76531C931CB68E7A0065EADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CitrusPayExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.sdk.CitrusPayExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CitrusPayExample;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76531C591CB68E7A0065EADA /* Build configuration list for PBXProject "CitrusPayExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76531C891CB68E7A0065EADA /* Debug */,
+				76531C8A1CB68E7A0065EADA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76531C8B1CB68E7A0065EADA /* Build configuration list for PBXNativeTarget "CitrusPayExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76531C8C1CB68E7A0065EADA /* Debug */,
+				76531C8D1CB68E7A0065EADA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76531C8E1CB68E7A0065EADA /* Build configuration list for PBXNativeTarget "CitrusPayExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76531C8F1CB68E7A0065EADA /* Debug */,
+				76531C901CB68E7A0065EADA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76531C911CB68E7A0065EADA /* Build configuration list for PBXNativeTarget "CitrusPayExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76531C921CB68E7A0065EADA /* Debug */,
+				76531C931CB68E7A0065EADA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 76531C561CB68E7A0065EADA /* Project object */;
+}
