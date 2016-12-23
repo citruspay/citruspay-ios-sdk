@@ -1,5 +1,5 @@
 EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/JSONModel" "$PODS_CONFIGURATION_BUILD_DIR/Kingfisher" "${PODS_ROOT}/CitrusGraphics/Framework/graphics-sdk" "${PODS_ROOT}/CitrusPay/Framework/core-sdk" "${PODS_ROOT}/../../../../Framework/lazypay-sdk"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/JSONModel" "$PODS_CONFIGURATION_BUILD_DIR/Kingfisher" "${PODS_ROOT}/CitrusGraphics/Framework/graphics-sdk" "${PODS_ROOT}/CitrusPay/Framework/core-sdk" "${PODS_ROOT}/LazyPay/Framework/lazypay-sdk"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/CitrusGraphics" "${PODS_ROOT}/Headers/Public/CitrusPay" "${PODS_ROOT}/Headers/Public/LazyPay"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'

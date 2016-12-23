@@ -1,0 +1,884 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		76016EE61DA39D10005D90A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76016EE51DA39D10005D90A1 /* AppDelegate.swift */; };
+		76016EFB1DA39D11005D90A1 /* CitrusGraphicsExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76016EFA1DA39D11005D90A1 /* CitrusGraphicsExampleTests.swift */; };
+		76016F061DA39D11005D90A1 /* CitrusGraphicsExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76016F051DA39D11005D90A1 /* CitrusGraphicsExampleUITests.swift */; };
+		76448C9C1DC22A910089B215 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76448C731DC229660089B215 /* Kingfisher.framework */; };
+		76448C9D1DC22A910089B215 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76448C731DC229660089B215 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76448CA01DC22A910089B215 /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76448C621DC229610089B215 /* JSONModel.framework */; };
+		76448CA11DC22A910089B215 /* JSONModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76448C621DC229610089B215 /* JSONModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76448CC11DC230A20089B215 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 76448CBC1DC230A20089B215 /* LICENSE */; };
+		76448CC31DC230A20089B215 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 76448CBF1DC230A20089B215 /* LICENSE */; };
+		76448CC41DC230BC0089B215 /* CitrusPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76448CBB1DC230A20089B215 /* CitrusPay.framework */; };
+		76448CC51DC230BC0089B215 /* CitrusPay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76448CBB1DC230A20089B215 /* CitrusPay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76448CC61DC230BC0089B215 /* CitrusGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76448CBE1DC230A20089B215 /* CitrusGraphics.framework */; };
+		76448CC71DC230BC0089B215 /* CitrusGraphics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76448CBE1DC230A20089B215 /* CitrusGraphics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76AA1C4B1DA50B5100AACB48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76AA1C421DA50B5100AACB48 /* Assets.xcassets */; };
+		76AA1C4C1DA50B5100AACB48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76AA1C431DA50B5100AACB48 /* LaunchScreen.storyboard */; };
+		76AA1C4D1DA50B5100AACB48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76AA1C451DA50B5100AACB48 /* Main.storyboard */; };
+		76AA1C4E1DA50B5100AACB48 /* MerchantConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AA1C471DA50B5100AACB48 /* MerchantConstants.swift */; };
+		76AA1C4F1DA50B5100AACB48 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AA1C481DA50B5100AACB48 /* TableViewCell.swift */; };
+		76AA1C501DA50B5100AACB48 /* TestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AA1C491DA50B5100AACB48 /* TestParams.swift */; };
+		76AA1C511DA50B5100AACB48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AA1C4A1DA50B5100AACB48 /* ViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		76016EF71DA39D11005D90A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76016EDA1DA39D10005D90A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76016EE11DA39D10005D90A1;
+			remoteInfo = CitrusGraphicsExample;
+		};
+		76016F021DA39D11005D90A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76016EDA1DA39D10005D90A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76016EE11DA39D10005D90A1;
+			remoteInfo = CitrusGraphicsExample;
+		};
+		76448C611DC229610089B215 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76448C5D1DC229600089B215 /* JSONModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 92C9BC3D1B19A51100D79B06;
+			remoteInfo = JSONModel;
+		};
+		76448C721DC229660089B215 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76448C631DC229660089B215 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1ED2D351AD2D09F00CFC3EB;
+			remoteInfo = "Kingfisher-iOS";
+		};
+		76448C741DC229660089B215 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76448C631DC229660089B215 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D13F49D61BEDA67C00CE335D;
+			remoteInfo = "Kingfisher-tvOS";
+		};
+		76448C761DC229660089B215 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76448C631DC229660089B215 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4B2944481C3D01B20088C3E7;
+			remoteInfo = "Kingfisher-macOS";
+		};
+		76448C781DC229660089B215 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76448C631DC229660089B215 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D16799EB1C4E74460020FD12;
+			remoteInfo = "Kingfisher-watchOS";
+		};
+		76448C7A1DC229660089B215 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76448C631DC229660089B215 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1ED2D0B1AD2CFA600CFC3EB;
+			remoteInfo = "Kingfisher-Demo";
+		};
+		76448C7C1DC229660089B215 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76448C631DC229660089B215 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D13F49C21BEDA53F00CE335D;
+			remoteInfo = "Kingfisher-tvOS-Demo";
+		};
+		76448C7E1DC229660089B215 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76448C631DC229660089B215 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4B2944551C3D03880088C3E7;
+			remoteInfo = "Kingfisher-macOS-Demo";
+		};
+		76448C801DC229660089B215 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76448C631DC229660089B215 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1679A391C4E78B20020FD12;
+			remoteInfo = "Kingfisher-watchOS-Demo";
+		};
+		76448C821DC229660089B215 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76448C631DC229660089B215 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1679A451C4E78B20020FD12;
+			remoteInfo = "Kingfisher-watchOS-Demo Extension";
+		};
+		76448C841DC229660089B215 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76448C631DC229660089B215 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1ED2D3F1AD2D09F00CFC3EB;
+			remoteInfo = KingfisherTests;
+		};
+		76448C861DC229660089B215 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76448C631DC229660089B215 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4B37667F1C478F940001443F;
+			remoteInfo = "KingfisherTests-tvOS";
+		};
+		76448C881DC229660089B215 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76448C631DC229660089B215 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D10EC2311C3D632300A4211C;
+			remoteInfo = "KingfisherTests-macOS";
+		};
+		76448C9E1DC22A910089B215 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76448C631DC229660089B215 /* Kingfisher.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D1ED2D341AD2D09F00CFC3EB;
+			remoteInfo = "Kingfisher-iOS";
+		};
+		76448CA21DC22A910089B215 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76448C5D1DC229600089B215 /* JSONModel.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 92C9BC3C1B19A51100D79B06;
+			remoteInfo = JSONModel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		76448CA41DC22A910089B215 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				76448C9D1DC22A910089B215 /* Kingfisher.framework in Embed Frameworks */,
+				76448CA11DC22A910089B215 /* JSONModel.framework in Embed Frameworks */,
+				76448CC51DC230BC0089B215 /* CitrusPay.framework in Embed Frameworks */,
+				76448CC71DC230BC0089B215 /* CitrusGraphics.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		76016EE21DA39D10005D90A1 /* CitrusGraphicsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitrusGraphicsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		76016EE51DA39D10005D90A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		76016EF11DA39D10005D90A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76016EF61DA39D11005D90A1 /* CitrusGraphicsExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CitrusGraphicsExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		76016EFA1DA39D11005D90A1 /* CitrusGraphicsExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitrusGraphicsExampleTests.swift; sourceTree = "<group>"; };
+		76016EFC1DA39D11005D90A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76016F011DA39D11005D90A1 /* CitrusGraphicsExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CitrusGraphicsExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		76016F051DA39D11005D90A1 /* CitrusGraphicsExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitrusGraphicsExampleUITests.swift; sourceTree = "<group>"; };
+		76016F071DA39D11005D90A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76448C5D1DC229600089B215 /* JSONModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSONModel.xcodeproj; path = ../../../Dependency/JSONModel/JSONModel.xcodeproj; sourceTree = "<group>"; };
+		76448C631DC229660089B215 /* Kingfisher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kingfisher.xcodeproj; path = ../../../Dependency/Kingfisher/Kingfisher.xcodeproj; sourceTree = "<group>"; };
+		76448CBB1DC230A20089B215 /* CitrusPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusPay.framework; sourceTree = "<group>"; };
+		76448CBC1DC230A20089B215 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		76448CBE1DC230A20089B215 /* CitrusGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusGraphics.framework; sourceTree = "<group>"; };
+		76448CBF1DC230A20089B215 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		76AA1C421DA50B5100AACB48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76AA1C441DA50B5100AACB48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		76AA1C461DA50B5100AACB48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		76AA1C471DA50B5100AACB48 /* MerchantConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MerchantConstants.swift; sourceTree = "<group>"; };
+		76AA1C481DA50B5100AACB48 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		76AA1C491DA50B5100AACB48 /* TestParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestParams.swift; sourceTree = "<group>"; };
+		76AA1C4A1DA50B5100AACB48 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76016EDF1DA39D10005D90A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76448CC41DC230BC0089B215 /* CitrusPay.framework in Frameworks */,
+				76448CC61DC230BC0089B215 /* CitrusGraphics.framework in Frameworks */,
+				76448C9C1DC22A910089B215 /* Kingfisher.framework in Frameworks */,
+				76448CA01DC22A910089B215 /* JSONModel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76016EF31DA39D11005D90A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76016EFE1DA39D11005D90A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		76016ED91DA39D10005D90A1 = {
+			isa = PBXGroup;
+			children = (
+				76448CBA1DC230A20089B215 /* core-sdk */,
+				76448CBD1DC230A20089B215 /* graphics-sdk */,
+				76448C631DC229660089B215 /* Kingfisher.xcodeproj */,
+				76448C5D1DC229600089B215 /* JSONModel.xcodeproj */,
+				76016EE41DA39D10005D90A1 /* CitrusGraphicsExample */,
+				76016EF91DA39D11005D90A1 /* CitrusGraphicsExampleTests */,
+				76016F041DA39D11005D90A1 /* CitrusGraphicsExampleUITests */,
+				76016EE31DA39D10005D90A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		76016EE31DA39D10005D90A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76016EE21DA39D10005D90A1 /* CitrusGraphicsExample.app */,
+				76016EF61DA39D11005D90A1 /* CitrusGraphicsExampleTests.xctest */,
+				76016F011DA39D11005D90A1 /* CitrusGraphicsExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76016EE41DA39D10005D90A1 /* CitrusGraphicsExample */ = {
+			isa = PBXGroup;
+			children = (
+				76AA1C411DA50B5100AACB48 /* test-ui-example */,
+				76016EE51DA39D10005D90A1 /* AppDelegate.swift */,
+				76016EF11DA39D10005D90A1 /* Info.plist */,
+			);
+			path = CitrusGraphicsExample;
+			sourceTree = "<group>";
+		};
+		76016EF91DA39D11005D90A1 /* CitrusGraphicsExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				76016EFA1DA39D11005D90A1 /* CitrusGraphicsExampleTests.swift */,
+				76016EFC1DA39D11005D90A1 /* Info.plist */,
+			);
+			path = CitrusGraphicsExampleTests;
+			sourceTree = "<group>";
+		};
+		76016F041DA39D11005D90A1 /* CitrusGraphicsExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				76016F051DA39D11005D90A1 /* CitrusGraphicsExampleUITests.swift */,
+				76016F071DA39D11005D90A1 /* Info.plist */,
+			);
+			path = CitrusGraphicsExampleUITests;
+			sourceTree = "<group>";
+		};
+		76448C5E1DC229600089B215 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76448C621DC229610089B215 /* JSONModel.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76448C641DC229660089B215 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76448C731DC229660089B215 /* Kingfisher.framework */,
+				76448C751DC229660089B215 /* Kingfisher.framework */,
+				76448C771DC229660089B215 /* Kingfisher.framework */,
+				76448C791DC229660089B215 /* Kingfisher.framework */,
+				76448C7B1DC229660089B215 /* Kingfisher-Demo.app */,
+				76448C7D1DC229660089B215 /* Kingfisher-tvOS-Demo.app */,
+				76448C7F1DC229660089B215 /* Kingfisher-macOS-Demo.app */,
+				76448C811DC229660089B215 /* Kingfisher-watchOS-Demo.app */,
+				76448C831DC229660089B215 /* Kingfisher-watchOS-Demo Extension.appex */,
+				76448C851DC229660089B215 /* KingfisherTests.xctest */,
+				76448C871DC229660089B215 /* KingfisherTests-tvOS.xctest */,
+				76448C891DC229660089B215 /* KingfisherTests-macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76448CBA1DC230A20089B215 /* core-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				76448CBB1DC230A20089B215 /* CitrusPay.framework */,
+				76448CBC1DC230A20089B215 /* LICENSE */,
+			);
+			name = "core-sdk";
+			path = "../../../Framework/core-sdk";
+			sourceTree = "<group>";
+		};
+		76448CBD1DC230A20089B215 /* graphics-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				76448CBE1DC230A20089B215 /* CitrusGraphics.framework */,
+				76448CBF1DC230A20089B215 /* LICENSE */,
+			);
+			name = "graphics-sdk";
+			path = "../../../Framework/graphics-sdk";
+			sourceTree = "<group>";
+		};
+		76AA1C411DA50B5100AACB48 /* test-ui-example */ = {
+			isa = PBXGroup;
+			children = (
+				76AA1C421DA50B5100AACB48 /* Assets.xcassets */,
+				76AA1C431DA50B5100AACB48 /* LaunchScreen.storyboard */,
+				76AA1C451DA50B5100AACB48 /* Main.storyboard */,
+				76AA1C471DA50B5100AACB48 /* MerchantConstants.swift */,
+				76AA1C481DA50B5100AACB48 /* TableViewCell.swift */,
+				76AA1C491DA50B5100AACB48 /* TestParams.swift */,
+				76AA1C4A1DA50B5100AACB48 /* ViewController.swift */,
+			);
+			name = "test-ui-example";
+			path = "../../test-ui-example";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76016EE11DA39D10005D90A1 /* CitrusGraphicsExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76016F0A1DA39D11005D90A1 /* Build configuration list for PBXNativeTarget "CitrusGraphicsExample" */;
+			buildPhases = (
+				76016EDE1DA39D10005D90A1 /* Sources */,
+				76016EDF1DA39D10005D90A1 /* Frameworks */,
+				76016EE01DA39D10005D90A1 /* Resources */,
+				76448CA41DC22A910089B215 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76448C9F1DC22A910089B215 /* PBXTargetDependency */,
+				76448CA31DC22A910089B215 /* PBXTargetDependency */,
+			);
+			name = CitrusGraphicsExample;
+			productName = CitrusGraphicsExample;
+			productReference = 76016EE21DA39D10005D90A1 /* CitrusGraphicsExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		76016EF51DA39D11005D90A1 /* CitrusGraphicsExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76016F0D1DA39D11005D90A1 /* Build configuration list for PBXNativeTarget "CitrusGraphicsExampleTests" */;
+			buildPhases = (
+				76016EF21DA39D11005D90A1 /* Sources */,
+				76016EF31DA39D11005D90A1 /* Frameworks */,
+				76016EF41DA39D11005D90A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76016EF81DA39D11005D90A1 /* PBXTargetDependency */,
+			);
+			name = CitrusGraphicsExampleTests;
+			productName = CitrusGraphicsExampleTests;
+			productReference = 76016EF61DA39D11005D90A1 /* CitrusGraphicsExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		76016F001DA39D11005D90A1 /* CitrusGraphicsExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76016F101DA39D11005D90A1 /* Build configuration list for PBXNativeTarget "CitrusGraphicsExampleUITests" */;
+			buildPhases = (
+				76016EFD1DA39D11005D90A1 /* Sources */,
+				76016EFE1DA39D11005D90A1 /* Frameworks */,
+				76016EFF1DA39D11005D90A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76016F031DA39D11005D90A1 /* PBXTargetDependency */,
+			);
+			name = CitrusGraphicsExampleUITests;
+			productName = CitrusGraphicsExampleUITests;
+			productReference = 76016F011DA39D11005D90A1 /* CitrusGraphicsExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		76016EDA1DA39D10005D90A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = CitrusPay;
+				TargetAttributes = {
+					76016EE11DA39D10005D90A1 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Manual;
+					};
+					76016EF51DA39D11005D90A1 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = BF75J23QJ2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 76016EE11DA39D10005D90A1;
+					};
+					76016F001DA39D11005D90A1 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = BF75J23QJ2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 76016EE11DA39D10005D90A1;
+					};
+				};
+			};
+			buildConfigurationList = 76016EDD1DA39D10005D90A1 /* Build configuration list for PBXProject "CitrusGraphicsExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 76016ED91DA39D10005D90A1;
+			productRefGroup = 76016EE31DA39D10005D90A1 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 76448C5E1DC229600089B215 /* Products */;
+					ProjectRef = 76448C5D1DC229600089B215 /* JSONModel.xcodeproj */;
+				},
+				{
+					ProductGroup = 76448C641DC229660089B215 /* Products */;
+					ProjectRef = 76448C631DC229660089B215 /* Kingfisher.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				76016EE11DA39D10005D90A1 /* CitrusGraphicsExample */,
+				76016EF51DA39D11005D90A1 /* CitrusGraphicsExampleTests */,
+				76016F001DA39D11005D90A1 /* CitrusGraphicsExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		76448C621DC229610089B215 /* JSONModel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSONModel.framework;
+			remoteRef = 76448C611DC229610089B215 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		76448C731DC229660089B215 /* Kingfisher.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Kingfisher.framework;
+			remoteRef = 76448C721DC229660089B215 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		76448C751DC229660089B215 /* Kingfisher.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Kingfisher.framework;
+			remoteRef = 76448C741DC229660089B215 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		76448C771DC229660089B215 /* Kingfisher.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Kingfisher.framework;
+			remoteRef = 76448C761DC229660089B215 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		76448C791DC229660089B215 /* Kingfisher.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Kingfisher.framework;
+			remoteRef = 76448C781DC229660089B215 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		76448C7B1DC229660089B215 /* Kingfisher-Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Kingfisher-Demo.app";
+			remoteRef = 76448C7A1DC229660089B215 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		76448C7D1DC229660089B215 /* Kingfisher-tvOS-Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Kingfisher-tvOS-Demo.app";
+			remoteRef = 76448C7C1DC229660089B215 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		76448C7F1DC229660089B215 /* Kingfisher-macOS-Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Kingfisher-macOS-Demo.app";
+			remoteRef = 76448C7E1DC229660089B215 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		76448C811DC229660089B215 /* Kingfisher-watchOS-Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Kingfisher-watchOS-Demo.app";
+			remoteRef = 76448C801DC229660089B215 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		76448C831DC229660089B215 /* Kingfisher-watchOS-Demo Extension.appex */ = {
+			isa = PBXReferenceProxy;
+			fileType = "wrapper.app-extension";
+			path = "Kingfisher-watchOS-Demo Extension.appex";
+			remoteRef = 76448C821DC229660089B215 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		76448C851DC229660089B215 /* KingfisherTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KingfisherTests.xctest;
+			remoteRef = 76448C841DC229660089B215 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		76448C871DC229660089B215 /* KingfisherTests-tvOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "KingfisherTests-tvOS.xctest";
+			remoteRef = 76448C861DC229660089B215 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		76448C891DC229660089B215 /* KingfisherTests-macOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "KingfisherTests-macOS.xctest";
+			remoteRef = 76448C881DC229660089B215 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		76016EE01DA39D10005D90A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76AA1C4D1DA50B5100AACB48 /* Main.storyboard in Resources */,
+				76AA1C4B1DA50B5100AACB48 /* Assets.xcassets in Resources */,
+				76448CC11DC230A20089B215 /* LICENSE in Resources */,
+				76AA1C4C1DA50B5100AACB48 /* LaunchScreen.storyboard in Resources */,
+				76448CC31DC230A20089B215 /* LICENSE in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76016EF41DA39D11005D90A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76016EFF1DA39D11005D90A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76016EDE1DA39D10005D90A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76AA1C511DA50B5100AACB48 /* ViewController.swift in Sources */,
+				76AA1C4F1DA50B5100AACB48 /* TableViewCell.swift in Sources */,
+				76016EE61DA39D10005D90A1 /* AppDelegate.swift in Sources */,
+				76AA1C4E1DA50B5100AACB48 /* MerchantConstants.swift in Sources */,
+				76AA1C501DA50B5100AACB48 /* TestParams.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76016EF21DA39D11005D90A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76016EFB1DA39D11005D90A1 /* CitrusGraphicsExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76016EFD1DA39D11005D90A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76016F061DA39D11005D90A1 /* CitrusGraphicsExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		76016EF81DA39D11005D90A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76016EE11DA39D10005D90A1 /* CitrusGraphicsExample */;
+			targetProxy = 76016EF71DA39D11005D90A1 /* PBXContainerItemProxy */;
+		};
+		76016F031DA39D11005D90A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76016EE11DA39D10005D90A1 /* CitrusGraphicsExample */;
+			targetProxy = 76016F021DA39D11005D90A1 /* PBXContainerItemProxy */;
+		};
+		76448C9F1DC22A910089B215 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Kingfisher-iOS";
+			targetProxy = 76448C9E1DC22A910089B215 /* PBXContainerItemProxy */;
+		};
+		76448CA31DC22A910089B215 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JSONModel;
+			targetProxy = 76448CA21DC22A910089B215 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		76AA1C431DA50B5100AACB48 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76AA1C441DA50B5100AACB48 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		76AA1C451DA50B5100AACB48 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76AA1C461DA50B5100AACB48 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		76016F081DA39D11005D90A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		76016F091DA39D11005D90A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		76016F0B1DA39D11005D90A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../../Framework/core-sdk/**",
+					"$(PROJECT_DIR)/../../../Framework/graphics-sdk/**",
+				);
+				INFOPLIST_FILE = CitrusGraphicsExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.CitrusGraphicsExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		76016F0C1DA39D11005D90A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../../Framework/core-sdk/**",
+					"$(PROJECT_DIR)/../../../Framework/graphics-sdk/**",
+				);
+				INFOPLIST_FILE = CitrusGraphicsExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.CitrusGraphicsExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		76016F0E1DA39D11005D90A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = BF75J23QJ2;
+				INFOPLIST_FILE = CitrusGraphicsExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.citrusgraphics.CitrusGraphicsExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CitrusGraphicsExample.app/CitrusGraphicsExample";
+			};
+			name = Debug;
+		};
+		76016F0F1DA39D11005D90A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = BF75J23QJ2;
+				INFOPLIST_FILE = CitrusGraphicsExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.citrusgraphics.CitrusGraphicsExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CitrusGraphicsExample.app/CitrusGraphicsExample";
+			};
+			name = Release;
+		};
+		76016F111DA39D11005D90A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = BF75J23QJ2;
+				INFOPLIST_FILE = CitrusGraphicsExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.citrusgraphics.CitrusGraphicsExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = CitrusGraphicsExample;
+			};
+			name = Debug;
+		};
+		76016F121DA39D11005D90A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = BF75J23QJ2;
+				INFOPLIST_FILE = CitrusGraphicsExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.citrusgraphics.CitrusGraphicsExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = CitrusGraphicsExample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76016EDD1DA39D10005D90A1 /* Build configuration list for PBXProject "CitrusGraphicsExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76016F081DA39D11005D90A1 /* Debug */,
+				76016F091DA39D11005D90A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76016F0A1DA39D11005D90A1 /* Build configuration list for PBXNativeTarget "CitrusGraphicsExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76016F0B1DA39D11005D90A1 /* Debug */,
+				76016F0C1DA39D11005D90A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76016F0D1DA39D11005D90A1 /* Build configuration list for PBXNativeTarget "CitrusGraphicsExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76016F0E1DA39D11005D90A1 /* Debug */,
+				76016F0F1DA39D11005D90A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76016F101DA39D11005D90A1 /* Build configuration list for PBXNativeTarget "CitrusGraphicsExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76016F111DA39D11005D90A1 /* Debug */,
+				76016F121DA39D11005D90A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 76016EDA1DA39D10005D90A1 /* Project object */;
+}

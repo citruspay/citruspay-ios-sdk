@@ -88,12 +88,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${PODS_ROOT}/CitrusPay/Framework/core-sdk/CitrusPay.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JSONModel/JSONModel.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Kingfisher/Kingfisher.framework"
-  install_framework "${PODS_ROOT}/../../../../Framework/lazypay-sdk/LazyPay.framework"
+  install_framework "${PODS_ROOT}/LazyPay/Framework/lazypay-sdk/LazyPay.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${PODS_ROOT}/CitrusGraphics/Framework/graphics-sdk/CitrusGraphics.framework"
   install_framework "${PODS_ROOT}/CitrusPay/Framework/core-sdk/CitrusPay.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JSONModel/JSONModel.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Kingfisher/Kingfisher.framework"
-  install_framework "${PODS_ROOT}/../../../../Framework/lazypay-sdk/LazyPay.framework"
+  install_framework "${PODS_ROOT}/LazyPay/Framework/lazypay-sdk/LazyPay.framework"
 fi

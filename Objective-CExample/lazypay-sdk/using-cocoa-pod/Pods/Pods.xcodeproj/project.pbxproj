@@ -10,18 +10,18 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>03078B3A4647D59579A8D71FDAE8F01B</key>
+		<key>0039A88851A7C2CB593354FB85E986A2</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>1B52F8943D45D45694B4C0F3709ACD7A</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>JSONAPI.h</string>
+			<string>CitrusPay</string>
 			<key>path</key>
-			<string>JSONModel/JSONModelNetworking/JSONAPI.h</string>
+			<string>CitrusPay</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -103,10 +103,30 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
+		<key>0378CE8C25D15B762A44DF9BD0F7C162</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>409033ADEDAED01AB5A547EDA2A0E381</string>
+				<string>4EDE48E11EF6E8F583967F5116E11FE2</string>
+				<string>45AA660320717D517CDF4A73774C6D91</string>
+				<string>6BDC14795DF4CE4297CF066803F078BE</string>
+				<string>1F0831BF2E2DDE6D10EB8A7CAEA8F499</string>
+				<string>F4D9DDAFDE38487E0AC9BD0373104983</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/JSONModel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>049858D9D05DE8CA426EB58C89C12A70</key>
 		<dict>
 			<key>fileRef</key>
-			<string>89475D1394FD53B76A5C60C46EA56F0F</string>
+			<string>2766EEA66E1E03EF50B047DBA05CD8A2</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -115,38 +135,40 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>060F41596F0FA2C08676B7A9347A79E6</key>
+		<key>06AF8620BAEC0AAA68B6EF04DBD82A1D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>JSONValueTransformer.h</string>
+			<string>JSONKeyMapper.m</string>
 			<key>path</key>
-			<string>JSONModel/JSONModelTransformations/JSONValueTransformer.h</string>
+			<string>JSONModel/JSONModelTransformations/JSONKeyMapper.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>0890A5D5A7A036CA1ECA73C100F68724</key>
+		<key>0904EDCF5C0010B7AA42B5B17A65DDAE</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>213864ECD795AC14ACF5895768D1D6BA</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>Development Pods</string>
+			<string>Filter.swift</string>
+			<key>path</key>
+			<string>Sources/Filter.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>0956430991227608EF86C94C3AB303E3</key>
 		<dict>
 			<key>fileRef</key>
-			<string>DAB6404CC0DC3B68CEB9BE815592CFA7</string>
+			<string>AC6949147E6A89FAD1D3FFF87A41235E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -156,21 +178,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>0A6FE6594A7E13A846958CFCF2B2E3C2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>ImageDownloader.swift</string>
-			<key>path</key>
-			<string>Sources/ImageDownloader.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>0A7A417FC79D113B9EC866B7D24FC9C6</key>
 		<dict>
@@ -185,7 +192,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>0B233C2CE4E802ECA52E59D1DB2CA406</key>
+		<key>11601F85F8ED24F23F8334B47F4C4166</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -193,23 +200,10 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>JSONModel-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0F1DFB82BE3C150091F4D03871A1DA96</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>ImagePrefetcher.swift</string>
+			<string>JSONModelError.h</string>
 			<key>path</key>
-			<string>Sources/ImagePrefetcher.swift</string>
+			<string>JSONModel/JSONModel/JSONModelError.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -241,7 +235,7 @@
 		<key>11DE5113850DDE1FEC6254F813F83B6A</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>F0FE31A2E9C560ECB1E9D0EA59777137</string>
+			<string>6DD4AF6E60DF2B36174784E03C93E944</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -300,38 +294,7 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>12E1BC23D5DC60B32216A036AB3539F0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3FF3C4AF12DC0B1F0DF116532A5A4E3D</string>
-				<string>147AD61DB245F323AD4F9307BB830C6B</string>
-				<string>F0FE31A2E9C560ECB1E9D0EA59777137</string>
-				<string>C2E59A31AE994CCBD1A4E40BBB65BBED</string>
-				<string>F0B3ACB15645A63448F7A655D5D1F81A</string>
-				<string>87F05CD5190A195C9AE16A1105E95309</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Kingfisher</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>147AD61DB245F323AD4F9307BB830C6B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Kingfisher.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>16B0E0659F69EE7BF65C5AF65E6DD3C6</key>
+		<key>123FA8F62412DC017D451DF57A432CAB</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -340,16 +303,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>AnimatedImageView.swift</string>
+			<string>Kingfisher.swift</string>
 			<key>path</key>
-			<string>Sources/AnimatedImageView.swift</string>
+			<string>Sources/Kingfisher.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>17DC9E4778FFA0045691F7874EE1C970</key>
 		<dict>
 			<key>fileRef</key>
-			<string>0F1DFB82BE3C150091F4D03871A1DA96</string>
+			<string>A53E02E0023D4AFEC59B778F587F8F94</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -379,12 +342,51 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>1B52F8943D45D45694B4C0F3709ACD7A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7084D0C6E02DBDD668B94D5FC72ABC21</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1D47D78BD155C414421B21AD4C8010EC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ImageView+Kingfisher.swift</string>
+			<key>path</key>
+			<string>Sources/ImageView+Kingfisher.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>1D80169B0B9F5B82D2E83259D3E83B31</key>
 		<dict>
 			<key>fileRef</key>
 			<string>D1406D11E1DC88C58B3DA49F10581B90</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>1DA489834C35B3F28784F92B0D0C529E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Kingfisher.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>1DE93A359FA21F91DFBE81309E851A4A</key>
 		<dict>
@@ -411,18 +413,16 @@
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
 		</dict>
-		<key>213864ECD795AC14ACF5895768D1D6BA</key>
+		<key>1F0831BF2E2DDE6D10EB8A7CAEA8F499</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>2E53ACEEE75235283EC065F341223A67</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>LazyPay</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>../../../..</string>
+			<string>JSONModel-prefix.pch</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -439,7 +439,22 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>23F0BC41C78D89F53935AF2E62CDAD44</key>
+		<key>23578BDCFBA1D9763B159C9FA41058EA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>JSONHTTPClient.m</string>
+			<key>path</key>
+			<string>JSONModel/JSONModelNetworking/JSONHTTPClient.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2766EEA66E1E03EF50B047DBA05CD8A2</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -448,31 +463,44 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>Filter.swift</string>
+			<string>String+MD5.swift</string>
 			<key>path</key>
-			<string>Sources/Filter.swift</string>
+			<string>Sources/String+MD5.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>24DDE8362895F3FD9C8D4815469AEC41</key>
+		<key>27EA3A905302811C285E8960E8AEE4D1</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>JSONModel.h</string>
+			<string>Box.swift</string>
 			<key>path</key>
-			<string>JSONModel/JSONModel/JSONModel.h</string>
+			<string>Sources/Box.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2931BEBF2DCF36686AAFB0C1E0CC0CCF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CitrusGraphics.framework</string>
+			<key>path</key>
+			<string>Framework/graphics-sdk/CitrusGraphics.framework</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>29B613B34FC3541D3592F0F9B46EA76A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>0A6FE6594A7E13A846958CFCF2B2E3C2</string>
+			<string>F5CF8C782E82535B0C68BB1D1DE832A9</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -523,19 +551,6 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>2E53ACEEE75235283EC065F341223A67</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BD09D74AFA1028FA3B5377FC9B80C3A4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>2FBCD77C14715E8DAFF46FDC1F27E1AB</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -549,7 +564,22 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>30E99318AF1DBA7F6593666D86DDC423</key>
+		<key>2FCA957AA19CA07DC5F2934FC05808DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B3723813E6DE96B20D8B59A4303EAA30</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>LazyPay</string>
+			<key>path</key>
+			<string>LazyPay</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30ED4F27C7EAC3B5488574B6B625F403</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -558,24 +588,9 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>JSONModelClassProperty.h</string>
+			<string>Kingfisher.h</string>
 			<key>path</key>
-			<string>JSONModel/JSONModel/JSONModelClassProperty.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>31369B422DD6863E3D5FFE3C0A42032B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>CacheSerializer.swift</string>
-			<key>path</key>
-			<string>Sources/CacheSerializer.swift</string>
+			<string>Sources/Kingfisher.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -592,21 +607,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>3352B944752D97AC4ABA9A7F2CF4CA37</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>KingfisherOptionsInfo.swift</string>
-			<key>path</key>
-			<string>Sources/KingfisherOptionsInfo.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>33A1F434F278AE7B87B749FA2966E5CC</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -617,21 +617,6 @@
 			<string>sourcecode.c.objc</string>
 			<key>path</key>
 			<string>Pods-LazyPayExample-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3497A706ED4C54BD3F07A9A1DA6034AE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>ImageTransition.swift</string>
-			<key>path</key>
-			<string>Sources/ImageTransition.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -666,7 +651,7 @@
 		<key>3C88B5F2FC837662043CC4D6B1FBF7B7</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C2E59A31AE994CCBD1A4E40BBB65BBED</string>
+			<string>9C3FB64C23C365E4CB2E7C144904987F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -754,7 +739,7 @@
 		<key>3F380903DB180ADB51257848978DFD9B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>BCD03F76C635BE3A44F71DFC939BBBD3</string>
+			<string>23578BDCFBA1D9763B159C9FA41058EA</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -766,7 +751,7 @@
 		<key>3F53272B4E5E6820890ECD544235BF82</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>F0FE31A2E9C560ECB1E9D0EA59777137</string>
+			<string>6DD4AF6E60DF2B36174784E03C93E944</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -823,22 +808,7 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>3FE0188AD98ECFE1E294C7AA2207393B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>ImageView+Kingfisher.swift</string>
-			<key>path</key>
-			<string>Sources/ImageView+Kingfisher.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3FF3C4AF12DC0B1F0DF116532A5A4E3D</key>
+		<key>409033ADEDAED01AB5A547EDA2A0E381</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -854,7 +824,7 @@
 		<key>40B1F0B83147376D8E081AD11A04199A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3497A706ED4C54BD3F07A9A1DA6034AE</string>
+			<string>4FACF943D96521B542B52DB15E73C4D0</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -866,7 +836,7 @@
 		<key>41421F77119106A453BFDBB4C280414B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B01C2AE8E5CB6EE77E40F57E73600AF4</string>
+			<string>8E56DBFC2D58798C5C502C5BC1F557B7</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -927,7 +897,7 @@
 		<key>44099DE61C3B44545FE77B523DE7A058</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3352B944752D97AC4ABA9A7F2CF4CA37</string>
+			<string>78E24206DEE5B3AD91B34991450990CC</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -936,18 +906,16 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>454A2ACDD0BBE51ABBD3E5508334296A</key>
+		<key>45AA660320717D517CDF4A73774C6D91</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Kingfisher.h</string>
+			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>Sources/Kingfisher.h</string>
+			<string>JSONModel.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -958,7 +926,7 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>47C00D6582FD18AE8D44249993761490</key>
+		<key>489AE1820F48A29A59935DCF27F74C4C</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -967,9 +935,9 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>JSONModel+networking.m</string>
+			<string>JSONAPI.m</string>
 			<key>path</key>
-			<string>JSONModel/JSONModelNetworking/JSONModel+networking.m</string>
+			<string>JSONModel/JSONModelNetworking/JSONAPI.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1044,7 +1012,7 @@
 		<key>4B8ADB267798B95F3A45BD8BF59F582E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>93796A6058F9D1C1DE62FEBFC35C7444</string>
+			<string>489AE1820F48A29A59935DCF27F74C4C</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1053,10 +1021,21 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
+		<key>4EDE48E11EF6E8F583967F5116E11FE2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>JSONModel.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>4F484780A2D2FEB2ACE51E9795DAD554</key>
 		<dict>
 			<key>fileRef</key>
-			<string>0B233C2CE4E802ECA52E59D1DB2CA406</string>
+			<string>F4D9DDAFDE38487E0AC9BD0373104983</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1067,18 +1046,18 @@
 				</array>
 			</dict>
 		</dict>
-		<key>504BB269DE8D48FBB5492C008AB63C3C</key>
+		<key>4FACF943D96521B542B52DB15E73C4D0</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>JSONModelError.h</string>
+			<string>ImageTransition.swift</string>
 			<key>path</key>
-			<string>JSONModel/JSONModel/JSONModelError.h</string>
+			<string>Sources/ImageTransition.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1092,6 +1071,21 @@
 			<string>text.plist.xml</string>
 			<key>path</key>
 			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>51DF0CD8950861C9B7B5572BAC7E2BD9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>JSONAPI.h</string>
+			<key>path</key>
+			<string>JSONModel/JSONModelNetworking/JSONAPI.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1128,6 +1122,36 @@
 			<key>remoteInfo</key>
 			<string>JSONModel</string>
 		</dict>
+		<key>540A7A1BFBCC62588910468A54340F58</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>JSONKeyMapper.h</string>
+			<key>path</key>
+			<string>JSONModel/JSONModelTransformations/JSONKeyMapper.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5470DEBDEF26B4BA26A5D41E9E7066CD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ThreadHelper.swift</string>
+			<key>path</key>
+			<string>Sources/ThreadHelper.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>581A86DE38C2D19ADBD0D8441A75A108</key>
 		<dict>
 			<key>children</key>
@@ -1155,7 +1179,7 @@
 		<key>58456DBB2DF94860D1B17F581F215C0F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>23F0BC41C78D89F53935AF2E62CDAD44</string>
+			<string>0904EDCF5C0010B7AA42B5B17A65DDAE</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1164,7 +1188,14 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>5991D62A3D7A0E43F9712AA131A9417E</key>
+		<key>5C0FA173361BAC3816BF943578DB3A4B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>33A1F434F278AE7B87B749FA2966E5CC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5D42D681A5AFADAB4180508527D1A907</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1173,23 +1204,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>JSONModel.m</string>
+			<string>JSONModelError.m</string>
 			<key>path</key>
-			<string>JSONModel/JSONModel/JSONModel.m</string>
+			<string>JSONModel/JSONModel/JSONModelError.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C0FA173361BAC3816BF943578DB3A4B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>33A1F434F278AE7B87B749FA2966E5CC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>5EB92E7D051335EC3251AA30175D75F1</key>
 		<dict>
 			<key>fileRef</key>
-			<string>30E99318AF1DBA7F6593666D86DDC423</string>
+			<string>D1AD9D5B666676FAAB63B17160726B8F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1199,6 +1223,21 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>5FEA1F7A88DAA29D0CF470A06DC51EE4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Image.swift</string>
+			<key>path</key>
+			<string>Sources/Image.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>6037A0C0905E15333F53FF3FB7472CCB</key>
 		<dict>
@@ -1214,7 +1253,7 @@
 		<key>608B13EC74F4761F896A65AB0056F809</key>
 		<dict>
 			<key>fileRef</key>
-			<string>BFCE7FB46B5189EE60A881E53D441FD2</string>
+			<string>FFA17C5E6F7B9034B0EA5C994B1E3AE8</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1222,21 +1261,6 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
-		</dict>
-		<key>6092811C17601D0DB825DD86DCD0C077</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>ImageCache.swift</string>
-			<key>path</key>
-			<string>Sources/ImageCache.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>6182AFE3DB7BD814F0391B8A528C2DC3</key>
 		<dict>
@@ -1251,10 +1275,25 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>62F4CFC1B7926B9F6B517B618ACA7402</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>CacheSerializer.swift</string>
+			<key>path</key>
+			<string>Sources/CacheSerializer.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>637183417614F3CB491BBCCAEDDE4978</key>
 		<dict>
 			<key>fileRef</key>
-			<string>24DDE8362895F3FD9C8D4815469AEC41</string>
+			<string>F0DCED9702D84340A29868E787B8CFD2</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1264,6 +1303,19 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>647ABA12CC4D55172D1AB71B05A6861E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Kingfisher-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>66074E8E43C2F09D835F7F478F120325</key>
 		<dict>
@@ -1281,7 +1333,7 @@
 		<key>66DF93D76BDE8BE1F4D21620D1000118</key>
 		<dict>
 			<key>fileRef</key>
-			<string>47C00D6582FD18AE8D44249993761490</string>
+			<string>B86F82133945DB245DFF2475CD6768D1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1290,26 +1342,10 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>66E64F01CA87D982BAAAAEBF6B390386</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B1F2D14D64BDA72E633F036D856B96E9</string>
-				<string>6B66C0F82B190EF6BA9F30FEE0CD0F96</string>
-				<string>E88D1FDA2C24112FD888DFFD0B5012B1</string>
-				<string>D5BD129C32C7E499B4949AA766D01E5E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>673E79FE0D8914CFCAC3A5D8DC816B2B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>85E267267CFD329A5E0B948CCF5FD289</string>
+			<string>DFF63A3ED29A70CC28EAF0901C3D71F6</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1321,7 +1357,7 @@
 		<key>6A60DAA228804C4353CE90C340FB7F44</key>
 		<dict>
 			<key>fileRef</key>
-			<string>03078B3A4647D59579A8D71FDAE8F01B</string>
+			<string>51DF0CD8950861C9B7B5572BAC7E2BD9</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1345,18 +1381,31 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>6B66C0F82B190EF6BA9F30FEE0CD0F96</key>
+		<key>6BDC14795DF4CE4297CF066803F078BE</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>78BF4C531F643F2EDB92840A15BF4BED</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>CitrusPay</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
 			<key>path</key>
-			<string>CitrusPay</string>
+			<string>JSONModel-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6C9DB2B1EC3558069BED5E9F712B5FE5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>JSONHTTPClient.h</string>
+			<key>path</key>
+			<string>JSONModel/JSONModelNetworking/JSONHTTPClient.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1373,7 +1422,7 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>70E634CDA5E8BD7347CAFC3DA57D7A57</key>
+		<key>6DD4AF6E60DF2B36174784E03C93E944</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1382,7 +1431,20 @@
 			<key>lastKnownFileType</key>
 			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>JSONModel.xcconfig</string>
+			<string>Kingfisher.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7084D0C6E02DBDD668B94D5FC72ABC21</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CitrusPay.framework</string>
+			<key>path</key>
+			<string>Framework/core-sdk/CitrusPay.framework</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1421,48 +1483,16 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>74CEE6418D4B1FE7848EE97AF2F804CC</key>
+		<key>74D9E3CE4473633DD4C9FE3BAFBEE284</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>2931BEBF2DCF36686AAFB0C1E0CC0CCF</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Image.swift</string>
-			<key>path</key>
-			<string>Sources/Image.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>74E810D868E289B1C53FF2570592AA1A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>UIButton+Kingfisher.swift</string>
-			<key>path</key>
-			<string>Sources/UIButton+Kingfisher.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>75A332B65E15C5D05B8EE657C38E5199</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>JSONModelError.m</string>
-			<key>path</key>
-			<string>JSONModel/JSONModel/JSONModelError.m</string>
+			<string>Frameworks</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1479,7 +1509,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>77550595B4705B43846DA1B04DEFCBC4</key>
+		<key>78E24206DEE5B3AD91B34991450990CC</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1488,42 +1518,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>RequestModifier.swift</string>
+			<string>KingfisherOptionsInfo.swift</string>
 			<key>path</key>
-			<string>Sources/RequestModifier.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>78334A025F8D505AF257D070E7C9EBD8</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CitrusGraphics.framework</string>
-			<key>path</key>
-			<string>Framework/graphics-sdk/CitrusGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>78BF4C531F643F2EDB92840A15BF4BED</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D357B4EC874E7BA95C53F08002612212</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
+			<string>Sources/KingfisherOptionsInfo.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>7B8A151B7A2D25CDFEA8638E651CC110</key>
 		<dict>
 			<key>fileRef</key>
-			<string>FDBBA26A89637B247D105D22F50D318A</string>
+			<string>8CC360F66665FAF5F45062A4CBB43857</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1535,7 +1539,7 @@
 		<key>7D565BAE344F83781B1387BD4D49BBAC</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9E2D9C7648954ED7D7561184F1BE057F</string>
+			<string>123FA8F62412DC017D451DF57A432CAB</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1549,9 +1553,8 @@
 			<key>children</key>
 			<array>
 				<string>93A4A3777CF96A4AAC1D13BA6DCCEA73</string>
-				<string>0890A5D5A7A036CA1ECA73C100F68724</string>
 				<string>433CD3331B6C3787F473C941B61FC68F</string>
-				<string>66E64F01CA87D982BAAAAEBF6B390386</string>
+				<string>B78655FE8D38C748732FBCB0D75D9CE9</string>
 				<string>BB1462AE50F385D8CCB5333D2BA10404</string>
 				<string>3726756EF2E367102AC6812697661E40</string>
 			</array>
@@ -1563,7 +1566,7 @@
 		<key>7E2F7B2BD75F79D60287A2C5AD6B2AE4</key>
 		<dict>
 			<key>fileRef</key>
-			<string>31369B422DD6863E3D5FFE3C0A42032B</string>
+			<string>62F4CFC1B7926B9F6B517B618ACA7402</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1623,7 +1626,7 @@
 		<key>8136A2972B0D33E5CEFAE5F403A84CA7</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>70E634CDA5E8BD7347CAFC3DA57D7A57</string>
+			<string>45AA660320717D517CDF4A73774C6D91</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -1680,21 +1683,6 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>85E267267CFD329A5E0B948CCF5FD289</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>Indicator.swift</string>
-			<key>path</key>
-			<string>Sources/Indicator.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>86A5CECD1FC53B28A37DD280DF593329</key>
 		<dict>
 			<key>containerPortal</key>
@@ -1708,23 +1696,10 @@
 			<key>remoteInfo</key>
 			<string>Kingfisher</string>
 		</dict>
-		<key>87F05CD5190A195C9AE16A1105E95309</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Kingfisher-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>88071127B0485A4AA9199E099BF1521D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>16B0E0659F69EE7BF65C5AF65E6DD3C6</string>
+			<string>D901B5BABD862D0E6B3F1EFF95261192</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1733,7 +1708,7 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>89475D1394FD53B76A5C60C46EA56F0F</key>
+		<key>8818F178164B7FB89E7DA76C16660417</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1742,24 +1717,9 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>String+MD5.swift</string>
+			<string>RequestModifier.swift</string>
 			<key>path</key>
-			<string>Sources/String+MD5.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>89959F55E4E3756DF7851473D13440E2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>ImageProcessor.swift</string>
-			<key>path</key>
-			<string>Sources/ImageProcessor.swift</string>
+			<string>Sources/RequestModifier.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1787,7 +1747,7 @@
 		<key>8C4E74539A53328A435A1169CAD1FF0E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>77550595B4705B43846DA1B04DEFCBC4</string>
+			<string>8818F178164B7FB89E7DA76C16660417</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1796,6 +1756,21 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
+		<key>8CC360F66665FAF5F45062A4CBB43857</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>KingfisherManager.swift</string>
+			<key>path</key>
+			<string>Sources/KingfisherManager.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>8DBA83DA7327FE5D6C8D4AEA11B88256</key>
 		<dict>
 			<key>fileRef</key>
@@ -1803,10 +1778,25 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>8E56DBFC2D58798C5C502C5BC1F557B7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>JSONValueTransformer.m</string>
+			<key>path</key>
+			<string>JSONModel/JSONModelTransformations/JSONValueTransformer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>8F434965584418E382761CDEC37FA775</key>
 		<dict>
 			<key>fileRef</key>
-			<string>060F41596F0FA2C08676B7A9347A79E6</string>
+			<string>F5E9C079C6F97E3AC65C2DB49C07DB25</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1841,18 +1831,18 @@
 			<key>targetProxy</key>
 			<string>86A5CECD1FC53B28A37DD280DF593329</string>
 		</dict>
-		<key>93796A6058F9D1C1DE62FEBFC35C7444</key>
+		<key>9207BB32EA7A01AD2989D799E3809323</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>JSONAPI.m</string>
+			<string>ImageProcessor.swift</string>
 			<key>path</key>
-			<string>JSONModel/JSONModelNetworking/JSONAPI.m</string>
+			<string>Sources/ImageProcessor.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1891,7 +1881,7 @@
 		<key>954CABA4AFFF5DF3653E6B518D64383B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A056EED2443B79002CD0FF6C091D66F4</string>
+			<string>5470DEBDEF26B4BA26A5D41E9E7066CD</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1899,26 +1889,11 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
-		</dict>
-		<key>98E92B61272527DFCE36130128509CA5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>Resource.swift</string>
-			<key>path</key>
-			<string>Sources/Resource.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>9B24B9ED0DE3B626410FCD19FF1A0555</key>
 		<dict>
 			<key>fileRef</key>
-			<string>89959F55E4E3756DF7851473D13440E2</string>
+			<string>9207BB32EA7A01AD2989D799E3809323</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1927,18 +1902,49 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>9E2D9C7648954ED7D7561184F1BE057F</key>
+		<key>9C3FB64C23C365E4CB2E7C144904987F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>Kingfisher.swift</string>
+			<string>sourcecode.c.objc</string>
 			<key>path</key>
-			<string>Sources/Kingfisher.swift</string>
+			<string>Kingfisher-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D3FE9D315B42F1DDFC39B155B120E3F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A4C31D9F15910D69D2981057BCE8126D</string>
+				<string>1DA489834C35B3F28784F92B0D0C529E</string>
+				<string>6DD4AF6E60DF2B36174784E03C93E944</string>
+				<string>9C3FB64C23C365E4CB2E7C144904987F</string>
+				<string>647ABA12CC4D55172D1AB71B05A6861E</string>
+				<string>D5CC09D6518C67CD451FB48667A14167</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/Kingfisher</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D8489013B102A12E8121F4912773CB3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>LazyPay.framework</string>
+			<key>path</key>
+			<string>Framework/lazypay-sdk/LazyPay.framework</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1955,7 +1961,20 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>A056EED2443B79002CD0FF6C091D66F4</key>
+		<key>A4C31D9F15910D69D2981057BCE8126D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A53E02E0023D4AFEC59B778F587F8F94</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1964,16 +1983,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>ThreadHelper.swift</string>
+			<string>ImagePrefetcher.swift</string>
 			<key>path</key>
-			<string>Sources/ThreadHelper.swift</string>
+			<string>Sources/ImagePrefetcher.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>A5A96A111F16C0C0EAB83B5AF2AF0D1E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A717E3568B44038502FE02C905B9BAD4</string>
+			<string>06AF8620BAEC0AAA68B6EF04DBD82A1D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1981,21 +2000,6 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
-		</dict>
-		<key>A717E3568B44038502FE02C905B9BAD4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>JSONKeyMapper.m</string>
-			<key>path</key>
-			<string>JSONModel/JSONModelTransformations/JSONKeyMapper.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>A7288ADE403085197405DB3EF85A235F</key>
 		<dict>
@@ -2010,21 +2014,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>A7E1BDB7FB60ACBD9D151B5B686462F5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>JSONKeyMapper.h</string>
-			<key>path</key>
-			<string>JSONModel/JSONModelTransformations/JSONKeyMapper.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>AB57E9AAEED832BEEBCF341AB651B4D6</key>
 		<dict>
@@ -2042,7 +2031,7 @@
 		<key>ABC073FA748C7A15805FE22D532F86EE</key>
 		<dict>
 			<key>fileRef</key>
-			<string>74CEE6418D4B1FE7848EE97AF2F804CC</string>
+			<string>5FEA1F7A88DAA29D0CF470A06DC51EE4</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2051,10 +2040,25 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
+		<key>AC6949147E6A89FAD1D3FFF87A41235E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>JSONModel+networking.h</string>
+			<key>path</key>
+			<string>JSONModel/JSONModelNetworking/JSONModel+networking.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>AD029E613CD30D77F49E1F225D5A6560</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D31C33AB7AC0DF804446E75F470E6B3B</string>
+			<string>27EA3A905302811C285E8960E8AEE4D1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2101,33 +2105,16 @@
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
 		</dict>
-		<key>B01C2AE8E5CB6EE77E40F57E73600AF4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>JSONValueTransformer.m</string>
-			<key>path</key>
-			<string>JSONModel/JSONModelTransformations/JSONValueTransformer.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B1F2D14D64BDA72E633F036D856B96E9</key>
+		<key>B3723813E6DE96B20D8B59A4303EAA30</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>B7BB4EDC08EFEB86EAFD9A98199C2266</string>
+				<string>9D8489013B102A12E8121F4912773CB3</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
-			<string>CitrusGraphics</string>
-			<key>path</key>
-			<string>CitrusGraphics</string>
+			<string>Frameworks</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2199,21 +2186,6 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>B5061F0EE2222F95923EE834EFFFAAE8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>JSONModelLib.h</string>
-			<key>path</key>
-			<string>JSONModel/JSONModelLib.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>B59D8F008467D6ED47953BE1DE7750F0</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -2227,16 +2199,35 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>B7BB4EDC08EFEB86EAFD9A98199C2266</key>
+		<key>B78655FE8D38C748732FBCB0D75D9CE9</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>78334A025F8D505AF257D070E7C9EBD8</string>
+				<string>ED17AB761F0837E981798897756469BD</string>
+				<string>0039A88851A7C2CB593354FB85E986A2</string>
+				<string>E9068E5C54009206AE4F3D598C4D1CDC</string>
+				<string>E0C98A825F7F26E038EAF83BDB374210</string>
+				<string>2FCA957AA19CA07DC5F2934FC05808DC</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Frameworks</string>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B86F82133945DB245DFF2475CD6768D1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>JSONModel+networking.m</string>
+			<key>path</key>
+			<string>JSONModel/JSONModelNetworking/JSONModel+networking.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2269,10 +2260,25 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>BB6A5B14D5B0C38688901720C3DA57DC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>JSONModelLib.h</string>
+			<key>path</key>
+			<string>JSONModel/JSONModelLib.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>BC2F2B3FE479832D3FA6ED9772F7D4F1</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3FE0188AD98ECFE1E294C7AA2207393B</string>
+			<string>1D47D78BD155C414421B21AD4C8010EC</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2293,62 +2299,6 @@
 			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework</string>
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>BCD03F76C635BE3A44F71DFC939BBBD3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>JSONHTTPClient.m</string>
-			<key>path</key>
-			<string>JSONModel/JSONModelNetworking/JSONHTTPClient.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD09D74AFA1028FA3B5377FC9B80C3A4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>LazyPay.framework</string>
-			<key>path</key>
-			<string>Framework/lazypay-sdk/LazyPay.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BF4326EE5DB7B26DA76B215CACBAD664</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BFCE7FB46B5189EE60A881E53D441FD2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>JSONModelClassProperty.m</string>
-			<key>path</key>
-			<string>JSONModel/JSONModel/JSONModelClassProperty.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>C00683FD4CF09551BDE6CC46D0934FEA</key>
 		<dict>
@@ -2386,16 +2336,18 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>C2E59A31AE994CCBD1A4E40BBB65BBED</key>
+		<key>C2F749B15FE11A055A06C21A2D9C6937</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>UIButton+Kingfisher.swift</string>
 			<key>path</key>
-			<string>Kingfisher-dummy.m</string>
+			<string>Sources/UIButton+Kingfisher.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2409,6 +2361,21 @@
 			<string>text.script.sh</string>
 			<key>path</key>
 			<string>Pods-LazyPayExample-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C74AF3B9E9BCD97E1429BF9C03A45D81</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Resource.swift</string>
+			<key>path</key>
+			<string>Sources/Resource.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2483,30 +2450,10 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>C8F1C384F4F579A958A69F247DBEBED0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BF4326EE5DB7B26DA76B215CACBAD664</string>
-				<string>F3EAAC616CFD4B5D899E236253D67355</string>
-				<string>70E634CDA5E8BD7347CAFC3DA57D7A57</string>
-				<string>CAAC6916F46DEA37FCFCF4AA0D7E0790</string>
-				<string>EB5283B94C7B9A75B99DEACA37628810</string>
-				<string>0B233C2CE4E802ECA52E59D1DB2CA406</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/JSONModel</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>CA9CD39BE80E0E7FDD51FA69C60270C0</key>
 		<dict>
 			<key>fileRef</key>
-			<string>DFB78AF370657F012A83869C82A8CA71</string>
+			<string>6C9DB2B1EC3558069BED5E9F712B5FE5</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2516,19 +2463,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>CAAC6916F46DEA37FCFCF4AA0D7E0790</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>JSONModel-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>CBAE0C3F3B7DC8AEF8F471CC4BFA2C4B</key>
 		<dict>
@@ -2570,7 +2504,7 @@
 		<key>D15F109E5DF859C88EB2EA3776A49F94</key>
 		<dict>
 			<key>fileRef</key>
-			<string>98E92B61272527DFCE36130128509CA5</string>
+			<string>C74AF3B9E9BCD97E1429BF9C03A45D81</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2579,31 +2513,18 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>D31C33AB7AC0DF804446E75F470E6B3B</key>
+		<key>D1AD9D5B666676FAAB63B17160726B8F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>Box.swift</string>
+			<string>JSONModelClassProperty.h</string>
 			<key>path</key>
-			<string>Sources/Box.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D357B4EC874E7BA95C53F08002612212</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CitrusPay.framework</string>
-			<key>path</key>
-			<string>Framework/core-sdk/CitrusPay.framework</string>
+			<string>JSONModel/JSONModel/JSONModelClassProperty.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2648,46 +2569,23 @@
 				<string>11A95D50336A9938779664200DD109FC</string>
 			</array>
 		</dict>
-		<key>D5BD129C32C7E499B4949AA766D01E5E</key>
+		<key>D5CC09D6518C67CD451FB48667A14167</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>16B0E0659F69EE7BF65C5AF65E6DD3C6</string>
-				<string>D31C33AB7AC0DF804446E75F470E6B3B</string>
-				<string>31369B422DD6863E3D5FFE3C0A42032B</string>
-				<string>23F0BC41C78D89F53935AF2E62CDAD44</string>
-				<string>74CEE6418D4B1FE7848EE97AF2F804CC</string>
-				<string>6092811C17601D0DB825DD86DCD0C077</string>
-				<string>0A6FE6594A7E13A846958CFCF2B2E3C2</string>
-				<string>0F1DFB82BE3C150091F4D03871A1DA96</string>
-				<string>89959F55E4E3756DF7851473D13440E2</string>
-				<string>3497A706ED4C54BD3F07A9A1DA6034AE</string>
-				<string>3FE0188AD98ECFE1E294C7AA2207393B</string>
-				<string>85E267267CFD329A5E0B948CCF5FD289</string>
-				<string>454A2ACDD0BBE51ABBD3E5508334296A</string>
-				<string>9E2D9C7648954ED7D7561184F1BE057F</string>
-				<string>FDBBA26A89637B247D105D22F50D318A</string>
-				<string>3352B944752D97AC4ABA9A7F2CF4CA37</string>
-				<string>77550595B4705B43846DA1B04DEFCBC4</string>
-				<string>98E92B61272527DFCE36130128509CA5</string>
-				<string>89475D1394FD53B76A5C60C46EA56F0F</string>
-				<string>A056EED2443B79002CD0FF6C091D66F4</string>
-				<string>74E810D868E289B1C53FF2570592AA1A</string>
-				<string>12E1BC23D5DC60B32216A036AB3539F0</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Kingfisher</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>Kingfisher</string>
+			<string>Kingfisher-umbrella.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>D63E37DF107588F3921A7F78F07AE8D3</key>
 		<dict>
 			<key>fileRef</key>
-			<string>5991D62A3D7A0E43F9712AA131A9417E</string>
+			<string>F4A37438CB08B839FBBCB3C95F2A74BE</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2710,6 +2608,21 @@
 			<string>JSONModel.framework</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>D901B5BABD862D0E6B3F1EFF95261192</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>AnimatedImageView.swift</string>
+			<key>path</key>
+			<string>Sources/AnimatedImageView.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>D914A562DF650E0167D4A4854CB76095</key>
 		<dict>
@@ -2757,7 +2670,7 @@
 		<key>D96A6C6E1676F9832AA3BE49E22AAEBA</key>
 		<dict>
 			<key>fileRef</key>
-			<string>454A2ACDD0BBE51ABBD3E5508334296A</string>
+			<string>30ED4F27C7EAC3B5488574B6B625F403</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2768,32 +2681,17 @@
 				</array>
 			</dict>
 		</dict>
-		<key>DAB6404CC0DC3B68CEB9BE815592CFA7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>JSONModel+networking.h</string>
-			<key>path</key>
-			<string>JSONModel/JSONModelNetworking/JSONModel+networking.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>DC1B09A0207E63CC63C30873B9CF49F0</key>
 		<dict>
 			<key>fileRef</key>
-			<string>CAAC6916F46DEA37FCFCF4AA0D7E0790</string>
+			<string>6BDC14795DF4CE4297CF066803F078BE</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>DEB0581461CF7CD8638C0DD13B223DDD</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A7E1BDB7FB60ACBD9D151B5B686462F5</string>
+			<string>540A7A1BFBCC62588910468A54340F58</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2804,18 +2702,18 @@
 				</array>
 			</dict>
 		</dict>
-		<key>DFB78AF370657F012A83869C82A8CA71</key>
+		<key>DFF63A3ED29A70CC28EAF0901C3D71F6</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>JSONHTTPClient.h</string>
+			<string>Indicator.swift</string>
 			<key>path</key>
-			<string>JSONModel/JSONModelNetworking/JSONHTTPClient.h</string>
+			<string>Sources/Indicator.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2832,10 +2730,46 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>E0C98A825F7F26E038EAF83BDB374210</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D901B5BABD862D0E6B3F1EFF95261192</string>
+				<string>27EA3A905302811C285E8960E8AEE4D1</string>
+				<string>62F4CFC1B7926B9F6B517B618ACA7402</string>
+				<string>0904EDCF5C0010B7AA42B5B17A65DDAE</string>
+				<string>5FEA1F7A88DAA29D0CF470A06DC51EE4</string>
+				<string>E64CC9AF6C8FDAF5D96A41E96267B34B</string>
+				<string>F5CF8C782E82535B0C68BB1D1DE832A9</string>
+				<string>A53E02E0023D4AFEC59B778F587F8F94</string>
+				<string>9207BB32EA7A01AD2989D799E3809323</string>
+				<string>4FACF943D96521B542B52DB15E73C4D0</string>
+				<string>1D47D78BD155C414421B21AD4C8010EC</string>
+				<string>DFF63A3ED29A70CC28EAF0901C3D71F6</string>
+				<string>30ED4F27C7EAC3B5488574B6B625F403</string>
+				<string>123FA8F62412DC017D451DF57A432CAB</string>
+				<string>8CC360F66665FAF5F45062A4CBB43857</string>
+				<string>78E24206DEE5B3AD91B34991450990CC</string>
+				<string>8818F178164B7FB89E7DA76C16660417</string>
+				<string>C74AF3B9E9BCD97E1429BF9C03A45D81</string>
+				<string>2766EEA66E1E03EF50B047DBA05CD8A2</string>
+				<string>5470DEBDEF26B4BA26A5D41E9E7066CD</string>
+				<string>C2F749B15FE11A055A06C21A2D9C6937</string>
+				<string>9D3FE9D315B42F1DDFC39B155B120E3F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Kingfisher</string>
+			<key>path</key>
+			<string>Kingfisher</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>E6051FE18E3062F3D86DB8862EFAA7EA</key>
 		<dict>
 			<key>fileRef</key>
-			<string>75A332B65E15C5D05B8EE657C38E5199</string>
+			<string>5D42D681A5AFADAB4180508527D1A907</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2844,10 +2778,25 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
+		<key>E64CC9AF6C8FDAF5D96A41E96267B34B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ImageCache.swift</string>
+			<key>path</key>
+			<string>Sources/ImageCache.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>E77197A1DFF66DD13F9C71E06DE29F28</key>
 		<dict>
 			<key>fileRef</key>
-			<string>504BB269DE8D48FBB5492C008AB63C3C</string>
+			<string>11601F85F8ED24F23F8334B47F4C4166</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2861,7 +2810,7 @@
 		<key>E7AF7602D0FB051E619B1CC6C0D10D90</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>70E634CDA5E8BD7347CAFC3DA57D7A57</string>
+			<string>45AA660320717D517CDF4A73774C6D91</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -2932,28 +2881,28 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>E88D1FDA2C24112FD888DFFD0B5012B1</key>
+		<key>E9068E5C54009206AE4F3D598C4D1CDC</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>03078B3A4647D59579A8D71FDAE8F01B</string>
-				<string>93796A6058F9D1C1DE62FEBFC35C7444</string>
-				<string>DFB78AF370657F012A83869C82A8CA71</string>
-				<string>BCD03F76C635BE3A44F71DFC939BBBD3</string>
-				<string>A7E1BDB7FB60ACBD9D151B5B686462F5</string>
-				<string>A717E3568B44038502FE02C905B9BAD4</string>
-				<string>24DDE8362895F3FD9C8D4815469AEC41</string>
-				<string>5991D62A3D7A0E43F9712AA131A9417E</string>
-				<string>DAB6404CC0DC3B68CEB9BE815592CFA7</string>
-				<string>47C00D6582FD18AE8D44249993761490</string>
-				<string>30E99318AF1DBA7F6593666D86DDC423</string>
-				<string>BFCE7FB46B5189EE60A881E53D441FD2</string>
-				<string>504BB269DE8D48FBB5492C008AB63C3C</string>
-				<string>75A332B65E15C5D05B8EE657C38E5199</string>
-				<string>B5061F0EE2222F95923EE834EFFFAAE8</string>
-				<string>060F41596F0FA2C08676B7A9347A79E6</string>
-				<string>B01C2AE8E5CB6EE77E40F57E73600AF4</string>
-				<string>C8F1C384F4F579A958A69F247DBEBED0</string>
+				<string>51DF0CD8950861C9B7B5572BAC7E2BD9</string>
+				<string>489AE1820F48A29A59935DCF27F74C4C</string>
+				<string>6C9DB2B1EC3558069BED5E9F712B5FE5</string>
+				<string>23578BDCFBA1D9763B159C9FA41058EA</string>
+				<string>540A7A1BFBCC62588910468A54340F58</string>
+				<string>06AF8620BAEC0AAA68B6EF04DBD82A1D</string>
+				<string>F0DCED9702D84340A29868E787B8CFD2</string>
+				<string>F4A37438CB08B839FBBCB3C95F2A74BE</string>
+				<string>AC6949147E6A89FAD1D3FFF87A41235E</string>
+				<string>B86F82133945DB245DFF2475CD6768D1</string>
+				<string>D1AD9D5B666676FAAB63B17160726B8F</string>
+				<string>FFA17C5E6F7B9034B0EA5C994B1E3AE8</string>
+				<string>11601F85F8ED24F23F8334B47F4C4166</string>
+				<string>5D42D681A5AFADAB4180508527D1A907</string>
+				<string>BB6A5B14D5B0C38688901720C3DA57DC</string>
+				<string>F5E9C079C6F97E3AC65C2DB49C07DB25</string>
+				<string>8E56DBFC2D58798C5C502C5BC1F557B7</string>
+				<string>0378CE8C25D15B762A44DF9BD0F7C162</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -2978,23 +2927,10 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>EB5283B94C7B9A75B99DEACA37628810</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>JSONModel-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>EB95E6975870645FA86DDAA71CD56B28</key>
 		<dict>
 			<key>fileRef</key>
-			<string>74E810D868E289B1C53FF2570592AA1A</string>
+			<string>C2F749B15FE11A055A06C21A2D9C6937</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3006,7 +2942,7 @@
 		<key>EC149E10A991ED3B522644AD9EEABF95</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B5061F0EE2222F95923EE834EFFFAAE8</string>
+			<string>BB6A5B14D5B0C38688901720C3DA57DC</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3017,10 +2953,25 @@
 				</array>
 			</dict>
 		</dict>
+		<key>ED17AB761F0837E981798897756469BD</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>74D9E3CE4473633DD4C9FE3BAFBEE284</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>CitrusGraphics</string>
+			<key>path</key>
+			<string>CitrusGraphics</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>EE2F34B0BA1B34C7A826B60ED1F34F46</key>
 		<dict>
 			<key>fileRef</key>
-			<string>87F05CD5190A195C9AE16A1105E95309</string>
+			<string>D5CC09D6518C67CD451FB48667A14167</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3044,7 +2995,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F0B3ACB15645A63448F7A655D5D1F81A</key>
+		<key>F0DCED9702D84340A29868E787B8CFD2</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3052,21 +3003,10 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>JSONModel.h</string>
 			<key>path</key>
-			<string>Kingfisher-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F0FE31A2E9C560ECB1E9D0EA59777137</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Kingfisher.xcconfig</string>
+			<string>JSONModel/JSONModel/JSONModel.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -3153,18 +3093,35 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F3EAAC616CFD4B5D899E236253D67355</key>
+		<key>F4A37438CB08B839FBBCB3C95F2A74BE</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>JSONModel.m</string>
 			<key>path</key>
-			<string>JSONModel.modulemap</string>
+			<string>JSONModel/JSONModel/JSONModel.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>FDBBA26A89637B247D105D22F50D318A</key>
+		<key>F4D9DDAFDE38487E0AC9BD0373104983</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>JSONModel-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F5CF8C782E82535B0C68BB1D1DE832A9</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3173,16 +3130,31 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>KingfisherManager.swift</string>
+			<string>ImageDownloader.swift</string>
 			<key>path</key>
-			<string>Sources/KingfisherManager.swift</string>
+			<string>Sources/ImageDownloader.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F5E9C079C6F97E3AC65C2DB49C07DB25</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>JSONValueTransformer.h</string>
+			<key>path</key>
+			<string>JSONModel/JSONModelTransformations/JSONValueTransformer.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>FE66E490A313992B9907A76B796204E5</key>
 		<dict>
 			<key>fileRef</key>
-			<string>6092811C17601D0DB825DD86DCD0C077</string>
+			<string>E64CC9AF6C8FDAF5D96A41E96267B34B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3190,6 +3162,21 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
+		</dict>
+		<key>FFA17C5E6F7B9034B0EA5C994B1E3AE8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>JSONModelClassProperty.m</string>
+			<key>path</key>
+			<string>JSONModel/JSONModel/JSONModelClassProperty.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>
