@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		76514CF61DFEBFED009389D9 /* CitrusGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76514CF41DFEBFED009389D9 /* CitrusGraphics.framework */; };
-		76514CF71DFEBFED009389D9 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 76514CF51DFEBFED009389D9 /* LICENSE */; };
 		76514D1F1DFEC00D009389D9 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76514D081DFEBFF6009389D9 /* Kingfisher.framework */; };
 		76514D201DFEC00D009389D9 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76514D081DFEBFF6009389D9 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76514D241DFEC00D009389D9 /* CitrusGraphics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76514CF41DFEBFED009389D9 /* CitrusGraphics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -184,7 +183,6 @@
 
 /* Begin PBXFileReference section */
 		76514CF41DFEBFED009389D9 /* CitrusGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusGraphics.framework; sourceTree = "<group>"; };
-		76514CF51DFEBFED009389D9 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		76514CF81DFEBFF6009389D9 /* Kingfisher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kingfisher.xcodeproj; path = ../../../Dependency/Kingfisher/Kingfisher.xcodeproj; sourceTree = "<group>"; };
 		76514D261DFEC157009389D9 /* SVSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSegmentedControl.h; sourceTree = "<group>"; };
 		76514D271DFEC157009389D9 /* SVSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSegmentedControl.m; sourceTree = "<group>"; };
@@ -274,7 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				76514CF41DFEBFED009389D9 /* CitrusGraphics.framework */,
-				76514CF51DFEBFED009389D9 /* LICENSE */,
 			);
 			name = "graphics-sdk";
 			path = "../../../Framework/graphics-sdk";
@@ -665,7 +662,6 @@
 				767FB8DA1DDC58B700DE349D /* Assets.xcassets in Resources */,
 				767FB9701DDC6E3500DE349D /* LICENSE in Resources */,
 				767FB8DC1DDC58B700DE349D /* Main.storyboard in Resources */,
-				76514CF71DFEBFED009389D9 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

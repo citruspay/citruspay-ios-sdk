@@ -10,7 +10,6 @@
 		766EF69B1DD1C1E400F99409 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 766EF69A1DD1C1E400F99409 /* main.m */; };
 		766EF69E1DD1C1E400F99409 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 766EF69D1DD1C1E400F99409 /* AppDelegate.m */; };
 		766EF6B41DD1C1E400F99409 /* CitrusGraphicsExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 766EF6B31DD1C1E400F99409 /* CitrusGraphicsExampleTests.m */; };
-		766EF78C1DD1CC9800F99409 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 766EF78A1DD1CC9800F99409 /* LICENSE */; };
 		766EF7DB1DD1CCC100F99409 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766EF7C41DD1CCB800F99409 /* Kingfisher.framework */; };
 		766EF7DC1DD1CCC100F99409 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 766EF7C41DD1CCB800F99409 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		766EF7DF1DD1CCC100F99409 /* CitrusGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766EF7891DD1CC9800F99409 /* CitrusGraphics.framework */; };
@@ -147,7 +146,6 @@
 		766EF6B31DD1C1E400F99409 /* CitrusGraphicsExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CitrusGraphicsExampleTests.m; sourceTree = "<group>"; };
 		766EF6B51DD1C1E400F99409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		766EF7891DD1CC9800F99409 /* CitrusGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusGraphics.framework; sourceTree = "<group>"; };
-		766EF78A1DD1CC9800F99409 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		766EF7B41DD1CCB800F99409 /* Kingfisher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kingfisher.xcodeproj; path = ../../../Dependency/Kingfisher/Kingfisher.xcodeproj; sourceTree = "<group>"; };
 		766EF7E51DD1DFD300F99409 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		766EF7E71DD1DFD300F99409 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -229,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				766EF7891DD1CC9800F99409 /* CitrusGraphics.framework */,
-				766EF78A1DD1CC9800F99409 /* LICENSE */,
 			);
 			name = "graphics-sdk";
 			path = "../../../Framework/graphics-sdk";
@@ -447,7 +444,6 @@
 			files = (
 				766EF7ED1DD1DFD300F99409 /* LaunchScreen.storyboard in Resources */,
 				766EF7EC1DD1DFD300F99409 /* Assets.xcassets in Resources */,
-				766EF78C1DD1CC9800F99409 /* LICENSE in Resources */,
 				766EF7EE1DD1DFD300F99409 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

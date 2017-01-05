@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7649758A1DFEC51D0081025D /* CitrusGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764975881DFEC51D0081025D /* CitrusGraphics.framework */; };
-		7649758B1DFEC51D0081025D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 764975891DFEC51D0081025D /* LICENSE */; };
 		764975B31DFEC5320081025D /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7649759C1DFEC5260081025D /* Kingfisher.framework */; };
 		764975B41DFEC5320081025D /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7649759C1DFEC5260081025D /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		764975B71DFEC5320081025D /* CitrusGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764975881DFEC51D0081025D /* CitrusGraphics.framework */; };
@@ -172,7 +171,6 @@
 
 /* Begin PBXFileReference section */
 		764975881DFEC51D0081025D /* CitrusGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusGraphics.framework; sourceTree = "<group>"; };
-		764975891DFEC51D0081025D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		7649758C1DFEC5250081025D /* Kingfisher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kingfisher.xcodeproj; path = ../../../Dependency/Kingfisher/Kingfisher.xcodeproj; sourceTree = "<group>"; };
 		767FB9281DDC5B1900DE349D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		767FB92A1DDC5B1900DE349D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -231,7 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				764975881DFEC51D0081025D /* CitrusGraphics.framework */,
-				764975891DFEC51D0081025D /* LICENSE */,
 			);
 			name = "graphics-sdk";
 			path = "../../../Framework/graphics-sdk";
@@ -570,7 +567,6 @@
 				767FB9321DDC5B1900DE349D /* Assets.xcassets in Resources */,
 				767FB9821DDC6F6A00DE349D /* LICENSE in Resources */,
 				767FB9341DDC5B1900DE349D /* Main.storyboard in Resources */,
-				7649758B1DFEC51D0081025D /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

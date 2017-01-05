@@ -15,7 +15,6 @@
 		76448CA01DC22A910089B215 /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76448C621DC229610089B215 /* JSONModel.framework */; };
 		76448CA11DC22A910089B215 /* JSONModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76448C621DC229610089B215 /* JSONModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76448CC11DC230A20089B215 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 76448CBC1DC230A20089B215 /* LICENSE */; };
-		76448CC31DC230A20089B215 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 76448CBF1DC230A20089B215 /* LICENSE */; };
 		76448CC41DC230BC0089B215 /* CitrusPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76448CBB1DC230A20089B215 /* CitrusPay.framework */; };
 		76448CC51DC230BC0089B215 /* CitrusPay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76448CBB1DC230A20089B215 /* CitrusPay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76448CC61DC230BC0089B215 /* CitrusGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76448CBE1DC230A20089B215 /* CitrusGraphics.framework */; };
@@ -183,7 +182,6 @@
 		76448CBB1DC230A20089B215 /* CitrusPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusPay.framework; sourceTree = "<group>"; };
 		76448CBC1DC230A20089B215 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		76448CBE1DC230A20089B215 /* CitrusGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusGraphics.framework; sourceTree = "<group>"; };
-		76448CBF1DC230A20089B215 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		76AA1C421DA50B5100AACB48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76AA1C441DA50B5100AACB48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76AA1C461DA50B5100AACB48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -315,7 +313,6 @@
 			isa = PBXGroup;
 			children = (
 				76448CBE1DC230A20089B215 /* CitrusGraphics.framework */,
-				76448CBF1DC230A20089B215 /* LICENSE */,
 			);
 			name = "graphics-sdk";
 			path = "../../../Framework/graphics-sdk";
@@ -556,7 +553,6 @@
 				76AA1C4B1DA50B5100AACB48 /* Assets.xcassets in Resources */,
 				76448CC11DC230A20089B215 /* LICENSE in Resources */,
 				76AA1C4C1DA50B5100AACB48 /* LaunchScreen.storyboard in Resources */,
-				76448CC31DC230A20089B215 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

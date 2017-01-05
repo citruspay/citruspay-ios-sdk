@@ -20,6 +20,7 @@
 		766EF82A1DD1F75800F99409 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766EF8231DD1F75800F99409 /* ViewController.swift */; };
 		766EF82B1DD1F9D400F99409 /* Pods_CitrusGraphics_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E18C4E0A3FD855561F1D191 /* Pods_CitrusGraphics_Example.framework */; };
 		766EF82C1DD1F9D400F99409 /* Pods_CitrusGraphics_Example.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8E18C4E0A3FD855561F1D191 /* Pods_CitrusGraphics_Example.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76B9ED231E1E2D90000D8C4E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 76B9ED221E1E2D90000D8C4E /* LICENSE */; };
 		C1E4D3C5EC886628BB362D41 /* Pods_CitrusGraphics_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E18C4E0A3FD855561F1D191 /* Pods_CitrusGraphics_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +50,6 @@
 
 /* Begin PBXFileReference section */
 		302F356DCFD618A9E4DB4713 /* Pods-CitrusGraphics_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitrusGraphics_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CitrusGraphics_Tests/Pods-CitrusGraphics_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		342A1A2FABFC21EF07016C6F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		4EA32616BAAE5ECCF17EB11F /* Pods-CitrusGraphics_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitrusGraphics_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CitrusGraphics_Tests/Pods-CitrusGraphics_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CitrusGraphics_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitrusGraphics_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +65,7 @@
 		766EF8211DD1F75800F99409 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		766EF8221DD1F75800F99409 /* TestParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestParams.swift; sourceTree = "<group>"; };
 		766EF8231DD1F75800F99409 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76B9ED221E1E2D90000D8C4E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../../../LICENSE; sourceTree = "<group>"; };
 		8E18C4E0A3FD855561F1D191 /* Pods_CitrusGraphics_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CitrusGraphics_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF25CA4CBE875743EB98D10 /* Pods-CitrusGraphics_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitrusGraphics_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CitrusGraphics_Example/Pods-CitrusGraphics_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E6E7B1181DC6D9586AF63CFA /* Pods_CitrusGraphics_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CitrusGraphics_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,7 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				766EF8181DD1F52E00F99409 /* CitrusGraphics.podspec */,
-				342A1A2FABFC21EF07016C6F /* LICENSE */,
+				76B9ED221E1E2D90000D8C4E /* LICENSE */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -287,6 +288,7 @@
 				766EF8241DD1F75800F99409 /* Assets.xcassets in Resources */,
 				766EF8191DD1F52E00F99409 /* CitrusGraphics.podspec in Resources */,
 				766EF8261DD1F75800F99409 /* Main.storyboard in Resources */,
+				76B9ED231E1E2D90000D8C4E /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

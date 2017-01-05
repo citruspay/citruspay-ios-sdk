@@ -23,9 +23,10 @@ CitrusPay iOS SDK broadly offers following features.
 + Withdraw the money back into User's bank account from the Prepaid account
 + On-Demand asset loading (Via CitrusGraphics library)
 
-### CitrusGraphics SDK V 1.0 - CitrusGraphics.framework
+### CitrusGraphics SDK V 1.1 - CitrusGraphics.framework
 
 + A lightweight, pure-Swift library for downloading and caching images from the Citrus cloud
++ Swift 3.0.2 support
 + Dynamic Assets available to module for their assets requirements
 + SDK have both default & low resolution image for it which will be replaced by high resolution image once asset is downloaded and cached based on device specification
 
