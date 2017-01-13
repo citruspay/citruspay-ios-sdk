@@ -19,7 +19,6 @@
 		767FB9361DDC5B1900DE349D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FB92F1DDC5B1900DE349D /* HomeViewController.swift */; };
 		767FB9371DDC5B1900DE349D /* MerchantConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FB9301DDC5B1900DE349D /* MerchantConstants.swift */; };
 		767FB9381DDC5B1900DE349D /* TestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FB9311DDC5B1900DE349D /* TestParams.swift */; };
-		767FB9821DDC6F6A00DE349D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 767FB9801DDC6F6A00DE349D /* LICENSE */; };
 		767FB9831DDC6FA200DE349D /* CitrusPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767FB97F1DDC6F6A00DE349D /* CitrusPay.framework */; };
 		767FB9841DDC6FA200DE349D /* CitrusPay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 767FB97F1DDC6F6A00DE349D /* CitrusPay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		767FB9851DDC6FA200DE349D /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767FB97D1DDC6F5D00DE349D /* JSONModel.framework */; };
@@ -181,7 +180,6 @@
 		767FB9311DDC5B1900DE349D /* TestParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestParams.swift; sourceTree = "<group>"; };
 		767FB9781DDC6F5D00DE349D /* JSONModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSONModel.xcodeproj; path = ../../../Dependency/JSONModel/JSONModel.xcodeproj; sourceTree = "<group>"; };
 		767FB97F1DDC6F6A00DE349D /* CitrusPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusPay.framework; sourceTree = "<group>"; };
-		767FB9801DDC6F6A00DE349D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		76F778581CC64F7100C9E7B8 /* CitrusPayExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitrusPayExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76F7785B1CC64F7100C9E7B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76F778671CC64F7100C9E7B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -288,7 +286,6 @@
 			isa = PBXGroup;
 			children = (
 				767FB97F1DDC6F6A00DE349D /* CitrusPay.framework */,
-				767FB9801DDC6F6A00DE349D /* LICENSE */,
 			);
 			name = "core-sdk";
 			path = "../../../Framework/core-sdk";
@@ -565,7 +562,6 @@
 			files = (
 				767FB9331DDC5B1900DE349D /* LaunchScreen.storyboard in Resources */,
 				767FB9321DDC5B1900DE349D /* Assets.xcassets in Resources */,
-				767FB9821DDC6F6A00DE349D /* LICENSE in Resources */,
 				767FB9341DDC5B1900DE349D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

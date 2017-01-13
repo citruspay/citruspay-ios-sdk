@@ -10,9 +10,9 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "904EEA2F-65F0-4410-8358-17CF64ADC4E6",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "17FB51EC7B87DC25DD21E28FDFD877B479CFFAC1" : "public.master.release.05\/Dependency\/Kingfisher\/",
-    "2454A7C0A4BC2A09472718EB55354F320600B245" : "public.master.release.05\/Dependency\/JSONModel\/",
-    "82A97729EC55B5EC9951B8B1634CBA9A8575F264" : "public.master.release.05\/"
+    "17FB51EC7B87DC25DD21E28FDFD877B479CFFAC1" : "jan133\/Dependency\/Kingfisher\/",
+    "2454A7C0A4BC2A09472718EB55354F320600B245" : "jan133\/Dependency\/JSONModel\/",
+    "82A97729EC55B5EC9951B8B1634CBA9A8575F264" : "jan133\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "LazyPayExample",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,

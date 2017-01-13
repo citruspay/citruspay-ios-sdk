@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		765EE8461E093962000050A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765EE8451E093962000050A4 /* AppDelegate.swift */; };
 		765EE85B1E093962000050A4 /* LazyPayExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765EE85A1E093962000050A4 /* LazyPayExampleTests.swift */; };
-		765EE86E1E0939DC000050A4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 765EE86C1E0939DC000050A4 /* LICENSE */; };
 		765EE8A11E093A0B000050A4 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 765EE88A1E0939F4000050A4 /* Kingfisher.framework */; };
 		765EE8A21E093A0B000050A4 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 765EE88A1E0939F4000050A4 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		765EE8A51E093A0B000050A4 /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 765EE8791E0939EB000050A4 /* JSONModel.framework */; };
@@ -169,7 +168,6 @@
 		765EE85C1E093962000050A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		765EE8661E0939D2000050A4 /* LazyPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LazyPay.framework; sourceTree = "<group>"; };
 		765EE86B1E0939DC000050A4 /* CitrusPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusPay.framework; sourceTree = "<group>"; };
-		765EE86C1E0939DC000050A4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		765EE8701E0939E2000050A4 /* CitrusGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusGraphics.framework; sourceTree = "<group>"; };
 		765EE8741E0939EB000050A4 /* JSONModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSONModel.xcodeproj; path = ../../../Dependency/JSONModel/JSONModel.xcodeproj; sourceTree = "<group>"; };
 		765EE87A1E0939F4000050A4 /* Kingfisher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kingfisher.xcodeproj; path = ../../../Dependency/Kingfisher/Kingfisher.xcodeproj; sourceTree = "<group>"; };
@@ -258,7 +256,6 @@
 			isa = PBXGroup;
 			children = (
 				765EE86B1E0939DC000050A4 /* CitrusPay.framework */,
-				765EE86C1E0939DC000050A4 /* LICENSE */,
 			);
 			name = "core-sdk";
 			path = "../../../Framework/core-sdk";
@@ -507,7 +504,6 @@
 				765EE8B91E093B5A000050A4 /* Assets.xcassets in Resources */,
 				765EE8BB1E093B5A000050A4 /* Main.storyboard in Resources */,
 				765EE8BA1E093B5A000050A4 /* LaunchScreen.storyboard in Resources */,
-				765EE86E1E0939DC000050A4 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

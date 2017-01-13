@@ -35,7 +35,6 @@
 		767FB8E91DDC58B700DE349D /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8D31DDC58B700DE349D /* HMSegmentedControl.m */; };
 		767FB8EA1DDC58B700DE349D /* UICustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8D51DDC58B700DE349D /* UICustomButton.m */; };
 		767FB8EB1DDC58B700DE349D /* UICustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FB8D71DDC58B700DE349D /* UICustomTextField.m */; };
-		767FB9701DDC6E3500DE349D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 767FB96E1DDC6E3500DE349D /* LICENSE */; };
 		767FB9711DDC6E6600DE349D /* CitrusPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767FB96D1DDC6E3500DE349D /* CitrusPay.framework */; };
 		767FB9721DDC6E6600DE349D /* CitrusPay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 767FB96D1DDC6E3500DE349D /* CitrusPay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		767FB9731DDC6E6600DE349D /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767FB96B1DDC6E2700DE349D /* JSONModel.framework */; };
@@ -236,7 +235,6 @@
 		767FB8D91DDC58B700DE349D /* TestParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestParams.h; sourceTree = "<group>"; };
 		767FB9661DDC6E2700DE349D /* JSONModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSONModel.xcodeproj; path = ../../../Dependency/JSONModel/JSONModel.xcodeproj; sourceTree = "<group>"; };
 		767FB96D1DDC6E3500DE349D /* CitrusPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusPay.framework; sourceTree = "<group>"; };
-		767FB96E1DDC6E3500DE349D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -441,7 +439,6 @@
 			isa = PBXGroup;
 			children = (
 				767FB96D1DDC6E3500DE349D /* CitrusPay.framework */,
-				767FB96E1DDC6E3500DE349D /* LICENSE */,
 			);
 			name = "core-sdk";
 			path = "../../../Framework/core-sdk";
@@ -660,7 +657,6 @@
 			files = (
 				767FB8DB1DDC58B700DE349D /* LaunchScreen.storyboard in Resources */,
 				767FB8DA1DDC58B700DE349D /* Assets.xcassets in Resources */,
-				767FB9701DDC6E3500DE349D /* LICENSE in Resources */,
 				767FB8DC1DDC58B700DE349D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
