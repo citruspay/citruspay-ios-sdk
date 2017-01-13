@@ -7,6 +7,7 @@
 //
 
 #import <JSONModel/JSONModel.h>
+#import "CTSUtility.h"
 /* V1 BIN API
 Sample Input JSON
 
@@ -156,4 +157,9 @@ b. In no data found
  *   The CTSCardBinJSON class' Code object.
  */
 @property (strong) NSString <Optional> * code;
+
+-(CardType)getCardType;
+
+
+
 @end

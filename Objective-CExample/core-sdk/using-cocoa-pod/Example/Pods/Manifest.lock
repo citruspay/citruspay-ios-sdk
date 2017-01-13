@@ -1,7 +1,7 @@
 PODS:
   - CitrusGraphics (1.0):
     - Kingfisher
-  - CitrusPay (4.1.0):
+  - CitrusPay (4.1.1):
     - CitrusGraphics
     - JSONModel
   - JSONModel (1.7.0)
@@ -16,10 +16,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CitrusGraphics: 0606343206099a4f4e892fa189884d4b4d49ffe0
-  CitrusPay: 03293d1f98a579bfb1d9bc9b490db814c555cea9
+  CitrusPay: 25c0d32de44997d808314765a3757f9c37310a35
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   Kingfisher: 821466474ad7ffc375a4aecadfa05068cfed67b3
 
 PODFILE CHECKSUM: c69b636c29d925eae2736c3e4ff124ed055a5649
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.1

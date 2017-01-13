@@ -13,38 +13,38 @@
 /**
  *  show alertView with activity
  *
- *  @param alertView message
- *  @param show activity if YES
+ *  @param message alertView message
+ *  @param activity show activity if YES
  */
 +(void)didPresentLoadingAlertView:(NSString *)message withActivity:(BOOL)activity;
 
 /**
  *  dismiss alertView with activity
  *
- *  @param shdismissow activity if YES
+ *  @param activity shdismissow activity if YES
  */
 +(void)dismissLoadingAlertView:(BOOL)activity;
 
 /**
  *  dismiss alertView with error
  *
- *  @param alertView error
+ *  @param error alertView error
  */
 + (void)didPresentErrorAlertView:(NSError*)error;
 
 /**
  *  dismiss alertView with message
  *
- *  @param alertView message
+ *  @param message alertView message
  */
 + (void)didPresentInfoAlertView:(NSString*)message;
 
 /**
  *  move and animate textField while tapping
  *
- *  @param for textField
- *  @param animate if YES
- *  @param move to UIView
+ *  @param textField for textField
+ *  @param  up animate if YES
+ *  @param toView move to UIView
  */
 + (void)animateTextField:(UITextField*)textField up:(BOOL)up toView:(UIView*)toView;
 

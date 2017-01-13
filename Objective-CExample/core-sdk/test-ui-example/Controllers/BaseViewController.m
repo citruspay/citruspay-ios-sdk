@@ -74,7 +74,7 @@
             self.billUrl = BillUrl_Production;
             self.returnUrl = ReturnUrl_Production;
             
-            [CitrusPaymentSDK setLogLevel:CTSLogLevelNone];
+            [CitrusPaymentSDK setLogLevel:CTSLogLevelVerbose];
 
             [defautls setValue:@"1" forKey:@"EnvironmentTo"];
         }

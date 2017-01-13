@@ -7,12 +7,7 @@
 //
 
 #import <JSONModel/JSONModel.h>
-typedef enum{
-    CardTypeCredit,
-    CardTypeDebit,
-    CardTypeDebitUnRecognized
-
-} CardType;
+#import "CTSUtility.h"
 @interface CTSCardBinResponse : JSONModel
 @property(strong)NSString<Optional> *cardtype,*cardscheme,*country,*issuingbank;
 -(CardType)getCardType;

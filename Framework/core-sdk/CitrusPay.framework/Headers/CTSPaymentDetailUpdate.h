@@ -29,7 +29,7 @@
  *
  *  @param card object of type CTSElectronicCardUpdate
  *
- *  @return returns SUCESS of type CardValidationError , else corrospding error
+ *  returns SUCESS of type CardValidationError , else corrospding error
  *of type CardValidationError is returned
  */
 - (void)addCard:(CTSElectronicCardUpdate*)card;

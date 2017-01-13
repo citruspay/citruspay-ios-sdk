@@ -21,8 +21,6 @@
 
 @class CTSAuthLayer;
 @protocol CTSAuthenticationProtocol
-
-
 /**
  *  reports sign in respose
  *
@@ -81,8 +79,6 @@ didCheckIsUserCitrusMember:(BOOL)isMember
 @optional
 - (void)auth:(CTSAuthLayer*)layer didRequestForResetPassword:(NSError*)error;
 
-
-
 @optional
 - (void)auth:(CTSAuthLayer*)layer didBindUser:(NSString*)userName error:(NSError *)error;
 
@@ -117,8 +113,6 @@ didCheckIsUserCitrusMember:(BOOL)isMember
 -(void)auth:(CTSAuthLayer *)layer didSignInWithOtpError:(NSError *)error;
 @end
 
-
-
 @protocol CitrusLoginDelegate
 
 @optional
@@ -126,30 +120,13 @@ didCheckIsUserCitrusMember:(BOOL)isMember
 
 @end
 
-
-
-
-@interface CTSAuthLayer : CTSRestPluginBase {
-    int seedState;
-    NSString* userNameSignIn,*passwordSignin, *userNameSignup, *passwordSignUp, *mobileSignUp;
-    NSString  *userNameBind,*mobileBind;
-    BOOL isInLink;
-    BOOL wasSignupCalled;
-    BOOL ENABLELOGS;
-    CitrusLoginViewController* loginViewController;
-    CTSLinkedUserState *linkuserState;
-    BOOL isLoginScreenOverride;
-}
-- (void)enabledDebuggingMessages:(BOOL)val;
-
-- (instancetype)initWithKeyStore:(CTSKeyStore *)keystoreArg;
 typedef void (^ASSigninCallBack)(NSString* userName,
-                                 NSString* token,
-                                 NSError* error);
+NSString* token,
+NSError* error);
 
 typedef void (^ASSignupCallBack)(NSString* userName,
-                                 NSString* token,
-                                 NSError* error);
+NSString* token,
+NSError* error);
 
 typedef void (^ASChangePassword)(NSString *response, NSError* error);
 
@@ -157,12 +134,12 @@ typedef void (^ASSetPassword)(NSError* error);
 
 
 typedef void (^ASIsUserCitrusMemberCallback)(BOOL isUserCitrusMember,
-                                             NSError* error);
+NSError* error);
 
 typedef void (^ASResetPasswordCallback)(NSError* error);
 
 typedef void (^ASBindUserCallback)(NSString *userName,
-                                   NSError* error);
+NSError* error);
 
 typedef void (^ASCitrusSigninCallBack)(NSError* error);
 
@@ -198,26 +175,60 @@ typedef void (^ASErrorCallback)( NSError* error);
 
 typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSError *error);
 
-
-
-
-
+@interface CTSAuthLayer : CTSRestPluginBase {
+    int seedState;
+    NSString* userNameSignIn,*passwordSignin, *userNameSignup, *passwordSignUp, *mobileSignUp;
+    NSString  *userNameBind,*mobileBind;
+    BOOL isInLink;
+    BOOL wasSignupCalled;
+    BOOL ENABLELOGS;
+    CitrusLoginViewController* loginViewController;
+    CTSLinkedUserState *linkuserState;
+    BOOL isLoginScreenOverride;
+}
 @property(nonatomic, weak) id<CTSAuthenticationProtocol> delegate;
 @property(nonatomic, weak) id<CitrusLoginDelegate> loginDelegate;
 
+/**
+ *   requestCitrusLogin.
+ *
+ *  @param user The user CTSUser.
+ *  @param walletScope  The walletScope CTSWalletScope.
+ *  @param params  The params NSDictionary.
+ *  @param isScreenOverride  The isScreenOverride BOOL.
+ *  @param viewController  The viewController UIViewController.
+ *  @param callback  The callback ASCitrusLoginCallBack.
+ */
+-(void)requestDefaultLoginView:(CTSUser *)user
+                         scope:(CTSWalletScope)walletScope
+                  customParams:(NSDictionary *)params
+                screenOverride:(BOOL)isScreenOverride
+                viewController:(UIViewController *)viewController
+                      callback:(ASCitrusLoginCallBack)callback;
+
+/**
+ *   isUserSignedIn.
+ *
+ *  @return The User SignedIn YES/NO.
+ */
+- (BOOL)isUserSignedIn;
+
+- (BOOL)isMerchantLoggedIn;
+
+- (void)enabledDebuggingMessages:(BOOL)val;
+
+- (instancetype)initWithKeyStore:(CTSKeyStore *)keystoreArg;
 
 -(instancetype)init __attribute__((unavailable("init not available, Please use [CitrusPaymentSDK fetchSharedAuthLayer]")));
 
 +(CTSAuthLayer*)fetchSharedAuthLayer;
 
-- (BOOL)isMerchantLoggedIn;
-
 /**
  *  sign in the user
  *
- *  @param userName email adress
- *  @param password
- *  @param callBack
+ *  @param userName The object NSString.
+ *  @param password The object NSString.
+ *  @param callBack The callBack ASSigninCallBack.
  */
 - (void)requestSigninWithUsername:(NSString*)userName
                          password:(NSString*)password
@@ -226,10 +237,10 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
 /**
  *  to sign up the user
  *
- *  @param email    this will be the username
- *  @param mobile
- *  @param password
- *  @param callBack
+ *  @param email    The object callBack.
+ *  @param mobile The object callBack.
+ *  @param password The object callBack.
+ *  @param callBack The callBack ASSignupCallBack.
  */
 - (void)requestSignUpWithEmail:(NSString*)email
                         mobile:(NSString*)mobile
@@ -240,7 +251,7 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
  *  in case of forget password,after recieving this server will send email to
  *this user to initiate the password reset
  *
- *  @param userNameArg
+ *  @param userNameArg The object NSString.
  */
 - (void)requestResetPassword:(NSString*)userNameArg
            completionHandler:(ASResetPasswordCallback)callBack;
@@ -248,10 +259,10 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
 /**
  *  to change the user password
  *
- *  @param userName
- *  @param oldPassword
- *  @param newPassword
- *  @param callback
+ *  @param userName The object NSString.
+ *  @param oldPassword The object NSString.
+ *  @param newPassword The object NSString.
+ *  @param callback The callback ASChangePassword.
  */
 - (void)requestChangePasswordUserName:(NSString*)userName
                           oldPassword:(NSString*)oldPassword
@@ -261,18 +272,16 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
 /**
  *  to check if username is registered for any member
  *
- *  @param email    this is the username
- *  @param callback
+ *  @param email    The object NSString.
+ *  @param callback The callback ASIsUserCitrusMemberCallback.
  */
 - (void)requestIsUserCitrusMemberUsername:(NSString*)email
-                        completionHandler:
-(ASIsUserCitrusMemberCallback)callback;
+                        completionHandler:(ASIsUserCitrusMemberCallback)callback;
 
 - (void)requestBindUsername:(NSString*)email
                      mobile:(NSString *)mobile
           completionHandler:
 (ASBindUserCallback)callback DEPRECATED_MSG_ATTRIBUTE("Use with CTSLimitedScope requestMasterLink:mobile:scope:completionHandler:");
-
 
 
 - (void)requestMobileBindUsername:(NSString*)email
@@ -309,14 +318,7 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
 
 -(BOOL)canLoadCitrusCash;
 
-- (BOOL)isUserSignedIn;
-
 - (NSString*)generateBigIntegerString:(NSString*)email ;
-
-
--(void)requestLinkUser:(NSString *)email mobile:(NSString *)mobile completionHandler:(ASLinkUserCallBack)callBack DEPRECATED_MSG_ATTRIBUTE("Use 'requestCitrusLink:mobile:completion:'");
-
-
 
 -(void)requestLinkTrustedUser:(CTSUserDetails *)user completionHandler:(ASLinkUserCallBack )callback;
 
@@ -355,8 +357,6 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
 
 -(void)requestVerifyAndSigninUUID:(NSString *)uuid verificationCode:(NSString *)password callback:(ASCitrusSigninCallBack)callback;
 
--(void)requestCitrusLinkSignInWithPassoword:(NSString *)password passwordType:(PasswordType)type completionHandler:(ASCitrusSigninCallBack)callback DEPRECATED_MSG_ATTRIBUTE("user requestMasterLinkSignInWithPassword:passwordType:completionHandler:");
-
 
 -(void)requestRefreshOauthTokenCallback:(ASErrorCallback )callback;
 
@@ -370,9 +370,16 @@ typedef void (^ASUpdateMobileSigninCallback) (CTSEotpVerSigninResp *response,NSE
 
 -(void)requestSetPassowordMobileAccount:(NSString *)password completionHandler:(ASSetPassword)callback;
 
-
--(void)requestCitrusLogin:(CTSUser *)user scope:(CTSWalletScope)walletScope params:(NSDictionary *)params screenOverride:(BOOL)isScreenOverride viewController:(UIViewController *)viewController callback:(ASCitrusLoginCallBack)callback;
-
 -(void)requestProceedCitrusLogin:(CTSLoginInfo *)loginInfo;
+
+/**
+ ***************************************************************************************************************
+ DEPRECATED Start
+ ***************************************************************************************************************
+ */
+
+-(void)requestLinkUser:(NSString *)email mobile:(NSString *)mobile completionHandler:(ASLinkUserCallBack)callBack DEPRECATED_MSG_ATTRIBUTE("Use 'requestCitrusLink:mobile:completion:'");
+
+-(void)requestCitrusLinkSignInWithPassoword:(NSString *)password passwordType:(PasswordType)type completionHandler:(ASCitrusSigninCallBack)callback DEPRECATED_MSG_ATTRIBUTE("user requestMasterLinkSignInWithPassword:passwordType:completionHandler:");
 
 @end

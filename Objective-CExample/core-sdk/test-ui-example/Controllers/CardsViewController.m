@@ -112,6 +112,16 @@
     }];
      */
     
+//    [[CTSPaymentLayer fetchSharedPaymentLayer] requestMerchantPgSettings:@"jazzcinemas" withCompletionHandler:^(CTSPgSettings *pgSettings, NSError *error) {
+//        if(error){
+//            //handle error
+//            LogTrace(@"[error localizedDescription] %@ ", [error localizedDescription]);
+//        }
+//        else {
+//            LogTrace(@"pgSettings %@ ", pgSettings);
+//        }
+//    }];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -1240,6 +1250,7 @@
                                  alert.tag = 102;
                              }
                              [alert show];
+                             [self.navigationController popViewControllerAnimated:YES];
                          }
                      });
                  }];

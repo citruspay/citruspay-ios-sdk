@@ -1061,15 +1061,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7y-m7-pud">
+                            <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7y-m7-pud">
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="0.81999999999999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="dOk-3Z-E8b"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
-                                <state key="normal" title="Login with either Mobile or Email Id">
+                                <state key="normal" title="Using Default LoginView">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="defaultLoginViewAction" destination="JmM-rb-zOk" eventType="touchUpInside" id="M9u-et-3yL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1092,8 +1095,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Payment Options" id="YW2-8c-XTQ"/>
                     <connections>
+                        <outlet property="defaultLoginViewButton" destination="h7y-m7-pud" id="ncm-Ef-0st"/>
                         <outlet property="signupOptionOneButton" destination="Ui6-GP-zkC" id="fZt-yT-nDZ"/>
-                        <outlet property="signupOptionThreeButton" destination="h7y-m7-pud" id="F6j-51-nsr"/>
                         <outlet property="signupOptionTwoButton" destination="gW6-nU-0Az" id="Yfd-xN-Jug"/>
                         <outlet property="versionLabel" destination="Gz1-Ix-4oj" id="8WB-9l-qaA"/>
                         <segue destination="Onm-Gk-2qs" kind="push" identifier="CardViewIdentifier" id="Hir-IU-K0S"/>

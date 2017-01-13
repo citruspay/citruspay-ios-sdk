@@ -11,6 +11,7 @@
 #import "CardsViewController.h"
 #import "SVSegmentedControl.h"
 #import "BaseViewController.h"
+#import "TestParams.h"
 
 @interface InitialViewController (){
     
@@ -36,7 +37,7 @@
     
      self.signupOptionOneButton.layer.cornerRadius = 4;
      self.signupOptionTwoButton.layer.cornerRadius = 4;
-     self.signupOptionThreeButton.layer.cornerRadius = 4;
+     self.defaultLoginViewButton.layer.cornerRadius = 4;
 }
 
 
@@ -61,7 +62,7 @@
     CGFloat screenHeight = screenRect.size.height;
     
     if (screenHeight == 480) {
-        self.segmentedControl.center = CGPointMake(self.view.center.x, screenHeight/1.47);
+        self.segmentedControl.center = CGPointMake(self.view.center.x, screenHeight/1.2);
     }
     else {
         self.segmentedControl.center = CGPointMake(self.view.center.x, screenHeight/1.2);
@@ -244,4 +245,103 @@
     }
 }
 
+
+- (IBAction)defaultLoginViewAction {
+    
+    CTSAuthLayer *authLayer = [CitrusPaymentSDK fetchSharedAuthLayer];
+    if ([[CTSAuthLayer fetchSharedAuthLayer] isUserSignedIn]) {
+        NSLog(@"User SignedIn");
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:nil];
+        });
+    }
+    else {
+        UIAlertController *alertController = [UIAlertController
+                                              alertControllerWithTitle:@"Login"
+                                              message:@"Please enter Email/Mobile"
+                                              preferredStyle:UIAlertControllerStyleAlert];
+        
+        [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField)
+         {
+             textField.placeholder = NSLocalizedString(@"Enter Email", @"Email");
+         }];
+        
+        [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField)
+         {
+             textField.placeholder = NSLocalizedString(@"Enter Mobile Number", @"Mobile");
+         }];
+        
+        UIAlertAction *walletAction = [UIAlertAction
+                                       actionWithTitle:NSLocalizedString(@"Wallet", @"Wallet action")
+                                       style:UIAlertActionStyleDefault
+                                       handler:^(UIAlertAction *action)
+                                       {
+                                           UITextField *email = alertController.textFields.firstObject;
+                                           UITextField *mobile = alertController.textFields.lastObject;
+                                           
+                                           CTSUser* user = [[CTSUser alloc] init];
+                                           user.mobile = mobile.text;
+                                           user.email = email.text;
+                                           user.firstName = TEST_FIRST_NAME;//optional
+                                           user.lastName = TEST_LAST_NAME;//optional
+                                           user.address = nil;//optional
+                                           
+                                           [authLayer requestDefaultLoginView:user scope:CTSWalletScopeFull customParams:nil screenOverride:NO viewController:self callback:^(NSError *error, CTSLinkedUserState *userState) {
+                                               if (error) {
+                                                   //handle error
+                                                   [UIUtility toastMessageOnScreen:[error localizedDescription]];
+                                               }
+                                               else {
+                                                   // then go for wallet page
+                                                   dispatch_async(dispatch_get_main_queue(), ^{
+                                                       [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:nil];
+                                                   });
+                                               }
+                                           }];
+                                       }];
+        
+        UIAlertAction *payAction = [UIAlertAction
+                                       actionWithTitle:NSLocalizedString(@"Pay", @"Pay action")
+                                       style:UIAlertActionStyleDefault
+                                       handler:^(UIAlertAction *action)
+                                       {
+                                           UITextField *email = alertController.textFields.firstObject;
+                                           UITextField *mobile = alertController.textFields.lastObject;
+                                           
+                                           CTSUser* user = [[CTSUser alloc] init];
+                                           user.mobile = mobile.text;
+                                           user.email = email.text;
+                                           user.firstName = TEST_FIRST_NAME;//optional
+                                           user.lastName = TEST_LAST_NAME;//optional
+                                           user.address = nil;//optional
+                                           
+                                           [authLayer requestDefaultLoginView:user scope:CTSWalletScopeLimited customParams:nil screenOverride:NO viewController:self callback:^(NSError *error, CTSLinkedUserState *userState) {
+                                               if (error) {
+                                                   //handle error
+                                                   [UIUtility toastMessageOnScreen:[error localizedDescription]];
+                                               }
+                                               else {
+                                                   // then go for wallet page
+                                                   dispatch_async(dispatch_get_main_queue(), ^{
+                                                       [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:nil];
+                                                   });
+                                               }
+                                           }];
+                                       }];
+        
+        UIAlertAction *cancelAction = [UIAlertAction
+                                       actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel action")
+                                       style:UIAlertActionStyleCancel
+                                       handler:^(UIAlertAction *action)
+                                       {
+                                           NSLog(@"Cancel action");
+                                       }];
+        
+        [alertController addAction:cancelAction];
+        [alertController addAction:walletAction];
+        [alertController addAction:payAction];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
+
+}
 @end

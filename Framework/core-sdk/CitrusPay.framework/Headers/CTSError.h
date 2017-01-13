@@ -82,7 +82,9 @@ typedef enum {
     WalletPaymentCantProcess,
     LoadMoneyCantProcess,
     BillUrlOrObjectInvalid,
-    OrchestrationLayerFailed
+    OrchestrationLayerFailed,
+    PnPMissingPaymentOption,
+    AmountLessThanOne
 } CTSErrorCode;
 
 

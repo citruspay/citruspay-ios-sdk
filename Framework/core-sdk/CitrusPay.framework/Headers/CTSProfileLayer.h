@@ -141,122 +141,135 @@ didDeleteCardWithError:(NSError*)error;
 /**
  *   The CTSProfileLayer class' ASGetContactInfoCallBack CallBack.
  *
- *  @return The Newly created contactInfo, error object.
+ *   The Newly created contactInfo, error object.
  */
 typedef void (^ASGetContactInfoCallBack)(CTSProfileContactRes* contactInfo, NSError* error);
 /**
  *   The CTSProfileLayer class' ASGetPaymentInfoCallBack CallBack.
  *
- *  @return The Newly created CTSConsumerProfile, error object.
+ *   The Newly created CTSConsumerProfile, error object.
  */
 @interface CTSProfileLayer : CTSRestPluginBase
 /**
  *   The CTSProfileLayer class' CTSProfileProtocol delegate.
  *
- *  @return The Newly created delegate object.
+ *   The Newly created delegate object.
  */
 @property(weak) id<CTSProfileProtocol> delegate;
 /**
  *   The CTSProfileLayer class' initWithKeyStore method.
  *
- *  @return The Newly created keystoreArg object.
+ *   The Newly created keystoreArg object.
  */
 - (instancetype)initWithKeyStore:(CTSKeyStore *)keystoreArg;
 /**
  *   The CTSProfileLayer class' ASGetContactInfoCallBack CallBack.
  *
- *  @return The Newly created contactInfo & error object.
+ *   The Newly created contactInfo & error object.
  */
 typedef void (^ASGetContactInfoCallBack)(CTSProfileContactRes* contactInfo,
                                          NSError* error);
 /**
  *   The CTSProfileLayer class' ASGetPaymentInfoCallBack CallBack.
  *
- *  @return The Newly created consumerProfile & error object.
+ *   The Newly created consumerProfile & error object.
  */
 
 typedef void (^ASGetPaymentInfoCallBack)(CTSConsumerProfile *consumerProfile, NSError *error);
 /**
  *   The CTSProfileLayer class' ASUpdatePaymentInfoCallBack CallBack.
  *
- *  @return The Newly created error object.
+ *   The Newly created error object.
  */
 typedef void (^ASUpdatePaymentInfoCallBack)(NSError* error);
 /**
  *   The CTSProfileLayer class' ASUpdateContactInfoCallBack CallBack.
  *
- *  @return The Newly created error object.
+ *   The Newly created error object.
  */
 typedef void (^ASUpdateContactInfoCallBack)(NSError* error);
 /**
  *   The CTSProfileLayer class' ASGetBalanceCallBack CallBack.
  *
- *  @return The Newly created amount, error object.
+ *   The Newly created amount, error object.
  */
 typedef void (^ASGetBalanceCallBack)(CTSAmount *amount, NSError* error);
 /**
  *   The CTSProfileLayer class' ASActivatePrepaidCallBack CallBack.
  *
- *  @return The Newly created isActivated, error object.
+ *   The Newly created isActivated, error object.
  */
 typedef void (^ASActivatePrepaidCallBack)(BOOL isActivated, NSError* error);
 /**
  *   The CTSProfileLayer class' ASUpdateCashoutBankAccountCallback CallBack.
  *
- *  @return The Newly created error object.
+ *   The Newly created error object.
  */
 typedef void (^ASUpdateCashoutBankAccountCallback)(NSError* error);
 /**
  *   The CTSProfileLayer class' ASGetCashoutBankAccountCallback CallBack.
  *
- *  @return The Newly created bankAccount, error object.
+ *   The Newly created bankAccount, error object.
  */
 typedef void (^ASGetCashoutBankAccountCallback)(CTSCashoutBankAccountResp *bankAccount, NSError* error);
 /**
  *   The CTSProfileLayer class' ASNewContactProfileCallback CallBack.
  *
- *  @return The Newly created profile, error object.
+ *   The Newly created profile, error object.
  */
 typedef void (^ASNewContactProfileCallback)(CTSNewContactProfile* profile, NSError*error);
 /**
  *   The CTSProfileLayer class' ASUpdateMobileNumberCallback CallBack.
  *
- *  @return The Newly created updateMobileNumber, error object.
+ *   The Newly created updateMobileNumber, error object.
  */
 typedef void (^ASUpdateMobileNumberCallback)(CTSUpdateMobileNumberRes *updateMobileNumber, NSError* error);
 /**
  *   The CTSProfileLayer class' ASDeleteCardCallback CallBack.
  *
- *  @return The Newly created error object.
+ *   The Newly created error object.
  */
 typedef void (^ASDeleteCardCallback)(NSError* error);
 /**
  *   The CTSProfileLayer class' ASDPMerchantQueryCallback CallBack.
  *
- *  @return The Newly created reponse, error object.
+ *   The Newly created reponse, error object.
  */
 typedef void (^ASDPMerchantQueryCallback)(CTSDPResponse *reponse, NSError* error);
 /**
  *   The CTSProfileLayer class' ASGetProfileInfoCallBack CallBack.
  *
- *  @return The Newly created userProfile, error object.
+ *   The Newly created userProfile, error object.
  */
 typedef void (^ASGetProfileInfoCallBack)(CTSUserProfile *userProfile, NSError* error);
 /**
  *   The CTSProfileLayer class' ASUpdateProfileInfoCallBack CallBack.
  *
- *  @return The Newly created error object.
+ *   The Newly created error object.
  */
 typedef void (^ASUpdateProfileInfoCallBack)(NSError* error);
 /**
  *   The CTSProfileLayer class' ASSaveCardsCallback CallBack.
  *
- *  @return The Newly created reponse, error object.
+ *   The Newly created reponse, error object.
  */
 typedef void (^ASSaveCardsCallback) (CTSSaveCardResponse *reponse, NSError *error);
 
 
 +(CTSProfileLayer*)fetchSharedProfileLayer;
+
+/**
+ *   requestDeleteCardWithToken The disable Autoload Subscribed while deleting Card
+ *
+ *  @param savedCardToken The savedCardToken NSString.
+ *  @param cardNumebr The lastFourDigits NSString.
+ *  @param controller The andParentViewController UIViewController.
+ *  @param callback    The callback ASDeleteCardCallback.
+ */
+- (void)requestDeleteCardWithToken:(NSString *)savedCardToken
+                    lastFourDigits:(NSString *)cardNumebr
+           andParentViewController:(UIViewController *)controller
+             withCompletionHandler:(ASDeleteCardCallback)callback;
 
 /**
  *   update contact related information
@@ -270,7 +283,7 @@ typedef void (^ASSaveCardsCallback) (CTSSaveCardResponse *reponse, NSError *erro
 /**
  *   update payment related information
  *
- *  @param paymentOptions The paymentOptions CTSPaymentOptions.
+ *  @param paymentOption The paymentOptions paymentOption.
  *  @param callback       The callback ASUpdatePaymentInfoCallBack.
  */
 - (void)updatePaymentInfo:(CTSPaymentOptions *)paymentOption
@@ -279,7 +292,7 @@ typedef void (^ASSaveCardsCallback) (CTSSaveCardResponse *reponse, NSError *erro
 /**
  *   update payment related information
  *
- *  @param paymentOptions The paymentOptions CTSPaymentDetailUpdate.
+ *  @param paymentInfo The paymentInfo CTSPaymentDetailUpdate.
  *  @param callback       The callback ASUpdatePaymentInfoCallBack.
  */
 - (void)updatePaymentInformation:(CTSPaymentDetailUpdate *)paymentInfo

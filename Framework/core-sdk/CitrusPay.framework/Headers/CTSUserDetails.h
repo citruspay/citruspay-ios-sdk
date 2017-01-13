@@ -31,7 +31,6 @@
  @param contact ContactObject
  @param address Adress Object
 
- @return
  */
 - (instancetype)initWith:(CTSContactUpdate*)contact
                  address:(CTSUserAddress*)address;

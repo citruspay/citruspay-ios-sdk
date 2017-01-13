@@ -143,5 +143,4 @@ void LogSevere(NSString *format,...);
 
 void LogInfo_LazyPay(NSString *format,...);
 void LogError_LazyPay(NSString *format,...);
-void LogProperties_LazyPay(id object);
 @end

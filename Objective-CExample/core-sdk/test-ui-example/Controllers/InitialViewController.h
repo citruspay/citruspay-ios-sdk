@@ -11,6 +11,6 @@
 @interface InitialViewController : UIViewController
 @property (nonatomic , weak) IBOutlet UIButton *signupOptionOneButton;
 @property (nonatomic , weak) IBOutlet UIButton *signupOptionTwoButton;
-@property (nonatomic , weak) IBOutlet UIButton *signupOptionThreeButton;
+@property (nonatomic , weak) IBOutlet UIButton *defaultLoginViewButton;
 @property (nonatomic , weak) IBOutlet UILabel *versionLabel;
 @end

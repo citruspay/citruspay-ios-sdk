@@ -60,6 +60,7 @@ extern NSString *const PNP_SHOULD_RELOAD_WALLET;
 extern NSString *const PNP_SHOULD_RELOAD_AUTOLOAD;
 extern NSString *const PNP_SHOULD_RELOAD_WITHDRAWMONEY;
 extern NSString *const PNP_AUTO_LOAD_CONSUMER_DETAILS;
+extern NSString *const PNP_AUTOLOAD_SUBSCRIPTION;
 
 extern NSString *const PNP_DISABLE_WALLET;
 extern NSString *const PNP_DISABLE_CARDS;

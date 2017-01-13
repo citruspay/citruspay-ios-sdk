@@ -219,26 +219,22 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
         //delete saved card
         NSDictionary  *dict = [_savedAccountsArray objectAtIndex:indexPath.row];
         [[CTSProfileLayer fetchSharedProfileLayer] requestDeleteCardWithToken:[dict valueForKey:@"savedCardToken"]
+                                                               lastFourDigits:[dict valueForKey:@"cardNumber"]
+                                                      andParentViewController:self
                            withCompletionHandler:^(NSError *error) {
                                
                                if (error == nil) {
                                    // Your code to handle success.
-                                   NSMutableString *toastString = [[NSMutableString alloc] init];
-                                   if([_savedAccountsArray count])
-                                   {
+                                   if([_savedAccountsArray count]) {
                                        dispatch_async(dispatch_get_main_queue(), ^{
                                            [_savedAccountsArray removeObjectAtIndex:indexPath.row];
                                            [self.saveCardsTableView reloadData];
                                        });
                                    }
-                                   else{
-                                       toastString =(NSMutableString *) @"No saved cards, please save card first";
-                                       [UIUtility toastMessageOnScreen:toastString];
-                                   }
-                                   
+                                    [UIUtility toastMessageOnScreen:@"Card deleted successfully."];
                                } else {
                                    // Your code to handle error.
-                                   [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"Couldn't find saved cards \nerror: %@",[error localizedDescription]]];
+                                   [UIUtility toastMessageOnScreen:[error localizedDescription]];
                                }
                            }];
     }

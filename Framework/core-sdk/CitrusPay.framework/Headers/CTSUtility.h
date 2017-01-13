@@ -50,6 +50,14 @@
 #define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
 
 
+typedef enum{
+    CardTypeCredit,
+    CardTypeDebit,
+    CardTypeDebitUnRecognized
+    
+} CardType;
+
+
     //on the mian thread
 #define OnMainThread($block) ( [NSThread isMainThread] ? $block() : dispatch_async(dispatch_get_main_queue(), $block))
 
@@ -66,8 +74,13 @@ extern NSString *const CTS_SIGNIN_USER_EMAIL ;
 @interface CTSUtility : NSObject
 typedef void (^ASBillCallback)(CTSBill* bill,NSError* error);
 
++ (UIColor*)getColorFromRGB:(unsigned int)rgbValue;
+
+
     //logger
 + (void)logProperties:(id)object ;
+
+
 
     //string utils
 +(NSString *)removeWhiteSpacesFromString:(NSString *)string;
