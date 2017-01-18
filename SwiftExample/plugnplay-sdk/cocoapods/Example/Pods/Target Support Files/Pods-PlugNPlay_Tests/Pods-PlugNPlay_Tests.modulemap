@@ -1,0 +1,6 @@
+framework module Pods_PlugNPlay_Tests {
+  umbrella header "Pods-PlugNPlay_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
