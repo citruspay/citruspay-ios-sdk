@@ -100,7 +100,7 @@ use_frameworks!
 target 'MyApp' do
 # your other pod
 # ...
-pod 'CitrusPay', '~> 4.1.0'
+pod 'CitrusPay', '~> 4.1.1'
 end
 ~~~
 
