@@ -1,6 +1,0 @@
-framework module Pods_PlugNPlay_Example {
-  umbrella header "Pods-PlugNPlay_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}

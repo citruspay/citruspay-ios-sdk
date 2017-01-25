@@ -1,6 +1,0 @@
-framework module PlugNPlay {
-  umbrella header "PlugNPlay-umbrella.h"
-
-  export *
-  module * { export * }
-}
