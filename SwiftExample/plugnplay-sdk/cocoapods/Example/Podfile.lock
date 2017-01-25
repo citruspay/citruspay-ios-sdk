@@ -1,16 +1,28 @@
 PODS:
-  - PlugNPlay (0.1.0)
+  - CitrusGraphics (1.1):
+    - Kingfisher
+  - CitrusPay (4.1.1):
+    - CitrusGraphics
+    - JSONModel
+  - JSONModel (1.7.0)
+  - Kingfisher (3.3.2)
+  - PlugNPlay (1.0):
+    - CitrusPay
 
 DEPENDENCIES:
-  - PlugNPlay (from `../`)
+  - PlugNPlay (from `../../../../`)
 
 EXTERNAL SOURCES:
   PlugNPlay:
-    :path: ../
+    :path: ../../../../
 
 SPEC CHECKSUMS:
-  PlugNPlay: fc73e4fa8135e58c740fd6a5ceb7745b286bab33
+  CitrusGraphics: 265090428f9fc6d07705a3399598975ca374fe16
+  CitrusPay: 20c66b492d89421b27761fb010d986ce076471b2
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  Kingfisher: 8e60094454aeb4746eb588eb57f794d891c6ea88
+  PlugNPlay: 8815d3bf8c4686ac8d885e336b32bda0c4547b7e
 
-PODFILE CHECKSUM: 65bad7ad17d18477635f2a3bf7438d27f275a6b4
+PODFILE CHECKSUM: edb669c5e8931927ab44a0a57974846fedab1a29
 
 COCOAPODS: 1.1.1
