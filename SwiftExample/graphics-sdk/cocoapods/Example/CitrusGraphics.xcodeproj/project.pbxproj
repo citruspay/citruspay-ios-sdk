@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19EF274529A1C7CE46DD3AB4 /* Pods_CitrusGraphics_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9143A4A484439EFD77F66593 /* Pods_CitrusGraphics_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		6B0B4DD21BC6F9CEAB3D4A68 /* Pods_CitrusGraphics_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89FF80F27BCD17FE5FCEE79 /* Pods_CitrusGraphics_Example.framework */; };
 		766EF8191DD1F52E00F99409 /* CitrusGraphics.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 766EF8181DD1F52E00F99409 /* CitrusGraphics.podspec */; };
 		766EF8241DD1F75800F99409 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766EF81B1DD1F75800F99409 /* Assets.xcassets */; };
 		766EF8251DD1F75800F99409 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766EF81C1DD1F75800F99409 /* LaunchScreen.storyboard */; };
@@ -48,7 +46,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4E6CFEC7272E27562B6B1B28 /* Pods-CitrusGraphics_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitrusGraphics_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CitrusGraphics_Tests/Pods-CitrusGraphics_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CitrusGraphics_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitrusGraphics_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,11 +61,6 @@
 		766EF8221DD1F75800F99409 /* TestParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestParams.swift; sourceTree = "<group>"; };
 		766EF8231DD1F75800F99409 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		76B9ED221E1E2D90000D8C4E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../../../LICENSE; sourceTree = "<group>"; };
-		89506FD20DDE13EB0946FC3D /* Pods-CitrusGraphics_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitrusGraphics_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CitrusGraphics_Tests/Pods-CitrusGraphics_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		9143A4A484439EFD77F66593 /* Pods_CitrusGraphics_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CitrusGraphics_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D89FF80F27BCD17FE5FCEE79 /* Pods_CitrusGraphics_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CitrusGraphics_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA0FA98BC9D7A43EF50CC9BD /* Pods-CitrusGraphics_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitrusGraphics_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CitrusGraphics_Example/Pods-CitrusGraphics_Example.release.xcconfig"; sourceTree = "<group>"; };
-		DA9CE66F3035651A86F2D860 /* Pods-CitrusGraphics_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitrusGraphics_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CitrusGraphics_Example/Pods-CitrusGraphics_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B0B4DD21BC6F9CEAB3D4A68 /* Pods_CitrusGraphics_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19EF274529A1C7CE46DD3AB4 /* Pods_CitrusGraphics_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,8 +88,6 @@
 				607FACD21AFB9204008FA782 /* Example for CitrusGraphics */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				82690C19A8862DE18E93FA4C /* Pods */,
-				BF778761FB69E7D649810517 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,26 +160,6 @@
 			path = "../../../test-ui-example";
 			sourceTree = "<group>";
 		};
-		82690C19A8862DE18E93FA4C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				DA9CE66F3035651A86F2D860 /* Pods-CitrusGraphics_Example.debug.xcconfig */,
-				DA0FA98BC9D7A43EF50CC9BD /* Pods-CitrusGraphics_Example.release.xcconfig */,
-				89506FD20DDE13EB0946FC3D /* Pods-CitrusGraphics_Tests.debug.xcconfig */,
-				4E6CFEC7272E27562B6B1B28 /* Pods-CitrusGraphics_Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		BF778761FB69E7D649810517 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D89FF80F27BCD17FE5FCEE79 /* Pods_CitrusGraphics_Example.framework */,
-				9143A4A484439EFD77F66593 /* Pods_CitrusGraphics_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,13 +167,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "CitrusGraphics_Example" */;
 			buildPhases = (
-				B60104D594ADAE96EFC8ABB0 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				766EF82D1DD1F9D400F99409 /* Embed Frameworks */,
-				A215373F3435D01EF30FD7DB /* [CP] Embed Pods Frameworks */,
-				7896809C4CB2D5ACE5E3BE72 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,12 +185,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "CitrusGraphics_Tests" */;
 			buildPhases = (
-				3139954F72FA48CDFCE89EEB /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				20FBB3F750BEB5DDCAA13977 /* [CP] Embed Pods Frameworks */,
-				707989E9C7A5C3B9718C8FA9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -298,99 +260,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		20FBB3F750BEB5DDCAA13977 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CitrusGraphics_Tests/Pods-CitrusGraphics_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3139954F72FA48CDFCE89EEB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		707989E9C7A5C3B9718C8FA9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CitrusGraphics_Tests/Pods-CitrusGraphics_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7896809C4CB2D5ACE5E3BE72 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CitrusGraphics_Example/Pods-CitrusGraphics_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A215373F3435D01EF30FD7DB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CitrusGraphics_Example/Pods-CitrusGraphics_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B60104D594ADAE96EFC8ABB0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		607FACCC1AFB9204008FA782 /* Sources */ = {
@@ -532,7 +401,6 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA9CE66F3035651A86F2D860 /* Pods-CitrusGraphics_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -548,7 +416,6 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA0FA98BC9D7A43EF50CC9BD /* Pods-CitrusGraphics_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -564,7 +431,6 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89506FD20DDE13EB0946FC3D /* Pods-CitrusGraphics_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -584,7 +450,6 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E6CFEC7272E27562B6B1B28 /* Pods-CitrusGraphics_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
