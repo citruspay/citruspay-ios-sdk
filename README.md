@@ -58,9 +58,9 @@ CitrusPay iOS SDK broadly offers following features.
 
 ## Example Project
 
-An example project is available via CocoaPods to try out and familiarize yourself with the Citrus Payments SDK. This project comes bundled with the SDK.
+An example project is available via CocoaPods or manual-inclusion to try out and familiarize yourself with the Citrus Payments SDK. This project comes bundled with the SDK.
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+via CocoaPods - To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Example App Requirements
 + Xcode 8 or higher.
