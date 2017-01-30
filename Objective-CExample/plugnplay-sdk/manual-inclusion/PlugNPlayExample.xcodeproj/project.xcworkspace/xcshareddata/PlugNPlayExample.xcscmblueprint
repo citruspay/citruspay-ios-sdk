@@ -10,9 +10,9 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D2FE5861-1B95-4509-B0A2-640739C0B22A",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "17FB51EC7B87DC25DD21E28FDFD877B479CFFAC1" : "superb\/Dependency\/Kingfisher\/",
-    "2454A7C0A4BC2A09472718EB55354F320600B245" : "superb\/Dependency\/JSONModel\/",
-    "82A97729EC55B5EC9951B8B1634CBA9A8575F264" : "superb\/"
+    "17FB51EC7B87DC25DD21E28FDFD877B479CFFAC1" : "citruspay-ios-sdk\/Dependency\/Kingfisher\/",
+    "2454A7C0A4BC2A09472718EB55354F320600B245" : "citruspay-ios-sdk\/Dependency\/JSONModel\/",
+    "82A97729EC55B5EC9951B8B1634CBA9A8575F264" : "citruspay-ios-sdk\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "PlugNPlayExample",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,

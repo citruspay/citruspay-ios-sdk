@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		763477B81E3B801E007ED364 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 763477B71E3B801E007ED364 /* Main.storyboard */; };
+		763477BC1E3B8069007ED364 /* Common.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 763477BB1E3B8069007ED364 /* Common.xcassets */; };
+		763477C21E3B8080007ED364 /* SVSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 763477BF1E3B8080007ED364 /* SVSegmentedControl.m */; };
+		763477C31E3B8080007ED364 /* SVSegmentedThumb.m in Sources */ = {isa = PBXBuildFile; fileRef = 763477C11E3B8080007ED364 /* SVSegmentedThumb.m */; };
 		768D710C1E027C630000BF8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 768D710B1E027C630000BF8A /* main.m */; };
 		768D710F1E027C630000BF8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 768D710E1E027C630000BF8A /* AppDelegate.m */; };
 		768D71251E027C630000BF8A /* LazyPayExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 768D71241E027C630000BF8A /* LazyPayExampleTests.m */; };
-		768D713E1E027CE10000BF8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 768D71301E027CE10000BF8A /* Assets.xcassets */; };
-		768D713F1E027CE10000BF8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768D71311E027CE10000BF8A /* LaunchScreen.storyboard */; };
-		768D71401E027CE10000BF8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768D71331E027CE10000BF8A /* Main.storyboard */; };
 		768D71411E027CE10000BF8A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 768D71361E027CE10000BF8A /* HomeViewController.m */; };
-		768D71421E027CE10000BF8A /* SVSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 768D713A1E027CE10000BF8A /* SVSegmentedControl.m */; };
-		768D71431E027CE10000BF8A /* SVSegmentedThumb.m in Sources */ = {isa = PBXBuildFile; fileRef = 768D713C1E027CE10000BF8A /* SVSegmentedThumb.m */; };
 		768D71801E027D6A0000BF8A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768D71691E027D4A0000BF8A /* Kingfisher.framework */; };
 		768D71811E027D6A0000BF8A /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 768D71691E027D4A0000BF8A /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		768D71841E027D6A0000BF8A /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768D71581E027D420000BF8A /* JSONModel.framework */; };
@@ -162,6 +161,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		763477B71E3B801E007ED364 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		763477B91E3B8058007ED364 /* MerchantConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MerchantConstants.h; path = "../../../Common-Data/MerchantConstants.h"; sourceTree = "<group>"; };
+		763477BA1E3B8058007ED364 /* TestParams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TestParams.h; path = "../../../Common-Data/TestParams.h"; sourceTree = "<group>"; };
+		763477BB1E3B8069007ED364 /* Common.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Common.xcassets; path = "../../../Common-Data/Common.xcassets"; sourceTree = "<group>"; };
+		763477BE1E3B8080007ED364 /* SVSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSegmentedControl.h; sourceTree = "<group>"; };
+		763477BF1E3B8080007ED364 /* SVSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSegmentedControl.m; sourceTree = "<group>"; };
+		763477C01E3B8080007ED364 /* SVSegmentedThumb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSegmentedThumb.h; sourceTree = "<group>"; };
+		763477C11E3B8080007ED364 /* SVSegmentedThumb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSegmentedThumb.m; sourceTree = "<group>"; };
 		768D71071E027C630000BF8A /* LazyPayExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyPayExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		768D710B1E027C630000BF8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		768D710D1E027C630000BF8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -170,17 +177,8 @@
 		768D71201E027C630000BF8A /* LazyPayExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyPayExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		768D71241E027C630000BF8A /* LazyPayExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LazyPayExampleTests.m; sourceTree = "<group>"; };
 		768D71261E027C630000BF8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		768D71301E027CE10000BF8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		768D71321E027CE10000BF8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		768D71341E027CE10000BF8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		768D71351E027CE10000BF8A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		768D71361E027CE10000BF8A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		768D71371E027CE10000BF8A /* MerchantConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantConstants.h; sourceTree = "<group>"; };
-		768D71391E027CE10000BF8A /* SVSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSegmentedControl.h; sourceTree = "<group>"; };
-		768D713A1E027CE10000BF8A /* SVSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSegmentedControl.m; sourceTree = "<group>"; };
-		768D713B1E027CE10000BF8A /* SVSegmentedThumb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSegmentedThumb.h; sourceTree = "<group>"; };
-		768D713C1E027CE10000BF8A /* SVSegmentedThumb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSegmentedThumb.m; sourceTree = "<group>"; };
-		768D713D1E027CE10000BF8A /* TestParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestParams.h; sourceTree = "<group>"; };
 		768D71451E027D0F0000BF8A /* LazyPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LazyPay.framework; sourceTree = "<group>"; };
 		768D714A1E027D1B0000BF8A /* CitrusPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusPay.framework; sourceTree = "<group>"; };
 		768D714F1E027D350000BF8A /* CitrusGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusGraphics.framework; sourceTree = "<group>"; };
@@ -211,6 +209,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		763477BD1E3B8080007ED364 /* SVSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				763477BE1E3B8080007ED364 /* SVSegmentedControl.h */,
+				763477BF1E3B8080007ED364 /* SVSegmentedControl.m */,
+				763477C01E3B8080007ED364 /* SVSegmentedThumb.h */,
+				763477C11E3B8080007ED364 /* SVSegmentedThumb.m */,
+			);
+			name = SVSegmentedControl;
+			path = "../../../Common-Data/SVSegmentedControl";
+			sourceTree = "<group>";
+		};
 		768D70FE1E027C630000BF8A = {
 			isa = PBXGroup;
 			children = (
@@ -266,28 +276,16 @@
 		768D712F1E027CE10000BF8A /* test-ui-example */ = {
 			isa = PBXGroup;
 			children = (
-				768D71301E027CE10000BF8A /* Assets.xcassets */,
-				768D71311E027CE10000BF8A /* LaunchScreen.storyboard */,
-				768D71331E027CE10000BF8A /* Main.storyboard */,
+				763477BD1E3B8080007ED364 /* SVSegmentedControl */,
+				763477BB1E3B8069007ED364 /* Common.xcassets */,
+				763477B91E3B8058007ED364 /* MerchantConstants.h */,
+				763477BA1E3B8058007ED364 /* TestParams.h */,
+				763477B71E3B801E007ED364 /* Main.storyboard */,
 				768D71351E027CE10000BF8A /* HomeViewController.h */,
 				768D71361E027CE10000BF8A /* HomeViewController.m */,
-				768D71371E027CE10000BF8A /* MerchantConstants.h */,
-				768D71381E027CE10000BF8A /* SVSegmentedControl */,
-				768D713D1E027CE10000BF8A /* TestParams.h */,
 			);
 			name = "test-ui-example";
 			path = "../../test-ui-example";
-			sourceTree = "<group>";
-		};
-		768D71381E027CE10000BF8A /* SVSegmentedControl */ = {
-			isa = PBXGroup;
-			children = (
-				768D71391E027CE10000BF8A /* SVSegmentedControl.h */,
-				768D713A1E027CE10000BF8A /* SVSegmentedControl.m */,
-				768D713B1E027CE10000BF8A /* SVSegmentedThumb.h */,
-				768D713C1E027CE10000BF8A /* SVSegmentedThumb.m */,
-			);
-			path = SVSegmentedControl;
 			sourceTree = "<group>";
 		};
 		768D71441E027D0F0000BF8A /* lazypay-sdk */ = {
@@ -534,9 +532,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				768D71401E027CE10000BF8A /* Main.storyboard in Resources */,
-				768D713E1E027CE10000BF8A /* Assets.xcassets in Resources */,
-				768D713F1E027CE10000BF8A /* LaunchScreen.storyboard in Resources */,
+				763477BC1E3B8069007ED364 /* Common.xcassets in Resources */,
+				763477B81E3B801E007ED364 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,9 +551,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				768D71431E027CE10000BF8A /* SVSegmentedThumb.m in Sources */,
+				763477C31E3B8080007ED364 /* SVSegmentedThumb.m in Sources */,
 				768D710F1E027C630000BF8A /* AppDelegate.m in Sources */,
-				768D71421E027CE10000BF8A /* SVSegmentedControl.m in Sources */,
+				763477C21E3B8080007ED364 /* SVSegmentedControl.m in Sources */,
 				768D710C1E027C630000BF8A /* main.m in Sources */,
 				768D71411E027CE10000BF8A /* HomeViewController.m in Sources */,
 			);
@@ -589,25 +586,6 @@
 			targetProxy = 768D71861E027D6A0000BF8A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		768D71311E027CE10000BF8A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				768D71321E027CE10000BF8A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		768D71331E027CE10000BF8A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				768D71341E027CE10000BF8A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		768D71271E027C630000BF8A /* Debug */ = {

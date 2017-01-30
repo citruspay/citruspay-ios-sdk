@@ -9,13 +9,12 @@
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		76144FAB1E3F2E5A007BD9DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76144FA91E3F2E5A007BD9DA /* Main.storyboard */; };
+		76144FAC1E3F2E5A007BD9DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76144FAA1E3F2E5A007BD9DA /* ViewController.swift */; };
+		76144FAE1E3F2E72007BD9DA /* PlugNPlay.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76144FAD1E3F2E72007BD9DA /* PlugNPlay.xcassets */; };
+		76144FB01E3F2E83007BD9DA /* MerchantConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76144FAF1E3F2E83007BD9DA /* MerchantConstants.swift */; };
 		76F918241E2F82D20098A475 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 76F918221E2F82D20098A475 /* LICENSE */; };
 		76F918251E2F82D20098A475 /* PlugNPlay.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 76F918231E2F82D20098A475 /* PlugNPlay.podspec */; };
-		76F9182E1E2F82E80098A475 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F918271E2F82E80098A475 /* LaunchScreen.storyboard */; };
-		76F9182F1E2F82E80098A475 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F918291E2F82E80098A475 /* Main.storyboard */; };
-		76F918301E2F82E80098A475 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F9182B1E2F82E80098A475 /* Images.xcassets */; };
-		76F918311E2F82E80098A475 /* MerchantConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F9182C1E2F82E80098A475 /* MerchantConstants.swift */; };
-		76F918321E2F82E80098A475 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F9182D1E2F82E80098A475 /* ViewController.swift */; };
 		832EF422CD34BDDF0960547D /* Pods_PlugNPlay_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FFB924F5E4240F62ECA3C6 /* Pods_PlugNPlay_Tests.framework */; };
 		E318EFFA8FDB1FCD3AD90856 /* Pods_PlugNPlay_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B34E95FD8EC76D2D2A16372D /* Pods_PlugNPlay_Example.framework */; };
 /* End PBXBuildFile section */
@@ -40,13 +39,12 @@
 		607FACE51AFB9204008FA782 /* PlugNPlay_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlugNPlay_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		76144FA91E3F2E5A007BD9DA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		76144FAA1E3F2E5A007BD9DA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76144FAD1E3F2E72007BD9DA /* PlugNPlay.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = PlugNPlay.xcassets; path = "../../../Common-Data/PlugNPlay.xcassets"; sourceTree = "<group>"; };
+		76144FAF1E3F2E83007BD9DA /* MerchantConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MerchantConstants.swift; path = "../../../Common-Data/MerchantConstants.swift"; sourceTree = "<group>"; };
 		76F918221E2F82D20098A475 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../../../LICENSE; sourceTree = "<group>"; };
 		76F918231E2F82D20098A475 /* PlugNPlay.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PlugNPlay.podspec; path = ../../../../PlugNPlay.podspec; sourceTree = "<group>"; };
-		76F918281E2F82E80098A475 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		76F9182A1E2F82E80098A475 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		76F9182B1E2F82E80098A475 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		76F9182C1E2F82E80098A475 /* MerchantConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MerchantConstants.swift; sourceTree = "<group>"; };
-		76F9182D1E2F82E80098A475 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B34E95FD8EC76D2D2A16372D /* Pods_PlugNPlay_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlugNPlay_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5821E0F9ED9D53FFD74EA43 /* Pods-PlugNPlay_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlugNPlay_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlugNPlay_Example/Pods-PlugNPlay_Example.release.xcconfig"; sourceTree = "<group>"; };
 		DA4EE31B9231B31D3F89DFA1 /* Pods-PlugNPlay_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlugNPlay_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlugNPlay_Tests/Pods-PlugNPlay_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,7 +105,7 @@
 		607FACD21AFB9204008FA782 /* Example for PlugNPlay */ = {
 			isa = PBXGroup;
 			children = (
-				76F918261E2F82E80098A475 /* test-ui-example */,
+				76144FA81E3F2E5A007BD9DA /* test-ui-example */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
@@ -149,14 +147,13 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		76F918261E2F82E80098A475 /* test-ui-example */ = {
+		76144FA81E3F2E5A007BD9DA /* test-ui-example */ = {
 			isa = PBXGroup;
 			children = (
-				76F918271E2F82E80098A475 /* LaunchScreen.storyboard */,
-				76F918291E2F82E80098A475 /* Main.storyboard */,
-				76F9182B1E2F82E80098A475 /* Images.xcassets */,
-				76F9182C1E2F82E80098A475 /* MerchantConstants.swift */,
-				76F9182D1E2F82E80098A475 /* ViewController.swift */,
+				76144FAF1E3F2E83007BD9DA /* MerchantConstants.swift */,
+				76144FAD1E3F2E72007BD9DA /* PlugNPlay.xcassets */,
+				76144FA91E3F2E5A007BD9DA /* Main.storyboard */,
+				76144FAA1E3F2E5A007BD9DA /* ViewController.swift */,
 			);
 			name = "test-ui-example";
 			path = "../../../test-ui-example";
@@ -261,11 +258,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76F9182E1E2F82E80098A475 /* LaunchScreen.storyboard in Resources */,
-				76F918301E2F82E80098A475 /* Images.xcassets in Resources */,
+				76144FAB1E3F2E5A007BD9DA /* Main.storyboard in Resources */,
 				76F918241E2F82D20098A475 /* LICENSE in Resources */,
+				76144FAE1E3F2E72007BD9DA /* PlugNPlay.xcassets in Resources */,
 				76F918251E2F82D20098A475 /* PlugNPlay.podspec in Resources */,
-				76F9182F1E2F82E80098A475 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,9 +372,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76F918321E2F82E80098A475 /* ViewController.swift in Sources */,
+				76144FAC1E3F2E5A007BD9DA /* ViewController.swift in Sources */,
+				76144FB01E3F2E83007BD9DA /* MerchantConstants.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				76F918311E2F82E80098A475 /* MerchantConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,25 +395,6 @@
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		76F918271E2F82E80098A475 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				76F918281E2F82E80098A475 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		76F918291E2F82E80098A475 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				76F9182A1E2F82E80098A475 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		607FACED1AFB9204008FA782 /* Debug */ = {

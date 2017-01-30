@@ -40,15 +40,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func initializeSDK() -> Void {
         
-        #if PRODUCTION_MODE
-            CitrusPaymentSDK.initWithSign(inID: SignInId, signInSecret: SignInSecretKey, signUpID: SubscriptionId, signUpSecret: SubscriptionSecretKey, vanityUrl: VanityUrl, environment: CTSEnvProduction)
-            
-            CitrusPaymentSDK.setLogLevel(.none)
-        #else
-            CitrusPaymentSDK.initWithSign(inID: SignInId, signInSecret: SignInSecretKey, signUpID: SubscriptionId, signUpSecret: SubscriptionSecretKey, vanityUrl: VanityUrl, environment: CTSEnvSandbox)
-            
-            CitrusPaymentSDK.setLogLevel(.verbose)
-        #endif
+        CitrusPaymentSDK.initWithSign(inID: SignInIdSB, signInSecret: SignInSecretKeySB, signUpID: SubscriptionIdSB, signUpSecret: SubscriptionSecretKeySB, vanityUrl: VanityUrlSB, environment: CTSEnvSandbox)
+        
+        CitrusPaymentSDK.setLogLevel(.verbose)
                 
         self.authLayer = CTSAuthLayer.fetchShared()
         self.profileLayer = CTSProfileLayer.fetchShared()

@@ -9,12 +9,12 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E585DEA8-F4B5-4962-951B-B76F2507065C",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "17FB51EC7B87DC25DD21E28FDFD877B479CFFAC1" : "public.master.release.05\/Dependency\/Kingfisher\/",
-    "82A97729EC55B5EC9951B8B1634CBA9A8575F264" : "public.master.release.05\/"
+    "17FB51EC7B87DC25DD21E28FDFD877B479CFFAC1" : "citruspay-ios-sdk\/Dependency\/Kingfisher\/",
+    "82A97729EC55B5EC9951B8B1634CBA9A8575F264" : "citruspay-ios-sdk\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "CitrusGraphicsExample",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Objective-CExample\/graphics-sdk\/using-binary-library\/CitrusGraphicsExample.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Objective-CExample\/graphics-sdk\/manual-inclusion\/CitrusGraphicsExample.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/onevcat\/Kingfisher.git",
@@ -22,7 +22,7 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "17FB51EC7B87DC25DD21E28FDFD877B479CFFAC1"
     },
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/citruspay\/citruspay-ios-sdk",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/citruspay\/citruspay-ios-sdk.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "82A97729EC55B5EC9951B8B1634CBA9A8575F264"
     }

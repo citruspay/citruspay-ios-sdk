@@ -7,17 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07903F962A1C434E5C51AFDF /* Pods_LazyPay_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08F6988B887931DCABB98CB /* Pods_LazyPay_Tests.framework */; };
-		177DC12EAE17BC3CC5AB05E9 /* Pods_LazyPay_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC0EE630330D57243D25AA6 /* Pods_LazyPay_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		76144FA01E3F2984007BD9DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76144F9E1E3F2984007BD9DA /* Main.storyboard */; };
+		76144FA11E3F2984007BD9DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76144F9F1E3F2984007BD9DA /* ViewController.swift */; };
+		76144FA31E3F2993007BD9DA /* Common.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76144FA21E3F2993007BD9DA /* Common.xcassets */; };
+		76144FA61E3F29A2007BD9DA /* MerchantConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76144FA41E3F29A2007BD9DA /* MerchantConstants.swift */; };
+		76144FA71E3F29A2007BD9DA /* TestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76144FA51E3F29A2007BD9DA /* TestParams.swift */; };
 		764362F41E0BC0F200D04FDE /* LazyPay.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 764362F21E0BC0F200D04FDE /* LazyPay.podspec */; };
 		764362F51E0BC0F200D04FDE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 764362F31E0BC0F200D04FDE /* LICENSE */; };
-		764362FE1E0BC76800D04FDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 764362F71E0BC76800D04FDE /* Assets.xcassets */; };
-		764362FF1E0BC76800D04FDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764362F81E0BC76800D04FDE /* LaunchScreen.storyboard */; };
-		764363001E0BC76800D04FDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764362FA1E0BC76800D04FDE /* Main.storyboard */; };
-		764363011E0BC76800D04FDE /* MerchantConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764362FC1E0BC76800D04FDE /* MerchantConstants.swift */; };
-		764363021E0BC76800D04FDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764362FD1E0BC76800D04FDE /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,25 +29,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3BC0EE630330D57243D25AA6 /* Pods_LazyPay_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyPay_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* LazyPay_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyPay_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* LazyPay_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyPay_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		76144F9E1E3F2984007BD9DA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		76144F9F1E3F2984007BD9DA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76144FA21E3F2993007BD9DA /* Common.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Common.xcassets; path = "../../../Common-Data/Common.xcassets"; sourceTree = "<group>"; };
+		76144FA41E3F29A2007BD9DA /* MerchantConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MerchantConstants.swift; path = "../../../Common-Data/MerchantConstants.swift"; sourceTree = "<group>"; };
+		76144FA51E3F29A2007BD9DA /* TestParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestParams.swift; path = "../../../Common-Data/TestParams.swift"; sourceTree = "<group>"; };
 		764362F21E0BC0F200D04FDE /* LazyPay.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LazyPay.podspec; path = ../../../../LazyPay.podspec; sourceTree = "<group>"; };
 		764362F31E0BC0F200D04FDE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../../../LICENSE; sourceTree = "<group>"; };
-		764362F71E0BC76800D04FDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		764362F91E0BC76800D04FDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		764362FB1E0BC76800D04FDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		764362FC1E0BC76800D04FDE /* MerchantConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MerchantConstants.swift; sourceTree = "<group>"; };
-		764362FD1E0BC76800D04FDE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8C2F121EF38DDD24D5C9757C /* Pods-LazyPay_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPay_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LazyPay_Example/Pods-LazyPay_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		8EA05DF3B9A416BD048DE6AF /* Pods-LazyPay_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPay_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LazyPay_Tests/Pods-LazyPay_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		AF98635E68C3670089CAAA16 /* Pods-LazyPay_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPay_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LazyPay_Tests/Pods-LazyPay_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		E08F6988B887931DCABB98CB /* Pods_LazyPay_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyPay_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA592067F6E3A38A68E51B63 /* Pods-LazyPay_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPay_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LazyPay_Example/Pods-LazyPay_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +49,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				177DC12EAE17BC3CC5AB05E9 /* Pods_LazyPay_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +56,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07903F962A1C434E5C51AFDF /* Pods_LazyPay_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,8 +69,6 @@
 				607FACD21AFB9204008FA782 /* Example for LazyPay */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				6EB52427A59CCA49211DD91A /* Pods */,
-				C81CD350F97F157D67FA8E45 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,7 +84,7 @@
 		607FACD21AFB9204008FA782 /* Example for LazyPay */ = {
 			isa = PBXGroup;
 			children = (
-				764362F61E0BC76800D04FDE /* test-ui-example */,
+				76144F9D1E3F2984007BD9DA /* test-ui-example */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
@@ -138,37 +126,17 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		6EB52427A59CCA49211DD91A /* Pods */ = {
+		76144F9D1E3F2984007BD9DA /* test-ui-example */ = {
 			isa = PBXGroup;
 			children = (
-				8C2F121EF38DDD24D5C9757C /* Pods-LazyPay_Example.debug.xcconfig */,
-				EA592067F6E3A38A68E51B63 /* Pods-LazyPay_Example.release.xcconfig */,
-				AF98635E68C3670089CAAA16 /* Pods-LazyPay_Tests.debug.xcconfig */,
-				8EA05DF3B9A416BD048DE6AF /* Pods-LazyPay_Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		764362F61E0BC76800D04FDE /* test-ui-example */ = {
-			isa = PBXGroup;
-			children = (
-				764362F71E0BC76800D04FDE /* Assets.xcassets */,
-				764362F81E0BC76800D04FDE /* LaunchScreen.storyboard */,
-				764362FA1E0BC76800D04FDE /* Main.storyboard */,
-				764362FC1E0BC76800D04FDE /* MerchantConstants.swift */,
-				764362FD1E0BC76800D04FDE /* ViewController.swift */,
+				76144FA41E3F29A2007BD9DA /* MerchantConstants.swift */,
+				76144FA51E3F29A2007BD9DA /* TestParams.swift */,
+				76144FA21E3F2993007BD9DA /* Common.xcassets */,
+				76144F9E1E3F2984007BD9DA /* Main.storyboard */,
+				76144F9F1E3F2984007BD9DA /* ViewController.swift */,
 			);
 			name = "test-ui-example";
 			path = "../../../test-ui-example";
-			sourceTree = "<group>";
-		};
-		C81CD350F97F157D67FA8E45 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3BC0EE630330D57243D25AA6 /* Pods_LazyPay_Example.framework */,
-				E08F6988B887931DCABB98CB /* Pods_LazyPay_Tests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,12 +146,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "LazyPay_Example" */;
 			buildPhases = (
-				FAD2F2D4067C934822191FE5 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				7320F7090F8E6CFED48E3D52 /* [CP] Embed Pods Frameworks */,
-				C98A70C2B78FC60B832B395A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,12 +163,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "LazyPay_Tests" */;
 			buildPhases = (
-				828D5DE602B1CBCE2E88093C /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				3580132EF6E3B86088614281 /* [CP] Embed Pods Frameworks */,
-				B30012E21D47702AF29B7F81 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,10 +223,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76144FA31E3F2993007BD9DA /* Common.xcassets in Resources */,
+				76144FA01E3F2984007BD9DA /* Main.storyboard in Resources */,
 				764362F41E0BC0F200D04FDE /* LazyPay.podspec in Resources */,
-				764363001E0BC76800D04FDE /* Main.storyboard in Resources */,
-				764362FF1E0BC76800D04FDE /* LaunchScreen.storyboard in Resources */,
-				764362FE1E0BC76800D04FDE /* Assets.xcassets in Resources */,
 				764362F51E0BC0F200D04FDE /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,107 +239,15 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		3580132EF6E3B86088614281 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LazyPay_Tests/Pods-LazyPay_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7320F7090F8E6CFED48E3D52 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LazyPay_Example/Pods-LazyPay_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		828D5DE602B1CBCE2E88093C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		B30012E21D47702AF29B7F81 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LazyPay_Tests/Pods-LazyPay_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C98A70C2B78FC60B832B395A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LazyPay_Example/Pods-LazyPay_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FAD2F2D4067C934822191FE5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		607FACCC1AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				764363021E0BC76800D04FDE /* ViewController.swift in Sources */,
+				76144FA11E3F2984007BD9DA /* ViewController.swift in Sources */,
+				76144FA61E3F29A2007BD9DA /* MerchantConstants.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				764363011E0BC76800D04FDE /* MerchantConstants.swift in Sources */,
+				76144FA71E3F29A2007BD9DA /* TestParams.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,25 +268,6 @@
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		764362F81E0BC76800D04FDE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				764362F91E0BC76800D04FDE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		764362FA1E0BC76800D04FDE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				764362FB1E0BC76800D04FDE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		607FACED1AFB9204008FA782 /* Debug */ = {
@@ -509,7 +359,6 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C2F121EF38DDD24D5C9757C /* Pods-LazyPay_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -526,7 +375,6 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA592067F6E3A38A68E51B63 /* Pods-LazyPay_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -543,7 +391,6 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF98635E68C3670089CAAA16 /* Pods-LazyPay_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -563,7 +410,6 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8EA05DF3B9A416BD048DE6AF /* Pods-LazyPay_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

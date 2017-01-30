@@ -57,7 +57,7 @@ class ViewController: UIViewController {
     }
 
     func initializeSDK() -> Void {
-        CitrusPaymentSDK.initWithSign(inID: SignInId, signInSecret: SignInSecretKey, signUpID: SubscriptionId, signUpSecret: SubscriptionSecretKey, vanityUrl: VanityUrl, environment: CTSEnvSandbox)
+        CitrusPaymentSDK.initWithSign(inID: SignInIdSB, signInSecret: SignInSecretKeySB, signUpID: SubscriptionIdSB, signUpSecret: SubscriptionSecretKeySB, vanityUrl: VanityUrlSB, environment: CTSEnvSandbox)
         
         CitrusPaymentSDK.setLogLevel(.verbose)
     }
@@ -133,7 +133,7 @@ class ViewController: UIViewController {
     }
 
    let lazyPayConfig = LazyPayConfig.init(CFloat((self.amountTextField?.text)!)!,
-                                          billUrl: BillUrl,
+                                          billUrl: BillUrlSB,
                                           productSkuDetails: nil,
                                           user: user!,
                                           address: addressInfo!)
@@ -173,7 +173,7 @@ class ViewController: UIViewController {
         }
 
         let lazyPayConfig = LazyPayConfig.init(CFloat((self.amountTextField?.text)!)!,
-                                               billUrl: BillUrl,
+                                               billUrl: BillUrlSB,
                                                productSkuDetails: nil,
                                                user: user!,
                                                address: addressInfo!)

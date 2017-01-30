@@ -7,18 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76144F861E3F1B5B007BD9DA /* BaseClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76144F831E3F1B5B007BD9DA /* BaseClassViewController.swift */; };
+		76144F871E3F1B5B007BD9DA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76144F841E3F1B5B007BD9DA /* HomeViewController.swift */; };
+		76144F881E3F1B5B007BD9DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76144F851E3F1B5B007BD9DA /* Main.storyboard */; };
+		76144F8B1E3F1B6F007BD9DA /* Common.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76144F891E3F1B6F007BD9DA /* Common.xcassets */; };
+		76144F8C1E3F1B6F007BD9DA /* MerchantConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76144F8A1E3F1B6F007BD9DA /* MerchantConstants.swift */; };
+		76144F8E1E3F1B95007BD9DA /* TestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76144F8D1E3F1B95007BD9DA /* TestParams.swift */; };
 		7649758A1DFEC51D0081025D /* CitrusGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764975881DFEC51D0081025D /* CitrusGraphics.framework */; };
 		764975B31DFEC5320081025D /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7649759C1DFEC5260081025D /* Kingfisher.framework */; };
 		764975B41DFEC5320081025D /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7649759C1DFEC5260081025D /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		764975B71DFEC5320081025D /* CitrusGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764975881DFEC51D0081025D /* CitrusGraphics.framework */; };
 		764975B81DFEC5320081025D /* CitrusGraphics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 764975881DFEC51D0081025D /* CitrusGraphics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		767FB9321DDC5B1900DE349D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 767FB9281DDC5B1900DE349D /* Assets.xcassets */; };
-		767FB9331DDC5B1900DE349D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767FB9291DDC5B1900DE349D /* LaunchScreen.storyboard */; };
-		767FB9341DDC5B1900DE349D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767FB92B1DDC5B1900DE349D /* Main.storyboard */; };
-		767FB9351DDC5B1900DE349D /* BaseClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FB92E1DDC5B1900DE349D /* BaseClassViewController.swift */; };
-		767FB9361DDC5B1900DE349D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FB92F1DDC5B1900DE349D /* HomeViewController.swift */; };
-		767FB9371DDC5B1900DE349D /* MerchantConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FB9301DDC5B1900DE349D /* MerchantConstants.swift */; };
-		767FB9381DDC5B1900DE349D /* TestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FB9311DDC5B1900DE349D /* TestParams.swift */; };
 		767FB9831DDC6FA200DE349D /* CitrusPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767FB97F1DDC6F6A00DE349D /* CitrusPay.framework */; };
 		767FB9841DDC6FA200DE349D /* CitrusPay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 767FB97F1DDC6F6A00DE349D /* CitrusPay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		767FB9851DDC6FA200DE349D /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767FB97D1DDC6F5D00DE349D /* JSONModel.framework */; };
@@ -169,15 +168,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		76144F831E3F1B5B007BD9DA /* BaseClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseClassViewController.swift; sourceTree = "<group>"; };
+		76144F841E3F1B5B007BD9DA /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		76144F851E3F1B5B007BD9DA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		76144F891E3F1B6F007BD9DA /* Common.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Common.xcassets; path = "../../../Common-Data/Common.xcassets"; sourceTree = "<group>"; };
+		76144F8A1E3F1B6F007BD9DA /* MerchantConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MerchantConstants.swift; path = "../../../Common-Data/MerchantConstants.swift"; sourceTree = "<group>"; };
+		76144F8D1E3F1B95007BD9DA /* TestParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestParams.swift; path = "../../../Common-Data/TestParams.swift"; sourceTree = "<group>"; };
 		764975881DFEC51D0081025D /* CitrusGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusGraphics.framework; sourceTree = "<group>"; };
 		7649758C1DFEC5250081025D /* Kingfisher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kingfisher.xcodeproj; path = ../../../Dependency/Kingfisher/Kingfisher.xcodeproj; sourceTree = "<group>"; };
-		767FB9281DDC5B1900DE349D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		767FB92A1DDC5B1900DE349D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		767FB92C1DDC5B1900DE349D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		767FB92E1DDC5B1900DE349D /* BaseClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseClassViewController.swift; sourceTree = "<group>"; };
-		767FB92F1DDC5B1900DE349D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		767FB9301DDC5B1900DE349D /* MerchantConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MerchantConstants.swift; sourceTree = "<group>"; };
-		767FB9311DDC5B1900DE349D /* TestParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestParams.swift; sourceTree = "<group>"; };
 		767FB9781DDC6F5D00DE349D /* JSONModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSONModel.xcodeproj; path = ../../../Dependency/JSONModel/JSONModel.xcodeproj; sourceTree = "<group>"; };
 		767FB97F1DDC6F6A00DE349D /* CitrusPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusPay.framework; sourceTree = "<group>"; };
 		76F778581CC64F7100C9E7B8 /* CitrusPayExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitrusPayExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,6 +221,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76144F821E3F1B5B007BD9DA /* test-ui-example */ = {
+			isa = PBXGroup;
+			children = (
+				76144F8D1E3F1B95007BD9DA /* TestParams.swift */,
+				76144F891E3F1B6F007BD9DA /* Common.xcassets */,
+				76144F8A1E3F1B6F007BD9DA /* MerchantConstants.swift */,
+				76144F831E3F1B5B007BD9DA /* BaseClassViewController.swift */,
+				76144F841E3F1B5B007BD9DA /* HomeViewController.swift */,
+				76144F851E3F1B5B007BD9DA /* Main.storyboard */,
+			);
+			name = "test-ui-example";
+			path = "../../test-ui-example";
+			sourceTree = "<group>";
+		};
 		764975871DFEC51D0081025D /* graphics-sdk */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,29 +261,6 @@
 				764975B21DFEC5260081025D /* KingfisherTests-macOS.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		767FB9271DDC5B1900DE349D /* test-ui-example */ = {
-			isa = PBXGroup;
-			children = (
-				767FB9281DDC5B1900DE349D /* Assets.xcassets */,
-				767FB9291DDC5B1900DE349D /* LaunchScreen.storyboard */,
-				767FB92B1DDC5B1900DE349D /* Main.storyboard */,
-				767FB92D1DDC5B1900DE349D /* Controllers */,
-				767FB9301DDC5B1900DE349D /* MerchantConstants.swift */,
-				767FB9311DDC5B1900DE349D /* TestParams.swift */,
-			);
-			name = "test-ui-example";
-			path = "../../test-ui-example";
-			sourceTree = "<group>";
-		};
-		767FB92D1DDC5B1900DE349D /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				767FB92E1DDC5B1900DE349D /* BaseClassViewController.swift */,
-				767FB92F1DDC5B1900DE349D /* HomeViewController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		767FB9791DDC6F5D00DE349D /* Products */ = {
@@ -318,7 +307,7 @@
 		76F7785A1CC64F7100C9E7B8 /* CitrusPayExample */ = {
 			isa = PBXGroup;
 			children = (
-				767FB9271DDC5B1900DE349D /* test-ui-example */,
+				76144F821E3F1B5B007BD9DA /* test-ui-example */,
 				76F7785B1CC64F7100C9E7B8 /* AppDelegate.swift */,
 				76F778671CC64F7100C9E7B8 /* Info.plist */,
 				76F7788A1CC64FD200C9E7B8 /* Objective-CBridgingHeader.m */,
@@ -560,9 +549,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				767FB9331DDC5B1900DE349D /* LaunchScreen.storyboard in Resources */,
-				767FB9321DDC5B1900DE349D /* Assets.xcassets in Resources */,
-				767FB9341DDC5B1900DE349D /* Main.storyboard in Resources */,
+				76144F8B1E3F1B6F007BD9DA /* Common.xcassets in Resources */,
+				76144F881E3F1B5B007BD9DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,10 +577,10 @@
 			files = (
 				76F7788B1CC64FD200C9E7B8 /* Objective-CBridgingHeader.m in Sources */,
 				76F7785C1CC64F7100C9E7B8 /* AppDelegate.swift in Sources */,
-				767FB9351DDC5B1900DE349D /* BaseClassViewController.swift in Sources */,
-				767FB9381DDC5B1900DE349D /* TestParams.swift in Sources */,
-				767FB9371DDC5B1900DE349D /* MerchantConstants.swift in Sources */,
-				767FB9361DDC5B1900DE349D /* HomeViewController.swift in Sources */,
+				76144F861E3F1B5B007BD9DA /* BaseClassViewController.swift in Sources */,
+				76144F8E1E3F1B95007BD9DA /* TestParams.swift in Sources */,
+				76144F8C1E3F1B6F007BD9DA /* MerchantConstants.swift in Sources */,
+				76144F871E3F1B5B007BD9DA /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,25 +624,6 @@
 			targetProxy = 76F778781CC64F7100C9E7B8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		767FB9291DDC5B1900DE349D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				767FB92A1DDC5B1900DE349D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		767FB92B1DDC5B1900DE349D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				767FB92C1DDC5B1900DE349D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		76F7787E1CC64F7100C9E7B8 /* Debug */ = {

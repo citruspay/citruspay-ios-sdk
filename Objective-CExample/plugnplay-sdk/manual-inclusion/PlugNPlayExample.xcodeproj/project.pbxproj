@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		763477D21E3B80BD007ED364 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 763477D11E3B80BD007ED364 /* Main.storyboard */; };
+		763477D51E3B80D2007ED364 /* PlugNPlay.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 763477D41E3B80D2007ED364 /* PlugNPlay.xcassets */; };
 		76B0F8761E2F39CB00871E27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B0F8751E2F39CB00871E27 /* main.m */; };
 		76B0F8791E2F39CB00871E27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B0F8781E2F39CB00871E27 /* AppDelegate.m */; };
 		76B0F88F1E2F39CC00871E27 /* PlugNPlayExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B0F88E1E2F39CC00871E27 /* PlugNPlayExampleTests.m */; };
-		76B0F8A11E2F3C8900871E27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76B0F89A1E2F3C8900871E27 /* Assets.xcassets */; };
-		76B0F8A21E2F3C8900871E27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B0F89B1E2F3C8900871E27 /* LaunchScreen.storyboard */; };
-		76B0F8A31E2F3C8900871E27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B0F89D1E2F3C8900871E27 /* Main.storyboard */; };
 		76B0F8A41E2F3C8900871E27 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B0F8A01E2F3C8900871E27 /* ViewController.m */; };
 		76B0F8A91E2F3D6D00871E27 /* PlugNPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0F8A81E2F3D6D00871E27 /* PlugNPlay.framework */; };
 		76B0F8AA1E2F3D9900871E27 /* PlugNPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0F8A81E2F3D6D00871E27 /* PlugNPlay.framework */; };
@@ -177,6 +176,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		763477D11E3B80BD007ED364 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		763477D31E3B80CA007ED364 /* MerchantConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MerchantConstants.h; path = "../../../Common-Data/MerchantConstants.h"; sourceTree = "<group>"; };
+		763477D41E3B80D2007ED364 /* PlugNPlay.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = PlugNPlay.xcassets; path = "../../../Common-Data/PlugNPlay.xcassets"; sourceTree = "<group>"; };
 		76B0F8711E2F39CB00871E27 /* PlugNPlayExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlugNPlayExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76B0F8751E2F39CB00871E27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		76B0F8771E2F39CB00871E27 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -185,12 +187,8 @@
 		76B0F88A1E2F39CC00871E27 /* PlugNPlayExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlugNPlayExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76B0F88E1E2F39CC00871E27 /* PlugNPlayExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlugNPlayExampleTests.m; sourceTree = "<group>"; };
 		76B0F8901E2F39CC00871E27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76B0F89A1E2F3C8900871E27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		76B0F89C1E2F3C8900871E27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		76B0F89E1E2F3C8900871E27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76B0F89F1E2F3C8900871E27 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		76B0F8A01E2F3C8900871E27 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		76B0F8A61E2F3D0A00871E27 /* MerchantConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantConstants.h; sourceTree = "<group>"; };
 		76B0F8A81E2F3D6D00871E27 /* PlugNPlay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlugNPlay.framework; sourceTree = "<group>"; };
 		76B0F8AE1E2F3DF200871E27 /* CitrusPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusPay.framework; sourceTree = "<group>"; };
 		76B0F8B11E2F3E1F00871E27 /* CitrusGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusGraphics.framework; sourceTree = "<group>"; };
@@ -279,12 +277,11 @@
 		76B0F8991E2F3C8900871E27 /* test-ui-example */ = {
 			isa = PBXGroup;
 			children = (
-				76B0F89A1E2F3C8900871E27 /* Assets.xcassets */,
-				76B0F89B1E2F3C8900871E27 /* LaunchScreen.storyboard */,
-				76B0F89D1E2F3C8900871E27 /* Main.storyboard */,
+				763477D41E3B80D2007ED364 /* PlugNPlay.xcassets */,
+				763477D31E3B80CA007ED364 /* MerchantConstants.h */,
+				763477D11E3B80BD007ED364 /* Main.storyboard */,
 				76B0F89F1E2F3C8900871E27 /* ViewController.h */,
 				76B0F8A01E2F3C8900871E27 /* ViewController.m */,
-				76B0F8A61E2F3D0A00871E27 /* MerchantConstants.h */,
 			);
 			name = "test-ui-example";
 			path = "../../test-ui-example";
@@ -536,9 +533,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76B0F8A31E2F3C8900871E27 /* Main.storyboard in Resources */,
-				76B0F8A11E2F3C8900871E27 /* Assets.xcassets in Resources */,
-				76B0F8A21E2F3C8900871E27 /* LaunchScreen.storyboard in Resources */,
+				763477D51E3B80D2007ED364 /* PlugNPlay.xcassets in Resources */,
+				763477D21E3B80BD007ED364 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,25 +595,6 @@
 			targetProxy = 76B0FA271E2F40DD00871E27 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		76B0F89B1E2F3C8900871E27 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				76B0F89C1E2F3C8900871E27 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		76B0F89D1E2F3C8900871E27 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				76B0F89E1E2F3C8900871E27 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		76B0F8911E2F39CC00871E27 /* Debug */ = {
