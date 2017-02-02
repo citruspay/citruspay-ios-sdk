@@ -13,7 +13,7 @@ The SDK is designed for [CitrusPay](http://www.citruspay.com) partners who are d
 ##Features
 CitrusPay iOS SDK broadly offers following features.
 
-### Core SDK V 4.1.1 - CitrusPay.framework
+### Core SDK V 4.1.2 - CitrusPay.framework
 
 + Creating Citrus account for the user
 + Prepaid Payments

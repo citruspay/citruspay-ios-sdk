@@ -1,10 +1,13 @@
 CitrusPay iOS SDK Kit Release Notes:
 ==============================================
 
-4.1.1
+4.1.2
 -----
 
 #### Current Version
++ Minor bug fixes & improvements
+
+#### 4.1.1
 + SDK support login screen to simplify Login
 + Bug fixes and improvements
 
