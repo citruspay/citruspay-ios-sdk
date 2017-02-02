@@ -24,7 +24,7 @@ CitrusPay iOS SDK broadly offers following features.
 + On-Demand asset loading (Via CitrusGraphics library)
 + SDK support login screen to simplify Login
 
-### CitrusGraphics SDK V 1.1 - CitrusGraphics.framework
+### CitrusGraphics SDK V 1.1.1 - CitrusGraphics.framework
 
 + A lightweight, pure-Swift library for downloading and caching images from the Citrus cloud
 + Swift 3.0.2 support
