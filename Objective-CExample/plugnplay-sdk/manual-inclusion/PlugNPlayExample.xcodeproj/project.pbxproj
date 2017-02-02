@@ -14,13 +14,10 @@
 		76B0F88F1E2F39CC00871E27 /* PlugNPlayExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B0F88E1E2F39CC00871E27 /* PlugNPlayExampleTests.m */; };
 		76B0F8A41E2F3C8900871E27 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B0F8A01E2F3C8900871E27 /* ViewController.m */; };
 		76B0F8A91E2F3D6D00871E27 /* PlugNPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0F8A81E2F3D6D00871E27 /* PlugNPlay.framework */; };
-		76B0F8AA1E2F3D9900871E27 /* PlugNPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0F8A81E2F3D6D00871E27 /* PlugNPlay.framework */; };
 		76B0F8AB1E2F3D9900871E27 /* PlugNPlay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0F8A81E2F3D6D00871E27 /* PlugNPlay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76B0F8AF1E2F3DF200871E27 /* CitrusPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0F8AE1E2F3DF200871E27 /* CitrusPay.framework */; };
 		76B0F8B21E2F3E1F00871E27 /* CitrusGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0F8B11E2F3E1F00871E27 /* CitrusGraphics.framework */; };
-		76B0FA191E2F3E9F00871E27 /* CitrusGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0F8B11E2F3E1F00871E27 /* CitrusGraphics.framework */; };
 		76B0FA1A1E2F3E9F00871E27 /* CitrusGraphics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0F8B11E2F3E1F00871E27 /* CitrusGraphics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		76B0FA1B1E2F3E9F00871E27 /* CitrusPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0F8AE1E2F3DF200871E27 /* CitrusPay.framework */; };
 		76B0FA1C1E2F3E9F00871E27 /* CitrusPay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0F8AE1E2F3DF200871E27 /* CitrusPay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76B0FA211E2F40DD00871E27 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0FA021E2F3E8900871E27 /* Kingfisher.framework */; };
 		76B0FA221E2F40DD00871E27 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0FA021E2F3E8900871E27 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -204,11 +201,8 @@
 				76B0F8A91E2F3D6D00871E27 /* PlugNPlay.framework in Frameworks */,
 				76B0FA211E2F40DD00871E27 /* Kingfisher.framework in Frameworks */,
 				76B0FA251E2F40DD00871E27 /* JSONModel.framework in Frameworks */,
-				76B0F8AA1E2F3D9900871E27 /* PlugNPlay.framework in Frameworks */,
 				76B0F8AF1E2F3DF200871E27 /* CitrusPay.framework in Frameworks */,
 				76B0F8B21E2F3E1F00871E27 /* CitrusGraphics.framework in Frameworks */,
-				76B0FA191E2F3E9F00871E27 /* CitrusGraphics.framework in Frameworks */,
-				76B0FA1B1E2F3E9F00871E27 /* CitrusPay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -39,7 +39,7 @@ CitrusPay iOS SDK broadly offers following features.
 + Enable seamless payments for low value online purchases
 + Faster transactions and with higher transaction success rates for merchants
 
-### PlugNPlay SDK V 1.0 - PlugNPlay.framework
+### PlugNPlay SDK V 1.0.1 - PlugNPlay.framework
 
 + Native iOS integration
 + Simple lightweight integration
@@ -100,7 +100,7 @@ use_frameworks!
 target 'MyApp' do
 # your other pod
 # ...
-pod 'CitrusPay', '~> 4.1.1'
+pod 'CitrusPay', '~> 4.1.2'
 end
 ~~~
 
