@@ -11,5 +11,5 @@
  */
 #ifndef Version_h
 #define Version_h
-#define LAZYPAY_VERSION @"1.0"
+#define LAZYPAY_VERSION @"1.0.1"
 #endif /* Version_h */

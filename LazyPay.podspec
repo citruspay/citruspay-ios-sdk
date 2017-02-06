@@ -8,14 +8,14 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LazyPay'
-  s.version          = '1.0'
+  s.version          = '1.0.1'
   s.summary          = 'LazyPay checkout - Buy now, Pay Later!'
   s.description      = 'Native iOS integration. Simple lightweight integration. Enable seamless payments for low value online purchases. Faster transactions and with higher transaction success rates for merchants'
 
   s.homepage         = 'https://github.com/citruspay/citruspay-ios-sdk'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'mukeshpatil1' => 'mukesh.patil@citruspay.com' }
-  s.source           = { :git => 'https://github.com/citruspay/citruspay-ios-sdk.git', :tag => "lazypay.1.0" }
+  s.source           = { :git => 'https://github.com/citruspay/citruspay-ios-sdk.git', :tag => "lazypay.1.0.1" }
 
   s.ios.deployment_target = '8.0'
   s.requires_arc     = true

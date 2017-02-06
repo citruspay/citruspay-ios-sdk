@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17F6084F16EFEB04088341DF /* Pods_LazyPay_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EB0A09A8C2F6726FC61EB79 /* Pods_LazyPay_Example.framework */; };
+		28497F2F95883E04404619C6 /* Pods_LazyPay_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B45FC06AD8996400AB459D1 /* Pods_LazyPay_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		76144FA01E3F2984007BD9DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76144F9E1E3F2984007BD9DA /* Main.storyboard */; };
@@ -29,6 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02793D160C9AEF90F106C3B0 /* Pods-LazyPay_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPay_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LazyPay_Tests/Pods-LazyPay_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		04350058861FFB5A810A9BFB /* Pods-LazyPay_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPay_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LazyPay_Tests/Pods-LazyPay_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		1EB0A09A8C2F6726FC61EB79 /* Pods_LazyPay_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyPay_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AF264E13963BE16A852609E /* Pods-LazyPay_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPay_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LazyPay_Example/Pods-LazyPay_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		33D87339A244EC957C057911 /* Pods-LazyPay_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPay_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LazyPay_Example/Pods-LazyPay_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* LazyPay_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyPay_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +49,7 @@
 		76144FA51E3F29A2007BD9DA /* TestParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestParams.swift; path = "../../../Common-Data/TestParams.swift"; sourceTree = "<group>"; };
 		764362F21E0BC0F200D04FDE /* LazyPay.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LazyPay.podspec; path = ../../../../LazyPay.podspec; sourceTree = "<group>"; };
 		764362F31E0BC0F200D04FDE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../../../LICENSE; sourceTree = "<group>"; };
+		9B45FC06AD8996400AB459D1 /* Pods_LazyPay_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyPay_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F6084F16EFEB04088341DF /* Pods_LazyPay_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +65,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28497F2F95883E04404619C6 /* Pods_LazyPay_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23A4E1EA502E56515556540B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2AF264E13963BE16A852609E /* Pods-LazyPay_Example.debug.xcconfig */,
+				33D87339A244EC957C057911 /* Pods-LazyPay_Example.release.xcconfig */,
+				02793D160C9AEF90F106C3B0 /* Pods-LazyPay_Tests.debug.xcconfig */,
+				04350058861FFB5A810A9BFB /* Pods-LazyPay_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +90,8 @@
 				607FACD21AFB9204008FA782 /* Example for LazyPay */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
+				23A4E1EA502E56515556540B /* Pods */,
+				C6EFD13EB67C57553C635EA0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +162,15 @@
 			path = "../../../test-ui-example";
 			sourceTree = "<group>";
 		};
+		C6EFD13EB67C57553C635EA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EB0A09A8C2F6726FC61EB79 /* Pods_LazyPay_Example.framework */,
+				9B45FC06AD8996400AB459D1 /* Pods_LazyPay_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "LazyPay_Example" */;
 			buildPhases = (
+				5057D764C6043851B789E509 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
+				FF87010AEE511AF5259793B3 /* [CP] Embed Pods Frameworks */,
+				64192A0935F748A6F2E9657D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -163,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "LazyPay_Tests" */;
 			buildPhases = (
+				18FC98EB9FFECD4A7907250F /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
+				88219AFEFA56151952D1ABDD /* [CP] Embed Pods Frameworks */,
+				FC045C29D4CB27D1064BCC4C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,6 +276,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18FC98EB9FFECD4A7907250F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5057D764C6043851B789E509 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		64192A0935F748A6F2E9657D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LazyPay_Example/Pods-LazyPay_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88219AFEFA56151952D1ABDD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LazyPay_Tests/Pods-LazyPay_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC045C29D4CB27D1064BCC4C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LazyPay_Tests/Pods-LazyPay_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF87010AEE511AF5259793B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LazyPay_Example/Pods-LazyPay_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		607FACCC1AFB9204008FA782 /* Sources */ = {
@@ -359,6 +490,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AF264E13963BE16A852609E /* Pods-LazyPay_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -375,6 +507,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33D87339A244EC957C057911 /* Pods-LazyPay_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -391,6 +524,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02793D160C9AEF90F106C3B0 /* Pods-LazyPay_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -410,6 +544,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04350058861FFB5A810A9BFB /* Pods-LazyPay_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

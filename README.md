@@ -31,7 +31,7 @@ CitrusPay iOS SDK broadly offers following features.
 + Dynamic Assets available to module for their assets requirements
 + SDK have both default & low resolution image for it which will be replaced by high resolution image once asset is downloaded and cached based on device specification
 
-### LazyPay SDK V 1.0 - LazyPay.framework
+### LazyPay SDK V 1.0.1 - LazyPay.framework
 
 + LazyPay checkout - Buy now, Pay Later!
 + Native iOS integration
