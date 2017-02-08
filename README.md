@@ -22,7 +22,12 @@ CitrusPay iOS SDK broadly offers following features.
 + Loading Money into users Citrus prepaid account for Prepaid facility
 + Withdraw the money back into User's bank account from the Prepaid account
 + On-Demand asset loading (Via CitrusGraphics library)
++ One Tap payments for the Saved Cards
++ Subscribe to periodic autoload of Citrus Wallet
++ Split payments
++ Dynamic Pricing, offer coupons, surcharge
 + SDK support login screen to simplify Login
+
 
 ### CitrusGraphics SDK V 1.1.1 - CitrusGraphics.framework
 
