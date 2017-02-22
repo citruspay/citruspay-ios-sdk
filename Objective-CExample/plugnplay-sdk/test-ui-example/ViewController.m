@@ -1,9 +1,9 @@
 //
-//  ViewController.h
+//  ViewController.m
 //  PlugNPlayExample
 //
-//  Created by Mukesh Patil on 1/18/17.
-//  Copyright © 2017 CitrusPay. All rights reserved.
+//  Created by Yadnesh Wankhede on 8/8/16.
+//  Copyright © 2016 Citrus Payment Solutions, Pvt. Ltd. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -33,6 +33,8 @@
     NSString *buttonColorText;
     NSString *buttonTitleColorText;
     NSString *merchantName;
+    NSString *billUrl;
+    NSString *returnUrl;
 }
 @property BOOL isCompletionDisable;
 @property BOOL isWalletDisable;
@@ -54,27 +56,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.version.text = [NSString stringWithFormat:@"© Citrus Payments. PlugNPlay Demo v%@", PLUGNPLAY_VERSION];
-
     [self fetchRememberedDetails];
+    
     [self initPNP];
+    
     UITapGestureRecognizer *tapScroll = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped)];
     tapScroll.cancelsTouchesInView = YES;
     [_scrollView addGestureRecognizer:tapScroll];
+    
+    self.version.text = [NSString stringWithFormat:@"© Citrus Payments. PlugNPlay Demo v%@", PLUGNPLAY_VERSION];
     
     _scrollView.delegate = self;
     
     keyboardVisible = NO;
     tfEmail.delegate = tfMobile.delegate = tfAmount.delegate = self;
     self.view.backgroundColor = [UIColor whiteColor];
-  
+    
     _tfTopNavColor.delegate =_tfNavTitleColor.delegate =_tfButtonColor.delegate =_tfButtonTextColor.delegate =_tfMerchantDisplayName.delegate = self;
     
     _tfNavTitleColor.clearButtonMode =_tfButtonColor.clearButtonMode =_tfButtonTextColor.clearButtonMode =_tfTopNavColor.clearButtonMode = UITextFieldViewModeWhileEditing;
     
-
+    
     [self loadThemeColor];
-
+    
     UILabel *countryCode = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 35, 30)];
     countryCode.text = @" +91";
     countryCode.font = [UIFont boldSystemFontOfSize:14];
@@ -89,6 +93,218 @@
     [serverSelector setTitleTextAttributes:attributes forState:UIControlStateNormal];
     
     NSLog(@"size of ui %lu",    sizeof(unsigned int));
+}
+
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    // [self keyBoardNotification];
+    [self registerForKeyboardNotifications];
+    self.scrollView.contentSize = CGSizeMake(SCROLLVIEW_WIDTH, SCROLLVIEW_HEIGHT);
+    keyboardVisible = NO;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)initPNP {
+    
+    if([self selectedEnv] == CTSEnvSandbox){
+        [CitrusPaymentSDK initWithSignInID:SignInId_Sandbox
+                              signInSecret:SignInSecretKey_Sandbox
+                                  signUpID:SubscriptionId_Sandbox
+                              signUpSecret:SubscriptionSecretKey_Sandbox
+                                 vanityUrl:VanityUrl_Sandbox
+                               environment:CTSEnvSandbox];
+        [CitrusPaymentSDK setLogLevel:CTSLogLevelVerbose];
+        
+        billUrl = BillUrl_Sandbox;
+        returnUrl = LoadWallet_ReturnUrl_Sandbox;
+
+    }
+    else if([self selectedEnv] == CTSEnvProduction){
+        [CitrusPaymentSDK initWithSignInID:SignInId_Production
+                              signInSecret:SignInSecretKey_Production
+                                  signUpID:SubscriptionId_Production
+                              signUpSecret:SubscriptionSecretKey_Production
+                                 vanityUrl:VanityUrl_Production
+                               environment:CTSEnvProduction];
+        [CitrusPaymentSDK setLogLevel:CTSLogLevelNone];
+        
+        billUrl = BillUrl_Production;
+        returnUrl = LoadWallet_ReturnUrl_Production;
+    }
+
+    unsigned int topNavHexInt = [self intFromHexString:_tfTopNavColor.text];
+    unsigned int topTitleHexInt = [self intFromHexString:_tfNavTitleColor.text];
+    unsigned int buttonHexInt = [self intFromHexString:_tfButtonColor.text];
+    unsigned int buttonTitleHexInt = [self intFromHexString:_tfButtonTextColor.text];
+    //#008312 - green
+    //#C333A1 - purple
+    //#EF5B30 - orange
+    //#35CA4B - light green
+    [CitrusPaymentSDK setTopBarColor:UIColorFromRGB(topNavHexInt)];
+    [CitrusPaymentSDK setTopTitleTextColor:UIColorFromRGB(topTitleHexInt)];
+    [CitrusPaymentSDK setButtonColor:UIColorFromRGB(buttonHexInt)];
+    [CitrusPaymentSDK setButtonTextColor:UIColorFromRGB(buttonTitleHexInt)];
+    [CitrusPaymentSDK setIndicatorTintColor:[UIColor orangeColor]];
+}
+
+- (IBAction)resetTheme:(id)sender {
+    [self resetThemeDetails];
+}
+
+-(CTSEnvironment)selectedEnv {
+    if(serverSelector.selectedSegmentIndex == 0){
+        return CTSEnvSandbox;
+    }
+    return CTSEnvProduction;
+}
+
+- (IBAction)pay:(id)sender {
+    [tfAmount resignFirstResponder];
+    [tfMobile resignFirstResponder];
+    [tfEmail resignFirstResponder];
+    
+    [self initPNP];
+    
+    [PlugNPlay setMerchantDisplayName:_tfMerchantDisplayName.text];
+    
+    //customize plug and play's behaviour//optional step
+    
+    [PlugNPlay disableCompletionScreen:_isCompletionDisable];
+    [PlugNPlay disableCards:_isCardsDisable];
+    [PlugNPlay disableNetbanking:_isNetbankDisable];
+    [PlugNPlay disableWallet:_isWalletDisable];
+    
+    //prepare all the parameters for Plug and Play
+    PlugAndPlayPayment *paymentInfo = [[PlugAndPlayPayment alloc] init];
+    paymentInfo.billUrlOrCTSBillObject = billUrl;
+    paymentInfo.payAmount = tfAmount.text;
+    
+    CTSUser* user = [[CTSUser alloc] init];
+    user.mobile = tfMobile.text;
+    user.email = tfEmail.text;
+    
+    user.firstName = @"firstname";//optional
+    user.lastName = @"lastname";//optional
+    user.address = nil;//optional
+    
+    [self rememberEnteredDetails];
+    
+    [self.class requestGETBillAmount:paymentInfo.payAmount
+                             billURL:paymentInfo.billUrlOrCTSBillObject
+                            callback: ^(CTSBill *bill,
+                                        NSError *error) {
+                                if (error) {
+                                    [UIUtility toastMessageOnScreen:[error localizedDescription]];
+                                    [self.navigationController popViewControllerAnimated:YES];
+                                    return;
+                                }
+                                else {
+                                    paymentInfo.billUrlOrCTSBillObject = bill;
+                                    
+                                    [PlugNPlay presentPaymentsViewController:paymentInfo
+                                                                     forUser:user
+                                                              viewController:self
+                                                                  completion:^(CTSPaymentReceipt *paymentReceipt, NSError *error) {
+                                                                      if (error != nil) {
+                                                                          [UIUtility toastMessageOnScreen:[error localizedDescription]];
+                                                                      } else {
+                                                                          if([paymentReceipt isSuccess]){
+                                                                              [UIUtility toastMessageOnScreen:@"Payment successful"];
+                                                                          }
+                                                                          else{
+                                                                              [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"Failed,  %@",[paymentReceipt transactionStatus]]];
+                                                                          }
+                                                                      }
+                                                                  }];
+                                }
+                            }];
+    
+}
+
++(void)requestGETBillAmount:(NSString *)amount billURL:(NSString *)billUrl callback:(ASBillCallback)callback{
+    
+    NSString *urlString = [NSString stringWithFormat:@"%@?amount=%@",billUrl, [NSString stringWithFormat:@"%.02f", [amount floatValue]]];
+    LogTrace(@"urlString %@",urlString);
+    
+    NSMutableURLRequest* urlReq = [[NSMutableURLRequest alloc] initWithURL:
+                                   [NSURL URLWithString:urlString]];
+    [urlReq setHTTPMethod:@"GET"];
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [queue setMaxConcurrentOperationCount:5];
+    
+    [NSURLConnection sendAsynchronousRequest:urlReq queue:queue completionHandler:^(NSURLResponse * response, NSData *data, NSError * connectionError) {
+        NSError *billError = connectionError;
+        CTSBill* sampleBill = nil;
+        if(connectionError == nil){
+            NSString* billJson = [[NSString alloc] initWithData:data
+                                                       encoding:NSUTF8StringEncoding];
+            JSONModelError *jsonError;
+            sampleBill = [[CTSBill alloc] initWithString:billJson
+                                                   error:&jsonError];
+            if(jsonError){
+                billError = jsonError;
+            }
+            LogTrace(@"billJson %@",billJson);
+            LogTrace(@"signature %@ ", sampleBill);
+        }
+        callback(sampleBill,billError);
+    }];
+}
+
+
+- (IBAction)myWallet:(id)sender {
+    [tfAmount resignFirstResponder];
+    [tfMobile resignFirstResponder];
+    [tfEmail resignFirstResponder];
+    
+    //prepare all the parameters for Plug and Play
+    [self initPNP];
+    
+    CTSUser* user = [[CTSUser alloc] init];
+    user.mobile = tfMobile.text;
+    user.email = tfEmail.text;
+    
+    user.firstName = @"firstname";//optional
+    user.lastName = @"lastname";//optional
+    user.address = nil;//optional
+    
+    //initialize and configure the sdk
+    [self rememberEnteredDetails];
+    
+    NSDictionary *customParams=[NSDictionary dictionaryWithObjectsAndKeys:@"0019",@"MerchantName",@"998",@"PaymentId",nil];
+    
+    [PlugNPlay presentWalletViewController:user
+                                 returnURL:returnUrl
+                              customParams:customParams
+                            viewController:self
+                                completion:^(NSError *validationError) {
+                                    if (validationError != nil) {
+                                        [UIUtility toastMessageOnScreen:[validationError localizedDescription]];
+                                    }
+                                    else {
+                                        [UIUtility toastMessageOnScreen:@"Payment successful"];
+                                    }
+                                }];
+}
+
+
+
+- (IBAction)signout:(id)sender {
+    [self doSignOut];
+    [UIUtility toastMessageOnScreen:@"Signout Successfull"];
+}
+
+-(void)doSignOut{
+    
+    CTSAuthLayer *authLayer = [CitrusPaymentSDK fetchSharedAuthLayer];
+    [authLayer signOut];
+    
+    [self initPNP];
 }
 
 - (void)loadThemeColor {
@@ -114,14 +330,13 @@
     _tfButtonColor.text = defaultButtonColor;
     _tfButtonTextColor.text = defaultButtonTextColor;
     [self loadThemeColor];
-
 }
 
 
 - (void)fetchRememberedDetails {
     email = [[NSUserDefaults standardUserDefaults] valueForKey:@"EMAIL"];
     amount = [[NSUserDefaults standardUserDefaults] valueForKey:@"AMOUNT"];
-
+    
     mobile = [[NSUserDefaults standardUserDefaults] valueForKey:@"MOBILE"];
     navBarColorText = [[NSUserDefaults standardUserDefaults] valueForKey:@"NAVCOLOR"];
     navBarTitleColorText = [[NSUserDefaults standardUserDefaults] valueForKey:@"NAVTITLECOLOR"];
@@ -151,7 +366,7 @@
     [[NSUserDefaults standardUserDefaults] setValue:tfAmount.text forKey:@"AMOUNT"];
     [[NSUserDefaults standardUserDefaults] setValue:tfEmail.text forKey:@"EMAIL"];
     [[NSUserDefaults standardUserDefaults] setValue:tfMobile.text forKey:@"MOBILE"];
-
+    
     [[NSUserDefaults standardUserDefaults] setValue:_tfTopNavColor.text forKey:@"NAVCOLOR"];
     [[NSUserDefaults standardUserDefaults] setValue:_tfNavTitleColor.text forKey:@"NAVTITLECOLOR"];
     [[NSUserDefaults standardUserDefaults] setValue:_tfButtonColor.text forKey:@"BUTTONCOLOR"];
@@ -189,172 +404,6 @@
     self.scrollView.contentInset = contentInsets;
     self.scrollView.scrollIndicatorInsets = contentInsets;
     keyboardVisible = false;
-}
-
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-   // [self keyBoardNotification];
-    [self registerForKeyboardNotifications];
-    self.scrollView.contentSize = CGSizeMake(SCROLLVIEW_WIDTH, SCROLLVIEW_HEIGHT);
-    keyboardVisible = NO;
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (void)initPNP {
-    if([self selectedEnv] == CTSEnvSandbox){
-        [CitrusPaymentSDK initWithSignInID:SignInId_Sandbox
-                              signInSecret:SignInSecretKey_Sandbox
-                                  signUpID:SubscriptionId_Sandbox
-                              signUpSecret:SubscriptionSecretKey_Sandbox
-                                 vanityUrl:VanityUrl_Sandbox
-                               environment:CTSEnvSandbox];
-        [CitrusPaymentSDK setLogLevel:CTSLogLevelVerbose];
-    }
-    else if([self selectedEnv] == CTSEnvProduction){
-        [CitrusPaymentSDK initWithSignInID:SignInId_Production
-                              signInSecret:SignInSecretKey_Production
-                                  signUpID:SubscriptionId_Production
-                              signUpSecret:SubscriptionSecretKey_Production
-                                 vanityUrl:VanityUrl_Production
-                               environment:CTSEnvProduction];
-        [CitrusPaymentSDK setLogLevel:CTSLogLevelVerbose];
-    }
-    
-    unsigned int topNavHexInt = [self intFromHexString:_tfTopNavColor.text];
-    unsigned int topTitleHexInt = [self intFromHexString:_tfNavTitleColor.text];
-    unsigned int buttonHexInt = [self intFromHexString:_tfButtonColor.text];
-    unsigned int buttonTitleHexInt = [self intFromHexString:_tfButtonTextColor.text];
-    //#008312 - green
-    //#C333A1 - purple
-    //#EF5B30 - orange
-    //#35CA4B - light green
-    [CitrusPaymentSDK setTopBarColor:UIColorFromRGB(topNavHexInt)];
-    [CitrusPaymentSDK setTopTitleTextColor:UIColorFromRGB(topTitleHexInt)];
-    [CitrusPaymentSDK setButtonColor:UIColorFromRGB(buttonHexInt)];
-    [CitrusPaymentSDK setButtonTextColor:UIColorFromRGB(buttonTitleHexInt)];
-    [CitrusPaymentSDK setIndicatorTintColor:[UIColor orangeColor]];
-}
-
-- (IBAction)pay:(id)sender {
-    [self makePayment];
-}
-
-- (IBAction)resetTheme:(id)sender {
-    [self resetThemeDetails];
-}
-    
--(CTSEnvironment)selectedEnv {
-    if(serverSelector.selectedSegmentIndex == 0){
-        return CTSEnvSandbox;
-    }
-    return CTSEnvProduction;
-}
-
--(void)makePayment {
-    [tfAmount resignFirstResponder];
-    [tfMobile resignFirstResponder];
-    [tfEmail resignFirstResponder];
-
-    [self initPNP];
-    
-    [PlugNPlay setMerchantDisplayName:_tfMerchantDisplayName.text];
-    
-    //customize plug and play's behaviour//optional step
-    
-    [PlugNPlay disableCompletionScreen:_isCompletionDisable];
-    [PlugNPlay disableCards:_isCardsDisable];
-    [PlugNPlay disableNetbanking:_isNetbankDisable];
-    [PlugNPlay disableWallet:_isWalletDisable];
-    
-    //prepare all the parameters for Plug and Play
-    PlugAndPlayPayment *paymentInfo = [[PlugAndPlayPayment alloc] init];
-    
-    if([self selectedEnv] == CTSEnvSandbox){
-        paymentInfo.billUrl = BillUrl_Sandbox;
-    }
-    else if([self selectedEnv] == CTSEnvProduction){
-        paymentInfo.billUrl = BillUrl_Production;
-    }
-
-    paymentInfo.payAmount = tfAmount.text;
-    
-    CTSUser* user = [[CTSUser alloc] init];
-    user.mobile = tfMobile.text;
-    user.email = tfEmail.text;
-    
-    user.firstName = @"Yadnesh";//optional
-    user.lastName = @"Wankhede";//optional
-    user.address = nil;//optional
-    
-    
-    [self rememberEnteredDetails];
-    
-    [PlugNPlay pay:paymentInfo forUser:user viewController:self completion:^(CTSPaymentReceipt *paymentReceipt,
-                                                                             NSError *error) {
-        if (error) {
-            [UIUtility toastMessageOnScreen:[error localizedDescription]];
-        } else {
-                if([paymentReceipt isSuccess]){
-                    [UIUtility toastMessageOnScreen:@"payment succesful"];
-                }
-                else{
-                    [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"Failed,  %@",[paymentReceipt transactionStatus]]];
-                    
-                }
-            }
-        }];
-}
-
-- (IBAction)myWallet:(id)sender {
-    [tfAmount resignFirstResponder];
-    [tfMobile resignFirstResponder];
-    [tfEmail resignFirstResponder];
-    
-    //prepare all the parameters for Plug and Play
-    [self initPNP];
-    CTSUser* user = [[CTSUser alloc] init];
-    user.mobile = tfMobile.text;
-    user.email = tfEmail.text;
-    
-    user.firstName = @"Raji";//optional
-    user.lastName = @"Nair";//optional
-    user.address = nil;//optional
-    
-    //initialize and configure the sdk
-    [self rememberEnteredDetails];
-    if([self selectedEnv] == CTSEnvSandbox){
-        [PlugNPlay wallet:user returnURL:ReturnUrl_Sandbox viewController:self completion:^(NSError *validationError) {
-            if (validationError) {
-                [UIUtility toastMessageOnScreen:[validationError localizedDescription]];
-            }
-        }];
-    }
-    else if([self selectedEnv] == CTSEnvProduction){
-        [PlugNPlay wallet:user returnURL:ReturnUrl_Production viewController:self completion:^(NSError *validationError) {
-            if (validationError) {
-                [UIUtility toastMessageOnScreen:[validationError localizedDescription]];
-            }
-        }];
-    }
-}
-
-
-
-- (IBAction)signout:(id)sender {
-    [self doSignOut];
-    [UIUtility toastMessageOnScreen:@"Signout Successful"];
-}
-
--(void)doSignOut{
-    
-    CTSAuthLayer *authLayer = [CitrusPaymentSDK fetchSharedAuthLayer];
-    [authLayer signOut];
-    
-    [self initPNP];
 }
 
 - (unsigned int)intFromHexString:(NSString *)hexStr
@@ -473,7 +522,7 @@
         NSString *finalMerchantName ;
         if(string.length > 0){
             finalMerchantName= [NSString stringWithFormat:@"%@%@",textField.text,string ];
-
+            
         } else {
             finalMerchantName = [textField.text stringByReplacingCharactersInRange:range withString:string];
         }

@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface PlugAndPlayPayment : NSObject
-@property (strong)NSString *billUrl;
-@property (strong)NSString *payAmount;
-@property (strong)NSString *loadMoneyUrl;
+@property (strong) id billUrlOrCTSBillObject;
+@property (strong) NSString *payAmount;
+@property (strong) NSString *loadMoneyUrl;
 
 @end

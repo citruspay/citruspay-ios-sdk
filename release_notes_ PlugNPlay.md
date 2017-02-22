@@ -1,10 +1,14 @@
 PlugNPlay iOS SDK Kit Release Notes:
 ==============================================
 
-1.0.1
+1.1.0
 -----
 
 #### Current Version
++ Custom params support
++ Payments & Wallet enhancements
+
+#### 1.0.1
 + Minor bug fixes & improvements
 
 #### 1.0

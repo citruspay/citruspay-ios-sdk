@@ -9,7 +9,6 @@
 import UIKit
 import Foundation
 
-import CitrusPay
 import PlugNPlay
 
 import QuartzCore
@@ -36,7 +35,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegat
     var fieldInAction : UITextField?
     var activeField : UITextField?
     @IBOutlet weak var version : UILabel?
-
+    
     var email : NSString?
     var mobile : NSString?
     var amount : NSString?
@@ -45,6 +44,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegat
     var buttonColorText : NSString?
     var buttonTitleColorText : NSString?
     var merchantName : NSString?
+    var billUrl : NSString?
+    var loadWalletReturnUrl : NSString?
+    var customParams: [String : AnyObject] = [:]
     
     var isCompletionDisable : Bool?
     var isWalletDisable : Bool?
@@ -122,7 +124,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegat
                                                for: .normal)
         
         self.version?.text = "© Citrus Payments. PlugNPlay Demo v\(PLUGNPLAY_VERSION)"
-
+        
         self.initPNP()
     }
     
@@ -263,9 +265,16 @@ class ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegat
         if self.selectedEnv() == CTSEnvSandbox {
             CitrusPaymentSDK.initWithSign(inID: SignInIdSB, signInSecret: SignInSecretKeySB, signUpID: SubscriptionIdSB, signUpSecret: SubscriptionSecretKeySB, vanityUrl: VanityUrlSB, environment: CTSEnvSandbox)
             CitrusPaymentSDK.setLogLevel(CTSLogLevel.verbose)
+            
+            billUrl = BillUrlSB as NSString?
+            loadWalletReturnUrl = LoadWalletReturnUrlSB as NSString?
+            
         }else if(self.selectedEnv() == CTSEnvProduction){
             CitrusPaymentSDK.initWithSign(inID: SignInIdProd, signInSecret: SignInSecretKeyProd, signUpID: SubscriptionIdProd, signUpSecret: SubscriptionSecretKeyProd, vanityUrl: VanityUrlProd, environment: CTSEnvProduction)
             CitrusPaymentSDK.setLogLevel(CTSLogLevel.verbose)
+            
+            billUrl = BillUrlProd as NSString?
+            loadWalletReturnUrl = LoadWalletReturnUrlProd as NSString?
         }
         
         print("topNavColor:%@",tfTopNavColor?.text ?? "")
@@ -324,24 +333,20 @@ class ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegat
         PlugNPlay.disableWallet(isWalletDisable!)
         
         let paymentInfo : PlugAndPlayPayment = PlugAndPlayPayment()
-        if self.selectedEnv() == CTSEnvSandbox {
-            paymentInfo.billUrl = BillUrlSB
-        }else if(self.selectedEnv() == CTSEnvProduction){
-            paymentInfo.billUrl = BillUrlProd
-        }
+        paymentInfo.billUrlOrCTSBillObject = self.billUrl
         paymentInfo.payAmount = tfAmount?.text
         
         let user : CTSUser = CTSUser()
         user.mobile = tfMobile?.text
         user.email = tfEmail?.text
         
-        user.firstName = "Yadnesh" //Optional
-        user.lastName = "Wankhede" //Optional
+        user.firstName = "firstName" //Optional
+        user.lastName = "lastName" //Optional
         user.address = nil //Optional
         
         self.rememberEnteredDetails()
         
-        PlugNPlay.pay(paymentInfo, for: user, viewController: self) { (paymentReceipt, error) in
+        PlugNPlay.presentPaymentsViewController(paymentInfo, for: user, viewController: self) { (paymentReceipt, error) in
             if((error) != nil){
                 UIUtility.toastMessage(onScreen: error?.localizedDescription)
             }else{
@@ -370,28 +375,28 @@ class ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegat
         user.mobile = tfMobile?.text
         user.email = tfEmail?.text
         
-        user.firstName = "Raji"
-        user.lastName = "Nair"
+        user.firstName = "firstName"
+        user.lastName = "lastName"
         user.address = nil
         
         self.rememberEnteredDetails()
-        if self.selectedEnv() == CTSEnvSandbox {
-            PlugNPlay.wallet(user, returnURL: LoadWalletReturnUrlSB, viewController: self, completion: { (error) in
-                if((error) != nil){
-                    UIUtility.toastMessage(onScreen: error?.localizedDescription)
-                }
-            })
-        }else if(self.selectedEnv() == CTSEnvProduction){
-            PlugNPlay.wallet(user, returnURL: LoadWalletReturnUrlProd, viewController: self, completion: { (error) in
-                if((error) != nil){
-                    UIUtility.toastMessage(onScreen: error?.localizedDescription)
-                }
-            })
+        
+        customParams = ["USERDATA2":"MOB_RC|9988776655" as AnyObject,
+                        "USERDATA10":"test" as AnyObject,
+                        "USERDATA4":"MOB_RC|test@gmail.com" as AnyObject,
+                        "USERDATA3":"MOB_RC|4111XXXXXXXX1111" as AnyObject]
+        
+        PlugNPlay.presentWalletViewController(user,
+                                              returnURL: self.loadWalletReturnUrl as String!,
+                                              customParams: customParams,
+                                              viewController: self) { (error) in
+                                                if((error) != nil){
+                                                    UIUtility.toastMessage(onScreen: error?.localizedDescription)
+                                                }
+                                                else {
+                                                    UIUtility.toastMessage(onScreen: "payment successful")
+                                                }
         }
-        
-        //
-        
-        //let user : CTSUser =
     }
     
     @IBAction func signOut() {
@@ -514,7 +519,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegat
                 
                 btnMyWallet?.setTitleColor(CTSUtility.getColorFromRGB(self.initFromHexString(hexStr: finalColorString! as String)), for: UIControlState.normal)
                 btnPayment?.setTitleColor(CTSUtility.getColorFromRGB(self.initFromHexString(hexStr: finalColorString! as String)), for: UIControlState.normal)
-             }
+            }
         }else if(textField.tag == 5){
             var finalMerchantName : NSString?
             if string.characters.count > 0 {

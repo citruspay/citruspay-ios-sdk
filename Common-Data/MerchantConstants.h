@@ -23,7 +23,7 @@
 
 #define VanityUrl_Sandbox @"nativeSDK"
 #define BillUrl_Sandbox @"https://salty-plateau-1529.herokuapp.com/billGenerator.sandbox.php"
-#define ReturnUrl_Sandbox @"https://salty-plateau-1529.herokuapp.com/redirectURL.sandbox.php"
+#define LoadWallet_ReturnUrl_Sandbox @"https://salty-plateau-1529.herokuapp.com/redirectURL.sandbox.php"
 
 // Production
 #define SignInId_Production @"set your own production key"
@@ -33,7 +33,7 @@
 
 #define VanityUrl_Production @"set your own vanity url"
 #define BillUrl_Production @"set your own bill url"
-#define ReturnUrl_Production @"set your own return url"
+#define LoadWallet_ReturnUrl_Production @"set your own return url"
 
 
 #endif /* MerchantConstants_h */

@@ -34,17 +34,23 @@ typedef void (^WalletValidationErrorCompletionHandler)(NSError *error);
 
 //Launches the Plug and Play UI for Payments
 
-+(void)pay:(PlugAndPlayPayment *)payment forUser:(CTSUser *)user viewController:(UIViewController *)viewController completion:(CTSSimpliPayCompletionHandler)completion ;
++(void)presentPaymentsViewController:(PlugAndPlayPayment *)payment
+                             forUser:(CTSUser *)user
+                      viewController:(UIViewController *)viewController
+                          completion:(CTSSimpliPayCompletionHandler)completion;
 
 //Launches the Plug and Play
-+(void)wallet:(CTSUser *)user returnURL:(NSString*)loadMoneyReturnURL viewController:(UIViewController *)viewController completion:(WalletValidationErrorCompletionHandler)completion;
++(void)presentWalletViewController:(CTSUser *)user
+                         returnURL:(NSString*)loadMoneyReturnURL
+                      customParams:(NSDictionary <Optional> *)customParams
+                    viewController:(UIViewController *)viewController
+                        completion:(WalletValidationErrorCompletionHandler)completion;
 
 //When Sent YES, it disables the Wallet payment UI in the Plug and Play Payment UI
 +(void)disableWallet:(BOOL)isDisabled;
 
 //When Sent YES, it disables the Cards payment UI in the Plug and Play Payment UI
 +(void)disableCards:(BOOL)isDisabled;
-
 
 //When Sent YES, it disables the Netbanking payment UI in the Plug and Play Payment UI
 +(void)disableNetbanking:(BOOL)isDisabled;
