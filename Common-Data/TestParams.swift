@@ -9,11 +9,11 @@
 import Foundation
 
 // TestParams.h should be populated according to your needs
-let TEST_EMAIL = "mukeshcitrus122@mailinator.com"
-let TEST_MOBILE = "9700000000"
+let TEST_EMAIL = "testm122@mailinator.com"
+let TEST_MOBILE = "9000000000"
 
-let TEST_FIRST_NAME = "test"
-let TEST_LAST_NAME = "user"
+let TEST_FIRST_NAME = "FIRST_NAME"
+let TEST_LAST_NAME = "LAST_NAME"
 
 let TEST_CITY = "Pune"
 let TEST_COUNTRY = "India"

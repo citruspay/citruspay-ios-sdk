@@ -1,10 +1,13 @@
 CitrusPay iOS SDK Kit Release Notes:
 ==============================================
 
-4.1.2
+4.1.3
 -----
 
 #### Current Version
++ Custom params support for PlugNPlay Module
+
+#### 4.1.2
 + Minor bug fixes & improvements
 
 #### 4.1.1

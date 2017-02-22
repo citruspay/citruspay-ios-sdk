@@ -1,11 +1,11 @@
 PODS:
   - CitrusGraphics (1.1.1):
     - Kingfisher
-  - CitrusPay (4.1.2):
+  - CitrusPay (4.1.3):
     - CitrusGraphics
     - JSONModel
   - JSONModel (1.7.0)
-  - Kingfisher (3.3.3)
+  - Kingfisher (3.5.0)
 
 DEPENDENCIES:
   - CitrusPay (from `../../../../`)
@@ -16,9 +16,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CitrusGraphics: df3096fc3a0475d378e0adf22ac8c21f3cf2b69b
-  CitrusPay: 08f20f971933a3f00cda6fe456a186ae7c97d2cb
+  CitrusPay: f24ae6c0d734071509944440a95445e10fb66035
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
-  Kingfisher: 893215a42e5c2164e916f69463c68003092b104c
+  Kingfisher: 7c62087039d93d26c54c8dd9b0b588d2ce55cef6
 
 PODFILE CHECKSUM: c69b636c29d925eae2736c3e4ff124ed055a5649
 

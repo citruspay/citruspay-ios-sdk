@@ -67,6 +67,7 @@ extern NSString *const PNP_DISABLE_CARDS;
 extern NSString *const PNP_DISABLE_NETBANK;
 extern NSString *const PNP_LOAD_RETURN_URL;
 
+extern NSString *const PNP_LOADMONEY_CUSTOM_PARAMS;
 
 
 

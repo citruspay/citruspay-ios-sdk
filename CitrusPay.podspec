@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = "CitrusPay"
-s.version          = "4.1.2"
+s.version          = "4.1.3"
 s.summary          = "CitrusPay iOS SDK."
 
 s.description      = "Enhanced CitrusPay iOS SDK for Superior Native Payments Experience."

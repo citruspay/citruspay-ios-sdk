@@ -24,10 +24,10 @@ class HomeViewController: BaseClassViewController {
     
     func defaultLoginView() -> Void {
         let userDetails = CTSUser()
-        userDetails.mobile = "9702222222"
-        userDetails.email = "test@gmail.com"
-        userDetails.firstName = "FIRST NAME" //optional
-        userDetails.lastName = "LAST NAME" //optional
+        userDetails.mobile = TEST_MOBILE
+        userDetails.email = TEST_EMAIL
+        userDetails.firstName = TEST_FIRST_NAME //optional
+        userDetails.lastName = TEST_LAST_NAME //optional
         userDetails.address = nil //optional
         
         self.authLayer?.requestDefaultLoginView(userDetails,

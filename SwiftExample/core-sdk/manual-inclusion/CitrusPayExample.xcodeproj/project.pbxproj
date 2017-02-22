@@ -16,7 +16,6 @@
 		7649758A1DFEC51D0081025D /* CitrusGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764975881DFEC51D0081025D /* CitrusGraphics.framework */; };
 		764975B31DFEC5320081025D /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7649759C1DFEC5260081025D /* Kingfisher.framework */; };
 		764975B41DFEC5320081025D /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7649759C1DFEC5260081025D /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		764975B71DFEC5320081025D /* CitrusGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764975881DFEC51D0081025D /* CitrusGraphics.framework */; };
 		764975B81DFEC5320081025D /* CitrusGraphics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 764975881DFEC51D0081025D /* CitrusGraphics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		767FB9831DDC6FA200DE349D /* CitrusPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767FB97F1DDC6F6A00DE349D /* CitrusPay.framework */; };
 		767FB9841DDC6FA200DE349D /* CitrusPay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 767FB97F1DDC6F6A00DE349D /* CitrusPay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -200,7 +199,6 @@
 				7649758A1DFEC51D0081025D /* CitrusGraphics.framework in Frameworks */,
 				764975B31DFEC5320081025D /* Kingfisher.framework in Frameworks */,
 				767FB9831DDC6FA200DE349D /* CitrusPay.framework in Frameworks */,
-				764975B71DFEC5320081025D /* CitrusGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +398,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = CitrusPay;
 				TargetAttributes = {
 					76F778571CC64F7100C9E7B8 = {
