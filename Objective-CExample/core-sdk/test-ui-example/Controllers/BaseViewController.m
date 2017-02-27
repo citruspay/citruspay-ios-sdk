@@ -33,11 +33,11 @@
     
     if ([server integerValue] == 0) {
         self.billUrl = BillUrl_Sandbox;
-        self.returnUrl = ReturnUrl_Sandbox;
+        self.returnUrl = LoadWallet_ReturnUrl_Sandbox;
     }
     else if ([server integerValue] == 1){
         self.billUrl = BillUrl_Production;
-        self.returnUrl = ReturnUrl_Production;
+        self.returnUrl = LoadWallet_ReturnUrl_Production;
     }
 }
 
@@ -57,7 +57,7 @@
                                      vanityUrl:VanityUrl_Sandbox
                                    environment:CTSEnvSandbox];
             self.billUrl = BillUrl_Sandbox;
-            self.returnUrl = ReturnUrl_Sandbox;
+            self.returnUrl = LoadWallet_ReturnUrl_Sandbox;
             
             [CitrusPaymentSDK setLogLevel:CTSLogLevelVerbose];
             [defautls setValue:@"0" forKey:@"EnvironmentTo"];
@@ -72,7 +72,7 @@
                                      vanityUrl:VanityUrl_Production
                                    environment:CTSEnvProduction];
             self.billUrl = BillUrl_Production;
-            self.returnUrl = ReturnUrl_Production;
+            self.returnUrl = LoadWallet_ReturnUrl_Production;
             
             [CitrusPaymentSDK setLogLevel:CTSLogLevelVerbose];
 

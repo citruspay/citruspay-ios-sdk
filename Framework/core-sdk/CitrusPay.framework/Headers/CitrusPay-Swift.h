@@ -207,4 +207,16 @@ typedef SWIFT_ENUM(NSInteger, LogLevel) {
   LogLevelNone = 6,
 };
 
+@class UIWebView;
+@class NSBundle;
+
+SWIFT_CLASS("_TtC9CitrusPay20PnPTnCViewController")
+@interface PnPTnCViewController : UIViewController <UIWebViewDelegate>
+- (void)viewDidLoad;
+- (void)webView:(UIWebView * _Nonnull)webView didFailLoadWithError:(NSError * _Nonnull)error;
+- (void)webViewDidFinishLoad:(UIWebView * _Nonnull)webView;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 #pragma clang diagnostic pop

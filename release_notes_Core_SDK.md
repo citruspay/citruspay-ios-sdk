@@ -1,10 +1,13 @@
 CitrusPay iOS SDK Kit Release Notes:
 ==============================================
 
-4.1.3
+4.1.4
 -----
 
 #### Current Version
++ Citrus Wallet Re-branding & T&C Updates
+
+#### 4.1.3
 + Custom params support for PlugNPlay Module
 
 #### 4.1.2
