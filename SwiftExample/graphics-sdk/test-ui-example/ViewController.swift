@@ -42,8 +42,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         CitrusPaymentSDK.initWithSign(inID: SignInIdSB, signInSecret: SignInSecretKeySB, signUpID: SubscriptionIdSB, signUpSecret: SubscriptionSecretKeySB, vanityUrl: VanityUrlSB, environment: CTSEnvSandbox)
         
-        CitrusPaymentSDK.setLogLevel(.verbose)
-                
+//        CitrusPaymentSDK.setLogLevel(.verbose)
+        
         self.authLayer = CTSAuthLayer.fetchShared()
         self.profileLayer = CTSProfileLayer.fetchShared()
     }
@@ -65,7 +65,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                             DispatchQueue.main.async {
                                                 if (error != nil) {
                                                     UIUtility.toastMessage(onScreen: error?.localizedDescription)
-                                                    print("Response JSON: \(error?.localizedDescription)")
+                                                    print("Response JSON: \(String(describing: error?.localizedDescription))")
                                                 }
                                                 else {
                                                     UIUtility.toastMessage(onScreen: linkResponse?.userMessage)
@@ -97,10 +97,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.profileLayer?.requestPaymentInformation(completionHandler: { (consumerProfile, error) in
             if ((error) != nil) {
                 UIUtility.toastMessage(onScreen: error?.localizedDescription)
-                print("Response JSON: \(error?.localizedDescription)")
+                print("Response JSON: \(String(describing: error?.localizedDescription))")
             }
             else {
-                print("success : consumerProfile :\(consumerProfile?.paymentOptionsList)")
+                print("success : consumerProfile :\(String(describing: consumerProfile?.paymentOptionsList))")
                 
                 self.walletArray = consumerProfile?.paymentOptionsList
                 
@@ -112,7 +112,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
               //  self.walletArray?.addObjects(from: debitCardArray!)
                // self.walletArray?.addObjects(from: creditCardArray!)
                 
-                print("walletArray :\(self.walletArray)")
+                print("walletArray :\(String(describing: self.walletArray))")
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }

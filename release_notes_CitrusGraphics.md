@@ -1,10 +1,13 @@
 CitrusGraphics iOS SDK Kit Release Notes:
 ==============================================
 
-1.1.1
+1.1.2
 -----
 
 #### Current Version
++ Swift Version 3.1 Support with Xcode 8.3
+
+#### 1.1.1
 + Minor bug fixes & improvements
 
 #### 1.1
