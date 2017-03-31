@@ -38,9 +38,9 @@ class HomeViewController: BaseClassViewController {
                                                 callback: { (error , response) in
                                                     if(error != nil) {
                                                         UIUtility.toastMessage(onScreen:error?.localizedDescription)
-                                                        print("error: \(error?.localizedDescription)")
+                                                        print("error: \(String(describing: error?.localizedDescription))")
                                                     } else {
-                                                        print("success: \(response)")
+                                                        print("success: \(String(describing: response))")
                                                         UIUtility.toastMessage(onScreen: "Success")
                                                     }
         })
@@ -53,7 +53,7 @@ class HomeViewController: BaseClassViewController {
                                           completionHandler: { (linkResponse, error) -> Void in
                                             if(error != nil){
                                                 UIUtility.toastMessage(onScreen:error?.localizedDescription)
-                                                print("Response JSON: \(error?.localizedDescription)")
+                                                print("Response JSON: \(String(describing: error?.localizedDescription))")
                                             }else{
                                                 UIUtility.toastMessage(onScreen: linkResponse?.userMessage)
                                                 print("success")
@@ -102,7 +102,7 @@ class HomeViewController: BaseClassViewController {
         
         let url = NSURL(string: "\(billURL)?amount\(amount)&\(customParams)")
         
-        let loadTask = session.dataTask(with: url as! URL) { data, response, error in
+        let loadTask = session.dataTask(with: url! as URL) { data, response, error in
             // let loadTask = session.dataTaskWithURL(url! as URL) { (data :NSData?, response :URLResponse?, error :NSError?) -> Void in
             if let errorResponse = error {
                 completion(nil, errorResponse as NSError?)

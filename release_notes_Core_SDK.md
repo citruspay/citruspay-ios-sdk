@@ -1,10 +1,13 @@
 CitrusPay iOS SDK Kit Release Notes:
 ==============================================
 
-4.1.4
+4.1.5
 -----
 
 #### Current Version
++ Swift Version 3.1 Support with Xcode 8.3
+
+#### 4.1.4
 + Citrus Wallet Re-branding & T&C Updates
 
 #### 4.1.3

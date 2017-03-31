@@ -147,6 +147,27 @@
 			remoteGlobalIDString = 76F778571CC64F7100C9E7B8;
 			remoteInfo = CitrusPayExample;
 		};
+		F39F9B341E8E827900552D86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 767FB9781DDC6F5D00DE349D /* JSONModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 01D689FB1E42150100CFE82F;
+			remoteInfo = "JSONModel-mac";
+		};
+		F39F9B361E8E827900552D86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 767FB9781DDC6F5D00DE349D /* JSONModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 01D68A1A1E421A8400CFE82F;
+			remoteInfo = "JSONModel-watchOS";
+		};
+		F39F9B381E8E827900552D86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 767FB9781DDC6F5D00DE349D /* JSONModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 01D68A271E421AC100CFE82F;
+			remoteInfo = "JSONModel-tvOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -265,6 +286,9 @@
 			isa = PBXGroup;
 			children = (
 				767FB97D1DDC6F5D00DE349D /* JSONModel.framework */,
+				F39F9B351E8E827900552D86 /* JSONModel.framework */,
+				F39F9B371E8E827900552D86 /* JSONModel.framework */,
+				F39F9B391E8E827900552D86 /* JSONModel.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -538,6 +562,27 @@
 			fileType = wrapper.framework;
 			path = JSONModel.framework;
 			remoteRef = 767FB97C1DDC6F5D00DE349D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F39F9B351E8E827900552D86 /* JSONModel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSONModel.framework;
+			remoteRef = F39F9B341E8E827900552D86 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F39F9B371E8E827900552D86 /* JSONModel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSONModel.framework;
+			remoteRef = F39F9B361E8E827900552D86 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F39F9B391E8E827900552D86 /* JSONModel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSONModel.framework;
+			remoteRef = F39F9B381E8E827900552D86 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
