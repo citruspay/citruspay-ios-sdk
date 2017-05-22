@@ -28,6 +28,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		311EE4591ED31A1D0085C5A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 768D71531E027D410000BF8A /* JSONModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 01D689FB1E42150100CFE82F;
+			remoteInfo = "JSONModel-mac";
+		};
+		311EE45B1ED31A1D0085C5A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 768D71531E027D410000BF8A /* JSONModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 01D68A1A1E421A8400CFE82F;
+			remoteInfo = "JSONModel-watchOS";
+		};
+		311EE45D1ED31A1D0085C5A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 768D71531E027D410000BF8A /* JSONModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 01D68A271E421AC100CFE82F;
+			remoteInfo = "JSONModel-tvOS";
+		};
 		768D71211E027C630000BF8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 768D70FF1E027C630000BF8A /* Project object */;
@@ -319,6 +340,9 @@
 			isa = PBXGroup;
 			children = (
 				768D71581E027D420000BF8A /* JSONModel.framework */,
+				311EE45A1ED31A1D0085C5A7 /* JSONModel.framework */,
+				311EE45C1ED31A1D0085C5A7 /* JSONModel.framework */,
+				311EE45E1ED31A1D0085C5A7 /* JSONModel.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -394,7 +418,8 @@
 				TargetAttributes = {
 					768D71061E027C630000BF8A = {
 						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = 987XACR3Y4;
+						ProvisioningStyle = Automatic;
 					};
 					768D711F1E027C630000BF8A = {
 						CreatedOnToolsVersion = 8.0;
@@ -434,6 +459,27 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		311EE45A1ED31A1D0085C5A7 /* JSONModel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSONModel.framework;
+			remoteRef = 311EE4591ED31A1D0085C5A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		311EE45C1ED31A1D0085C5A7 /* JSONModel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSONModel.framework;
+			remoteRef = 311EE45B1ED31A1D0085C5A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		311EE45E1ED31A1D0085C5A7 /* JSONModel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSONModel.framework;
+			remoteRef = 311EE45D1ED31A1D0085C5A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		768D71581E027D420000BF8A /* JSONModel.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -683,7 +729,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 987XACR3Y4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../../../Framework/lazypay-sdk/**",
 					"$(PROJECT_DIR)/../../../Framework/core-sdk/**",
@@ -692,8 +739,9 @@
 				INFOPLIST_FILE = LazyPayExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.lazypay.LazyPayExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.lazypay.LazyPayExampl90;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -702,7 +750,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 987XACR3Y4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../../../Framework/lazypay-sdk/**",
 					"$(PROJECT_DIR)/../../../Framework/core-sdk/**",
@@ -711,8 +760,9 @@
 				INFOPLIST_FILE = LazyPayExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.lazypay.LazyPayExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.citruspay.lazypay.LazyPayExampl90;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
