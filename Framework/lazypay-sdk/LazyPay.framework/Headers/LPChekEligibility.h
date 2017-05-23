@@ -40,4 +40,9 @@
  *   The LPChekEligibility class' signUpModes object.
  */
 @property (strong) NSArray * signUpModes;
+/**
+ *   The LPChekEligibility class' merchantLogo object.
+ */
+@property (strong) NSString * merchantLogo;
+
 @end

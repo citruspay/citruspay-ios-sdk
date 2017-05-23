@@ -25,18 +25,21 @@ typedef void (^CompletionHandler)(id JSON,
  *   LazyPay Class.
  */
 @interface LazyPay : NSObject
+
 /**
 *  isUserSignedIn  - Check User Logged In or Not.
 *
 *  @return The BOOL Value.
 */
 + (BOOL)isUserSignedIn;
+
 /**
  *  signOut  Cleared the Saved Local Tokens
  *
  *  @return The BOOL Value.
  */
 + (BOOL)signOut;
+
 /**
  *  canMakePayment  Check Users LazyPay Elibijiblity
  *
@@ -56,4 +59,5 @@ typedef void (^CompletionHandler)(id JSON,
 + (void)initiatePayment:(LazyPayConfig *)lazyPayConfig
 andParentViewController:(id)controller
       completionHandler:(CompletionHandler)completion;
+
 @end
