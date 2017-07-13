@@ -8,14 +8,14 @@
 
 Pod::Spec.new do |s|
 s.name             = "CitrusPay"
-s.version          = "4.1.5"
+s.version          = "4.1.6"
 s.summary          = "CitrusPay iOS SDK."
 
 s.description      = "Enhanced CitrusPay iOS SDK for Superior Native Payments Experience."
 
 s.homepage         = "https://github.com/citruspay/citruspay-ios-sdk"
 s.license          = 'MIT'
-s.author           = { "Mukesh Patil" => "mukesh.patil@citruspay.com" }
+s.author           = { "Vipin Aggarwal" => "vipin.aggarwal@payu.in" }
 s.source           = { :git => "https://github.com/citruspay/citruspay-ios-sdk.git", :tag => s.version.to_s }
 
 s.platform     = :ios, '8.0'
