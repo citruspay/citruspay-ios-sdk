@@ -154,6 +154,38 @@
            
         }
     }];
+    
+    
+//    [[CTSAuthLayer fetchSharedAuthLayer] requestCitrusLink:self.userNameTextField.text mobile:self.mobileTextField.text completion:^(CTSCitrusLinkRes *linkResponse, NSError *error) {
+//        
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            [self.indicatorView stopAnimating];
+//            self.indicatorView.hidden = TRUE;
+//        });
+//        if (error) {
+//            [UIUtility toastMessageOnScreen:[error localizedDescription]];
+//        }
+//        else{
+//            
+//            [UIUtility toastMessageOnScreen:linkResponse.userMessage];
+//            
+//            if (linkResponse.siginType == CitrusSiginTypeLimited) {
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:self];
+//                });
+//            }
+//            else{
+//                signInType = linkResponse.siginType;
+//                responseMessage = linkResponse.userMessage;
+//                
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    [self performSegueWithIdentifier:@"SignInScreenIdentifier" sender:self];
+//                });
+//            }
+//            
+//        }
+//
+//    }];
    
  /*
     CTSUser *user = [[CTSUser alloc] init];
@@ -208,6 +240,7 @@
         viewController.userName = self.userNameTextField.text;
         viewController.mobileNumber = self.mobileTextField.text;
         viewController.signinType = signInType;
+        viewController.scopeType = scopeType;
         viewController.messageString = responseMessage;
     }
     

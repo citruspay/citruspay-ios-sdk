@@ -231,7 +231,13 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
                                            [self.saveCardsTableView reloadData];
                                        });
                                    }
-                                    [UIUtility toastMessageOnScreen:@"Card deleted successfully."];
+                                   NSString *cardNum = [dict valueForKey:@"cardNumber"];
+                                   
+                                   if (cardNum && (cardNum != (id)[NSNull null])) {
+                                       [UIUtility toastMessageOnScreen:@"Card deleted successfully."];
+                                   } else {
+                                       [UIUtility toastMessageOnScreen:@"Preferred Bank deleted successfully"];
+                                   }
                                } else {
                                    // Your code to handle error.
                                    [UIUtility toastMessageOnScreen:[error localizedDescription]];

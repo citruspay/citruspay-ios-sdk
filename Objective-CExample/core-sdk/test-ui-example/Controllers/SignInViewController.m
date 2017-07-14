@@ -139,7 +139,6 @@
     }
     else{
         
-        
         [[CTSAuthLayer fetchSharedAuthLayer] requestMasterLinkSignInWithPassword:passwordString passwordType:passwordType completionHandler:^(NSError *error) {
             
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -152,16 +151,211 @@
             else{
                 
                 [CTSOauthManager readPasswordSigninOuthData];
-
-                //            [UIUtility toastMessageOnScreen:[NSString stringWithFormat:@"%@ is now logged in",userName]];
-    //            currentUser = userName;
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                     [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:self];
                 }];
                 
             }
         }];
+        
+        
+        
+        
+        
+//        if (self.signinType == CitrusSiginTypeMOtp && [[CTSAuthLayer fetchSharedAuthLayer] isUserSignedIn]) {
+//            [[CTSAuthLayer fetchSharedAuthLayer] requestMasterLinkSignInWithPassword:passwordString passwordType:passwordType completionHandler:^(NSError *error) {
+//                
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    [self.indicatorView stopAnimating];
+//                    self.indicatorView.hidden = TRUE;
+//                });
+//                if (error) {
+//                    [UIUtility toastMessageOnScreen:[error localizedDescription]];
+//                }
+//                else {
+//                    [CTSOauthManager readPasswordSigninOuthData];
+//                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//                        [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:self];
+//                    }];
+//                }
+//            }];
+//        }
+//        else {
+//            NSLog(@"passwordString %@", passwordString);
+//            NSLog(@"passwordType %u", passwordType);
+//            
+//            [[CTSAuthLayer fetchSharedAuthLayer] requestMasterLinkSignInWithPassword:passwordString passwordType:passwordType completionHandler:^(NSError *error) {
+//                
+//                if (error) {
+//                    dispatch_async(dispatch_get_main_queue(), ^{
+//                        [self.indicatorView stopAnimating];
+//                        self.indicatorView.hidden = TRUE;
+//                    });
+//
+//                    [UIUtility toastMessageOnScreen:[error localizedDescription]];
+//                }
+//                else {
+//                    if (self.signinType == CitrusSiginTypeMOtpOrPassword || self.signinType == CitrusSiginTypeMOtp) {
+//                        dispatch_async(dispatch_get_main_queue(), ^{
+//                            [self.indicatorView stopAnimating];
+//                            self.indicatorView.hidden = TRUE;
+//                        });
+//
+//                        [CTSOauthManager readPasswordSigninOuthData];
+//                        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//                            [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:self];
+//                        }];
+//                    }
+//                    else {
+//                        [[CTSAuthLayer fetchSharedAuthLayer] requestMasterLink:self.userNameTextField.text  mobile:self.mobileTextField.text scope:self.scopeType completionHandler:^(CTSMasterLinkRes *linkResponse, NSError *error) {
+//                            dispatch_async(dispatch_get_main_queue(), ^{
+//                                [self.indicatorView stopAnimating];
+//                                self.indicatorView.hidden = TRUE;
+//                            });
+//                            if (error) {
+//                                [UIUtility toastMessageOnScreen:[error localizedDescription]];
+//                            }
+//                            else{
+//                                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//                                    self.userName = self.userNameTextField.text;
+//                                    self.mobileNumber = self.mobileTextField.text;
+//                                    self.signinType = CitrusSiginTypeMOtp;
+//                                    self.messageString = @"Mobile verify code also sent. Verify And Signin";
+//                                    [self viewWillAppear:YES];
+//                                }];
+//                            }
+//                        }];
+//                    }
+//                }
+//            }];
+//        }
 
+        
+        
+//        if (self.signinType == CitrusSiginTypeMOtp && [[CTSAuthLayer fetchSharedAuthLayer] isUserSignedIn]) {
+//            [[CTSAuthLayer fetchSharedAuthLayer] requestCitrusLinkSignInWithPassoword:passwordString passwordType:passwordType completionHandler:^(NSError *error) {
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    [self.indicatorView stopAnimating];
+//                    self.indicatorView.hidden = TRUE;
+//                });
+//                if (error) {
+//                    [UIUtility toastMessageOnScreen:[error localizedDescription]];
+//                }
+//                else {
+//                    [CTSOauthManager readPasswordSigninOuthData];
+//                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//                        [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:self];
+//                    }];
+//                }
+//            }];
+//        }
+//        else {
+//            NSLog(@"passwordString %@", passwordString);
+//            NSLog(@"passwordType %u", passwordType);
+//            
+//            [[CTSAuthLayer fetchSharedAuthLayer] requestCitrusLinkSignInWithPassoword:passwordString passwordType:passwordType completionHandler:^(NSError *error) {
+//                if (error) {
+//                    dispatch_async(dispatch_get_main_queue(), ^{
+//                        [self.indicatorView stopAnimating];
+//                        self.indicatorView.hidden = TRUE;
+//                    });
+//
+//                    [UIUtility toastMessageOnScreen:[error localizedDescription]];
+//                }
+//                else {
+//                    if (self.signinType == CitrusSiginTypeMOtpOrPassword || self.signinType == CitrusSiginTypeMOtp) {
+//                        dispatch_async(dispatch_get_main_queue(), ^{
+//                            [self.indicatorView stopAnimating];
+//                            self.indicatorView.hidden = TRUE;
+//                        });
+//
+//                        [CTSOauthManager readPasswordSigninOuthData];
+//                        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//                            [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:self];
+//                        }];
+//                    }
+//                    else {
+//                        
+//                        [[CTSAuthLayer fetchSharedAuthLayer] requestCitrusLink:self.userNameTextField.text mobile:self.mobileTextField.text completion:^(CTSCitrusLinkRes *linkResponse, NSError *error) {
+//                            
+//                            dispatch_async(dispatch_get_main_queue(), ^{
+//                                [self.indicatorView stopAnimating];
+//                                self.indicatorView.hidden = TRUE;
+//                            });
+//                            if (error) {
+//                                [UIUtility toastMessageOnScreen:[error localizedDescription]];
+//                            }
+//                            else{
+//                                
+//                                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//                                    self.userName = self.userNameTextField.text;
+//                                    self.mobileNumber = self.mobileTextField.text;
+//                                    self.signinType = linkResponse.siginType;
+//                                    self.messageString = linkResponse.userMessage;
+//                                    [self viewWillAppear:YES];
+//                                }];
+//                            }
+//                            
+//                        }];
+//
+//                    }
+//                }
+//            }];
+//        }
+
+        
+        
+//        if (self.signinType == CitrusSiginTypeMOtp && [[CTSAuthLayer fetchSharedAuthLayer] isUserSignedIn]) {
+//            [[CTSAuthLayer fetchSharedAuthLayer] requestMobileVerificationWithCode:passwordString completionHandler:^(BOOL isVerified, NSError *error) {
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    [self.indicatorView stopAnimating];
+//                    self.indicatorView.hidden = TRUE;
+//                });
+//                if (error) {
+//                    [UIUtility toastMessageOnScreen:[error localizedDescription]];
+//                }
+//                else {
+//                    [CTSOauthManager readPasswordSigninOuthData];
+//                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//                        [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:self];
+//                    }];
+//                }
+//            }];
+//        }
+//        else {
+//            NSLog(@"passwordString %@", passwordString);
+//            NSLog(@"passwordType %u", passwordType);
+//            
+//            [[CTSAuthLayer fetchSharedAuthLayer] requestCitrusLinkSignInWithPassoword:passwordString passwordType:passwordType completionHandler:^(NSError *error) {
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    [self.indicatorView stopAnimating];
+//                    self.indicatorView.hidden = TRUE;
+//                });
+//                if (error) {
+//                    [UIUtility toastMessageOnScreen:[error localizedDescription]];
+//                }
+//                else {
+//                    if (self.signinType == CitrusSiginTypeMOtpOrPassword || self.signinType == CitrusSiginTypeMOtp) {
+//                        [CTSOauthManager readPasswordSigninOuthData];
+//                        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//                            [self performSegueWithIdentifier:@"HomeScreenIdentifier" sender:self];
+//                        }];
+//                    }
+//                    else {
+//                        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//                            
+//                            self.userName = self.userNameTextField.text;
+//                            self.mobileNumber = self.mobileTextField.text;
+//                            self.signinType = CitrusSiginTypeMOtp;
+//                            self.messageString = @"Mobile verify code also sent. Verify And Signin";
+//                            
+//                            [self viewWillAppear:YES];
+//                        }];
+//                    }
+//                }
+//            }];
+//        }
+        
 }
 }
 
