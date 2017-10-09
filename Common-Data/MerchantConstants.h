@@ -27,13 +27,13 @@
 #define ReturnUrl_Sandbox @"https://salty-plateau-1529.herokuapp.com/redirectURL.sandbox.php"
 
 // Production
-#define SignInId_Production @"kkizp9tsqg-signin"
-#define SignInSecretKey_Production @"1fc1f57639ec87cf4d49920f6b3a2c9d"
-#define SubscriptionId_Production @"kkizp9tsqg-signup"
-#define SubscriptionSecretKey_Production @"39c50a32eaabaf382223fdd05f331e1c"
+#define SignInId_Production @"set your own production key"
+#define SignInSecretKey_Production @"set your own production key"
+#define SubscriptionId_Production @"set your own production key"
+#define SubscriptionSecretKey_Production @"set your own production key"
 
-#define VanityUrl_Production @"testing"
-#define BillUrl_Production @"https://salty-plateau-1529.herokuapp.com/billGenerator.production.php"
-#define ReturnUrl_Production @"https://salty-plateau-1529.herokuapp.com/redirectURL.production.php"
+#define VanityUrl_Production @"set your own vanity url"
+#define BillUrl_Production @"set your own bill url"
+#define ReturnUrl_Production @"set your own return url"
 
 #endif

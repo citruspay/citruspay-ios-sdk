@@ -7,4 +7,5 @@ framework module CitrusPay {
 
 module CitrusPay.Swift {
     header "CitrusPay-Swift.h"
+    requires objc
 }
