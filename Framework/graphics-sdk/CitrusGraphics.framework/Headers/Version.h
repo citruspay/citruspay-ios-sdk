@@ -9,6 +9,6 @@
 #ifndef Version_h
 #define Version_h
 
-#define CITRUSGRAPHICS_VERSION @"1.1.2"
+#define CITRUSGRAPHICS_VERSION @"1.1.3"
 
 #endif /* Version_h */
