@@ -121,7 +121,7 @@
         [CitrusPaymentSDK setLogLevel:CTSLogLevelVerbose];
         
         billUrl = BillUrl_Sandbox;
-        returnUrl = LoadWallet_ReturnUrl_Sandbox;
+        returnUrl = ReturnUrl_Sandbox;
 
     }
     else if([self selectedEnv] == CTSEnvProduction){
@@ -134,7 +134,7 @@
         [CitrusPaymentSDK setLogLevel:CTSLogLevelNone];
         
         billUrl = BillUrl_Production;
-        returnUrl = LoadWallet_ReturnUrl_Production;
+        returnUrl = ReturnUrl_Production;
     }
 
     unsigned int topNavHexInt = [self intFromHexString:_tfTopNavColor.text];
