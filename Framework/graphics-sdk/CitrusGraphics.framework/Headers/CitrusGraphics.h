@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Version.h"
+#import "UIImageView+CitrusGraphics.h"
 
 //! Project version number for CitrusGraphics.
 FOUNDATION_EXPORT double CitrusGraphicsVersionNumber;

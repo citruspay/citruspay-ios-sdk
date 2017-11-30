@@ -19,13 +19,32 @@
 		76B0F8B21E2F3E1F00871E27 /* CitrusGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0F8B11E2F3E1F00871E27 /* CitrusGraphics.framework */; };
 		76B0FA1A1E2F3E9F00871E27 /* CitrusGraphics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0F8B11E2F3E1F00871E27 /* CitrusGraphics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76B0FA1C1E2F3E9F00871E27 /* CitrusPay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0F8AE1E2F3DF200871E27 /* CitrusPay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		76B0FA211E2F40DD00871E27 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0FA021E2F3E8900871E27 /* Kingfisher.framework */; };
-		76B0FA221E2F40DD00871E27 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0FA021E2F3E8900871E27 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76B0FA251E2F40DD00871E27 /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0F9F11E2F3E5B00871E27 /* JSONModel.framework */; };
 		76B0FA261E2F40DD00871E27 /* JSONModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0F9F11E2F3E5B00871E27 /* JSONModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		66AB7F961FCFCB240076DBB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76B0F9EC1E2F3E5B00871E27 /* JSONModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 01D689FB1E42150100CFE82F;
+			remoteInfo = "JSONModel-mac";
+		};
+		66AB7F981FCFCB240076DBB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76B0F9EC1E2F3E5B00871E27 /* JSONModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 01D68A1A1E421A8400CFE82F;
+			remoteInfo = "JSONModel-watchOS";
+		};
+		66AB7F9A1FCFCB240076DBB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76B0F9EC1E2F3E5B00871E27 /* JSONModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 01D68A271E421AC100CFE82F;
+			remoteInfo = "JSONModel-tvOS";
+		};
 		76B0F88B1E2F39CC00871E27 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 76B0F8691E2F39CB00871E27 /* Project object */;
@@ -40,110 +59,12 @@
 			remoteGlobalIDString = 92C9BC3D1B19A51100D79B06;
 			remoteInfo = JSONModel;
 		};
-		76B0FA011E2F3E8900871E27 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 76B0F9F21E2F3E8800871E27 /* Kingfisher.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D1ED2D351AD2D09F00CFC3EB;
-			remoteInfo = "Kingfisher-iOS";
-		};
-		76B0FA031E2F3E8900871E27 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 76B0F9F21E2F3E8800871E27 /* Kingfisher.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D13F49D61BEDA67C00CE335D;
-			remoteInfo = "Kingfisher-tvOS";
-		};
-		76B0FA051E2F3E8900871E27 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 76B0F9F21E2F3E8800871E27 /* Kingfisher.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4B2944481C3D01B20088C3E7;
-			remoteInfo = "Kingfisher-macOS";
-		};
-		76B0FA071E2F3E8900871E27 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 76B0F9F21E2F3E8800871E27 /* Kingfisher.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D16799EB1C4E74460020FD12;
-			remoteInfo = "Kingfisher-watchOS";
-		};
-		76B0FA091E2F3E8900871E27 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 76B0F9F21E2F3E8800871E27 /* Kingfisher.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D1ED2D0B1AD2CFA600CFC3EB;
-			remoteInfo = "Kingfisher-Demo";
-		};
-		76B0FA0B1E2F3E8900871E27 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 76B0F9F21E2F3E8800871E27 /* Kingfisher.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D13F49C21BEDA53F00CE335D;
-			remoteInfo = "Kingfisher-tvOS-Demo";
-		};
-		76B0FA0D1E2F3E8900871E27 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 76B0F9F21E2F3E8800871E27 /* Kingfisher.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4B2944551C3D03880088C3E7;
-			remoteInfo = "Kingfisher-macOS-Demo";
-		};
-		76B0FA0F1E2F3E8900871E27 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 76B0F9F21E2F3E8800871E27 /* Kingfisher.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D1679A391C4E78B20020FD12;
-			remoteInfo = "Kingfisher-watchOS-Demo";
-		};
-		76B0FA111E2F3E8900871E27 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 76B0F9F21E2F3E8800871E27 /* Kingfisher.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D1679A451C4E78B20020FD12;
-			remoteInfo = "Kingfisher-watchOS-Demo Extension";
-		};
-		76B0FA131E2F3E8900871E27 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 76B0F9F21E2F3E8800871E27 /* Kingfisher.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D1ED2D3F1AD2D09F00CFC3EB;
-			remoteInfo = KingfisherTests;
-		};
-		76B0FA151E2F3E8900871E27 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 76B0F9F21E2F3E8800871E27 /* Kingfisher.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4B37667F1C478F940001443F;
-			remoteInfo = "KingfisherTests-tvOS";
-		};
-		76B0FA171E2F3E8900871E27 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 76B0F9F21E2F3E8800871E27 /* Kingfisher.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D10EC2311C3D632300A4211C;
-			remoteInfo = "KingfisherTests-macOS";
-		};
-		76B0FA1D1E2F3EAB00871E27 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 76B0F9F21E2F3E8800871E27 /* Kingfisher.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D1ED2D341AD2D09F00CFC3EB;
-			remoteInfo = "Kingfisher-iOS";
-		};
 		76B0FA1F1E2F3EAB00871E27 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 76B0F9EC1E2F3E5B00871E27 /* JSONModel.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 92C9BC3C1B19A51100D79B06;
 			remoteInfo = JSONModel;
-		};
-		76B0FA231E2F40DD00871E27 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 76B0F9F21E2F3E8800871E27 /* Kingfisher.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D1ED2D341AD2D09F00CFC3EB;
-			remoteInfo = "Kingfisher-iOS";
 		};
 		76B0FA271E2F40DD00871E27 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -164,7 +85,6 @@
 				76B0FA261E2F40DD00871E27 /* JSONModel.framework in Embed Frameworks */,
 				76B0F8AB1E2F3D9900871E27 /* PlugNPlay.framework in Embed Frameworks */,
 				76B0FA1A1E2F3E9F00871E27 /* CitrusGraphics.framework in Embed Frameworks */,
-				76B0FA221E2F40DD00871E27 /* Kingfisher.framework in Embed Frameworks */,
 				76B0FA1C1E2F3E9F00871E27 /* CitrusPay.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -190,7 +110,6 @@
 		76B0F8AE1E2F3DF200871E27 /* CitrusPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusPay.framework; sourceTree = "<group>"; };
 		76B0F8B11E2F3E1F00871E27 /* CitrusGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusGraphics.framework; sourceTree = "<group>"; };
 		76B0F9EC1E2F3E5B00871E27 /* JSONModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSONModel.xcodeproj; path = ../../../Dependency/JSONModel/JSONModel.xcodeproj; sourceTree = "<group>"; };
-		76B0F9F21E2F3E8800871E27 /* Kingfisher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kingfisher.xcodeproj; path = ../../../Dependency/Kingfisher/Kingfisher.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,7 +118,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				76B0F8A91E2F3D6D00871E27 /* PlugNPlay.framework in Frameworks */,
-				76B0FA211E2F40DD00871E27 /* Kingfisher.framework in Frameworks */,
 				76B0FA251E2F40DD00871E27 /* JSONModel.framework in Frameworks */,
 				76B0F8AF1E2F3DF200871E27 /* CitrusPay.framework in Frameworks */,
 				76B0F8B21E2F3E1F00871E27 /* CitrusGraphics.framework in Frameworks */,
@@ -219,7 +137,6 @@
 		76B0F8681E2F39CB00871E27 = {
 			isa = PBXGroup;
 			children = (
-				76B0F9F21E2F3E8800871E27 /* Kingfisher.xcodeproj */,
 				76B0F9EC1E2F3E5B00871E27 /* JSONModel.xcodeproj */,
 				76B0F8B01E2F3E1F00871E27 /* graphics-sdk */,
 				76B0F8AD1E2F3DF200871E27 /* core-sdk */,
@@ -312,25 +229,9 @@
 			isa = PBXGroup;
 			children = (
 				76B0F9F11E2F3E5B00871E27 /* JSONModel.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		76B0F9F31E2F3E8800871E27 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				76B0FA021E2F3E8900871E27 /* Kingfisher.framework */,
-				76B0FA041E2F3E8900871E27 /* Kingfisher.framework */,
-				76B0FA061E2F3E8900871E27 /* Kingfisher.framework */,
-				76B0FA081E2F3E8900871E27 /* Kingfisher.framework */,
-				76B0FA0A1E2F3E8900871E27 /* Kingfisher-Demo.app */,
-				76B0FA0C1E2F3E8900871E27 /* Kingfisher-tvOS-Demo.app */,
-				76B0FA0E1E2F3E8900871E27 /* Kingfisher-macOS-Demo.app */,
-				76B0FA101E2F3E8900871E27 /* Kingfisher-watchOS-Demo.app */,
-				76B0FA121E2F3E8900871E27 /* Kingfisher-watchOS-Demo Extension.appex */,
-				76B0FA141E2F3E8900871E27 /* KingfisherTests.xctest */,
-				76B0FA161E2F3E8900871E27 /* KingfisherTests-tvOS.xctest */,
-				76B0FA181E2F3E8900871E27 /* KingfisherTests-macOS.xctest */,
+				66AB7F971FCFCB240076DBB8 /* JSONModel.framework */,
+				66AB7F991FCFCB240076DBB8 /* JSONModel.framework */,
+				66AB7F9B1FCFCB240076DBB8 /* JSONModel.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -350,9 +251,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				76B0FA1E1E2F3EAB00871E27 /* PBXTargetDependency */,
 				76B0FA201E2F3EAB00871E27 /* PBXTargetDependency */,
-				76B0FA241E2F40DD00871E27 /* PBXTargetDependency */,
 				76B0FA281E2F40DD00871E27 /* PBXTargetDependency */,
 			);
 			name = PlugNPlayExample;
@@ -415,10 +314,6 @@
 					ProductGroup = 76B0F9ED1E2F3E5B00871E27 /* Products */;
 					ProjectRef = 76B0F9EC1E2F3E5B00871E27 /* JSONModel.xcodeproj */;
 				},
-				{
-					ProductGroup = 76B0F9F31E2F3E8800871E27 /* Products */;
-					ProjectRef = 76B0F9F21E2F3E8800871E27 /* Kingfisher.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -429,95 +324,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		66AB7F971FCFCB240076DBB8 /* JSONModel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSONModel.framework;
+			remoteRef = 66AB7F961FCFCB240076DBB8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		66AB7F991FCFCB240076DBB8 /* JSONModel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSONModel.framework;
+			remoteRef = 66AB7F981FCFCB240076DBB8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		66AB7F9B1FCFCB240076DBB8 /* JSONModel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSONModel.framework;
+			remoteRef = 66AB7F9A1FCFCB240076DBB8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		76B0F9F11E2F3E5B00871E27 /* JSONModel.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = JSONModel.framework;
 			remoteRef = 76B0F9F01E2F3E5B00871E27 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		76B0FA021E2F3E8900871E27 /* Kingfisher.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Kingfisher.framework;
-			remoteRef = 76B0FA011E2F3E8900871E27 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		76B0FA041E2F3E8900871E27 /* Kingfisher.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Kingfisher.framework;
-			remoteRef = 76B0FA031E2F3E8900871E27 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		76B0FA061E2F3E8900871E27 /* Kingfisher.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Kingfisher.framework;
-			remoteRef = 76B0FA051E2F3E8900871E27 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		76B0FA081E2F3E8900871E27 /* Kingfisher.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Kingfisher.framework;
-			remoteRef = 76B0FA071E2F3E8900871E27 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		76B0FA0A1E2F3E8900871E27 /* Kingfisher-Demo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "Kingfisher-Demo.app";
-			remoteRef = 76B0FA091E2F3E8900871E27 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		76B0FA0C1E2F3E8900871E27 /* Kingfisher-tvOS-Demo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "Kingfisher-tvOS-Demo.app";
-			remoteRef = 76B0FA0B1E2F3E8900871E27 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		76B0FA0E1E2F3E8900871E27 /* Kingfisher-macOS-Demo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "Kingfisher-macOS-Demo.app";
-			remoteRef = 76B0FA0D1E2F3E8900871E27 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		76B0FA101E2F3E8900871E27 /* Kingfisher-watchOS-Demo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "Kingfisher-watchOS-Demo.app";
-			remoteRef = 76B0FA0F1E2F3E8900871E27 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		76B0FA121E2F3E8900871E27 /* Kingfisher-watchOS-Demo Extension.appex */ = {
-			isa = PBXReferenceProxy;
-			fileType = "wrapper.app-extension";
-			path = "Kingfisher-watchOS-Demo Extension.appex";
-			remoteRef = 76B0FA111E2F3E8900871E27 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		76B0FA141E2F3E8900871E27 /* KingfisherTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = KingfisherTests.xctest;
-			remoteRef = 76B0FA131E2F3E8900871E27 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		76B0FA161E2F3E8900871E27 /* KingfisherTests-tvOS.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "KingfisherTests-tvOS.xctest";
-			remoteRef = 76B0FA151E2F3E8900871E27 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		76B0FA181E2F3E8900871E27 /* KingfisherTests-macOS.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "KingfisherTests-macOS.xctest";
-			remoteRef = 76B0FA171E2F3E8900871E27 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -568,20 +400,10 @@
 			target = 76B0F8701E2F39CB00871E27 /* PlugNPlayExample */;
 			targetProxy = 76B0F88B1E2F39CC00871E27 /* PBXContainerItemProxy */;
 		};
-		76B0FA1E1E2F3EAB00871E27 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Kingfisher-iOS";
-			targetProxy = 76B0FA1D1E2F3EAB00871E27 /* PBXContainerItemProxy */;
-		};
 		76B0FA201E2F3EAB00871E27 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JSONModel;
 			targetProxy = 76B0FA1F1E2F3EAB00871E27 /* PBXContainerItemProxy */;
-		};
-		76B0FA241E2F40DD00871E27 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Kingfisher-iOS";
-			targetProxy = 76B0FA231E2F40DD00871E27 /* PBXContainerItemProxy */;
 		};
 		76B0FA281E2F40DD00871E27 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

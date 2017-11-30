@@ -4,8 +4,3 @@ framework module CitrusGraphics {
   export *
   module * { export * }
 }
-
-module CitrusGraphics.Swift {
-    header "CitrusGraphics-Swift.h"
-    requires objc
-}
