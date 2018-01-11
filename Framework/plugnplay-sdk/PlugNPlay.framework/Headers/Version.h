@@ -9,6 +9,6 @@
 #ifndef Version_h
 #define Version_h
 
-#define PLUGNPLAY_VERSION @"1.1.3"
+#define PLUGNPLAY_VERSION @"1.1.4"
 
 #endif /* Version_h */

@@ -18,12 +18,18 @@
 #import "PnPUtility.h"
 #import "LeftRightStrip.h"
 #import "PnPSetupAutoLoadView.h"
-#import "PnPWalletManagementConstants.h"
 #import "PnPCvvInputViewController.h"
 #import "PnPWalletPayViewController.h"
 #import "PnPAddCardViewController.h"
 #import "PnPWalletManagementViewController.h"
 #import "PnPCardManagementTableViewCell.h"
+
+
+#import "PnPSegmentedControl.h"
+#import "PnPRoundedTextField.h"
+#import "PnPDeleteSavedCardViewController.h"
+#import "PnPWithdrawConfirmDetailsViewController.h"
+#import "PnPWithdrawMoneyViewController.h"
 
 typedef void (^WalletValidationErrorCompletionHandler)(NSError *error);
 

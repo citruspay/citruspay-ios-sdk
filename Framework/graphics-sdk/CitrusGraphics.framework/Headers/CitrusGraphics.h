@@ -2,8 +2,8 @@
 //  CitrusGraphics.h
 //  CitrusGraphics
 //
-//  Created by Mukesh Patil on 10/4/16.
-//  Copyright © 2016 CitrusPay. All rights reserved.
+//  Created by Rajvinder Singh on 11/10/17.
+//  Copyright © 2017 PayU. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

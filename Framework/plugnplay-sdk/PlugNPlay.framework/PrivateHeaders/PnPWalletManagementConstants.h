@@ -11,5 +11,6 @@
 #define PnPWalletManagementConstants_h
 
 #define CITRUS_CASH_TITLE @"Citrus Wallet"
+#define kToolBarHeight 44
 
 #endif /* PnPWalletManagementConstants_h */

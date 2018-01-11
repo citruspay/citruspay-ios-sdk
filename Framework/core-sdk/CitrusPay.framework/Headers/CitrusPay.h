@@ -24,6 +24,7 @@
 #import "CTSOauthManager.h"
 #import "HVDOverlay.h"
 #import "PureLayout.h"
+#import "CTSLogLevelWrapper.h"
 #import <CitrusGraphics/CitrusGraphics.h>
 
 /**

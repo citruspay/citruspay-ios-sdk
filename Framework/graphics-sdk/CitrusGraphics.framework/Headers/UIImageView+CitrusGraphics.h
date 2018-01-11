@@ -21,7 +21,7 @@
 @interface UIImageView (CitrusGraphics)
 
 /** Adds activity indicator on UIImageVIew (Indicator will only be shown on UIImageView when image is getting loaded).
-
+ 
  */
 - (void)setSystemActivity;
 
@@ -66,3 +66,4 @@
 - (void)loadCitrusLazyPayWithAssetID:(NSString * _Nonnull)assetID;
 
 @end
+

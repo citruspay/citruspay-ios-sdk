@@ -57,4 +57,11 @@
 +(NSString *)loadMoneyReturnUrl;
 
 +(void)handleFailureWithViewC:(UIViewController *)controller message:(NSString *)message title:(NSString*)title;
+
++ (void)showAlertWithMessage:(NSString *_Nonnull)msg actionTitle:(NSString *_Nonnull)actionTitle fromController:(UIViewController *_Nonnull)controller;
+
++ (void)showAlertWithMessage:(NSString *_Nonnull)msg actionTitle:(NSString *_Nonnull)actionTitle fromController:(UIViewController *_Nonnull)controller completion:(void (^ __nullable)())completion;
+
++ (void)showAlertWithMessage:(NSString *_Nonnull)msg alertTitle:(NSString *_Nonnull)alertTitle actionTitle:(NSString *_Nonnull)actionTitle fromController:(UIViewController *_Nonnull)controller completion:(void (^ __nullable)())completion;
+
 @end
