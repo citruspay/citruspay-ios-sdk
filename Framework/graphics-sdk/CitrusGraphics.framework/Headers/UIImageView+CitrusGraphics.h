@@ -46,6 +46,26 @@
 - (void)loadCitrusLargeBankWithBankCID:(NSString * _Nonnull)bankCID;
 
 /** Load an image with a resource.
+ @param bankCode bank code of the bank whose image is to be loaded
+ */
+- (void)loadCitrusBankWithBankCode:(NSString * _Nonnull)bankCode;
+
+/** Load an image with a large resource.
+ @param bankCode bank code of the bank whose image is to be loaded
+ */
+- (void)loadCitrusLargeBankWithBankCode:(NSString * _Nonnull)bankCode;
+
+/** Load an image with a resource.
+ @param bankCode bank code of the wallet whose image is to be loaded
+ */
+- (void)loadWalletWithBankCode:(NSString * _Nonnull)bankCode;
+
+/** Load an image with a large resource.
+ @param bankCode bank code of the wallet whose image is to be loaded
+ */
+- (void)loadLargeWalletWithBankCode:(NSString * _Nonnull)bankCode;
+
+/** Load an image with a resource.
  @param IFSCCode IFSCCode of the bank whose image is to be loaded
  */
 - (void)loadCitrusBankWithIFSCCode:(NSString * _Nonnull)IFSCCode;
