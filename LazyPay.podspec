@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/citruspay/citruspay-ios-sdk'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'mukeshpatil1' => 'mukesh.patil@citruspay.com' }
-  s.source           = { :git => 'https://github.com/citruspay/citruspay-ios-sdk.git',:branch => "xyz", :tag => 'lazypay.1.1.3' }
+  s.source           = { :git => 'https://github.com/citruspay/citruspay-ios-sdk.git', :tag => 'lazypay.1.1.3' }
 
   s.ios.deployment_target = '8.0'
   s.requires_arc     = true
