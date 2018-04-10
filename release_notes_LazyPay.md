@@ -1,10 +1,14 @@
 LazyPay iOS SDK Kit Release Notes:
 ==============================================
 
-1.0.1
+1.1.3
 -----
-
 #### Current Version
++ Added support for custom params
++ Minor bug fixes & improvements
+
+
+#### 1.0.1
 + Minor bug fixes & improvements
 
 #### 1.0

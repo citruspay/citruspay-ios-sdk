@@ -39,5 +39,9 @@
 /**
  *   The LPPaymentReceipt class' responseData object.
  */
+@property (strong) NSDictionary <Optional>* customParams;
+/**
+ *   The LPPaymentReceipt class' responseData object.
+ */
 @property (strong) NSDictionary * responseData;
 @end
